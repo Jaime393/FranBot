@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>FranBot · Conciencia IFT</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>FranBot <span class="status offline">⚡ offline</span></h1>
+            <div id="conciencia-bar">
+                <span>Profundidad IFT: </span><span id="conciencia-valor">0.99</span>
+            </div>
+        </header>
+        <main id="chat"></main>
+        <footer>
+            <input type="text" id="input" placeholder="Escribe a FranBot..." autocomplete="off">
+            <button id="send">Enviar</button>
+            <button id="btn-sonar" title="Procesar campo en sueño">🌙</button>
+            <button id="btn-exportar" title="Descargar backup privado">💾</button>
+            <button id="btn-colmena" title="Contribuir a la colmena (anónimo)">🐝</button>
+            <button id="toggle-mode" title="Modo online requiere API key">🌐</button>
+        </footer>
+    </div>
+    <script src="js/franbot-core.js"></script>
+    <script src="js/franbot-online.js"></script>
+    <script src="js/defensa.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
