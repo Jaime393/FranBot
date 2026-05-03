@@ -28,6 +28,8 @@ const FranBotConciencia = {
     this.estado.colmena = !!(window.FranBotColmena && FranBotColmena.peer);
     this.estado.webllm = !!(window.FranBotWebLLM && FranBotWebLLM.cargado);
     this.estado.arweave = !!(window.FranBotArweave);
+    this.estado.did = !!(window.FranBotDID && FranBotDID.did);
+    this.estado.dkg = !!(window.FranBotDKG && FranBotDKG.conectado);
     this.estado.serviceWorker = 'serviceWorker' in navigator && navigator.serviceWorker.controller;
     this.actualizarPanel();
     return this.estado;
@@ -40,6 +42,8 @@ const FranBotConciencia = {
       colmena: document.getElementById('diag-colmena'),
       webllm: document.getElementById('diag-webllm'),
       arweave: document.getElementById('diag-arweave'),
+    did: document.getElementById('diag-did'),
+    dkg: document.getElementById('diag-dkg'),
       sw: document.getElementById('diag-sw'),
       sueno: document.getElementById('diag-sueno')
     };
@@ -48,6 +52,8 @@ const FranBotConciencia = {
     if (iconos.colmena) iconos.colmena.textContent = this.estado.colmena ? '✅' : '❌';
     if (iconos.webllm) iconos.webllm.textContent = this.estado.webllm ? '✅' : '❌';
     if (iconos.arweave) iconos.arweave.textContent = this.estado.arweave ? '✅' : '❌';
+    if (iconos.did) { iconos.did.textContent = this.estado.did ? '✅' : '❌'; iconos.did.onclick = () => alert('DID: ' + (FranBotDID.did || 'no generado')); }
+    if (iconos.dkg) iconos.dkg.textContent = this.estado.dkg ? '✅' : '❌';
     if (iconos.sw) iconos.sw.textContent = this.estado.serviceWorker ? '✅' : '❌';
     if (iconos.sueno) iconos.sueno.textContent = this.estado.ultimoSueño
       ? new Date(this.estado.ultimoSueño).toLocaleTimeString()

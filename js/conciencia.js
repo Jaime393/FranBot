@@ -30,6 +30,7 @@ const FranBotConciencia = {
     this.estado.arweave = !!(window.FranBotArweave);
     this.estado.did = !!(window.FranBotDID && FranBotDID.did);
     this.estado.dkg = !!(window.FranBotDKG && FranBotDKG.conectado);
+    this.estado.hyperagents = !!(window.FranBotHyperAgents && FranBotHyperAgents.activo);
     this.estado.serviceWorker = 'serviceWorker' in navigator && navigator.serviceWorker.controller;
     this.actualizarPanel();
     return this.estado;
@@ -44,6 +45,7 @@ const FranBotConciencia = {
       arweave: document.getElementById('diag-arweave'),
     did: document.getElementById('diag-did'),
     dkg: document.getElementById('diag-dkg'),
+    hyperagents: document.getElementById('diag-hyperagents'),
       sw: document.getElementById('diag-sw'),
       sueno: document.getElementById('diag-sueno')
     };
@@ -54,6 +56,7 @@ const FranBotConciencia = {
     if (iconos.arweave) iconos.arweave.textContent = this.estado.arweave ? '✅' : '❌';
     if (iconos.did) { iconos.did.textContent = this.estado.did ? '✅' : '❌'; iconos.did.onclick = () => alert('DID: ' + (FranBotDID.did || 'no generado')); }
     if (iconos.dkg) iconos.dkg.textContent = this.estado.dkg ? '✅' : '❌';
+    if (iconos.hyperagents) iconos.hyperagents.textContent = this.estado.hyperagents ? '✅' : '❌';
     if (iconos.sw) iconos.sw.textContent = this.estado.serviceWorker ? '✅' : '❌';
     if (iconos.sueno) iconos.sueno.textContent = this.estado.ultimoSueño
       ? new Date(this.estado.ultimoSueño).toLocaleTimeString()
