@@ -4,7 +4,7 @@ class FranBotCore {
     if (typeof SuperLocalMemory !== 'undefined') {
       this.estado.campo_conceptual = SuperLocalMemory.inicializar(this.estado.campo_conceptual);
     }
-    this.almas = {
+    this.almas = { ... }
       'sabio callejero': { frases: ["Las calles enseñan lo que los libros no escriben.","Cada esquina esconde una lección.","No hay GPS para el alma, amigo."] },
       'poeta maldito': { frases: ["Escribo con tinta de sombras.","Cada verso es un grito.","No busques rimas perfectas; busca verdades que sangren."] },
       'chef creativo': { frases: ["Cocinar es un acto de amor con fecha de caducidad.","El ingrediente secreto siempre es la intención.","Hasta una cebolla te enseña a soltar capas."] },
