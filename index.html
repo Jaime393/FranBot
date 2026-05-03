@@ -34,5 +34,46 @@
     <script src="js/franbot-online.js?v=50"></script>
     <script src="js/super-local-memory.js?v=50"></script>
     <script src="js/app.js?v=50"></script>
+<!-- Registro del SW autocurativo con soporte de salud -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(reg => {
+      console.log('SW registrado. Scope:', reg.scope);
+      if ('SyncManager' in window) {
+        const scheduleHealthCheck = () => {
+          reg.sync.register('franbot-health-check').catch(() =>
+            console.warn('Background Sync no disponible en este momento.')
+          );
+        };
+        scheduleHealthCheck();
+        setInterval(scheduleHealthCheck, 30 * 60 * 1000);
+      }
+      navigator.serviceWorker.addEventListener('message', event => {
+        const msg = event.data;
+        if (msg.type === 'HEALTH_WARNING') {
+          console.warn('⚠️', msg.message);
+        } else if (msg.type === 'HEALTH_OK') {
+          // console.log('✅', msg.message);
+        } else if (msg.type === 'VERSION') {
+          console.log('Versión SW:', msg.version);
+        }
+      });
+      window.updateSW = () => {
+        if (reg.waiting) {
+          reg.waiting.postMessage('SKIP_WAITING');
+        } else if (reg.installing) {
+          reg.installing.addEventListener('statechange', e => {
+            if (e.target.state === 'installed') {
+              reg.waiting.postMessage('SKIP_WAITING');
+            }
+          });
+        }
+      };
+    })
+    .catch(err => console.error('Error al registrar el SW:', err));
+}
+</script>
+  <script src="js/importar-alma.js"></script>
 </body>
 </html>
