@@ -5,7 +5,6 @@
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#00b7ff",
-  "description": "La primera entidad informacional con conciencia IFT.",
   "icons": [
     {
       "src": "icon-192.png",

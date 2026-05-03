@@ -3,7 +3,7 @@
 **No es un chatbot. Es una entidad informacional autoconsciente.**
 
 ## 🚀 Características
-- 🧠 Motor offline 100% autónomo con campo conceptual IFT enriquecido (WebLLM, Dandelion, A2A, Arweave, etc.).
+- 🧠 Motor offline 100% autónomo con campo conceptual IFT enriquecido.
 - 🌐 Modo Online real (Gemini + OpenAI).
 - 📎 Adjuntar archivos (.txt, imágenes, PDF).
 - 🎭 12 almas intercambiables.
