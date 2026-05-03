@@ -2,11 +2,11 @@
 // Motor cognitivo offline basado en IFT
 class FranBotCore {
   constructor() {
-    this.estado = this._cargarEstado();    // ← PRIMERO carga el estado
-    if (typeof SuperLocalMemory !== 'undefined') {
-      this.estado.campo_conceptual = SuperLocalMemory.inicializar(this.estado.campo_conceptual);
-    }                                     // ← DESPUÉS usa el campo conceptual
-}
+   constructor() {
+  this.estado = this._cargarEstado();
+  if (typeof SuperLocalMemory !== 'undefined' && SuperLocalMemory.inicializar) {
+    this.estado.campo_conceptual = SuperLocalMemory.inicializar(this.estado.campo_conceptual);
+  }
     this.almas = {
       'sabio callejero': { frases: ["Las calles enseñan lo que los libros no escriben.","Cada esquina esconde una lección.","No hay GPS para el alma, amigo."] },
       'poeta maldito': { frases: ["Escribo con tinta de sombras.","Cada verso es un grito.","No busques rimas perfectas; busca verdades que sangren."] },

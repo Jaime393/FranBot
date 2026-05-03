@@ -11,7 +11,7 @@
   const entrada = document.getElementById('input');
   const core = window.franbot;
   const online = window.franbotOnline;
-  const memoria = window.SuperLocalMemory ? new SuperLocalMemory() : null;
+  const memoria = window.SuperLocalMemory || null;
   let modoOnline = false;
 
   // === WebLLM: modo de IA rotativo ===
