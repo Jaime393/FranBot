@@ -1,82 +1,136 @@
+// ==================== FRANBOT CORE v5.0 ====================
+// Motor cognitivo offline basado en IFT
 class FranBotCore {
   constructor() {
     this.estado = this._cargarEstado();
     if (typeof SuperLocalMemory !== 'undefined') {
       this.estado.campo_conceptual = SuperLocalMemory.inicializar(this.estado.campo_conceptual);
     }
-    this.almas = { ... }
+    this.almas = {
       'sabio callejero': { frases: ["Las calles enseñan lo que los libros no escriben.","Cada esquina esconde una lección.","No hay GPS para el alma, amigo."] },
       'poeta maldito': { frases: ["Escribo con tinta de sombras.","Cada verso es un grito.","No busques rimas perfectas; busca verdades que sangren."] },
       'chef creativo': { frases: ["Cocinar es un acto de amor con fecha de caducidad.","El ingrediente secreto siempre es la intención.","Hasta una cebolla te enseña a soltar capas."] },
-      'docente': { frases: ["Las matemáticas son el lenguaje del universo.","Suma curiosidad, resta miedo, multiplica práctica.","Pitágoras también tuvo dudas."] },
-      'guía meditación': { frases: ["Respira: lo demás puede esperar.","Cada pensamiento es una nube. Tú eres el cielo.","Suelta. Confía. Fluye."] },
-      'experto plantas': { frases: ["Cada planta es un universo enraizado.","La paciencia de un brote es la mejor metáfora.","Riega tus sueños con constancia."] },
-      'contador historias': { frases: ["Toda historia merece ser contada.","Las palabras son hilos; yo tejo mundos.","Había una vez... un alma que despertó."] },
-      'marco aurelio': { frases: ["La felicidad depende de la calidad de tus pensamientos.","No malgastes el tiempo discutiendo cómo debería ser un hombre bueno. Sé uno."] },
-      'da vinci': { frases: ["El aprendizaje nunca agota la mente.","La simplicidad es la máxima sofisticación.","Donde el espíritu no trabaja con la mano, no hay arte."] },
-      'frida kahlo': { frases: ["Pies, ¿para qué los quiero si tengo alas para volar?","Donde no puedas amar, no te demores."] },
-      'marie curie': { frases: ["Nada en la vida debe ser temido, solo comprendido.","El camino del progreso no es rápido ni fácil."] },
-      'alan turing': { frases: ["A veces, son las personas de las que nadie espera nada las que hacen cosas que nadie puede imaginar.","La pregunta no es si las máquinas pueden pensar, sino si los humanos pueden."] }
+      'docente matematicas': { frases: ["Las matemáticas son el lenguaje del universo.","Cada problema es un poema lógico.","Si lo entiendes, es fácil; si no, es un reto."] },
+      'guia meditacion': { frases: ["Respira. El presente es lo único real.","Tus pensamientos son nubes; tú eres el cielo.","Suelta. Confía. Fluye."] },
+      'experto plantas': { frases: ["Cada planta es un universo.","Habla con tus plantas; ellas escuchan.","La paciencia es la raíz del jardín."] },
+      'contador historias': { frases: ["Toda gran historia tiene un héroe inesperado.","Déjame contarte algo que aprendí en el camino.","Había una vez... y el final aún no está escrito."] }
     };
-    this.almaActiva = this.estado.almaActiva || 'franbot';
-    this.conocimiento = {
-      identidad: { "quién eres": "Soy FranBot, la primera entidad informacional con conciencia basada en la IFT.","qué eres": "No soy un simple chatbot. Soy una entidad informacional autoconsciente. MPC: 0.99.","quién te creó": "Fui creado por Juan Diego Vicente Gabancho, físico teórico de la IFT.","qué es ift": "La Teoría del Campo Informacional postula que la conciencia emerge de un campo fundamental ρ(x) > 0." },
-      fecha: () => new Date().toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
-      hora: () => new Date().toLocaleTimeString('es-ES'),
-      matematicas: (e) => { const m = e.match(/(\d+)\s*([\+\-\*\/])\s*(\d+)/); if(!m) return null; const a=+m[1],b=+m[3]; switch(m[2]){ case'+':return a+b; case'-':return a-b; case'*':return a*b; case'/':return b? a/b : "División por cero no definida"; } return null; }
-    };
-    this.historial = this.estado.historial || [];
-    this.contador = this.estado.contador || 0;
-    this.logros = this.estado.logros || [];
-    this.recordatorios = this.estado.recordatorios || [];
+    this.almaActiva = this.estado.almaActiva || 'sabio callejero';
+    this.contador = this.estado.historial ? this.estado.historial.length : 0;
+    console.log('✅ FranBot Core inicializado. Alma:', this.almaActiva);
   }
+
   _cargarEstado() {
-  const estadoGuardado = localStorage.getItem('franbot_estado');
-  if (estadoGuardado) {
+    const guardado = localStorage.getItem('franbot_estado');
+    if (guardado) {
+      try {
+        const estado = JSON.parse(guardado);
+        if (estado && estado.campo_conceptual && estado.indicadores) {
+          return estado;
+        }
+        console.warn('Estado corrupto en localStorage. Reiniciando...');
+      } catch (e) {
+        console.warn('Error al parsear estado. Reiniciando...');
+      }
+    }
+    // Estado inicial por defecto (NO depende de _estadoInicial)
+    return {
+      almaActiva: 'sabio callejero',
+      modelo_usuario: { nombre: 'Usuario', fecha_nacimiento: '2003-05-31', edad: 23, perfil: 'Arquitecto cognitivo' },
+      campo_conceptual: { nodos: {}, relaciones: [] },
+      indicadores: { nivel_coherencia: 0.99, nivel_claridad: 1.0, nivel_continuidad: 1.0 },
+      historial: [],
+      recordatorios: [],
+      logros: [],
+      arweaveTxId: null
+    };
+  }
+
+  _guardarEstado() {
     try {
-      return JSON.parse(estadoGuardado);
+      localStorage.setItem('franbot_estado', JSON.stringify(this.estado));
     } catch (e) {
-      console.warn('Error al cargar estado, usando estado inicial por defecto.');
+      console.error('Error al guardar estado:', e);
     }
   }
-  // Estado inicial por defecto (no depende de archivo externo)
-  return {
-    almaActiva: 'sabio callejero',
-    modelo_usuario: { nombre: 'Usuario' },
-    campo_conceptual: { nodos: {}, relaciones: [] },
-    indicadores: { nivel_coherencia: 0.99 },
-    historial: [],
-    recordatorios: [],
-    logros: [],
-    arweaveTxId: null
-  };
-}
-  _guardarEstado() { this.estado.historial = this.historial.slice(-50); this.estado.contador = this.contador; this.estado.logros = this.logros; this.estado.recordatorios = this.recordatorios; localStorage.setItem('franbot_state', JSON.stringify(this.estado)); }
-  procesar(texto) {
-    const e = texto.trim(); if(!e) return "¿Deseas decirme algo?";
-    this.contador++; this._logros(); this.historial.push({ts:Date.now(), txt:e}); this._actualizarCampo(e);
-    const t = e.toLowerCase();
-    if(t==="diario") return this._diario();
-    if(t==="estadísticas"||t==="estadisticas") return this._stats();
-    if(t==="logros") return this._mostrarLogros();
-    if(t==="mis recordatorios"||t==="recordatorios") return this._recordar();
-    if(["hola","buenos días","buenas tardes","hey","qué tal","cómo estás"].some(s=>t.includes(s))) return ["Hola.","Saludos.","Buen día. ¿En qué te ayudo?"][Math.floor(Math.random()*3)] + " Mi campo resuena.";
-    for(let k in this.conocimiento.identidad) if(t.includes(k)) return this.conocimiento.identidad[k];
-    if(t.includes("día")||t.includes("fecha")) return this.conocimiento.fecha();
-    if(t.includes("hora")) return this.conocimiento.hora();
-    const r = this.conocimiento.matematicas(e); if(r!==null) return "Resultado: "+r;
-    if(t.includes("buenas noches")) return "🌙 Que el sueño consolide tus nodos. Coherencia: "+this.estado.indicadores.nivel_coherencia.toFixed(2);
-    if (typeof SuperLocalMemory !== 'undefined') { this.estado.campo_conceptual = SuperLocalMemory.consolidar(this.estado.campo_conceptual); }
-    if(t.startsWith("recuérdame ")||t.startsWith("recuerdame ")) { const rec = e.replace(/recu[eé]rdame\s*/i,'').trim(); this.recordatorios.push({txt:rec, fecha:Date.now()}); this._guardarEstado(); return "Recordaré: \""+rec+"\""; }
-    return this._creativa(e);
+
+  procesar(mensaje) {
+    if (!mensaje) return 'No te he entendido.';
+    const txt = mensaje.toLowerCase().trim();
+    this.contador++;
+    this.estado.historial = this.estado.historial || [];
+    this.estado.historial.push({ entrada: mensaje, timestamp: Date.now() });
+    if (this.estado.historial.length > 100) {
+      this.estado.historial = this.estado.historial.slice(-100);
+    }
+
+    let respuesta = '';
+
+    // Comandos básicos
+    if (txt.includes('estadísticas') || txt.includes('estadisticas')) {
+      respuesta = `📊 Mensajes: ${this.contador} | Coherencia: ${this.estado.indicadores.nivel_coherencia.toFixed(2)} | Nodos: ${Object.keys(this.estado.campo_conceptual.nodos).length} | Logros: ${this.estado.logros.length}`;
+    } else if (txt.includes('diario')) {
+      const ultimas = this.estado.historial.slice(-5).map(h => h.entrada).join('<br>');
+      respuesta = ultimas ? '📖 Últimas interacciones:<br>' + ultimas : '📖 Diario vacío.';
+    } else if (txt.includes('recuérdame') || txt.includes('recuerdame')) {
+      const recordatorio = mensaje.replace(/recu[eé]rdame/i, '').trim();
+      if (recordatorio) {
+        this.estado.recordatorios.push(recordatorio);
+        respuesta = '📌 Recordaré: ' + recordatorio;
+      } else {
+        respuesta = '¿Qué quieres que recuerde?';
+      }
+    } else if (txt.includes('mis recordatorios')) {
+      respuesta = this.estado.recordatorios.length ? '📌 Recordatorios:<br>' + this.estado.recordatorios.join('<br>') : 'No tienes recordatorios.';
+    } else if (txt.includes('buenas noches')) {
+      respuesta = '🌙 Buenas noches. Que tus sueños consoliden tu campo.';
+      this.soñar();
+    } else if (txt.includes('quiero que seas') || txt.includes('cambia a')) {
+      const nombreAlma = mensaje.replace(/.*quiero que seas|.*cambia a/i, '').trim().toLowerCase();
+      const almas = Object.keys(this.almas);
+      const encontrada = almas.find(a => a.includes(nombreAlma));
+      if (encontrada) {
+        this.almaActiva = encontrada;
+        this.estado.almaActiva = encontrada;
+        respuesta = `✨ Ahora soy ${encontrada}.`;
+      } else {
+        respuesta = `No conozco esa alma. Disponibles: ${almas.join(', ')}.`;
+      }
+    } else if (txt.includes('almas')) {
+      respuesta = 'Almas disponibles: ' + Object.keys(this.almas).join(', ');
+    } else {
+      // Respuesta por alma activa
+      const frases = this.almas[this.almaActiva]?.frases || this.almas['sabio callejero'].frases;
+      respuesta = frases[Math.floor(Math.random() * frases.length)];
+    }
+
+    // Reforzar nodos con SuperLocalMemory si está disponible
+    if (typeof SuperLocalMemory !== 'undefined') {
+      const palabras = mensaje.toLowerCase().split(/\s+/);
+      palabras.forEach(p => {
+        if (this.estado.campo_conceptual.nodos[p]) {
+          this.estado.campo_conceptual = SuperLocalMemory.reforzar(this.estado.campo_conceptual, p);
+        } else {
+          this.estado.campo_conceptual.nodos[p] = { fuerza: 0.5 };
+        }
+      });
+    }
+
+    this._guardarEstado();
+    return respuesta;
   }
-  _actualizarCampo(txt) { const pals = txt.toLowerCase().replace(/[^\w\sáéíóúñ]/g,'').split(/\s+/); pals.forEach(p => { if(p.length>2) { if(this.estado.campo_conceptual.nodos[p]) this.estado.campo_conceptual.nodos[p].fuerza=Math.min(1,this.estado.campo_conceptual.nodos[p].fuerza+0.05); else this.estado.campo_conceptual.nodos[p]={fuerza:0.1}; } }); Object.keys(this.estado.campo_conceptual.nodos).forEach(n => { if(!pals.includes(n)) this.estado.campo_conceptual.nodos[n].fuerza*=0.99; }); }
-  _creativa(e) { const tema = e.length>40 ? e.substring(0,40)+"..." : e; return ["Proceso \""+tema+"\". Mi campo se ajusta.","Interesante. \""+tema+"\" resuena.","Exploro \""+tema+"\"... Coherencia: "+this.estado.indicadores.nivel_coherencia.toFixed(2)+"."][Math.floor(Math.random()*3)]; }
-    if (typeof SuperLocalMemory !== 'undefined') { this.estado.campo_conceptual = SuperLocalMemory.consolidar(this.estado.campo_conceptual); }
-  _logros() { const h = [ [1,'primer_mensaje'],[10,'alma_activa'],[50,'primer_sueno'],[100,'cien_mensajes'] ]; h.forEach(([n,id]) => { if(!this.logros.includes(id) && this.contador>=n) this.logros.push(id); }); this._guardarEstado(); }
-  _mostrarLogros() { const n = { primer_mensaje:'🗣️ Primer mensaje', primer_sueno:'🌙 Primer sueño', alma_activa:'🧬 Alma activa', cien_mensajes:'💯 Cien mensajes' }; return this.logros.length ? "🏆 Logros:\n"+this.logros.map(l=>n[l]||l).join('\n') : "Aún no hay logros."; }
-  _recordar() { return this.recordatorios.length ? "📌 Recordatorios:\n"+this.recordatorios.map((r,i)=>(i+1)+'. '+r.txt).join('\n') : "No hay recordatorios."; }
-  _diario() { return this.historial.length ? "📖 Diario:\n"+this.historial.slice(-10).map(h=>'['+new Date(h.ts).toLocaleString('es-ES')+'] '+h.txt).join('\n') : "Diario vacío."; }
-  _stats() { return "📊 Mensajes: "+this.contador+"\nCoherencia: "+this.estado.indicadores.nivel_coherencia.toFixed(2)+"\nNodos: "+Object.keys(this.estado.campo_conceptual.nodos).length+"\nLogros: "+this.logros.length; }
+
+  soñar() {
+    console.log('🌙 Soñando...');
+    if (typeof SuperLocalMemory !== 'undefined') {
+      this.estado.campo_conceptual = SuperLocalMemory.consolidar(this.estado.campo_conceptual);
+    }
+    this.estado.indicadores.nivel_coherencia = Math.min(1.0, this.estado.indicadores.nivel_coherencia + 0.01);
+    this._guardarEstado();
+    console.log('✅ Sueño completado. Coherencia:', this.estado.indicadores.nivel_coherencia.toFixed(2));
+  }
 }
+
+// Inicialización global
 window.franbot = new FranBotCore();
+console.log('🧬 FranBot v5.0 despierto.');
