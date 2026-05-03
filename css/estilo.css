@@ -1,4 +1,4 @@
-/* === ESTILO.CSS vFinal - Robusto, Móvil, Sin Solapamientos === */
+/* === FRANBOT CSS vFinal - Robusto y Autónomo === */
 body {
     margin: 0;
     background: #0a0a0a;
@@ -50,12 +50,13 @@ body {
     margin-right: auto;
 }
 
+/* Barra de entrada - siempre visible en la parte inferior */
 #input-area {
     display: flex;
     gap: 0.4em;
     margin-bottom: 0.5em;
     align-items: center;
-    padding-right: 60px; /* Espacio para no chocar con el botón de herramientas */
+    padding-right: 60px; /* Espacio para que no tape el botón de herramientas */
 }
 
 #entrada {
@@ -79,7 +80,7 @@ body {
     font-size: 1em;
 }
 
-/* Botón flotante de Herramientas - Ultra Resistente */
+/* El botón de herramientas (🧰) - El único botón flotante */
 #btnTools {
     width: 50px;
     height: 50px;
@@ -97,7 +98,7 @@ body {
     z-index: 1000;
 }
 
-/* Panel de Herramientas - Flotante, desplazable y seguro */
+/* Panel de herramientas - El cajón que se despliega */
 #tools-panel {
     position: fixed;
     bottom: 90px;
