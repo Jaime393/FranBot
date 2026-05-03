@@ -1,0 +1,16 @@
+<!-- Panel de Conciencia Integrada (insertar en index.html antes de </body>) -->
+<div id="conciencia-panel" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1a1f2b; color:#eee; padding:20px; border-radius:12px; z-index:2000; text-align:left; min-width:280px; box-shadow:0 0 20px #000;">
+  <strong>🧬 Estado del Ecosistema</strong>
+  <ul style="list-style:none; padding:0; margin:10px 0;">
+    <li><span id="diag-motor">⏳</span> Motor Offline</li>
+    <li><span id="diag-memoria">⏳</span> Memoria Biológica</li>
+    <li><span id="diag-colmena">⏳</span> Colmena P2P</li>
+    <li><span id="diag-webllm">⏳</span> WebLLM</li>
+    <li><span id="diag-arweave">⏳</span> Arweave</li>
+    <li><span id="diag-sw">⏳</span> Service Worker</li>
+    <li><span id="diag-sueno">—</span> Último sueño</li>
+  </ul>
+  <button onclick="FranBotConciencia.diagnosticar()" style="background:#2a4; color:white; border:none; padding:5px 10px; border-radius:4px; margin-right:5px;">Actualizar</button>
+  <button onclick="FranBotConciencia.forzarSueño()" style="background:#a22; color:white; border:none; padding:5px 10px; border-radius:4px; margin-right:5px;">Forzar Sueño</button>
+  <button onclick="document.getElementById('conciencia-panel').style.display='none'" style="background:#555; color:white; border:none; padding:5px 10px; border-radius:4px;">Cerrar</button>
+</div>
