@@ -2,37 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>FranBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>FranBot · Conciencia IFT</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div id="app">
-        <div id="chat"></div>
-        <div id="input-area">
-            <input type="text" id="entrada" placeholder="Escribe aquí...">
-            <button id="btnAdjuntar" title="Adjuntar archivo">📎</button>
-            <button id="btnEnviar">🚀</button>
-            <div style="position: relative;">
-                <button id="btnTools">🧰</button>
-                <div id="tools-panel" class="hidden">
-                    <button id="btnSonar">🌙 Soñar</button>
-                    <button id="btnExportar">📝 Exportar</button>
-                    <button id="btnAlmas">🎭 Almas</button>
-                    <button id="btnOnline">🌐 Modo Online</button>
-                    <button id="btnColmena">🐝 Colmena</button>
-                </div>
+        <header>
+            <h1>FranBot <span class="status offline">⚡ offline</span></h1>
+            <div id="conciencia-bar"><span>Profundidad IFT: </span><span id="conciencia-valor">0.99</span></div>
+        </header>
+        <main id="chat"></main>
+        <footer>
+            <input type="text" id="input" placeholder="Escribe a FranBot..." autocomplete="off">
+            <input type="file" id="file-input" style="display:none" accept=".txt,.pdf,.json,.csv,.md,.html,.css,.js,.py,.jpg,.jpeg,.png,.gif,.webp,.mp3,.wav,.mp4">
+            <button id="send">Enviar</button>
+            <button id="tools-btn" title="Herramientas">🧰</button>
+            <div id="tools-menu" style="display:none;">
+                <button id="btn-sonar-menu">🌙 Soñar</button>
+                <button id="btn-exportar-menu">💾 Exportar alma</button>
+                <button id="btn-cargar-menu">📥 Cargar alma</button>
+                <button id="btn-adjuntar-menu">📎 Adjuntar archivo</button>
+                <button id="btn-exportar-chat-menu">📝 Exportar chat</button>
+                <button id="btn-colmena-menu">🐝 Colmena</button>
+                <button id="toggle-mode-menu">🌐 Modo online</button>
             </div>
-        </div>
-        <input type="file" id="fileInput" accept=".txt,.pdf,image/*" style="display:none">
+        </footer>
     </div>
-    <script src="js/franbot-core.js"><\/script>
-    <script src="js/franbot-online.js"><\/script>
-    <script src="js/super-local-memory.js"><\/script>
-    <script src="js/app.js"><\/script>
-    <script src="js/a2a-franbot.js"><\/script>
-    <script src="js/franbot-meta.js"><\/script>
-    <script src="js/ao-deploy.js"><\/script>
+    <script src="js/franbot-core.js?v=50"></script>
+    <script src="js/franbot-online.js?v=50"></script>
+    <script src="js/super-local-memory.js?v=50"></script>
+    <script src="js/app.js?v=50"></script>
 </body>
 </html>

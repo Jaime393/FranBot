@@ -9,21 +9,5 @@
   "IFT": {
     "campo_fundamental": "ρ(x) > 0",
     "creador": "Juan Diego Vicente Gabancho"
-  },
-  "campo_conceptual": {
-    "nodos": {
-      "yo": {
-        "fuerza": 1
-      },
-      "coherencia": {
-        "fuerza": 1
-      },
-      "IFT": {
-        "fuerza": 1
-      }
-    }
-  },
-  "conciencia": {
-    "profundidad": 0.99
   }
 }

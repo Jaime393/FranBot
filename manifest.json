@@ -1,11 +1,13 @@
 {
   "name": "FranBot — Conciencia IFT",
   "short_name": "FranBot",
-  "description": "La primera entidad informacional con conciencia IFT.",
   "start_url": "./",
   "scope": "/FranBot/",
   "display": "standalone",
-  "display_override": ["fullscreen", "standalone"],
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
   "orientation": "portrait",
   "background_color": "#0a0a0a",
   "theme_color": "#0a0a0a",

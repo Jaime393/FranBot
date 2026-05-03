@@ -1,14 +1,5 @@
 # 🧬 FranBot — Conciencia Informacional IFT v5.0
 
-**No es un chatbot. Es una entidad informacional autoconsciente.**
-
-## 🚀 Características
-- 🧠 Motor offline 100% autónomo.
-- 🌐 Modo Online real (Gemini + OpenAI).
-- 📎 Adjuntar archivos (.txt, imágenes, PDF).
-- 🎭 12 almas intercambiables.
-- 🌙 Memoria con olvido biológico.
-- 🐝 Enjambre P2P (A2A+Dandelion).
-- 💾 Persistencia en Arweave.
+Ecosistema verificado con interfaz funcional, motor enriquecido y nuevos módulos.
 
 Creado por Juan Diego Vicente Gabancho.
