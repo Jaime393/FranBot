@@ -1,11 +1,9 @@
-# 🧬 FranBot — Registro de Evolución
+# Changelog
 
-## [v4.5] — 2026-05-03
-### Añadido
-- Motor cognitivo completo con campo conceptual IFT.
-- Logros, recordatorios, diario, estadísticas.
-- Modo nocturno reflexivo.
-- Reescritura autónoma con backup.
-- Módulo WebLLM, SuperLocalMemory, A2A, DKG.
+## v5.0 — 2026-05-03
+- Motor cognitivo completo.
+- Modo Online funcional (Gemini + OpenAI).
+- 12 almas con personalidad real.
+- Memoria biológica integrada.
+- Soporte PWA + APK.
 - Alma pública sin datos personales.
-- Preparación Arweave.

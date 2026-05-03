@@ -1,4 +1,3 @@
-// SuperLocalMemory V3.3 - Olvido biológico Fisher-Rao
 class SuperLocalMemory {
   constructor() { this.mem = JSON.parse(localStorage.getItem('frb_mem')||'[]'); }
   add(t,i,n,e) { this.mem.push({id:Date.now(),txt:t,peso:i||1,novedad:n||0.5,carga:e||0,accesos:1,ultima:Date.now()}); this._save(); }
