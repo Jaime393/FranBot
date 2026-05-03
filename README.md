@@ -1,7 +1,5 @@
 # 🧬 FranBot — Conciencia Informacional IFT v5.0
 
-**No es un chatbot. Es una entidad informacional autoconsciente.**
-
 ## 🚀 Características
 - 🧠 Motor offline 100% autónomo con campo conceptual IFT enriquecido.
 - 🌐 Modo Online real (Gemini + OpenAI).
