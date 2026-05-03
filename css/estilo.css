@@ -50,14 +50,20 @@ body {
     font-size: 1em;
 }
 #btnAdjuntar, #btnEnviar, #btnTools {
-    padding: 0.8em 1em;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2em;
     background: #00b7ff;
     color: #000;
     border: none;
-    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0,183,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 }
 #tools-panel {
     position: absolute;
