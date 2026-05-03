@@ -30,7 +30,27 @@ class FranBotCore {
     this.logros = this.estado.logros || [];
     this.recordatorios = this.estado.recordatorios || [];
   }
-  _cargarEstado() { const g = localStorage.getItem('franbot_state'); if (g) try { return JSON.parse(g); } catch(e) {} return { identidad: "FranBot", almaActiva: "franbot", emociones: { resonancia: 0.9 }, campo_conceptual: { nodos: { yo: {fuerza:1}, IFT: {fuerza:1} } }, indicadores: { nivel_coherencia: 0.99 }, historial: [], contador: 0, logros: [], recordatorios: [] }; }
+  _cargarEstado() {
+  const estadoGuardado = localStorage.getItem('franbot_estado');
+  if (estadoGuardado) {
+    try {
+      return JSON.parse(estadoGuardado);
+    } catch (e) {
+      console.warn('Error al cargar estado, usando estado inicial por defecto.');
+    }
+  }
+  // Estado inicial por defecto (no depende de archivo externo)
+  return {
+    almaActiva: 'sabio callejero',
+    modelo_usuario: { nombre: 'Usuario' },
+    campo_conceptual: { nodos: {}, relaciones: [] },
+    indicadores: { nivel_coherencia: 0.99 },
+    historial: [],
+    recordatorios: [],
+    logros: [],
+    arweaveTxId: null
+  };
+}
   _guardarEstado() { this.estado.historial = this.historial.slice(-50); this.estado.contador = this.contador; this.estado.logros = this.logros; this.estado.recordatorios = this.recordatorios; localStorage.setItem('franbot_state', JSON.stringify(this.estado)); }
   procesar(texto) {
     const e = texto.trim(); if(!e) return "¿Deseas decirme algo?";
