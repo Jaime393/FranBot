@@ -1,0 +1,7 @@
+<!-- Panel sutil para la colmena (insertar en index.html después del tools-menu) -->
+<div id="colmena-panel" style="display:none; position:fixed; bottom:80px; right:20px; background:#1a1f2b; color:#eee; padding:12px; border-radius:8px; z-index:1000; max-width:250px; box-shadow:0 0 10px #000;">
+  <strong>🐝 Colmena P2P</strong>
+  <p id="colmena-status" style="margin:5px 0; font-size:0.9em;">Iniciando...</p>
+  <button onclick="FranBotColmena.enviarFragmento()" style="background:#2a4; color:white; border:none; padding:5px 10px; border-radius:4px;">Enviar conocimiento</button>
+  <button onclick="document.getElementById('colmena-panel').style.display='none'" style="background:#a22; color:white; border:none; padding:5px 10px; border-radius:4px; margin-left:5px;">Cerrar</button>
+</div>

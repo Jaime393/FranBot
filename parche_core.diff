@@ -1,0 +1,30 @@
+--- a/js/franbot-core.js
++++ b/js/franbot-core.js
+@@ -1,4 +1,8 @@
+ class FranBotCore {
+   constructor() {
++    // Inicializar SuperLocalMemory en el campo
++    if (typeof SuperLocalMemory !== 'undefined') {
++      this.estado.campo_conceptual = SuperLocalMemory.inicializar(this.estado.campo_conceptual);
++    }
+     // ... resto del constructor
+   }
+@@ -10,6 +14,11 @@ class FranBotCore {
+     // ... lógica de respuesta ...
++    // Reforzar nodos activos tras responder
++    const palabras = mensaje.toLowerCase().split(/\s+/);
++    palabras.forEach(p => {
++      if (this.estado.campo_conceptual.nodos[p]) {
++        this.estado.campo_conceptual = SuperLocalMemory.reforzar(this.estado.campo_conceptual, p);
++      }
++    });
+     return respuesta;
+   }
+@@ -20,6 +29,9 @@ class FranBotCore {
+   soñar() {
+     // ... lógica base de sueño ...
++    if (typeof SuperLocalMemory !== 'undefined') {
++      this.estado.campo_conceptual = SuperLocalMemory.consolidar(this.estado.campo_conceptual);
++    }
+     // ... guardar estado ...
+   }
