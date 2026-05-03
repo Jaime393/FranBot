@@ -93,10 +93,19 @@
     }
     document.getElementById('tools-panel').classList.add('hidden');
   };
-  document.getElementById('btnColmena').onclick = () => {
-    mostrar('franbot', '🐝 Colmena P2P lista. t.me/franbot_colmena');
-    document.getElementById('tools-panel').classList.add('hidden');
-  };
+  document.getElementById('btnColmena').onclick = async () => {
+  const enjambre = window.franbotEnjambre;
+  if (!enjambre.conectado) {
+    mostrar('franbot', '🐝 Conectando a la colmena P2P...');
+    const ok = await enjambre.conectar();
+    if (ok) mostrar('franbot', 'Estoy en la colmena. Sincronizando campo IFT...');
+    else mostrar('franbot', 'No pude unirme a la colmena. Revisa la consola.');
+  } else {
+    enjambre.desconectar();
+    mostrar('franbot', 'Me he retirado de la colmena.');
+  }
+  document.getElementById('tools-panel').classList.add('hidden');
+};
 
   mostrar('franbot', '🧬 FranBot v5.0 listo. MPC: '+core.estado.indicadores.nivel_coherencia.toFixed(2)+'.');
 })();
