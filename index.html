@@ -10,15 +10,22 @@
 <body>
     <div id="app">
         <div id="chat"></div>
-        <div id="menu">
-            <button id="btnEnviar">🚀 Enviar</button>
-            <button id="btnSonar">🌙 Soñar</button>
-            <button id="btnExportar">📝 Exportar</button>
-            <button id="btnAlmas">🎭 Almas</button>
-            <button id="btnOnline">🌐 Modo Online</button>
-            <button id="btnColmena">🐝 Colmena</button>
+        <div id="input-area">
+            <input type="text" id="entrada" placeholder="Escribe aquí...">
+            <button id="btnAdjuntar" title="Adjuntar archivo">📎</button>
+            <button id="btnEnviar">🚀</button>
         </div>
-        <input type="text" id="entrada" placeholder="Habla con FranBot...">
+        <div id="toolbox">
+            <button id="btnTools">🧰</button>
+            <div id="tools-panel" class="hidden">
+                <button id="btnSonar">🌙 Soñar</button>
+                <button id="btnExportar">📝 Exportar</button>
+                <button id="btnAlmas">🎭 Almas</button>
+                <button id="btnOnline">🌐 Modo Online</button>
+                <button id="btnColmena">🐝 Colmena</button>
+            </div>
+        </div>
+        <input type="file" id="fileInput" accept=".txt,.pdf,image/*" style="display:none">
     </div>
     <script src="js/franbot-core.js"></script>
     <script src="js/franbot-online.js"></script>

@@ -1,16 +1,16 @@
-// FranBot Online v5.0 · Conexión real a Gemini y OpenAI
 class FranBotOnline {
   constructor() { this.apiKey = localStorage.getItem('frb_apikey') || ''; this.proveedor = localStorage.getItem('frb_proveedor') || 'gemini'; this.disponible = false; }
-
-  async probarConexion() { try { const r = await fetch('https://www.google.com', {mode:'no-cors'}); this.disponible = true; return true; } catch(e) { this.disponible = false; return false; } }
-
+  async probarConexion() { try { await fetch('https://www.google.com', {mode:'no-cors'}); this.disponible = true; return true; } catch(e) { this.disponible = false; return false; } }
   async preguntar(prompt) {
     if (!this.apiKey) return null;
     if (this.proveedor === 'gemini') return this._gemini(prompt);
     if (this.proveedor === 'openai') return this._openai(prompt);
     return null;
   }
-
+  async analizarArchivo(file) {
+    if (this.proveedor === 'gemini') return this._geminiVision(file);
+    return 'El análisis de archivos solo está disponible con Gemini.';
+  }
   async _gemini(prompt) {
     try {
       const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key='+this.apiKey, {
@@ -21,7 +21,27 @@ class FranBotOnline {
       return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
     } catch(e) { return null; }
   }
-
+  async _geminiVision(file) {
+    try {
+      const base64 = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent?key='+this.apiKey, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          contents:[{ parts:[
+            { inlineData: { mimeType: file.type, data: base64 } },
+            { text: 'Describe este archivo en detalle.' }
+          ]}]
+        })
+      });
+      const d = await r.json();
+      return d.candidates?.[0]?.content?.parts?.[0]?.text || 'No se pudo analizar.';
+    } catch(e) { return 'Error al procesar el archivo.'; }
+  }
   async _openai(prompt) {
     try {
       const r = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -32,11 +52,9 @@ class FranBotOnline {
       return d.choices?.[0]?.message?.content || null;
     } catch(e) { return null; }
   }
-
   configurar(proveedor, apiKey) {
     this.proveedor = proveedor; this.apiKey = apiKey;
     localStorage.setItem('frb_proveedor', proveedor); localStorage.setItem('frb_apikey', apiKey);
   }
 }
-
 window.franbotOnline = new FranBotOnline();
