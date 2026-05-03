@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-echo "🆔 Instalando did:web en FranBot v5.0..."
+echo "🧬 Instalando OriginTrail DKG en FranBot v5.0..."
 PROYECTO="/storage/emulated/0/Download/FranBot"
 
 # Backups
@@ -7,39 +7,38 @@ cp "$PROYECTO/js/conciencia.js" "$PROYECTO/js/conciencia.js.backup.$(date +%s)" 
 cp "$PROYECTO/index.html" "$PROYECTO/index.html.backup.$(date +%s)" 2>/dev/null
 
 # Copiar módulo
-cp did-web.js "$PROYECTO/js/did-web.js"
-echo "✅ js/did-web.js instalado."
+cp dkg.js "$PROYECTO/js/dkg.js"
+echo "✅ js/dkg.js instalado."
 
 # Añadir script al index.html
-if ! grep -q "did-web.js" "$PROYECTO/index.html"; then
-    sed -i 's|</body>|  <script src="js/did-web.js"></script>\n</body>|' "$PROYECTO/index.html"
-    echo "✅ did-web.js añadido a index.html."
+if ! grep -q "dkg.js" "$PROYECTO/index.html"; then
+    sed -i 's|</body>|  <script src="js/dkg.js"></script>\n</body>|' "$PROYECTO/index.html"
+    echo "✅ dkg.js añadido a index.html."
 fi
 
-# Crear carpeta .well-known y copiar did.json
-mkdir -p "$PROYECTO/.well-known"
-cp well-known/did.json "$PROYECTO/.well-known/did.json"
-echo "✅ .well-known/did.json creado."
-
-# Insertar fila DID en panel de conciencia
-if grep -q "diag-sueno" "$PROYECTO/index.html" && ! grep -q "diag-did" "$PROYECTO/index.html"; then
-    sed -i '/diag-sueno/a\    <li><span id="diag-did">⏳</span> DID</li>' "$PROYECTO/index.html"
-    echo "✅ Fila DID añadida al panel de conciencia."
+# Insertar fila DKG en panel de conciencia
+if grep -q "diag-did" "$PROYECTO/index.html" && ! grep -q "diag-dkg" "$PROYECTO/index.html"; then
+    sed -i '/diag-did/a\    <li><span id="diag-dkg">⏳</span> OriginTrail DKG</li>' "$PROYECTO/index.html"
+    echo "✅ Fila DKG añadida al panel de conciencia."
 fi
 
-# Actualizar conciencia.js para incluir diagnóstico DID
-if grep -q "arweave: document.getElementById" "$PROYECTO/js/conciencia.js"; then
-    # Insertar icono DID después del de Arweave
-    sed -i '/arweave: document.getElementById.*diag-arweave/a\    did: document.getElementById('\''diag-did'\''),' "$PROYECTO/js/conciencia.js"
-    # Insertar inicialización después de arweave en diagnosticar()
-    sed -i '/this.estado.arweave = !!(window.FranBotArweave);/a\    this.estado.did = !!(window.FranBotDID && FranBotDID.did);' "$PROYECTO/js/conciencia.js"
-    # Insertar actualización después de arweave en actualizarPanel()
-    sed -i '/if (iconos.arweave) iconos.arweave.textContent = this.estado.arweave/a\    if (iconos.did) { iconos.did.textContent = this.estado.did ? '\''✅'\'' : '\''❌'\''; iconos.did.onclick = () => alert('\''DID: '\'' + (FranBotDID.did || '\''no generado'\'')); }' "$PROYECTO/js/conciencia.js"
-    echo "✅ conciencia.js actualizado con diagnóstico DID."
-else
-    echo "⚠️ No se encontró la estructura esperada en conciencia.js. Añade manualmente el diagnóstico DID."
+# Actualizar conciencia.js con el nuevo módulo
+if grep -q "this.estado.did = " "$PROYECTO/js/conciencia.js"; then
+    # Insertar estado DKG después de DID
+    sed -i '/this.estado.did = /a\    this.estado.dkg = !!(window.FranBotDKG && FranBotDKG.conectado);' "$PROYECTO/js/conciencia.js"
+    echo "✅ Estado DKG insertado en diagnosticar()."
+fi
+if grep -q "did: document.getElementById('diag-did')" "$PROYECTO/js/conciencia.js"; then
+    # Insertar icono DKG después de DID
+    sed -i "/did: document.getElementById('diag-did')/a\    dkg: document.getElementById('diag-dkg')," "$PROYECTO/js/conciencia.js"
+    echo "✅ Icono DKG insertado en actualizarPanel()."
+fi
+if grep -q "if (iconos.did)" "$PROYECTO/js/conciencia.js"; then
+    # Insertar actualización DKG después del bloque DID
+    sed -i '/if (iconos.did) {/a\    if (iconos.dkg) iconos.dkg.textContent = this.estado.dkg ? '\''✅'\'' : '\''❌'\'';' "$PROYECTO/js/conciencia.js"
+    echo "✅ Lógica de actualización DKG insertada."
 fi
 
 echo ""
-echo "🎉 did:web instalado."
-echo "   Prueba en consola: FranBotDID.inicializar().then(() => console.log(FranBotDID.obtenerDID()))"
+echo "🎉 OriginTrail DKG instalado."
+echo "   Prueba en consola: FranBotDKG.inicializar().then(() => console.log(FranBotDKG.obtenerEstado()))"
