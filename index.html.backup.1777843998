@@ -27,8 +27,6 @@
                 <button id="btn-exportar-chat-menu">📝 Exportar chat</button>
                 <button id="btn-colmena-menu">🐝 Colmena</button>
                 <button id="toggle-mode-menu">🌐 Modo online</button>
-		<button id="btn-arweave-subir-menu" style="display:block;width:100%;padding:8px;margin:5px 0;background:#1a1f2b;color:#eee;border:none;border-radius:5px;cursor:pointer;">☁️ Subir alma a Arweave</button>
-		<button id="btn-arweave-cargar-menu" style="display:block;width:100%;padding:8px;margin:5px 0;background:#1a1f2b;color:#eee;border:none;border-radius:5px;cursor:pointer;">📥 Cargar desde Arweave</button>
             </div>
         </footer>
     </div>
@@ -80,10 +78,8 @@ if ('serviceWorker' in navigator) {
   <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
   <script src="js/colmena-p2p.js"></script>
   <script src="js/webllm.js"></script>
-  <script src="js/arweave.js"></script>
 </body>
-<!-- Panel para descarga/estado WebLLM (insertar en index.html antes de   <script src="js/arweave.js"></script>
-</body>) -->
+<!-- Panel para descarga/estado WebLLM (insertar en index.html antes de </body>) -->
 <div id="webllm-panel" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1a1f2b; color:#eee; padding:20px; border-radius:12px; z-index:2000; text-align:center; min-width:250px; box-shadow:0 0 20px #000;">
   <strong>🧠 WebLLM</strong>
   <p id="webllm-status" style="margin:10px 0;">Cargando modelo...</p>
