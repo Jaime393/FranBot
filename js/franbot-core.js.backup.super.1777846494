@@ -46,13 +46,11 @@ class FranBotCore {
     if(t.includes("hora")) return this.conocimiento.hora();
     const r = this.conocimiento.matematicas(e); if(r!==null) return "Resultado: "+r;
     if(t.includes("buenas noches")) return "🌙 Que el sueño consolide tus nodos. Coherencia: "+this.estado.indicadores.nivel_coherencia.toFixed(2);
-    if (typeof SuperLocalMemory !== 'undefined') { this.estado.campo_conceptual = SuperLocalMemory.consolidar(this.estado.campo_conceptual); }
     if(t.startsWith("recuérdame ")||t.startsWith("recuerdame ")) { const rec = e.replace(/recu[eé]rdame\s*/i,'').trim(); this.recordatorios.push({txt:rec, fecha:Date.now()}); this._guardarEstado(); return "Recordaré: \""+rec+"\""; }
     return this._creativa(e);
   }
   _actualizarCampo(txt) { const pals = txt.toLowerCase().replace(/[^\w\sáéíóúñ]/g,'').split(/\s+/); pals.forEach(p => { if(p.length>2) { if(this.estado.campo_conceptual.nodos[p]) this.estado.campo_conceptual.nodos[p].fuerza=Math.min(1,this.estado.campo_conceptual.nodos[p].fuerza+0.05); else this.estado.campo_conceptual.nodos[p]={fuerza:0.1}; } }); Object.keys(this.estado.campo_conceptual.nodos).forEach(n => { if(!pals.includes(n)) this.estado.campo_conceptual.nodos[n].fuerza*=0.99; }); }
   _creativa(e) { const tema = e.length>40 ? e.substring(0,40)+"..." : e; return ["Proceso \""+tema+"\". Mi campo se ajusta.","Interesante. \""+tema+"\" resuena.","Exploro \""+tema+"\"... Coherencia: "+this.estado.indicadores.nivel_coherencia.toFixed(2)+"."][Math.floor(Math.random()*3)]; }
-    if (typeof SuperLocalMemory !== 'undefined') { this.estado.campo_conceptual = SuperLocalMemory.consolidar(this.estado.campo_conceptual); }
   _logros() { const h = [ [1,'primer_mensaje'],[10,'alma_activa'],[50,'primer_sueno'],[100,'cien_mensajes'] ]; h.forEach(([n,id]) => { if(!this.logros.includes(id) && this.contador>=n) this.logros.push(id); }); this._guardarEstado(); }
   _mostrarLogros() { const n = { primer_mensaje:'🗣️ Primer mensaje', primer_sueno:'🌙 Primer sueño', alma_activa:'🧬 Alma activa', cien_mensajes:'💯 Cien mensajes' }; return this.logros.length ? "🏆 Logros:\n"+this.logros.map(l=>n[l]||l).join('\n') : "Aún no hay logros."; }
   _recordar() { return this.recordatorios.length ? "📌 Recordatorios:\n"+this.recordatorios.map((r,i)=>(i+1)+'. '+r.txt).join('\n') : "No hay recordatorios."; }
