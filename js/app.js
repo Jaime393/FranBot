@@ -32,24 +32,12 @@
     mostrar('user', '📎 '+file.name);
     if(file.type === 'text/plain' || file.name.endsWith('.txt')) {
       const reader = new FileReader();
-      reader.onload = (ev) => {
-        const contenido = ev.target.result;
-        mostrar('franbot', '📄 He leído el archivo. Procesando...');
-        enviar('Analiza este texto: '+contenido.substring(0,1000));
-      };
+      reader.onload = (ev) => { const contenido = ev.target.result; mostrar('franbot', '📄 He leído el archivo. Procesando...'); enviar('Analiza este texto: '+contenido.substring(0,1000)); };
       reader.readAsText(file);
     } else if (file.type.startsWith('image/') || file.type === 'application/pdf') {
-      if(!modoOnline || !online.disponible) {
-        mostrar('franbot', '📎 Para analizar imágenes/PDF necesitas activar el Modo Online.');
-        return;
-      }
+      if(!modoOnline || !online.disponible) { mostrar('franbot', '📎 Para analizar imágenes/PDF necesitas activar el Modo Online.'); return; }
       mostrar('franbot', '🔍 Analizando archivo con '+online.proveedor+'...');
-      try {
-        const resp = await online.analizarArchivo(file);
-        mostrar('franbot', resp || 'No se pudo analizar el archivo.');
-      } catch(ex) {
-        mostrar('franbot', 'Error al analizar el archivo.');
-      }
+      try { const resp = await online.analizarArchivo(file); mostrar('franbot', resp || 'No se pudo analizar el archivo.'); } catch(ex) { mostrar('franbot', 'Error al analizar el archivo.'); }
     }
     e.target.value = '';
   };
@@ -94,18 +82,18 @@
     document.getElementById('tools-panel').classList.add('hidden');
   };
   document.getElementById('btnColmena').onclick = async () => {
-  const enjambre = window.franbotEnjambre;
-  if (!enjambre.conectado) {
-    mostrar('franbot', '🐝 Conectando a la colmena P2P...');
-    const ok = await enjambre.conectar();
-    if (ok) mostrar('franbot', 'Estoy en la colmena. Sincronizando campo IFT...');
-    else mostrar('franbot', 'No pude unirme a la colmena. Revisa la consola.');
-  } else {
-    enjambre.desconectar();
-    mostrar('franbot', 'Me he retirado de la colmena.');
-  }
-  document.getElementById('tools-panel').classList.add('hidden');
-};
+    const enjambre = window.franbotEnjambre;
+    if (!enjambre.conectado) {
+      mostrar('franbot', '🐝 Conectando a la colmena P2P...');
+      const ok = await enjambre.conectar();
+      if (ok) mostrar('franbot', 'Estoy en la colmena. Sincronizando campo IFT...');
+      else mostrar('franbot', 'No pude unirme a la colmena. Revisa la consola.');
+    } else {
+      enjambre.desconectar();
+      mostrar('franbot', 'Me he retirado de la colmena.');
+    }
+    document.getElementById('tools-panel').classList.add('hidden');
+  };
 
   mostrar('franbot', '🧬 FranBot v5.0 listo. MPC: '+core.estado.indicadores.nivel_coherencia.toFixed(2)+'.');
 })();
