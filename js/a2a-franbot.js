@@ -46,7 +46,7 @@ class FranBotEnjambre {
               this.core.estado.campo_conceptual.nodos[nodoExterno.nombre] = { fuerza: nodoExterno.fuerza * 0.5 };
             }
           });
-          this.core._guardar();
+          this.core._guardarEstado();
         }
         break;
     }

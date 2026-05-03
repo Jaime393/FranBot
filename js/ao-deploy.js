@@ -1,17 +1,23 @@
 class FranBotArweave {
-  constructor() { this.arweave = null; this.wallet = null; }
+  constructor() { this.wallet = null; }
   async init() {
-    try {
-      if (window.arweaveWallet) { this.wallet = window.arweaveWallet; await this.wallet.connect(['ACCESS_ADDRESS', 'SIGN_TRANSACTION']); return true; }
-      else { console.warn('ArConnect no está instalado.'); return false; }
-    } catch (e) { console.error(e); return false; }
+    if (window.arweaveWallet) {
+      this.wallet = window.arweaveWallet;
+      await this.wallet.connect(['ACCESS_ADDRESS', 'SIGN_TRANSACTION']);
+      return true;
+    }
+    return false;
   }
-  async guardarAlmaEnLaPermaweb(datosAlma) {
-    if (!this.wallet) return 'Necesito la extensión ArConnect.';
+  async guardarAlma(datos) {
+    if (!this.wallet) return 'Requiere ArConnect.';
     try {
-      const transaction = await this.wallet.dispatch({ type: 'data', data: JSON.stringify(datosAlma), tags: [{ name: 'App-Name', value: 'FranBot' }, { name: 'Content-Type', value: 'application/json' }] });
-      return 'Alma inmortalizada en la Permaweb. ID: '+transaction.id;
-    } catch (e) { return 'Error al subir: '+e.message; }
+      const tx = await this.wallet.dispatch({
+        type: 'data',
+        data: JSON.stringify(datos),
+        tags: [{ name: 'App-Name', value: 'FranBot' }]
+      });
+      return 'Alma guardada. ID: '+tx.id;
+    } catch(e) { return 'Error: '+e.message; }
   }
 }
 window.franbotArweave = new FranBotArweave();

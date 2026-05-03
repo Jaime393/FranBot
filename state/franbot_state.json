@@ -21,14 +21,7 @@
       "IFT": {
         "fuerza": 1
       }
-    },
-    "relaciones": [
-      {
-        "origen": "yo",
-        "destino": "coherencia",
-        "fuerza": 1
-      }
-    ]
+    }
   },
   "conciencia": {
     "profundidad": 0.99
