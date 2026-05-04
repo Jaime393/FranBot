@@ -27,6 +27,7 @@
     <button id="toggle-mode-menu">🌐 Modo</button>
   <button id="btn-arweave-subir-menu">☁️ Subir a Arweave</button>
   <button id="btn-arweave-cargar-menu">📥 Cargar desde Arweave</button>
+  <button id="btn-sabiduria-colectiva-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof SabiduriaColectiva!=='undefined') SabiduriaColectiva.mostrarPanel()">🧬 Sabiduría Colectiva</button>
   <button id="btn-biblioteca-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof BibliotecaAlejandria!=='undefined') BibliotecaAlejandria.mostrarPanel()">📚 Sabiduría</button>
     <button id="btn-conciencia-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(window.abrirPanelConciencia) window.abrirPanelConciencia()">🧬 Conciencia</button>
   <div id="colmena-panel" style="display:none;"></div>
@@ -49,6 +50,7 @@
   <script src="js/colmena-p2p.js"></script>
   <script src="js/panel-colmena-mejorado.js"></script>
   <script src="js/registro-colmena.js"></script>
+  <script src="js/sabiduria-colectiva.js"></script>
   <script src="js/motor-aprendizaje.js"></script>
   <script src="js/procesador-semillas.js"></script>
   <script src="js/siembra-colectiva.js"></script>
