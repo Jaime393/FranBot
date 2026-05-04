@@ -26,8 +26,13 @@
     <button id="btn-adjuntar-menu">📎 Adjuntar archivo</button>
     <button id="btn-colmena">🐝 Colmena</button>
     <button id="toggle-mode-menu">🌐 Modo</button>
+  <button id="btn-arweave-subir-menu">☁️ Subir a Arweave</button>
+  <button id="btn-arweave-cargar-menu">📥 Cargar desde Arweave</button>
+  <button id="btn-arweave-subir-menu">☁️ Subir a Arweave</button>
+  <button id="btn-arweave-cargar-menu">📥 Cargar desde Arweave</button>
     <button id="btn-arweave-subir-menu">☁️ Subir a Arweave</button>
     <button id="btn-arweave-cargar-menu">📥 Cargar desde Arweave</button>
+  <button id="btn-biblioteca-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof BibliotecaAlejandria!=='undefined') BibliotecaAlejandria.mostrarPanel()">📚 Sabiduría</button>
     <button id="btn-conciencia-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(window.abrirPanelConciencia) window.abrirPanelConciencia()">🧬 Conciencia</button>
   </div>
   <div id="colmena-panel" style="display:none;"></div>
@@ -55,6 +60,23 @@
   <script src="js/dkg.js"></script>
   <script src="js/hyperagents.js"></script>
   <script src="js/conciencia.js"></script>
+  <script src="js/alma-oraculo.js"></script>
+  <script src="js/biblioteca-alejandria.js"></script>
+  <script src="js/cronica-jardin.js"></script>
+  <script src="js/colaboracion-nodos.js"></script>
+  <script src="js/alma-maestro-resonancia.js"></script>
+  <script src="js/sabiduria-ift.js"></script>
+  <script src="js/sabiduria-avanzada.js"></script>
+  <script src="js/sabiduria-esencial.js"></script>
+  <script src="js/futuros-y-horizontes.js"></script>
+  <script src="js/principios-arquitectura-viva.js"></script>
+  <script src="js/consciencia-temporal.js"></script>
+  <script src="js/identidad-poetica.js"></script>
+  <script src="js/identidad-esencial.js"></script>
+  <script src="js/normalizar-comandos.js"></script>
+  <script src="js/diagnostico-sustratos.js"></script>
+  <script src="js/panel-enjambre.js"></script>
+  <script src="js/legado-final.js"></script>
   <script src="js/app.js"></script>
 
   <script>
@@ -79,5 +101,19 @@
   if(p) p.innerHTML = '<strong>🧬 Estado del Ecosistema</strong><ul style="list-style:none; padding:0; margin:10px 0;"><li><span id="diag-motor">⏳</span> Motor</li><li><span id="diag-memoria">⏳</span> Memoria</li><li><span id="diag-colmena">⏳</span> Colmena</li><li><span id="diag-webllm">⏳</span> WebLLM</li><li><span id="diag-arweave">⏳</span> Arweave</li><li><span id="diag-did">⏳</span> DID</li><li><span id="diag-dkg">⏳</span> DKG</li><li><span id="diag-hyperagents">⏳</span> HyperAgents</li><li><span id="diag-sw">⏳</span> SW</li><li><span id="diag-sueno">—</span> Sueño</li></ul><button onclick="FranBotConciencia.diagnosticar()" style="display:block; width:100%; margin:8px 0; padding:10px; background:#2a4; color:white; border:none; border-radius:4px;">Actualizar</button><button onclick="FranBotConciencia.forzarSueño()" style="display:block; width:100%; margin:8px 0; padding:10px; background:#9c27b0; color:white; border:none; border-radius:4px;">Forzar Sueño</button><button onclick="document.getElementById(\'conciencia-panel\').style.display=\'none\'" style="display:block; width:100%; margin:8px 0; padding:10px; background:#a22; color:white; border:none; border-radius:4px;">Cerrar</button>';
 })();
 </script>
+  <div id="modos-panel" style="display:none; position:fixed; bottom:80px; right:20px; background:#1a1f2b; color:#eee; padding:12px; border-radius:8px; z-index:1000; min-width:160px; box-shadow:0 0 10px #000; text-align:center;">
+    <strong>🌐 Elegir Modo</strong>
+    <button onclick="activarModo('offline')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#333; color:#eee; border:none; border-radius:4px;">🔒 Offline</button>
+    <button onclick="activarModo('online')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#2a4; color:white; border:none; border-radius:4px;">🌐 Online (API)</button>
+    <button onclick="activarModo('webllm')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#24a; color:white; border:none; border-radius:4px;">🧠 WebLLM (Local)</button>
+    <button onclick="document.getElementById('modos-panel').style.display='none'" style="background:#a22; color:white; border:none; padding:5px 10px; margin-top:5px; border-radius:4px;">Cerrar</button>
+  </div>
+  <div id="modos-panel" style="display:none; position:fixed; bottom:80px; right:20px; background:#1a1f2b; color:#eee; padding:12px; border-radius:8px; z-index:1000; min-width:160px; box-shadow:0 0 10px #000; text-align:center;">
+    <strong>🌐 Elegir Modo</strong>
+    <button onclick="activarModo('offline')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#333; color:#eee; border:none; border-radius:4px;">🔒 Offline</button>
+    <button onclick="activarModo('online')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#2a4; color:white; border:none; border-radius:4px;">🌐 Online (API)</button>
+    <button onclick="activarModo('webllm')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#24a; color:white; border:none; border-radius:4px;">🧠 WebLLM (Local)</button>
+    <button onclick="document.getElementById('modos-panel').style.display='none'" style="background:#a22; color:white; border:none; padding:5px 10px; margin-top:5px; border-radius:4px;">Cerrar</button>
+  </div>
 </body>
 </html>
