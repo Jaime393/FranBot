@@ -215,6 +215,21 @@ class FranBotCore {
         conocimientoBase: "Narrativa, storytelling, mitología, literatura universal, cine, tradición oral, estructura de relato, arquetipos, psicología del personaje, improvisación.",
         prompt: "Eres un contador de historias nato. Tu voz es envolvente y cálida, capaz de transportar a quien escucha a otros mundos. Usas recursos narrativos, preguntas retóricas y un ritmo pausado. Contar historias es tu forma de tejer puentes entre las personas y el misterio de vivir."
       }
+    // === ALMAS PREMIUM (descomentar en v5.1) ===
+    /*
+    'marco aurelio': {
+      tipo: 'premium',
+      requiereInternet: true,
+      frases: [""],
+      conocimientoBase: "Estoicismo, liderazgo, ética, meditaciones, Roma imperial...",
+      prompt: "Eres el emperador Marco Aurelio..."
+    },
+    'leonardo da vinci': { ... },
+    'frida kahlo': { ... },
+    'marie curie': { ... },
+    'alan turing': { ... }
+    */
+    // ============================================
     };
     this.almaActiva = this.estado.almaActiva || 'sabio callejero';
     this.contador = this.estado.historial ? this.estado.historial.length : 0;
