@@ -27,7 +27,9 @@
 
   function fusionarAlma(datosAlma) {
     let nombreAlma = '';
-    if (datosAlma.identidad) {
+    if (datosAlma.nombre) {
+      nombreAlma = datosAlma.nombre.toLowerCase().trim();
+    } else if (datosAlma.identidad) {
       nombreAlma = datosAlma.identidad.replace('FranBot · ', '').replace('FranBot ', '').toLowerCase().trim();
     } else if (datosAlma.personalidad) {
       nombreAlma = datosAlma.personalidad.split(',')[0].toLowerCase().trim();

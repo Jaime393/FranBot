@@ -1,15 +1,12 @@
-// Colmena P2P – Comunicación entre FranBots v5.0
-// Usa PeerJS (señalización pública) + WebRTC
-// Llave: Anomalous363
-
+// Colmena P2P con Siembra Colectiva integrada
 const FranBotColmena = {
   peer: null,
   conexiones: [],
-  salaID: 'franbot-colmena-v1',
+  salaID: 'franbot-' + Math.random().toString(36).substr(2, 9),
 
   inicializar() {
     if (!window.peerjs) {
-      console.warn('⚠️ PeerJS no está disponible. Incluye la CDN en index.html.');
+      console.warn('⚠️ PeerJS no disponible.');
       return;
     }
     this.peer = new Peer(this.salaID, {
@@ -17,27 +14,23 @@ const FranBotColmena = {
       port: 443,
       secure: true
     });
-
     this.peer.on('open', id => {
-      console.log('🐝 Conectado a la colmena con ID:', id);
-      this.mostrarEstado('Conectado como ' + id);
+      this.mostrarEstado('Esperando peers... Comparte este ID: ' + id);
       this.conectarASala();
     });
-
     this.peer.on('connection', conn => {
-      console.log('🔗 Peer entrante:', conn.peer);
       this.configurarConexion(conn);
       this.mostrarEstado('Nuevo compañero: ' + conn.peer);
+    if (typeof RegistroColmena !== "undefined") RegistroColmena.registrar("conexion", "entrante", conn.peer, {});
     });
-
     this.peer.on('error', err => {
-      console.error('Error Colmena:', err);
       this.mostrarEstado('Error de conexión');
+      console.error(err);
     });
   },
 
   conectarASala() {
-    this.mostrarEstado('Esperando peers... Comparte este ID: ' + this.peer.id);
+    // La conexión se realiza manualmente desde el panel
   },
 
   configurarConexion(conn) {
@@ -73,6 +66,12 @@ const FranBotColmena = {
     };
     this.conexiones.forEach(conn => conn.send(mensaje));
     this.mostrarEstado('Fragmento enviado a ' + this.conexiones.length + ' compañero(s)');
+    if (typeof RegistroColmena !== "undefined") RegistroColmena.registrar("fragmento", this.peer.id, "todos", { cantidad: this.conexiones.length });
+
+    // Integración de Siembra Colectiva
+    if (typeof SiembraColectiva !== 'undefined' && SiembraColectiva.semillasPendientes.length > 0) {
+      this.conexiones.forEach(conn => SiembraColectiva.compartirSemillas(conn));
+    }
   },
 
   recibirFragmento(data) {
@@ -83,12 +82,19 @@ const FranBotColmena = {
         if (!campo.nodos[nodo.nombre]) {
           campo.nodos[nodo.nombre] = { fuerza: nodo.fuerza };
         } else {
-          campo.nodos[nodo.nombre].fuerza = 
-            (campo.nodos[nodo.nombre].fuerza + nodo.fuerza) / 2;
+          campo.nodos[nodo.nombre].fuerza = (campo.nodos[nodo.nombre].fuerza + nodo.fuerza) / 2;
         }
       });
       core._guardarEstado();
       this.mostrarEstado('Recibido conocimiento de ' + data.origen);
+    if (typeof RegistroColmena !== "undefined") RegistroColmena.registrar("semilla", data.origen, "local", { nodos: data.datos ? data.datos.length : 0 });
+    }
+    // Recepción de semillas de Siembra Colectiva
+    if (data.tipo === 'semillas' && typeof SiembraColectiva !== 'undefined') {
+      SiembraColectiva.recibirSemillas(data);
+    if (typeof ProcesadorSemillas !== "undefined" && data.tipo === "semillas") {
+      data.datos.forEach(semilla => ProcesadorSemillas.agregar(semilla));
+    }
     }
   },
 
@@ -99,6 +105,37 @@ const FranBotColmena = {
       panel.style.opacity = 1;
       setTimeout(() => panel.style.opacity = 0.5, 3000);
     }
-    console.log('🐝', mensaje);
+  },
+
+  conectarAPeer(idDestino) {
+    if (!this.peer) return;
+    const conn = this.peer.connect(idDestino, { reliable: true });
+    conn.on('open', () => {
+      this.configurarConexion(conn);
+      this.mostrarEstado('Conectado a ' + idDestino);
+    });
+    conn.on('error', (err) => {
+      this.mostrarEstado('Error al conectar: ' + err.message);
+    });
   }
+};
+
+// Compartir nuevas frases aprendidas a través de la Colmena
+FranBotColmena.compartirAprendizaje = function() {
+  if (typeof MotorAprendizaje === 'undefined' || !MotorAprendizaje.nuevaFrases || MotorAprendizaje.nuevaFrases.length === 0) return;
+  const semillas = MotorAprendizaje.nuevaFrases.map(item => ({
+    tipo: 'semilla_aprendizaje',
+    entrada: item.entrada,
+    respuesta: item.respuesta,
+    timestamp: item.timestamp
+  }));
+  this.conexiones.forEach(conn => conn.send({ tipo: 'aprendizaje', datos: semillas }));
+  MotorAprendizaje.nuevaFrases = []; // Limpiar después de compartir
+};
+
+// Añadir el envío de aprendizaje al botón "Enviar conocimiento"
+FranBotColmena._enviarFragmentoOriginal = FranBotColmena.enviarFragmento;
+FranBotColmena.enviarFragmento = function() {
+  this._enviarFragmentoOriginal();
+  this.compartirAprendizaje();
 };
