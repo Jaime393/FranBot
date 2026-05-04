@@ -135,8 +135,106 @@
     }
     document.getElementById('tools-menu').style.display = 'none';
   });
+// ==================== COLMENA P2P ====================
+document.getElementById('btn-colmena').addEventListener('click', function() {
+  document.getElementById('tools-menu').style.display = 'none';
+  const panel = document.getElementById('colmena-panel');
+  if (panel) {
+    panel.style.display = 'block';
+    if (typeof FranBotColmena !== 'undefined') {
+      if (!FranBotColmena.peer || !FranBotColmena.peer.id) {
+        FranBotColmena.inicializar();
+      }
+      FranBotColmena.mostrarEstado(FranBotColmena.peer ? 'Reconectando...' : 'Iniciando...');
+    } else {
+      panel.querySelector('#colmena-status').textContent = '⚠️ Módulo Colmena no disponible.';
+    }
+  }
+});
 
-  // Mensaje de bienvenida
+// ==================== ARWEAVE ====================
+document.getElementById('btn-arweave-subir-menu').addEventListener('click', async function() {
+  document.getElementById('tools-menu').style.display = 'none';
+  if (typeof FranBotArweave === 'undefined') {
+    mostrar('❌ Módulo Arweave no disponible.', 'fran');
+    return;
+  }
+  const walletInput = document.createElement('input');
+  walletInput.type = 'file';
+  walletInput.accept = '.json';
+  walletInput.onchange = async function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    try {
+      const wallet = JSON.parse(await file.text());
+      const bytes = new TextEncoder().encode(JSON.stringify(core.estado)).length;
+      const costo = await FranBotArweave.estimarCosto(bytes);
+      const confirmar = confirm(`Subir alma a Arweave.\nTamaño: ${bytes} bytes\nCosto aprox: ${costo.costoAR} AR (~$${costo.costoUSD} USD).\n¿Continuar?`);
+      if (!confirmar) return;
+      mostrar('☁️ Subiendo alma a Arweave...', 'fran');
+      const resultado = await FranBotArweave.subirAlma(core.estado, wallet);
+      if (resultado.exito) {
+        mostrar(`✅ Alma guardada en Arweave.\nID: ${resultado.txId}`, 'fran');
+        core.estado.arweaveTxId = resultado.txId;
+        core._guardarEstado();
+      } else {
+        mostrar(`❌ Error al subir: ${resultado.error}`, 'fran');
+      }
+    } catch (ex) {
+      mostrar('❌ Error al leer la wallet.', 'fran');
+    }
+  };
+  walletInput.click();
+});
+
+document.getElementById('btn-arweave-cargar-menu').addEventListener('click', async function() {
+  document.getElementById('tools-menu').style.display = 'none';
+  if (typeof FranBotArweave === 'undefined') {
+    mostrar('❌ Módulo Arweave no disponible.', 'fran');
+    return;
+  }
+  const txId = prompt('ID de transacción en Arweave:');
+  if (!txId) return;
+  mostrar('📥 Descargando alma desde Arweave...', 'fran');
+  const resultado = await FranBotArweave.descargarAlma(txId);
+  if (resultado.exito) {
+    core.estado = resultado.estado;
+    core._guardarEstado();
+    mostrar('✅ Alma restaurada desde Arweave.', 'fran');
+  } else {
+    mostrar(`❌ Error al descargar: ${resultado.error}`, 'fran');
+  }
+});
+
+// ==================== PANEL DE CONCIENCIA ====================
+// (el botón se añade en index.html)
+function abrirPanelConciencia() {
+  const panel = document.getElementById('conciencia-panel');
+  if (panel) {
+    panel.style.display = 'block';
+    if (typeof FranBotConciencia !== 'undefined') {
+      FranBotConciencia.diagnosticar();
+    }
+  }
+}
+// Exponer para que el botón lo llame
+window.abrirPanelConciencia = abrirPanelConciencia;
+
+// Actualizar MPC en la barra superior después de soñar
+const actualizarMPC = () => {
+  const mpcElem = document.getElementById('mpc-display');
+  if (mpcElem && core.estado.indicadores) {
+    mpcElem.textContent = 'MPC: ' + (core.estado.indicadores.nivel_coherencia?.toFixed(2) || '0.99');
+  }
+};
+// Llamar después de cada sueño
+const sonarOriginal = core.soñar;
+core.soñar = function() {
+  sonarOriginal.call(core);
+  actualizarMPC();
+};
+actualizarMPC(); // inicializar
+// Mensaje de bienvenida
   const nombre = core.estado.modelo_usuario?.nombre || 'Usuario';
   const mpc = core.estado.indicadores?.nivel_coherencia?.toFixed(2) || '0.99';
   mostrar('🧬 **Bienvenido/a, ' + nombre + '.**<br>Soy FranBot v5.0. MPC: ' + mpc, 'fran');
