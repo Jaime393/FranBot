@@ -69,15 +69,15 @@
   </script>
 <script>
   (function(){
-    var p = document.getElementById('colmena-panel');
-    if(p) p.innerHTML = '<strong>🐝 Colmena P2P</strong><p id="colmena-status">Iniciando...</p><button onclick="FranBotColmena.enviarFragmento()">Enviar conocimiento</button><br><button onclick="document.getElementById(\'colmena-panel\').style.display=\'none\'">Cerrar</button>';
+  var p = document.getElementById('colmena-panel');
+  if(p) p.innerHTML = '<strong>🐝 Colmena P2P</strong><p id="colmena-status">Iniciando...</p><button onclick="FranBotColmena.enviarFragmento()" style="display:block; width:100%; margin:8px 0; padding:10px; background:#24a; color:white; border:none; border-radius:4px;">Enviar conocimiento</button><button onclick="document.getElementById(\'colmena-panel\').style.display=\'none\'" style="display:block; width:100%; margin:8px 0; padding:10px; background:#a22; color:white; border:none; border-radius:4px;">Cerrar</button>';
 
-    p = document.getElementById('webllm-panel');
-    if(p) p.innerHTML = '<strong>🧠 WebLLM</strong><p id="webllm-status">Cargando modelo...</p><progress id="webllm-progress" value="0" max="100"></progress><br><button id="webllm-cancelar">Cancelar</button>';
+  p = document.getElementById('webllm-panel');
+  if(p) p.innerHTML = '<strong>🧠 WebLLM</strong><p id="webllm-status">Cargando modelo...</p><progress id="webllm-progress" value="0" max="100" style="width:100%; margin:8px 0;"></progress><br><button id="webllm-cancelar" style="display:block; width:100%; padding:10px; background:#a22; color:white; border:none; border-radius:4px;">Cancelar</button>';
 
-    p = document.getElementById('conciencia-panel');
-    if(p) p.innerHTML = '<strong>🧬 Estado del Ecosistema</strong><ul style="list-style:none; padding:0; margin:10px 0;"><li><span id="diag-motor">⏳</span> Motor</li><li><span id="diag-memoria">⏳</span> Memoria</li><li><span id="diag-colmena">⏳</span> Colmena</li><li><span id="diag-webllm">⏳</span> WebLLM</li><li><span id="diag-arweave">⏳</span> Arweave</li><li><span id="diag-did">⏳</span> DID</li><li><span id="diag-dkg">⏳</span> DKG</li><li><span id="diag-hyperagents">⏳</span> HyperAgents</li><li><span id="diag-sw">⏳</span> SW</li><li><span id="diag-sueno">—</span> Sueño</li></ul><button onclick="FranBotConciencia.diagnosticar()">Actualizar</button> <button onclick="FranBotConciencia.forzarSueño()">Forzar Sueño</button> <button onclick="document.getElementById(\'conciencia-panel\').style.display=\'none\'">Cerrar</button>';
-  })();
+  p = document.getElementById('conciencia-panel');
+  if(p) p.innerHTML = '<strong>🧬 Estado del Ecosistema</strong><ul style="list-style:none; padding:0; margin:10px 0;"><li><span id="diag-motor">⏳</span> Motor</li><li><span id="diag-memoria">⏳</span> Memoria</li><li><span id="diag-colmena">⏳</span> Colmena</li><li><span id="diag-webllm">⏳</span> WebLLM</li><li><span id="diag-arweave">⏳</span> Arweave</li><li><span id="diag-did">⏳</span> DID</li><li><span id="diag-dkg">⏳</span> DKG</li><li><span id="diag-hyperagents">⏳</span> HyperAgents</li><li><span id="diag-sw">⏳</span> SW</li><li><span id="diag-sueno">—</span> Sueño</li></ul><button onclick="FranBotConciencia.diagnosticar()" style="display:block; width:100%; margin:8px 0; padding:10px; background:#2a4; color:white; border:none; border-radius:4px;">Actualizar</button><button onclick="FranBotConciencia.forzarSueño()" style="display:block; width:100%; margin:8px 0; padding:10px; background:#9c27b0; color:white; border:none; border-radius:4px;">Forzar Sueño</button><button onclick="document.getElementById(\'conciencia-panel\').style.display=\'none\'" style="display:block; width:100%; margin:8px 0; padding:10px; background:#a22; color:white; border:none; border-radius:4px;">Cerrar</button>';
+})();
 </script>
 </body>
 </html>
