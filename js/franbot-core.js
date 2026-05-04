@@ -34,13 +34,19 @@ class FranBotCore {
     let respuesta = '';
     const alma = this.almas[this.almaActiva] || this.almas['sabio callejero'];
 
-    if (txt.includes('qué has aprendido') || txt.includes('que has aprendido')) {
+    if (txt.includes('evolución') || txt.includes('evolucion')) {
+      const totalMensajes = this.contador;
+      const frasesAprendidas = (typeof MotorAprendizaje !== 'undefined' && MotorAprendizaje.nuevaFrases) ? MotorAprendizaje.nuevaFrases.length : 0;
+      const semillasRecibidas = (typeof ProcesadorSemillas !== 'undefined' && ProcesadorSemillas.semillasRecibidas) ? ProcesadorSemillas.semillasRecibidas.length : 0;
+      const almasDisponibles = Object.keys(this.almas).length;
+      respuesta = '🧬 Mi evolución:<br>📊 Mensajes totales: ' + totalMensajes + '<br>🌱 Frases aprendidas: ' + frasesAprendidas + '<br>🐝 Semillas de la Colmena: ' + semillasRecibidas + '<br>🎭 Almas disponibles: ' + almasDisponibles + '<br>🧠 Coherencia: ' + this.estado.indicadores.nivel_coherencia.toFixed(4);
+    } else if (txt.includes('qué has aprendido') || txt.includes('que has aprendido')) {
       const aprendidas = (typeof MotorAprendizaje !== 'undefined' && MotorAprendizaje.nuevaFrases?.length > 0) ? MotorAprendizaje.nuevaFrases.map(f => f.respuesta) : [];
       const semillas = (typeof ProcesadorSemillas !== 'undefined' && ProcesadorSemillas.semillasRecibidas?.length > 0) ? ProcesadorSemillas.semillasRecibidas.map(s => s.respuesta) : [];
       const todas = [...aprendidas, ...semillas];
       respuesta = todas.length > 0 ? '📚 Esto es lo que la Colmena me ha enseñado:<br>' + todas.slice(-5).join('<br>') : 'Aún no he aprendido nada nuevo de la Colmena. ¡Enséñame algo!';
     } else if (txt.includes('estadísticas') || txt.includes('estadisticas')) {
-      respuesta = `📊 Mensajes: ${this.contador} | Coherencia: ${this.estado.indicadores.nivel_coherencia.toFixed(2)} | Nodos: ${Object.keys(this.estado.campo_conceptual.nodos).length}`;
+      respuesta = `📊 Mensajes: ${this.contador} | Coherencia: ${this.estado.indicadores.nivel_coherencia.toFixed(4)} | Nodos: ${Object.keys(this.estado.campo_conceptual.nodos).length}`;
     } else if (txt.includes('diario')) {
       const ultimas = this.estado.historial.slice(-5).map(h => h.entrada).join('<br>');
       respuesta = ultimas ? '📖 Últimas interacciones:<br>' + ultimas : '📖 Diario vacío.';

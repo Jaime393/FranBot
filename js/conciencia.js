@@ -14,6 +14,9 @@ const FranBotConciencia = {
   },
   diagnosticar() {
     this.estado.motor = !!(window.franbot && window.franbot.estado);
+    if (typeof IFTEngine !== "undefined") { const coh = IFTEngine.coherencia(window.franbot.estado.campo_conceptual); if (window.franbot && window.franbot.estado) { window.franbot.estado.indicadores.nivel_coherencia = coh; } }
+    if (typeof IFTEngine !== "undefined") { const coh = IFTEngine.coherencia(window.franbot.estado.campo_conceptual); if (window.franbot && window.franbot.estado) { window.franbot.estado.indicadores.nivel_coherencia = coh; } }
+    if (typeof IFTEngine !== "undefined") { const coh = IFTEngine.coherencia(window.franbot.estado.campo_conceptual); if (window.franbot && window.franbot.estado) { window.franbot.estado.indicadores.nivel_coherencia = coh; } }
     this.estado.memoria = !!(window.SuperLocalMemory);
     this.estado.colmena = !!(window.FranBotColmena && FranBotColmena.peer);
     this.estado.webllm = !!(window.FranBotWebLLM && FranBotWebLLM.cargado);
