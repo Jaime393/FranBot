@@ -137,8 +137,8 @@ body {
   transition: background 0.15s;
 }
 #tools-menu button:hover { background: #1e2230; }
- 
-/* Estilo visual mejorado para los botones del menú */
+
+/* Bordes de colores para el menú (estilo panel de modos) */
 #btn-sonar-menu { border-left: 4px solid #9c27b0; }
 #btn-exportar-chat-menu { border-left: 4px solid #2196f3; }
 #btn-exportar-menu { border-left: 4px solid #4caf50; }
