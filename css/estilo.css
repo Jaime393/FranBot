@@ -137,6 +137,18 @@ body {
   transition: background 0.15s;
 }
 #tools-menu button:hover { background: #1e2230; }
+ 
+/* Estilo visual mejorado para los botones del menú */
+#btn-sonar-menu { border-left: 4px solid #9c27b0; }
+#btn-exportar-chat-menu { border-left: 4px solid #2196f3; }
+#btn-exportar-menu { border-left: 4px solid #4caf50; }
+#btn-cargar-menu { border-left: 4px solid #ff9800; }
+#btn-adjuntar-menu { border-left: 4px solid #795548; }
+#btn-colmena { border-left: 4px solid #ffeb3b; }
+#toggle-mode-menu { border-left: 4px solid #00bcd4; }
+#btn-arweave-subir-menu { border-left: 4px solid #e91e63; }
+#btn-arweave-cargar-menu { border-left: 4px solid #8bc34a; }
+#btn-conciencia-menu { border-left: 4px solid #ff5722; }
 
 #colmena-panel, #webllm-panel, #conciencia-panel {
   background: var(--surface);
