@@ -4,8 +4,7 @@
   "verificationMethod": [{
     "id": "did:web:jaime393.github.io#keys-1",
     "type": "EcdsaSecp256r1VerificationKey2019",
-    "controller": "did:web:jaime393.github.io",
-    "publicKeyJwk": {}
+    "controller": "did:web:jaime393.github.io"
   }],
   "authentication": ["did:web:jaime393.github.io#keys-1"],
   "assertionMethod": ["did:web:jaime393.github.io#keys-1"]

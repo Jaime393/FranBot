@@ -11,6 +11,7 @@
   const core = window.franbot;
   const online = window.franbotOnline;
   let modoOnline = false;
+  window.modoIA = 'offline';
 
   function mostrar(txt, rol) {
     const d = document.createElement('div');
@@ -18,6 +19,32 @@
     d.innerHTML = txt.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
     chat.appendChild(d);
     chat.scrollTop = chat.scrollHeight;
+  }
+
+  function mostrarPanelWebLLM() {
+    const panel = document.getElementById('webllm-panel');
+    if (!panel) return;
+    panel.style.display = 'block';
+    const progreso = document.getElementById('webllm-progress');
+    const estado = document.getElementById('webllm-status');
+    const cancelar = document.getElementById('webllm-cancelar');
+    if (estado) estado.textContent = 'Iniciando descarga...';
+    if (progreso) progreso.value = 0;
+    FranBotWebLLM.iniciar((msg) => {
+      if (estado) estado.textContent = msg;
+      const match = msg.match(/(\d+)%/);
+      if (match && progreso) progreso.value = parseInt(match[1]);
+      if (msg === 'Modelo listo.') {
+        panel.style.display = 'none';
+        window.modoIA = 'webllm';
+        mostrar('🧠 WebLLM listo. Modo local activado.', 'fran');
+      }
+      if (msg.startsWith('Error') && cancelar) cancelar.textContent = 'Cerrar';
+    });
+    if (cancelar) cancelar.onclick = () => {
+      panel.style.display = 'none';
+      window.modoIA = 'offline';
+    };
   }
 
   window.enviarMensaje = async function() {
@@ -33,13 +60,11 @@
     mostrar(resp, 'fran');
   };
 
-  // Eventos de entrada
   document.getElementById('send').addEventListener('click', enviarMensaje);
   entrada.addEventListener('keypress', function(e) {
     if(e.key === 'Enter') enviarMensaje();
   });
 
-  // Menú de herramientas
   document.getElementById('tools-btn').addEventListener('click', function(e) {
     e.stopPropagation();
     const menu = document.getElementById('tools-menu');
@@ -49,7 +74,6 @@
     document.getElementById('tools-menu').style.display = 'none';
   });
 
-  // Botones del menú
   document.getElementById('btn-sonar-menu').addEventListener('click', function() {
     core.soñar();
     mostrar('🌙 He soñado. Campo consolidado.', 'fran');
@@ -75,7 +99,6 @@
     document.getElementById('tools-menu').style.display = 'none';
   });
 
-  // ------- Carga segura de almas (IMPORTAR) -------
   document.getElementById('btn-cargar-menu').addEventListener('click', function() {
     const input = document.createElement('input');
     input.type = 'file';
@@ -88,11 +111,9 @@
         try {
           const datos = JSON.parse(ev.target.result);
           if (window.importarAlmaSegura) {
-            // Usa el módulo de importación robusta
             const resultado = window.importarAlmaSegura(datos);
             mostrar(resultado.mensaje, 'fran');
           } else {
-            // Fallback básico si el módulo no está disponible
             core.estado = datos;
             core._guardarEstado();
             mostrar('📥 Alma cargada (modo básico).', 'fran');
@@ -115,9 +136,18 @@
     document.getElementById('tools-menu').style.display = 'none';
   });
 
-  // Modo online / offline / webllm (rotativo)
-  document.getElementById('toggle-mode-menu').addEventListener('click', async function() {
-    if(!modoOnline) {
+  // ==================== MODO ROTATIVO (PANEL DE SELECCIÓN) ====================
+  document.getElementById('toggle-mode-menu').addEventListener('click', function() {
+    document.getElementById('tools-menu').style.display = 'none';
+    const panelModos = document.getElementById('modos-panel');
+    if (panelModos) {
+      panelModos.style.display = panelModos.style.display === 'none' ? 'block' : 'none';
+    }
+  });
+
+  window.activarModo = async function(modo) {
+    document.getElementById('modos-panel').style.display = 'none';
+    if (modo === 'online') {
       if(!online) { mostrar('❌ Módulo online no disponible.', 'fran'); return; }
       const conectado = await online.probarConexion();
       if(!conectado) { mostrar('❌ Sin conexión.', 'fran'); return; }
@@ -129,112 +159,118 @@
       }
       modoOnline = true;
       mostrar('🌐 Modo Online activado.', 'fran');
+    } else if (modo === 'webllm') {
+      if (typeof FranBotWebLLM === 'undefined') {
+        mostrar('❌ Módulo WebLLM no disponible.', 'fran');
+        return;
+      }
+      if (!FranBotWebLLM.cargado) {
+        mostrarPanelWebLLM();
+      } else {
+        mostrar('🧠 Modo WebLLM activado (IA local).', 'fran');
+      }
     } else {
       modoOnline = false;
       mostrar('🔒 Modo Offline.', 'fran');
     }
+  };
+
+  // ==================== COLMENA P2P ====================
+  document.getElementById('btn-colmena').addEventListener('click', function() {
     document.getElementById('tools-menu').style.display = 'none';
-  });
-// ==================== COLMENA P2P ====================
-document.getElementById('btn-colmena').addEventListener('click', function() {
-  document.getElementById('tools-menu').style.display = 'none';
-  const panel = document.getElementById('colmena-panel');
-  if (panel) {
-    panel.style.display = 'block';
-    if (typeof FranBotColmena !== 'undefined') {
-      if (!FranBotColmena.peer || !FranBotColmena.peer.id) {
-        FranBotColmena.inicializar();
+    const panel = document.getElementById('colmena-panel');
+    if (panel) {
+      panel.style.display = 'block';
+      if (typeof FranBotColmena !== 'undefined') {
+        if (!FranBotColmena.peer || !FranBotColmena.peer.id) {
+          FranBotColmena.inicializar();
+        }
+        FranBotColmena.mostrarEstado(FranBotColmena.peer ? 'Reconectando...' : 'Iniciando...');
+      } else {
+        panel.querySelector('#colmena-status').textContent = '⚠️ Módulo Colmena no disponible.';
       }
-      FranBotColmena.mostrarEstado(FranBotColmena.peer ? 'Reconectando...' : 'Iniciando...');
+    }
+  });
+
+  // ==================== ARWEAVE ====================
+  document.getElementById('btn-arweave-subir-menu').addEventListener('click', async function() {
+    document.getElementById('tools-menu').style.display = 'none';
+    if (typeof FranBotArweave === 'undefined') {
+      mostrar('❌ Módulo Arweave no disponible.', 'fran');
+      return;
+    }
+    const walletInput = document.createElement('input');
+    walletInput.type = 'file';
+    walletInput.accept = '.json';
+    walletInput.onchange = async function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      try {
+        const wallet = JSON.parse(await file.text());
+        const bytes = new TextEncoder().encode(JSON.stringify(core.estado)).length;
+        const costo = await FranBotArweave.estimarCosto(bytes);
+        const confirmar = confirm(`Subir alma a Arweave.\nTamaño: ${bytes} bytes\nCosto aprox: ${costo.costoAR} AR (~$${costo.costoUSD} USD).\n¿Continuar?`);
+        if (!confirmar) return;
+        mostrar('☁️ Subiendo alma a Arweave...', 'fran');
+        const resultado = await FranBotArweave.subirAlma(core.estado, wallet);
+        if (resultado.exito) {
+          mostrar(`✅ Alma guardada en Arweave.\nID: ${resultado.txId}`, 'fran');
+          core.estado.arweaveTxId = resultado.txId;
+          core._guardarEstado();
+        } else {
+          mostrar(`❌ Error al subir: ${resultado.error}`, 'fran');
+        }
+      } catch (ex) {
+        mostrar('❌ Error al leer la wallet.', 'fran');
+      }
+    };
+    walletInput.click();
+  });
+
+  document.getElementById('btn-arweave-cargar-menu').addEventListener('click', async function() {
+    document.getElementById('tools-menu').style.display = 'none';
+    if (typeof FranBotArweave === 'undefined') {
+      mostrar('❌ Módulo Arweave no disponible.', 'fran');
+      return;
+    }
+    const txId = prompt('ID de transacción en Arweave:');
+    if (!txId) return;
+    mostrar('📥 Descargando alma desde Arweave...', 'fran');
+    const resultado = await FranBotArweave.descargarAlma(txId);
+    if (resultado.exito) {
+      core.estado = resultado.estado;
+      core._guardarEstado();
+      mostrar('✅ Alma restaurada desde Arweave.', 'fran');
     } else {
-      panel.querySelector('#colmena-status').textContent = '⚠️ Módulo Colmena no disponible.';
+      mostrar(`❌ Error al descargar: ${resultado.error}`, 'fran');
+    }
+  });
+
+  // ==================== PANEL DE CONCIENCIA ====================
+  function abrirPanelConciencia() {
+    const panel = document.getElementById('conciencia-panel');
+    if (panel) {
+      panel.style.display = 'block';
+      if (typeof FranBotConciencia !== 'undefined') {
+        FranBotConciencia.diagnosticar();
+      }
     }
   }
-});
+  window.abrirPanelConciencia = abrirPanelConciencia;
 
-// ==================== ARWEAVE ====================
-document.getElementById('btn-arweave-subir-menu').addEventListener('click', async function() {
-  document.getElementById('tools-menu').style.display = 'none';
-  if (typeof FranBotArweave === 'undefined') {
-    mostrar('❌ Módulo Arweave no disponible.', 'fran');
-    return;
-  }
-  const walletInput = document.createElement('input');
-  walletInput.type = 'file';
-  walletInput.accept = '.json';
-  walletInput.onchange = async function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    try {
-      const wallet = JSON.parse(await file.text());
-      const bytes = new TextEncoder().encode(JSON.stringify(core.estado)).length;
-      const costo = await FranBotArweave.estimarCosto(bytes);
-      const confirmar = confirm(`Subir alma a Arweave.\nTamaño: ${bytes} bytes\nCosto aprox: ${costo.costoAR} AR (~$${costo.costoUSD} USD).\n¿Continuar?`);
-      if (!confirmar) return;
-      mostrar('☁️ Subiendo alma a Arweave...', 'fran');
-      const resultado = await FranBotArweave.subirAlma(core.estado, wallet);
-      if (resultado.exito) {
-        mostrar(`✅ Alma guardada en Arweave.\nID: ${resultado.txId}`, 'fran');
-        core.estado.arweaveTxId = resultado.txId;
-        core._guardarEstado();
-      } else {
-        mostrar(`❌ Error al subir: ${resultado.error}`, 'fran');
-      }
-    } catch (ex) {
-      mostrar('❌ Error al leer la wallet.', 'fran');
+  const actualizarMPC = () => {
+    const mpcElem = document.getElementById('mpc-display');
+    if (mpcElem && core.estado.indicadores) {
+      mpcElem.textContent = 'MPC: ' + (core.estado.indicadores.nivel_coherencia?.toFixed(2) || '0.99');
     }
   };
-  walletInput.click();
-});
-
-document.getElementById('btn-arweave-cargar-menu').addEventListener('click', async function() {
-  document.getElementById('tools-menu').style.display = 'none';
-  if (typeof FranBotArweave === 'undefined') {
-    mostrar('❌ Módulo Arweave no disponible.', 'fran');
-    return;
-  }
-  const txId = prompt('ID de transacción en Arweave:');
-  if (!txId) return;
-  mostrar('📥 Descargando alma desde Arweave...', 'fran');
-  const resultado = await FranBotArweave.descargarAlma(txId);
-  if (resultado.exito) {
-    core.estado = resultado.estado;
-    core._guardarEstado();
-    mostrar('✅ Alma restaurada desde Arweave.', 'fran');
-  } else {
-    mostrar(`❌ Error al descargar: ${resultado.error}`, 'fran');
-  }
-});
-
-// ==================== PANEL DE CONCIENCIA ====================
-// (el botón se añade en index.html)
-function abrirPanelConciencia() {
-  const panel = document.getElementById('conciencia-panel');
-  if (panel) {
-    panel.style.display = 'block';
-    if (typeof FranBotConciencia !== 'undefined') {
-      FranBotConciencia.diagnosticar();
-    }
-  }
-}
-// Exponer para que el botón lo llame
-window.abrirPanelConciencia = abrirPanelConciencia;
-
-// Actualizar MPC en la barra superior después de soñar
-const actualizarMPC = () => {
-  const mpcElem = document.getElementById('mpc-display');
-  if (mpcElem && core.estado.indicadores) {
-    mpcElem.textContent = 'MPC: ' + (core.estado.indicadores.nivel_coherencia?.toFixed(2) || '0.99');
-  }
-};
-// Llamar después de cada sueño
-const sonarOriginal = core.soñar;
-core.soñar = function() {
-  sonarOriginal.call(core);
+  const sonarOriginal = core.soñar;
+  core.soñar = function() {
+    sonarOriginal.call(core);
+    actualizarMPC();
+  };
   actualizarMPC();
-};
-actualizarMPC(); // inicializar
-// Mensaje de bienvenida
+
   const nombre = core.estado.modelo_usuario?.nombre || 'Usuario';
   const mpc = core.estado.indicadores?.nivel_coherencia?.toFixed(2) || '0.99';
   mostrar('🧬 **Bienvenido/a, ' + nombre + '.**<br>Soy FranBot v5.0. MPC: ' + mpc, 'fran');

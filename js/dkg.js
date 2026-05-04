@@ -4,7 +4,7 @@
 
 const FranBotDKG = {
   conectado: false,
-  nodo: 'https://dkg-testnet.origintrail.io', // Testnet público
+  nodo: 'https://dkg-testnet.origintrail.io',
   estado: 'desconectado',
 
   async inicializar() {
@@ -23,11 +23,6 @@ const FranBotDKG = {
     }
   },
 
-  /**
-   * Consultar un activo de conocimiento por su UAL
-   * @param {string} ual - Uniform Asset Locator (ej: did:dkg:ot:2043/0x...)
-   * @returns {Promise<object>} resultado de la consulta
-   */
   async consultar(ual) {
     if (!this.conectado) await this.inicializar();
     try {
@@ -40,11 +35,6 @@ const FranBotDKG = {
     }
   },
 
-  /**
-   * Buscar activos de conocimiento por término
-   * @param {string} termino - Palabra clave a buscar
-   * @returns {Promise<object>} resultados
-   */
   async buscar(termino) {
     if (!this.conectado) await this.inicializar();
     try {
@@ -57,9 +47,6 @@ const FranBotDKG = {
     }
   },
 
-  /**
-   * Obtener el estado actual de la conexión
-   */
   obtenerEstado() {
     return { conectado: this.conectado, estado: this.estado };
   }

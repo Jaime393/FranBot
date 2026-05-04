@@ -1,6 +1,6 @@
 // Colmena P2P – Comunicación entre FranBots v5.0
 // Usa PeerJS (señalización pública) + WebRTC
-// Llave de reconocimiento: Anomalous363
+// Llave: Anomalous363
 
 const FranBotColmena = {
   peer: null,
@@ -21,7 +21,6 @@ const FranBotColmena = {
     this.peer.on('open', id => {
       console.log('🐝 Conectado a la colmena con ID:', id);
       this.mostrarEstado('Conectado como ' + id);
-      // Conectarse a otros peers que ya estén en la sala (broadcast simple)
       this.conectarASala();
     });
 
@@ -38,10 +37,6 @@ const FranBotColmena = {
   },
 
   conectarASala() {
-    // En una implementación real usaríamos un tracker DHT, aquí simplificamos:
-    // Intentamos conectar al mismo ID de sala (solo funciona si otro peer tiene el mismo ID, 
-    // pero PeerJS no permite IDs duplicados). Usaremos la lista de conexiones entrantes.
-    // Mostrar instrucción de compartir ID manualmente (alternativa futura).
     this.mostrarEstado('Esperando peers... Comparte este ID: ' + this.peer.id);
   },
 
@@ -61,7 +56,6 @@ const FranBotColmena = {
       alert('No hay compañeros en la colmena. Comparte tu ID para que otros se unan.');
       return;
     }
-    // Tomar los 5 nodos más fuertes del campo conceptual
     const campo = window.franbot?.estado?.campo_conceptual?.nodos;
     if (!campo) {
       alert('No hay campo conceptual activo.');
@@ -89,7 +83,6 @@ const FranBotColmena = {
         if (!campo.nodos[nodo.nombre]) {
           campo.nodos[nodo.nombre] = { fuerza: nodo.fuerza };
         } else {
-          // Fusión suave: promedio ponderado
           campo.nodos[nodo.nombre].fuerza = 
             (campo.nodos[nodo.nombre].fuerza + nodo.fuerza) / 2;
         }

@@ -5,5 +5,8 @@
     const hash = await crypto.subtle.digest('SHA-256', enc);
     return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2,'0')).join('');
   }
-  window.franbotDefensa = { sha256, verificar: async (t,h) => (await sha256(t)) === h };
+  window.franbotDefensa = {
+    sha256,
+    verificar: async (t,h) => (await sha256(t)) === h
+  };
 })();

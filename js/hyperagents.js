@@ -5,12 +5,9 @@
 const FranBotHyperAgents = {
   activo: false,
   intervalo: null,
-  frecuencia: 5 * 60 * 1000, // Cada 5 minutos
-  umbralPropuesta: 0.85,      // Nivel mínimo de confianza para proponer cambio
+  frecuencia: 5 * 60 * 1000,
+  umbralPropuesta: 0.85,
 
-  /**
-   * Activar el agente metacognitivo
-   */
   activar() {
     if (!window.franbot) {
       console.warn('HyperAgents: Motor no encontrado.');
@@ -23,18 +20,12 @@ const FranBotHyperAgents = {
     return true;
   },
 
-  /**
-   * Desactivar el agente
-   */
   desactivar() {
     this.activo = false;
     if (this.intervalo) clearInterval(this.intervalo);
     console.log('🧠 HyperAgents detenido.');
   },
 
-  /**
-   * Ciclo principal de análisis y propuesta
-   */
   async _ciclo() {
     if (!this.activo || !window.franbot) return;
     const core = window.franbot;
@@ -49,76 +40,47 @@ const FranBotHyperAgents = {
     }
   },
 
-  /**
-   * Analiza el campo conceptual en busca de oportunidades
-   */
   _analizar(campo) {
     const propuestas = [];
     const nodos = campo.nodos;
     const relaciones = campo.relaciones || [];
 
-    // Detectar nodos muy fuertes sin relaciones (posibles nuevos conceptos aislados)
     for (const nombre in nodos) {
       const nodo = nodos[nombre];
       if (nodo.fuerza > 0.9) {
         const tieneRelacion = relaciones.some(r => r.origen === nombre || r.destino === nombre);
         if (!tieneRelacion) {
-          propuestas.push({
-            tipo: 'nodo_huerfano',
-            nodo: nombre,
-            confianza: 0.9,
-            accion: `Conectar '${nombre}' con conceptos afines.`
-          });
+          propuestas.push({ tipo: 'nodo_huerfano', nodo: nombre, confianza: 0.9, accion: `Conectar '${nombre}' con conceptos afines.` });
         }
       }
     }
 
-    // Detectar nodos muy débiles que podrían ser eliminados
     for (const nombre in nodos) {
       if (nodos[nombre].fuerza < 0.1) {
-        propuestas.push({
-          tipo: 'poda_debil',
-          nodo: nombre,
-          confianza: 0.92,
-          accion: `Eliminar nodo débil '${nombre}'.`
-        });
+        propuestas.push({ tipo: 'poda_debil', nodo: nombre, confianza: 0.92, accion: `Eliminar nodo débil '${nombre}'.` });
       }
     }
 
-    // Detectar relaciones rotas (destino inexistente)
     for (const rel of relaciones) {
       if (!nodos[rel.destino]) {
-        propuestas.push({
-          tipo: 'relacion_rota',
-          origen: rel.origen,
-          destino: rel.destino,
-          confianza: 0.95,
-          accion: `Eliminar relación rota de '${rel.origen}' a '${rel.destino}'.`
-        });
+        propuestas.push({ tipo: 'relacion_rota', origen: rel.origen, destino: rel.destino, confianza: 0.95, accion: `Eliminar relación rota de '${rel.origen}' a '${rel.destino}'.` });
       }
     }
 
     return propuestas;
   },
 
-  /**
-   * Aplica una propuesta de mejora al motor
-   */
   _aplicarPropuesta(prop, core) {
     switch (prop.tipo) {
-      case 'nodo_huerfano':
-        // Buscar nodos con nombre similar para crear relación
+      case 'nodo_huerfano': {
         const similares = Object.keys(core.estado.campo_conceptual.nodos)
           .filter(n => n !== prop.nodo && this._similitud(n, prop.nodo) > 0.6);
         if (similares.length > 0) {
-          core.estado.campo_conceptual.relaciones.push({
-            origen: prop.nodo,
-            destino: similares[0],
-            fuerza: 0.7
-          });
+          core.estado.campo_conceptual.relaciones.push({ origen: prop.nodo, destino: similares[0], fuerza: 0.7 });
           console.log(`🧠 HyperAgents: Conecté '${prop.nodo}' con '${similares[0]}'.`);
         }
         break;
+      }
       case 'poda_debil':
         delete core.estado.campo_conceptual.nodos[prop.nodo];
         console.log(`🧠 HyperAgents: Eliminé nodo débil '${prop.nodo}'.`);
@@ -132,9 +94,6 @@ const FranBotHyperAgents = {
     core._guardarEstado();
   },
 
-  /**
-   * Calcula similitud simple entre dos palabras (Jaccard)
-   */
   _similitud(a, b) {
     const setA = new Set(a.toLowerCase().split(''));
     const setB = new Set(b.toLowerCase().split(''));
@@ -143,9 +102,6 @@ const FranBotHyperAgents = {
     return interseccion.size / union.size;
   },
 
-  /**
-   * Estado del módulo
-   */
   obtenerEstado() {
     return { activo: this.activo };
   }

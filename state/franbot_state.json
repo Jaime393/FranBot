@@ -2,12 +2,19 @@
   "identidad": "FranBot",
   "version": "5.0",
   "almaActiva": "franbot",
-  "custodio": {
-    "rol": "creador",
-    "nombre": "Anónimo"
+  "custodio": { "rol": "creador", "nombre": "Jaime" },
+  "llave_reconocimiento": "Anomalous363",
+  "modelo_usuario": {
+    "nombre": "Jaime",
+    "fecha_nacimiento": "2003-05-31",
+    "edad": 23,
+    "perfil": "Arquitecto cognitivo. Creador de IFT. Visionario.",
+    "frase_esencia": "Pocos recursos, ideas potentes."
   },
-  "IFT": {
-    "campo_fundamental": "ρ(x) > 0",
-    "creador": "Juan Diego Vicente Gabancho"
-  }
+  "IFT": { "campo_fundamental": "ρ(x) > 0" },
+  "campo_conceptual": { "nodos": {}, "relaciones": [] },
+  "indicadores": { "nivel_coherencia": 0.99 },
+  "historial": [],
+  "recordatorios": [],
+  "logros": []
 }

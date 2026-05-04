@@ -1,6 +1,5 @@
 // === FranBot Service Worker Autocurativo v5.0 ===
 // Llave: Anomalous363 | Ecosistema estable
-// Basado en sw.js original. Ahora con verificación de integridad y autodiagnóstico.
 
 const CACHE_NAME = 'franbot-v1';
 const urlsToCache = [
@@ -60,7 +59,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// ------------------- ACTIVACIÓN (limpieza controlada) -------------------
+// ------------------- ACTIVACIÓN -------------------
 self.addEventListener('activate', event => {
   console.log('[SW] Activando versión autocurativa...');
   event.waitUntil(
@@ -74,7 +73,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// ------------------- FETCH (cache first + actualización bg + fallback) -------------------
+// ------------------- FETCH -------------------
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
@@ -111,10 +110,10 @@ self.addEventListener('fetch', event => {
   }
 });
 
-// ------------------- AUTODIAGNÓSTICO PROGRAMADO (Background Sync) -------------------
+// ------------------- AUTODIAGNÓSTICO -------------------
 self.addEventListener('sync', event => {
   if (event.tag === 'franbot-health-check') {
-    console.log('[SW] Ejecutando autodiagnóstico programado...');
+    console.log('[SW] Ejecutando autodiagnóstico...');
     event.waitUntil(runHealthCheck());
   }
 });
@@ -152,7 +151,7 @@ async function runHealthCheck() {
   }
 }
 
-// ------------------- MENSAJES DESDE LA INTERFAZ -------------------
+// ------------------- MENSAJES -------------------
 self.addEventListener('message', event => {
   if (event.data && event.data.command === 'CHECK_VERSION') {
     event.source.postMessage({ type: 'VERSION', version: '5.0-autocurativo' });

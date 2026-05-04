@@ -5,12 +5,6 @@
 const FranBotArweave = {
   gateway: 'https://arweave.net',
 
-  /**
-   * Subir el alma completa a Arweave
-   * @param {object} estado - El estado de FranBot a almacenar
-   * @param {object} wallet - Objeto JWK de la wallet de Arweave
-   * @returns {Promise<object>} { exito, txId, error }
-   */
   async subirAlma(estado, wallet) {
     try {
       const datos = JSON.stringify(estado);
@@ -23,11 +17,6 @@ const FranBotArweave = {
     }
   },
 
-  /**
-   * Recuperar el alma desde Arweave a partir de un ID de transacción
-   * @param {string} txId - ID de la transacción en Arweave
-   * @returns {Promise<object>} El objeto de estado recuperado
-   */
   async descargarAlma(txId) {
     try {
       const resp = await fetch(`${this.gateway}/${txId}`);
@@ -40,25 +29,18 @@ const FranBotArweave = {
     }
   },
 
-  /**
-   * Estimar el costo de subir un archivo a Arweave
-   * @param {number} bytes - Tamaño en bytes del archivo
-   * @returns {Promise<object>} { costoAR, costoUSD }
-   */
   async estimarCosto(bytes) {
     try {
       const resp = await fetch(`${this.gateway}/price/${bytes}`);
       const winston = await resp.text();
       const ar = parseFloat(winston) / 1e12;
-      // Precio aproximado del AR en USD (consultar en tiempo real si se desea)
-      const usdPorAR = 25; // ajustar según mercado
+      const usdPorAR = 25;
       return { costoAR: ar.toFixed(6), costoUSD: (ar * usdPorAR).toFixed(4) };
     } catch {
       return { costoAR: 'desconocido', costoUSD: 'desconocido' };
     }
   },
 
-  // Función interna: crear y firmar transacción en Arweave
   async _crearTransaccion(datos, wallet) {
     const encoder = new TextEncoder();
     const dataBytes = encoder.encode(datos);
@@ -77,18 +59,14 @@ const FranBotArweave = {
       ]
     };
 
-    // Obtener precio actual de la red
     const priceResp = await fetch(`${this.gateway}/price/${dataBytes.length}`);
     const price = await priceResp.text();
     tx.reward = price;
 
-    // Obtener last_tx de la wallet
     const addr = await this._ownerToAddress(wallet.n);
     const infoResp = await fetch(`${this.gateway}/wallet/${addr}/last_tx`);
     tx.last_tx = await infoResp.text();
 
-    // Firmar (simplificado: Arweave usa RSA-PSS, aquí usamos la API de arweave.net/sign)
-    // Para wallets de navegador, usamos el endpoint de firma de Arweave
     const signResp = await fetch(`${this.gateway}/tx/sign`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -98,7 +76,6 @@ const FranBotArweave = {
 
     const signedTx = await signResp.json();
 
-    // Enviar transacción a la red
     const submitResp = await fetch(`${this.gateway}/tx`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

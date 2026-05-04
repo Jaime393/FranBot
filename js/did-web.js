@@ -8,17 +8,11 @@ const FranBotDID = {
   did: null,
   documento: null,
 
-  /**
-   * Construye el DID a partir del dominio
-   */
   construirDID() {
     this.did = `did:web:${this.dominio.replace(/\//g, ':')}`;
     return this.did;
   },
 
-  /**
-   * Genera o recupera el documento DID desde localStorage
-   */
   async inicializar() {
     this.construirDID();
     const guardado = localStorage.getItem('franbot_did_document');
@@ -32,9 +26,6 @@ const FranBotDID = {
     return nuevoDoc;
   },
 
-  /**
-   * Genera un documento DID autocustodiado
-   */
   async _generarDocumento() {
     const par = await crypto.subtle.generateKey(
       { name: 'ECDSA', namedCurve: 'P-256' },
@@ -56,9 +47,6 @@ const FranBotDID = {
     };
   },
 
-  /**
-   * Resuelve un did:web desde un dominio (fetch del documento)
-   */
   async resolver(did) {
     const partes = did.replace('did:web:', '').split(':');
     const dominio = partes.join('/');
@@ -72,16 +60,10 @@ const FranBotDID = {
     }
   },
 
-  /**
-   * Devuelve el documento actual
-   */
   obtenerDocumento() {
     return this.documento;
   },
 
-  /**
-   * Devuelve el DID como string
-   */
   obtenerDID() {
     return this.did;
   }
