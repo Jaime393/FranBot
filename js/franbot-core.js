@@ -232,6 +232,7 @@ class FranBotCore {
     // ============================================
     };
     this.almaActiva = this.estado.almaActiva || 'sabio callejero';
+    this.sabiduria = window.BIBLIOTECA_LEGADO || {};
     this.contador = this.estado.historial ? this.estado.historial.length : 0;
     console.log('✅ FranBot Core inicializado. Alma:', this.almaActiva);
   }
@@ -260,6 +261,7 @@ class FranBotCore {
   }
 
   procesar(mensaje) {
+    mensaje = typeof NormalizadorComandos !== 'undefined' ? NormalizadorComandos.normalizar(mensaje) : mensaje;
     if (!mensaje) return 'No te he entendido.';
     const txt = mensaje.toLowerCase().trim();
     this.contador++;

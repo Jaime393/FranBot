@@ -187,3 +187,22 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+/* Estilos del Panel de Enjambre */
+#enjambre-panel button {
+transition: transform 0.1s, box-shadow 0.2s;
+font-size: 0.9rem;
+}
+#enjambre-panel button:active {
+transform: scale(0.95);
+box-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+#sabiduria-panel details summary {
+  color: var(--acento);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+#sabiduria-panel details summary:hover {
+  color: #fff;
+}
