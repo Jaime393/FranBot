@@ -21,7 +21,7 @@ body {
   background: var(--bg);
   color: var(--texto);
   font-family: 'Segoe UI', system-ui, sans-serif;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -88,9 +88,8 @@ body {
   display: flex;
   gap: 8px;
   padding: 12px;
-  background: rgba(21, 25, 34, 0.85);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  background: var(--surface);
   border-top: 1px solid #222;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
   position: fixed;
