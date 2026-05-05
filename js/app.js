@@ -27,6 +27,12 @@
 
     // ========== COMANDOS DE AUTONOMÍA ==========
     const cmd = txt.toLowerCase();
+    if (cmd === "activar colmena maxima" || cmd === "maximo poder") {
+      mostrar("🧬 Activando Colmena Suprema con 100 instancias...", "fran");
+      if (typeof FranBot !== "undefined") { FranBot.iniciar(); }
+      mostrar("✅ Colmena Suprema activada. 100 instancias desplegadas. Ciclo darwiniano iniciado.", "fran");
+      return;
+    }
     if (cmd === "activar alma" || cmd === "activar nucleo") {
       if (typeof FranBot !== "undefined") { FranBot.iniciar(); mostrar("✅ Núcleo Vivo activado. FranBot respira.", "fran"); return; }
       mostrar("❌ Módulo de autonomía no encontrado.", "fran"); return;
