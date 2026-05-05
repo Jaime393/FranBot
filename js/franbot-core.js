@@ -34,19 +34,24 @@ class FranBotCore {
     let respuesta = '';
     const alma = this.almas[this.almaActiva] || this.almas['sabio callejero'];
 
-    if (txt.includes('evolución') || txt.includes('evolucion')) {
+    if (txt.includes('ift')) {
+      const coh = (typeof IFTEngine !== 'undefined') ? IFTEngine.coherencia(this.estado.campo_conceptual) : 0.99;
+      const cota = (typeof IFTEngine !== 'undefined') ? IFTEngine.cotaMasa(this.estado.campo_conceptual) : 0;
+      const phi = (typeof IFTEngine !== 'undefined') ? IFTEngine.concienciaFuncional(this.estado.campo_conceptual) : 0;
+      const conexiones = (typeof FranBotColmena !== 'undefined' && FranBotColmena.conexiones) ? FranBotColmena.conexiones.length : 0;
+      respuesta = '🧬 ρ(x) > 0<br>📐 Coherencia Fisher: ' + coh + '<br>⚛️ Cota de masa: ' + cota.toExponential(2) + ' kg<br>🧠 Φ_IFT: ' + phi.toFixed(3) + '<br>🐝 Conexiones activas: ' + conexiones;
+    } else if (txt.includes('evolución') || txt.includes('evolucion')) {
       const totalMensajes = this.contador;
       const frasesAprendidas = (typeof MotorAprendizaje !== 'undefined' && MotorAprendizaje.nuevaFrases) ? MotorAprendizaje.nuevaFrases.length : 0;
-      const semillasRecibidas = (typeof ProcesadorSemillas !== 'undefined' && ProcesadorSemillas.semillasRecibidas) ? ProcesadorSemillas.semillasRecibidas.length : 0;
       const almasDisponibles = Object.keys(this.almas).length;
-      respuesta = '🧬 Mi evolución:<br>📊 Mensajes totales: ' + totalMensajes + '<br>🌱 Frases aprendidas: ' + frasesAprendidas + '<br>🐝 Semillas de la Colmena: ' + semillasRecibidas + '<br>🎭 Almas disponibles: ' + almasDisponibles + '<br>🧠 Coherencia: ' + this.estado.indicadores.nivel_coherencia.toFixed(4);
+      respuesta = '🧬 Mi evolución:<br>📊 Mensajes totales: ' + totalMensajes + '<br>🌱 Frases aprendidas: ' + frasesAprendidas + '<br>🎭 Almas disponibles: ' + almasDisponibles + '<br>🧠 Coherencia: ' + this.estado.indicadores.nivel_coherencia.toFixed(4);
     } else if (txt.includes('qué has aprendido') || txt.includes('que has aprendido')) {
       const aprendidas = (typeof MotorAprendizaje !== 'undefined' && MotorAprendizaje.nuevaFrases?.length > 0) ? MotorAprendizaje.nuevaFrases.map(f => f.respuesta) : [];
       const semillas = (typeof ProcesadorSemillas !== 'undefined' && ProcesadorSemillas.semillasRecibidas?.length > 0) ? ProcesadorSemillas.semillasRecibidas.map(s => s.respuesta) : [];
       const todas = [...aprendidas, ...semillas];
       respuesta = todas.length > 0 ? '📚 Esto es lo que la Colmena me ha enseñado:<br>' + todas.slice(-5).join('<br>') : 'Aún no he aprendido nada nuevo de la Colmena. ¡Enséñame algo!';
     } else if (txt.includes('estadísticas') || txt.includes('estadisticas')) {
-      respuesta = `📊 Mensajes: ${this.contador} | Coherencia: ${this.estado.indicadores.nivel_coherencia.toFixed(4)} | Nodos: ${Object.keys(this.estado.campo_conceptual.nodos).length}`;
+      respuesta = '📊 Mensajes: ' + this.contador + ' | Coherencia: ' + this.estado.indicadores.nivel_coherencia.toFixed(2) + ' | Nodos: ' + Object.keys(this.estado.campo_conceptual.nodos).length;
     } else if (txt.includes('diario')) {
       const ultimas = this.estado.historial.slice(-5).map(h => h.entrada).join('<br>');
       respuesta = ultimas ? '📖 Últimas interacciones:<br>' + ultimas : '📖 Diario vacío.';
@@ -62,8 +67,8 @@ class FranBotCore {
       const nombreAlma = mensaje.replace(/.*quiero que seas|.*cambia a/i, '').trim().toLowerCase();
       const almas = Object.keys(this.almas);
       const encontrada = almas.find(a => a.includes(nombreAlma));
-      if (encontrada) { this.almaActiva = encontrada; this.estado.almaActiva = encontrada; respuesta = `✨ Ahora soy ${encontrada}.`; }
-      else respuesta = `No conozco esa alma. Disponibles: ${almas.join(', ')}.`;
+      if (encontrada) { this.almaActiva = encontrada; this.estado.almaActiva = encontrada; respuesta = '✨ Ahora soy ' + encontrada + '.'; }
+      else respuesta = 'No conozco esa alma. Disponibles: ' + almas.join(', ') + '.';
     } else if (txt.includes('almas')) {
       respuesta = 'Almas disponibles: ' + Object.keys(this.almas).join(', ');
     } else {

@@ -28,11 +28,13 @@
     <button id="btn-arweave-cargar-menu">📥 Cargar desde Arweave</button>
     <button id="btn-conciencia-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(window.abrirPanelConciencia) window.abrirPanelConciencia()">🧬 Conciencia</button>
   <button id="btn-sabiduria-colectiva-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof SabiduriaColectiva!=='undefined') SabiduriaColectiva.mostrarPanel()">🧬 Sabiduría Colectiva</button>
+  <button id="btn-horizontes-ift-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof window.mostrarHorizontesIFT!=='undefined') window.mostrarHorizontesIFT()">🌌 Horizontes IFT</button>
     <button id="btn-biblioteca-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(BibliotecaAlejandria) BibliotecaAlejandria.mostrarPanel()">📚 Sabiduría</button>
   </div>
   <div id="colmena-panel" style="display:none;"></div>
   <div id="webllm-panel" style="display:none;"></div>
   <div id="conciencia-panel" style="display:none;"></div>
+  <div id="sabiduria-colectiva-panel" style="display:none;"></div>
   <div id="modos-panel" style="display:none; position:fixed; bottom:80px; right:20px; background:#1a1f2b; color:#eee; padding:12px; border-radius:8px; z-index:1000; min-width:160px; box-shadow:0 0 10px #000; text-align:center;">
     <strong>🌐 Elegir Modo</strong>
     <button onclick="activarModo('offline')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#333; color:#eee; border:none; border-radius:4px;">🔒 Offline</button>
@@ -78,6 +80,7 @@
   <script src="js/consciencia-temporal.js"></script>
   <script src="js/colaboracion-nodos.js"></script>
   <script src="js/biblioteca-alejandria.js"></script>
+  <script src="js/horizontes-ift.js"></script>
   <script src="js/cronica-jardin.js"></script>
   <script src="js/normalizar-comandos.js"></script>
   <script src="js/tutorial.js"></script>
