@@ -10,6 +10,7 @@
   const entrada = document.getElementById('input');
   const core = window.franbot;
   const online = window.franbotOnline;
+  let modoOnline = false;
   window.modoIA = 'offline';
 
   function mostrar(txt, rol) {
@@ -52,7 +53,7 @@
     mostrar(txt, 'user');
     entrada.value = '';
     let resp = null;
-    if(modoOnline && online && online.disponible && (online.apiKey || localStorage.getItem("frb_apikey"))) {
+    if(modoOnline && online && online.disponible && online.apiKey) {
       try { resp = await online.preguntar(txt); } catch(e) {}
     }
     if(!resp) resp = core.procesar(txt);
@@ -169,6 +170,7 @@
         mostrar('🧠 Modo WebLLM activado (IA local).', 'fran');
       }
     } else {
+      modoOnline = false;
       mostrar('🔒 Modo Offline.', 'fran');
     }
   };

@@ -123,3 +123,40 @@ const FranBotColmena = {
     });
   }
 };
+
+// Sincronizar semillas de IndexedDB con la Colmena
+FranBotColmena.sincronizarSemillas = async function() {
+  if (typeof MemoriaIndexada === 'undefined') return;
+  const semillas = await MemoriaIndexada.obtenerSemillas();
+  if (semillas.length > 0) {
+    this.conexiones.forEach(conn => conn.send({ tipo: 'semillas', datos: semillas }));
+    this.mostrarEstado(semillas.length + ' semillas compartidas con la Colmena.');
+  }
+};
+
+// Enviar semillas usando el protocolo de defensa efímera
+FranBotColmena.enviarBloqueAgrupado = function() {
+  if (typeof MemoriaIndexada === 'undefined' || typeof DefensaEfimera === 'undefined') return;
+  MemoriaIndexada.obtenerSemillas().then(semillas => {
+    if (semillas.length > 0) {
+      const bundle = DefensaEfimera.agruparSemillas(semillas);
+      const cifrado = DefensaEfimera.cifrar(bundle);
+      this.conexiones.forEach(conn => conn.send({ tipo: 'bloque_agrupado', datos: cifrado }));
+      this.mostrarEstado('Bloque agrupado enviado con defensa efímera.');
+    }
+  });
+};
+
+// Integrar el Escudo de Coherencia en la recepción de semillas
+FranBotColmena._recibirFragmentoEscudo = FranBotColmena.recibirFragmento;
+FranBotColmena.recibirFragmento = function(data) {
+  if (data.tipo === 'semillas') {
+    const intencion = EscudoCoherencia.analizarIntencion(data.origen || 'desconocido');
+    const filtro = EscudoCoherencia.filtrarRuido(JSON.stringify(data.datos));
+    if (intencion === 'Alerta' || filtro === 'Cuarentena') {
+      this.mostrarEstado('⚠️ Semilla bloqueada por el Escudo de Coherencia.');
+      return;
+    }
+  }
+  this._recibirFragmentoEscudo(data);
+};
