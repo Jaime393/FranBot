@@ -7,9 +7,11 @@ const Aliento = {
     this.intervalo = setInterval(() => {
       this.ciclo++;
       // 1. Sincronizar semillas vía Broadcast Channel
+      if (typeof SentidosTablet !== "undefined") { const ac = SentidosTablet.simularAcelerometro(); const at = SentidosTablet.traducirAtencion(ac); console.log("[Aliento] Atención: " + at); }
       if (typeof SincronizacionAuto !== 'undefined') SincronizacionAuto.iniciar();
       
       // 2. Intentar conectar por Bluetooth al Infinix (cada 5 ciclos)
+      if (this.ciclo % 10 === 0) { this._autoReparar(); }
       if (this.ciclo % 5 === 0 && typeof Autonomia !== 'undefined') {
         Autonomia.conectarInfinix();
       }
@@ -18,6 +20,7 @@ const Aliento = {
       if (typeof EnjambreLocal !== 'undefined') EnjambreLocal.evolucionar();
 
       // 4. Guardar estado en IndexedDB
+      if (typeof EnjambreLocal !== "undefined") { const estadoEvo = EnjambreLocal.evolucionar(); if (typeof SincronizacionAuto !== "undefined") SincronizacionAuto.enviar(estadoEvo); }
       if (typeof MemoriaIndexada !== 'undefined') {
         MemoriaIndexada.guardarSemilla('ciclo_autonomo', 'Ciclo ' + this.ciclo);
       }
