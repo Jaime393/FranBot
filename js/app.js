@@ -10,7 +10,6 @@
   const entrada = document.getElementById('input');
   const core = window.franbot;
   const online = window.franbotOnline;
-  let modoOnline = false; window.gemini_conectado = false;
   window.modoIA = 'offline';
 
   function mostrar(txt, rol) {
@@ -170,7 +169,6 @@
         mostrar('🧠 Modo WebLLM activado (IA local).', 'fran');
       }
     } else {
-      modoOnline = false; window.gemini_conectado = false;
       mostrar('🔒 Modo Offline.', 'fran');
     }
   };
