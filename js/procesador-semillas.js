@@ -23,7 +23,7 @@ const ProcesadorSemillas = {
       respuesta: semilla.respuesta || '',
       origen: semilla.origen || 'colmena'
     });
-    this.guardar();
+    localStorage.setItem('semillas_recibidas', JSON.stringify(this.semillasRecibidas));
   },
 
   // Buscar si hay alguna semilla relacionada con la pregunta

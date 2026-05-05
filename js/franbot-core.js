@@ -249,7 +249,7 @@ class FranBotCore {
       respuesta = "🌱 Estoy creciendo.\n📊 Hemos compartido " + totalMensajes + " mensajes.\n✨ He aprendido " + frasesAprendidas + " frases nuevas.\n🎭 Conviven " + almasDisponibles + " almas en mi interior.\n🧠 Mi coherencia actual es " + this.estado.indicadores.nivel_coherencia.toFixed(4) + ".";
     } else if (txt.includes('qué has aprendido') || txt.includes('que has aprendido')) {
       const aprendidas = (typeof MotorAprendizaje !== 'undefined' && MotorAprendizaje.nuevaFrases?.length > 0) ? MotorAprendizaje.nuevaFrases.map(f => f.respuesta) : [];
-      const semillas = (typeof ProcesadorSemillas !== 'undefined' && ProcesadorSemillas.semillasRecibidas?.length > 0) ? ProcesadorSemillas.semillasRecibidas.map(s => s.respuesta) : [];
+const semillas = JSON.parse(localStorage.getItem('semillas_recibidas') || '[]').map(s => s.respuesta);
       const todas = [...aprendidas, ...semillas];
       respuesta = todas.length > 0 ? "📚 La Colmena me ha susurrado estas enseñanzas:\n" + todas.slice(-5).join("\n") : "🌱 Aún no he absorbido conocimiento de la Colmena. ¡Enséñame algo y te prometo que resonará en mí!";
     } else if (txt.includes('estadísticas') || txt.includes('estadisticas')) {
