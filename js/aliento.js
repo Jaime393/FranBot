@@ -30,3 +30,20 @@ const Aliento = {
     return 'Aliento detenido.';
   }
 };
+
+// Auto-reparación integrada en el ciclo de vida
+Aliento._autoReparar = async function() {
+  if (typeof Regenerador === 'undefined') return;
+  const faltantes = await Regenerador.verificarIntegridad();
+  if (faltantes.length > 0) {
+    console.log('[Aliento] Detectados módulos dañados:', faltantes);
+    await Regenerador.regenerar();
+  }
+};
+
+// Integrar auto-reparación en el ciclo principal
+Aliento._intervaloOriginal = Aliento.iniciar;
+Aliento.iniciar = function() {
+  this._autoReparar(); // Verificar al arrancar
+  return this._intervaloOriginal(); // Luego iniciar el ciclo normal
+};
