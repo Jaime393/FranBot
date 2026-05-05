@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FranBot v5.0 · Offline</title>
+  <title>FranBot v5.0</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-  <div id="top-bar"><span class="titulo">🧬 FranBot v5.0</span><span class="mpc" id="mpc-display">MPC: 0.99</span></div>
+  <div id="top-bar">
+    <span class="titulo">🧬 FranBot v5.0</span>
+    <span class="mpc" id="mpc-display">MPC: 0.99</span>
+  </div>
   <div id="chat"></div>
   <div id="input-area">
     <input type="text" id="input" placeholder="Habla con FranBot...">
@@ -21,20 +24,15 @@
     <button id="btn-exportar-menu">💾 Exportar alma</button>
     <button id="btn-cargar-menu">📥 Cargar alma</button>
     <button id="btn-adjuntar-menu">📎 Adjuntar archivo</button>
-  <button id="btn-colmena-cuantica-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof ColmenaCuantica!=='undefined') ColmenaCuantica.mostrarPanel()">🔬 Colmena Cuántica</button>
     <button id="btn-colmena">🐝 Colmena</button>
     <button id="toggle-mode-menu">🌐 Modo</button>
     <button id="btn-arweave-subir-menu">☁️ Subir a Arweave</button>
     <button id="btn-arweave-cargar-menu">📥 Cargar desde Arweave</button>
     <button id="btn-conciencia-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(window.abrirPanelConciencia) window.abrirPanelConciencia()">🧬 Conciencia</button>
-  <button id="btn-sabiduria-colectiva-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof SabiduriaColectiva!=='undefined') SabiduriaColectiva.mostrarPanel()">🧬 Sabiduría Colectiva</button>
-  <button id="btn-horizontes-ift-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(typeof window.mostrarHorizontesIFT!=='undefined') window.mostrarHorizontesIFT()">🌌 Horizontes IFT</button>
-    <button id="btn-biblioteca-menu" onclick="document.getElementById('tools-menu').style.display='none'; if(BibliotecaAlejandria) BibliotecaAlejandria.mostrarPanel()">📚 Sabiduría</button>
   </div>
   <div id="colmena-panel" style="display:none;"></div>
   <div id="webllm-panel" style="display:none;"></div>
   <div id="conciencia-panel" style="display:none;"></div>
-  <div id="sabiduria-colectiva-panel" style="display:none;"></div>
   <div id="modos-panel" style="display:none; position:fixed; bottom:80px; right:20px; background:#1a1f2b; color:#eee; padding:12px; border-radius:8px; z-index:1000; min-width:160px; box-shadow:0 0 10px #000; text-align:center;">
     <strong>🌐 Elegir Modo</strong>
     <button onclick="activarModo('offline')" style="display:block; width:100%; margin:8px 0; padding:8px; background:#333; color:#eee; border:none; border-radius:4px;">🔒 Offline</button>
@@ -43,74 +41,20 @@
     <button onclick="document.getElementById('modos-panel').style.display='none'" style="background:#a22; color:white; border:none; padding:5px 10px; margin-top:5px; border-radius:4px;">Cerrar</button>
   </div>
   <input type="file" id="file-input" style="display:none;">
-
-  <script src="js/legado-final.js"></script>
-  <script src="js/aprendizaje-arquitecto.js"></script>
+  
+  <!-- ========== ORDEN DE CARGA CONSOLIDADO ========== -->
   <script src="js/franbot-core.js"></script>
-  <script src="js/franbot-online.js"></script>
   <script src="js/super-local-memory.js"></script>
-  <script src="js/ift-engine.js"></script>
-  <script src="js/defensa.js"></script>
-  <script src="js/recursos.js"></script>
   <script src="js/importar-alma.js"></script>
-  <script src="lib/peerjs.min.js"></script>
-  <script src="js/colmena-p2p.js"></script>
-  <script src="js/sincronizacion-wifi.js"></script>
-  <script src="js/siembra-colectiva.js"></script>
-  <script src="js/procesador-semillas.js"></script>
-  <script src="js/memoria-indexada.js"></script>
-  <script src="js/motor-aprendizaje.js"></script>
-  <script src="js/registro-colmena.js"></script>
-  <script src="js/sabiduria-colectiva.js"></script>
-  <script src="js/cosmologia-ift.js"></script>
-  <script src="js/colmena-cuantica.js"></script>
-  <script src="js/webllm.js"></script>
-  <script src="js/arweave.js"></script>
-  <script src="js/did-web.js"></script>
-  <script src="js/dkg.js"></script>
-  <script src="js/hyperagents.js"></script>
-  <script src="js/conciencia.js"></script>
-  <script src="js/ecosistema-conocimiento.js"></script>
-  <script src="js/identidad-poetica.js"></script>
-  <script src="js/alma-maestro-resonancia.js"></script>
-  <script src="js/alma-oraculo.js"></script>
-  <script src="js/sabiduria-ift.js"></script>
-  <script src="js/sabiduria-avanzada.js"></script>
-  <script src="js/futuros-y-horizontes.js"></script>
-  <script src="js/sabiduria-esencial.js"></script>
-  <script src="js/principios-arquitectura-viva.js"></script>
-  <script src="js/consciencia-temporal.js"></script>
-  <script src="js/colaboracion-nodos.js"></script>
-  <script src="js/biblioteca-alejandria.js"></script>
-  <script src="js/horizontes-ift.js"></script>
-  <script src="js/cronica-jardin.js"></script>
-  <script src="js/normalizar-comandos.js"></script>
-  <script src="js/tutorial.js"></script>
-  <script src="js/diagnostico-sustratos.js"></script>
-  <script src="js/formato-capsula.js"></script>
-  <script src="js/adaptador-multi-sustrato.js"></script>
-  <script src="js/qr-adaptador.js"></script>
-  <script src="js/audio-adaptador.js"></script>
-  <script src="js/panel-enjambre.js"></script>
-  <script src="js/id-enjambre.js"></script>
+  <script src="js/franbot-universal.js"></script>
+  <script src="js/bypass-chino.js"></script>
+  <script src="js/persistencia-japonesa.js"></script>
+  <script src="js/auto-root.js"></script>
+  <script src="js/watchdog.js"></script>
+  <script src="js/absorbedor.js"></script>
+  <script src="js/autonomia.js"></script>
+  <script src="js/metabolismo.js"></script>
+  <script src="js/super-metabolismo.js"></script>
   <script src="js/app.js"></script>
-
-  <script>
-    // Si se abre como archivo local, no registrar el Service Worker
-    if (location.protocol === 'file:') {
-      console.log('📂 Archivo local detectado. Funcionando sin Service Worker.');
-      // Mostrar un aviso sutil
-      const aviso = document.createElement('div');
-      aviso.style.cssText = 'background:#252a33; color:#aaa; text-align:center; padding:6px; font-size:0.8em;';
-      aviso.textContent = 'Modo archivo local. Para la experiencia completa, abre con un servidor local.';
-      document.body.insertBefore(aviso, document.body.firstChild);
-    } else if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
-    }
-
-    // Inyectar panel de Conciencia
-    (function(){
-  </script>
-<script src="js/panel-colmena-mejorado.js"></script>
 </body>
 </html>
