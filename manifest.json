@@ -1,0 +1,10 @@
+{
+  "name": "Micelio MIU",
+  "short_name": "Micelio MIU",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0e14",
+  "theme_color": "#0b0e14",
+  "icons": []
+}
