@@ -156,7 +156,7 @@ button { font-family: inherit; cursor: pointer; }
   /* iOS: font-size >= 16px evita el zoom automático al enfocar */
 }
 @media (max-width: 600px) {
-  .barra-input input { font-size: 1rem; }
+  .barra-input input { font-size: 1rem; } /* ≥16px evita zoom en iOS */
 }
 .barra-input input:focus { border-color: var(--borde-fuerte); }
 .boton-enviar {
@@ -625,4 +625,26 @@ button { font-family: inherit; cursor: pointer; }
 #input {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+  font-size: max(1rem, 16px); /* iOS: <16px dispara zoom automático */
 }
+
+/* ── Toast notifications (reemplazo de alert() nativo) ───────────────────────── */
+#miu-toast-wrap {
+  position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+  z-index: 99999; display: flex; flex-direction: column;
+  align-items: center; gap: 8px; pointer-events: none;
+}
+.miu-toast {
+  background: #1e293b; border: 1px solid #334155;
+  color: #e2e8f0; border-radius: 10px;
+  padding: 10px 18px; font-size: 0.83rem; line-height: 1.4;
+  max-width: min(90vw, 380px); text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.5);
+  animation: toastIn .2s ease, toastOut .3s ease 2.7s forwards;
+  pointer-events: all;
+}
+.miu-toast--ok   { border-color: #10b981; color: #6ee7b7; }
+.miu-toast--warn { border-color: #f59e0b; color: #fcd34d; }
+.miu-toast--err  { border-color: #ef4444; color: #fca5a5; }
+@keyframes toastIn  { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@keyframes toastOut { from { opacity:1; } to { opacity:0; pointer-events:none; } }

@@ -107,7 +107,7 @@ window.Biblioteca = (function () {
 
   async function añadirArchivos(files) {
     if (!window.IDBStore) {
-      alert('IDBStore no disponible. Recarga la página o actualiza FranBot a v10.');
+      window.MiuToast && MiuToast.err('IDBStore no disponible. Recarga FranBot.');
       return;
     }
     await window.IDBStore.open();
@@ -197,7 +197,7 @@ window.Biblioteca = (function () {
     const todos      = await window.IDBStore.todosLosPares().catch(() => []);
     const candidatos = todos.filter(p => (p.peso || 0) <= umbralPeso);
     if (!candidatos.length) {
-      alert('No hay pares con ese peso para eliminar. ¡El oráculo está saludable!');
+      window.MiuToast && MiuToast.ok('El oráculo está saludable — sin pares negativos que eliminar.');
       return;
     }
     const ok = confirm(
@@ -207,7 +207,7 @@ window.Biblioteca = (function () {
     if (!ok) return;
     const eliminados = await window.IDBStore.podarParesPorPeso(umbralPeso);
     await renderEstadisticas();
-    alert(`✂️ Poda completa: ${eliminados} pares eliminados.`);
+    window.MiuToast && MiuToast.ok('✂️ Poda completa: ' + eliminados + ' pares eliminados.');
   }
 
   // ─────────────── Exportar pares aprendidos ───────────────────────────────────
@@ -272,19 +272,19 @@ window.Biblioteca = (function () {
     const btnColm = $('btn-colmena');
     if (btnColm) btnColm.addEventListener('click', () => {
       if (window.ColmenaUI) window.ColmenaUI.abrir();
-      else alert('Módulo Colmena no disponible. Recarga la página.');
+      else window.MiuToast && MiuToast.err('Módulo Colmena no disponible. Recarga la página.');
     });
 
     // Bind botón consolidar
     const btnCons = $('btn-consolidar');
     if (btnCons) btnCons.addEventListener('click', async () => {
-      if (!window.Consolidar) return alert('Módulo Consolidar no disponible.');
+      if (!window.Consolidar) return window.MiuToast && MiuToast.err('Módulo Consolidar no disponible.');
       if (!window.ModoOnline || !window.ModoOnline.estaActivo()) {
         const ok = confirm('Para una fusión semántica de calidad se recomienda el modo online. ¿Continuar sin modelo?');
         if (!ok) return;
       }
       const stats = await window.Consolidar.obtenerEstadisticas().catch(() => null);
-      if (!stats || !stats.gruposDuplicados) { alert('No se encontraron pares duplicados. ¡El oráculo ya está optimizado!'); return; }
+      if (!stats || !stats.gruposDuplicados) { window.MiuToast && MiuToast.ok('El oráculo ya está optimizado — sin duplicados.'); return; }
       const ok = confirm(
         `Se encontraron ${stats.gruposDuplicados} grupos de pares similares
 ` +
@@ -299,7 +299,7 @@ window.Biblioteca = (function () {
         const r = await window.Consolidar.consolidarTodo({
           cbProgreso: (i, n) => { btnCons.textContent = '⚙️ ' + i + '/' + n; }
         });
-        alert('✅ Consolidación completa:\n' +
+        window.MiuToast && MiuToast.ok('✅ Consolidado: ' + r.fusionados + ' grupos fusionados, ' + r.eliminados + ' pares compactados, ' + r.errores + ' errores.');
           'Grupos fusionados: ' + r.fusionados + '\n' +
           'Pares eliminados (marcados): ' + r.eliminados + '\n' +
           'Errores: ' + r.errores);
@@ -312,15 +312,11 @@ window.Biblioteca = (function () {
     // Bind botón exportar oráculo
     const btnExpOrac = $('btn-exportar-oraculo');
     if (btnExpOrac) btnExpOrac.addEventListener('click', async () => {
-      if (!window.Consolidar) return alert('Módulo Consolidar no disponible.');
+      if (!window.Consolidar) { window.MiuToast && MiuToast.err('Módulo Consolidar no disponible.'); return; }
       btnExpOrac.disabled = true; btnExpOrac.textContent = '⚙️ Generando…';
       try {
         const r = await window.Consolidar.exportarOraculoDataJS();
-        if (r) alert('⬇️ oraculo-data.js descargado\n' +
-          'Total pares: ' + r.totalPares + ' (base: ' + r.base + ' + IDB: ' + r.idb + ')\n\n' +
-          'Reemplaza el archivo js/oraculo-data.js en tu repo para que el próximo arranque incluya todo el conocimiento aprendido.');
-      } finally {
-        btnExpOrac.disabled = false; btnExpOrac.textContent = '⬇️ Exportar oráculo';
+        if (r) window.MiuToast && MiuToast.ok('⬇️ oraculo-data.js: ' + r.totalPares + ' pares (base:' + r.base + ' + IDB:' + r.idb + ').');
       }
     });
 

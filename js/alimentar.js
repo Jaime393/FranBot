@@ -103,8 +103,11 @@ window.Alimentar = (function () {
     const pareceJSON = /\.json$/i.test(file.name) || /^\s*[\[{]/.test(crudo);
     if (!pareceJSON) return crudo;
     try {
-      const txt = jsonATexto(JSON.parse(crudo));
-      return (txt && txt.trim()) ? txt : crudo;
+      const parsed = JSON.parse(crudo);
+      // Array vacío o null → devolver crudo para procesamiento heurístico
+      if (!parsed || (Array.isArray(parsed) && parsed.length === 0)) return crudo;
+      const txt = jsonATexto(parsed);
+      return (txt && txt.trim().length > 50) ? txt : crudo;
     } catch (e) { return crudo; }
   }
 

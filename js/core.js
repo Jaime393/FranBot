@@ -2,6 +2,8 @@
 // Basado en franbot-core-base.js original. Limpio de dependencias a módulos
 // que no forman parte de este núcleo (SuperLocalMemory, Centauro, Razonador
 // legado, etc. — si existen se usan, si no, se sigue sin ellos).
+'use strict';
+
 class FranBotCore {
   constructor() {
     this.estado = this._cargarEstado();

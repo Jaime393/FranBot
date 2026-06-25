@@ -78,8 +78,8 @@ window.VisorPares = (function () {
       try {
         const raw   = localStorage.getItem('miu_estado');
         const est   = raw ? JSON.parse(raw) : {};
-        const ext   = est.oraculo_extension || [];
-        _pares = ext.map((p, i) => ({ id: 'loc_' + i, ...p }));
+        const ext   = Array.isArray(est.oraculo_extension) ? est.oraculo_extension : [];
+        _pares = ext.map((p, i) => ({ id: 'loc_' + i, q: p.q || '', a: p.a || '', peso: p.peso || 0, origen: p.origen || 'local' }));
       } catch(e) {}
     }
   }

@@ -259,7 +259,8 @@
           window.ModoOnline.guardar('webllm','',true,'__webllm__','__webllm__');
           btnCargar.textContent = '✅ Modelo cargado y activo';
           if (fase) fase.textContent = '✅ ' + modeloId + ' listo. Cierra este panel y chatea.';
-          window.mostrar('🖥️ **WebLLM activo:** ' + (window.WebLLMProvider.MODELOS[modeloId]?.nombre || modeloId) + ' cargado en el navegador. Sin internet, sin clave.', 'fran');
+          window.MiuToast && MiuToast.ok('🖥️ WebLLM activo: ' + (window.WebLLMProvider.MODELOS[modeloId]?.nombre || modeloId).split('—')[0].trim());
+          window.mostrar('🖥️ **WebLLM activo:** ' + (window.WebLLMProvider.MODELOS[modeloId]?.nombre || modeloId) + ' · cargado en tu dispositivo, sin internet ni clave.', 'fran');
           cerrarModal();
         } catch(e) {
           btnCargar.disabled = false;
@@ -397,6 +398,7 @@
           progreso.textContent = `⚙️ Fragmento ${i}/${total}…`;
         });
         progreso.textContent = `✅ ${pares.length} par(es) extraídos de ${file.name}`;
+        window.MiuToast && MiuToast.ok('✅ ' + pares.length + ' pares aprendidos de ' + file.name);
         renderRevision(pares);
       } catch (e) {
         console.error(e);

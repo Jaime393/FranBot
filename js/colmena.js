@@ -219,10 +219,19 @@ window.Colmena = (function () {
 
   // ── Desconexión ───────────────────────────────────────────────────────────────
   function desconectar() {
+    // Marcar este nodo como inactivo en el grafo Gun antes de desconectar
+    if (_ref && _canal) {
+      try {
+        const nodeId = _hashPar(Date.now() + Math.random());
+        _ref.get('meta').get('nodos').get(nodeId).put({ activo: false, t: Date.now() });
+      } catch(e) {}
+    }
     _subs.forEach(fn => { try { fn(); } catch (e) {} });
     _subs = [];
     _ref  = null;
-    _emitEst({ conectado: false, nodos: 0 });
+    _canal = null;
+    _paresVistos.clear();
+    _emitEst({ conectado: false, nodos: 0, canal: '' });
   }
 
   // ── Callbacks ─────────────────────────────────────────────────────────────────

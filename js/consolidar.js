@@ -201,7 +201,7 @@ window.Consolidar = (function () {
     });
 
     if (!combinados.length) {
-      alert('No hay pares para exportar.');
+      window.MiuToast && MiuToast.warn('No hay pares para exportar.'); return;
       return;
     }
 

@@ -5,6 +5,8 @@
 // y servidores locales sin clave (Ollama, LM Studio, llama.cpp, vLLM, koboldcpp...).
 // Todo se guarda solo en este navegador y se usa solo para llamar directo a la
 // API elegida — nunca pasa por ningún servidor intermedio propio.
+'use strict';
+
 window.ModoOnline = {
   _activo: false,
 

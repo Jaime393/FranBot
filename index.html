@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="maximum-scale=1, width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Micelio MIU</title>
 <meta name="theme-color" content="#0b0e14">
 <link rel="manifest" href="manifest.json">
@@ -148,6 +148,30 @@
 
   <script src="js/colmena.js"></script>
   <script src="js/colmena-ui.js"></script>
+  <div id="miu-toast-wrap"></div>
+
+  <script>
+  // ── Toast global (reemplaza alert() en toda la app) ──────────────────────────
+  window.MiuToast = (function() {
+    function show(msg, tipo, dur) {
+      var wrap = document.getElementById('miu-toast-wrap');
+      if (!wrap) return;
+      dur = dur || 3000;
+      var d = document.createElement('div');
+      d.className = 'miu-toast' + (tipo ? ' miu-toast--' + tipo : '');
+      d.textContent = msg;
+      wrap.appendChild(d);
+      setTimeout(function() { if (d.parentNode) d.parentNode.removeChild(d); }, dur + 100);
+    }
+    return {
+      ok:   function(m, dur) { show(m, 'ok',   dur); },
+      warn: function(m, dur) { show(m, 'warn', dur); },
+      err:  function(m, dur) { show(m, 'err',  dur); },
+      info: function(m, dur) { show(m, '',     dur); },
+    };
+  })();
+  </script>
+
   <script src="js/yape.js"></script>
 </body>
 </html>

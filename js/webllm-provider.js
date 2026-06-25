@@ -127,6 +127,13 @@ window.WebLLMProvider = (function () {
       const texto = resp.choices?.[0]?.message?.content || null;
       return texto ? { texto } : { error: 'El modelo no devolvió texto.' };
     } catch (e) {
+      const msg = (e.message || String(e)).toLowerCase();
+      // Si la GPU se quedó sin memoria, resetear el engine para que el usuario
+      // pueda reintentar sin tener que recargar la página
+      if (msg.includes('out of memory') || msg.includes('oom') || msg.includes('device lost')) {
+        _engine = null; _modeloCargado = null;
+        return { error: '⚠️ GPU sin memoria. Recarga el modelo en ⚙️ Conexión → WebLLM.' };
+      }
       return { error: 'Error de inferencia local: ' + (e.message || e) };
     }
   }

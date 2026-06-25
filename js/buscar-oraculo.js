@@ -167,6 +167,12 @@ window.BuscarOraculo = (function () {
 
       let score = sc + voto * 4; // boost de voto humano
 
+      // Boost por categoría: si un token de la query coincide con la categoría del par
+      if (par.cat) {
+        const catTokens = par.cat.replace(/_/g,' ').split(' ');
+        if (catTokens.some(ct => queryTokens.includes(ct))) score += 2;
+      }
+
       // Bonus: si la pregunta completa aparece literalmente
       const qNorm = _normalizar(par.q || '');
       const entrada = queryTokens.join(' ');
@@ -198,7 +204,9 @@ window.BuscarOraculo = (function () {
         _pares = motor.pares.slice();
         _listo = true;
         _construirIndice();
-        console.log('🔮 Oráculo v2: ' + _pares.length + ' pares base + índice TF-IDF listo.');
+        const ver = motor.version ? ' v' + motor.version : '';
+        const cat = motor.categorias ? ' · ' + motor.categorias.length + ' categorías' : '';
+        console.log('🔮 Oráculo' + ver + ': ' + _pares.length + ' pares' + cat + ' · índice TF-IDF listo');
       }
     } catch (e) { console.error('Oráculo: error al iniciar', e); }
   }
@@ -206,6 +214,8 @@ window.BuscarOraculo = (function () {
   /** Carga pares adicionales desde IndexedDB (async, llamar después de iniciar()) */
   async function iniciarConIDB() {
     if (!window.IDBStore) return 0;
+    // Asegurar que el oráculo base ya esté cargado antes de agregar pares IDB
+    if (!_listo) iniciar();
     try {
       await window.IDBStore.open();
       const paresIDB = await window.IDBStore.todosLosPares();
@@ -268,7 +278,9 @@ window.BuscarOraculo = (function () {
     if (!_pares.length) return null;
 
     // 2. Caché LRU
-    const cacheKey = entrada + '|' + JSON.stringify(pesos);
+    // Cache key: entrada + conteo de votos positivos (evita JSON.stringify de objeto grande)
+    const _pvotes = pesos ? Object.keys(pesos).length : 0;
+    const cacheKey = entrada + '|v' + _pvotes;
     const cached   = _cacheGet(cacheKey);
     if (cached !== undefined) return cached;
 

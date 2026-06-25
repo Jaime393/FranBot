@@ -194,16 +194,22 @@ window.ColmenaUI = (function () {
   }
 
   async function _onPar(par) {
-    // Guardar en IDB
-    if (window.IDBStore) {
-      await window.IDBStore.agregarPares([par]).catch(() => {});
+    if (!par || !par.q || !par.a) return;
+    try {
+      // Guardar en IDB local
+      if (window.IDBStore) {
+        await window.IDBStore.agregarPares([par]).catch(() => {});
+      }
+      // Agregar al índice TF-IDF en vivo (búsqueda disponible al instante)
+      if (window.BuscarOraculo) {
+        window.BuscarOraculo.agregarPares([par]);
+      }
+      // Confirmar en UI
+      _logMsg('📥 ' + par.q.slice(0, 55) + '… → ' + par.a.slice(0, 55) + '…');
+      window.MiuToast && MiuToast.info('📥 Par P2P recibido e indexado', 2000);
+    } catch(e) {
+      _logMsg('⚠️ Error guardando par: ' + (e.message || e));
     }
-    // Agregar al índice TF-IDF en vivo
-    if (window.BuscarOraculo) {
-      window.BuscarOraculo.agregarPares([par]);
-    }
-    // Mostrar en el log
-    _logMsg(`📥 ${par.q.slice(0, 60)}… → ${par.a.slice(0, 60)}…`);
   }
 
   function _logMsg(txt) {

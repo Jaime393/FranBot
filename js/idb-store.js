@@ -59,8 +59,13 @@ window.IDBStore = (function () {
 
   function promTx(store, mode, fn) {
     return open().then(() => {
-      const s = tx(store, mode);
-      return fn(s);
+      try {
+        const s = tx(store, mode);
+        return fn(s);
+      } catch(e) {
+        console.warn('IDBStore promTx error (' + store + '/' + mode + '):', e);
+        return Promise.reject(e);
+      }
     });
   }
 
