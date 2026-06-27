@@ -300,9 +300,6 @@ window.Biblioteca = (function () {
           cbProgreso: (i, n) => { btnCons.textContent = '⚙️ ' + i + '/' + n; }
         });
         window.MiuToast && MiuToast.ok('✅ Consolidado: ' + r.fusionados + ' grupos fusionados, ' + r.eliminados + ' pares compactados, ' + r.errores + ' errores.');
-          'Grupos fusionados: ' + r.fusionados + '\n' +
-          'Pares eliminados (marcados): ' + r.eliminados + '\n' +
-          'Errores: ' + r.errores);
         await renderEstadisticas();
       } finally {
         btnCons.disabled = false; btnCons.textContent = '🔗 Consolidar';
@@ -317,6 +314,8 @@ window.Biblioteca = (function () {
       try {
         const r = await window.Consolidar.exportarOraculoDataJS();
         if (r) window.MiuToast && MiuToast.ok('⬇️ oraculo-data.js: ' + r.totalPares + ' pares (base:' + r.base + ' + IDB:' + r.idb + ').');
+      } finally {
+        btnExpOrac.disabled = false; btnExpOrac.textContent = '⬇️ Exportar oráculo';
       }
     });
 

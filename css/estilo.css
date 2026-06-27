@@ -13,6 +13,8 @@
   --texto-tenue: #9a9a8c;
   --dorado: #ffd700;
   --dorado-tenue: #c8a800;
+  --acento: #ffd700;
+  --glass: rgba(20, 24, 32, 0.85);
   --bio: #57d9b0;
   --verde: #4caf60;
   --rojo: #e0625a;
@@ -25,6 +27,52 @@
   --display: 'Fraunces', Georgia, serif;
   --cuerpo: 'Inter', system-ui, -apple-system, sans-serif;
   --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+}
+
+/* ── Temas visuales (sesión P) ───────────────────────────────────────────
+ * El tema por defecto (oráculo · dorado nocturno) vive en :root.
+ * data-tema="claro" y data-tema="sepia" se aplican en <html> desde app.js
+ * y solo redefinen variables de color — ningún componente cambia de regla. */
+html[data-tema="claro"] {
+  --bg: #f4f1e8;
+  --superficie: #ffffff;
+  --superficie-2: #f0ece0;
+  --borde: rgba(180, 140, 0, 0.18);
+  --borde-fuerte: rgba(180, 140, 0, 0.40);
+  --texto: #2a2620;
+  --texto-tenue: #6b6557;
+  --dorado: #b8860b;
+  --dorado-tenue: #9a7000;
+  --acento: #b8860b;
+  --glass: rgba(255, 255, 255, 0.85);
+  --bio: #1d9e7a;
+  --verde: #2e8b40;
+  --rojo: #c0392b;
+  --ambar: #c77f00;
+  --burbuja-user: #dfe9f7;
+  --burbuja-fran: #eef2e6;
+  --sombra: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+html[data-tema="sepia"] {
+  --bg: #2b2218;
+  --superficie: #352a1d;
+  --superficie-2: #3f3324;
+  --borde: rgba(220, 180, 90, 0.16);
+  --borde-fuerte: rgba(220, 180, 90, 0.36);
+  --texto: #efe2cc;
+  --texto-tenue: #b3a384;
+  --dorado: #e8b84b;
+  --dorado-tenue: #c79a30;
+  --acento: #e8b84b;
+  --glass: rgba(43, 34, 24, 0.85);
+  --bio: #6cc7a4;
+  --verde: #6fae5e;
+  --rojo: #d97a63;
+  --ambar: #e0a23a;
+  --burbuja-user: #3a3320;
+  --burbuja-fran: #2f2a1a;
+  --sombra: 0 4px 18px rgba(0, 0, 0, 0.5);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -102,7 +150,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .topbar {
   display: flex; align-items: center; gap: 12px; padding: 12px 18px;
-  border-bottom: 1px solid var(--borde); background: rgba(20, 24, 32, 0.85);
+  border-bottom: 1px solid var(--borde); background: var(--glass);
   backdrop-filter: blur(10px); flex-shrink: 0;
 }
 .icono-boton {
@@ -124,15 +172,46 @@ button { font-family: inherit; cursor: pointer; }
 }
 .chat-interior { max-width: 720px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; gap: 12px; }
 
-.bubble {
-  max-width: 78%; padding: 11px 15px; border-radius: var(--radio); line-height: 1.5;
-  font-size: 0.92rem; animation: aparecer 0.18s ease-out; position: relative;
-}
+.bubble {\n  max-width: 78%; padding: 11px 15px; border-radius: var(--radio); line-height: 1.5;\n  font-size: 0.92rem; animation: aparecer 0.18s ease-out; position: relative;\n}
 @keyframes aparecer { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 .bubble.user { align-self: flex-end; background: var(--burbuja-user); border-bottom-right-radius: 4px; }
 .bubble.fran { align-self: flex-start; background: var(--burbuja-fran); border: 1px solid var(--borde); border-bottom-left-radius: 4px; }
 .bubble strong { color: var(--dorado); }
 .bubble code { font-family: var(--mono); background: rgba(255,255,255,0.06); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+
+/* ── Markdown render inside bubbles ───────────────────────────────────────── */
+.bubble h2, .bubble h3, .bubble h4 { color: var(--dorado); margin: 10px 0 4px; font-weight: 600; }
+.bubble h2 { font-size: 1.05em; }
+.bubble h3 { font-size: 0.98em; }
+.bubble h4 { font-size: 0.92em; opacity: 0.85; }
+.bubble ul, .bubble ol { margin: 6px 0 6px 18px; padding: 0; }
+.bubble li { margin: 3px 0; }
+.bubble blockquote { border-left: 2px solid var(--acento); margin: 8px 0; padding: 4px 10px; opacity: 0.8; font-style: italic; }
+.bubble pre { background: rgba(0,0,0,0.35); border-radius: 6px; padding: 10px 12px; margin: 8px 0; overflow-x: auto; }
+.bubble pre code { background: none; padding: 0; font-size: 0.82em; }
+.bubble hr { border: none; border-top: 1px solid var(--borde); margin: 10px 0; }
+
+/* ── Streaming cursor parpadeante ─────────────────────────────────────────── */
+.bubble.streaming::after {
+  content: '▋';
+  display: inline-block;
+  color: var(--acento);
+  animation: parpadeo 0.7s step-end infinite;
+  margin-left: 2px;
+}
+@keyframes parpadeo { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* ── Badge de contexto RAG (oráculo BM25 → sistema prompt) ───────────────── */
+.rag-badge {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--texto-tenue);
+  margin-top: 7px;
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+  cursor: default;
+  user-select: none;
+}
 
 .votacion { display: flex; gap: 6px; justify-content: flex-end; margin-top: 6px; }
 .voto { background: none; border: none; font-size: 0.84rem; opacity: 0.45; padding: 2px 4px; border-radius: 6px; }
@@ -164,6 +243,20 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 50%; font-size: 1.05rem; flex-shrink: 0; font-weight: 700;
 }
 .boton-enviar:active { transform: scale(0.94); }
+
+/* ── G: indicador streaming en el botón Enviar ──────────────────────── */
+/* Mientras SSE está activo: pulso áureo sutil + bloqueo de doble-envío  */
+.boton-enviar.streaming {
+  background: var(--dorado-tenue);
+  cursor: not-allowed;
+  pointer-events: none;
+  animation: pulso-enviar 1.0s ease-in-out infinite;
+}
+@keyframes pulso-enviar {
+  0%, 100% { opacity: 0.60; transform: scale(0.96); }
+  50%       { opacity: 0.90; transform: scale(1.04); }
+}
+
 #btn-voz.escuchando { color: var(--rojo); border-color: var(--rojo); }
 
 /* ── MODALES ────────────────────────────────────────────────────── */
@@ -427,6 +520,33 @@ button { font-family: inherit; cursor: pointer; }
 #btn-exportar-oraculo:hover { border-color: #10b981; color: #10b981; }
 #btn-consolidar:disabled,
 #btn-exportar-oraculo:disabled { opacity: .45; cursor: not-allowed; }
+
+/* ── Contador de turnos y botón Nueva Conversación ──────────────────────────── */
+.turno-chip {
+  font-size: 0.71rem; color: var(--texto-tenue);
+  background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: 20px; padding: 2px 8px; white-space: nowrap;
+  font-family: var(--mono); letter-spacing: 0.3px;
+  flex-shrink: 0; transition: color 0.2s, border-color 0.2s;
+}
+.turno-chip.lleno {
+  color: var(--dorado-tenue); border-color: var(--dorado-tenue);
+}
+/* Chip del evaluador de coherencia (sesión X) — refleja K_i aprox de Eco */
+.eco-chip {
+  font-size: 0.71rem; color: var(--verde);
+  background: var(--superficie); border: 1px solid var(--verde);
+  border-radius: 20px; padding: 2px 8px; white-space: nowrap;
+  font-family: var(--mono); letter-spacing: 0.3px;
+  flex-shrink: 0; transition: color 0.2s, border-color 0.2s;
+}
+.eco-chip.atencion { color: var(--ambar); border-color: var(--ambar); }
+.eco-chip.alerta   { color: var(--rojo);  border-color: var(--rojo); }
+#btn-nueva-conv {
+  font-size: 1.1rem; flex-shrink: 0;
+  transition: transform 0.2s, color 0.2s;
+}
+#btn-nueva-conv:hover { color: var(--dorado); transform: rotate(-45deg); }
 
 /* ── Botón Yape en topbar ─────────────────────────────────────────────────────── */
 #btn-yape-float {

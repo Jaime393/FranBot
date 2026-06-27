@@ -211,11 +211,49 @@ class FranBotCore {
   digerirConocimiento(paresNuevos, origen) {
     this.estado.oraculo_extension = this.estado.oraculo_extension || [];
     const existentes = new Set(this.estado.oraculo_extension.map(p => p.q.toLowerCase().trim()));
-    const validos = (paresNuevos || []).filter(p =>
-      p && typeof p.q === 'string' && typeof p.a === 'string' &&
-      p.q.trim().length > 3 && p.a.trim().length > 10 &&
-      !existentes.has(p.q.toLowerCase().trim())
-    ).map(p => ({ q: p.q.trim(), a: p.a.trim(), origen: origen || 'digerido', t: Date.now() }));
+
+    // ── T: SUBFLOW Jaccard v0.1 ─────────────────────────────────────────────
+    // Dedupe SEMÁNTICO (no solo exacto) contra los últimos 50 pares digeridos.
+    // Si Jaccard(q) > 0.85, el par "ya fue digerido por Eco": no se reingiere
+    // (así K_i NO sube por ruido) y se reporta como sugerencia de poda.
+    // Advisory puro: no bloquea, no lanza modal — solo sugiere. Reutiliza el
+    // Consolidar._jaccardSim ya existente (tokenización NFD + stopwords), no un
+    // Jaccard nuevo: 0 archivos nuevos, sin ruido (regla MIU).
+    const UMBRAL_SUBFLOW = 0.85;
+    const HIST_N = 50;
+    const _sim = (a, b) => {
+      if (typeof window !== 'undefined' && window.Consolidar && window.Consolidar._jaccardSim) {
+        return window.Consolidar._jaccardSim(a, b);
+      }
+      // Fallback mínimo por si Consolidar aún no cargó (mismo criterio de tokens).
+      const tok = s => new Set((s || '').toLowerCase().normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/).filter(t => t.length > 2));
+      const A = tok(a), B = tok(b);
+      if (!A.size || !B.size) return 0;
+      let inter = 0; A.forEach(t => { if (B.has(t)) inter++; });
+      return inter / (A.size + B.size - inter);
+    };
+    // Pool de comparación: historial reciente (≤50) + pares ya aceptados en este lote.
+    const poolComparacion = this.estado.oraculo_extension.slice(-HIST_N).map(p => p.q);
+
+    const validos = [];
+    const duplicados = []; // { q, sim } — ya digeridos semánticamente (advisory)
+    for (const p of (paresNuevos || [])) {
+      if (!p || typeof p.q !== 'string' || typeof p.a !== 'string') continue;
+      if (p.q.trim().length <= 3 || p.a.trim().length <= 10) continue;
+      const qn = p.q.toLowerCase().trim();
+      if (existentes.has(qn)) continue; // dedupe EXACTO (v10, intacto)
+      let maxSim = 0;
+      for (const q of poolComparacion) { const s = _sim(p.q, q); if (s > maxSim) maxSim = s; }
+      if (maxSim > UMBRAL_SUBFLOW) {
+        duplicados.push({ q: p.q.trim(), sim: maxSim }); // 🟡 sugerir /podar, no reingerir
+        continue;
+      }
+      existentes.add(qn);
+      poolComparacion.push(p.q); // evita reingerir paráfrasis dentro del mismo lote
+      validos.push({ q: p.q.trim(), a: p.a.trim(), origen: origen || 'digerido', t: Date.now() });
+    }
 
     // oraculo_extension en localStorage: solo pares recientes de sesión (IDB es el almacén real)
     // Mantenemos un buffer liviano de 100 pares para retrocompatibilidad con v9.x
@@ -232,7 +270,12 @@ class FranBotCore {
       this._recalcularKi();
     }
     this._guardarEstado();
-    return { agregados: validos.length, total: this.estado.oraculo_extension.length };
+    return {
+      agregados: validos.length,
+      total: this.estado.oraculo_extension.length,
+      duplicados,                              // T: detalle [{q, sim}] para el log/advisory
+      duplicadosSemanticos: duplicados.length, // T: contador para el chip/termóstato
+    };
   }
 
   // Huesos = interacciones registradas (this.estado.historial.length). Este método

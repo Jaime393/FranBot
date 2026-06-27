@@ -309,8 +309,12 @@ window.Alimentar = (function () {
     }
 
     if (window.IDBStore && todos.length > 0) {
-      await window.IDBStore.agregarPares(todos);
+      const guardados = await window.IDBStore.agregarPares(todos);
       if (idCola) await window.IDBStore.actualizarCola(idCola, { estado: 'completo' });
+      // D.2b: re-indexar solo los pares recién guardados (tienen _idb_id asignado)
+      if (typeof window._reindexarNuevosPares === 'function' && Array.isArray(guardados)) {
+        window._reindexarNuevosPares(guardados);
+      }
     }
 
     return { pares: todos, truncado, trozosProcesados: trozos.length, totalOriginal };
