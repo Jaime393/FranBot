@@ -89,7 +89,7 @@ absorbieron ideas — no se copiaron archivos ni se desarrolló nada nuevo sobre
 ## Qué es esto
 
 Un asistente de chat que funciona **100% offline** por defecto: responde con un motor de
-búsqueda propio (axiomas/ecuaciones de tu Códice + ~1800 pares pregunta/respuesta) y 12
+búsqueda propio (axiomas/ecuaciones de tu Códice + 1972 pares pregunta/respuesta) y 12
 personas seleccionables (el núcleo + 11 especialistas). Opcionalmente puedes conectar un
 proveedor en la nube (Groq, OpenRouter, Together, OpenAI) o, con la opción "Personalizado",
 cualquier otra API compatible con el formato de OpenAI — incluido un servidor local como
@@ -131,7 +131,7 @@ dímelo y lo reconstruyo bien (no solo lo copio).
 
 ## Bugs reales que corregí
 
-- **`buscar-oraculo.js` decodificaba mal el acento/ñ de los ~1800 pares** (`atob()` solo,
+- **`buscar-oraculo.js` decodificaba mal el acento/ñ de los 1972 pares** (`atob()` solo,
   sin pasar por UTF-8) → texto tipo `rÃ­o` en vez de `río` en cualquier respuesta que viniera
   del oráculo base. `oraculo-data.js` ya guardaba los bytes correctos (UTF-8 en base64, igual
   que los genera `btn-exportar-oraculo`); solo faltaba decodificarlos como UTF-8 al leerlos, no
@@ -150,7 +150,7 @@ dímelo y lo reconstruyo bien (no solo lo copio).
 |---|---|
 | `js/miu-engine.js` | Motor de axiomas/ecuaciones/Ki (corregido) |
 | `js/codice-libre.js` | Tu códice original — sin tocar, sin entradas nuevas |
-| `js/oraculo-data.js` + `js/buscar-oraculo.js` | ~1800 pares Q&A + búsqueda ponderada por voto |
+| `js/oraculo-data.js` + `js/buscar-oraculo.js` | 1972 pares Q&A + búsqueda ponderada por voto |
 | `js/almas-especialistas.js` | 11 personas seguras |
 | `js/core.js` | Núcleo: estado, Ki, comandos, BEA |
 | `js/contexto.js` | Resumen de solo lectura de `imperio.json` y `ley_gaia_v2` |
@@ -205,7 +205,7 @@ archivo y el sistema lo convierte en pares pregunta/respuesta:
 - **Generar línea base para pegar en `core.js`**: produce el bloque de estado actual para que
   lo uses como nuevo valor por defecto en `_cargarEstado()` — así, cuando subas el sitio a
   GitHub Pages, cualquier visitante nuevo arranca desde esa línea base en vez de cero.
-- **Descargar `oraculo-data.js` actualizado**: empaqueta los ~1800 pares originales + lo que el
+- **Descargar `oraculo-data.js` actualizado**: empaqueta los 1972 pares originales + lo que el
   núcleo aprendió de archivos digeridos en un nuevo archivo listo para reemplazar en tu repo
   antes de subir — así lo aprendido localmente queda en el núcleo que publicas, no solo en tu
   navegador.

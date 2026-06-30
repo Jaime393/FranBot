@@ -1,4 +1,15 @@
-// sw.js — FranBot v51
+// sw.js — FranBot v54
+//  - CACHE_NAME → 'franbot-v54' (invalida caché de v53).
+//  - Ciclo BB (ronda 3, muestreo dirigido): 1 par eliminado (log de despliegue
+//    GitHub Pages con username personal en URL) + 4 pares redactados (nombre real
+//    en apposición narrativa/plantilla, contenido conceptual preservado).
+//    oraculo-data.js: v6.2→v6.3, 1973→1972 pares. Verificación: 0 residuales en
+//    16 patrones (credenciales, handles, nombre real) tras 3 rondas acumuladas.
+// Cambios v53 (Ciclo BA, ronda 2):
+//  - CACHE_NAME → 'franbot-v53' (invalida caché de v52).
+//  - Ciclo BA (ronda 2): cluster de 154 pares de logs de despliegue/entrenamiento
+//    (Colab/Kaggle/HuggingFace/GitHub) con nombre real, usuario personal, handles de
+//    bots de Telegram y un token HuggingFace expuesto — removidos del oraculo.
 // Cambios v51 (Ciclo AZ — ε₅ runner interactivo de tests):
 //  - CACHE_NAME → 'franbot-v51' (invalida caché de v50).
 //  - app.js: nueva función panelTests() — runner interactivo del Módulo 5:
@@ -266,7 +277,7 @@
 //    alimentar.js llama _reindexarNuevosPares() tras persistir. app.js orquesta el delta.
 // Cambios anteriores (mantenidos): ver historial v10-v13.
 
-const CACHE_NAME = 'franbot-v51';
+const CACHE_NAME = 'franbot-v54';
 
 const ARCHIVOS = [
   './index.html',
