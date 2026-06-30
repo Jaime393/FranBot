@@ -48,6 +48,7 @@ window.BuscarOraculo = (function () {
   let _dl     = null;      // { idx → longitud en tokens del doc }
   let _avgdl  = 0;         // longitud media de documento (calculada al construir índice)
   let _indiceValido = false;
+  let _indice_q   = null;   // Set-like object de tokens presentes en campo q — filtro dominio
 
   // ─────────────── Estado del embedder semántico (Phase D.1) ───────────────────
   // _embedder: pipeline de feature-extraction de transformers.js, o null si no disponible.
@@ -167,7 +168,35 @@ window.BuscarOraculo = (function () {
     _dl       = dl;
     _avgdl    = totalTokens / n;
     _indiceValido = true;
+
+    // ── Índice de dominio: tokens en campo q (preguntas) únicamente ──────────
+    // Objeto {token: true} — solo presencia. Usado por _coberturaPreguntas().
+    const idx_q = Object.create(null);
+    for (let i = 0; i < n; i++) {
+      _tokenizar((_pares[i].q || '')).forEach(t => { idx_q[t] = true; });
+    }
+    _indice_q = idx_q;
+
     _cacheInvalidar();
+  }
+
+  // ─────────────── Filtro de relevancia de dominio ──────────────────────────────
+  // Calcula fracción de tokens unigramas de la query que aparecen en alguna
+  // PREGUNTA del oráculo (campo q). Cobertura 0 → query off-domain → null.
+  // No usa bigramas: son demasiado específicos y generarían falsos negativos.
+  //
+  // Ejemplos calibración Ciclo AB:
+  //   "receta de paella valenciana" → 0/3 → null ✓
+  //   "cómo cambio una llanta"      → 0/3 → null ✓
+  //   "cuál es la capital de Mongolia" → depende de si "capital" está en alguna q
+  //   "qué es la coherencia"        → 1/1 → pasa ✓
+  //   "qué es la materia oscura"    → 2/2 → pasa ✓
+  function _coberturaPreguntas(queryTokens) {
+    if (!_indice_q) return 1; // sin índice → no filtrar (seguro)
+    const unigramas = queryTokens.filter(t => !t.includes('_'));
+    if (!unigramas.length) return 1;
+    const encontrados = unigramas.filter(t => _indice_q[t]).length;
+    return encontrados / unigramas.length;
   }
 
   // ─────────────── Sinonimia axiomática MIU ─────────────────────────────────────
@@ -343,50 +372,131 @@ window.BuscarOraculo = (function () {
     return i >= 0 ? String(i) : null;
   }
 
-  /** Búsqueda principal. Devuelve texto de respuesta o null. */
+  // ─── COMPOSICIÓN (Ciclo Z: pensar y reorganizar, incluso offline) ────────────
+  // Antes, el núcleo devolvía el top-1 verbatim de UNA sola fuente (MIU si había
+  // match, si no el mejor par del oráculo) y todo lo demás se perdía. Ahora:
+  //   · si hay convergencia real entre 2+ fuentes (varios axiomas, o MIU+oráculo
+  //     ambos fuertes), se combinan sin redundancia (Jaccard vía Consolidar);
+  //   · si solo hay señal débil (real pero bajo el umbral de confianza), se dice
+  //     con honestidad en vez de fingir certeza — regla del propio KERNEL.json
+  //     ("no alucinar: si no hay dato, declarar NO SÉ");
+  //   · si no hay señal alguna, se devuelve null — eso sigue siendo "débil" de
+  //     verdad para que core.js decida, y NUNCA se rellena con una coincidencia
+  //     inventada. Nada de esto toca buscarConScore/buscarSemantico (RAG online).
+  const UMBRAL_BM25_FUERTE   = 0.8;  // (sin cambios — calibración previa intacta)
+  const UMBRAL_BM25_BLANDO   = 0.25; // señal real pero floja — no es ruido puro
+  const UMBRAL_LINEAL_FUERTE = 10;   // (sin cambios)
+  const UMBRAL_LINEAL_BLANDO = 3;
+  const MAX_FRAGMENTOS_MIU   = 2;    // tope: no saturar la respuesta de fórmulas
+  const SIM_REDUNDANCIA      = 0.5;  // por encima de esto, dos fragmentos dicen "lo mismo"
+
+  /** Similitud entre dos fragmentos para no duplicar contenido al componer.
+   *  Reusa el Jaccard ya calibrado de Consolidar; si aún no cargó (orden de
+   *  scripts), cae a un cálculo mínimo equivalente — mismo patrón que core.js. */
+  function _simFragmentos(a, b) {
+    if (window.Consolidar && window.Consolidar._jaccardSim) return window.Consolidar._jaccardSim(a, b);
+    const tok = s => new Set((s || '').toLowerCase().normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/).filter(t => t.length > 2));
+    const A = tok(a), B = tok(b);
+    if (!A.size || !B.size) return 0;
+    let inter = 0; A.forEach(t => { if (B.has(t)) inter++; });
+    return inter / (A.size + B.size - inter);
+  }
+
+  /** Une 1–2 fragmentos del motor MIU (ya ordenados por score) sin duplicar. */
+  function _unirFragmentosMIU(miuTop) {
+    if (!miuTop.length) return '';
+    if (miuTop.length === 1) return miuTop[0].texto;
+    if (_simFragmentos(miuTop[0].texto, miuTop[1].texto) >= SIM_REDUNDANCIA) return miuTop[0].texto;
+    return miuTop.map(m => m.texto).join('\n\n');
+  }
+
+  /** Decide cómo combinar los matches del motor MIU con el mejor candidato del
+   *  oráculo. candidato = { par, fuerte, blando } | null. */
+  function _componer(miuHits, candidato) {
+    const miuTop = miuHits.slice().sort((a, b) => b.score - a.score).slice(0, MAX_FRAGMENTOS_MIU);
+    const oracleFuerte = !!(candidato && candidato.fuerte);
+    const oracleBlando  = !!(candidato && !candidato.fuerte && candidato.blando);
+
+    if (!miuTop.length && !oracleFuerte && !oracleBlando) return null; // sin señal real
+
+    if (!miuTop.length) {
+      if (oracleFuerte) return candidato.par.a; // status quo: match único y fuerte
+      return '*Lo más cercano que encuentro — no es una coincidencia exacta:*\n\n' + candidato.par.a;
+    }
+
+    if (!oracleFuerte) return _unirFragmentosMIU(miuTop); // ignora ruido de oráculo débil
+
+    // Convergencia real: MIU + oráculo, ambos con señal fuerte.
+    const miuTexto = _unirFragmentosMIU(miuTop);
+    if (_simFragmentos(miuTexto, candidato.par.a) >= SIM_REDUNDANCIA) return candidato.par.a; // ya dice lo mismo
+    return miuTexto + '\n\n' + candidato.par.a;
+  }
+
+  /** Búsqueda principal. Devuelve texto de respuesta (de una o varias fuentes
+   *  combinadas) o null si no hay ninguna señal real. */
   function preguntar(texto, pesos) {
     if (!_listo) iniciar();
     const entrada = texto.toLowerCase().trim();
     pesos = pesos || {};
 
-    // 1. Motor MIU axiomático
-    if (window.MIU) {
-      const resMIU = window.MIU.consultar(entrada);
-      if (resMIU) return resMIU.texto;
+    // 1. Motor MIU axiomático — TODOS los matches, no solo el primero.
+    const miuHits = (window.MIU && window.MIU.consultarTodos) ? window.MIU.consultarTodos(entrada) : [];
+
+    if (!_pares.length) {
+      const miuTop = miuHits.slice().sort((a, b) => b.score - a.score).slice(0, MAX_FRAGMENTOS_MIU);
+      return miuTop.length ? _unirFragmentosMIU(miuTop) : null;
     }
 
-    if (!_pares.length) return null;
-
     // 2. Caché LRU
-    // Cache key: entrada + conteo de votos positivos (evita JSON.stringify de objeto grande)
     const _pvotes = pesos ? Object.keys(pesos).length : 0;
     const cacheKey = entrada + '|v' + _pvotes;
     const cached   = _cacheGet(cacheKey);
     if (cached !== undefined) return cached;
 
-    // 3. BM25 con índice invertido
-    let resultado = null;
+    // 3. Mejor candidato del oráculo: BM25 indexado primero; si no da un match
+    //    fuerte, se prueba también la búsqueda lineal clásica (señal distinta:
+    //    contención literal) y se toma la mejor de las dos — igual que en v1,
+    //    solo que ahora con un nivel intermedio "blando" en vez de todo o nada.
+    let candBM25 = null;
     if (_indiceValido) {
       const tokens     = _tokensCompletos(entrada);
       const resultados = _scoreBM25(tokens, pesos);
       if (resultados && resultados.length > 0) {
         const top = resultados[0];
-        // Umbral BM25: 0.8 (escala diferente a TF-IDF; ajustado empíricamente)
-        if (top.score >= 0.8) resultado = top.par.a;
+        candBM25 = { par: top.par, fuerte: top.score >= UMBRAL_BM25_FUERTE, blando: top.score >= UMBRAL_BM25_BLANDO };
       }
     }
 
-    // 4. Fallback lineal clásico (por si el índice falla o query demasiado corta)
-    if (resultado === null) {
-      resultado = _busquedaLineal(entrada, pesos);
+    // ─── Filtro de relevancia de dominio (Ciclo AB) ───────────────────────────
+    // Si CERO tokens unigramas de la query aparecen en alguna PREGUNTA del oráculo,
+    // la consulta es casi seguro off-domain (coincidencia léxica en respuestas).
+    // Descartamos candBM25 antes de seguir. No toca buscarConScore/buscarSemantico.
+    if (candBM25 && _indice_q) {
+      const tokens_uni = _tokenizar(entrada);       // solo unigramas
+      if (_coberturaPreguntas(tokens_uni) === 0) {
+        candBM25 = null;
+      }
     }
 
+    let candidato = (candBM25 && candBM25.fuerte) ? candBM25 : null;
+    if (!candidato) {
+      const lin = _busquedaLinealConScore(entrada, pesos);
+      const candLineal = lin ? { par: lin.par, fuerte: lin.score >= UMBRAL_LINEAL_FUERTE, blando: lin.score >= UMBRAL_LINEAL_BLANDO } : null;
+      if (candLineal && candLineal.fuerte) candidato = candLineal;
+      else if (candBM25 && candBM25.blando) candidato = candBM25;
+      else if (candLineal && candLineal.blando) candidato = candLineal;
+    }
+
+    const resultado = _componer(miuHits, candidato);
     _cacheSet(cacheKey, resultado);
     return resultado;
   }
 
-  /** Fallback O(n): compatibilidad con comportamiento v1 */
-  function _busquedaLineal(entrada, pesos) {
+  /** Fallback O(n), ahora con score explícito (para que _componer clasifique
+   *  fuerte/blando/nada) en vez de aplicar su propio umbral internamente. */
+  function _busquedaLinealConScore(entrada, pesos) {
     let mejor = null, mejorScore = -999, mejorIdx = -1;
     for (let i = 0; i < _pares.length; i++) {
       const par   = _pares[i];
@@ -395,7 +505,7 @@ window.BuscarOraculo = (function () {
       if (score > mejorScore) { mejorScore = score; mejor = par; mejorIdx = i; }
     }
     if (mejorIdx >= 0 && (pesos[String(mejorIdx)] || 0) <= -3) return null;
-    return (mejorScore >= 10 && mejor) ? mejor.a : null;
+    return mejor ? { par: mejor, score: mejorScore } : null;
   }
 
   function _calcularScoreClasico(par, entrada) {
@@ -720,6 +830,98 @@ window.BuscarOraculo = (function () {
     }));
   }
 
+  // ─────────────── SUBFLOW v0.3 — dedupe semántico para ingestión ─────────────
+  // Compara cada query candidata contra un pool de preguntas existentes usando
+  // similitud coseno sobre MiniLM-L6-v2. Si el embedder no está disponible
+  // (aún cargando o fallo de red), retorna Map vacío — fallback silencioso.
+  //
+  // Diseño:
+  //   · Pool acotado externamente (core.js pasa slice(-20)) para mantener
+  //     latencia < 1s incluso en hardware lento (20+N embeds × ~20ms ≈ <1s).
+  //   · Advisory puro: el llamador decide qué hacer con los resultados.
+  //   · Cada embed individual falla silenciosamente — no bloquea el resto.
+  //
+  // @param {string[]} queryList  Preguntas candidatas a ingerir
+  // @param {string[]} poolList   Pool de preguntas existentes (acotado por caller)
+  // @param {number}   umbral     Umbral coseno [0,1], default 0.82
+  // @returns {Promise<Map<string,number>>} query → maxSimCoseno (solo ≥ umbral)
+  async function dedupeSemantico(queryList, poolList, umbral) {
+    umbral = typeof umbral === 'number' ? umbral : 0.82;
+    if (!_embedder || !queryList.length || !poolList.length) return new Map();
+    try {
+      // Embed el pool en paralelo; fallos individuales → null (se filtran)
+      const poolEmbs = await Promise.all(
+        poolList.map(q => _embedTexto(q).catch(() => null))
+      );
+      const poolValido = poolEmbs
+        .map((emb, i) => ({ emb, q: poolList[i] }))
+        .filter(e => e.emb !== null);
+      if (!poolValido.length) return new Map();
+
+      const resultado = new Map();
+      // Embed candidatos y comparar vs pool en paralelo
+      await Promise.all(queryList.map(async q => {
+        try {
+          const qEmb = await _embedTexto(q);
+          let maxSim = 0;
+          for (const { emb } of poolValido) {
+            const s = _coseno(qEmb, emb);
+            if (s > maxSim) maxSim = s;
+          }
+          if (maxSim >= umbral) resultado.set(q, maxSim);
+        } catch (_e) { /* fallo por candidato: silencioso */ }
+      }));
+      return resultado;
+    } catch (e) {
+      // Fallo total → advisory vacío, ingestión no bloqueada
+      console.warn('BuscarOraculo.dedupeSemantico: fallo embeddings, SUBFLOW v0.3 off:', e.message || e);
+      return new Map();
+    }
+  }
+
+  // ── AS: γ₃ — SUBFLOW v0.3 pool extendido (índice D.2) ──────────────────────
+  // dedupeSemantico() de arriba re-embebe un pool acotado (core.js pasa slice(-20))
+  // en cada llamada — necesario porque ese pool no tiene embeddings precomputados.
+  // Si el índice D.2 ya está cargado (_idxEmbs: Phase D.2, todos los pares IDB
+  // indexados, Float32 en memoria), podemos comparar contra el CORPUS COMPLETO
+  // sin coste de re-embed: cada candidato se embebe una vez y se compara por
+  // producto punto contra _idxEmbs — el pool ya no está acotado a 20.
+  //
+  // Diseño:
+  //   · Cobertura: corpus IDB completo en vez de los últimos 20 pares del lote.
+  //   · Coste: 1 embed por candidato (igual que v0.3) + N productos punto
+  //     (~<1ms por cada 1000 embeds indexados) — no escala con el tamaño del lote.
+  //   · Si el índice no está cargado o vacío (_idxEmbs null/[]), retorna null:
+  //     el llamador (core.js) cae en dedupeSemantico() con el pool acotado de
+  //     siempre — degradación cero, mismo comportamiento que antes de γ₃.
+  //
+  // @param {string[]} queryList  Preguntas candidatas a ingerir
+  // @param {number}   umbral     Umbral coseno [0,1], default 0.82
+  // @returns {Promise<Map<string,number>|null>} query → maxSimCoseno, o null si sin índice
+  async function dedupeSemanticoIndexado(queryList, umbral) {
+    umbral = typeof umbral === 'number' ? umbral : 0.82;
+    if (!_embedder || !_idxEmbs || !_idxEmbs.length || !queryList.length) return null;
+    try {
+      const resultado = new Map();
+      await Promise.all(queryList.map(async q => {
+        try {
+          const qEmb = await _embedTexto(q);
+          let maxSim = 0;
+          for (const entry of _idxEmbs) {
+            const s = _coseno(qEmb, entry.emb);
+            if (s > maxSim) maxSim = s;
+          }
+          if (maxSim >= umbral) resultado.set(q, maxSim);
+        } catch (_e) { /* fallo por candidato: silencioso */ }
+      }));
+      return resultado;
+    } catch (e) {
+      // Fallo total → null, el llamador cae en el pool acotado de v0.3
+      console.warn('BuscarOraculo.dedupeSemanticoIndexado: fallo índice D.2, fallback pool v0.3:', e.message || e);
+      return null;
+    }
+  }
+
   // ─────────────────────────────────────────────────────────────────────────────
   return {
     iniciar,
@@ -731,12 +933,20 @@ window.BuscarOraculo = (function () {
     buscarConScoreSemantico,
     buscarSemantico,
     cargarIndiceSemantico,
+    dedupeSemantico,                  // SUBFLOW v0.3
+    dedupeSemanticoIndexado,          // AS: γ₃ — SUBFLOW v0.3 pool extendido (índice D.2)
     stats,
     // internos expuestos para tests
     _tokenizar,
     _tokensCompletos,
     _construirIndice,
+    _coberturaPreguntas,
+    _componer,
+    _unirFragmentosMIU,
+    _simFragmentos,
     get _pares() { return _pares; },
+    get _embedderActivo() { return !!_embedder; }, // SUBFLOW v0.3: sonda para core.js
+    get _idxEmbsActivo() { return !!(_idxEmbs && _idxEmbs.length); }, // AS: γ₃ — sonda índice D.2 para core.js
   };
 })();
 

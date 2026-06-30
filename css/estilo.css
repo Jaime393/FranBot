@@ -1,63 +1,80 @@
 /* =====================================================================
    Micelio MIU — estilo.css
-   Paleta: #0b0e14 fondo · #ffd700 oro (acento de marca) · #e0e0c0 texto cálido
-   Tipos: Fraunces (display) · Inter (cuerpo, legibilidad) · JetBrains Mono (datos)
+   Paleta (Ciclo AK): #0d1117 fondo · #161b22 superficie · #d4a843 oro (solo
+   detalles finos: bordes, subrayados — nunca bloques grandes) · #f0f0f0 texto
+   Tipos: Fraunces (display, pendiente confirmación) · Inter (cuerpo) · JetBrains Mono (datos)
+   Reglas duras de color: sin degradados · sin sombras pesadas · fondo siempre
+   oscuro y uniforme en el tema por defecto · verde y rojo nunca juntos.
    ===================================================================== */
 :root {
-  --bg: #0b0e14;
-  --superficie: #141820;
-  --superficie-2: #1a2030;
-  --borde: rgba(255, 215, 0, 0.12);
-  --borde-fuerte: rgba(255, 215, 0, 0.28);
-  --texto: #e8e6da;
-  --texto-tenue: #9a9a8c;
-  --dorado: #ffd700;
-  --dorado-tenue: #c8a800;
-  --acento: #ffd700;
-  --glass: rgba(20, 24, 32, 0.85);
+  --bg: #0d1117;
+  --superficie: #161b22;
+  --superficie-2: #21262d;
+  --fondo: var(--bg);             /* alias — corrige refs rotas sin fallback en css/js */
+  --fondo-input: var(--superficie-2);
+  --borde: rgba(212, 168, 67, 0.12);
+  --borde-fuerte: rgba(212, 168, 67, 0.28);
+  --texto: #f0f0f0;
+  --texto-tenue: #8b949e;
+  --dorado: #d4a843;
+  --dorado-tenue: #b3873a;
+  --acento: #d4a843;
+  --acento-rgb: 212, 168, 67;
+  --glass: rgba(22, 27, 34, 0.85);
   --bio: #57d9b0;
-  --verde: #4caf60;
-  --rojo: #e0625a;
+  --verde: #4caf50;
+  --verde-rgb: 76, 175, 80;  /* AN: α — #4caf50 como componentes RGB */
+  --rojo: #c0392b;
   --ambar: #ffaa20;
   --burbuja-user: #1c2f4d;
   --burbuja-fran: #131c16;
   --radio: 16px;
   --radio-chico: 10px;
-  --sombra: 0 4px 18px rgba(0, 0, 0, 0.45);
+  --sombra: 0 2px 10px rgba(0, 0, 0, 0.35);
   --display: 'Fraunces', Georgia, serif;
   --cuerpo: 'Inter', system-ui, -apple-system, sans-serif;
-  --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace;
 }
 
 /* ── Temas visuales (sesión P) ───────────────────────────────────────────
  * El tema por defecto (oráculo · dorado nocturno) vive en :root.
  * data-tema="claro" y data-tema="sepia" se aplican en <html> desde app.js
  * y solo redefinen variables de color — ningún componente cambia de regla. */
+/* ── Noche Azul (ex «Claro» — ciclo AL): variante oscura fría, azul marino ──
+ * Antes: fondo claro #f4f1e8 + texto oscuro → violaba «fondo siempre oscuro
+ * y uniforme». Ahora: oscuro frío, coherente con la regla dura. El acento
+ * dorado MIU se mantiene (identidad de marca, funciona sobre azul marino). */
 html[data-tema="claro"] {
-  --bg: #f4f1e8;
-  --superficie: #ffffff;
-  --superficie-2: #f0ece0;
-  --borde: rgba(180, 140, 0, 0.18);
-  --borde-fuerte: rgba(180, 140, 0, 0.40);
-  --texto: #2a2620;
-  --texto-tenue: #6b6557;
-  --dorado: #b8860b;
-  --dorado-tenue: #9a7000;
-  --acento: #b8860b;
-  --glass: rgba(255, 255, 255, 0.85);
-  --bio: #1d9e7a;
-  --verde: #2e8b40;
+  --bg: #0c1521;
+  --superficie: #121f35;
+  --superficie-2: #1a2c47;
+  --fondo: var(--bg);
+  --fondo-input: var(--superficie-2);
+  --borde: rgba(212, 168, 67, 0.12);
+  --borde-fuerte: rgba(212, 168, 67, 0.28);
+  --texto: #c8dff0;
+  --texto-tenue: #6a90b8;
+  --dorado: #d4a843;
+  --dorado-tenue: #b3873a;
+  --acento: #d4a843;
+  --acento-rgb: 212, 168, 67;
+  --glass: rgba(12, 21, 33, 0.85);
+  --bio: #57d9b0;
+  --verde: #4caf50;
+  --verde-rgb: 76, 175, 80;  /* AN: α */
   --rojo: #c0392b;
-  --ambar: #c77f00;
-  --burbuja-user: #dfe9f7;
-  --burbuja-fran: #eef2e6;
-  --sombra: 0 4px 18px rgba(0, 0, 0, 0.12);
+  --ambar: #ffaa20;
+  --burbuja-user: #0e2038;
+  --burbuja-fran: #0d1a28;
+  --sombra: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 html[data-tema="sepia"] {
   --bg: #2b2218;
   --superficie: #352a1d;
   --superficie-2: #3f3324;
+  --fondo: var(--bg);
+  --fondo-input: var(--superficie-2);
   --borde: rgba(220, 180, 90, 0.16);
   --borde-fuerte: rgba(220, 180, 90, 0.36);
   --texto: #efe2cc;
@@ -65,14 +82,16 @@ html[data-tema="sepia"] {
   --dorado: #e8b84b;
   --dorado-tenue: #c79a30;
   --acento: #e8b84b;
+  --acento-rgb: 232, 184, 75;
   --glass: rgba(43, 34, 24, 0.85);
   --bio: #6cc7a4;
   --verde: #6fae5e;
+  --verde-rgb: 111, 174, 94; /* AN: α — #6fae5e como componentes RGB */
   --rojo: #d97a63;
   --ambar: #e0a23a;
   --burbuja-user: #3a3320;
   --burbuja-fran: #2f2a1a;
-  --sombra: 0 4px 18px rgba(0, 0, 0, 0.5);
+  --sombra: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -80,10 +99,6 @@ html[data-tema="sepia"] {
 
 body {
   background: var(--bg);
-  background-image:
-    radial-gradient(ellipse at 10% 90%, rgba(76, 175, 96, 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 90% 5%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
-  background-attachment: fixed;
   color: var(--texto);
   font-family: var(--cuerpo);
   height: 100dvh;
@@ -116,8 +131,8 @@ button { font-family: inherit; cursor: pointer; }
 
 .ki-pill {
   display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono);
-  font-size: 0.78rem; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--borde-fuerte);
-  background: rgba(255, 215, 0, 0.06); width: fit-content; margin-bottom: 6px;
+  font-size: 1rem; /* AM: β — 1rem, mínimo de lectura */ padding: 6px 12px; border-radius: 999px; border: 1px solid var(--borde-fuerte);
+  background: rgba(212, 168, 67, 0.06); width: fit-content; margin-bottom: 6px;
 }
 .ki-punto {
   width: 8px; height: 8px; border-radius: 50%; background: var(--verde);
@@ -125,17 +140,27 @@ button { font-family: inherit; cursor: pointer; }
 }
 .ki-punto.ambar { background: var(--ambar); }
 .ki-punto.rojo { background: var(--rojo); }
+/* AN: Umbral Despertar M22 — Ki ≥ φ (primera vez) */
+.ki-punto.despertar {
+  background: var(--dorado);
+  box-shadow: 0 0 6px 2px rgba(var(--acento-rgb), 0.6);
+  animation: despertar-pulso 1.8s ease-in-out infinite;
+}
+@keyframes despertar-pulso {
+  0%,100% { opacity: 0.7; transform: scale(0.9); box-shadow: 0 0 4px 1px rgba(var(--acento-rgb), 0.4); }
+  50%      { opacity: 1;   transform: scale(1.2); box-shadow: 0 0 10px 4px rgba(var(--acento-rgb), 0.8); }
+}
 @keyframes respirar { 0%,100% { opacity: 0.55; transform: scale(0.85); } 50% { opacity: 1; transform: scale(1.05); } }
 @media (prefers-reduced-motion: reduce) { .ki-punto { animation: none; } }
 
 .menu-seccion ul { list-style: none; }
 .menu-seccion button, .menu-seccion li button, .item-alma {
   width: 100%; text-align: left; background: none; border: none; color: var(--texto);
-  padding: 8px 10px; border-radius: var(--radio-chico); font-size: 0.86rem;
+  padding: 8px 10px; border-radius: var(--radio-chico); font-size: 1rem; /* AP: β₄ Chrome 16px */
   display: flex; align-items: center; gap: 9px; transition: background 0.15s;
 }
 .menu-seccion button:hover, .item-alma:hover { background: var(--superficie-2); }
-.item-alma.activa { background: rgba(255, 215, 0, 0.1); color: var(--dorado); font-weight: 600; }
+.item-alma.activa { background: rgba(212, 168, 67, 0.1); color: var(--dorado); font-weight: 600; }
 
 .acerca-de {
   margin-top: auto; background: none; border: none; color: var(--texto-tenue);
@@ -172,7 +197,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 .chat-interior { max-width: 720px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; gap: 12px; }
 
-.bubble {\n  max-width: 78%; padding: 11px 15px; border-radius: var(--radio); line-height: 1.5;\n  font-size: 0.92rem; animation: aparecer 0.18s ease-out; position: relative;\n}
+.bubble {
+  max-width: 78%; padding: 11px 15px; border-radius: var(--radio); line-height: 1.5;
+  font-size: 1rem; animation: aparecer 0.18s ease-out; position: relative; /* AL: 1rem = 16px, mínimo de lectura */
+}
 @keyframes aparecer { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 .bubble.user { align-self: flex-end; background: var(--burbuja-user); border-bottom-right-radius: 4px; }
 .bubble.fran { align-self: flex-start; background: var(--burbuja-fran); border: 1px solid var(--borde); border-bottom-left-radius: 4px; }
@@ -183,7 +211,7 @@ button { font-family: inherit; cursor: pointer; }
 .bubble h2, .bubble h3, .bubble h4 { color: var(--dorado); margin: 10px 0 4px; font-weight: 600; }
 .bubble h2 { font-size: 1.05em; }
 .bubble h3 { font-size: 0.98em; }
-.bubble h4 { font-size: 0.92em; opacity: 0.85; }
+.bubble h4 { font-size: 1rem; /* AN: β₂ — uniformidad 1rem */ opacity: 0.85; }
 .bubble ul, .bubble ol { margin: 6px 0 6px 18px; padding: 0; }
 .bubble li { margin: 3px 0; }
 .bubble blockquote { border-left: 2px solid var(--acento); margin: 8px 0; padding: 4px 10px; opacity: 0.8; font-style: italic; }
@@ -214,14 +242,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .votacion { display: flex; gap: 6px; justify-content: flex-end; margin-top: 6px; }
-.voto { background: none; border: none; font-size: 0.84rem; opacity: 0.45; padding: 2px 4px; border-radius: 6px; }
+.voto { background: none; border: none; font-size: 1rem; /* AP: β₄ Chrome 16px */ opacity: 0.45; padding: 2px 4px; border-radius: 6px; }
 .voto:hover { opacity: 0.85; }
-.voto.votado { opacity: 1; background: rgba(255, 215, 0, 0.12); }
+.voto.votado { opacity: 1; background: rgba(212, 168, 67, 0.12); }
 
 .sugerencias { display: flex; gap: 8px; padding: 0 18px 10px; flex-wrap: wrap; justify-content: center; }
 .sugerencias button {
   background: var(--superficie); border: 1px solid var(--borde); color: var(--texto-tenue);
-  font-size: 0.78rem; padding: 6px 12px; border-radius: 999px;
+  font-size: 1rem; /* AM: β — 1rem, mínimo de lectura */ padding: 6px 12px; border-radius: 999px;
 }
 .sugerencias button:hover { border-color: var(--borde-fuerte); color: var(--dorado); }
 
@@ -239,7 +267,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .barra-input input:focus { border-color: var(--borde-fuerte); }
 .boton-enviar {
-  background: var(--dorado); color: #0b0e14; border: none; width: 40px; height: 40px;
+  background: var(--dorado); color: #0d1117; border: none; width: 40px; height: 40px;
   border-radius: 50%; font-size: 1.05rem; flex-shrink: 0; font-weight: 700;
 }
 .boton-enviar:active { transform: scale(0.94); }
@@ -274,13 +302,13 @@ button { font-family: inherit; cursor: pointer; }
 .modal-header h3 { font-family: var(--display); font-size: 1.1rem; color: var(--dorado); font-weight: 600; }
 .modal-body { padding: 16px 18px; overflow-y: auto; font-size: 0.88rem; }
 .modal-body p { margin-bottom: 10px; line-height: 1.55; }
-.modal-body label { display: block; font-size: 0.78rem; color: var(--texto-tenue); margin: 12px 0 5px; }
+.modal-body label { display: block; font-size: 1rem; /* AN: β₂ — lectura activa */ color: var(--texto-tenue); margin: 12px 0 5px; }
 .modal-body input, .modal-body select {
   width: 100%; background: var(--superficie-2); border: 1px solid var(--borde); color: var(--texto);
   padding: 9px 12px; border-radius: var(--radio-chico); font-size: 0.86rem; font-family: inherit;
 }
 .modal-body .boton-primario {
-  margin-top: 14px; width: 100%; background: var(--dorado); color: #0b0e14; border: none;
+  margin-top: 14px; width: 100%; background: var(--dorado); color: #0d1117; border: none;
   padding: 10px; border-radius: var(--radio-chico); font-weight: 700; font-size: 0.86rem;
 }
 .modal-body .boton-secundario {
@@ -360,20 +388,20 @@ button { font-family: inherit; cursor: pointer; }
 .bib-ico { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
 .bib-info { flex: 1; min-width: 0; }
 .bib-nombre {
-  display: block; font-size: 0.8rem; color: var(--texto);
+  display: block; font-size: 0.875rem; color: var(--texto); /* AW: β₇ 0.8→0.875rem */
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.bib-meta    { display: block; font-size: 0.7rem; color: var(--texto-tenue); margin-top: 2px; }
-.bib-error-txt { display: block; color: #ef4444; font-size: 0.7rem; margin-top: 3px; }
-.bib-progreso-txt { display: block; font-size: 0.7rem; color: var(--acento); margin-top: 3px; }
+.bib-meta    { display: block; font-size: 0.8rem; color: var(--texto-tenue); margin-top: 2px; } /* AQ: β₅ 0.8rem */
+.bib-error-txt { display: block; color: var(--rojo); font-size: 0.8rem; margin-top: 3px; } /* AM: γ — AR: β₆ 0.8rem */
+.bib-progreso-txt { display: block; font-size: 0.8rem; color: var(--acento); margin-top: 3px; } /* AR: β₆ 0.8rem */
 .bib-btn-quitar {
   background: none; border: none; color: var(--texto-tenue);
   cursor: pointer; font-size: 0.85rem; padding: 2px 4px; flex-shrink: 0;
   border-radius: 4px; transition: color .15s;
 }
-.bib-btn-quitar:hover { color: #ef4444; }
+.bib-btn-quitar:hover { color: var(--rojo); } /* AM: γ */
 .bib-vacio, .bib-warn {
-  color: var(--texto-tenue); font-size: 0.78rem; padding: 8px 4px;
+  color: var(--texto-tenue); font-size: 1rem; padding: 8px 4px; /* AQ: β₅ Chrome 16px */
   font-style: italic;
 }
 
@@ -389,7 +417,7 @@ button { font-family: inherit; cursor: pointer; }
 /* Zona drag & drop */
 .bib-drop-zone {
   border: 1.5px dashed var(--borde); border-radius: 8px;
-  padding: 12px 10px; text-align: center; font-size: 0.78rem;
+  padding: 12px 10px; text-align: center; font-size: 0.875rem; /* AR: β₆ 0.875rem */
   color: var(--texto-tenue); cursor: pointer; margin-bottom: 8px;
   transition: border-color .2s, background .2s;
 }
@@ -432,7 +460,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Visor de pares v10 ──────────────────────────────────────────────────────── */
 #visor-pares-panel {
   position: fixed; inset: 0; z-index: 9000;
-  background: var(--fondo, #0b0e14);
+  background: var(--fondo);
   display: flex; flex-direction: column;
   transform: translateY(100%); transition: transform .25s cubic-bezier(.4,0,.2,1);
   border-top: 2px solid var(--acento, #f0c040);
@@ -514,10 +542,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* ── Consolidar / Export Oráculo v10 ─────────────────────────────────────────── */
-#btn-consolidar { border-color: #6366f160; }
-#btn-consolidar:hover { border-color: #6366f1; color: #6366f1; }
-#btn-exportar-oraculo { border-color: #10b98160; }
-#btn-exportar-oraculo:hover { border-color: #10b981; color: #10b981; }
+/* AM: γ — unificado a paleta MIU (--acento=#d4a843, --verde=#4caf50) */
+#btn-consolidar { border-color: rgba(var(--acento-rgb), 0.38); }
+#btn-consolidar:hover { border-color: var(--acento); color: var(--acento); }
+#btn-exportar-oraculo { border-color: rgba(var(--verde-rgb), 0.38); } /* AN: α — var unificada */
+#btn-exportar-oraculo:hover { border-color: var(--verde); color: var(--verde); }
 #btn-consolidar:disabled,
 #btn-exportar-oraculo:disabled { opacity: .45; cursor: not-allowed; }
 
@@ -647,7 +676,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Colmena P2P ──────────────────────────────────────────────────────────────── */
 #colmena-panel {
   position: fixed; inset: 0; z-index: 8500;
-  background: var(--fondo, #0b0e14);
+  background: var(--fondo);
   display: flex; flex-direction: column;
   transform: translateX(100%); transition: transform .25s cubic-bezier(.4,0,.2,1);
 }
@@ -755,16 +784,16 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center; gap: 8px; pointer-events: none;
 }
 .miu-toast {
-  background: #1e293b; border: 1px solid #334155;
-  color: #e2e8f0; border-radius: 10px;
+  background: var(--superficie-2); border: 1px solid var(--borde); /* AM: γ — vars MIU */
+  color: var(--texto); border-radius: 10px;
   padding: 10px 18px; font-size: 0.83rem; line-height: 1.4;
   max-width: min(90vw, 380px); text-align: center;
   box-shadow: 0 4px 20px rgba(0,0,0,.5);
   animation: toastIn .2s ease, toastOut .3s ease 2.7s forwards;
   pointer-events: all;
 }
-.miu-toast--ok   { border-color: #10b981; color: #6ee7b7; }
-.miu-toast--warn { border-color: #f59e0b; color: #fcd34d; }
-.miu-toast--err  { border-color: #ef4444; color: #fca5a5; }
+.miu-toast--ok   { border-color: var(--verde); color: #a8e6aa; } /* AM: γ */
+.miu-toast--warn { border-color: var(--ambar); color: #fcd34d; } /* AM: γ */
+.miu-toast--err  { border-color: var(--rojo);  color: #fca5a5; } /* AM: γ */
 @keyframes toastIn  { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
 @keyframes toastOut { from { opacity:1; } to { opacity:0; pointer-events:none; } }

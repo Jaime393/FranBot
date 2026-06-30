@@ -1,3 +1,10 @@
+// almas-especialistas.js — CICLO Y: personas especialistas desactivadas por defecto.
+// El conocimiento real del proyecto vive en el oráculo (oraculo-data.js / IndexedDB).
+// Las 11 almas del pack_fundadores_v1 quedan archivadas abajo como referencia.
+// Para reactivarlas, restaura el array original. El núcleo vive en core.js.
+window.ALMAS_FUNDADORAS = [];
+
+/* ── ARCHIVO pack_fundadores_v1 (11 almas, desactivadas en Ciclo Y) ──────────
 // almas-especialistas.js — 11 personas especialistas (de pack_fundadores_v1, sin las 3 que generaban
 // payloads/exploits/bypass). El núcleo por defecto vive en core.js, no aquí.
 window.ALMAS_FUNDADORAS = [
@@ -160,3 +167,5 @@ window.ALMAS_FUNDADORAS = [
     "especialidad": "psicologia_junguiana"
   }
 ];
+
+──────────────────────────────────────────────────────────────────────────── */

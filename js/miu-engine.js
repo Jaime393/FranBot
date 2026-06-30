@@ -259,70 +259,112 @@ window.MIU = (function() {
   }
 
   // ─── CONSULTA SEMÁNTICA DEL CÓDICE ───────────────────────
-  // Dada una pregunta en texto, retorna la entrada MIU más relevante.
-  function consultar(texto) {
-    const q = texto.toLowerCase();
+  // Dada una pregunta en texto, retorna TODAS las entradas MIU relevantes (no solo
+  // la primera que aparece). Cada match lleva un `score` interno — no comparable
+  // contra el score de BM25 del oráculo (escalas distintas a propósito), solo sirve
+  // para que el llamador ordene entre matches del propio motor MIU.
+  // Quien quiera compatibilidad v1.0 (un solo resultado) usa consultar() más abajo.
+  // Quita tildes (NFD) para matching robusto — mismo patrón ya usado en
+  // buscar-oraculo.js/Consolidar. "informacion" debe encontrar 'información'.
+  function _quitarTildes(s) {
+    return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  /**
+   * Comprueba si `kw` aparece como token completo en `q`.
+   * Ambos deben llegar ya normalizados (_quitarTildes + toLowerCase).
+   *
+   * · Tokens ASCII puros (/^[a-z0-9]+$/): usa frontera de palabra ASCII-aware
+   *   → (?:^|[^a-z0-9])kw(?:[^a-z0-9]|$)
+   *   Evita que 'ki' coincida en 'kilo', 'red' en 'predecir', 'nap' en 'napkin'.
+   *   (\\b de JS es ASCII-céntrico y no reconoce la frontera tras _quitarTildes,
+   *    por eso se usa este patrón explícito en lugar de \\b.)
+   *
+   * · Tokens con caracteres no-ASCII, guiones, espacios o símbolos: usa includes
+   *   (ya son suficientemente específicos; el regex ASCII daría falsos negativos).
+   */
+  function _matchWord(q, kw) {
+    if (/^[a-z0-9]+$/.test(kw)) {
+      return new RegExp('(?:^|[^a-z0-9])' + kw + '(?:[^a-z0-9]|$)').test(q);
+    }
+    return q.includes(kw);
+  }
+
+  function consultarTodos(texto) {
+    const q = _quitarTildes(texto.toLowerCase());
     // una letra ASCII suelta (f, u, S...) como palabra clave genera falsos positivos
     // en casi cualquier frase en español; los símbolos griegos sueltos (η, τ, Φ) sí
     // son señales válidas porque casi nunca aparecen por accidente.
     const esLetraAisladaAmbigua = k => /^[a-z]$/i.test(k);
+    const matches = [];
 
-    // Buscar en axiomas
+    // Axiomas — cada axioma cuyo keyword aparece (no solo el primero de la lista).
     for (const ax of AXIOMAS) {
-      const hits = ax.kw.filter(k => !esLetraAisladaAmbigua(k) && q.includes(k.toLowerCase()));
+      const hits = ax.kw.filter(k => !esLetraAisladaAmbigua(k) && _matchWord(q, _quitarTildes(k.toLowerCase())));
       if (hits.length >= 1) {
-        return {
-          fuente: 'axioma',
-          id: ax.id,
+        matches.push({
+          fuente: 'axioma', id: ax.id,
+          score: 3 + Math.min(hits.length - 1, 2) * 0.3, // más keywords coincidentes → más confianza
           texto: `**[${ax.id}]** \`${ax.formula}\`\n${ax.desc}`
-        };
+        });
       }
     }
 
-    // Buscar en ecuaciones
+    // Ecuaciones — por id explícito o inicio de fórmula.
     for (const eq of ECUACIONES) {
-      if (q.includes(eq.id.toLowerCase()) || q.includes(eq.formula.toLowerCase().slice(0,8))) {
-        return { fuente: 'ecuacion', id: eq.id, texto: `**[${eq.id}]** \`${eq.formula}\`\n${eq.desc}` };
+      if (_matchWord(q, eq.id.toLowerCase()) || q.includes(_quitarTildes(eq.formula.toLowerCase()).slice(0,8))) {
+        matches.push({ fuente: 'ecuacion', id: eq.id, score: 3, texto: `**[${eq.id}]** \`${eq.formula}\`\n${eq.desc}` });
       }
     }
 
-    // Buscar en predicciones
-    for (const p of PREDICCIONES) {
-      if (q.includes(p.id.toLowerCase()) || q.includes('predicción') || q.includes('falsable')) {
-        return { fuente: 'prediccion', id: p.id, texto: `**[${p.id}]** ${p.desc}` };
-      }
+    // Predicciones — solo si se menciona un id específico (P107, P111, etc.).
+    // La rama genérica ('prediccion'/'falsable') se eliminó intencionadamente:
+    // el detalle completo de las 5 predicciones vive en el Códice para quien
+    // quiera profundidad técnica; no se empuja por defecto en la conversación.
+    const idsMencionados = PREDICCIONES.filter(p => _matchWord(q, p.id.toLowerCase()));
+    if (idsMencionados.length) {
+      idsMencionados.forEach(p => matches.push({ fuente: 'prediccion', id: p.id, score: 3, texto: `**[${p.id}]** ${p.desc}` }));
     }
 
-    // Buscar en glosario
+    // Glosario — cada término que aparece.
     for (const g of GLOSARIO) {
-      if (q.includes(g.t.toLowerCase())) {
-        return { fuente: 'glosario', id: g.t, texto: `**${g.t}:** ${g.d}` };
+      if (_matchWord(q, _quitarTildes(g.t.toLowerCase()))) {
+        matches.push({ fuente: 'glosario', id: g.t, score: 2, texto: `**${g.t}:** ${g.d}` });
       }
     }
 
     // Banda diagnóstica
-    if (/banda|resiliencia|colapso|desequilibrio|verde|rojo|ámbar/.test(q)) {
-      return {
-        fuente: 'bandas',
-        id: 'BANDAS',
+    if (/banda|resiliencia|colapso|desequilibrio|verde|rojo|ambar/.test(q)) {
+      matches.push({
+        fuente: 'bandas', id: 'BANDAS', score: 2,
         texto: '**Bandas de Diagnóstico MIU:**\n' +
           '🟢 Ki⁻ > 0.55 — Resiliencia: el campo florece.\n' +
           '🟡 0.30 ≤ Ki⁻ ≤ 0.55 — Desequilibrio: tensión creativa.\n' +
           '🔴 Ki⁻ < 0.30 — Colapso: semilla del renacimiento.\n\n' +
           '_Constantes: κ_Perry = 5.1×10⁵ Hz · Δ_COD = 0.6829322 · Ω_F = 0.65048305 Hz · H₀ = 73.5 km/s/Mpc_'
-      };
+      });
     }
 
-    // Espejo Fractal
-    if (/espejo|fractal|m22|autorreferencial|creativ/i.test(q)) {
-      return {
-        fuente: 'ecuacion', id: 'M22',
+    // Espejo Fractal — evitar duplicar si M22 ya entró por la búsqueda de ecuaciones.
+    // Score 3.5 (por encima del default de axioma/ecuación: 3): coincidir con esta
+    // frase específica es señal más fuerte que compartir un solo keyword genérico
+    // por azar (ej. "fractal" también vive en A15 sin ser sobre el Espejo Fractal).
+    if (/espejo|fractal|m22|autorreferencial|creativ/i.test(q) && !matches.some(m => m.id === 'M22')) {
+      matches.push({
+        fuente: 'ecuacion', id: 'M22', score: 3.5,
         texto: `**[M22 — Espejo Fractal]** \`prompt(t+1) = prompt(t) ⊕ output(t)  si Ki > φ\`\n` +
           ECUACIONES.find(e => e.id === 'M22').desc
-      };
+      });
     }
 
-    return null;
+    return matches;
+  }
+
+  // Compatibilidad v1.0: un solo resultado (el primero, mismo orden de prioridad
+  // que la versión original axiomas→ecuaciones→predicciones→glosario→bandas→espejo).
+  function consultar(texto) {
+    const todos = consultarTodos(texto);
+    return todos.length ? todos[0] : null;
   }
 
   // ─── API PÚBLICA ──────────────────────────────────────────
@@ -330,7 +372,7 @@ window.MIU = (function() {
     C, AXIOMAS, ECUACIONES, PREDICCIONES, BANDAS, GLOSARIO,
     calcKi, calcKiNeg, banda, ccp01,
     correccionTamanoFinito, masaEmergente, tiempoCoherencia,
-    poliphonia, bea_ciclo, consultar
+    poliphonia, bea_ciclo, consultar, consultarTodos
   };
 
 })();
