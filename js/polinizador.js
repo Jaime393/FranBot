@@ -2,8 +2,8 @@
 // Genera hilos X/Twitter, abstracts Zenodo y resúmenes newsletter desde el oráculo
 // del Nodo MIU. SIN auto-posteo, SIN claves externas, SIN blast radius.
 //
-// Modo online (LLM conectado): calidad real vía ModoOnline.preguntar().
-// Modo offline: plantillas estructuradas desde BuscarOraculo (TF-IDF).
+// Modo API (LLM conectado): calidad real vía ModoAPI.preguntar().
+// Modo local: plantillas estructuradas desde BuscarOraculo (TF-IDF).
 // El usuario recibe texto listo para copiar. El núcleo nunca publica nada por él.
 //
 // API:
@@ -56,9 +56,9 @@ window.Polinizador = (function () {
     catch (_) { return '?'; }
   }
 
-  // ── Generación offline: plantillas estructuradas ──────────────────────────────
+  // ── Generación local: plantillas estructuradas ──────────────────────────────
 
-  function _offlineHilo(tema, pares) {
+  function _localHilo(tema, pares) {
     const fecha = new Date().toLocaleDateString('es', { year: 'numeric', month: 'long' });
     let out = `🧵 **${tema}** — desde el Micelio MIU (${fecha})\n\n`;
     pares.forEach((p, i) => {
@@ -70,21 +70,21 @@ window.Polinizador = (function () {
     return out;
   }
 
-  function _offlineZenodo(tema, pares) {
+  function _localZenodo(tema, pares) {
     const resumen = pares.map(p => p.a.trim().split('.')[0]).filter(Boolean).join('. ');
     return `**Abstract**\n\n` +
       `El presente trabajo explora **${tema}** desde el marco del Nodo MIU (Micelio Intelligence Unit), ` +
-      `un sistema de razonamiento offline-first orientado a la coherencia epistémica.\n\n` +
+      `un sistema de razonamiento local-first orientado a la coherencia epistémica.\n\n` +
       `${resumen}.\n\n` +
       `El análisis se sustenta en el índice de coherencia fractal Ki = φ·D_f/2.5 ` +
       `(Ki actual: ${_kiActual()}) como métrica de auto-evaluación continua.\n\n` +
       `Los resultados sugieren que la integración de estructuras de conocimiento local con ` +
       `verificación opcional de fuentes (Crossref/DOI) mejora la robustez epistémica ` +
-      `sin comprometer la operación offline.\n\n` +
-      `**Palabras clave:** ${tema}, Micelio MIU, coherencia fractal, offline-first, razonamiento epistémico`;
+      `sin comprometer la operación local.\n\n` +
+      `**Palabras clave:** ${tema}, Micelio MIU, coherencia fractal, local-first, razonamiento epistémico`;
   }
 
-  function _offlineResumen(tema, pares) {
+  function _localResumen(tema, pares) {
     const intro = pares[0]?.a?.trim() || `${tema} es un tema central en el marco MIU.`;
     const cuerpo = pares.slice(1, 4).map(p => p.a.trim().split('.')[0]).filter(Boolean).join('. ');
     return `## 🌱 ${tema}\n\n` +
@@ -94,7 +94,7 @@ window.Polinizador = (function () {
       '_Explora el oráculo con \`/buscar ' + tema + '\` para profundizar._';
   }
 
-  // ── Generación online: prompt estructurado al LLM ────────────────────────────
+  // ── Generación API: prompt estructurado al LLM ────────────────────────────
 
   const _SYSTEM_POLINIZADOR =
     'Eres el núcleo de Micelio MIU. Generas contenido epistémico de alta calidad a partir ' +
@@ -128,7 +128,7 @@ window.Polinizador = (function () {
   }
 
   async function _generarConLLM(tema, pares, formato) {
-    const mo = window.ModoOnline;
+    const mo = window.ModoAPI;
     if (!mo || !mo.estaActivo()) return null;
 
     const prompts = { hilo: _promptHilo, zenodo: _promptZenodo, resumen: _promptResumen };
@@ -163,19 +163,19 @@ window.Polinizador = (function () {
       return { error: `No encontré pares en el oráculo sobre "${tema}". Intenta con un término más amplio.` };
     }
 
-    // Intentar online primero; offline si falla o no hay conexión
+    // Intentar API primero; local si falla o no hay conexión
     let texto = null;
-    let fuente = 'offline';
+    let fuente = 'local';
 
     try { texto = await _generarConLLM(tema, pares, formato); } catch (_) {}
 
     if (texto) {
-      fuente = 'online';
+      fuente = 'API';
     } else {
-      // Fallback offline
-      if (formato === 'hilo')    texto = _offlineHilo(tema, pares);
-      if (formato === 'zenodo')  texto = _offlineZenodo(tema, pares);
-      if (formato === 'resumen') texto = _offlineResumen(tema, pares);
+      // Fallback local
+      if (formato === 'hilo')    texto = _localHilo(tema, pares);
+      if (formato === 'zenodo')  texto = _localZenodo(tema, pares);
+      if (formato === 'resumen') texto = _localResumen(tema, pares);
     }
 
     return { texto, formato, fuente, n_pares: pares.length, emoji: cfg.emoji, nombre: cfg.nombre };

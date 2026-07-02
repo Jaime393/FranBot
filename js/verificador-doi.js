@@ -1,5 +1,5 @@
 // verificador-doi.js — v0.3 (Ciclo AF) — TTL diferenciado para 404s + stats extendidas
-// Híbrido: online verifica la fuente real; offline sirve caché IDB o avisa (no bloquea).
+// Híbrido: API verifica la fuente real; local sirve caché IDB o avisa (no bloquea).
 // Crossref es una API ABIERTA y GRATUITA (sin clave, sin cuenta).
 //
 // Cambios v0.3 respecto a v0.2 (Ciclo X):
@@ -16,7 +16,7 @@
 //   VerificadorDOI.extraer(texto)        → [doi, ...]
 //   VerificadorDOI.disponible()          → bool
 //   VerificadorDOI.verificar(doi)        → async { ok, doi, titulo, autores, anio, url,
-//                                                   error?, offline?, fromCache? }
+//                                                   error?, local?, fromCache? }
 //   VerificadorDOI.verificarTexto(texto) → async { dois:[...], resultados:[...] }
 //   VerificadorDOI.cacheStats()          → async { count, ok_count, err_count,
 //                                                   ttl_ok_dias, ttl_err_dias, disponible }
@@ -154,7 +154,7 @@ window.VerificadorDOI = (function () {
     if (cached) return { ...cached, fromCache: true };
 
     if (!disponible()) {
-      return { ok: false, doi: d, offline: true, error: 'Sin conexión. Conéctate y reintenta con `/doi`.' };
+      return { ok: false, doi: d, local: true, error: 'Sin conexión. Conéctate y reintenta con `/doi`.' };
     }
 
     try {
