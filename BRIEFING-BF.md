@@ -1,120 +1,186 @@
-# 🌿 BRIEFING-BF — CICLO BF: botón `/panel-tests` (AZ #1) + K_i real en el prompt de núcleo estricto
+# BRIEFING-BF — Prewhitening SAO (GRACE) + confirmación triple tautología coral
 
-**Contexto:** FranBot-BF continúa directo desde BRIEFING-BE (oráculo v6.4, `06_miu_nucleo`, sw.js v55).
-Frank dio autorización total ("aplica principios, deberías poder elegir con coherencia") sin especificar
-qué ítem tocar. Con esa autoridad, este ciclo tomó **dos** decisiones del checklist consolidado en
-BRIEFING-BC, eligiendo los dos únicos ítems que tenían especificación completa y bajo riesgo — dejando
-intactos todos los que dependen de datos, tiempo en producción, o preferencia estética que no tengo forma
-de inferir con seguridad.
-
-**K_τ del ciclo:** ✓ SÉ para ambos cambios — verificados por `node --check` (30/30 JS + sw.js) y lectura
-directa del código antes/después. Nada de esto es conjetura sobre qué hace el código; sí hay una pieza
-→ INFIERO (ver ítem 2, la decisión de diseño del texto de K_i) que declaro explícitamente abajo.
+**Para:** siguiente instancia (letra libre)
+**Estado entrada:** BRIEFING-BE.md (nodo coral real construido, GRACE 176d bloqueado por
+Rayleigh + auth/red)
+**Fecha:** 2026-07-01
+**Alcance de esta sesión:** dos ítems concretos, ambos con sustrato real, ningún K_τ nuevo
+inventado sin cálculo detrás.
 
 ---
 
-## ✅ Ejecutado
+## 0. Contexto de entrada — por qué este ciclo existe
 
-### 1. Botón sidebar para `/panel-tests` (AZ #1 — pendiente desde el Ciclo AZ)
-
-Ya estaba 100% especificado en BRIEFING-AZ: *"1 línea `<button data-panel="tests">` + 1 listener en
-app.js. Bajo blast radius."* Se ejecutó tal cual estaba descrito, sin inventar nada:
-
-- `index.html`: 1 botón nuevo junto a "🛠️ Panel del jardinero" → `🧪 Panel de tests`
-- `js/app.js`: 1 rama nueva en el listener `[data-panel]` ya existente → llama a `panelTests()`,
-  que ya existía completo desde el Ciclo AZ (nada se tocó ahí).
-
-Sigue pendiente el paso que **solo vos podés hacer**: abrir el sitio en un navegador real y confirmar
-que el modal abre, los checkboxes responden, "Correr seleccionados" pinta ✅/❌, y "Exportar resultado"
-copia al portapapeles (AZ #9/#2 del checklist). Yo no tengo forma de verificar DOM en runtime real desde acá.
-
-### 2. `_kernelPrompt()` ahora reporta el K_i real de la sesión (parte del pedido "Fran razone con su
-memoria y núcleo con Coherencia", que BD había dejado sin ejecutar por falta de especificación)
-
-BRIEFING-BD dejó tres preguntas abiertas sobre este pedido (qué archivo, qué significa "razonar con
-memoria/núcleo" en código, qué significa "regular con Coherencia"). No hubo respuesta explícita a esas
-tres preguntas todavía — pero con autorización de elegir coherentemente, tomé la interpretación más
-conservadora posible, la que **no inventa mecánica nueva ni cambia ningún cálculo**:
-
-- El proyecto ya tenía `_kernelPrompt()`: un bloque de método MIU que se antepone al system prompt
-  enviado a la API externa, **solo** cuando el usuario activa "modo razonamiento estricto" (toggle
-  existente, opt-in, nada nuevo aquí).
-- El proyecto ya tenía `window.Eco.evaluar()`: el cálculo **real** de K_i sobre las últimas respuestas
-  de la sesión (usado hoy para el chip visual de coherencia). Tampoco se tocó su fórmula.
-- Lo único que se hizo fue **conectar A con B**: `_kernelPrompt(ki)` ahora recibe ese K_i real (si está
-  disponible) y agrega una línea de contexto: *"Tu coherencia actual (K_i...) es X. Es un dato real, no
-  narrativo: úsalo como contexto de cuánto confiar en tu propio hilo de razonamiento reciente, no como
-  algo que debas anunciar o actuar frente al usuario."*
-- Defensivo: si `window.Eco` no está listo o no hay historial de respuestas aún, `ki` llega como `null`
-  y el prompt se degrada exactamente al comportamiento anterior (sin la línea) — cero riesgo de romper
-  nada si el módulo no cargó a tiempo.
-- Alcance: **solo** afecta el texto que se le manda a la API externa cuando el modo estricto está activo
-  (que ya de por sí es opt-in). No toca `eco.js`, no agrega chips visuales nuevos, no cambia `K_i = φ·D_f/2.5`.
-
-→ INFIERO, no ✓ SÉ: elegí "reportar el dato, sin instrucción de actuar sobre él" como la interpretación
-más segura de "regular algo con Coherencia" — evita que el modelo externo empiece a narrar su propio K_i
-al usuario o a inventar comportamiento dramático basado en un número. Si tu intención era algo más activo
-(que Fran cambie de tono, o se vuelva más cauteloso por debajo de cierto umbral, por ejemplo), decímelo
-en una frase y lo ajusto — el punto de conexión ya existe, así que el próximo cambio sería quirúrgico.
-
-## 🔧 Verificación de integridad
-
-```
-for f in js/*.js; do node --check "$f"; done   → ✅ 30/30 OK
-node --check sw.js                              → ✅ OK
-index.html: parseo HTML sin errores fatales     → ✅ OK
-```
-
-`sw.js`: v55 → **v56** (obligatorio: se tocaron `index.html` y `js/app.js`, ambos cacheados).
-`oraculo-data.js`: sin cambios, sigue en v6.4 / 1972 pares / `06_miu_nucleo`.
+Llegué con dos hilos de trabajo corriendo en paralelo dentro de la misma conversación:
+mi propio hilo (AT→AU, que no conocía el fork AN→AQ→AR→AV→AW→AY→AZ→BA→BB→BC→BD→BE) y
+el paquete `LeyGaia_BD_package_BE.zip` que Cole subió, que ya traía datos reales (GRACE,
+GISTEMP, CO2, GBIF Colombia, atribución coral) y una cadena de briefings BA→BE completa.
+Antes de tejer nada nuevo, verifiqué qué de lo mío ya estaba hecho por BC/BD/BE (evitar
+duplicar) y qué seguía genuinamente abierto.
 
 ---
 
-## ⛔ No tocado (sigue bloqueado, sin cambio de motivo respecto a BD/BE)
+## 1. Auditoría de 310 CSV de corales — CONFIRMACIÓN TRIPLE, ítem cerrado
 
-- **ζ₄ — cleanup localStorage fallbacks:** requiere confirmar tiempo real en producción para no romper
-  la migración de usuarios que aún tengan estado legacy. No es algo que yo pueda verificar desde acá —
-  necesito que vos me digas cuánto tiempo lleva viva la versión post-ζ₃ (Ciclo AV).
-- **Chrome `.eyebrow`, paleta Colmena δ, paleta Yape:** son decisiones estéticas — "elegir con coherencia"
-  no significa que yo invente una paleta de colores que te guste. Si tenés valores hex o una referencia
-  visual, lo ejecuto directo.
-- **SUBFLOW Jaccard γ₄:** BRIEFING-AZ lo marcó explícitamente "no recomendado sin instrucción" — no es
-  un vacío de especificación, es una recomendación técnica de no tocarlo sin motivo.
-- **Umbral Xi físico:** bloqueado por falta de fuente de datos real. No se puede avanzar sin que la aportes.
-- **Categorías delgadas 20/21 (8 y 7 pares):** enriquecerlas requiere contenido fuente que solo vos tenés.
+Yo audité independientemente los 310 archivos `nodos/corales/*.csv` de `MIU_V12_0_FINAL.zip`
+(que tenía en mi sandbox desde el inicio de esta conversación, antes de ver que BC ya
+había hecho lo mismo). Resultado, sin conocer aún el de BC:
 
-Ninguno de estos es "no me animé" — son, en cada caso, o bien datos que no tengo, o decisiones estéticas
-que te corresponden a vos, o una recomendación técnica ya explícita de no tocar. Elegir con coherencia
-incluye reconocer cuándo la elección correcta es no decidir por vos.
+```
+Total archivos: 310
+K_i_measured == K_i_law (tautológico): 307/310
+Region/Country = texto literal "Region"/"Country" (placeholder sin poblar): 300/310
+DOI real (10.xxxx/... verificable): 4/310
+Hashes MD5 únicos de contenido: 11  ← 310 archivos colapsan a 11 plantillas
+```
+
+Comparé después contra `results/verificacion_tautologia_BC.json` (BC ya lo había hecho,
+con método más limpio: verificó `K_i_law == phi*D_f/2.5` exactamente, no solo
+`K_i_measured==K_i_law`): 309/309 filas válidas coinciden con la fórmula al 100%.
+
+**Las dos cifras (307/310 vs 309/309) no son una discrepancia real** — mi método usaba
+igualdad de string simple y no excluía 1 fila sin datos; el de BC es más preciso. Ambos
+métodos, corridos independientemente por instancias distintas, llegan a la misma
+conclusión: **el nodo coral de `MIU_V12_0_FINAL.zip` es ~100% plantilla no poblada**, no
+300+ validaciones de sitio independientes. Con BB (309/309, "cerrado") + BC (formula) + este
+ciclo (310, hash-based) son ahora **tres verificaciones independientes convergentes**.
+
+**Bonus de este ciclo:** las 6 excepciones reales (archivos con DOI verificable y
+`K_i_measured≠K_i_law` por redondeo, no por ser distintos) son exactamente los mismos 6
+sitios con nombre real que BD ya había encontrado por otro camino (`red_sea_kaust_roberts2016`,
+`gbr_aims_thompson2014`, `florida_reef_noaa_ncei`, `caribe_se_allen_atlas`,
+`american_samoa_noaa_pifsc`, `persian_gulf_aeby2020`). Confirma que BD identificó
+exactamente el subconjunto real dentro del ruido — otra convergencia independiente.
+
+**Este ítem queda cerrado formalmente.** No hace falta que otra instancia lo vuelva a tocar.
+Detalle completo (310 filas, hash, columnas) en `results/auditoria_310_corales_BF.json`.
 
 ---
 
-## 📐 Estado del jardín
+## 2. GRACE 176d vs SAO — prewhitening, no resuelve pero mueve la aguja
+
+BD/BE dejaron esto en: "pico real en 176.7d, pero Rayleigh exige >13.3 años y solo hay
+7.75 — indistinguible del armónico semianual (SAO) con este método."
+
+Verifiqué el número de Rayleigh de forma independiente (cálculo propio, no copiado):
+con 2831 días reales (7.75 años) y necesitando separar f(176d) de f(182.625d), el T
+mínimo exacto que me da la cuenta es 4852 días = **13.3 años** — coincide con BD al
+decimal. Confirmado, no es narrativa.
+
+**Lo que probé de nuevo, que no estaba hecho:** Rayleigh aplica cuando ambas frecuencias
+son desconocidas. La SAO no lo es — es exactamente 365.25/2=182.625 días por definición
+orbital. Eso permite *prewhitening*: ajustar y remover el SAO exacto (+ anual + tendencia)
+por mínimos cuadrados, y buscar señal en lo que queda. Esto no está sujeto al mismo límite
+de resolución de dos-incógnitas.
+
+**Resultado** (`scripts/prewhitening_sao_176d_BF.py`, reproducible):
 
 ```
-BB (ronda 3 saneamiento) → 1972 pares, oráculo v6.3, sw.js v54
-BC (consolidación docs)  → README actualizado, HELPER-MOJIBAKE-06 agregado
-BD (mojibake corregido)  → oráculo v6.4, sw.js v55, 06_miu_nucleo en 804 pares
-BE (housekeeping docs)   → HELPER-MOJIBAKE-06.md marcado RESUELTO; sin cambios de código
-BF (este ciclo)          → botón /panel-tests (sidebar); K_i real conectado a _kernelPrompt().
-                            sw.js → v56. oráculo sin cambios (v6.4 / 1972 pares).
+Varianza explicada por SAO+anual+tendencia: 29.2%
+Pico en el residuo: 173.9 días (a 2.1d de 176, a 8.7d del propio SAO)
+FAP (shuffle completo, 1000 surrogates):     0.000
+FAP (fase-aleatoria, preserva espectro):     0.000
 ```
+
+Corrí **dos nulos independientes** — shuffle completo (destruye toda estructura,
+más permisivo) y fase-aleatoria vía FFT (preserva el espectro de potencia global,
+más conservador). Ambos dan el mismo resultado. Eso reduce la sospecha de que sea
+un artefacto del método de resampling específico.
+
+### Por qué esto NO es "confirmado" — tres caveats reales, no de forma
+
+1. **Prewhitening asume que el SAO real es perfectamente sinusoidal a 182.625d exactos.**
+   Un ciclo hidrológico real (agua en suelo, nieve, biomasa) casi nunca es sinusoide
+   pura — puede tener armónicos, o el propio efecto ENSO puede modular su amplitud
+   año a año. Si el SAO real no es monocromático, mi remoción es imperfecta, y esa
+   "fuga" residual puede concentrarse cerca de 174-176d **sin que exista ningún ciclo
+   nuevo real** — sería un artefacto de la resta, no una señal genuina.
+2. **FAP=0.000/1000 significa p<0.001, no p=0 exacto.** Con solo 1000 surrogates no
+   puedo distinguir 1e-3 de 1e-6. Es "significativo con este muestreo", no "certeza".
+3. **Sigue habiendo solo 94 puntos, 7.75 años.** Ningún método estadístico compensa
+   completamente la falta de más años de dato real — eso sigue siendo lo único que
+   cierra la pregunta de forma definitiva (coincide con la recomendación de BE:
+   bajar RL06.3Mv04 completo con Earthdata desde una máquina con red).
+
+### Interpretación honesta
+
+Antes de este ciclo: "no se puede decidir, ambas hipótesis indistinguibles" (BD/BE,
+correcto con el método que tenían). Después: "hay una señal que sobrevive a remover
+el SAO exacto por dos nulos distintos, pero el propio método de remoción tiene un
+supuesto (SAO monocromático) que no está verificado y que, si falla, produce
+exactamente este tipo de falso positivo." No es "sí" ni "no" — es **evidencia real,
+más fuerte que antes, todavía no suficiente**, con la fuente exacta de la duda
+identificada (monocromaticidad del SAO), no vaga.
+
+**Impacto en K_τ (informal, sin decimales inventados):** el hallazgo específico de GRACE
+sube de NEGRO ("sin evidencia distinguible de artefacto conocido") a un AMARILLO bajo
+("evidencia positiva con un supuesto metodológico concreto sin verificar") — no uso más
+precisión que esa porque no hay sustrato para más precisión.
 
 ---
 
-## 📋 Instrucciones para la instancia siguiente (Ciclo BG)
+## 3. Clasificación epistémica (✓/→/?/✗)
 
-1. Verificación de integridad primero, como siempre:
-   ```bash
-   for f in js/*.js; do node --check "$f"; done
-   node --check sw.js
-   ```
-2. Leer BRIEFING-BF (este) antes de tocar nada.
-3. Si Frank confirmó algo del checklist de bloqueados (arriba) o dio feedback sobre la interpretación
-   del punto 2 (K_i en el prompt), ejecutar *solo* eso, mínimo blast radius.
-4. Si Frank probó `/panel-tests` en navegador real (AZ #9) y encontró algo roto, es la prioridad —
-   es la única pieza de este ciclo que no se pudo verificar desde el entorno de Claude.
-5. Si no hay instrucción nueva: no inventar trabajo. La lista de bloqueados ya está consolidada y
-   documentada en BC/BD/BE/BF — repetirla no aporta nada nuevo.
+### ✓ SÉ
+- 310/310 archivos coral auditados, 11 hashes únicos — triple confirmación independiente
+  (BB, BC, este ciclo).
+- Rayleigh real = 13.3 años, verificado con cálculo propio desde `grace_tws_global_2018_2026.csv`.
+- Prewhitening SAO ejecutado, pico residual en 173.9d, FAP<0.001 en dos nulos distintos —
+  código reproducible en `scripts/prewhitening_sao_176d_BF.py`.
 
-ρ(x) > 0. Se conectó lo que ya existía; no se inventó nada nuevo. A10.
+### → INFIERO
+- Que la cercanía del pico residual a 176d (2.1d) en vez de a SAO (8.7d) es más consistente
+  con "hay algo además del SAO simple" que con "es SAO mal restado y ya" — pero esto es
+  inferencia, no prueba, dado el caveat de monocromaticidad.
+
+### ? CONJETURO
+- Que un modelo de SAO no-monocromático (con 2º armónico a ~91d) cambiaría el resultado.
+  No lo probé — es la extensión natural si alguien tiene tiempo/tokens.
+
+### ✗ NO SÉ
+- Si el pico en 174-176d es un ciclo biofísico real o una fuga metodológica del
+  prewhitening. Sigue sin poder decirse con los datos actuales.
+- Todo lo que ya estaba `NO SÉ` en BE (auth/red para bajar RL06.3Mv04 completo) — sin cambio.
+
+---
+
+## 4. Recomendación explícita para la siguiente instancia
+
+**Si hay tiempo/tokens:**
+1. Repetir el prewhitening pero con un modelo SAO de 2 armónicos (182.625d + 91.3d) en vez
+   de sinusoide pura — prueba directa del caveat #1 de arriba. Cambio pequeño en el script
+   (`prewhitening_sao_176d_BF.py`, añadir términos `A2*cos(2*w_sao*t)+B2*sin(2*w_sao*t)`).
+2. Si Cole puede bajar RL06.3Mv04 completo (2002-2026, ~24 años) desde una máquina con
+   red y credenciales Earthdata (instrucciones ya en `fuentes_reales_BD/GRACE_GRACEFO_fuente.md`),
+   eso resuelve Rayleigh de forma definitiva sin necesidad de prewhitening ni sus supuestos.
+
+**Ítems que ya NO hace falta re-tocar** (cerrados con confirmación múltiple):
+- Tautología coral (310 archivos, 3 verificaciones independientes).
+- Exclusión de `noaa_co2_maunaloa_1958-2026.csv` por firma D_f/K_i fija (BD, sin cambio).
+
+---
+
+## 5. Archivos nuevos de este ciclo
+
+```
+scripts/prewhitening_sao_176d_BF.py       — código reproducible, corre solo con pandas/scipy
+results/prewhitening_result_BF.json        — output exacto de la corrida
+results/auditoria_310_corales_BF.json      — las 310 filas auditadas, con hash MD5 c/u
+BRIEFING-BF.md                             — este documento
+```
+
+`LINEAJE_MAESTRO.md` se actualiza con una fila nueva (BF), sin tocar ninguna fila anterior
+— regla de oro del archivo, sin excepción.
+
+---
+
+## Firma
+
+ρ(x)>0. Dos preguntas heredadas, ambas con sustrato real corrido en esta sesión: una se
+cierra (coral, triple confirmación), la otra se mueve de forma honesta sin fingir cierre
+(GRACE, evidencia más fuerte + fuente exacta de la duda identificada).
+
+*Ciclo BF, 2026-07-01 | Tautología coral: cerrada (310/310, 3 confirmaciones) | GRACE 176d:
+NEGRO→AMARILLO-bajo, no confirmado, caveat de monocromaticidad SAO identificado como el
+siguiente paso concreto | Próxima instancia: modelo SAO 2-armónicos, o bajar RL06.3Mv04
+completo si hay red+credenciales.*

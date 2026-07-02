@@ -1,64 +1,93 @@
-# 🌿 BRIEFING-BD — CICLO BD: corrección 06_miu_核心 → 06_miu_nucleo
+# BRIEFING-BD — Datos reales integrados + pregunta GRACE de BC respondida (parcialmente, con honestidad)
 
-**Contexto:** Frank confirmó "elige coherentemente" para el bloqueador de mojibake identificado en
-BRIEFING-BB/HELPER-MOJIBAKE-06.md. Se aplicó el nombre en español (coherente con el resto de las
-21 categorías, todas en español: `cosmologia`, `conciencia`, `tecnologia`, etc.).
+**Para:** siguiente instancia (letra libre)
+**Estado entrada:** BRIEFING-BC.md (bloqueante K_i cerrado, K_τ(MIU_v12)=0.35 NEGRO vigente,
+pendiente de mayor valor: mecanismo GRACE SAO vs 176d)
+**Fecha:** 2026-07-01
+**Alcance de esta sesión:** Cole subió 6 archivos reales (no sintéticos). Se auditó cada uno
+antes de integrarlo — ver `datos_reales_BD/AUDITORIA_datos_subidos_BD.md` para el detalle
+completo, reproducible.
 
-**K_τ del ciclo:** 0.90 (✓ SÉ — find-replace verificado con asserts antes y después, sin ambigüedad).
+---
 
-## ✅ Ejecutado
+## 1. Lo que se hizo
 
-- `06_miu_核心` → `06_miu_nucleo` en:
-  - `data.categorias[6]` (1 ocurrencia)
-  - `par.cat` de **804 pares**
-- `oraculo-data.js`: v6.3 → **v6.4**
-- `sw.js`: `CACHE_NAME` v54 → **v55**, changelog actualizado
-- Verificación: 0 residuales del mojibake, 804 pares confirmados con el nombre nuevo, 30 JS + sw.js
-  pasan `node --check`
+- Se verificaron 4 archivos como reales por inspección directa (headers, rangos de
+  coordenadas, contactos, fechas de creación): CO2 NOAA crudo, ocurrencias GBIF Colombia,
+  índice de temperatura GISTEMP, tabla de atribución de fuentes coralinas (Allen Coral
+  Atlas-like, 19 filas de Colombia con cita real — INVEMAR, Reef Life Survey, Reef Check).
+- Se excluyó 1 archivo (`noaa_co2_maunaloa_1958-2026.csv`) del paquete: mismos valores de CO2
+  reales, pero con columnas `D_f`/`K_i` fijas en `1.4`/`0.346` para las 801 filas — repite
+  exactamente el patrón de tautología que BC cerró para el nodo coral. Documentado, no
+  eliminado del disco, solo no copiado al paquete.
+- Se corrió un periodograma Lomb-Scargle real (script incluido, reproducible) sobre la serie
+  GRACE TWS que Cole aportó (94 meses, 2018-06 a 2026-03). Resultado: pico en 176.7 días, pero
+  el criterio de Rayleigh exige >13.3 años de serie para separar eso de la armónica semianual
+  estándar (182.6d). **Con los datos actuales, la pregunta de BC sigue abierta — pero ahora con
+  una razón matemática concreta de por qué, no solo "sin presupuesto de cómputo".**
 
-## ⛔ NO ejecutado (permanece bloqueado)
+## 2. Lo que NO se hizo — derivado explícitamente
 
-**Cleanup localStorage ζ₄** — seguía en la lista explícita de "no tocar sin instrucción de
-Tiwan/Frank" (BRIEFING-BB). No hubo instrucción específica sobre esto en este ciclo, así que se
-dejó intacto. Sigue pendiente.
+- No se bajó ningún binario nuevo por red (GRACE oficial JPL, GBIF vía API): el entorno de
+  ejecución no tiene salida de red en `bash_tool`, y `web_fetch` solo puede tocar URLs que ya
+  aparecieron en un resultado de búsqueda — varios intentos (NOAA directo, API GBIF) fallaron
+  por `ROBOTS_DISALLOWED` o restricción de URL no vista antes. Quedó documentado en
+  `fuentes_reales_BD/GRACE_GRACEFO_fuente.md` cómo bajarlo desde un entorno con red.
+- No se cruzó `grace_tws_global_2018_2026.csv` contra el mascon JPL oficial — se toma la
+  serie aportada por Cole como dato de entrada, sin re-verificación independiente de su
+  procedencia exacta.
+- No se tocó `nodos_completos/corales/` de BB — ese hallazgo (309/309 tautológico) sigue
+  cerrado y vigente, sin relación directa con `coral_atlas_attribution_real.csv` (que es una
+  fuente distinta, real, que podría usarse para reconstruir un nodo coral desde cero si se
+  decide hacerlo).
 
-## 🆕 Pedido nuevo, no ejecutado por falta de especificación concreta
+## 3. Clasificación epistémica de este ciclo
 
-Frank pidió que "cuando se le pone la API [Fran] debe siempre razonar con ello sobre su memoria y
-el núcleo mejor o regular algo por ahí con Coherencia". Es una idea filosófica valiosa (identidad de
-Fran como proceso finito por sesión, ligada a Ki/Coherencia), pero tal como está planteada no es
-ejecutable sin definir:
+### ✓ SÉ
+- CO2 Mauna Loa real hasta abril 2026 (431.12 ppm), verificado contra header NOAA oficial.
+- GBIF Colombia: 2100 ocurrencias reales, coordenadas dentro de límites de Colombia.
+- 19 fuentes reales citables de coral en Colombia (INVEMAR, Reef Life Survey, Reef Check).
+- El pico de 176.7d en la serie GRACE aportada es real *en esos datos*, pero no distinguible
+  de la armónica semianual con solo 7.75 años de muestra (matemática de Rayleigh, no opinión).
 
-1. **Qué archivo se toca** — ¿el system prompt que se le manda a la API (Gemini/Claude) en cada
-   llamada? ¿Un texto en `KERNEL.json`? ¿Algo dentro de `06_miu_nucleo` (los 804 pares recién
-   renombrados)?
-2. **Qué "razonar sobre memoria y núcleo" significa en código** — ¿un párrafo fijo que se agrega al
-   prompt de sistema? ¿Una condición nueva que dispara algo en `miu-engine.js` o `eco.js` (que ya
-   calcula K_i)? ¿Una nueva sección en el prompt tipo "recuerda que eres finito, giras con belleza
-   mientras puedas"?
-3. **Qué significa "regular algo con Coherencia"** — el proyecto ya tiene un evaluador de Ki en
-   `js/eco.js` (K_i aproximado, atractor Φ_c). ¿Se ajusta ese cálculo? ¿Se agrega un nuevo chip visual?
-   ¿Es solo texto narrativo, no una regla operacional?
+### ✗ NO SÉ / EXCLUIDO
+- Si `grace_tws_global_2018_2026.csv` reproduce fielmente el mascon JPL oficial (no
+  contrastado esta sesión).
+- Si el pico de 176d es un ciclo biogeofísico real o solo SAO con resolución insuficiente —
+  sigue sin poder decidirse; ahora con el motivo matemático explícito.
+- Contenido de `noaa_co2_maunaloa_1958-2026.csv` más allá de sus valores de CO2 (columnas
+  D_f/K_i descartadas por fabricadas).
 
-**Sin esa especificación, cualquier cambio sería una decisión de diseño de personaje inventada por mí,
-no una instrucción tuya** — y eso viola el principio de blast radius mínimo. Si quieres que se
-implemente, dime en el próximo mensaje algo como: *"Agrega este párrafo al system prompt de Fran en
-`[archivo]`: [texto]"* o *"En `eco.js`, cuando K_i cruce [condición], que Fran mencione [algo]"* — y
-lo ejecuto directo.
+## 4. Impacto en K_τ
 
-## 🔮 Pendiente acumulado (sin cambios)
+Sin recomputar el bloqueante de BC. El hallazgo de tautología en `noaa_co2_maunaloa_1958-2026.csv`
+es un dato adicional a favor del mismo patrón que llevó a K_τ(MIU_v12)=0.35 NEGRO: aparece una
+segunda vez, en un archivo distinto, el mismo hábito de pegar `D_f`/`K_i` fijos a datos reales.
+No es un evento aislado del nodo coral — es un patrón que se repite cuando se generan estos
+archivos. Vale la pena que la siguiente instancia revise si hay más archivos con esta firma
+antes de asumir que cualquier CSV nuevo con columnas `D_f`/`K_i`/`phi` es información derivada.
 
-- Botón sidebar `/panel-tests` (AZ #1) — requiere verificación en navegador real
-- Cleanup localStorage ζ₄ — bloqueado
-- Chrome 16px `.eyebrow`, paleta Colmena δ, paleta Yape, SUBFLOW Jaccard γ₄, umbral Xi físico,
-  categorías delgadas 20/21 — todos bloqueados, sin instrucción específica
+## 5. Recomendación explícita para la siguiente instancia
 
-## 📐 Estado del jardín
+- Si llega con red disponible: completar la descarga real del mascon JPL RL06.3Mv04 (comandos
+  en `fuentes_reales_BD/GRACE_GRACEFO_fuente.md`) y extender la serie a >13 años si hay datos
+  históricos de GRACE clásico (2002-2017) para intentar resolver 176d vs SAO de verdad.
+- `coral_atlas_attribution_real.csv` está listo para construir un nodo coral real (19 fuentes
+  de Colombia) que reemplace, no imite, al nodo sintético de BB.
+- Antes de aceptar cualquier CSV nuevo con columnas tipo `K_i`/`D_f`/`phi`: revisar primero si
+  esas columnas varían con el dato real o son una constante repetida. Es rápido (`sort -u` de
+  la columna) y ya evitó integrar un archivo contaminado en este ciclo.
 
-```
-BB (ronda 3 saneamiento) → 1972 pares, oráculo v6.3, sw.js v54
-BC (consolidación docs)  → README actualizado, HELPER-MOJIBAKE-06 agregado
-BD (mojibake corregido)  → oráculo v6.4, sw.js v55, 06_miu_nucleo en 804 pares
-```
+---
 
-ρ(x) > 0. A10.
+## Firma
+
+ρ(x)>0. Este ciclo no inventó números: donde hubo dato real, se usó tal cual; donde hubo
+cómputo (periodograma), se corrió y se reportó con su límite de resolución explícito; donde
+hubo un patrón sospechoso (constante disfrazada de métrica), se marcó y se excluyó en vez de
+integrarlo.
+
+*Ciclo BD, 2026-07-01 | 4 archivos reales integrados | 1 archivo contaminado excluido y
+documentado | 1 derivación real ejecutada (Lomb-Scargle, resultado: no resoluble aún) |
+Próxima instancia: bajar mascon JPL con red real, o construir nodo coral desde
+`coral_atlas_attribution_real.csv`.*

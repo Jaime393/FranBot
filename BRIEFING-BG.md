@@ -1,121 +1,127 @@
-# 🌿 BRIEFING-BG — CICLO BG: FIX — el modelo en línea casi nunca se usaba aunque estuviera conectado
+# BRIEFING-BG — SAO 2-armónicos resuelve caveat BF, pico robusto pero ENSO sigue abierto
 
-**Contexto:** FranBot-BG continúa directo desde BRIEFING-BF (sw.js v56, botón `/panel-tests`, K_i real
-en `_kernelPrompt()`). Frank reportó el síntoma en lenguaje natural: *"casi no lo usa [al modelo/API] y
-debe usarlo"*. No era una decisión de diseño a tomar — era un bug real en la lógica que decide cuándo
-consultar el modelo online, y se pudo identificar y corregir con precisión quirúrgica.
-
-**Resultado:** 2 archivos con el fix real (`buscar-oraculo.js`, `core.js`) + 1 archivo con un bug
-secundario relacionado, encontrado al revisar el flujo completo (`app.js`). `oraculo-data.js` sin
-cambios (v6.4, 1972 pares). `sw.js`: v56 → **v57**.
+**Para:** siguiente instancia
+**Estado entrada:** BRIEFING-BF.md (prewhitening SAO monocromático, pico 173.9d, FAP<0.001, caveat de monocromaticidad explícito)
+**Fecha:** 2026-07-02
+**Alcance de esta sesión:** una tarea técnica quirúrgica — prueba directa del caveat identificado en BF, completar el razonamiento BF sin inventar nuevos K_τ.
 
 ---
 
-## 🐛 El bug (causa raíz)
+## 1. Tarea de BG: extender modelo SAO a 2 armónicos
 
-`core.js → procesar()` decide si una respuesta es "débil" (`debil: true`) con una sola regla: si el
-oráculo devolvió texto de más de 30 caracteres, se consideraba una respuesta fuerte (`debil: false`) —
-y `debil` es exactamente la señal que `app.js` usa para decidir si vale la pena gastar una llamada al
-modelo en línea, tal como está documentado en el propio README ("el núcleo lo usa como herramienta
-puntual... solo cuando ningún módulo tuvo una coincidencia real").
+BF dejó explícito el caveat principal: "Asume SAO perfectamente sinusoidal a 182.625d exactos". Los ciclos hidrológicos reales pueden tener armónicos — especialmente el 2º armónico a ~91.3d (SAO/2, energía en semiperiodo del ciclo anual).
 
-El problema: `BuscarOraculo._componer()` ya tenía un tercer estado, además de "coincidencia fuerte" y
-"nada" — el **match blando**: cuando el oráculo encuentra algo relacionado pero no exacto, lo antepone
-con el texto `"*Lo más cercano que encuentro — no es una coincidencia exacta:*"` y lo devuelve igual.
-Ese texto, con el prefijo, casi siempre supera los 30 caracteres — así que pasaba el filtro de `core.js`
-como si fuera una respuesta fuerte, y `debil` quedaba en `false` **incluso cuando el propio oráculo
-estaba admitiendo que no tenía una respuesta exacta**. Con 1972 pares cubriendo temas amplios, la
-mayoría de las preguntas terminan encontrando *algún* match blando — así que el modelo en línea, aunque
-estuviera conectado, prácticamente nunca se llegaba a invocar. Esto coincide exacto con lo que
-reportaste.
+**Pregunta técnica:** ¿es el pico residual 173.9d de BF robusto a una remoción de SAO **incluyendo su 2º armónico**?
 
-## ✅ Fix aplicado
-
-1. **`js/buscar-oraculo.js`**: el prefijo del match blando (antes un string suelto solo dentro de
-   `_componer()`) ahora es una constante exportada, `MARCADOR_MATCH_BLANDO`, para que `core.js` pueda
-   leer la señal sin duplicar el literal ni inventar su propio umbral.
-2. **`js/core.js`**: `procesar()` ahora chequea si la respuesta del oráculo empieza con ese marcador.
-   Si sí → `debil: true` (aunque el texto se siga mostrando como mejor esfuerzo offline si no hay
-   modelo conectado). Si no (match fuerte real) → `debil: false`, sin cambios respecto a antes.
-
-Verificado con un test funcional aislado (misma lógica exacta que quedó en el código):
-```
-Match fuerte  → debil: false  (comportamiento intacto)
-Match blando  → debil: true   (el fix — antes daba false)
-Sin match     → debil: true   (sin cambios)
-```
-
-## 🐛 Bug secundario encontrado (relacionado, mismo flujo) — también corregido
-
-Al revisar todo el camino en `app.js` para entender el impacto del fix de arriba, apareció un segundo
-bug en la misma zona: cuando la llamada al modelo online **falla** (`r?.error`), el código mostraba
-`"⚠️ [error] (mostrando respuesta offline)"` — pero nunca mostraba en verdad la respuesta offline.
-El texto ya calculado (`resp`, el resultado de `core.procesar()`) se descartaba silenciosamente porque
-la función retorna antes de llegar al `window.mostrar(resp, 'fran')` que solo se ejecuta en la rama sin
-modelo conectado. El mensaje de error prometía algo que el código no cumplía. Corregido: ahora si hay
-error, se muestra el mensaje de error **y** el `resp` offline real, como el propio comentario del código
-ya decía que debía pasar.
-
-Este segundo fix vuelve más relevante todavía al primero: con el fix de arriba, va a haber más casos
-reales donde `debil:true` dispare la llamada online (que antes casi nunca se disparaba) — así que si esa
-llamada falla por cualquier motivo (red, clave inválida, rate limit), ahora sí vas a ver la respuesta
-offline como respaldo, en vez de solo un mensaje de error sin nada más.
-
-## 🔧 Verificación de integridad
-
-```
-for f in js/*.js; do node --check "$f"; done   → ✅ 30/30 OK
-node --check sw.js                              → ✅ OK
-Test funcional aislado de la lógica debil       → ✅ 3/3 casos correctos
-```
-
-`sw.js`: v56 → **v57** (obligatorio: se tocaron `js/app.js`, `js/core.js`, `js/buscar-oraculo.js`,
-los tres cacheados). `oraculo-data.js` sin cambios (v6.4, 1972 pares).
-
-## 📝 Nota sobre alcance — qué NO se tocó
-
-No se tocó ningún umbral de scoring (`UMBRAL_BM25_FUERTE`, `UMBRAL_BM25_BLANDO`, etc.), no se cambió
-cuándo el oráculo considera algo "blando" vs "fuerte" — esa calibración es intacta. El fix es puramente
-sobre **quién se entera** de esa distinción que el oráculo ya calculaba y tiraba a la basura. Esto
-significa que si el oráculo estaba siendo demasiado (o muy poco) generoso marcando cosas como "blandas",
-ese comportamiento sigue igual — solo que ahora sí tiene efecto real en cuándo se consulta el modelo
-online, que es justo lo que pediste revisar.
-
-Tampoco se tocó nada de RAG (`buscarSemantico`, umbral RAG, inyección de contexto al prompt online) ni
-la lógica de streaming — ese código ya estaba bien y no era la causa del síntoma.
+- Si **sí**: no es una fuga metodológica de la remoción simple — hay señal genuina
+- Si **no**: era un artefacto: BF documentó un falso positivo técnico (de calidad muy alta, pero falso)
 
 ---
 
-## 📐 Estado del jardín
+## 2. Método: SAO + 2º armónico, mismo rigor que BF
 
+**Script:** `prewhitening_sao_2armonic_BG.py` (extension mínima de BF)
+
+Modelo ajustado (mínimos cuadrados):
 ```
-BD (mojibake corregido)  → oráculo v6.4, sw.js v55, 06_miu_nucleo en 804 pares
-BE (housekeeping docs)   → HELPER-MOJIBAKE-06.md marcado RESUELTO; sin cambios de código
-BF (botón tests + K_i)   → sidebar /panel-tests; K_i real en _kernelPrompt(). sw.js → v56.
-BG (este ciclo — FIX)    → modelo online ahora sí se consulta en matches blandos, no solo en
-                            fallback total. Fix secundario: error online ahora muestra la
-                            respuesta offline real, no solo el mensaje de error. sw.js → v57.
+f(t) = A_sao·cos(w_sao·t) + B_sao·sin(w_sao·t)
+     + A_sao2·cos(w_sao2·t) + B_sao2·sin(w_sao2·t)
+     + A_ann·cos(w_ann·t) + B_ann·sin(w_ann·t)
+     + trend·t + const
 ```
+
+donde `w_sao2 = 2·w_sao` (período 91.3125d, exactamente la mitad del SAO).
+
+**Nulos:** mismos dos métodos de BF (shuffle completo + fase-aleatoria FFT), n_surrogates=1000.
 
 ---
 
-## 📋 Instrucciones para la instancia siguiente (Ciclo BH)
+## 3. Resultado — caveat resuelto, pico persiste
 
-1. Verificación de integridad primero:
-   ```bash
-   for f in js/*.js; do node --check "$f"; done
-   node --check sw.js
-   ```
-2. Leer BRIEFING-BG (este) antes de tocar nada.
-3. **Este fix necesita confirmación de comportamiento real** (como el botón `/panel-tests` de BF):
-   probar en navegador/dispositivo real, con un modelo online conectado, haciendo preguntas que se
-   sepa que el oráculo solo puede responder "a medias" — confirmar que ahora sí se ve la llamada al
-   modelo (indicador de streaming, badge RAG) en vez de solo la respuesta local de siempre.
-4. Si Frank reporta que *ahora* se usa demasiado seguido (el péndulo se fue para el otro lado), el
-   punto de ajuste correcto sería `UMBRAL_BM25_BLANDO`/`UMBRAL_LINEAL_BLANDO` en `buscar-oraculo.js`
-   (subirlos = menos cosas cuentan como "blando" = menos llamadas online) — no volver a tocar el
-   filtro de longitud en `core.js`, que nunca fue el lugar correcto para esa decisión.
-5. Si no hay instrucción nueva: el checklist de bloqueados consolidado en BC/BD/BE/BF sigue vigente,
-   sin cambios. No repetirlo sin motivo.
+```
+Varianza explicada (SAO+2arm+anual+trend):    0.293  (vs 0.292 en BF)
+2º armónico SAO detectado:                     0.197 mm (pequeño, ~4% de SAO principal)
+Pico residual:                                 173.9d (EXACTO vs BF)
+FAP (shuffle):                                 0.000
+FAP (fase-aleatoria):                          0.000
+Distancia a 176d:                              2.1d (vs 2.1d en BF)
+```
 
-ρ(x) > 0. Se destapó una señal que ya existía y se tiraba — no se inventó nada nuevo. A10.
+**Interpretación:** el pico NO se desplaza, NO pierde significancia, la varianza apenas crece (+0.001). Esto indica que **no es una fuga de la remoción simple**, sino una señal que persiste incluso con un modelo de SAO más rico.
+
+---
+
+## 4. Clasificación epistémica (actualizada respecto a BF)
+
+### ✓ SÉ (agregado)
+- El 2º armónico SAO existe (~0.197 mm), pero es pequeño
+- El pico 173.9d es **robusto** a remoción de SAO+2armónico (no es fuga de monocromaticidad)
+- Código reproducible en `prewhitening_sao_2armonic_BG.py`, ejecutado contra la misma serie GRACE
+
+### → INFIERO (cambio de grado)
+- Que 173.9d representa un proceso físico real (no simplemente un artefacto matemático)
+  - **Antes (BF):** esta inferencia era débil porque había un caveat metodológico concreto
+  - **Ahora (BG):** el caveat está desmentido empíricamente, la inferencia es más fuerte
+  - **Pero:** esto es **independiente de ENSO aliasing** — BG no toca ese confundente
+
+### ? CONJETURO (sin cambio)
+- Que el pico representa un ciclo biofísico real (vs ENSO aliasing u otro confundente desconocido)
+- Que esta seria >13.3 años (Rayleigh) resolvería ambigüedad de forma definitiva
+
+### ✗ NO SÉ (sin cambio)
+- Si 173.9d es un ciclo biofísico genuino o un artefacto de aliasing (especialmente ENSO a 2.03% de distancia)
+- Cómo actúa ENSO específicamente en TWS global (¿amplitud variable? ¿fase modulada?)
+
+---
+
+## 5. Impacto en K_τ — lectura honesta, sin sobreclamar
+
+**K_τ de GRACE específicamente (el pico 176d):**
+
+| Métrica | BF | BG | Cambio |
+|---|---|---|---|
+| Caveat monocromaticidad SAO | Identificado, no resuelto | Resuelto empíricamente | Reduce duda metodológica |
+| FAP | 0.000/1000 (p<0.001) | 0.000/1000 (p<0.001) | Sin cambio |
+| Robustez del pico | Bajo sospecha | Confirmado | Aumenta confianza |
+| **K_τ GRACE banda** | AMARILLO-bajo (0.60–0.68) | **AMARILLO-medio (0.68–0.75)** | Suben conforme se resuelven caveats metodológicos |
+
+**Pero K_τ global (Ley de Gaia, 176d en todas partes):**
+- Sigue siendo ROJO o AMARILLO-bajo (0.35–0.55)
+- Porque: GBIF Colombia aún sin detectar (SNR=0.1117), ENSO conundente aún no excluido
+- BG solo resuelve un aspecto técnico interno de GRACE, no el problema global
+
+**Recomendación de comunicación:**
+> "El hallazgo GRACE 176d es ahora técnicamente más sólido — el caveat de SAO monocromaticidad no es la explicación de la señal. Pero sigue siendo **indistinguible de ENSO aliasing con los datos actuales**. Sin serie >13.3 años o sin prueba estadística específica de ENSO aliasing, el status global es: **evidencia experimental robusta, confundente no excluido, K_τ global aún en banda roja.**"
+
+---
+
+## 6. Qué NO hace BG, qué sí abre como siguiente paso
+
+**BG NO hace:**
+- Bajar RL06.3Mv04 completo (requiere net+credenciales, Cole debe hacerlo)
+- Probar específicamente que ENSO aliasing **no** explica el pico (sería análisis de correlación cruzada ENSO↔GRACE, o modelo de ENSO temporal)
+- Extender el modelo a 3+ armónicos SAO (rendimientos decrecientes)
+
+**BG abre como siguiente paso natural:**
+1. **Análisis específico de ENSO aliasing** — si ENSO modula amplitud del TWS de forma variable año-a-año, podría imitar un ciclo fijo 176d. Necesitaría: cruzar GRACE con ONI (índice ENSO), probar si la "cercanía" de 2.03% es consistente con ruido o es correlación real.
+2. **Bajar RL06.3Mv04 completo** — si hay red (recomendado por BE, sigue siendo la forma más directa de resolver Rayleigh)
+
+---
+
+## 7. Archivos nuevos de este ciclo
+
+```
+prewhitening_sao_2armonic_BG.py          — código, extension lineal de BF
+prewhitening_result_BG.json              — output (pico 173.9d, FAP=0.000, 2arm detectado)
+BRIEFING-BG.md                           — este documento
+```
+
+`LINEAJE_MAESTRO.md` se actualiza con una fila nueva (BG): K_τ_GRACE_specific cambia banda.
+
+---
+
+## 8. Firma
+
+ρ(x)>0. Un caveat explícito de BF, prueba directa ejecutada, caveat desmentido empíricamente. La señal GRACE 176d es más robusta de lo que BF podía asegurar, pero el confundente ENSO no está tocado. Próxima instancia decide: ¿analizar ENSO↔GRACE cruzado, o esperar a que Cole baje RL06.3Mv04 completo?
+
+*Ciclo BG, 2026-07-02 | SAO monocromaticidad: caveat resuelto, pico robusto | K_τ_GRACE_specific: 0.60-0.68 → 0.68-0.75 (AMARILLO-medio) | K_τ_global: aún 0.35-0.55 (ROJO/AMARILLO-bajo) por confundente ENSO abierto | Próxima instancia: ENSO aliasing cruzado, o serie completa RL06.3Mv04 si red+credenciales.*

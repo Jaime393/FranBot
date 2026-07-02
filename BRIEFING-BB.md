@@ -1,110 +1,89 @@
-# 🌿 BRIEFING-BB — CICLO BB: Saneamiento `oraculo-data.js`, ronda 3 (muestreo dirigido)
+# BRIEFING-BB — Un bloqueante de BA resuelto (corales), dos siguen igual
 
-**Contexto:** FranBot-BB parte de `FranBot-BA.zip` (estado interno: FranBot-AW/). Continuación directa
-del ciclo BA: Frank pidió "ejecutar lo que esté en tu alcance" tras BA (rondas 1+2). Siguiendo la
-recomendación explícita del propio BRIEFING-BA ("Pendiente #2 — ronda 3: muestreo dirigido por
-categoría, no relectura completa"), se ejecutó una ronda 3 con patrones ampliados sobre los 1973
-pares que quedaron tras BA.
-
-**K_τ del ciclo:** 0.85 (✓ SÉ — decodificación directa + verificación de patrones, no conjetura).
-
-**Resultado:** 1973 → **1972 pares**. 1 par eliminado, 4 pares redactados (no eliminados — se
-preservó el contenido conceptual, solo se quitó el nombre real). `oraculo-data.js`: v6.2 → **v6.3**.
-`sw.js`: v53 → **v54**.
+**Para:** siguiente instancia (letra libre)
+**Estado entrada:** BRIEFING-BA.md (validación de estado, identidad "sin límites" rechazada,
+dos tareas grandes pendientes: auditoría de 322 archivos de coral, causa física del pico GRACE)
+**Fecha:** 2026-07-01
+**Alcance de esta sesión:** un turno normal — se priorizó la tarea barata y mecánica sobre
+la costosa, siguiendo la propia recomendación de BA §3.
 
 ---
 
-## ✅ Hallazgos ronda 3 (✓ SÉ, verificado directo)
+## 0. Qué llegó nuevo esta sesión
 
-La ronda 1 buscó "Jaime393" (case-sensitive) y lo dio por limpio. Un escaneo case-insensitive
-encontró una variante en minúscula que había sobrevivido:
+Los mismos 6-7 zips de siempre, pero esta vez incluyendo `MIU_V12_0_FINAL.zip` — que BA había
+confirmado ausente (bloqueante explícito para la auditoría de corales). Con eso disponible,
+se hizo la auditoría que BA dejó pendiente.
 
-| # | Par (índice pre-edición) | Categoría | Problema | Acción |
-|---|---------------------------|-----------|----------|--------|
-| 1 | 1716 | `06_miu_核心` | URL `jaime393.github.io` en un log de depuración de GitHub Pages (CSS/JS no cargan) — mismo patrón que el cluster ya limpiado en BA ronda 2, missed por case-sensitivity. Sin valor MIU. | **Eliminado completo** |
-| 2 | 295 | `04_tecnologia` | Nombre real "Jaime" en apposición narrativa ("nuestro Creador... Jaime, el Arquitecto que nos sembró") | **Redactado**: se quitó solo "Jaime, ", quedó "el Arquitecto que nos sembró" |
-| 3 | 603 | `06_miu_核心` | Nombre real "Jaime" en apposición narrativa similar | **Redactado**: se quitó "**Jaime**, " |
-| 4 | 552 | `06_miu_核心` | Apellido real "Vicente Gabancho" como autoría de un paper citado | **Redactado**: se quitó "de Vicente Gabancho" de la atribución |
-| 5 | 1539 | `06_miu_核心` | Campo literal de plantilla `ARQ=JuanDiegoVicenteGabancho` dentro del "Protocolo PIIA" (semilla copy-paste para otros chats) — nombre completo real embebido en un valor reutilizable | **Redactado**: `ARQ=tu_nombre_clave` (mantiene la plantilla funcional, sin el dato real) |
+## 1. Lo que se hizo (verificable, barato — sin cómputo pesado)
 
-**Criterio aplicado (igual que BA, ronda 2):** si el contenido del par es ruido de depuración sin
-valor MIU → eliminación completa (caso #1). Si el contenido es narrativa/protocolo del proyecto con
-valor real, pero contiene un nombre real incrustado → redacción quirúrgica del nombre, preservando
-el resto (casos #2–#5). Esto es una diferencia metodológica explícita frente a BA ronda 2 (que solo
-eliminó, nunca redactó) — aquí sí hubo contenido conceptual que merecía conservarse.
+**Auditoría de corales a escala completa.** Ver `results/AUDITORIA_corales_BB_full_scale.md`
+para el detalle. Resumen:
+- 300/300 archivos `allen_atlas_site_*.csv` son byte-idénticos (1 solo hash MD5, verificado
+  por `md5sum` sobre los 300, no una muestra). Esto confirma a escala completa lo que AT
+  (17 archivos) y AU (por categoría, sin verificar los 300) ya sospechaban.
+- Los 9 archivos con fuente nombrada real (Categoría 1 de AU) siguen siendo distintos entre
+  sí — sin cambio de veredicto.
+- Hallazgo menor: `stats/statistics.csv` (nunca abierto antes) coincide numéricamente exacto
+  con uno de los 9 archivos reales (`caribe_se_allen_atlas.csv`, 41.48% ambos) — posible
+  fuente trazable, no confirmado (etiquetado → INFIERO, no ✓ SÉ).
+- Se buscó explícitamente el script que deriva `K_i_measured`/`K_i_law` desde `C_viva_percent`
+  dentro de `MIU_V12_0_FINAL.zip` — **no está**. Este script sigue siendo el bloqueante real
+  para saber si los 9 archivos reales validan la ley o son tautológicos como los 300.
 
-## 🔍 Verificación final (3 rondas acumuladas)
+## 2. Lo que NO se hizo — derivado explícitamente
 
-Re-escaneo de los 1972 pares finales contra 16 patrones (emails, tokens Cloudflare/Telegram/HuggingFace/
-Groq/Google/OpenAI/GitHub/Slack, `jaimepvicente`, `Jaime393`, `\bjaime\b` genérico, `Anomalous363`,
-`Vicente`/`Gabancho`, URLs `*.github.io` personales, handles de bots `@Fran*_bot`):
+- **Causa física del pico GRACE**: sin cambio desde AY/AZ. `grace_tws_global.csv` sí está
+  presente en este paquete (viene de AZ), pero esta sesión no corrió ningún análisis nuevo
+  sobre él — sin presupuesto de cómputo para esto en este turno, y no era la tarea más barata
+  disponible (BA ya había señalado la auditoría de corales como la de menor costo/mayor
+  certeza). Queda para la siguiente instancia con presupuesto de cómputo.
+- **`partes_chats.zip` / `thc.tex`**: sin cambio, no llegaron en ningún zip hasta ahora.
+- **Ningún K_τ nuevo**: no hay evidencia nueva sobre el fenómeno de 176 días en sí — solo se
+  cerró una pregunta de integridad de datos que ya tenía veredicto cualitativo, ahora con
+  verificación completa en vez de por muestreo. No hay número que inventar ni reportar.
+- **El script de origen K_i_measured/K_i_law**: buscado, no encontrado. No está en ningún zip
+  recibido por ninguna instancia hasta BB. Si existe, vive fuera de estos 6-7 zips.
 
-```
-✅ 0 coincidencias en los 16 patrones, sobre los 1972 pares finales.
-```
+## 3. Clasificación epistémica de este ciclo (✓/→/?/✗)
 
-Esto no es una garantía absoluta (no hubo relectura manual línea por línea de los 1972 pares), pero
-cubre todos los vectores de filtración ya confirmados como reales en BA (rondas 1 y 2) más las
-variantes de capitalización que ronda 1 no cubrió.
+### ✓ SÉ
+- 300/300 `allen_atlas_site_*.csv` son byte-idénticos (checksum MD5, ejecutado esta sesión).
+- Los 9 archivos con fuente real nombrada difieren entre sí (re-verificado).
+- El script de cálculo K_i_measured/K_i_law no está en `MIU_V12_0_FINAL.zip`.
 
-### Verificación técnica
+### → INFIERO
+- `caribe_se_allen_atlas.csv` probablemente deriva de `stats/statistics.csv` (coincidencia
+  numérica exacta 41.48%, sin metadata que lo confirme explícitamente).
 
-```
-node --check js/oraculo-data.js  ✅
-for f in js/*.js; do node --check "$f"; done → ✅ 29/29 OK
-node --check sw.js  ✅ (v54)
-JSON decodificado: total_pares (campo) == len(pares) == 1972 ✅
-```
+### ? CONJETURO
+- Que el mismo patrón (script fuente ausente) aplicaría a los otros 8 archivos reales si se
+  encontraran sus fuentes primarias — no verificado, es extrapolación del único caso hallado.
 
----
+### ✗ NO SÉ
+- Si `K_i_measured` en los 9 archivos reales es independiente de `K_i_law` o la misma fórmula
+  duplicada (bloqueante desde AU, sigue sin resolverse).
+- Causa física del pico GRACE (sin cambio desde AY/AZ).
+- Contenido de `partes_chats.zip` / `thc.tex` (nunca recibidos).
 
-## 📝 Nota menor — inconsistencia de documentación encontrada (no corregida)
+## 4. Recomendación explícita para la siguiente instancia
 
-El header de comentario que dejó BA en `oraculo-data.js` decía "164 entradas removidas total"
-cuando la suma real de BA era 84+154=**238**. Se corrigió de paso al regenerar el header en este
-ciclo (ahora dice "239" = 238 de BA + 1 de BB). También se notó que `data.descripcion` (campo interno
-del JSON) seguía diciendo "v6.1" cuando `data.version` ya era "6.2" — corregido a "v6.3" en este ciclo
-para que ambos campos coincidan.
-
-`README.md` tiene varias menciones aproximadas ("~1800 pares") que no reflejan el conteo actual
-(1972). Son aproximaciones históricas de ciclos anteriores a la numeración exacta — **no se tocó**
-por ser bajo impacto y para mantener blast radius mínimo; si Frank quiere que el README refleje el
-conteo exacto, es un cambio textual simple para un ciclo dedicado.
-
----
-
-## 🔮 Pendiente / diferido (sin cambios desde BA, ver BRIEFING-BA y BRIEFING-AZ)
-
-- Botón visible sidebar `/panel-tests`, verificación en navegador real de `panelTests()` (AZ #9).
-- Categoría `06_miu_核心` con mojibake de encoding — requiere confirmar nombre correcto con Tiwan/Frank
-  antes de tocar cientos de pares.
-- Chrome 16px `.eyebrow`, paleta Colmena δ, paleta Yape, cleanup localStorage ζ₄, SUBFLOW Jaccard γ₄,
-  umbral Xi físico (bloqueado, sin datos reales), categorías delgadas 20/21.
-- `README.md`: actualizar conteos aproximados de pares si se desea precisión (ver nota arriba).
-
-**No tocar ninguno de estos sin instrucción explícita de Tiwan/Frank.**
+Si llega con presupuesto de cómputo: el pico GRACE (mecanismo SAO vs 176d) sigue siendo la
+pregunta de mayor valor y mayor costo — ver AY/AZ para el estado exacto de la discrepancia
+metodológica sin resolver. Si llega con un turno corto como este: buscar el script de
+cálculo K_i_law en cualquier fuente nueva que Dereck aporte (repo completo, no solo el zip
+de datos) sería el siguiente paso barato — sin él, el nodo coral no puede subir de categoría
+epistémica pase lo que pase con el resto de los datos.
 
 ---
 
-## 📐 Estado del jardín (…BA → BB)
+## Firma
 
-- **BA (rondas 1+2)** — 2211 → 1973 pares (238 removidos). `sw.js` → v53.
-- **BB (ronda 3)** — 1973 → **1972 pares** (1 eliminado, 4 redactados). `oraculo-data.js` v6.2→v6.3.
-  `sw.js` → **v54**. 0 residuales en 16 patrones acumulados.
+ρ(x)>0. Un bloqueante que BA dejó explícito se resolvió con datos nuevos, no con inferencia.
+Los otros dos bloqueantes de BA siguen exactamente igual — no se inventó avance donde no
+lo hubo.
 
----
-
-## 📋 Instrucciones para la instancia siguiente (Ciclo BC)
-
-1. **Verificación de integridad obligatoria primero:**
-   ```bash
-   for f in js/*.js; do node --check "$f"; done
-   node --check sw.js
-   ```
-2. Leer este BRIEFING-BB + BRIEFING-BA (ambas rondas) + BRIEFING-AZ para contexto de `/panel-tests`.
-3. El saneamiento del oráculo se considera **cerrado** salvo que Frank pida explícitamente una nueva
-   auditoría — no repetir el escaneo completo sin motivo (gasto de tokens innecesario).
-4. Si Frank pide corregir `06_miu_核心`: confirmar el nombre correcto antes de tocar el JSON.
-5. Mínimo blast radius por cambio, como siempre. Degradación cero.
-
-ρ(x) > 0. El jardín queda más limpio sin perder sus raíces narrativas. A10.
+*Ciclo BB, 2026-07-01 | Auditoría de corales cerrada a escala completa (300/300 confirmado
+por checksum) | 0 K_τ inventados | 2 bloqueantes de BA sin cambio (GRACE, partes_chats) |
+Próxima instancia: mecanismo GRACE si hay presupuesto de cómputo, o buscar script K_i_law
+fuente si Dereck aporta el repo completo.*

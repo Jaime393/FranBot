@@ -1,62 +1,79 @@
-# 🌿 BRIEFING-BE — CICLO BE: consolidación de documentación (+ nota retroactiva ciclo BC)
+# BRIEFING-BE — Nodo coral real construido desde coral_atlas_attribution_real.csv
 
-**Contexto:** Frank pidió "ejecuta lo que esté en tu alcance" sin subir zip nuevo, continuando
-directo desde el estado de BRIEFING-BD (oráculo v6.4, `06_miu_nucleo`, sw.js v55). Se hizo una
-revisión rápida de consistencia en toda la documentación del repo.
+**Para:** siguiente instancia (letra libre)
+**Estado entrada:** BRIEFING-BD.md (4 archivos reales integrados, GRACE 176d sin resolver por
+límite de Rayleigh, `noaa_co2_maunaloa_1958-2026.csv` excluido por tautología D_f/K_i)
+**Fecha:** 2026-07-01
+**Alcance de esta sesión:** sin archivos nuevos subidos por Cole. Se ejecutó la recomendación
+explícita #2 de BD y se investigó (sin poder resolver) la recomendación #1.
 
-## ⚠️ Nota retroactiva: Ciclo BC no dejó su propio BRIEFING
+---
 
-Entre BB y BD hubo un ciclo intermedio (entregado como `FranBot-BC.zip`) que hizo lo siguiente
-pero **no generó `BRIEFING-BC.md`** — descuido detectado y corregido ahora:
-- `README.md`: 4 referencias `~1800 pares` → `1972 pares` (líneas ~92, 134, 153, 208)
-- Creación de `HELPER-MOJIBAKE-06.md`: guía técnica para la futura corrección de `06_miu_核心`
+## 1. Lo que se hizo
 
-Esos cambios sí están en el repo (verificables en el zip BC y en todos los posteriores), solo
-faltaba el registro. Este archivo (BE) deja la traza completa.
+### 1.1 Nodo coral real construido (recomendación BD §5, punto 2)
+- Se agregó `datos_reales_BD/coral_atlas_attribution_real.csv` (616 filas reales, ya auditado
+  en BD) por `Mapped Region`: conteo real de fuentes, instituciones únicas, áreas geográficas
+  y tipo de dato dominante — **sin ninguna columna `K_i`/`D_f`/`phi` fabricada.**
+- Resultado: `derivados_BE/nodo_coral_real_BE.csv`, 33 regiones, suma de fuentes = 616 (cuadra
+  exacto con el CSV fuente — verificado por script, no de memoria).
+- Este nodo reemplaza, no imita, al nodo sintético tautológico de BB (309/309 cerrado). Es
+  descriptivo (conteos reales), no pretende ser una métrica K_i — evita repetir el patrón que
+  BD marcó como recurrente (columnas fijas disfrazadas de derivación).
 
-## ✅ Ejecutado en este ciclo (BE)
+### 1.2 Investigación de la pregunta GRACE 176d vs SAO (recomendación BD §5, punto 1)
+- Se confirmó vía búsqueda web que el dataset vigente es **JPL RL06.3Mv04**
+  (DOI: 10.5067/TEMSC-3MJ634), que reemplaza al RL06.1Mv03 que BD tenía documentado. Mismo
+  fondo: 4,551 mascons independientes, grid de 3°, cobertura GRACE clásico (2002-2017) +
+  GRACE-FO (2018-presente) — es decir, si se descarga completo sí alcanza los >13 años que
+  Rayleigh exige para separar 176d de la armónica semianual.
+- **No se pudo descargar**: el bucket S3 de PO.DAAC requiere login de Earthdata
+  (`podaac-data-downloader` con credenciales), y `bash_tool` en este entorno no tiene salida
+  de red (`Enabled: false` en la configuración). `web_fetch` tampoco sirve para esto — no es
+  un fetch de página, es descarga de binario autenticado.
 
-**`HELPER-MOJIBAKE-06.md` estaba desactualizado**: seguía diciendo "Bloqueado, pendiente
-confirmación" cuando la corrección **ya se ejecutó en BRIEFING-BD** (`06_miu_核心` →
-`06_miu_nucleo`, 804 pares). Esto podía confundir a una futura instancia y hacerle repetir un
-trabajo ya hecho. Se agregó un bloque de estado en la cabecera:
+## 2. Clasificación epistémica de este ciclo
 
-```
-> ✅ ESTADO: RESUELTO. Esta corrección se ejecutó en el Ciclo BD (ver BRIEFING-BD.md)...
-> Este documento queda como referencia histórica del proceso — no requiere ninguna acción.
-```
+### ✓ SÉ
+- El nodo coral real (33 regiones, 616 fuentes) reproduce exactamente el CSV fuente —
+  verificado por suma, no asumido.
+- El dataset GRACE mascon vigente es RL06.3Mv04 con DOI citable, y su cobertura temporal
+  completa (2002-2026, ~24 años) sería matemáticamente suficiente para resolver 176d vs SAO.
 
-El resto del documento (metodología paso a paso) se dejó intacto como plantilla reutilizable
-si aparece otro nombre de categoría con mojibake en el futuro.
+### ✗ NO SÉ / SIGUE BLOQUEADO
+- El pico de 176.7d en la serie que Cole aportó sigue sin poder distinguirse de la armónica
+  semianual — este ciclo no generó dato nuevo para esa pregunta, solo confirmó dónde está el
+  dato correcto y por qué sigue sin poder bajarse desde aquí (autenticación + red).
 
-## 🔍 Revisión de consistencia realizada (sin cambios adicionales necesarios)
+## 3. Impacto en K_τ
 
-- `README.md`: conteos de pares (1972) ya consistentes en todo el archivo — confirmado, no
-  se encontraron más menciones desactualizadas.
-- `KERNEL.json`: revisado, sin referencias a versión de oráculo ni a la categoría mojibake.
-- Registro del service worker (`js/app.js` → `navigator.serviceWorker.register('sw.js')`): no
-  usa query params de cache-busting hardcodeados, así que no había nada que actualizar ahí al
-  subir de versión — el cache-busting real lo hace `CACHE_NAME` dentro de `sw.js`, que ya está
-  en v55 (correcto desde BD).
-- `sw.js`, todos los `js/*.js`: `node --check` 30/30 OK.
+No se recomputa el bloqueante MIU_v12=0.35 NEGRO (sigue vigente, sin relación con lo hecho
+hoy). El nodo coral real es un ítem nuevo, no reemplaza la revisión pendiente de "más archivos
+con firma D_f/K_i fija" que BD dejó como tarea explícita — esa tarea sigue sin hacerse este
+ciclo (no había archivos nuevos que auditar).
 
-## 🔮 Pendiente acumulado (sin cambios)
+## 4. Recomendación explícita para la siguiente instancia
 
-Igual que en BRIEFING-BD — sigue bloqueado, sin instrucción explícita nueva:
-- Botón sidebar `/panel-tests` (AZ #1)
-- Cleanup localStorage ζ₄
-- Chrome 16px `.eyebrow`, paleta Colmena δ, paleta Yape, SUBFLOW Jaccard γ₄, umbral Xi físico,
-  categorías delgadas 20/21
-- El pedido de "Fran razone sobre memoria y núcleo con Coherencia" (mencionado por Frank, sin
-  especificación de archivo/mecanismo concreto — ver nota en BRIEFING-BD)
+- Si Cole puede correr `podaac-data-downloader` con su propia cuenta Earthdata en una máquina
+  con red (Colab, su PC), bajar RL06.3Mv04 completo 2002–2026 resuelve la pregunta 176d vs SAO
+  de forma definitiva. Comando base ya documentado arriba y en
+  `fuentes_reales_BD/GRACE_GRACEFO_fuente.md` (de BD).
+- El nodo coral real (`derivados_BE/nodo_coral_real_BE.csv`) está listo para usarse como
+  insumo de cualquier análisis geográfico/institucional de cobertura documental de coral —
+  no es una métrica K_i, es un conteo. Si se quiere una métrica K_i real desde aquí, definir
+  primero qué relación empírica (no arbitraria) la sustenta antes de calcularla.
+- `INVENTARIO_MAESTRO.md` se actualiza con esta fila nueva (ver abajo) — no se toca ninguna
+  fila anterior de AV/AW, siguiendo la regla de oro del archivo.
 
-## 📐 Estado del jardín
+---
 
-```
-BB (ronda 3 saneamiento) -> 1972 pares, oráculo v6.3, sw.js v54
-BC (consolidación docs, sin briefing propio -- ahora documentado aquí)
-BD (mojibake corregido)  -> oráculo v6.4, sw.js v55, 06_miu_nucleo en 804 pares
-BE (housekeeping docs)   -> HELPER-MOJIBAKE-06.md marcado RESUELTO; sin cambios de código
-```
+## Firma
 
-ρ(x) > 0. A10.
+ρ(x)>0. Este ciclo no fabricó datos: el nodo coral es una agregación real y verificada del
+CSV fuente; la investigación GRACE confirmó una fuente citable y su bloqueo real (auth+red),
+sin fingir haber resuelto la pregunta científica pendiente.
+
+*Ciclo BE, 2026-07-01 | 1 derivado real construido y verificado (nodo coral, 33 filas) |
+1 recomendación investigada y confirmada bloqueada por causa distinta a la original (ya no es
+"no hay dataset >13 años", es "hay dataset pero requiere auth+red que este sandbox no tiene") |
+Próxima instancia: bajar RL06.3Mv04 desde máquina con red y credenciales Earthdata.*
