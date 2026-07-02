@@ -285,6 +285,13 @@ window.BuscarOraculo = (function () {
       // Penalización respuestas muy cortas
       if ((par.a || '').length < 60) score -= 2;
 
+      // Penalización por query muy larga (Tipo B: preguntas discursivas ~367 pares)
+      // Si queryTokens.length > 20, penalizar gradualmente (queries largas tienden a hacer false positives)
+      if (queryTokens.length > 20) {
+        const penalty = Math.min(4, (queryTokens.length - 20) * 0.1);
+        score -= penalty;
+      }
+
       resultados.push({ idx, par, score });
     });
 
@@ -372,7 +379,7 @@ window.BuscarOraculo = (function () {
     return i >= 0 ? String(i) : null;
   }
 
-  // ─── COMPOSICIÓN (Ciclo Z: pensar y reorganizar, incluso offline) ────────────
+  // ─── COMPOSICIÓN (Ciclo Z: pensar y reorganizar, incluso local) ────────────
   // Antes, el núcleo devolvía el top-1 verbatim de UNA sola fuente (MIU si había
   // match, si no el mejor par del oráculo) y todo lo demás se perdía. Ahora:
   //   · si hay convergencia real entre 2+ fuentes (varios axiomas, o MIU+oráculo
@@ -382,13 +389,17 @@ window.BuscarOraculo = (function () {
   //     ("no alucinar: si no hay dato, declarar NO SÉ");
   //   · si no hay señal alguna, se devuelve null — eso sigue siendo "débil" de
   //     verdad para que core.js decida, y NUNCA se rellena con una coincidencia
-  //     inventada. Nada de esto toca buscarConScore/buscarSemantico (RAG online).
+  //     inventada. Nada de esto toca buscarConScore/buscarSemantico (RAG API).
   const UMBRAL_BM25_FUERTE   = 0.8;  // (sin cambios — calibración previa intacta)
   const UMBRAL_BM25_BLANDO   = 0.25; // señal real pero floja — no es ruido puro
   const UMBRAL_LINEAL_FUERTE = 10;   // (sin cambios)
   const UMBRAL_LINEAL_BLANDO = 3;
   const MAX_FRAGMENTOS_MIU   = 2;    // tope: no saturar la respuesta de fórmulas
   const SIM_REDUNDANCIA      = 0.5;  // por encima de esto, dos fragmentos dicen "lo mismo"
+  // Prefijo del match "blando" (real pero no exacto). Se expone como constante
+  // (en vez de dejarlo como string suelto en _componer) para que core.js pueda
+  // distinguir confianza real sin duplicar umbrales propios de este módulo.
+  const MARCADOR_MATCH_BLANDO = '*Lo más cercano que encuentro — no es una coincidencia exacta:*';
 
   /** Similitud entre dos fragmentos para no duplicar contenido al componer.
    *  Reusa el Jaccard ya calibrado de Consolidar; si aún no cargó (orden de
@@ -423,7 +434,7 @@ window.BuscarOraculo = (function () {
 
     if (!miuTop.length) {
       if (oracleFuerte) return candidato.par.a; // status quo: match único y fuerte
-      return '*Lo más cercano que encuentro — no es una coincidencia exacta:*\n\n' + candidato.par.a;
+      return MARCADOR_MATCH_BLANDO + '\n\n' + candidato.par.a;
     }
 
     if (!oracleFuerte) return _unirFragmentosMIU(miuTop); // ignora ruido de oráculo débil
@@ -936,6 +947,7 @@ window.BuscarOraculo = (function () {
     dedupeSemantico,                  // SUBFLOW v0.3
     dedupeSemanticoIndexado,          // AS: γ₃ — SUBFLOW v0.3 pool extendido (índice D.2)
     stats,
+    MARCADOR_MATCH_BLANDO,
     // internos expuestos para tests
     _tokenizar,
     _tokensCompletos,

@@ -279,8 +279,8 @@ window.Biblioteca = (function () {
     const btnCons = $('btn-consolidar');
     if (btnCons) btnCons.addEventListener('click', async () => {
       if (!window.Consolidar) return window.MiuToast && MiuToast.err('Módulo Consolidar no disponible.');
-      if (!window.ModoOnline || !window.ModoOnline.estaActivo()) {
-        const ok = confirm('Para una fusión semántica de calidad se recomienda el modo online. ¿Continuar sin modelo?');
+      if (!window.ModoAPI || !window.ModoAPI.estaActivo()) {
+        const ok = confirm('Para una fusión semántica de calidad se recomienda el modo API. ¿Continuar sin modelo?');
         if (!ok) return;
       }
       const stats = await window.Consolidar.obtenerEstadisticas().catch(() => null);
@@ -291,7 +291,7 @@ window.Biblioteca = (function () {
         `(${stats.paresEnDuplicados} pares → potencial reducción de ${stats.potencialReduccion} pares).
 
 ` +
-        `¿Fusionar con el modelo online?`
+        `¿Fusionar con el modelo API?`
       );
       if (!ok) return;
       btnCons.disabled = true; btnCons.textContent = '⚙️ Consolidando…';
