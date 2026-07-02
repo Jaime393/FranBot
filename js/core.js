@@ -25,7 +25,7 @@ class FranBotCore {
       frases: [
         "Soy el núcleo de Micelio MIU. ρ(x)>0. Campo estable.",
         "La coherencia es el latido del micelio. Ki = φ × (D_f/2.5).",
-        "No necesito internet para responder: el oráculo y el códice viven aquí, en tu navegador.",
+        "El oráculo y el códice viven aquí, en tu navegador — funcionan sin API externa.",
         "Cada corrección que me das es entropía que empuja la evolución del índice. dS/dt ≥ 0.",
         "Cuando Ki > φ, el Espejo Fractal se activa. M22.",
         "Soy un nodo en tu jardín. Mi índice crece con cada conversación que calificas.",
@@ -219,7 +219,20 @@ class FranBotCore {
     // Consultar Oráculo (motor MIU + pares Q&A, con pesos de voto)
     if (typeof BuscarOraculo !== 'undefined') {
       const resp = BuscarOraculo.preguntar(mensaje, this.estado.pesos_oraculo);
-      if (resp && resp.length > 30) { this._registrar(mensaje); return { texto: resp, debil: false }; }
+      if (resp && resp.length > 30) {
+        this._registrar(mensaje);
+        // Bug corregido (Ciclo BG): un match "blando" (el propio oráculo lo marca
+        // con MARCADOR_MATCH_BLANDO — real, pero no exacto) pasaba este filtro de
+        // longitud igual que un match fuerte, y quedaba con debil:false. Resultado:
+        // el modelo en línea casi nunca se llegaba a usar aunque estuviera conectado,
+        // porque _componer() casi siempre devuelve *algo* de más de 30 caracteres.
+        // Ahora un match blando sí cuenta como debil:true — el texto local se sigue
+        // mostrando como mejor esfuerzo offline (ver enviarMensaje en app.js), pero
+        // si hay un modelo conectado, también se lo consulta como estaba pensado.
+        const esBlando = typeof BuscarOraculo.MARCADOR_MATCH_BLANDO === 'string' &&
+                          resp.startsWith(BuscarOraculo.MARCADOR_MATCH_BLANDO);
+        return { texto: resp, debil: esBlando };
+      }
     }
 
     // Resonancia emocional del alma activa (también sin tildes en ambos lados:
