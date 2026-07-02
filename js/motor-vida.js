@@ -22,7 +22,7 @@
 //    sección "No aplicable a FranBot"). En su lugar, "explorar" es una
 //    función síncrona de solo lectura que se evalúa en dos puntos concretos:
 //      a) comando manual /explorar (sin condición, siempre ejecuta)
-//      b) un chequeo liviano tras cada respuesta normal del núcleo offline,
+//      b) un chequeo liviano tras cada respuesta normal del núcleo local,
 //         con cooldown, para no auto-explorar en cada mensaje.
 //
 // El A11 como principio queda documentado aquí, en código, en vez de como
