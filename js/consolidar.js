@@ -1,10 +1,10 @@
 // consolidar.js — Fusión semántica de pares Q/A duplicados o similares (v10)
-// Usa el modelo online (si está activo) para reducir N pares similares a 1-2 de mayor calidad.
-// Depende de: idb-store.js, modo-online.js
+// Usa el modelo API (si está activo) para reducir N pares similares a 1-2 de mayor calidad.
+// Depende de: idb-store.js, modo-API.js
 //
 // API:
 //   Consolidar.agruparPorSimilitud(pares)  → Array de grupos
-//   Consolidar.fusionarGrupo(grupo)        → par mejorado (async, necesita modo online)
+//   Consolidar.fusionarGrupo(grupo)        → par mejorado (async, necesita modo API)
 //   Consolidar.consolidarTodo(opts)        → { fusionados, eliminados, errores }
 //   Consolidar.exportarOraculoDataJS()     → descarga nuevo oraculo-data.js
 
@@ -64,16 +64,16 @@ window.Consolidar = (function () {
     return grupos;
   }
 
-  // ─────────────── Fusión con el modelo online ─────────────────────────────────
+  // ─────────────── Fusión con el modelo API ─────────────────────────────────
   /**
    * Funde un grupo de pares similares en 1 par de mayor calidad.
-   * Requiere ModoOnline activo. Si falla, devuelve el par con más texto.
+   * Requiere ModoAPI activo. Si falla, devuelve el par con más texto.
    */
   async function fusionarGrupo(grupo) {
     if (!grupo || !grupo.length) return null;
     if (grupo.length === 1) return grupo[0];
 
-    if (!window.ModoOnline || !window.ModoOnline.estaActivo()) {
+    if (!window.ModoAPI || !window.ModoAPI.estaActivo()) {
       // Sin modelo: devolver el par con respuesta más larga
       return grupo.reduce((best, p) => ((p.a||'').length > (best.a||'').length ? p : best));
     }
@@ -91,7 +91,7 @@ window.Consolidar = (function () {
     const msg = `Fusiona estos ${grupo.length} pares en uno solo:\n\n${pairesTexto}`;
 
     try {
-      const r = await window.ModoOnline.preguntar(msg, sys);
+      const r = await window.ModoAPI.preguntar(msg, sys);
       if (!r || r.error || !r.texto) throw new Error('Sin respuesta del modelo');
       const limpio = r.texto.trim().replace(/^```(json)?/i,'').replace(/```$/,'').trim();
       const obj = JSON.parse(limpio);

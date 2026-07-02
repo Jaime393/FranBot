@@ -26,7 +26,7 @@ window.Conciencia = {
         ${fila('Núcleo + motor MIU', e.motor)}
         ${fila('Oráculo (búsqueda)', e.oraculo)}
         ${fila('Códice', e.codice)}
-        ${fila('Service worker (offline)', e.serviceWorker)}
+        ${fila('Service worker (local)', e.serviceWorker)}
         <tr><td>Último ciclo BEA</td><td>${e.ultimoSueno ? new Date(e.ultimoSueno).toLocaleTimeString() : '—'}</td></tr>
       </table>
       <p class="eyebrow" style="margin-top:14px;">Métricas MIU</p>

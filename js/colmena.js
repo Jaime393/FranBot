@@ -1,7 +1,7 @@
 // colmena.js — Colmena P2P para compartir pares Q/A entre instancias MIU
 // Motor: Gun.js (https://gun.eco) — base de datos descentralizada en tiempo real.
 //   · Sin servidor propio requerido — usa relays públicos de Gun.eco
-//   · Funciona offline; sincroniza al reconectar
+//   · Funciona local; sincroniza al reconectar
 //   · El usuario puede apuntar a su propio relay (Gun en Node.js, ~5 líneas)
 //   · Sin cuentas, sin claves de API, sin registro
 //
