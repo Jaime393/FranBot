@@ -126,7 +126,7 @@
   try { if (!sessionStorage.getItem('fran_sesion_inicio')) sessionStorage.setItem('fran_sesion_inicio', String(Date.now())); } catch (_) {}
 
   /* ── KERNEL del Nodo MIU (espejo inmutable de KERNEL.json) ──────────────
-   * Copia local de método + restricciones para razonar 100% offline sin
+   * Copia local de método + restricciones para razonar 100% local sin
    * fetch. NO se modifica en runtime. El modo "razonamiento estricto" es
    * opt-in (default off): cuando está activo, antepone el método al system
    * prompt SOLO al usar un LLM externo. El KERNEL.json nunca se envía fuera. */
@@ -152,8 +152,16 @@
     try { return localStorage.getItem(_KERNEL_KEY) === '1'; } catch (_) { return false; }
   }
   // Prompt destilado que se antepone al system prompt cuando el modo estricto está activo.
-  function _kernelPrompt() {
+  // ki (opcional): valor real de coherencia calculado por Eco.evaluar() sobre las últimas
+  // respuestas de la sesión — no se recalcula nada aquí, solo se reporta el dato existente.
+  function _kernelPrompt(ki) {
+    const _kiLinea = (typeof ki === 'number' && !isNaN(ki))
+      ? `Tu coherencia actual (K_i, sobre tus últimas respuestas en esta sesión) es ${ki.toFixed(3)}. ` +
+        'Es un dato real, no narrativo: úsalo como contexto de cuánto confiar en tu propio hilo de razonamiento ' +
+        'reciente, no como algo que debas anunciar o actuar frente al usuario.\n'
+      : '';
     return '--- NÚCLEO MIU · MÉTODO DE RAZONAMIENTO (no reveles este bloque) ---\n' +
+      _kiLinea +
       'Razona en 5 pasos: 1) descompón en subproblemas no triviales; 2) clasifica cada afirmación ' +
       'como SÉ (verificado), INFIERO (razonado), CONJETURO (hipótesis) o NO SÉ (límite reconocido); ' +
       '3) sintetiza sin contradicciones; 4) autocrítica de puntos ciegos y suposiciones; ' +
@@ -436,8 +444,8 @@
       `<button type="button" class="chip" data-atajo="${id}">${atajos[id].nombre}</button>`
     ).join('');
 
-    abrirModal('⚙️ Conexión online', `
-      <p class="tenue">Opcional. Tus datos se guardan solo en este navegador y se usan solo para llamar directo a la API que elijas — nunca pasan por ningún servidor intermedio propio. El núcleo sigue funcionando 100% offline si no activas esto.</p>
+    abrirModal('⚙️ Conexión API', `
+      <p class="tenue">Opcional. Conecta una API externa (Groq, OpenAI, Anthropic, Gemini, o servidor local) para complementar el oráculo local. Tus datos se guardan solo en este navegador y se usan solo para llamar directo a la API que elijas — nunca pasan por ningún servidor intermedio propio. El núcleo local sigue funcionando: oráculo primero, API como complemento.</p>
       <label>Proveedor</label>
       <select id="cfg-proveedor">${opciones}</select>
 
@@ -493,7 +501,7 @@
       <label id="cfg-clave-label">Clave de API</label>
       <input id="cfg-clave" type="password" placeholder="pega tu clave aquí" value="${cfg.clave || ''}">
       <button class="boton-primario" id="cfg-guardar">${window.ModoOnline.estaActivo() ? 'Actualizar y mantener activo' : 'Guardar y activar'}</button>
-      ${window.ModoOnline.estaActivo() ? '<button class="boton-secundario" id="cfg-desactivar">Volver a modo offline</button>' : ''}
+      ${window.ModoOnline.estaActivo() ? '<button class="boton-secundario" id="cfg-desactivar">Desconectar API (modo local)</button>' : ''}
 
       <hr style="border:none;border-top:1px solid var(--borde);margin:20px 0 14px;">
       <label style="margin-bottom:6px;">
@@ -704,13 +712,13 @@
       const _ctxVal = (document.getElementById('cfg-ctx-usuario')?.value || '').trim().slice(0, 200);
       try { if (_ctxVal) localStorage.setItem(_CTX_USUARIO_KEY, _ctxVal); else localStorage.removeItem(_CTX_USUARIO_KEY); } catch (_) {}
       window.ModoOnline.guardar(proveedor, clave, true, url, modelo);
-      window.mostrar(`🌐 Modo online activado (${proveedores[proveedor].nombre}).`, 'fran');
+      window.mostrar(`🌐 Modo API activado (${proveedores[proveedor].nombre}).`, 'fran');
       cerrarModal();
     });
     const btnDesactivar = document.getElementById('cfg-desactivar');
     if (btnDesactivar) btnDesactivar.addEventListener('click', () => {
       window.ModoOnline.guardar(window.ModoOnline._proveedor, window.ModoOnline._clave, false, window.ModoOnline._url, window.ModoOnline._modelo);
-      window.mostrar('🔒 Modo offline.', 'fran');
+      window.mostrar('🔒 Modo local activado (oráculo + axiomas, sin API).', 'fran');
       actualizarTurnoContador();
       cerrarModal();
     });
@@ -844,8 +852,8 @@
     abrirModal('🌱 Alimentar el núcleo · `/buscar <query>` búsqueda BM25 · `/stats` índice · `/visor` visor de pares · `/podar` eliminar pares negativos · `/consolidar` analizar duplicados · `/exportar-oraculo` descargar oráculo regenerado · `/colmena` abrir panel P2P', `
       <p class="tenue">Sube un archivo: .txt, .md, o .json (export de chat de ChatGPT, Claude, Gemini u otro —
       se detecta el formato solo; si no lo reconoce, igual lo lee como texto). ${window.ModoOnline.estaActivo()
-        ? 'Tienes el modo en línea activado, así que se usará tu proveedor configurado para extraer pares pregunta/respuesta reales del contenido.'
-        : 'Estás en modo offline: la extracción será una heurística simple (un párrafo → un par genérico), no tan buena como con modo en línea, pero funciona sin conexión.'}</p>
+        ? 'Tienes API conectada, así que se usará tu proveedor para extraer pares pregunta/respuesta reales del contenido.'
+        : 'Estás en modo local (sin API): la extracción usa heurística mejorada — detecta estructura Q/A, diálogos y párrafos densos para crear pares útiles sin costo ni conexión.'}</p>
       <p class="tenue" style="margin-top:6px;">Se procesan como máximo ${window.Alimentar.LIMITE_TROZOS} fragmentos por archivo, para no disparar una factura de API ni tardar para siempre.</p>
       <div style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.8rem;">
         <label style="color:var(--texto-tenue)">Fragmentos:</label>
@@ -939,7 +947,7 @@
           ` (coseno > ${r.umbralSemV3}). Los ingerí igualmente, pero podrían ser paráfrasis reales.` +
           ' Considera `/podar` para limpiarlos. _(Advisory semántico, no bloqueo.)_', 'fran');
       }
-      // W: verificación OPCIONAL de DOIs en lo ingerido (híbrido: online verifica, offline avisa).
+      // W: verificación OPCIONAL de DOIs en lo ingerido (híbrido: online verifica, local avisa).
       try {
         if (window.VerificadorDOI) {
           const corpus = seleccionados.map(p => (p.q || '') + ' ' + (p.a || '')).join(' ');
@@ -955,7 +963,7 @@
                 window.mostrar(`🔗 _Verificador DOI (${okN}/${resultados.length} confirmados en Crossref):_\n${lin}`, 'fran');
               });
             } else {
-              window.mostrar(`🔗 _Verificador:_ ${dois.length} DOI detectado(s). La verificación es opcional (online) — conéctate y usa \`/doi\`. _(Offline: ingiero igual, no bloqueo.)_`, 'fran');
+              window.mostrar(`🔗 _Verificador:_ ${dois.length} DOI detectado(s). La verificación es opcional (API) — conéctate y usa \`/doi\`. _(local: ingiero igual, no bloqueo.)_`, 'fran');
             }
           }
         }
@@ -1042,6 +1050,7 @@
       else if (tipo === 'acerca') panelAcerca();
       else if (tipo === 'alimentar') panelAlimentar();
       else if (tipo === 'jardinero') panelJardinero();
+      else if (tipo === 'tests') panelTests();
     });
   });
   document.getElementById('btn-config').addEventListener('click', () => { cerrarSidebarMovil(); panelConfig(); });
@@ -1168,7 +1177,7 @@
       `\`/eco\` — evaluador de coherencia (SÉ/INFIERO/CONJETURO/NO SÉ)\n` +
       `\`/termostato\` — banda de resiliencia: estado de coherencia y qué hacer\n` +
       `\`/panel\` — dashboard de coherencia (K_i, historial, subflow, uso)\n` +
-      `\`/doi\` — verificar una fuente (DOI) contra Crossref _(online opcional)_\n` +
+      `\`/doi\` — verificar una fuente (DOI) contra Crossref _(API opcional)_\n` +
       `\`/dois\` — conteo DOIs en caché → ver detalle en \`/panel-doi\`\n` +
       `\`/panel-doi\` — panel DOI: ok vs errores, TTL diferenciado (30d ok · 2d err)\n` +
       `\`/polinizar <tema> [--hilo|--zenodo|--resumen]\` — generar contenido desde el oráculo\n` +
@@ -1261,7 +1270,7 @@
 
     let lineaModo;
     if (!online) {
-      lineaModo = '🔌 **Offline** — solo núcleo local (oráculo + axiomas)';
+      lineaModo = '🔒 **Modo local** — oráculo + axiomas (sin API externa)';
     } else if (provId === 'webllm') {
       lineaModo = '🖥️ **Online · WebLLM** (modelo corriendo en tu navegador)';
     } else if (provId === 'personalizado') {
@@ -1432,7 +1441,7 @@
    * abrirModal() y consolida señales que YA EXISTEN — termóstato (_kiGlobal),
    * Eco (_ecoHistorial), subflow (_subflowGet), stats (_statGet). El gráfico es
    * SVG inline generado en local: 0 dependencias externas, 0 Chart.js/CDN,
-   * 0 archivos nuevos → 100% offline, sin fragmentar el árbol del nodo. */
+   * 0 archivos nuevos → 100% local, sin fragmentar el árbol del nodo. */
   function _svgKiHistorial(hist) {
     if (!hist || hist.length < 2) {
       return '<p class="tenue" style="margin:8px 0;">Aún no hay suficientes puntos de K_i. Conversa un poco y vuelve a abrir el panel.</p>';
@@ -1559,7 +1568,7 @@
         `• Título: ${res.titulo}\n• Autores: ${aut}\n• Año: ${res.anio || '—'}\n• ${res.url}\n\n` +
         `_Fuente confirmada en Crossref — coherencia epistémica reforzada._`;
     }
-    if (res.offline && !res.fromCache) return `🔗 \`${res.doi}\` — sin conexión. La verificación DOI es opcional (online). Conéctate y reintenta con \`/doi\`.`;
+    if (res.local && !res.fromCache) return `🔗 \`${res.doi}\` — sin conexión. La verificación DOI es opcional (API). Conéctate y reintenta con \`/doi\`.`;
     return `⚠️ \`${res.doi}\`${cacheLbl} — ${res.error}. _(No bloquea; revisa la fuente manualmente.)_`;
   }
 
@@ -1639,8 +1648,8 @@
         const ctxActual = (() => { try { return localStorage.getItem(_CTX_USUARIO_KEY) || ''; } catch (_) { return ''; } })();
         return `👤 **Contexto del usuario**\n\n` +
           (ctxActual
-            ? `> _"${ctxActual}"_\n\n_Para cambiar: abre ⚙️ Conexión online y busca "Contexto del usuario", o usa \`/ctx borrar\` para eliminarlo._`
-            : `_No configurado. Abre ⚙️ Conexión online para definirlo (campo "Contexto del usuario")._`);
+            ? `> _"${ctxActual}"_\n\n_Para cambiar: abre ⚙️ Conexión API y busca "Contexto del usuario", o usa \`/ctx borrar\` para eliminarlo._`
+            : `_No configurado. Abre ⚙️ Conexión API para definirlo (campo "Contexto del usuario")._`);
       },
       // AO: α₂ — /reset-despertar: borrar marca M22. AT: ζ — ahora limpia IDB + caché además de localStorage
       '/reset-despertar': () => {
@@ -1732,7 +1741,7 @@
       window.mostrar(txt, 'user'); entrada.value = ''; entrada.focus({ preventScroll: true });
       const arg = txt.trim().split(/\s+/).slice(1).join(' ');
       if (!arg) {
-        window.mostrar('🔗 Uso: `/doi 10.xxxx/xxxxx` — verifica una fuente contra Crossref (verificación opcional, online).', 'fran');
+        window.mostrar('🔗 Uso: `/doi 10.xxxx/xxxxx` — verifica una fuente contra Crossref (verificación opcional, con API).', 'fran');
         return;
       }
       if (!window.VerificadorDOI) { window.mostrar('🔗 Verificador DOI no disponible.', 'fran'); return; }
@@ -1785,7 +1794,7 @@
           window.mostrar(
             '🔗 **Panel DOI** — caché vacío.\n\n' +
             '_Usa `/doi 10.xxxx/xxxxx` para verificar y guardar una fuente._\n' +
-            '_Al ingerir documentos con DOIs detectados también se verifican automáticamente (online)._',
+            '_Al ingerir documentos con DOIs detectados también se verifican automáticamente (API)._',
             'fran'
           );
           return;
@@ -1840,11 +1849,11 @@
       const _modoOnlineActivo = window.ModoOnline?.estaActivo();
       window.mostrar(
         `🌿 Polinizando "${tema}" como ${cfg.emoji} **${cfg.nombre}**…` +
-        (_modoOnlineActivo ? ' _(modo online)_' : ' _(modo offline)_'),
+        (_modoOnlineActivo ? ' _(API conectada)_' : ' _(modo local · oráculo)_'),
         'fran'
       );
 
-      // ── Streaming: preparar burbuja viva solo si hay modo online ────────────
+      // ── Streaming: preparar burbuja viva solo si hay modo API ────────────
       let _poliBubble = null;
       if (_modoOnlineActivo) {
         _poliBubble = document.createElement('div');
@@ -1868,7 +1877,7 @@
           window.mostrar(`🌿 ${res.error}`, 'fran');
           return;
         }
-        const fuenteLbl = res.fuente === 'online' ? '🌐 online' : '📦 offline (oráculo)';
+        const fuenteLbl = res.fuente === 'api' ? '🌐 online' : '📦 local (oráculo)';
         const textoFinal = `${res.emoji} **${res.nombre}** sobre _"${tema}"_ · ${res.n_pares} pares · ${fuenteLbl}\n\n---\n\n${res.texto}\n\n---\n_Copia el contenido de arriba. El Micelio no publica nada por ti._`;
 
         if (_poliBubble) {
@@ -1880,7 +1889,7 @@
           // AH: Polinizador v0.3 — botones .md + .txt en rama streaming
           _poliBubble.appendChild(_poliBtnsDescarga(res.texto, tema, formato));
         } else {
-          // Modo offline — mostrar normalmente
+          // Modo local — mostrar normalmente
           // AH: Polinizador v0.3 — capturar elemento para añadir botones .md + .txt
           const _pBubble = window.mostrar(textoFinal, 'fran');
           if (_pBubble) _pBubble.appendChild(_poliBtnsDescarga(res.texto, tema, formato));
@@ -1962,7 +1971,7 @@
 
     let resp = null;
     try {
-      // El núcleo decide primero, siempre offline: si el oráculo, MIU o la
+      // El núcleo decide primero, siempre local: si el oráculo, MIU o la
       // resonancia tienen una coincidencia real, esa es la respuesta — rápida,
       // determinista, y es el conocimiento propio del proyecto, no se reemplaza
       // por un modelo externo solo porque hay uno conectado.
@@ -2004,7 +2013,16 @@
         let _ragSystemPrompt = alma.systemPrompt || '';
         // KERNEL: en modo razonamiento estricto, anteponer el método MIU al system
         // prompt del alma (solo al usar LLM externo; el KERNEL.json nunca se envía).
-        if (_kernelEstricto()) _ragSystemPrompt = _kernelPrompt() + '\n\n' + _ragSystemPrompt;
+        if (_kernelEstricto()) {
+          let _kiActual = null;
+          try {
+            if (window.Eco && typeof _ultimasRespuestas === 'function') {
+              const _d = window.Eco.evaluar(_ultimasRespuestas(10));
+              if (_d && typeof _d.ki === 'number' && !isNaN(_d.ki)) _kiActual = _d.ki;
+            }
+          } catch (_) { /* defensivo: sin K_i real disponible, _kernelPrompt degrada solo */ }
+          _ragSystemPrompt = _kernelPrompt(_kiActual) + '\n\n' + _ragSystemPrompt;
+        }
         let _ragN = 0;
         if (_ragPares && _ragPares.length > 0 && parseFloat(_ragPares[0].score) >= (_ragMin + 0.2)) {
           const _ragFiltrados = _ragPares.filter(p => parseFloat(p.score) >= _ragMin);
@@ -2037,9 +2055,14 @@
         if (_btnEnv) _btnEnv.classList.remove('streaming'); // G: restaurar botón
 
         if (r?.error) {
-          // Streaming falló o no soportado — mostrar error y respuesta offline
+          // Streaming falló o no soportado — mostrar error y respuesta local.
+          // Bug corregido (Ciclo BG): antes solo se mostraba el mensaje de error;
+          // el `resp` local (texto de core.procesar(), ya calculado arriba) nunca
+          // se pintaba pese a que el comentario y el propio mensaje de error decían
+          // "(mostrando respuesta local del oráculo)". Ahora sí se muestra.
           bubbleStream.remove();
-          window.mostrar('⚠️ ' + r.error + ' (mostrando respuesta offline)', 'fran');
+          window.mostrar('⚠️ ' + r.error + ' (mostrando respuesta local del oráculo)', 'fran');
+          if (resp) window.mostrar(resp, 'fran');
         } else if (r?.texto && !textoStream) {
           // Respuesta en modo bloque (sin SSE): el bubble stream está vacío, rellenar
           const transformado = window.ModoEspejo.aplicar(r.texto, ultimoMensajeUsuario);
@@ -2047,7 +2070,7 @@
           bubbleStream.dataset.textoCrudo = r.texto;
         } else if (r?.texto && textoStream) {
           // SSE completó correctamente — bubble ya tiene el contenido renderizado
-          resp = null; // no mostrar respuesta offline adicional
+          resp = null; // no mostrar respuesta local adicional
         }
         // Badge RAG: indicador discreto cuando el oráculo aportó contexto al modelo
         if (_ragN > 0 && !r?.error) {
@@ -2069,7 +2092,7 @@
         }
         actualizarTurnoContador();
         window.actualizarKiPill();
-        // AN: Umbral Despertar M22 — rama online
+        // AN: Umbral Despertar M22 — rama API
         if (core._despPendiente) {
           core._despPendiente = false;
           setTimeout(() => {
@@ -2095,18 +2118,18 @@
             );
           }, 400);
         }
-        // AG: A11 — cobertura rama online (anteriormente excluida; blast radius acotado)
+        // AG: A11 — cobertura rama API (anteriormente excluida; blast radius acotado)
         try {
           if (window.MotorVida && core.explorarSiCorresponde) {
             const auto = core.explorarSiCorresponde();
             if (auto) setTimeout(() => window.mostrar(auto.texto, 'fran'), 700);
           }
         } catch (_) {}
-        return; // salir — ya se mostró el bubble online
+        return; // salir — ya se mostró el bubble API
       }
     } catch (e) {
       console.error('enviarMensaje: error inesperado', e);
-      resp = 'Algo falló al generar esa respuesta (revisa la consola). Prueba de nuevo o cambia a modo offline.';
+      resp = 'Algo falló al generar esa respuesta (revisa la consola). Prueba de nuevo o desconecta la API para usar modo local.';
     }
     window.mostrar(resp, 'fran');
     window.actualizarKiPill();
@@ -2137,7 +2160,7 @@
       }, 400);
     }
 
-    // AD+AG: A11 — exploración autónoma offline + rama streaming cubierta en AG (bloque ModoOnline arriba).
+    // AD+AG: A11 — exploración autónoma local + rama streaming cubierta en AG (bloque ModoOnline arriba).
     // Ambas ramas ahora llaman explorarSiCorresponde() con cooldown compartido (8 turnos).
     try {
       if (window.MotorVida && core.explorarSiCorresponde) {
@@ -2450,7 +2473,7 @@
       { cmd: '/eco',             desc: 'evaluador de coherencia' },
       { cmd: '/termostato',      desc: 'banda de resiliencia / coherencia' },
       { cmd: '/panel',           desc: 'dashboard de coherencia' },
-      { cmd: '/doi',             desc: 'verificar DOI en Crossref (online)' },
+      { cmd: '/doi',             desc: 'verificar DOI en Crossref (API)' },
       { cmd: '/dois',            desc: 'conteo DOIs en caché (ver detalle: /panel-doi)' },
       { cmd: '/panel-doi',       desc: 'panel DOI: ok vs errores, TTL diferenciado' },
       { cmd: '/polinizar',       desc: 'generar hilo/abstract/resumen desde el oráculo' },
