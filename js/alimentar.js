@@ -200,7 +200,7 @@ window.Alimentar = (function () {
       const respuesta = lineas.filter(l => l !== pregunta).join(' ').slice(0, 700);
       if (pregunta && respuesta)
         return [{ q: pregunta.replace(/^[^:]+:\s*/, '').trim(),
-                  a: respuesta.trim(), origen: 'offline-dialogo' }];
+                  a: respuesta.trim(), origen: 'local-dialogo' }];
     }
     // Fallback heurístico
     // FIX: split sin lookbehind para compatibilidad
@@ -209,7 +209,7 @@ window.Alimentar = (function () {
     const primeras = oraciones[0].split(/\s+/).slice(0, 9).join(' ').replace(/[.,;:]$/, '');
     return [{ q: `¿Qué dice el texto sobre "${primeras}…"?`,
               a: trozo.length > 700 ? trozo.slice(0, 700).trim() + '…' : trozo,
-              origen: 'offline-heuristico' }];
+              origen: 'local-heuristico' }];
   }
 
   async function extraerOnline(trozo, nombreArchivo) {
@@ -252,7 +252,7 @@ window.Alimentar = (function () {
 
   function estimarCosto(numTrozos) {
     if (!window.ModoOnline || !window.ModoOnline.estaActivo())
-      return `${numTrozos} fragmento(s) · procesado offline (sin costo de API)`;
+      return `${numTrozos} fragmento(s) · procesado localmente (sin API, sin costo)`;
 
     const cfg  = window.ModoOnline.cargar() || {};
     const prov = cfg.proveedor || 'groq';

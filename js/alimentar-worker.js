@@ -29,7 +29,7 @@ function extraerOffline(trozo) {
   const primeras = oraciones[0].split(/\s+/).slice(0, 9).join(' ').replace(/[.,;:]$/,'');
   return [{ q: `¿Qué dice el texto sobre "${primeras}..."?`,
             a: trozo.length > 700 ? trozo.slice(0,700)+'…' : trozo,
-            origen: 'offline-worker' }];
+            origen: 'local-worker' }];
 }
 
 async function extraerConAPI(trozo, archivo, cfg) {
@@ -56,7 +56,7 @@ async function extraerConAPI(trozo, archivo, cfg) {
     const arr = JSON.parse(limpio);
     if (!Array.isArray(arr)) return extraerOffline(trozo);
     return arr.filter(p => p && typeof p.q==='string' && typeof p.a==='string')
-              .map(p => ({ q:p.q.trim(), a:p.a.trim(), origen:'worker-online' }));
+              .map(p => ({ q:p.q.trim(), a:p.a.trim(), origen:'worker-api' }));
   } catch(e) { return extraerOffline(trozo); }
 }
 
