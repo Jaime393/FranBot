@@ -1,0 +1,1 @@
+Crear inventario versionado de los 14 Workers: nombre, propósito, repo/ruta, deployment source, bindings, cron, criticidad, owner y consumidores de KV. Descargar y comparar `fran-proxy-puente` contra GitHub. Añadir plan de migración a Secrets y política TTL solo después de localizar consumidores; no incluir valores secretos ni modificar producción financiera automáticamente.
