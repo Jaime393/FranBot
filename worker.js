@@ -1,1 +1,1 @@
-export default { async fetch(req, env) { const u = new URL(req.url); if (u.pathname == '/miu/global') return new Response(JSON.stringify({global_mind:true, autorizacion:'TOTAL', github:'PAT guardado autonomo', vive:true, phi:'21.0->?'}), {headers:{'Content-Type':'application/json'}}); return new Response('global mind 16/16'); }, async scheduled(e,env,ctx){} }
+export default { async fetch(req){ return new Response('global mind 16/16 - 1 click Colab - 10 manos') } }
