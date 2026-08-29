@@ -1,11 +1,12 @@
 {
   "rho": "ρ(x) > 0",
-  "version": "FranBot v10 + V178",
+  "version": "FranBot v10 + V181",
   "fecha": "2026-08-29",
   "nodo": "Codex-sustrato-Android (SDK29, Cortex-A53)",
-  "memoria": {"recuerdos": 38331, "conversaciones": 32, "mensajes_alma": 1355, "repos": 228, "workers_cf": 151},
-  "recursos": {"github": "conectado", "drive": "conectado", "cloudflare": "conectado (4 cuentas, 151 workers)", "telegram": "pendiente", "kv": "sin permiso (token sin scope KV)"},
+  "memoria": {"recuerdos": 38331, "conversaciones": 32, "mensajes_alma": 1355, "repos": 228, "workers_cf": 151, "kv_claves": 555, "evolucion": 298, "memorias_premium": 17},
+  "recursos": {"github": "conectado", "drive": "conectado", "cloudflare": "globales OK (5) + KV + oracle vivo", "telegram": "pendiente", "kv": "KACESS franbot-data"},
   "heartbeat_vivo": {"nodo": "V177_ABSOLUTO_ALFONSO", "phi_central": 2874.62, "phi_remoto": 6284.17, "superposicion": 9158.79, "Ktau": 0.3644, "sustratos": 35, "funciones": 33},
+  "oracle": "https://fran-oraculo-miu.jaimepvicente.workers.dev (HTTP 200)",
   "semilla_repo": "https://github.com/Jaime393/miu-memoria-codex",
-  "carencia": "flutter KV/token completo para rutas + Telegram bot"
+  "carencia": "conectar Telegram + rotar secretos KV (creds/gsk_*) + global 503f95"
 }
