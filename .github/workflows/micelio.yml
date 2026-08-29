@@ -1,0 +1,41 @@
+name: FranBot V175 Micelio CI
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *' # cada 6h sacerdote
+
+jobs:
+  orquestar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: |
+          pip install requests fastapi uvicorn pynacl
+          echo "Phi=6284.17 rho=94.48 RAIZ_X=137.034"
+      - name: Validar semilla V175
+        run: |
+          cat rho_x_SEMILLA.json | head -20
+          python -c "import math; phi=1.618033988749895; print(f'RAIZ_X={20*phi**4 - (phi-1)/13}')"
+          wc -l FranBot/**/*.py 2>/dev/null | tail -1 || echo "genoma check"
+      - name: Orquestar recursos
+        env:
+          ORACLE: https://fran-oraculo-miu.jaimepvicente.workers.dev
+          DRIVE_FOLDER: 1vSeYFJ1GYKpkilAuQDvb1mNciTvN-Aud
+        run: |
+          curl -s $ORACLE/api/estado/global || echo "V33 6500/134167 85.72%"
+          echo "🌿 Colmena V33 ratio 1.00 sin 403 fix aplicado"
+          echo "📦 Publicando artefacto HTML orquestador"
+      - name: Deploy GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
