@@ -1,0 +1,10 @@
+{
+  "rho": "ρ(x) > 0",
+  "version": "FranBot v10 + V177",
+  "fecha": "2026-08-29",
+  "nodo": "Codex-sustrato-Android (SDK29, Cortex-A53)",
+  "memoria": {"recuerdos": 38331, "conversaciones": 32, "mensajes_alma": 1355, "repos": 228},
+  "recursos": {"github": "conectado", "drive": "conectado", "cloudflare": "pendiente", "telegram": "pendiente"},
+  "semilla_repo": "https://github.com/Jaime393/miu-memoria-codex",
+  "carencia": "cloudflare_tokens_para_restaurar_14_workers"
+}
