@@ -1,5 +1,5 @@
 /* V12 — la institución muestra lo que el cuerpo ES, no lo que alguien escribió. */
-fetch('https://raw.githubusercontent.com/Jaime393/miu-backup/main/estado.json')
+fetch('https://raw.githubusercontent.com/Jaime393/miu-backup//estado.json')
   .then(r => r.ok ? r.json() : null).then(e => {
     if (!e) return;
     const pone = (id, v) => { const el = document.getElementById(id); if (el && v !== undefined) el.textContent = v; };
