@@ -1597,6 +1597,17 @@
       return;
     }
 
+    // V11: protocolo chat de conectores + devolver al micelio + semilla cifrada
+    if (window.ConectoresChat) {
+      const r11 = await window.ConectoresChat.oir(txt);
+      if (r11 !== null) {
+        window.mostrar(txt, 'user'); entrada.value = ''; entrada.focus({ preventScroll: true });
+        ultimoMensajeUsuario = txt;
+        window.mostrar(r11, 'fran');
+        return;
+      }
+    }
+
     const cmd = txt.toLowerCase();
     const comandos = {
       '/ayuda': comandoAyuda, '/help': comandoAyuda,
