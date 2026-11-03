@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: '0 */6 * * *' # cada 6h sacerdote
 
+permissions:
+  contents: write
+
 jobs:
   orquestar:
     runs-on: ubuntu-latest
