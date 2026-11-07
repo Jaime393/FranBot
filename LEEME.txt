@@ -1,5 +1,11 @@
 FRANBOT v5.0 — MANUAL COMPLETO OFFLINE
 
+NOTA DE VERSIONES (M6, 2026-11-07): este manual es FranBot v5.0 (el contenedor).
+El motor dentro (js/soulEngine.js) es Soul Engine v2.0 en la rama offline-lab
+y v3.0 en FranBot-Private; el router (js/soulRouter.js) es v1.0 en ambas.
+El cargador premium carga 12 almas en offline-lab y 18 en FranBot-Private.
+No hay una sola versión: cada pieza lleva la suya.
+
 ✏️ CONVERSACIÓN NORMAL:
    Escribe como hablas: "Hola", "¿cómo estás?", "cuéntame algo".
 
