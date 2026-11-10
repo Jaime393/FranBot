@@ -1,0 +1,11 @@
+# Evidencia C-024 — Patches eliminados del workspace
+# Fecha UTC: 2026-11-10T04:55:41Z
+# Host: htch-runtime
+
+## ls ~/workspace/franbot_patches
+ls: cannot access '/home/hatch/workspace/franbot_patches': No such file or directory
+
+## ls ~/workspace/franbot_patches_v2
+ls: cannot access '/home/hatch/workspace/franbot_patches_v2': No such file or directory
+
+## find ~/workspace -maxdepth 2 -name '*.patch'
