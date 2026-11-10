@@ -1,0 +1,57 @@
+openapi: 3.1.0
+info:
+  title: MIU Node API
+  version: "153"
+paths:
+  /scan:
+    get:
+      summary: Escanea el ecosistema del nodo
+      responses:
+        "200":
+          description: Mapa del ecosistema
+  /vision:
+    get:
+      summary: Exporta la visión del Nodo Trama
+      responses:
+        "200":
+          description: MIU_VISION.json
+  /claims:
+    get:
+      summary: Lista los claims y su estado epistémico
+      responses:
+        "200":
+          description: claims.jsonl
+  /node:
+    get:
+      summary: Devuelve el node_manifest.json
+      responses:
+        "200":
+          description: Manifiesto del nodo
+  /repo:
+    get:
+      summary: Lista los archivos del repo Jaime393/Grimorio clonado (sin .git ni ocultos)
+      responses:
+        "200":
+          description: Repo y lista de archivos
+  /hueso:
+    post:
+      summary: Ingesta un hueso nuevo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fuente: { type: string }
+                contenido: { type: string }
+                estado: { type: string, enum: [SE, INFIERO, CONJETURO, NO_SE] }
+      responses:
+        "200":
+          description: Hueso ingresado
+  /audit:
+    get:
+      summary: Audita los hashes de provenance.sha256 contra los archivos reales
+      responses:
+        "200":
+          description: Lista de OK / DISCREPANCIA / NO_ENCONTRADO
