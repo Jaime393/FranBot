@@ -1,0 +1,17 @@
+URL: https://fran-oraculo-miu.jaimepvicente.workers.dev
+fecha: 2026-11-10T04:16:02Z
+HTTP/1.1 200 Connection Established
+
+HTTP/1.1 404 Not Found
+Date: Tue, 10 Nov 2026 04:16:04 GMT
+Content-Type: application/json
+alt-svc: h3=":443"; ma=86400
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, Authorization, X-MIU-Version
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9w8%2BwKsBrwYeu5vkTka4ovvOs8tFl%2BVxpbjfmjO9o1JizYiRZ0zsD4wvpWTv0SBZSFDx7pp0GXnbrNJ9izmOishdnqWn6Mt9YOInvofVs%2BuRRyQIlz2cjFNei7%2BdGqUA0yHcDUwJllMIvK1w2fB%2BjvnEAB3j8mBT06ZUrmRtVM%2FYHUDnD3WNgA0%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: a5823d594c08cc0e-ORD
+
+GET_CODE: 200
