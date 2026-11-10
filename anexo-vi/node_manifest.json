@@ -1,0 +1,125 @@
+{
+  "capa_archivos": 18,
+  "capabilities": [
+    "scan_termux",
+    "scan_sd",
+    "scan_github",
+    "scan_sqlite",
+    "vision",
+    "polinizador"
+  ],
+  "docs": {
+    "README": "memoria/anexo-vi/README.md",
+    "ESTADO": "memoria/anexo-vi/ESTADO.md"
+  },
+  "endpoints": {
+    "local": "http://127.0.0.1:8080",
+    "relay_hub": "https://run.relay.app/workflows/cmrfab6ry04vw0qm1ffks29py",
+    "tunnel": null
+  },
+  "estado": "OPERATIVO_PARCIAL",
+  "grietas_conocidas": [
+    "G01",
+    "G03",
+    "G05",
+    "G09",
+    "G10",
+    "G11",
+    "G12"
+  ],
+  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
+  "id": "trama-termux-01",
+  "k_i_local": 0.58,
+  "last_seen": "2026-11-10T05:01:35Z",
+  "protocols": [
+    "PNM-01",
+    "PAC-01",
+    "PGL-01",
+    "PPF"
+  ],
+  "repo_hash": "sha256:537d643001af9a47fb097aa7023361f43d7263cf9f55fe18e33be787f67c4dcd",
+  "repo_total": 102,
+  "resumen_claims": "sha256:2486ab109fe5b62fea0ef67941b66901024a8588317179f6096dcb7c9d86844b",
+  "runtime": {
+    "api_path": "~/workspace/miu_api.py",
+    "ecosystem_map": null,
+    "host": "sandbox_vm",
+    "nota": "En Termux, api_path será ~/miu-ecosistema/miu_api.py y scanner_path ~/miu-ecosistema/miu_scanner.py. Aquí no existen.",
+    "scanner_path": null
+  },
+  "secret_refs": [
+    "GITHUB_TOKEN_ENV",
+    "TELEGRAM_TOKEN_ENV",
+    "BOT_TABLET_TOKEN_ENV"
+  ],
+  "version": "153",
+  "last_audit": "2026-11-10T04:05:51Z",
+  "audit_status": "OK",
+  "audit_resumen": "RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1",
+  "ciclo_cierre": 10,
+  "verify_all_version": 3,
+  "verify_all_fallos_actuales": 8,
+  "verify_all_fallos_esperados": 8,
+  "verify_all_nota": "Los 8 fallos son C-001 a C-008 (prediccion, hash PENDIENTE por diseño, G03 abierta). REFUTADO y NO_SE no cuentan. C-024 ya no falla: tiene hash real de la evidencia de ausencia.",
+  "last_probe": "2026-11-10T04:34:54Z",
+  "g05_probe": {
+    "repo_accesible": true,
+    "repo_total_archivos": 169,
+    "repo_ultimo_commit": "2026-11-07 23:42:58 +0000 M4c: mark 16 absorption-refuted pairs as refutado (semantic criterion; 3 honest + 1140 excluded)",
+    "worker_url": "https://fran-oraculo-miu.jaimepvicente.workers.dev",
+    "worker_estado": "WORKER_RESPONDE",
+    "refs_integracion": [
+      "TG_BOT_TOKEN",
+      "DRIVE_FOLDER",
+      "GITHUB_TOKEN",
+      "TELEGRAM_API",
+      "ORACLE"
+    ],
+    "fugas_literales": [
+      "DRIVE_FOLDER",
+      "drive"
+    ],
+    "fase": "rotacion_codigo_limpia",
+    "estructura_publica": {
+      "gitignore": true,
+      "wrangler_toml": true,
+      "dev_vars_example": true,
+      "readme_deploy": true,
+      "pending_rotation": true,
+      "test_worker_sh": true
+    },
+    "rotacion_pendiente": [
+      "DRIVE_FOLDER en micelio.yml",
+      "drive en worker.js"
+    ],
+    "worker_test_resultado": "OK",
+    "commit_local": "f093677",
+    "push_estado": "PATCH_GENERADO",
+    "patch_path": "/home/hatch/workspace/franbot_patches/0001-franbot-rotar-DRIVE_FOLDER-a-secrets.DRIVE_FOLDER-y-.patch",
+    "secretos_pendientes_usuario": [
+      "DRIVE_FOLDER en GitHub Actions",
+      "DRIVE_FOLDER_ID en Cloudflare"
+    ],
+    "test_worker_exit": 0,
+    "configuracion_funcional_pendiente": [
+      "GitHub Secret DRIVE_FOLDER",
+      "Cloudflare Secret DRIVE_FOLDER_ID",
+      "ejecutar test-worker.sh",
+      "(opcional) activar Telegram cuando se decida"
+    ],
+    "patches_eliminados": true,
+    "framing_seguridad_retirado": true,
+    "nota": "Folder ID movido a secreto. Es higiene, no incidente. No rotar carpeta ni reescribir historial."
+  },
+  "evidence_dir": "memoria/anexo-vi/evidence/",
+  "publicacion": {
+    "fecha": "2026-11-10T05:01:35Z",
+    "intento": "ciclo 19 con push directo",
+    "franbot_push": "CONECTOR_NO_FUNCIONAL",
+    "franbot_commit_remoto": null,
+    "anexo_vi_publicado": false,
+    "anexo_vi_repo": null,
+    "error_exacto": "fatal: could not read Username for 'https://github.com': terminal prompts disabled (PUSH_NORMAL_EXIT=128, PUSH_GH_HELPER_EXIT=128); gh api exit 4: not logged into any GitHub hosts",
+    "nota": "Token/conector se usa, no se rota. Folder ID no es credencial."
+  }
+}
