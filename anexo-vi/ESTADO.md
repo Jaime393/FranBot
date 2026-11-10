@@ -77,6 +77,7 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
 
 - audit.py v3: EXIT=0 — RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1
 - verify_all.py v3: EXIT=1 — 8 fallos de predicción (C-001 a C-008, por diseño, G03 abierta), 0 fallos de provenance, 0 fallos de rechazo.
+- Publicación ciclo 20: 7/8 archivos FranBot en GitHub + 18/18 archivos anexo-vi como subcarpeta. HEAD remoto c45632c1. micelio.yml pendiente por permiso workflows de la App.
 - Última ejecución: 2026-11-10T04:05:51Z
 
 ## Qué falta para OPERATIVO
