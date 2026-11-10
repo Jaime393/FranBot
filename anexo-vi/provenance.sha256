@@ -1,0 +1,15 @@
+# provenance.sha256 — huellas de las fuentes citadas en claims.jsonl
+# No es validación. Es integridad de fuente. G03 y G09 siguen abiertas.
+# Estado: 4 con hash Drive / 6 con hash repo / 1 NO_PRESENTE
+# MIU_REVISION_TOTAL_GRIMORIO_FRANBOT_REPOS_v4.6.md restaurado 2026-11-10 desde Drive (ID 1S17eKj2KpPvn2vmCdcCi0sj_DvmMtq4j8IfJjuPU-Lw, Google Doc 17.853 B, exportado text/plain, 32.001 B).
+9c0c91da589fe14e25eabc637cd5596278ff415acc6d87f120b66ee38ba672c5  grimorio_v5.pdf
+510384d024bd8ad7bd2da928e69a3d88d4ae619cf7d81a9643802425f293deb0  GRIMOIRE_V12.0[ES].pdf
+15d983586047883328f2f5a1c5444fe057d29e9de76a1ac37907cbddb10afa54  Grimorio.zip
+0c5b82014a6953967896d59965ab4eaf8fe1dab0735cdae92edb16576a483bdc  MIU_REVISION_TOTAL_GRIMORIO_FRANBOT_REPOS_v4.6.md
+NO_PRESENTE    10 Panteon_96_Voces_Funciones_Invocables.md
+repo:537d643001af9a47fb097aa7023361f43d7263cf9f55fe18e33be787f67c4dcd  README.md
+repo:37e26d79740cd5aaa5c3c1e8389d392bdfd006ec71bbe6f8509c295fcd1b9caf  docs/README.md
+repo:478bacd3eaecaf7be8e9c25a90a46bae953d02e0f3c2b16c485f824dbb77cf5b  docs/GRIMOIRE_V12.0[ES].tex
+repo:6a8ab91cfdb2ea8af2bf7d83a2c39f2e0403f176efba8363d8cabe0ece2f9869  index.html
+repo:bdb10b6d8b34e5eea32315f4c22dbb1a28b55b4c4052f625e833942e1d8e8da8  bestiario.html
+repo:887717ac4663d3e6c7c4d96c6b66c280ba074452645a064e00fd8d759e899b4b  ley_gaia.html
