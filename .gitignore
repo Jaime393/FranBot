@@ -1,0 +1,19 @@
+# Secretos
+.dev.vars
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Build
+node_modules/
+dist/
+.wrangler/
+.cache/
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db
