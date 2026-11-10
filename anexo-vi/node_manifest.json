@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-10T05:01:35Z",
+  "last_seen": "2026-11-10T05:27:44Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -61,7 +61,7 @@
   "verify_all_fallos_actuales": 8,
   "verify_all_fallos_esperados": 8,
   "verify_all_nota": "Los 8 fallos son C-001 a C-008 (prediccion, hash PENDIENTE por diseño, G03 abierta). REFUTADO y NO_SE no cuentan. C-024 ya no falla: tiene hash real de la evidencia de ausencia.",
-  "last_probe": "2026-11-10T04:34:54Z",
+  "last_probe": "2026-11-10T05:27:44Z",
   "g05_probe": {
     "repo_accesible": true,
     "repo_total_archivos": 169,
@@ -113,13 +113,31 @@
   },
   "evidence_dir": "memoria/anexo-vi/evidence/",
   "publicacion": {
-    "fecha": "2026-11-10T05:01:35Z",
-    "intento": "ciclo 19 con push directo",
-    "franbot_push": "CONECTOR_NO_FUNCIONAL",
-    "franbot_commit_remoto": null,
-    "anexo_vi_publicado": false,
-    "anexo_vi_repo": null,
-    "error_exacto": "fatal: could not read Username for 'https://github.com': terminal prompts disabled (PUSH_NORMAL_EXIT=128, PUSH_GH_HELPER_EXIT=128); gh api exit 4: not logged into any GitHub hosts",
-    "nota": "Token/conector se usa, no se rota. Folder ID no es credencial."
+    "fecha": "2026-11-10T05:10:27Z",
+    "intento": "ciclo 20 con conector GitHub del chat (GitHub App)",
+    "franbot_push": "PARCIAL_7_DE_8",
+    "franbot_commits_remotos": {
+      "worker.js": "4b6599dd",
+      "PENDING_ROTATION.md": "e0719e68",
+      "SECRETS_SETUP.md": "d40b4fc4",
+      "wrangler.toml": "e6185b1f",
+      ".gitignore": "19329790",
+      ".dev.vars.example": "e0ecad3f",
+      "scripts/test-worker.sh": "fb32f9a9"
+    },
+    "franbot_no_publicado": {
+      ".github/workflows/micelio.yml": "403 sin permiso workflows"
+    },
+    "anexo_vi_publicado": true,
+    "anexo_vi_repo": "Jaime393/FranBot/anexo-vi",
+    "anexo_vi_url": "https://github.com/Jaime393/FranBot/tree/main/anexo-vi",
+    "anexo_vi_head": "c45632c1",
+    "conector_permisos": {
+      "contents_write": true,
+      "workflows_write": false,
+      "administration_write": false,
+      "git_trees": false
+    },
+    "nota": "Publicacion parcial por permisos de la GitHub App, no por tokens. micelio.yml pendiente de opcion 1 (ajustar App) u opcion 2 (subir a mano)."
   }
 }
