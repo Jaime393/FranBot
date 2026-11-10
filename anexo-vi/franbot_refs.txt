@@ -1,0 +1,9 @@
+# franbot_refs.txt — Nombres de variables de integración en Jaime393/FranBot
+# Solo nombres. NUNCA valores. Generado 2026-11-10T04:16Z (ciclo 11, sondeo).
+# Fuente: grep -rEn sobre franbot_repo + lectura de workflows y worker.js
+TG_BOT_TOKEN (workers/telegram_bot.js, app/workers/telegram_bot.js — referencia globalThis, sin valor literal)
+DRIVE_FOLDER (.github/workflows/micelio.yml — VALOR_LITERAL_EN_REPO, fuga PAC-01)
+drive (worker.js, respuesta /miu/global — VALOR_LITERAL_EN_REPO, fuga PAC-01)
+GITHUB_TOKEN (.github/workflows/micelio.yml — referencia secrets.GITHUB_TOKEN; miu-auto-deploy.yml — mención en mensaje de commit)
+TELEGRAM_API (workers/telegram_bot.js — const con base https://api.telegram.org/bot, sin token)
+ORACLE (.github/workflows/micelio.yml — URL workers.dev, no es secreto)
