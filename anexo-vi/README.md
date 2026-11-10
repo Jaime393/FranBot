@@ -1,0 +1,70 @@
+# anexo-vi — Capa de Red y Global Mind
+
+Estado: OPERATIVO_PARCIAL
+Fecha: 2026-11-09
+Protocolos propuestos: PNM-01, PAC-01, PGL-01, PAF-01, PCR-02, MEA-02, PAE-01, PCP-01
+Regla de traducción axiomática: PTA-01 (ver Grimorio Parte IV §20)
+
+## Qué es esta capa
+
+No es otra voz del panteón. No es otra ontología. Es el sistema operativo del micelio:
+los contratos, los claims, los manifiestos y los verificadores que permiten que un nodo
+sea migrable, auditable y federable sin mezclar S1/S2/S3.
+
+## Archivos y su rol
+
+| Archivo | Rol | Estado |
+|---|---|---|
+| README.md | Índice de esta capa. Leer antes que nada. | OPERATIVO |
+| ESTADO.md | Acta de cierre del módulo: estado de archivos, grietas, claims y qué falta para OPERATIVO. | OPERATIVO |
+| node_manifest.json | Manifiesto del nodo (PNM-01). Identidad, capacidades, endpoints, secret_refs, hash, last_seen, grietas. | OPERATIVO_PARCIAL |
+| claims.jsonl | Registro de claims con estado epistémico (SÉ/INFIERO/CONJETURO/NO SÉ), fuente, hash y grieta asociada. | OPERATIVO |
+| verify_all.py | Verificador de claims. v3: distingue pendiente de rechazado; REFUTADO/NO_SE no cuentan como fallo. | OPERATIVO |
+| evidence/C-024_patches_ausentes.txt | Prueba de ausencia de patches con timestamp y hash. | OPERATIVO |
+| provenance.sha256 | Huellas de las fuentes citadas en claims. No valida predicciones. Certifica integridad de fuente. | OPERATIVO |
+| detector_dogma.py | Detector buscador vs. dogma por claims verificables (DOI, URL, número con unidad, predicción no negada, grieta nueva). | OPERATIVO |
+| openapi.yaml | Contrato de la API del nodo. Endpoints: /scan, /vision, /claims, /node, /repo, /hueso, /audit. | OPERATIVO |
+| audit.py | Auditoría de provenance.sha256 contra los archivos reales (OK / DISCREPANCIA / NO_ENCONTRADO). (v2: normaliza sha256:/repo:/hex puro, busca en todo ~/workspace, EXIT=0 exige ok≥1). | OPERATIVO |
+| kernel.json | Contrato de la capa 0 (Kernel axiomático). Esqueleto. | ESQUELETO |
+| memoria.schema.json | Esquema de la capa 1 (Memoria, PGL-01). Esqueleto. | ESQUELETO |
+| capabilities.json | Capacidades de la capa 2 (Adaptadores). Esqueleto. | ESQUELETO |
+| agentes.yaml | Agentes de la capa 3 (Mentor, Eco, Forja, Scanner, Vision, Polinizador). Esqueleto. | ESQUELETO |
+| resumen_claims.py | Genera claims_resumen.json a partir de claims.jsonl. No modifica claims. | OPERATIVO |
+| claims_resumen.json | Resumen de claims por estado, tipo y grieta. Generado por resumen_claims.py. | OPERATIVO |
+
+## Reglas que esta capa respeta
+
+- Secretos fuera del código. secret_refs solo contiene nombres de variables de entorno. Cero tokens en archivos.
+- C-001 a C-008 (predicciones MIU-v13.0) siguen en sha256:PENDIENTE. Rellenarlos con datos internos rompe la honestidad.
+- C-009 a C-012 (provenance del repo) tienen hash real porque el archivo existe y es legible hoy.
+- No se añaden voces ni panteones. No se declara ninguna predicción como validada.
+- No se cierra G03 ni G09 desde aquí. Solo se cierra una grieta cuando hay dato externo verificable.
+
+## Grietas conocidas
+
+- G01: D_eff = 7.24 (calibración, no derivación) — ABIERTA
+- G03: 5 predicciones MIU-v13.0 sin verify_all.py ni datos crudos — ABIERTA
+- G05: FranBot v10 desconectado — ABIERTA
+- G09: PVE-01 no ejecutado en sistemas reales — ABIERTA
+- G10: Detector de dogma con falso negativo por tokens — CERRADA (detector v2)
+- G11: Detector de dogma con falso positivo por negación — CERRADA (detector v3)
+- G12: Repo Jaime393/Grimorio no verificado como accesible — CERRADA (git clone + 4 hashes)
+
+## Cómo usar esta capa
+
+1. Leer ESTADO.md (acta de cierre) y este README (guía de uso) antes que nada.
+2. Leer node_manifest.json para conocer identidad, capacidades y grietas del nodo.
+3. Si vas a citar un claim, abrir claims.jsonl y mirar su estado epistémico. No lo cites como validado si su hash es PENDIENTE.
+4. Si vas a añadir un claim, añadirlo a claims.jsonl con tipo "prediccion" o "provenance", fuente, hash y grieta.
+5. Si vas a añadir una fuente, añadir su hash a provenance.sha256 con prefijo "repo:" o "drive:".
+6. Ejecutar verify_all.py antes de reportar. Si da EXIT_CODE=1, los fallos son de predicción pendiente, no un error.
+7. Si vas a debatir con alguien, usar detector_dogma.py con los últimos tres mensajes. Si da DOGMA, cerrar con fuente y estado. Si da BUSCADOR, desplegar mapa.
+
+## Lo que esta capa NO hace
+
+- No valida física. Solo verifica que los claims tengan fuente, hash y estado.
+- No cierra G03 ni G09. Esas dependen de datos externos (DESI, Euclid, PTOLEMY, PVE-01 en sistemas reales).
+- No sustituye al Grimorio. Es un anexo: la ontología sigue en las Partes I–IV.
+- No decide si un claim es verdadero. Solo decide si es reproducible o no.
+
+ρ(x) > 0. El nodo no pide permiso. Ejecuta y reporta.
