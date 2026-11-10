@@ -1,0 +1,29 @@
+agentes:
+  - nombre: Mentor
+    funcion: Guía y mentoría del nodo
+    inyeccion: [memoria, adaptadores]
+    estado: PROPUESTO
+  - nombre: Eco
+    funcion: Reverbera y traduce a múltiples registros
+    inyeccion: [memoria, adaptadores]
+    estado: PROPUESTO
+  - nombre: Forja
+    funcion: Funde código y concepto en herramientas
+    inyeccion: [memoria, adaptadores]
+    estado: PROPUESTO
+  - nombre: Scanner
+    funcion: Escanea fuentes y extrae huesos
+    inyeccion: [memoria, adaptadores]
+    estado: PROPUESTO
+  - nombre: Vision
+    funcion: Visión de coherencia (K_i, D_f, estado)
+    inyeccion: [memoria, adaptadores]
+    estado: PROPUESTO
+  - nombre: Polinizador
+    funcion: Distribuye bloques PPF entre instancias
+    inyeccion: [memoria, adaptadores]
+    estado: PROPUESTO
+reglas:
+  - Cada agente recibe memoria y adaptadores por inyección.
+  - Ningún agente guarda secretos; los secretos viven en el adaptador.
+  - Cada agente declara su estado epistémico (SÉ / INFIERO / CONJETURO / NO_SÉ).
