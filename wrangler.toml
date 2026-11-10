@@ -1,0 +1,24 @@
+# FranBot Worker — configuración de despliegue mínima
+# Los valores sensibles viven en .dev.vars (local) y GitHub Secrets (CI).
+# Este archivo NO contiene tokens.
+
+name = "franbot-worker"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Variables de entorno no sensibles
+[vars]
+ENTORNO = "produccion"
+ORACULO_URL = "https://fran-oraculo-miu.jaimepvicente.workers.dev"
+
+# Rutas (opcional, activar si se quiere servir en dominio propio)
+# routes = [
+#   { pattern = "franbot.example.com", custom_domain = true }
+# ]
+
+# Secrets requeridos (declarados, no almacenados aquí):
+#   TELEGRAM_TOKEN   -> bot de Telegram
+#   DRIVE_FOLDER_ID  -> carpeta Drive de ingesta
+#   GITHUB_TOKEN     -> solo en CI, no en runtime
+# Configurar con: wrangler secret put <NOMBRE>
