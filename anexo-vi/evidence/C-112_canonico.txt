@@ -1,0 +1,18 @@
+CANONICO DE AXIOMAS A0-A57 (ciclo 32, decision por coherencia, no por fecha)
+- Consolidado raiz: 20 Axiomas_A0-A57_58_Completos.md, 6.841 B (Vault raiz),
+  unico completo con los 58 axiomas (nombre + descripcion).
+  sha256 local (evidence/VAULT_axiomas_a0_a57.md): 5e30073cf29b
+- INDICE: INDICE_AXIOMAS_A0-A57.md, 627 B (Vault 20 Axiomas/),
+  resumen de 8/58 axiomas (A0-A4, A38, A42, A57), remite a
+  "Axiomas_Completo.md" (no encontrado en Drive).
+- Consolidado v10.5: A0-A57_58_Axiomas_COMPLETA_v10.5.md, 2.171 B,
+  probablemente extracto del consolidado raiz.
+- Las 3 fuentes son del 2026-09-25 (consolidado 02:23, INDICE 02:28,
+  v10.5 Doc 02:56, manifiesto v10.6 03:16). No hay canonico por fecha.
+- Canonico de trabajo: consolidado raiz (unico completo).
+- Canonico de indice: INDICE (refleja los 8 axiomas principales del Vault).
+- Canonico de validacion: NINGUNO. G07 sigue parcial.
+- Sin validacion externa: A10/A43 (K_i circular, HUESO #31, requiere PVE-01),
+  A29 (xi=8.57 sin DOI), A31 (predicciones w_a/S8/Suma m_nu sin hash congelado),
+  A21 (banda K_i CONJETURO).
+- Referencia: MIU#52 (K_i circular, 2026-07-10, ABIERTO), G09.
