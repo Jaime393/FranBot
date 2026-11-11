@@ -1,0 +1,9 @@
+No escritura (ciclo 43).
+Mensajes enviados a bots: 0. Pestanas del orquestador
+escritas: 0. Publicaciones Zenodo: 0. Issues/PRs creados: 0.
+Archivos de Drive modificados: 0. Solo lectura: getMe (6
+entradas telegram), getWebhookInfo, Sheets +read, Drive files
+get, Zenodo API publica (sin token), greps locales.
+Regla vigente: el micelio escribe solo; anexo-vi lee y
+sintetiza. Si algo necesita activarse: inmune o rebuscar,
+nunca a mano.
