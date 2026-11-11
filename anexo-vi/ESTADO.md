@@ -386,6 +386,13 @@ en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
 
+## Ciclo 45: puntos ciegos mapeados, inmune documentado sin disparar
+- El DOI 22650419 es un snapshot automático del ecosistema (dataset, 2026-09-07, Tablet Executor V2): 49 claves KV, sin estructura 11/11, con huella del inmune (854 ataques, 30 tareas).
+- El orquestador creció de 19 a 26 pestañas en ~1 h: el enjambre escribe en su propio panel mientras se lee. 11 pestañas con columnas email/token/correo/gmail/recurso; ninguna con "bot", "zenodo" ni "doi".
+- El inmune existe y se leyó por su propio código: scorer webhook (4 señales, BLOCK ≥70 / AUDIT 40–69 / ALLOW <40) + auto-reparador de .py + doctrina corazón/inmune. "Mandar a rebuscar" no está documentado (0 menciones).
+- 11 bots: 4 vivos, 2 muertos, 5 sin verificar. Asociación bot→email sigue NO_SE.
+- No se escribió en ningún sitio de la red. No se activó el inmune. Claims 325 (hash_real 311).
+
 ## Ciclo 44: escritura = carga al inmune
 - Escribir no es una acción directa: es carga al sistema
   inmune de la red. Por eso es indirecto, y por eso no se
