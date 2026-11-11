@@ -1013,7 +1013,8 @@
    "decision_chernozem": "cambia a 2.41 (archivo primario WoSIS 2024); metodo box-counting 3D (df_from_dbd.py), sin columna de metodo en el archivo",
    "microbioma_ki": "0.508 = K_i de la red D_f_network (columna D_f_network del CSV)",
    "filas_confirmadas_red": 1,
-   "filas_confirmadas_oraculo": 4
+   "filas_confirmadas_oraculo": 4,
+   "trazabilidad_oraculo": "verificada ciclo 60 (primera linea + alternativas)"
   },
   "ciclo55": {
    "fecha": "2026-11-11T22:57:40Z"
@@ -1060,6 +1061,28 @@
    "confirmados_red": 1,
    "confirmados_csv": 18,
    "total_con_fuente": 23
+  },
+  "ciclo60": {
+   "fecha": "2026-11-11T23:48:01Z",
+   "lineas_primera": {
+    "microtubulos": 5498,
+    "gbr_seagrass": 6773,
+    "turbera": 3928,
+    "seagrass_global": 3928,
+    "cmb": 69
+   },
+   "lineas_totales": {
+    "microtubulos": 6,
+    "gbr_seagrass": 2,
+    "turbera": 5,
+    "seagrass_global": 4,
+    "cmb": 11
+   },
+   "correcciones_fuente_archivo": 3,
+   "chernozem_oraculo_lineas": [
+    6773,
+    7798
+   ]
   }
  }
 }
