@@ -358,3 +358,11 @@ MIU_ORCHESTRATOR_V152_MAX_EXPANDED, 19 pestañas, solo lectura.
 G05 re-verificada sin escribir (getMe OK, webhook activo);
 mensaje de prueba NO enviado por regla. G05 PARCIAL.
 Claims 260 (hash_real 246).
+
+## Ciclo 42 (2026-11-11) — Zenodo buscado fuera del archivo, orquestador mapeado
+
+Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos locales
+mencionan la palabra, 0 contienen token; .db 0; Vault PVE-01
+0; orquestador muestra 0). Orquestador: 19 pestañas, 5 leídas,
+solo lectura. G05 re-verificada (3ª vez) sin escribir.
+Claims 275 (hash_real 261).
