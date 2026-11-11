@@ -1002,16 +1002,17 @@
     "gdelt_events_1979-2026.csv"
    ],
    "filas_confirmadas_csv": 18,
-   "filas_sin_csv": 5,
+   "filas_sin_csv": 4,
    "filas_discrepancia": 0,
    "fuente_archivo_columna": true,
-   "sin_csv_buscable": 5,
+   "sin_csv_buscable": 4,
    "archivos_datos_encontrados": 13,
    "sin_mencion_en_miu": 5,
    "decision_firms": "conserva 1.49 (serie anual); 1.969 espacial, sin conflicto",
    "reef_conteos": "no-nodo, sin fila",
    "decision_chernozem": "cambia a 2.41 (archivo primario WoSIS 2024); metodo box-counting 3D (df_from_dbd.py), sin columna de metodo en el archivo",
-   "microbioma_ki": "0.508 = K_i de la red D_f_network (columna D_f_network del CSV)"
+   "microbioma_ki": "0.508 = K_i de la red D_f_network (columna D_f_network del CSV)",
+   "filas_confirmadas_red": 1
   },
   "ciclo55": {
    "fecha": "2026-11-11T22:57:40Z"
@@ -1021,6 +1022,27 @@
   },
   "ciclo57": {
    "fecha": "2026-11-11T23:21:30Z"
+  },
+  "ciclo58": {
+   "fecha": "2026-11-11T23:35:54Z",
+   "drive_sin_datos": true,
+   "descargas": {
+    "microtubulos_pdb": "https://files.rcsb.org/download/3J6F.pdb",
+    "seagrass_gbr": "https://eatlas.org.au/data/uuid/77998615-bbab-4270-bcb1-96c46f56f85a",
+    "turbera_pangaea": "https://doi.org/10.1594/PANGAEA.927872"
+   },
+   "calculos": {
+    "microtubulos_CA": 1.772,
+    "microtubulos_todos": 1.909,
+    "seagrass_sitios": 1.1891,
+    "seagrass_praderas_fino": 1.9864,
+    "seagrass_praderas_rango": 1.9526,
+    "turbera_DBD": 1.0276,
+    "turbera_TC": 0.9863,
+    "turbera_TN": 0.6248
+   },
+   "confirmados_red": 1,
+   "sin_csv_buscable": 4
   }
  }
 }
