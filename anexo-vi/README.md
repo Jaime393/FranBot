@@ -97,4 +97,8 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 | c_definicion.md | c sin definición: papers sin c, candidatos fuera de banda (ciclo 37) | 2026-11-11 |
 | pve01_nombres.md | PVE-01 protocolo (60 en Vault) vs pve-01 Proxmox (ciclo 37) | 2026-11-11 |
 | pve_01_implementado.md | Estado PVE-01: ejecutado en GRACE real, forma 3 viable, G09 abierta por c sin definir (ciclo 34) | 2026-11-11 |
-| nutrientes_zombis_decision.md | 25 zombis clasificados: 13 único, 12 sin valor; frases verificadas, defecto no tocar nada, sin autorización (ciclos 34–38) | 2026-11-11 |
+| nutrientes_zombis_decision.md | 25 zombis podados ciclo 39: 13 movidos a historicos/, 12 borrados (autorización condicional del Jardinero) | 2026-11-11 |
+
+## Ciclo 39 (2026-11-11)
+
+Poda de zombis con núcleo digerido: 13 movidos a historicos/, 12 borrados (103.026 B). nutrientes/ 96 → 71. C30 sin período. Bot Telegram sin acceso. Claims 231 (hash_real 217).
