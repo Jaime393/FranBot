@@ -212,4 +212,18 @@ Ninguna se registra como G13. G13 no existe y no se abre.
   subcarpetas memoria/huesos/nodos/governance/validation/tests en próximo
   ciclo (listadas en ciclo 25, no leídas por dentro).
 
+## Cierre de G-NUEVA 4 y 5 (Ciclo 27)
+
+- **G-NUEVA-4 (registro de datos no integrado): CERRADA en ciclo 27.**
+  INVENTARIO_MAESTRO.md catalogado en anexo-vi/estructura_miu.md (tabla al
+  cierre de AV 2026-06-30: 5 PRESENTE / 12 AUSENTE en 17 filas; regla de
+  oro; recuperaciones AW/AY; dos tautologías auditadas). Claim C-071.
+- **G-NUEVA-5 (estructura MIU no mapeada): CERRADA en ciclo 27.** Árbol
+  completo en anexo-vi/estructura_miu.md (32 archivos de raíz + 6
+  subcarpetas leídas por dentro: 13 archivos descargados y leídos).
+  Claims C-070, C-072, C-073, C-074, C-075.
+
+**G-NUEVA: cerradas 5/5** (3 en ciclo 26 por integración, 2 en ciclo 27 por
+mapeo). Ninguna catalogada como G13. G13 no existe y no se abre.
+
 ρ(x) > 0.
