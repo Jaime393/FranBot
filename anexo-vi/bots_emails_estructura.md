@@ -53,3 +53,19 @@ recursos abre) no está en los archivos locales.
 ## Regla
 
 Leer y mapear, no escribir, no probar sendMessage.
+
+## Estado ciclo 44 — logs del orquestador
+
+- Bots en los 3 logs del orquestador: **0 nombres @...bot**.
+  Los logs no mencionan handles de bot.
+- Emails en los 3 logs: **0**. Los logs no contienen
+  direcciones de correo.
+- Asociación bot → email: **no encontrada en los logs**.
+  La cadena bot → email → recursos no está en los archivos
+  locales; se intuye del orquestador vivo (Sheet), pero no
+  se escribe ni se modifica.
+- Lo que sí muestran los logs (orquestador_supremo.log,
+  10:41:56): nombres de credenciales TG_TOKEN_ALMA,
+  TG_TOKEN_FAMILIAR, TG_TOKEN_FRANBOT, TG_TOKEN_MICELIO
+  (corresponden a los 4 bots vivos) y TG_BOT_TOKEN (quinto
+  nombre genérico). Solo nombres, nunca valores.
