@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T17:28:31Z",
+ "last_seen": "2026-11-11T17:49:10Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -412,7 +412,27 @@
   "forma_viable": "3 (T*tanh(P))",
   "formas_1_2": "identicas (0.618*1.618=0.999924)",
   "diferencia_vs_df": "+18.3% (D_f=2.0), -5.4% (D_f=2.5)",
-  "g09": "abierta: c sin definir en el Vault"
+  "g09": "ABIERTA POR AMBIGUEDAD (ciclo 35)",
+  "c_vault": "NO_DEFINIDO (version GRACE); definido solo en version router (c=carga [0,1])",
+  "barrido_c": {
+   "valores": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0
+   ],
+   "rango_estable": [
+    2.5,
+    4.0
+   ],
+   "umbral_continuo": 2.0025,
+   "c_elegido": 2.5,
+   "ki_c2.5": 0.5835
+  }
  },
  "nutrientes_buzon_2026_11_11": {
   "archivo": "nutrientes_buzon.md",
@@ -425,7 +445,10 @@
    "archivo": "nutrientes_zombis_decision.md",
    "historico_unico": 13,
    "irrecuperables": 12,
-   "recomendacion": "mover los 25 a historicos/"
+   "recomendacion": "mover los 25 a historicos/",
+   "frase_mover": true,
+   "frase_borrar": true,
+   "opcion_defecto": "no tocar nada"
   }
  },
  "higiene_2026_11_11": {
@@ -442,6 +465,22 @@
   "total_claims": 155,
   "hash_real": 141,
   "g09": "abierta: c sin definir",
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "ciclo35_2026_11_11": {
+  "c_vault": "C_NO_DEFINIDO_EN_VAULT (GRACE)",
+  "barrido": "8 valores, forma 3",
+  "rango_estable": [
+   2.5,
+   4.0
+  ],
+  "ki_c2.5": 0.5835,
+  "g09": "ABIERTA POR AMBIGÜEDAD",
+  "zombis": "frases verificadas, defecto no tocar nada",
+  "claims": "C-156 a C-170 (15 SE)",
+  "total_claims": 170,
+  "hash_real": 156,
   "g05": "ABIERTA",
   "g07": "parcial"
  }
