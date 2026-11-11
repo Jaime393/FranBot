@@ -1002,17 +1002,18 @@
     "gdelt_events_1979-2026.csv"
    ],
    "filas_confirmadas_csv": 18,
-   "filas_sin_csv": 4,
+   "filas_sin_csv": 0,
    "filas_discrepancia": 0,
    "fuente_archivo_columna": true,
-   "sin_csv_buscable": 4,
+   "sin_csv_buscable": 0,
    "archivos_datos_encontrados": 13,
    "sin_mencion_en_miu": 5,
    "decision_firms": "conserva 1.49 (serie anual); 1.969 espacial, sin conflicto",
    "reef_conteos": "no-nodo, sin fila",
    "decision_chernozem": "cambia a 2.41 (archivo primario WoSIS 2024); metodo box-counting 3D (df_from_dbd.py), sin columna de metodo en el archivo",
    "microbioma_ki": "0.508 = K_i de la red D_f_network (columna D_f_network del CSV)",
-   "filas_confirmadas_red": 1
+   "filas_confirmadas_red": 1,
+   "filas_confirmadas_oraculo": 4
   },
   "ciclo55": {
    "fecha": "2026-11-11T22:57:40Z"
@@ -1043,6 +1044,22 @@
    },
    "confirmados_red": 1,
    "sin_csv_buscable": 4
+  },
+  "ciclo59": {
+   "fecha": "2026-11-11T23:43:53Z",
+   "oraculo_sha256": "4318fb888f7e5f9241d31bf42058a88ba85a682df83409b1e426f44256505889",
+   "oraculo_bytes": 2009173,
+   "oraculo_lineas": {
+    "microtubulos": 7269,
+    "gbr_seagrass": 7798,
+    "turbera": 7798,
+    "seagrass_global": 5498,
+    "cmb": 69
+   },
+   "confirmados_oraculo": 4,
+   "confirmados_red": 1,
+   "confirmados_csv": 18,
+   "total_con_fuente": 23
   }
  }
 }
