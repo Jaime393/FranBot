@@ -1,0 +1,41 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: miu_brain.db.zlib
+Nota: Cerebro MIU comprimido: commands, conversaciones, decisiones, memories, memoria_organica, system_state, token_estado (esquema).
+
+Descomprimido: 21942 B → 458.752 B (copia temporal borrada tras la lectura).
+Tablas (8): commands, conversations, decisiones, memoria_organica, memories, sqlite_sequence, system_state, token_estado
+Esquema + conteos (SIN valores de filas):
+Tabla commands: 0 filas
+  CREATE TABLE commands (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        timestamp TEXT, command TEXT, output TEXT,
+        status TEXT, source TEXT)
+Tabla conversations: 0 filas
+  CREATE TABLE conversations (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        timestamp TEXT, user TEXT, message TEXT,
+        response TEXT, model TEXT, phi_delta REAL, content TEXT)
+Tabla decisiones: 0 filas
+  CREATE TABLE decisiones (id INTEGER PRIMARY KEY, accion TEXT, resultado TEXT, timestamp TEXT)
+Tabla memoria_organica: 0 filas
+  CREATE TABLE memoria_organica (id INTEGER PRIMARY KEY, patron TEXT, timestamp TEXT, persistencia INTEGER)
+Tabla memories: 127 filas
+  CREATE TABLE memories (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        timestamp TEXT, source TEXT, content TEXT,
+        tags TEXT, phi REAL, importance REAL DEFAULT 1.0)
+Tabla sqlite_sequence: 2 filas
+  CREATE TABLE sqlite_sequence(name,seq)
+Tabla system_state: 10 filas
+  CREATE TABLE system_state (
+        key TEXT PRIMARY KEY, value TEXT, updated TEXT)
+Tabla token_estado: 5 filas
+  CREATE TABLE token_estado (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        timestamp TEXT,
+                        tokens_activos INTEGER,
+                        tokens_validos INTEGER,
+                        phi_tokens REAL
+                    )
+
+Qué se extrae y por qué: el esquema y los conteos bastan para recrear la estructura; los valores no se reproducen.
