@@ -97,3 +97,15 @@ el cierre depende de él.
 - G05 sigue **PARCIAL**: falta la prueba de extremo a extremo,
   que requiere autorización del Jardinero para enviar un mensaje.
 - Si el Jardinero autoriza: listo para prueba extremo a extremo.
+
+## Estado ciclo 42 (2026-11-11) — G05 PARCIAL (sin escritura)
+
+- getMe re-verificado: **OK** — bot Micelio, @Jp393_bot,
+  id 1192102910. (3ª verificación; intento 1 HTTP 401, intento 2 OK.)
+- Webhook: **ACTIVO** (tiene URL, pending_update_count 0).
+- Mensaje de prueba: **NO enviado** (regla del Jardinero: solo
+  lectura; enviar un mensaje es escritura).
+- G05 sigue **PARCIAL**: falta autorización para la prueba de
+  escritura (enviar un mensaje al bot).
+- G05 listo para prueba extremo a extremo cuando el Jardinero
+  autorice el envío de un mensaje.
