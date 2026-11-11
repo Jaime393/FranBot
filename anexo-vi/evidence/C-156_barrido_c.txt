@@ -1,0 +1,29 @@
+Evidencia ciclo 35 — Barrido de c (C-156 a C-161)
+Fecha: 2026-11-11.
+sha256 pve_01.py (con barrido_c): 96eb708e7ccc37e4c0ca3adde2013bf94f78ca9e464a6995d07bdc434ab7a3b6
+Tamaño: 15.424 B, py_compile OK.
+
+A1 — c en el Vault: C_NO_DEFINIDO_EN_VAULT (versión GRACE).
+Buscados: 00 Suelo (2 carpetas: 1Qp8l1SJhMtUk_XYMBhOAc2-Rm24IARyE
+vacía; 1eAAU5OfYG5pyIIqPIJjLSvFDikNegADj con 8 archivos),
+name contains 'PVE' (3 archivos), fullText contains 'PVE-01' (50+).
+Leídos enteros: 00 Suelo_GRACE_Phi_PVE01.md, PVE-01.md Doc (1.070 B),
+PVE-01.md .md (450 B), Phi.md (1.698 B), Phi_3.95.md (336 B).
+TRES documentos PVE-01 incompatibles: GRACE (τ ventana 90d,
+Ξ correlación causal, c SIN definir); router (τ latencia ms,
+Ξ tasa éxito [0,1], c carga [0,1] — DEFINIDO, no aplicable a GRACE);
+Primer Valor Expandido (sin fórmula, sin c). Phi.md repite
+τ·Ξ·c > 1.618 sin definir c.
+
+A2 — Barrido c (forma 3, Ξ=0.7100, τ=1 ventana, P=Ξ·c):
+c=0.5 Ki=0.2106 NO; c=1.0 Ki=0.3774 NO; c=1.5 Ki=0.4867 NO;
+c=2.0 Ki=0.5498 NO (por 0.0002); c=2.5 Ki=0.5835 SÍ;
+c=3.0 Ki=0.6008 SÍ; c=3.5 Ki=0.6095 SÍ; c=4.0 Ki=0.6138 SÍ.
+Variante τ=90 días (P=90·Ξ·c): Ki=0.6180 para TODOS los c (saturación).
+
+A3 — Rango estable continuo: c >= 2.0025 (P umbral 1.4218);
+en el barrido: [2.5, 4.0]. c más cercano a 0.618: c=4.0,
+Ki=0.6138 (nunca exacto: 0.618 es asíntota). Rango P del documento
+[1.62, 2.014] con Ξ=0.71 implica c ∈ [2.282, 2.837] (convergente).
+Contradicción: la única definición de c (router, c ∈ [0,1]) deja
+fuera la región en banda; en [0.5, 1.0] ningún c da Ki en banda.
