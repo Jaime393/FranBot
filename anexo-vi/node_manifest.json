@@ -975,6 +975,24 @@
   },
   "ciclo54": {
    "fecha": "2026-11-11T22:33:20Z"
+  },
+  "dataset_cruzado_csv": {
+   "fecha": "2026-11-11T22:57:40Z",
+   "csv_leidos": [
+    "fiji_wcs_macmon.csv",
+    "jamaica_agrra.csv",
+    "palk_bay_zsi2013.csv",
+    "allen_atlas_site_013.csv",
+    "reef_conteos_miu.csv",
+    "firms_df_Ki.csv"
+   ],
+   "filas_confirmadas_csv": 3,
+   "filas_sin_csv": 18,
+   "filas_discrepancia": 2,
+   "fuente_archivo_columna": true
+  },
+  "ciclo55": {
+   "fecha": "2026-11-11T22:57:40Z"
   }
  }
 }
