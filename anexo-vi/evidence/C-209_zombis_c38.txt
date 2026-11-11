@@ -1,0 +1,21 @@
+Evidencia ciclo 38 — Zombis ciclo 38 (C-209 a C-210)
+Fecha: 2026-11-11.
+
+B1 — Frases literales (nutrientes_zombis_decision.md, líneas 107
+y 111, verificadas ciclos 35, 37 y 38):
+- Mover: "Autorizo mover los 25 zombis a
+  MIU_ABSORBIDO/nutrientes/historicos/"
+- Borrar: "Autorizo borrar los 12 zombis de
+  MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
+
+B2 — ¿Autorizó el Jardinero? NO (ciclos 37 y 38).
+Búsqueda en historial y memoria repetida en ciclo 38. Las frases
+aparecen citadas en los textos de los ciclos 37 y 38 (tarea B1:
+"reporta literalmente"), que son órdenes de REPORTAR, no de
+ejecutar. Las palabras propias del Jardinero en el mensaje del
+ciclo 38 son: "sin ella no se tocan". Ningún mensaje suyo dice
+las frases como decisión propia.
+
+B3 — Documento actualizado con sección "Estado ciclo 38: pendiente
+de autorización". Opción por defecto: no tocar nada. Nada movido
+ni borrado. Zombis intactos.
