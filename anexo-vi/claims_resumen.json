@@ -1,20 +1,20 @@
 {
-  "total": 170,
+  "total": 185,
   "por_estado": {
     "CONJETURO": 16,
     "INFIERO": 2,
-    "SE": 146,
+    "SE": 161,
     "REFUTADO": 2,
     "NO_SE": 4
   },
   "por_tipo": {
     "prediccion": 8,
     "provenance": 18,
-    "digestion": 144
+    "digestion": 159
   },
   "por_grieta": {
     "G03": 7,
-    "G09": 34,
+    "G09": 49,
     "G01": 1,
     "G12": 4,
     "G05": 23,
@@ -26,7 +26,7 @@
     "G-NUEVA: estructura MIU no mapeada en anexo-vi": 48,
     "G07": 12
   },
-  "hash_real": 156,
+  "hash_real": 171,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -198,6 +198,21 @@
     "C-167",
     "C-168",
     "C-169",
-    "C-170"
+    "C-170",
+    "C-171",
+    "C-172",
+    "C-173",
+    "C-174",
+    "C-175",
+    "C-176",
+    "C-177",
+    "C-178",
+    "C-179",
+    "C-180",
+    "C-181",
+    "C-182",
+    "C-183",
+    "C-184",
+    "C-185"
   ]
 }
