@@ -1,0 +1,46 @@
+Evidencia ciclo 36 — Búsqueda exhaustiva de c (C-171 a C-175)
+Fecha: 2026-11-11.
+
+A1 — Vault (Drive):
+- 00 Suelo: 2 carpetas (1Qp8l1SJhMtUk_XYMBhOAc2-Rm24IARyE vacía;
+  1eAAU5OfYG5pyIIqPIJjLSvFDikNegADj con 8 archivos, ya leídos ciclo 35).
+- name contains 'PVE': 3 archivos (ciclo 35).
+- fullText contains 'PVE-01': 50+ menciones (ciclo 35).
+- fullText contains 'asíntota': 6 hits (partituras P80-20/P78-08,
+  almas-especialistas.js x2, FranBot zips x2) — nada sobre Ki/PVE-01.
+- fullText contains 'carga': 20 hits (router_v91.py, router_carga.py,
+  nodo_B_V91, optimizar_carga.sh, CICLO_11 router darwiniano,
+  sensorium, auto_escalado, partituras) — dominio router.
+- name contains 'GRACE': 50 archivos (partituras TWS tejedor agua
+  en prosa; validar_grace_v1.py 419 B sin mención de PVE-01/c/Ki;
+  GRACE_TN14_REAL.md; 00 Suelo_GRACE_Phi_PVE01.md).
+- router_carga.py (3.261 B): router de carga (ram, red, enrutar);
+  sin definición de Ki/c para GRACE.
+- HALLAZGOS corrección Ki (5.499 B, vía get; export 403):
+  K_i RECHAZADA como métrica de validación en NUCLEO_TEORICO_MIU;
+  "PVE-01 pendiente" (1 mención); sin definición de c.
+
+A4 — Otras carpetas:
+- 30 Red Micelial (1IKbcyd0AjAxrFg6rI_5iZQ46AshR5Tvp): 2 subcarpetas
+  (5_Hilos, Hilo_Tecnico); sin papers, sin PVE/Grace.
+- 40 Global Mind (15x9zZI9Zdg17YmqrU00vfl8zQ1Ym49av): 0 elementos.
+- name contains 'paper': 11 hits; carpetas 'paper' (2): Grimorio
+  v12 tex/pdf (4 archivos) y paper.md/paper.bib (2 archivos).
+  Sin definición de c para GRACE.
+- name contains 'publication': 2 hits (IFT Complete Publication
+  pdf/zip). Sin relación con PVE-01/c.
+
+A2 — Issues Jaime393/MIU (search_issues, 4 queries): total_count 0
+en las 4 ("PVE-01", "parámetro c", "GRACE", "carga"). La herramienta
+funciona (ciclo 30: "K_i" → MIU#52). Ningún issue define c.
+
+A3 — Commits Jaime393/MIU (search_commits): sin qualifier repo la
+búsqueda es GLOBAL (PVE-01: 20.626 hits, primer hit Proxmox
+"pve-01" homelab; "parámetro c": 15.206 hits, primer hit
+centauroads-links) — contaminación por homónimos. Con qualifier
+repo:Jaime393/MIU: total_count 0 en ambas queries.
+
+A5 — Decisión: C_NO_DEFINIDO_PARA_GRACE. Definiciones incompatibles
+múltiples (GRACE sin definir; router c=carga [0,1]; Primer Valor
+sin fórmula; Proxmox pve-01 homónimo). El Vault no resuelve el
+conflicto. Pasa a Frente B.
