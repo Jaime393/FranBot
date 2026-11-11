@@ -1,23 +1,23 @@
 {
-  "total": 325,
+  "total": 345,
   "por_estado": {
-    "CONJETURO": 19,
+    "CONJETURO": 21,
     "INFIERO": 2,
-    "SE": 294,
+    "SE": 312,
     "REFUTADO": 2,
     "NO_SE": 8
   },
   "por_tipo": {
     "prediccion": 8,
     "provenance": 18,
-    "digestion": 299
+    "digestion": 319
   },
   "por_grieta": {
     "G03": 7,
     "G09": 69,
     "G01": 1,
     "G12": 4,
-    "G05": 46,
+    "G05": 47,
     "G-NUEVA: protocolos Drive no integrados en anexo-vi": 11,
     "G-NUEVA: pilares auditados no integrados en anexo-vi": 13,
     "G-NUEVA: registro de datos no integrado en anexo-vi": 2,
@@ -28,15 +28,15 @@
     "G-NUEVA-ZOMBI": 28,
     "G-NUEVA: sondeo formatos": 5,
     "G-NUEVA: conectores": 4,
-    "G-NUEVA: orquestador": 12,
+    "G-NUEVA: orquestador": 19,
     "G-NUEVA: zenodo": 12,
     "G-NUEVA: bots": 11,
     "G-NUEVA: no-escritura": 2,
-    "G-NUEVA: inmune": 9,
-    "G-NUEVA: snapshot": 4,
+    "G-NUEVA: inmune": 17,
+    "G-NUEVA: snapshot": 8,
     "G-NUEVA: ciegos": 4
   },
-  "hash_real": 311,
+  "hash_real": 331,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -363,6 +363,26 @@
     "C-322",
     "C-323",
     "C-324",
-    "C-325"
+    "C-325",
+    "C-326",
+    "C-327",
+    "C-328",
+    "C-329",
+    "C-330",
+    "C-331",
+    "C-332",
+    "C-333",
+    "C-334",
+    "C-335",
+    "C-336",
+    "C-337",
+    "C-338",
+    "C-339",
+    "C-340",
+    "C-341",
+    "C-342",
+    "C-343",
+    "C-344",
+    "C-345"
   ]
 }
