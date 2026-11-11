@@ -1,0 +1,15 @@
+CICLO 45 - FRENTE C - 11 bots (sin nuevas pruebas getMe; ciclo 43 probo las 6 entradas del archivo)
+vivos verificados (getMe, ciclo 43): 4
+- Micelio @Jp393_bot id 1192102910 (webhook activo, pending 0)
+- Familiares @FranFamiliar_bot id 8797590786
+- franbot_tablet_bot @franbottablet_bot id 8807634087
+- AlmaOmni_Bot @AlmaOmni_bot id 8948991067
+muertos (HTTP 401, ciclo 43): 2
+sin verificar: 5 (11 afirmados - 6 probados; sin token en el archivo local)
+los "7 fuera del corpus" del ciclo 43 = 2 muertos + 5 sin verificar
+mencionados en archivos locales: 5 (4 vivos + @FranSell_Bot, sin token vivo)
+orquestador: sin columna "bot" en ningun encabezado (0 de 26); muestra sin celdas bot
+snapshot 22650419: menciones bot 2, telegram 0; sin lista de bots
+emails: 89 unicos en archivos locales (87 gmail, 1 fosstodon, 1 artefacto); direcciones no reproducidas
+asociacion bot -> email -> recursos: NO encontrada (orquestador muestra sin datos, snapshot sin estructura, logs 0)
+no se envio ningun mensaje a ningun bot (regla: no escribir)

@@ -1,0 +1,21 @@
+CICLO 46 - FRENTE A - Carpeta del inmune (Drive, solo lectura)
+carpeta: -miu-sistema-inmune-cmr4wii778hcs0pm4370ufwn4 (3 archivos)
+workflow.json: 21.561 B en Drive (11.815 B normalizado local, sin retrieved_at)
+- export Relay, exportVersion 1.0, exportada 2026-07-10T19:10:20Z, revision 89, tipo PLUSPLUS
+- claves primer nivel: exportVersion, exportedAt, metadata, workflow
+- 3 hilos, 8 pasos: hilo 1 (webhook POST trigger, AI Cerberus relay.gpt-5.4-mini, branching, http.respond 200); hilo 2 THREAT (github.createIssue, Telegram Alerta ROJA, ingesta ISSUE); hilo 3 (ingesta LOG seguro)
+- triggers: solo webhook POST; sin cron
+- scorer: no hay modulo llamado scorer; la puntuacion la hace el prompt IA (4 senales 35/30/25/15; BLOCK >=70, AUDIT 40-69, ALLOW <40)
+- rama THREAT a score >= 50 (dentro de la banda AUDIT; discrepancia con BLOCK 70)
+- menciones: rebuscar 0, reparar 0, ADN 0, inmunidad_adn 0, BLOCK 2, AUDIT 2, ALLOW 2, score 7
+- URL de trigger del webhook NO reproducida (URL de capacidad)
+prompt.md: 4.841 B
+- doctrina: webhook -> IA evalua -> actua segun score; apps GitHub, Telegram, Webhook
+- paso 1 AI Prompt: "Eres el Sistema Inmune del Micelio MIU..."; respuesta JSON score/decision/signals/reason/telegram_msg
+- paso 2 branching: THREAT >=50: issue GitHub Jaime393/MIU + alerta Telegram (secreto almacenado de nombre TELEGRAM_BOT_MIU, solo nombre; chat_id no reproducido) + ingesta ISSUE (estado ROJO, nivel SE); fallback: ingesta LOG (estado VERDE)
+- paso 3: respuesta 200 JSON (score, reason, decision, signals)
+- menciones: rebuscar 0, reparar 0, ADN 0
+- doctrina corazon/inmune NO esta en este prompt (esta en el Doc Ciclo Autonomo, ciclo 45)
+run_history.csv: 79 B, solo encabezado (Run ID, Name, Status, Steps Completed, AI Credits, Created At, Last Updated, Test Run), 0 filas de datos
+veredicto rebuscar: NO documentado; el inmune del webhook solo bloquea/audita/permite
+escaneo secretos: 0 patrones en los 3 archivos

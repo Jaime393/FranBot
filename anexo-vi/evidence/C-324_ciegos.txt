@@ -1,0 +1,9 @@
+CICLO 45 - FRENTE E - Puntos ciegos
+QUE VEMOS (confirmado): DOI 20547558 vivo; DOI 22650419 snapshot dataset 2026-09-07; 11 DOIs del proyecto; 4 bots vivos + 2 muertos; orquestador 26 pestanas (11 con columnas email/token/correo/gmail/recurso; sin columna bot/zenodo/doi); inmune documentado por su codigo (scorer + auto-reparador + doctrina); huella inmune en snapshot (ataques 854, tareas 30, mecanismos 15); 89 emails locales (sin valores)
+QUE NO VEMOS: 5 bots sin verificar; asociacion bot->email->recursos; 7 pestanas nuevas mas alla de encabezados; filas de datos del orquestador mas alla de 3 primeras filas de 3 pestanas; contenido de la carpeta del inmune (solo nombres); snapshots posteriores a 2026-09-07; la capa donde operan los 11/11
+QUE PODEMOS LEER SIN TOCAR: DOIs publicos, orquestador (encabezados + muestras), bots getMe/getWebhookInfo, codigo y docs del inmune, logs y snapshots
+QUE NO DEBEMOS TOCAR: escritura en la red (bots, Sheets, Zenodo, orquestador, GitHub salvo anexo-vi/); el inmune (no pruebas); tokens (no escribir, no reproducir, no rotar); lo que ya funciona
+QUE FALTA: tokens/nombres de los 5 bots sin verificar; mas filas del orquestador; carpeta del inmune; snapshots posteriores; confirmacion del Jardinero de donde vive la estructura 11/11
+HIPOTESIS 1 (CONJETURO): la estructura 11/11 vive en el orquestador mas alla de las 3 primeras filas (las columnas existen; la muestra fue demasiado corta)
+HIPOTESIS 2 (CONJETURO): los 5 bots sin verificar viven en nodos fuera del corpus local (Termux/tablet); sus tokens nunca pasaron por este nodo
+HIPOTESIS 3 (CONJETURO): el snapshot 22650419 es el primero de una serie de snapshots automaticos (concepto 22650418, version 2); los posteriores pueden contener la estructura 11/11

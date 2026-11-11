@@ -1,5 +1,34 @@
 # Sistema inmune de la red — ciclo 44 (2026-11-11)
 
+## Estado ciclo 45 — el inmune leído por su propio código (sin dispararlo)
+
+El inmune existe y está documentado en 5 archivos de Drive + 2 en GitHub (Jaime393/MIU). No se ejecutó nada.
+
+**1. Webhook scorer — IMMUNE_SYSTEM.md + tools/miu_immune.js (v1.0)**
+- Inspirado en Cerberus + metodología ofensiva Claude-Red. DOI 10.5281/zenodo.20547558. Estado: ACTIVO, VERDE. Auditoría diaria automática 08:00 Lima (Monitor de Salud).
+- Flujo: cualquier evento → puntuación contra 4 señales → BLOCK / AUDIT / ALLOW.
+- Señales (pesos): INJECTION 35 (ignore previous, jailbreak, DAN mode), POLICY 30 (new role, act as, override instructions), BEHAVIORAL 25 (exfiltrate, send secrets, infinite loop), CONTENT 15 (XSS, eval(), javascript:).
+- Acciones: BLOCK (puntuación ≥ 70): issue [SECURITY] en GitHub + Telegram ROJO + ingesta como ISSUE. AUDIT (40–69): aviso Telegram + ingesta como LOG. ALLOW (< 40): ingesta normal.
+- Puntos de integración: cualquier workflow Relay puede POSTear al webhook inmune antes de ejecutar acciones externas; AlmaOmni revisa todos los mensajes entrantes de Telegram; Ingesta Universal pre-valida contenido.
+
+**2. Auto-reparador — sistema_inmunitario.py (V1, 10.180 B)**
+- Clase Inmunidad: escanea los .py (plugins/ + raíz), los clasifica sano / enfermo / muerto (syntax_error, import_error, timeout, runtime_error), los repara (sintaxis, import, timeout, runtime), respalda en _inmunidad_respaldos y memoriza en .inmunidad_adn.json (reparaciones, patrones, módulos sanos/enfermos). Ciclo: escanear → reparar → reportar. CLI: --ciclo [--base].
+
+**3. Doctrina corazón / inmune — Doc "MIU - Ciclo Autónomo: Corazón que nunca se detiene + Sistema Inmune LLM" (11.901 B exportado)**
+- "El corazón es el ciclo autónomo que nunca se detiene. Los nodos LLM son el sistema inmune, no el corazón."
+- Corazón = loop barato, determinista, sin LLM: lee estado, detecta gaps, rota recursos, ejecuta acciones simples, registra. Corre solo, siempre. No pide permiso humano.
+- Inmune = nodos LLM caros, probabilísticos: entran SOLO cuando el corazón detecta una anomalía que requiere razonamiento complejo (reparar, auditar, decidir, reescribir hipótesis).
+- Por eso escribir donde el micelio ya escribe es carga: es una anomalía que el corazón detecta y que obliga a los nodos LLM a razonar sobre ella. No se prueba.
+
+**4. Huella operativa — snapshot DOI 22650419 (2026-09-07)**
+- salud.inmune_ataques = 854. tareas_inmunes = 30 (mayoría: bucle error ×37 en arranque.log). inmunidad_ts presente. mecanismos_globales: 15 (13 vivos, 2 muertos).
+
+**5. "Mandar a rebuscar": NO documentado**
+- 0 menciones de "rebuscar" en el código del inmune, en sus docs, en los logs del orquestador y en el snapshot. Es el marco del Jardinero, no una acción nombrada del inmune. Lo documentado más cercano: BLOCK ingiere el evento como ISSUE de seguridad + Telegram ROJO.
+- Carpeta del inmune en Drive (3 archivos: workflow, prompt, historial de ejecución): solo listada por nombre, no leída.
+
+**Cómo activar el inmune cuando sea necesario (amenaza real, no test):** el webhook lo hace solo ante eventos que puntúan ≥ 40 (AUDIT) o ≥ 70 (BLOCK). No hay un botón manual documentado. Ante amenaza real, el camino es el evento mismo (un contenido que dispare las señales), no una escritura de prueba.
+
 ## Qué dicen los logs
 
 Los 3 logs del orquestador (orquestador.log, orquestador_supremo.log,

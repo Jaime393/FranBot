@@ -386,6 +386,18 @@ en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
 
+## Ciclo 46: carpeta del inmune abierta, snapshots sin serie, orquestador filas 4-30
+- Inmune leído por su carpeta: workflow.json Relay (revisión 89, 2026-07-10, 3 hilos, 8 pasos, trigger webhook POST, modelo relay.gpt-5.4-mini); rama THREAT a score ≥50 (dentro de la banda AUDIT, no solo BLOCK ≥70). "Rebuscar" 0 menciones en workflow y prompt. run_history.csv vacío (0 filas).
+- Snapshots: concepto 22650418 existe, 1 sola versión (2026-09-07). 0 snapshots posteriores. La serie es de 1: la hipótesis C-325 no se confirma.
+- Orquestador filas 4–30 (autorizado): 171 filas con datos en 11 pestañas. Estructura 11/11 PARCIAL: 16 emails distintos, 7 bots distintos, 12 filas con bot+email. 4 pestañas saturaron el rango (más datos bajo fila 30). Claims 345 (hash_real 331).
+
+## Ciclo 45: puntos ciegos mapeados, inmune documentado sin disparar
+- El DOI 22650419 es un snapshot automático del ecosistema (dataset, 2026-09-07, Tablet Executor V2): 49 claves KV, sin estructura 11/11, con huella del inmune (854 ataques, 30 tareas).
+- El orquestador creció de 19 a 26 pestañas en ~1 h: el enjambre escribe en su propio panel mientras se lee. 11 pestañas con columnas email/token/correo/gmail/recurso; ninguna con "bot", "zenodo" ni "doi".
+- El inmune existe y se leyó por su propio código: scorer webhook (4 señales, BLOCK ≥70 / AUDIT 40–69 / ALLOW <40) + auto-reparador de .py + doctrina corazón/inmune. "Mandar a rebuscar" no está documentado (0 menciones).
+- 11 bots: 4 vivos, 2 muertos, 5 sin verificar. Asociación bot→email sigue NO_SE.
+- No se escribió en ningún sitio de la red. No se activó el inmune. Claims 325 (hash_real 311).
+
 ## Ciclo 44: escritura = carga al inmune
 - Escribir no es una acción directa: es carga al sistema
   inmune de la red. Por eso es indirecto, y por eso no se
