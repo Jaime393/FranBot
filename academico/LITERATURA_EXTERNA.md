@@ -66,6 +66,21 @@ Candidatos inspeccionados (cabecera: primera línea o primeros 500 bytes, repo J
 
 Conteos: CSV con D_f 6, JSON con D_f 0, PY con D_f 3. Los 6 CSV y los 3 PY están en Jaime393/MIU, carpeta MIU_V12.0_FINAL (datos de nodos y código) y nodos/. Los archivos CSV de corales (Fiji, Jamaica, Palk Bay, Allen Atlas) y el de FIRMS corresponden a filas del dataset academico/dataset_nodos_Df.csv (23 filas): son las fuentes de datos en GitHub, no en Termux. No se leyó el contenido completo de ningún CSV: solo cabeceras. Los demás archivos allen_atlas_site_*.csv comparten carpeta y nombre; solo la cabecera de site_013 está verificada.
 
+## CSV reales con D_f en GitHub (ciclo 55)
+
+Leídos completos el 2026-11-11 desde Jaime393/MIU (rama main). Cada CSV tiene cabecera + 1 fila de datos.
+
+| CSV | Ruta | Filas | Columna D_f | D_f únicos | Corrobora dataset |
+|---|---|---|---|---|---|
+| fiji_wcs_macmon.csv | MIU_V12.0_FINAL/nodos/corales/fiji_wcs_macmon.csv | 1 | D_f | 1.96 | sí (Fiji 1.96) |
+| jamaica_agrra.csv | MIU_V12.0_FINAL/nodos/corales/jamaica_agrra.csv | 1 | D_f | 1.98 | sí (Jamaica 1.98) |
+| palk_bay_zsi2013.csv | MIU_V12.0_FINAL/nodos/corales/palk_bay_zsi2013.csv | 1 | D_f | 1.86 | sí (Palk Bay 1.86) |
+| allen_atlas_site_013.csv | MIU_V12.0_FINAL/nodos/corales/allen_atlas_site_013.csv | 1 | D_f | 2.0 | parcial (dataset Caribe SE 2.08; el archivo es un solo sitio, no el agregado) |
+| reef_conteos_miu.csv | MIU_V12.0_FINAL/nodos/corales/reef_conteos_miu.csv | 1 | D_f | 1.6 | no (ninguna fila del dataset tiene D_f 1.6; 12.805 polígonos, 2020) |
+| firms_df_Ki.csv | MIU_V12.0_FINAL/nodos/clima/firms_df_Ki.csv | 1 | D_f | 1.9690764062597914 | no (dataset Incendios 1.49; discrepancia anotada, valor sin tocar) |
+
+Cruce total: 3 confirmados, 2 discrepancias, 18 sin CSV. Ningún valor del dataset cambió.
+
 ## Citas al MIU en Crossref
 
 Resultado: 0 citas. Crossref devuelve 20 resultados para 'Monismo Informacional Unificado'; ninguno cita el MIU (monismo filosófico: anómalo, semántico, estético, transcendentalista). Ciclo 53.
