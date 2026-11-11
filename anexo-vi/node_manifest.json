@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T17:49:10Z",
+ "last_seen": "2026-11-11T17:58:53Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -412,8 +412,8 @@
   "forma_viable": "3 (T*tanh(P))",
   "formas_1_2": "identicas (0.618*1.618=0.999924)",
   "diferencia_vs_df": "+18.3% (D_f=2.0), -5.4% (D_f=2.5)",
-  "g09": "ABIERTA POR AMBIGUEDAD (ciclo 35)",
-  "c_vault": "NO_DEFINIDO (version GRACE); definido solo en version router (c=carga [0,1])",
+  "g09": "CERRADA PARCIALMENTE (ciclo 36)",
+  "c_vault": "C_NO_DEFINIDO_PARA_GRACE (busqueda exhaustiva ciclo 36)",
   "barrido_c": {
    "valores": [
     0.5,
@@ -432,7 +432,12 @@
    "umbral_continuo": 2.0025,
    "c_elegido": 2.5,
    "ki_c2.5": 0.5835
-  }
+  },
+  "asintota": 0.618,
+  "rango_ki": [
+   0.2106,
+   0.618
+  ]
  },
  "nutrientes_buzon_2026_11_11": {
   "archivo": "nutrientes_buzon.md",
@@ -481,6 +486,21 @@
   "claims": "C-156 a C-170 (15 SE)",
   "total_claims": 170,
   "hash_real": 156,
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "ciclo36_2026_11_11": {
+  "c_vault": "C_NO_DEFINIDO_PARA_GRACE",
+  "asintota": 0.618,
+  "correccion": "0.6138 era Ki en c=4.0, no la asintota",
+  "rango_ki": [
+   0.2106,
+   0.618
+  ],
+  "g09": "CERRADA PARCIALMENTE",
+  "claims": "C-171 a C-185 (15 SE)",
+  "total_claims": 185,
+  "hash_real": 171,
   "g05": "ABIERTA",
   "g07": "parcial"
  }
