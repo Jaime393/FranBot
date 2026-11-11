@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T22:10:00Z",
+  "last_seen": "2026-11-11T22:21:42Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -912,7 +912,7 @@
     "hash_real": 351
   },
   "academico": {
-    "fecha": "2026-11-11T22:10:00Z",
+    "fecha": "2026-11-11T22:21:42Z",
     "archivos": [
       "TABLA_FISICA.md",
       "TABLA_INMUNE_Y_PROTOCOLOS.md",
@@ -944,6 +944,21 @@
       "filas_datos": 23,
       "md_dice_22_nodos": "titulo dice 22, tabla y CSV tienen 23 (22 + CMB)",
       "k_i_fuera_de_formula": "Microbioma HMP2: D_f 2.50 K_i 0.508 (formula 0.2472*D_f da 0.618)"
+    },
+    "l_corr_microbioma_documentada": false,
+    "observacion_externa": {
+      "fecha": "2026-11-11T22:21:42Z",
+      "zenodo_papers": 0,
+      "github_repos": 232,
+      "crossref_citas": 0,
+      "archivo_subido": true
+    },
+    "ciclo53": {
+      "microbioma": "Opcion B (nota, sin l_corr en claims)",
+      "zenodo": "HTTP 400",
+      "github_total": 232,
+      "crossref_miu_citas": 0,
+      "df_topicos_dois_unicos": 6
     }
   }
 }
