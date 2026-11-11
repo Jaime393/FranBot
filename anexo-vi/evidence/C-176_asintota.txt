@@ -1,0 +1,23 @@
+Evidencia ciclo 36 — Asíntota 0.618 (C-176 a C-178)
+Fecha: 2026-11-11.
+sha256 pve_01_asintota.md:
+478b2cba7c6c62121d2a66d274c968dfb2e97d0484d0e94e9a2827f9177c4f82
+Tamaño: 1.557 B.
+sha256 pve_01.py (con asintota()):
+d46b3f2968540225d4f4d0a4d57853b13d114cab65936a71aa9a2b22d8c85cbc
+
+Ejecución: python3 pve_01.py asintota grace_tn14_v3.json
+(forma 3, Ξ=0.7100, τ=1 ventana, T=0.618):
+c=4.0 P=2.8401 Ki=0.613796
+c=10.0 P=7.1002 Ki=0.617999
+c=100.0 P=71.0024 Ki=0.618000
+c=1000.0 P=710.0244 Ki=0.618000
+Límite c→∞: Ki → T = 0.618 = φ⁻¹ (tanh → 1).
+
+Corrección al ciclo 35: 0.6138 es Ki en c=4.0, NO la asíntota.
+La asíntota es 0.618. La ley K_i llega a φ⁻¹ en el límite c→∞;
+no hay techo estructural en 0.6138.
+
+Rango de Ki (forma 3, Ξ=0.7100): [0.2106, 0.618).
+Mínimo barrido c=0.5 → 0.2106. Banda [0.55, 0.62] para c ≥ 2.0025
+(c=2.0 → 0.5498, fuera por 0.0002; Ki ≤ 0.618 < 0.62 siempre).
