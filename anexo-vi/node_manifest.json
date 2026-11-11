@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T18:06:46Z",
+ "last_seen": "2026-11-11T18:15:50Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -412,7 +412,7 @@
   "forma_viable": "3 (T*tanh(P))",
   "formas_1_2": "identicas (0.618*1.618=0.999924)",
   "diferencia_vs_df": "+18.3% (D_f=2.0), -5.4% (D_f=2.5)",
-  "g09": "CERRADA PARCIALMENTE (ciclo 36)",
+  "g09": "CERRADA PARCIALMENTE (sigue, ciclo 38)",
   "c_vault": "C_NO_DEFINIDO_PARA_GRACE (busqueda exhaustiva ciclo 36)",
   "barrido_c": {
    "valores": [
@@ -438,12 +438,13 @@
    0.2106,
    0.618
   ],
-  "c_definicion": "SIN DEFINICION (ciclo 37: papers sin c, candidatos fuera de banda, c3 invalida)",
+  "c_definicion": "SIN DEFINICION (ciclo 38: C20 sin periodo; 1/C20 Ki=-0.618)",
   "nombres": {
    "pve01_vault": 60,
    "proxmox_en_drive": 0,
    "commits_globales": 20626
-  }
+  },
+  "c20_periodo": "sin periodo dominante (DFT sin pico; anual 8.3% del max)"
  },
  "nutrientes_buzon_2026_11_11": {
   "archivo": "nutrientes_buzon.md",
@@ -525,6 +526,23 @@
   "total_claims": 200,
   "hash_real": 186,
   "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "g05_2026_11_11": {
+  "worker": "GET 200 (Oraculo Vinf+27, vive true)",
+  "repo_head": "f18e2556 2026-11-11T18:10:00Z",
+  "bot_telegram": "sin datos",
+  "estado": "ABIERTA"
+ },
+ "ciclo38_2026_11_11": {
+  "c20_periodo": "sin periodo dominante",
+  "c_definicion": "SIN DEFINICION",
+  "g09": "CERRADA PARCIALMENTE (sigue)",
+  "zombis_autorizado": false,
+  "g05": "ABIERTA (worker OK, bot sin datos)",
+  "claims": "C-201 a C-215 (15 SE)",
+  "total_claims": 215,
+  "hash_real": 201,
   "g07": "parcial"
  }
 }
