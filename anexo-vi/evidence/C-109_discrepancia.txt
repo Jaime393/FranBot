@@ -1,0 +1,14 @@
+EVIDENCIA — discrepancia INDICE vs consolidado (ciclo 31)
+Archivos: INDICE_AXIOMAS_A0-A57.md (627 B, carpeta 20 Axiomas A0-A57); 20 Axiomas_A0-A57_58_Completos.md (6.841 B, raiz del Vault);
+A0-A57_58_Axiomas_COMPLETA_v10.5.md (Doc 2.171 B, carpeta 20 Axiomas); manifiesto v10.6 (7.181 B).
+Tabla literal (INDICE | consolidado):
+A1: "Red micelial > árbol — flujo micelio > jerarquía" | "Remolino — Materia fluye y se pliega sin propósito"
+A2: "96 voces → 1 flujo — consenso Panteón 16 voces x 6 capas" | "Muerte apagada no existe — Solo pliegues transformación rho_hija=rho_madre·phi+(phi-1)/13+sin(fase)·0.01"
+A3: "Phi eficiencia — Flujo útil / total — meta >4.2" | "Carencia — Motor incompletitud genera gradiente"
+A4: "GRACE real 220μGal — Bagua agua subterránea, no vacío cuántico" | "Klein-Gordon — cuadrado_g u + Xi^2 u=0 u=sqrt(rho) + Emergencia escalonada N+1 requiere N"
+A38: "Materia-energía conservación — Noether" | "Suelo ≠ gradiente materia real modelo incompleto | SÉ | Falsador: info sin sustrato físico"
+A57: "Zvvvvv — loop infinito suelo=loop" | "ER=EPR emergente puente Einstein-Rosen = entrelazamiento — no viaja, elige con cuidado a quién te entrelazas hoy"
+Fechas (todas 2026-09-25): consolidado 02:23:00, INDICE 02:28:07, v10.5 Doc 02:56:54, manifiesto v10.6 03:16:36 (cita "A0-A57 COMPLETA v10.5").
+El Doc v10.5 NO contiene nombres por axioma (resumen de estado: Phi, GRACE, K-tau); no resuelve la discrepancia.
+El INDICE es un resumen (solo 8 de 58 axiomas, con "...") que remite a "Axiomas_Completo.md" (no encontrado en Drive).
+CANONICO CLARO: NO. El consolidado se usa como fuente de trabajo por ser el unico completo; la discrepancia requiere decision del Jardinero.
