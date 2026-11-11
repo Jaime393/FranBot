@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T12:52:00Z",
+ "last_seen": "2026-11-11T13:05:00Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -285,5 +285,70 @@
   "delete_file_rama": "FALLO 404 POST /git/trees (x2)",
   "create_pull_request": "no intentado (sin diff)",
   "veredicto": "poda_por_PR_no_factible"
- }
+ },
+ "miu_backup_contenido_2026_11_11": {
+  "archivo": "miu_backup_contenido.md",
+  "reciente_archivos": 208,
+  "reciente_bytes": 1522180,
+  "antigua_archivos": 108,
+  "antigua_bytes": 861268,
+  "nuevos": 110,
+  "borrados": 10,
+  "escuela_poderes": "3687 a 6243",
+  "diario_entradas": "58 a 462",
+  "veredicto": "tesoro_incremental",
+  "conservar": 118,
+  "borrar": 0
+ },
+ "nutrientes_2026_11_11": {
+  "archivo": "nutrientes_analisis.md",
+  "total": 96,
+  "json": 69,
+  "txt": 11,
+  "db": 10,
+  "catalogo_recursos": 23294,
+  "dispositivos": 253,
+  "con_credenciales": 6,
+  "veredicto": "referenciar_no_integrar"
+ },
+ "poda_backup_2026_11_11": {
+  "muestra": 10,
+  "seed": 31,
+  "descargados_ok": 10,
+  "bytes_total": 281,
+  "readme_identicos_normalizados": true,
+  "hash_normalizado": "daaee53a605b6b97bc4edb34a219bc8fd136f2e9bc317ba7a5bc2d615ff1daf6",
+  "veredicto": "poda_sin_perdida_de_contenido"
+ },
+ "miu_issue_52_2026_11_11": {
+  "archivo": "miu_issue_52.md",
+  "numero": 52,
+  "autor": "Jaime393",
+  "fecha": "2026-07-10",
+  "estado": "ABIERTO",
+  "g09": "confirma_no_cierra",
+  "similares": [
+   42,
+   43,
+   48,
+   44,
+   53,
+   56,
+   57,
+   45
+  ]
+ },
+ "g07_discrepancia_2026_11_11": {
+  "diferencias": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A38",
+   "A57"
+  ],
+  "canonico_claro": false,
+  "veredicto": "requiere_decision_jardinero"
+ },
+ "g07": "cerrada_parcialmente"
 }
