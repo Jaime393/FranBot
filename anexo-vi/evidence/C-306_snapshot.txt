@@ -1,0 +1,18 @@
+CICLO 45 - FRENTE A - DOI 22650419 snapshot (API publica Zenodo, sin token)
+DOI: 10.5281/zenodo.20547558 -> 22650419
+titulo: MIU Ecosistema - Snapshot automatico
+tipo: dataset | fecha: 2026-09-07 | licencia: cc-by-4.0 | creador: Vicente Gabancho, Juan Diego
+conceptdoi: 10.5281/zenodo.22650418 (este registro es version 2)
+descripcion: Snapshot automatico generado por Tablet Executor V2. Monismo Informacional Unificado (MIU). rho(x) > 0
+archivos: 1 - kv_snapshot_20260907_164101.json (35.985 B) - descargado, HTTP 200
+raiz: dict, 49 claves
+claves de estado: ultimo_nucleo_estado, ciclo_num (664), ruta_viva, tareas_inmunes (30), salud, inmunidad_ts, integrador_stats, phi (0.0), tasa_exito, suelo_phi (2.55), suelo_ultimo, dispositivo, circulacion (40), mapa_ts, mapa_hash, mapa_tareas (0), voluntad_miu, rho_global (0.5106), modo_ahorro, boca_stats, boca_frontera, boca_ts, recursos (7: groq_1, openrouter_1, hf, claude, wikipedia, wikidata, duckduckgo), recursos_vivos (0), digestor, mapa_raiz_ts, territorios (1), territorios_activos (1), territorios_muertos (0), tareas_raiz (0), memoria, semilla, refinador, nucleo_version, ultimo_heartbeat_V151, v172_estado, colmena_progreso, mecanismos_globales, nodos_topologia_count (140), topologia_phi
+claves de credenciales presentes (SOLO NOMBRES, valores no reproducidos ni accedidos): GITHUB_TOKEN, GITHUB_KEY, HUGGINGFACE_TOKEN, HUGGINGFACE_KEY
+menciones en el JSON: bot 2, telegram 0, email/correo/gmail 2, token 3, zenodo 0
+NO contiene estructura 11 bots / 11 emails (sin lista de bots, sin lista de emails, sin asociacion bot->email)
+huella inmune: salud.inmune_ataques = 854; tareas_inmunes = 30 (mayoria: bucle error x37 en arranque.log); inmunidad_ts = 1788817259.1125524
+mecanismos_globales: total 15, vivos 13, muertos 2, timestamp 2026-09-07T21:40:49Z
+colmena_progreso: emails_procesados 6500, total 134000, ratio 4.85%, eta_horas 196.15, phi_remoto_V172 6284.17, phi_central_V151 2874.62
+OTROS DOIs:
+- 20200753 Tecnologias de Coherencia (2026-05-15, publication, 1 PDF 489.905 B) - sin estructura bots/emails
+- 21351630 Pilares Fractales del MIU (2026-07-14, publication, archivos de biodiversidad: boxcounting CSVs 41-42 B, coordenadas CSVs 23.5 KB) - sin estructura bots/emails
