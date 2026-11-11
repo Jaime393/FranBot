@@ -147,3 +147,18 @@ frase_borrar: true), no una autorización.
 - Frase para borrar (12): "Autorizo borrar los 12 zombis de MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
 - Opción por defecto: no tocar nada.
 - Autorización del Jardinero: NO (ciclo 37). Nada movido ni borrado.
+
+## Estado ciclo 38: pendiente de autorización (2026-11-11)
+
+Verificación ciclo 38: búsqueda en historial y memoria repetida.
+**Sigue sin autorización.** Las frases aparecen citadas en los
+textos de los ciclos 37 y 38 (tarea B1: "reporta literalmente"),
+que son órdenes de REPORTAR las frases, no de ejecutarlas. Las
+palabras propias del Jardinero en el mensaje del ciclo 38 son:
+"sin ella no se tocan". Ningún mensaje suyo dice las frases como
+decisión propia.
+
+- Frase para mover (25): "Autorizo mover los 25 zombis a MIU_ABSORBIDO/nutrientes/historicos/"
+- Frase para borrar (12): "Autorizo borrar los 12 zombis de MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
+- Opción por defecto: no tocar nada.
+- Autorización del Jardinero: NO (ciclos 37 y 38). Nada movido ni borrado.
