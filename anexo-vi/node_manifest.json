@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T21:12:00Z",
+  "last_seen": "2026-11-11T21:24:32Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -910,5 +910,23 @@
     ],
     "total": 365,
     "hash_real": 351
+  },
+  "academico": {
+    "fecha": "2026-11-11T21:24:32Z",
+    "archivos": [
+      "TABLA_FISICA.md",
+      "TABLA_INMUNE_Y_PROTOCOLOS.md",
+      "TABLA_DOIS_Y_ONTOLOGIA.md",
+      "PAPER_DOIS_MIU.md",
+      "dataset_nodos_Df.csv",
+      "dataset_nodos_Df.md",
+      "README.md"
+    ],
+    "filas_totales_tablas": 133,
+    "paper_dois_verificados": 18,
+    "dataset_nodos": 0,
+    "sembrado_github": true,
+    "conector_usado": "chat_github",
+    "no_toco_red_autonoma": true
   }
 }
