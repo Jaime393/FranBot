@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T12:16:00Z",
+ "last_seen": "2026-11-11T12:36:00Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -223,5 +223,41 @@
   "original_intacto_en_drive": true,
   "rotado": false,
   "motivo": "publicacion publica sin exponer credenciales; original en Drive sigue operativo"
+ },
+ "digestion_ampliada_2026_11_11": {
+  "escuela_archivos": 785,
+  "escuela_poder_total": 764,
+  "escuela_poder_rango": "118-1713",
+  "diario_archivos": 498,
+  "logs_archivos": 118,
+  "auditorias_archivos": 4,
+  "auditorias_bytes": 79434177,
+  "df_benchmark_archivos": 1,
+  "tests_archivos": 2,
+  "claims_nuevos": 10,
+  "veredicto": "suelos_ampliados"
+ },
+ "meta_poda_2026_11_11": {
+  "archivar_seguro": 25,
+  "fusionar_seguro": 14,
+  "borrar_con_confirmacion": 147,
+  "verificacion_aleatoria": "5/5 coinciden (raiz 1 README.md, 1 commit Initial commit 2026-08-25)",
+  "decision": "pendiente del Jardinero",
+  "veredicto": "preparada_sin_ejecutar"
+ },
+ "sondeo_2026_11_11": {
+  "github_list_issues": "funciona (FranBot: 0 abiertas)",
+  "github_list_pull_requests": "funciona (FranBot: 0 abiertas)",
+  "github_search_issues": "funciona (total_count 0)",
+  "github_issue_write": "existe en catalogo (no probado en vivo)",
+  "github_discussions": "no existe herramienta",
+  "github_wikis": "no existe herramienta",
+  "github_rename": "no existe herramienta",
+  "github_delete_file": "funciona (probado ciclo 20)",
+  "github_create_folder": "implicito por subida (probado ciclo 27)",
+  "github_labels_topics": "no hay herramienta de escritura",
+  "drive_obsidian_vault": 36,
+  "drive_miu_backup": 118,
+  "drive_cementerio_carpetas": 2
  }
 }
