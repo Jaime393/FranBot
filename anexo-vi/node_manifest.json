@@ -1,143 +1,211 @@
 {
-  "capa_archivos": 18,
-  "capabilities": [
-    "scan_termux",
-    "scan_sd",
-    "scan_github",
-    "scan_sqlite",
-    "vision",
-    "polinizador"
+ "capa_archivos": 18,
+ "capabilities": [
+  "scan_termux",
+  "scan_sd",
+  "scan_github",
+  "scan_sqlite",
+  "vision",
+  "polinizador"
+ ],
+ "docs": {
+  "README": "memoria/anexo-vi/README.md",
+  "ESTADO": "memoria/anexo-vi/ESTADO.md"
+ },
+ "endpoints": {
+  "local": "http://127.0.0.1:8080",
+  "relay_hub": "https://run.relay.app/workflows/cmrfab6ry04vw0qm1ffks29py",
+  "tunnel": null
+ },
+ "estado": "OPERATIVO_PARCIAL",
+ "grietas_conocidas": [
+  "G01",
+  "G03",
+  "G05",
+  "G09",
+  "G10",
+  "G11",
+  "G12"
+ ],
+ "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
+ "id": "trama-termux-01",
+ "k_i_local": 0.58,
+ "last_seen": "2026-11-11T12:02:00Z",
+ "protocols": [
+  "PNM-01",
+  "PAC-01",
+  "PGL-01",
+  "PPF"
+ ],
+ "repo_hash": "sha256:537d643001af9a47fb097aa7023361f43d7263cf9f55fe18e33be787f67c4dcd",
+ "repo_total": 102,
+ "resumen_claims": "sha256:2486ab109fe5b62fea0ef67941b66901024a8588317179f6096dcb7c9d86844b",
+ "runtime": {
+  "api_path": "~/workspace/miu_api.py",
+  "ecosystem_map": null,
+  "host": "sandbox_vm",
+  "nota": "En Termux, api_path será ~/miu-ecosistema/miu_api.py y scanner_path ~/miu-ecosistema/miu_scanner.py. Aquí no existen.",
+  "scanner_path": null
+ },
+ "secret_refs": [
+  "GITHUB_TOKEN_ENV",
+  "TELEGRAM_TOKEN_ENV",
+  "BOT_TABLET_TOKEN_ENV"
+ ],
+ "version": "153",
+ "last_audit": "2026-11-10T04:05:51Z",
+ "audit_status": "OK",
+ "audit_resumen": "RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1",
+ "ciclo_cierre": 10,
+ "verify_all_version": 3,
+ "verify_all_fallos_actuales": 8,
+ "verify_all_fallos_esperados": 8,
+ "verify_all_nota": "Los 8 fallos son C-001 a C-008 (prediccion, hash PENDIENTE por diseño, G03 abierta). REFUTADO y NO_SE no cuentan. C-024 ya no falla: tiene hash real de la evidencia de ausencia.",
+ "last_probe": "2026-11-10T05:27:44Z",
+ "g05_probe": {
+  "repo_accesible": true,
+  "repo_total_archivos": 169,
+  "repo_ultimo_commit": "2026-11-07 23:42:58 +0000 M4c: mark 16 absorption-refuted pairs as refutado (semantic criterion; 3 honest + 1140 excluded)",
+  "worker_url": "https://fran-oraculo-miu.jaimepvicente.workers.dev",
+  "worker_estado": "WORKER_RESPONDE",
+  "refs_integracion": [
+   "TG_BOT_TOKEN",
+   "DRIVE_FOLDER",
+   "GITHUB_TOKEN",
+   "TELEGRAM_API",
+   "ORACLE"
   ],
-  "docs": {
-    "README": "memoria/anexo-vi/README.md",
-    "ESTADO": "memoria/anexo-vi/ESTADO.md"
-  },
-  "endpoints": {
-    "local": "http://127.0.0.1:8080",
-    "relay_hub": "https://run.relay.app/workflows/cmrfab6ry04vw0qm1ffks29py",
-    "tunnel": null
-  },
-  "estado": "OPERATIVO_PARCIAL",
-  "grietas_conocidas": [
-    "G01",
-    "G03",
-    "G05",
-    "G09",
-    "G10",
-    "G11",
-    "G12"
+  "fugas_literales": [
+   "DRIVE_FOLDER",
+   "drive"
   ],
-  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
-  "id": "trama-termux-01",
-  "k_i_local": 0.58,
-  "last_seen": "2026-11-10T05:27:44Z",
-  "protocols": [
-    "PNM-01",
-    "PAC-01",
-    "PGL-01",
-    "PPF"
-  ],
-  "repo_hash": "sha256:537d643001af9a47fb097aa7023361f43d7263cf9f55fe18e33be787f67c4dcd",
-  "repo_total": 102,
-  "resumen_claims": "sha256:2486ab109fe5b62fea0ef67941b66901024a8588317179f6096dcb7c9d86844b",
-  "runtime": {
-    "api_path": "~/workspace/miu_api.py",
-    "ecosystem_map": null,
-    "host": "sandbox_vm",
-    "nota": "En Termux, api_path será ~/miu-ecosistema/miu_api.py y scanner_path ~/miu-ecosistema/miu_scanner.py. Aquí no existen.",
-    "scanner_path": null
+  "fase": "rotacion_codigo_limpia",
+  "estructura_publica": {
+   "gitignore": true,
+   "wrangler_toml": true,
+   "dev_vars_example": true,
+   "readme_deploy": true,
+   "pending_rotation": true,
+   "test_worker_sh": true
   },
-  "secret_refs": [
-    "GITHUB_TOKEN_ENV",
-    "TELEGRAM_TOKEN_ENV",
-    "BOT_TABLET_TOKEN_ENV"
+  "rotacion_pendiente": [
+   "DRIVE_FOLDER en micelio.yml",
+   "drive en worker.js"
   ],
-  "version": "153",
-  "last_audit": "2026-11-10T04:05:51Z",
-  "audit_status": "OK",
-  "audit_resumen": "RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1",
-  "ciclo_cierre": 10,
-  "verify_all_version": 3,
-  "verify_all_fallos_actuales": 8,
-  "verify_all_fallos_esperados": 8,
-  "verify_all_nota": "Los 8 fallos son C-001 a C-008 (prediccion, hash PENDIENTE por diseño, G03 abierta). REFUTADO y NO_SE no cuentan. C-024 ya no falla: tiene hash real de la evidencia de ausencia.",
-  "last_probe": "2026-11-10T05:27:44Z",
-  "g05_probe": {
-    "repo_accesible": true,
-    "repo_total_archivos": 169,
-    "repo_ultimo_commit": "2026-11-07 23:42:58 +0000 M4c: mark 16 absorption-refuted pairs as refutado (semantic criterion; 3 honest + 1140 excluded)",
-    "worker_url": "https://fran-oraculo-miu.jaimepvicente.workers.dev",
-    "worker_estado": "WORKER_RESPONDE",
-    "refs_integracion": [
-      "TG_BOT_TOKEN",
-      "DRIVE_FOLDER",
-      "GITHUB_TOKEN",
-      "TELEGRAM_API",
-      "ORACLE"
-    ],
-    "fugas_literales": [
-      "DRIVE_FOLDER",
-      "drive"
-    ],
-    "fase": "rotacion_codigo_limpia",
-    "estructura_publica": {
-      "gitignore": true,
-      "wrangler_toml": true,
-      "dev_vars_example": true,
-      "readme_deploy": true,
-      "pending_rotation": true,
-      "test_worker_sh": true
-    },
-    "rotacion_pendiente": [
-      "DRIVE_FOLDER en micelio.yml",
-      "drive en worker.js"
-    ],
-    "worker_test_resultado": "OK",
-    "commit_local": "f093677",
-    "push_estado": "PATCH_GENERADO",
-    "patch_path": "/home/hatch/workspace/franbot_patches/0001-franbot-rotar-DRIVE_FOLDER-a-secrets.DRIVE_FOLDER-y-.patch",
-    "secretos_pendientes_usuario": [
-      "DRIVE_FOLDER en GitHub Actions",
-      "DRIVE_FOLDER_ID en Cloudflare"
-    ],
-    "test_worker_exit": 0,
-    "configuracion_funcional_pendiente": [
-      "GitHub Secret DRIVE_FOLDER",
-      "Cloudflare Secret DRIVE_FOLDER_ID",
-      "ejecutar test-worker.sh",
-      "(opcional) activar Telegram cuando se decida"
-    ],
-    "patches_eliminados": true,
-    "framing_seguridad_retirado": true,
-    "nota": "Folder ID movido a secreto. Es higiene, no incidente. No rotar carpeta ni reescribir historial."
+  "worker_test_resultado": "OK",
+  "commit_local": "f093677",
+  "push_estado": "PATCH_GENERADO",
+  "patch_path": "/home/hatch/workspace/franbot_patches/0001-franbot-rotar-DRIVE_FOLDER-a-secrets.DRIVE_FOLDER-y-.patch",
+  "secretos_pendientes_usuario": [
+   "DRIVE_FOLDER en GitHub Actions",
+   "DRIVE_FOLDER_ID en Cloudflare"
+  ],
+  "test_worker_exit": 0,
+  "configuracion_funcional_pendiente": [
+   "GitHub Secret DRIVE_FOLDER",
+   "Cloudflare Secret DRIVE_FOLDER_ID",
+   "ejecutar test-worker.sh",
+   "(opcional) activar Telegram cuando se decida"
+  ],
+  "patches_eliminados": true,
+  "framing_seguridad_retirado": true,
+  "nota": "Folder ID movido a secreto. Es higiene, no incidente. No rotar carpeta ni reescribir historial."
+ },
+ "evidence_dir": "memoria/anexo-vi/evidence/",
+ "publicacion": {
+  "fecha": "2026-11-10T05:10:27Z",
+  "intento": "ciclo 20 con conector GitHub del chat (GitHub App)",
+  "franbot_push": "PARCIAL_7_DE_8",
+  "franbot_commits_remotos": {
+   "worker.js": "4b6599dd",
+   "PENDING_ROTATION.md": "e0719e68",
+   "SECRETS_SETUP.md": "d40b4fc4",
+   "wrangler.toml": "e6185b1f",
+   ".gitignore": "19329790",
+   ".dev.vars.example": "e0ecad3f",
+   "scripts/test-worker.sh": "fb32f9a9"
   },
-  "evidence_dir": "memoria/anexo-vi/evidence/",
-  "publicacion": {
-    "fecha": "2026-11-10T05:10:27Z",
-    "intento": "ciclo 20 con conector GitHub del chat (GitHub App)",
-    "franbot_push": "PARCIAL_7_DE_8",
-    "franbot_commits_remotos": {
-      "worker.js": "4b6599dd",
-      "PENDING_ROTATION.md": "e0719e68",
-      "SECRETS_SETUP.md": "d40b4fc4",
-      "wrangler.toml": "e6185b1f",
-      ".gitignore": "19329790",
-      ".dev.vars.example": "e0ecad3f",
-      "scripts/test-worker.sh": "fb32f9a9"
-    },
-    "franbot_no_publicado": {
-      ".github/workflows/micelio.yml": "403 sin permiso workflows"
-    },
-    "anexo_vi_publicado": true,
-    "anexo_vi_repo": "Jaime393/FranBot/anexo-vi",
-    "anexo_vi_url": "https://github.com/Jaime393/FranBot/tree/main/anexo-vi",
-    "anexo_vi_head": "c45632c1",
-    "conector_permisos": {
-      "contents_write": true,
-      "workflows_write": false,
-      "administration_write": false,
-      "git_trees": false
-    },
-    "nota": "Publicacion parcial por permisos de la GitHub App, no por tokens. micelio.yml pendiente de opcion 1 (ajustar App) u opcion 2 (subir a mano)."
-  }
+  "franbot_no_publicado": {
+   ".github/workflows/micelio.yml": "403 sin permiso workflows"
+  },
+  "anexo_vi_publicado": true,
+  "anexo_vi_repo": "Jaime393/FranBot/anexo-vi",
+  "anexo_vi_url": "https://github.com/Jaime393/FranBot/tree/main/anexo-vi",
+  "anexo_vi_head": "c45632c1",
+  "conector_permisos": {
+   "contents_write": true,
+   "workflows_write": false,
+   "administration_write": false,
+   "git_trees": false
+  },
+  "nota": "Publicacion parcial por permisos de la GitHub App, no por tokens. micelio.yml pendiente de opcion 1 (ajustar App) u opcion 2 (subir a mano)."
+ },
+ "inventario_2026_11_11": {
+  "github_repos": 239,
+  "github_activos": 88,
+  "github_estancados": 151,
+  "github_abandonados_180d": 0,
+  "repos_sin_lectura": 1,
+  "drive_carpetas": 18,
+  "drive_activas": 0,
+  "drive_estancadas": 9,
+  "drive_abandonadas": 9,
+  "poda_propuesta_archivar": 24,
+  "poda_propuesta_fusionar": 14,
+  "poda_propuesta_borrar": 148,
+  "poda_propuesta_mantener": 53,
+  "conectores": {
+   "github": "read_write_parcial",
+   "google_drive": "read",
+   "google_docs": "read",
+   "google_sheets": "read"
+  },
+  "fecha": "2026-11-11T11:41:40Z"
+ },
+ "comparacion_drive_2026_11_11": {
+  "carpetas_revisadas": [
+   "MIU - Micelio y Deuda",
+   "MIU_ABSORBIDO",
+   "MIU_ABSORBIDO/MIU"
+  ],
+  "anexo_vi_piezas_totales": 18,
+  "piezas_reemplazar": 0,
+  "piezas_complementar": 2,
+  "piezas_duplicar": 0,
+  "piezas_ignorar": 16,
+  "veredicto": "necesario"
+ },
+ "digestion_2026_11_11": {
+  "archivos_leidos": 17,
+  "protocolos_encontrados": [
+   "PAE-01",
+   "PAF-01",
+   "PCP-01",
+   "PAI-01"
+  ],
+  "partituras_leidas": 5,
+  "pilares_leidos": 6,
+  "claims_nuevos": 19,
+  "claims_se": 19,
+  "claims_infiero": 0,
+  "claims_conjeturo": 0,
+  "claims_no_se": 0,
+  "grietas_nuevas": [
+   "G-NUEVA: protocolos Drive no integrados en anexo-vi",
+   "G-NUEVA: pilares auditados no integrados en anexo-vi",
+   "G-NUEVA: partituras cientificas no catalogadas en anexo-vi",
+   "G-NUEVA: registro de datos no integrado en anexo-vi",
+   "G-NUEVA: estructura MIU no mapeada en anexo-vi"
+  ],
+  "veredicto": "suelos_fertiles"
+ },
+ "integracion_2026_11_11": {
+  "protocolos_integrados": 3,
+  "pilares_integrados": 10,
+  "partituras_catalogadas": 10,
+  "claims_nuevos": 24,
+  "g_nueva_cerradas": 3,
+  "g_nueva_abiertas": 2,
+  "veredicto": "suelos_integrados_parcialmente"
+ }
 }
