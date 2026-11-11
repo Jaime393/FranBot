@@ -1,11 +1,4 @@
-# Snapshots Zenodo — 2026-11-11 (ciclos 46–47)
-
-## Ciclo 47 — autor re-verificado por DOIs directos
-
-- La consulta por nombre de creador devuelve HTTP 400 (2 intentos); la lista del autor se reconstruyó por DOIs directos.
-- 11 DOIs re-verificados vivos (títulos, fechas, conceptos). Solo 22650419 lleva "Snapshot" en el título. **0 snapshots posteriores a 2026-09-07.**
-- Series (concepto con múltiples versiones): MIU V12.0 (concepto 20279679): **5 versiones**; Grimorio (20483562): **3 versiones**; Unified Framework GR/QM (19338256): **2 versiones**; los demás conceptos: 1 versión, incluido el snapshot (22650418: 1).
-- Las versiones revelan 6 DOIs más del mismo autor (mismos conceptos): total conocido 17 registros. La lista puede no ser exhaustiva (la búsqueda por nombre no funciona ahora).
+# Snapshots Zenodo — 2026-11-11 (ciclo 46)
 
 ## Concepto 22650418
 

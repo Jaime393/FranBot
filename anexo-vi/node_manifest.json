@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T21:00:00Z",
+  "last_seen": "2026-11-11T20:40:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -817,46 +817,5 @@
     },
     "total": 345,
     "hash_real": 331
-  },
-  "ciclo47_2026_11_11": {
-    "filas_31_200": {
-      "pestanas": {
-        "10": 6,
-        "14": 72,
-        "18": 170,
-        "19": 170
-      },
-      "total_filas": 418,
-      "global": {
-        "emails_distintos": 18,
-        "bots_distintos": 8,
-        "handles": 6,
-        "filas_bot_email": 54
-      },
-      "estructura_11_11": "parcial",
-      "saturadas_31_200": [
-        18,
-        19
-      ]
-    },
-    "bots_getme": {
-      "vivos": 4,
-      "muertos": 2,
-      "verificacion": 5,
-      "nuevo_handle": "imperio_franbot (sin token)"
-    },
-    "snapshots": {
-      "posteriores_2026_09_07": 0,
-      "series": {
-        "MIU": 5,
-        "Grimorio": 3,
-        "Framework": 2,
-        "snapshot": 1
-      },
-      "consulta_autor_http400": true,
-      "dois_conocidos": 17
-    },
-    "total": 360,
-    "hash_real": 346
   }
 }

@@ -54,13 +54,6 @@ recursos abre) no está en los archivos locales.
 
 Leer y mapear, no escribir, no probar sendMessage.
 
-## Estado ciclo 47 — filas 31–200 y bots verificados (5ª vez)
-
-- Filas 31–200 de las 4 pestañas saturadas: 418 filas con datos (10: 6, 14: 72, 18: 170, 19: 170). Global (4–30 de 11 + 31–200 de 4): **18 emails distintos, 8 matches de bot (6 con forma de handle), 54 filas bot+email**. Estructura 11/11 sigue PARCIAL.
-- Bots distintos (handles): almaomni_bot, franbottablet_bot, franfamiliar_bot, fransell_bot, imperio_franbot, jp393_bot (+ 2 palabras genéricas "bot", "franbot").
-- getMe re-verificado (5ª vez, solo lectura): **4 vivos** (@Jp393_bot, @FranFamiliar_bot, @franbottablet_bot, @AlmaOmni_bot), **2 muertos** (401). Los 4 vivos coinciden con 4 de los handles del Sheet. @FranSell_Bot sin token vivo. imperio_franbot sin token en el archivo → no verificable.
-- Regla: solo lectura, no escribir en bots, no activar el inmune.
-
 ## Estado ciclo 45 — orquestador completo y snapshot
 
 - Orquestador: **26 pestañas** (19 en ciclo 41, +7 en ~1 h). 11 pestañas con columnas email/token/correo/gmail/recurso. **Ningún encabezado menciona "bot", "zenodo" ni "doi".**
