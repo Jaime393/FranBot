@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T19:55:00Z",
+  "last_seen": "2026-11-11T20:15:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -537,7 +537,7 @@
     "worker": "GET 200 (Oraculo Vinf+27, vive true)",
     "repo_head": "f18e2556 2026-11-11T18:10:00Z",
     "bot_telegram": "Micelio @Jp393_bot, getMe OK, webhook activo",
-    "estado": "PARCIAL (ciclo 42: re-verificado sin escritura)"
+    "estado": "PARCIAL (ciclo 45: 4 vivos, 2 muertos, 5 sin verificar; sin mensaje)"
   },
   "ciclo38_2026_11_11": {
     "c20_periodo": "sin periodo dominante",
@@ -683,5 +683,83 @@
     },
     "total": 305,
     "hash_real": 291
+  },
+  "ciclo45_2026_11_11": {
+    "snapshot": {
+      "doi": "10.5281/zenodo.22650419",
+      "tipo": "dataset",
+      "fecha": "2026-09-07",
+      "generador": "Tablet Executor V2",
+      "archivos": 1,
+      "claves_raiz": 49,
+      "estructura_11_11": false,
+      "inmune_ataques": 854,
+      "tareas_inmunes": 30,
+      "mecanismos": {
+        "total": 15,
+        "vivos": 13,
+        "muertos": 2
+      },
+      "colmena_emails": {
+        "procesados": 6500,
+        "total": 134000,
+        "ratio": "4.85%"
+      }
+    },
+    "otros_dois": {
+      "20200753": "publicacion, 1 PDF",
+      "21351630": "publicacion, datos biodiversidad",
+      "con_estructura_11_11": false
+    },
+    "orquestador": {
+      "pestanas": 26,
+      "ciclo41": 19,
+      "nuevas": 7,
+      "relevantes": 11,
+      "sin_bot_zenodo_doi_en_encabezados": true,
+      "muestra": {
+        "pestanas": [
+          14,
+          16,
+          19
+        ],
+        "bots": 0,
+        "dois": 0,
+        "celdas_con_arroba": 1
+      },
+      "estructura_11_11": "no confirmada en muestra"
+    },
+    "bots": {
+      "vivos": 4,
+      "muertos": 2,
+      "sin_verificar": 5,
+      "total_afirmado": 11,
+      "asociacion_bot_email": "NO_SE"
+    },
+    "inmune": {
+      "archivos_drive": 5,
+      "archivos_github": 2,
+      "carpeta": 3,
+      "scorer": {
+        "senales": {
+          "INJECTION": 35,
+          "POLICY": 30,
+          "BEHAVIORAL": 25,
+          "CONTENT": 15
+        },
+        "BLOCK": ">=70",
+        "AUDIT": "40-69",
+        "ALLOW": "<40"
+      },
+      "auto_reparador": "sistema_inmunitario.py V1",
+      "doctrina": "corazon determinista sin LLM; inmune LLM solo ante anomalia",
+      "rebuscar_documentado": false
+    },
+    "puntos_ciegos": {
+      "doc": "puntos_ciegos_2026-11-11.md",
+      "hipotesis": 3
+    },
+    "total": 325,
+    "hash_real": 311
   }
 }
