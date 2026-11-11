@@ -3,7 +3,7 @@
 Fecha: 2026-11-11
 Autor: Nodo Trama (ciclo 51-52)
 Fuente primaria: búsqueda masiva en Termux + extracción de `oraculo-v8.json` y `df_profundo_*.txt`
-Hash del CSV: `b5716b59f5bc97be3f20576f0c2b086ef3deaae11a9e31d8746a8edec7317a60`
+Hash del CSV: `6d644106a64625b2b79e5d107cd05962d2e06041e9192b9c216d4f71b6945ade`
 
 ## Qué es este dataset
 
@@ -64,8 +64,8 @@ La columna `fuente_archivo` se añadió en el ciclo 55. Ningún valor de D_f cam
 
 El ciclo 55 cruzó solo 6 CSV. El ciclo 56 listó el árbol completo de MIU_V12.0_FINAL/nodos/ (336 archivos) y leyó los archivos fuente de los 18 nodos restantes. Resultado del cruce completo (23 filas):
 
-- **Confirmados por CSV (17):** Manglares 2.28, Vertisol 2.10, Red Sea 2.16, Caribe SE 2.08, Florida 2.02, Jamaica 1.98, Persian Gulf 1.89, Palk Bay 1.86, GBR Australia 1.95, American Samoa 1.93, Fiji 1.96, Biodiversidad flora 2.31, Microbioma 2.50, Suelo fértil 2.05, Incendios 1.49, Clima global 1.40, Noosfera 1.48. Cada valor coincide con su archivo fuente; la columna `fuente_archivo` apunta a la ruta en GitHub.
-- **Discrepancia (1):** Chernozem Ucrania: dataset 2.11, archivo wosis_chernozem_ukraine_dbd1.13.csv 2.41 (7 filas, todas D_f 2.41, K_i 0.596). Ambos valores son internamente consistentes con la fórmula K_i (0.2472 × D_f), pero difieren entre sí. El valor del dataset no se cambió; queda anotado para re-medición o revisión de fuente.
+- **Confirmados por CSV (17, ciclo 56):** Manglares 2.28, Vertisol 2.10, Red Sea 2.16, Caribe SE 2.08, Florida 2.02, Jamaica 1.98, Persian Gulf 1.89, Palk Bay 1.86, GBR Australia 1.95, American Samoa 1.93, Fiji 1.96, Biodiversidad flora 2.31, Microbioma 2.50, Suelo fértil 2.05, Incendios 1.49, Clima global 1.40, Noosfera 1.48. Cada valor coincide con su archivo fuente; la columna `fuente_archivo` apunta a la ruta en GitHub. En ciclo 57 se suma Chernozem (18).
+- **Discrepancia (1, ciclo 56):** Chernozem Ucrania: dataset 2.11, archivo wosis_chernozem_ukraine_dbd1.13.csv 2.41. Resuelta en ciclo 57 (ver sección siguiente): el dataset cambió a 2.41.
 - **Sin CSV buscable (5):** Microtúbulos (PDB 3J6F), GBR Seagrass (TropWATER), Turbera Glen Carron (PANGAEA), Seagrass global (VLIZ), CMB (Planck 2018). No tienen archivo en MIU_V12.0_FINAL/nodos/ ni en los 4 repos buscables. La etiqueta es SIN_CSV_BUSCABLE (no SIN_CSV): significa que no se encontró fuente en el ámbito buscable, no que no exista.
 
 Resoluciones:
@@ -75,6 +75,13 @@ Resoluciones:
 - **Microbioma:** el archivo hmp2_human_3150_metagenomes.csv tiene D_f_network 2.5 y K_i 0.508. La anomalía del ciclo 53 queda resuelta: el K_i 0.508 no es un error de fórmula, es el valor del archivo (dimensión de red, no box-counting). La nota anterior sobre l_corr queda sustituida por la confirmación.
 - **reef_conteos_miu.csv (D_f 1.6):** no es un nodo. Es un conteo global de polígonos de arrecife (12.805, año 2020, Allen Coral Atlas Reef Extent), no uno de los 22 nodos del corpus, y su K_i 0.596 no sigue la fórmula (0.2472 × 1.6 = 0.396). No se añade fila; queda documentado aquí como no-nodo.
 - **GBIF fauna (D_f 2.2):** existe en el repo (gbif_fauna_875M_2026.csv) pero no es fila del dataset (la fila es flora, D_f 2.31). No se añade.
+
+## Resueltos en ciclo 57
+
+- **Chernozem Ucrania: 2.11 → 2.41.** El archivo wosis_chernozem_ukraine_dbd1.13.csv (WoSIS 2024, DOI 10.17027/isric-wosis.dbd1.13, 7 filas) tiene D_f 2.41 y K_i 0.596 en todas las filas. El valor 2.11 del dataset venía solo del oráculo, sin archivo que lo respalde. El archivo no tiene columna de método; el método se identifica a nivel de repo: df_from_dbd.py es el script de box-counting 3D para DBD WoSIS, y la variable del archivo es DBD_g_cm3. Decisión: el dataset cambia a D_f 2.41 y K_i 0.596, con fuente_archivo al CSV. Si una fuente futura muestra que 2.11 pertenece a otro extracto WoSIS, la fila se puede desdoblar.
+- **Microbioma humano: K_i 0.508 aclarado.** El archivo hmp2_human_3150_metagenomes.csv tiene columnas Body_Site, Samples, D_f_network, K_i, Source, DOI_URL; una fila (Gut+Oral+Skin, 3150 muestras, D_f_network 2.5, K_i 0.508, HMP2, Nature 2019). La columna D_f se llama D_f_network (dimensión de red, no box-counting) y el K_i 0.508 es el K_i de esa red. La fórmula base con D_f 2.5 daría 0.618, pero no aplica aquí porque la dimensión es de red. La nota anterior (ciclo 53, sobre l_corr no documentada) queda sustituida por esta explicación. No hay derivación de 0.508 en el archivo: es el valor declarado.
+
+Cruce final a ciclo 57: 18 confirmados, 0 discrepancias, 5 SIN_CSV_BUSCABLE (Microtúbulos, GBR Seagrass, Turbera, Seagrass global, CMB). Ningún otro valor D_f cambió.
 
 ## Verificación
 
