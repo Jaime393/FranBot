@@ -1,0 +1,6 @@
+EVIDENCIA — sondeo busqueda ciclo 30 (conector GitHub)
+search_code "anexo-vi": OK — total_count 617 (global GitHub; primer hit carlosacostap-unca/plan-ingenieria, Anexo VI no relacionado).
+search_code "PAC-01": OK — total_count 1618 (global; primer hit ietf-tools/relaton-data-ids, no relacionado).
+search_issues "K_i": OK — total_count 1 — Jaime393/MIU#52 "K_i es circular por construcción (tautología) y usa constantes hardcodeadas" https://github.com/Jaime393/MIU/issues/52 (cuerpo: HUESO #24-#27, compute_Ki circular).
+search_commits "anexo-vi": OK — total_count 4926 (global; primer hit lexifina/portugal-law, no relacionado).
+Conclusion: las 3 busquedas funcionan; son globales (no limitadas a Jaime393); el unico hit MIU-relevante es MIU#52.
