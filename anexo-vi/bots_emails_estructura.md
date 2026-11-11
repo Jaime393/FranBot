@@ -54,6 +54,15 @@ recursos abre) no está en los archivos locales.
 
 Leer y mapear, no escribir, no probar sendMessage.
 
+## Estado ciclo 45 — orquestador completo y snapshot
+
+- Orquestador: **26 pestañas** (19 en ciclo 41, +7 en ~1 h). 11 pestañas con columnas email/token/correo/gmail/recurso. **Ningún encabezado menciona "bot", "zenodo" ni "doi".**
+- Muestra (3 pestañas, 2 filas cada una): 0 bots, 0 DOIs, 1 celda con @. La estructura 11/11 **no está confirmada en la muestra**: las columnas existen, los datos no se ven en las 3 primeras filas.
+- Snapshot DOI 22650419 (2026-09-07): 49 claves raíz KV. **No contiene la estructura 11 bots/11 emails** (bot: 2 menciones, telegram: 0, email: 2). Sí contiene: colmena_progreso (6.500 / 134.000 emails procesados, 4,85%), recursos (7: groq_1, openrouter_1, hf, claude, wikipedia, wikidata, duckduckgo).
+- **11 bots: 4 vivos, 2 muertos, 5 sin verificar** (6 probados en ciclo 43; los 5 restantes no tienen token en el archivo local). Los "7 fuera del corpus" del ciclo 43 = 2 muertos + 5 sin verificar.
+- Asociación bot → email → recursos: **sigue NO_SE** (orquestador muestra sin datos, snapshot sin estructura, logs 0).
+- Regla: solo lectura, no escribir en bots, no activar el inmune.
+
 ## Estado ciclo 44 — logs del orquestador
 
 - Bots en los 3 logs del orquestador: **0 nombres @...bot**.
