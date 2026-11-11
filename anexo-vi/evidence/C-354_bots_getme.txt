@@ -1,0 +1,14 @@
+CICLO 47 - FRENTE B - Bots verificados con getMe (5a vez, solo lectura)
+tokens_20260830: 6 entradas telegram; getMe re-verificado en las 6:
+1: HTTP 401 (muerto)
+2: OK id 1192102910 @Jp393_bot Micelio
+3: OK id 8797590786 @FranFamiliar_bot Familiares
+4: HTTP 401 (muerto)
+5: OK id 8807634087 @franbottablet_bot franbot_tablet_bot
+6: OK id 8948991067 @AlmaOmni_bot AlmaOmni_Bot
+vivos: 4 | muertos: 2 | sin cambios respecto a ciclo 43
+handles distintos en el orquestador (global): almaomni_bot, franbottablet_bot, franfamiliar_bot, fransell_bot, imperio_franbot, jp393_bot (+ "bot", "franbot" genericos)
+cruce: los 4 vivos coinciden con 4 handles del Sheet
+fransell_bot: mencionado en archivos locales, sin token vivo (los 2 tokens muertos no se pueden atribuir a un handle)
+imperio_franbot: nuevo en filas 31-200, sin token en el archivo -> no verificable
+0 mensajes enviados a ningun bot
