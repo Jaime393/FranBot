@@ -54,3 +54,13 @@ general queda compatible (solapan en [0.55, 0.618]), sin confirmar.
 Mientras tanto, G09 queda CERRADA PARCIALMENTE: el código existe,
 la ejecución existe, el resultado es compatible y la asíntota es
 0.618. Lo que falta es una definición, no un resultado.
+
+## Actualización ciclo 37 (2026-11-11): sigue parcial
+
+- Papers revisados (paper.md, paper.bib, MIU_PAPER_V2, RAIZ_X):
+  ninguno define `c`; ninguno menciona la asíntota 0.618.
+- Candidatos físicos calculados con GRACE real: c1=1/90 → Ki=0.0049
+  (no banda); c2=1 → Ki=0.3774 (no banda); c3 dimensionalmente
+  inválida. Ninguno razonable da Ki en banda.
+- `c` no se puede definir sin más información. G09 SIGUE
+  PARCIALMENTE CERRADA. Detalle en `c_definicion.md`.
