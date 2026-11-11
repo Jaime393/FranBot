@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T20:15:00Z",
+  "last_seen": "2026-11-11T20:40:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -761,5 +761,61 @@
     },
     "total": 325,
     "hash_real": 311
+  },
+  "ciclo46_2026_11_11": {
+    "inmune_carpeta": {
+      "workflow": {
+        "export": "Relay revision 89, 2026-07-10",
+        "hilos": 3,
+        "pasos": 8,
+        "trigger": "webhook POST",
+        "modelo": "relay.gpt-5.4-mini",
+        "rama_threat": "score >= 50",
+        "rebuscar_menciones": 0
+      },
+      "prompt": {
+        "doctrina": "webhook -> IA evalua -> actua segun score",
+        "apps": [
+          "GitHub",
+          "Telegram",
+          "Webhook"
+        ]
+      },
+      "run_history": {
+        "filas": 0
+      },
+      "rebuscar_documentado": false
+    },
+    "snapshots": {
+      "concepto_22650418": {
+        "existe": true,
+        "versiones": 1,
+        "ultima": "2026-09-07"
+      },
+      "posteriores_2026_09_07": 0,
+      "serie": false,
+      "hipotesis_C325": "no confirmada"
+    },
+    "orquestador_filas_4_30": {
+      "pestanas": 11,
+      "filas_con_datos": 171,
+      "emails_distintos": 16,
+      "bots_distintos": 7,
+      "filas_bot_y_email": 12,
+      "estructura_11_11": "parcial",
+      "saturadas": [
+        10,
+        14,
+        18,
+        19
+      ],
+      "vacia": [
+        16
+      ],
+      "dois": 0,
+      "celdas_40plus": 98
+    },
+    "total": 345,
+    "hash_real": 331
   }
 }
