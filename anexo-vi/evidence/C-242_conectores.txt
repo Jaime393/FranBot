@@ -1,0 +1,13 @@
+Conectores (ciclo 40).
+HuggingFace: muse.connector_search "huggingface" — No matches.
+No hay conector en el chat. La via API publica no se verifico
+en este ciclo (resultado no disponible).
+Zenodo: muse.connector_search "zenodo" — No matches. No hay
+conector en el chat. La via API publica no se verifico en este
+ciclo (resultado no disponible).
+Google Sheets escritura: capacidad documentada en el conector
+(google_sheets CONNECTOR.md: values update/append, create,
+batchUpdate). Escritura real NO probada en este ciclo (sin
+escritura realizada). Estado: NO VERIFICADO.
+PDF lectura: disponible via descarga + pdftotext (probado en A1,
+ciclo 40: Habitat-Map-Dates.pdf, 4 paginas, texto extraido).
