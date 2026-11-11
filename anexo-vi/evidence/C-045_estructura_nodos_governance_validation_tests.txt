@@ -1,0 +1,20 @@
+EVIDENCIA DE LISTADO — Drive (conector del chat)
+Generada en ciclo 26 a partir del listado de ciclo 25 (Tarea 4).
+Comando: hatch_gws_cli drive files list --params '{"q": "<folderId> in parents and trashed = false", "pageSize": 100, "fields": "nextPageToken,files(id,name,mimeType,size,modifiedTime,createdTime)"}'
+Listado obtenido: 2026-11-11 ~06:51 -05 (ciclo 25).
+Evidencia generada: 2026-11-11 ~07:00 -05 (ciclo 26).
+Carpeta padre: MIU_ABSORBIDO/MIU (drive).
+
+Subcarpeta: nodos/ — 1 elementos (1 archivos, 0 carpetas)
+  - nodo_amazonia.py | text/x-python | size=8631 | modified=2026-09-07T13:48:41.850Z
+
+Subcarpeta: governance/ — 1 elementos (1 archivos, 0 carpetas)
+  - REJECTED_ARTIFACTS.yml | application/octet-stream | size=439 | modified=2026-09-07T13:48:41.840Z
+
+Subcarpeta: validation/ — 2 elementos (1 archivos, 1 carpetas)
+  - df_benchmark | application/vnd.google-apps.folder | size=None | modified=2026-09-10T08:43:54.069Z
+  - test_omega_f_blind.py | text/x-python | size=463 | modified=2026-09-07T13:48:41.860Z
+
+Subcarpeta: tests/ — 2 elementos (2 archivos, 0 carpetas)
+  - test_ift_solver.py | text/x-python | size=2786 | modified=2026-09-07T13:48:41.850Z
+  - test_omega_f_blind.py | text/x-python | size=447 | modified=2026-09-07T13:48:41.850Z
