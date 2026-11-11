@@ -305,3 +305,21 @@ lo declarará como carencia de entorno, no como grieta epistémica.
   y memoria). Nada movido ni borrado. Estado ciclo 37 en el
   documento.
 - Claims C-186 a C-200 (15: SE 15). Total 200, hash_real 186.
+
+## C20 sin periodo, G09 sigue parcial, G05 sondeada ciclo 38 (2026-11-11)
+
+- C20 (281 filas): sin periodo dominante. Autocorrelación decae
+  monótona (lag 12: r=0.119); DFT sin pico (top 5 en 42–58 meses
+  dentro del 8%; anual al 8.3% del máximo). c=1/C20 literal →
+  Ki=−0.618 (error de categoría). c=1/P formal → 0.0231 (no
+  banda). c=P/τ=19 y c=P·Ξ=13.49 → 0.618 saturado, RECHAZADOS
+  (P=57 meses es deriva, no periodo). G09 sigue parcial.
+- Zombis: sin autorización (ciclos 37 y 38). Las citas en los
+  textos de ciclo son órdenes de reportar, no de ejecutar.
+- G05: worker GET 200 (Oráculo V∞+27, vive true), HEAD 404; repo
+  HEAD f18e2556 (ciclo 37); bot Telegram sin datos. Falta:
+  verificación de extremo a extremo + secretos del usuario.
+  No cerrable en ciclo 39 desde aquí.
+- Corrección: los "commit" de los reportes ciclos 34–37 son BLOB
+  SHA; la verificación por blob sigue válida.
+- Claims C-201 a C-215 (15: SE 15). Total 215, hash_real 201.
