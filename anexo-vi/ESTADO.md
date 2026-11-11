@@ -73,6 +73,34 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
 | C-011 | provenance | SE | sha256:478bacd3eaecaf7be8e9c25a90a46bae953d02e0f3c2b16c485f824dbb77cf5b | G12 |
 | C-012 | provenance | SE | sha256:6a8ab91cfdb2ea8af2bf7d83a2c39f2e0403f176efba8363d8cabe0ece2f9869 | G12 |
 
+## Digestión ciclo 25
+
+- Fecha: 2026-11-11 ~06:49–06:55 -05. Solo lectura de Drive.
+- Protocolos digeridos: PAE-01, PAF-01, PCP-01 existen como código Python con estado persistente real (2026-08-29); PAI-01 solo como documento (6 pasos, no implementado).
+- Pilares digeridos: 6 pilares auditados 2026-07-08 (4 SOLIDO con DOIs, 2 sin evidencia independiente); la auditoría marca "ξ = 8,57 a 23σ" como NO SE / NO VERIFICABLE (C-037, G03).
+- Partituras digeridas: P73-19 (Ki(t+1)=1.4660±0.0139, Qualia 783/784), P71-22 (5 nucleobases FTICR, Oba 2022/Naraoka 2023), P75-14 (datos Bennu), P74-14 (define [sabe]/[cree]/[grieta fértil]), P74-17.
+- Estructura mapeada: memoria/ 3 .md, huesos/ 5 .md, nodos/ 1 .py, governance/ 1 .yml, validation/ 1 .py + 1 carpeta, tests/ 2 .py.
+- Claims nuevos: C-027 a C-045 (19, todos SE; 17 con hash real, 2 con NO_DISPONIBLE). Total del módulo: 45 claims.
+- Grietas nuevas (prefijo G-NUEVA, el Jardinero decide): protocolos Drive no integrados; pilares auditados no integrados; partituras no catalogadas; registro de datos no integrado; estructura MIU no mapeada.
+- Documento: suelos_digeridos_2026-11-11.md. Nada podado, nada al remoto.
+
+## Integración ciclo 26
+
+- Fecha: 2026-11-11 ~06:58–07:02 -05. Solo escritura en sandbox.
+- C-044/C-045 corregidos (Opción B): evidencia de listado en evidence/
+  (C-044_estructura_memoria_huesos.txt, C-045_estructura_nodos_governance_validation_tests.txt),
+  SE con hash real de la evidencia. Ya no fallan.
+- Protocols integrados: anexo-vi/protocols/ (pae_01.py, paf_01.py, pcp_01.py,
+  PAI-01.md literales + README.md de defectos). C-046–C-048 SE con hash real;
+  C-049 NO_SE (no son funcionales: MIU_DIR literal, dependencias sin resolver).
+- Pilares integrados: pilares_integrados.md (6+4+2, DOIs literales, tabla
+  cruzada, sección G07). Claims C-050–C-059.
+- Partituras catalogadas: partituras_catalogo.md (10 partituras). Claims
+  C-060–C-069.
+- G-NUEVA: 3 cerradas por integración (protocolos, pilares, partituras),
+  2 abiertas (registro de datos, estructura MIU). Ninguna catalogada como G13.
+- Total del módulo: 69 claims. Nada podado, nada al remoto.
+
 ## Última auditoría
 
 - audit.py v3: EXIT=0 — RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1
