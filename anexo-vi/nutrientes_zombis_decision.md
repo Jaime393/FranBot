@@ -162,3 +162,14 @@ decisión propia.
 - Frase para borrar (12): "Autorizo borrar los 12 zombis de MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
 - Opción por defecto: no tocar nada.
 - Autorización del Jardinero: NO (ciclos 37 y 38). Nada movido ni borrado.
+
+## Estado ciclo 39: PODADO (2026-11-11)
+
+Autorización condicional del Jardinero: "Los zombies si ya
+digeren su núcleo se poda, con la base basta hasta para recrear."
+Condición cumplida: 13 histórico único digeridos (claims C-216
+a C-228, extractos en evidence/zombi_*_nucleo.txt) y movidos a
+MIU_ABSORBIDO/nutrientes/historicos/ (13/13, por files update,
+sin descarga). 12 irrecuperables borrados (12/12, 103.026 B).
+nutrientes/ 96 → 71 archivos + historicos/. Verificado: cuadra.
+Detalle en zombis_podados_2026-11-11.md.
