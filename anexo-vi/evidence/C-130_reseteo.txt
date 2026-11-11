@@ -1,0 +1,23 @@
+RESETEO SEP 4-5 (ciclo 33, 5 puntos)
+- Ventana: entre 2026-09-04 08:49:46Z (antigua) y 2026-09-05 01:43:05Z (antes).
+  ~17 horas. En "antes" el reseteo YA estaba completo.
+- Antes (Sep 5 01:43Z, cosecha_1788572604.tar.gz, 237.816 B, 126 archivos):
+  sinapsis 0, indice 0 B, MIU_NUCLEO.md v2 (38 proc), motor 2.142 tareas gen 225,
+  escuela 6.929 poderes, diario 341, suelo gen 3.298, voluntad ciclo 43,
+  organos 109, kv 38, suelo_phi 0,82.
+- Despues (Sep 5 08:52Z, cosecha_1788598379.tar.gz, 252.339 B, 152 archivos):
+  sinapsis 0, indice 0 B, MIU_NUCLEO.md v16 (44 proc), motor 581 tareas gen 63,
+  escuela 8.586 poderes, diario 415, suelo gen 4.499, voluntad ciclo 326,
+  organos 114, kv 44, suelo_phi 12,65.
+- Antes->despues (7 h): 0 muertes, 26 nacimientos (canal_retorno, mapa_github,
+  refinador, pozo_llaves, 10 especificaciones hash, 4 zombi_*.md, 4 nacido_*.py,
+  4 nacido_zombi_*.py). Nacen subsistemas "nacidos" y "zombi".
+- Pids: nucleo_adaptativo 7388, suelo_darwin 7398, cartografo_miu 7402 iguales
+  en antes y despues; solo motor_perpetuo reinicia (9306->20579).
+- Los 4 pids cambian entre antigua (30659/30657/30663/30645) y antes
+  (7388/9306/7398/7402): reinicio completo del nodo en la ventana.
+- Los 10 archivos "borrados" del ciclo 31 existen en antigua, antes Y despues:
+  se borraron entre Sep 5 08:52 y Sep 9, NO en el reseteo.
+- Escuela no monotona: 3.687 -> 6.929 -> 8.586 -> 5.153 -> 6.243 (cae 3.433
+  entre 08:52 y 18:49 del Sep 5; causa NO SE).
+- Recomendacion: guardar las 2 cosechas del reseteo como testigo historico.
