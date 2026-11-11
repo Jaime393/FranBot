@@ -300,6 +300,17 @@ def c_mas_cercano_phi(filas):
     return min(filas, key=lambda f: abs(f["Ki"] - INV_T))
 
 
+def asintota(valores_c=(4.0, 10.0, 100.0, 1000.0), xi=0.71):
+    """Ki de la forma 3 para c grandes (ciclo 36).
+
+    P = Ξ·c (τ=1 ventana). tanh(P) → 1 cuando P → ∞, luego
+    Ki → T = 0.618. El valor 0.6138 es Ki en c=4.0, NO la asíntota:
+    con c=10 ya se alcanza 0.6180 a 4 decimales.
+    Devuelve lista de dicts {c, P, Ki}.
+    """
+    return [{"c": c, "P": xi * c, "Ki": forma_3(xi * c)} for c in valores_c]
+
+
 def demo():
     """Datos sintéticos: serie mensual con tendencia + ciclo anual + ruido."""
     rng = random.Random(34)
@@ -338,6 +349,14 @@ def main(argv):
             print(f"  rango estable: {r if r else 'sin rango continuo'}")
             mejor = c_mas_cercano_phi(res["filas"])
             print(f"  c más cercano a 0.618: c={mejor['c']} Ki={mejor['Ki']:.4f}")
+        return 0
+    if argv[1] == "asintota" and len(argv) == 3:
+        res = barrido_c(argv[2])
+        xi = res["Xi"]
+        print(f"ASÍNTOTA — forma 3 — Xi medido={xi:.4f} — T={T}")
+        for f in asintota(xi=xi):
+            print(f"  c={f['c']:<7} P={f['P']:<9.4f} Ki={f['Ki']:.6f}")
+        print(f"  límite c→∞: Ki → T = {T} (tanh → 1)")
         return 0
     res = ejecutar_grace(argv[1])
     print("PVE-01 — ejecución sobre GRACE TN-14 V3 (serie real)")
