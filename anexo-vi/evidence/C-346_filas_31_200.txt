@@ -1,0 +1,14 @@
+CICLO 47 - FRENTE A - Orquestador filas 31-200 (solo conteos, sin valores)
+pestanas (indices): 10, 14, 18, 19
+pestana 10: filas leidas 6 (31-36, luego vacio) | con datos 6 | @ 0 | bot 0 | DOI 0 | celdas 40+ 6 | emails distintos 0 | bots distintos 0
+pestana 14: filas leidas 72 (31-102) | con datos 72 | @ 34 | bot 0 | DOI 0 | celdas 40+ 61 | emails distintos 13 (nuevos vs 4-30: 2) | bots distintos 1 (nuevo: 1) | filas bot+email 0
+pestana 18: filas leidas 170 (rango completo 31-200) | con datos 170 | @ 175 | bot 0 | DOI 0 | celdas 40+ 143 | emails distintos 11 (nuevos: 2) | bots distintos 2 (nuevo: 1) | filas bot+email 34
+pestana 19: filas leidas 170 (rango completo 31-200) | con datos 170 | @ 137 | bot 0 | DOI 0 | celdas 40+ 158 | emails distintos 12 (nuevos: 9) | bots distintos 5 (nuevos: 2) | filas bot+email 8
+total filas 31-200 con datos: 418 | @ 346 | DOIs 0 | celdas 40+ 368
+CONSOLIDACION GLOBAL (4-30 de 11 pestanas + 31-200 de 4):
+- emails distintos: 18
+- bots distintos: 8 matches (handles: almaomni_bot, franbottablet_bot, franfamiliar_bot, fransell_bot, imperio_franbot, jp393_bot; mas 2 palabras genericas "bot", "franbot")
+- filas bot+email: 54 (12 en 4-30 + 42 en 31-200)
+estructura 11/11: PARCIAL (18 emails, 6 handles de bot; no 11/11 exactos)
+pestanas 18 y 19 saturaron el rango 31-200 (170/170): mas datos bajo fila 200
+nombres de pestanas, encabezados y valores de celdas NO reproducidos (regla de seguridad)
