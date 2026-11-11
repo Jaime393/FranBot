@@ -1,0 +1,19 @@
+Sondeo de formatos (ciclo 40). 5/5 leen.
+PDF: Habitat-Map-Dates.pdf (39.225 B, Drive) — files get alt=media
+descarga binario; pdftotext -layout extrae texto (4 paginas).
+Primeras lineas: "Dates of Source Imagery and Publication for
+Habitat Maps / Current as of: Dec 13, 2022".
+Doc: 00 Suelo_GRACE_Phi_PVE01 (Doc 3.526 B, Vault) — files export
+mimeType=text/plain devuelve texto (2.659 B). MIU_ABSORBIDO/ tiene
+0 Google Docs hijos directos; sus .md son nativos (text/markdown).
+Sheet: MIU_V98_TN14_V3 — sheets +read A1:C3 devuelve filas
+(columnas date, mjd, year_fraction).
+JSON: gossip_global.json (1.107 B) — files get alt=media devuelve
+JSON parseado inline. Claves: c20_firma, friccion, hallazgo, masa,
+masa_dispositivos, monitor, monitor_absoluto_nuevo, monitor_v2,
+monitor_v3, monitor_v4, nicho, timestamp, token_firma,
+ultimo_gemelo, velocidad_luz_ms.
+SQLite: token_metrics.db (16.384 B) — files get alt=media descarga
+binario (sha256 identico a la copia de ciclo 34); sqlite3 local:
+tablas token_metrics 33 filas, token_relay_log 4.
+Detalle en sondeo_formatos.md.
