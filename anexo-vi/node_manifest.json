@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T13:25:00Z",
+  "last_seen": "2026-11-11T13:40:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -390,5 +390,36 @@
   "frente_actual": "leer_antes_de_podar",
   "nutrientes_emitidos": 0,
   "buzon_depositado": false,
-  "config_global_tocada": false
+  "config_global_tocada": false,
+  "reseteo_2026_11_11": {
+    "archivo": "reseteo_sep4_sep5.md",
+    "ventana": "2026-09-04 08:49:46Z a 2026-09-05 01:43:05Z (~17 h)",
+    "antes": "cosecha_1788572604.tar.gz (237.816 B, 126 archivos)",
+    "despues": "cosecha_1788598379.tar.gz (252.339 B, 152 archivos)",
+    "muertes": 0,
+    "nacimientos": 26,
+    "causa": "reinicio del nodo (CONJETURO)",
+    "recomendacion": "guardar las 2 cosechas como testigo historico"
+  },
+  "pve01_2026_11_11": {
+    "archivo": "pve_01_estado.md",
+    "implementado": false,
+    "ejecutado": false,
+    "formula": "Vault 00 Suelo_GRACE_Phi_PVE01.md (3 formas candidatas)",
+    "g09": "abierta por carencia de implementacion"
+  },
+  "nutrientes_buzon_2026_11_11": {
+    "archivo": "nutrientes_buzon.md",
+    "credenciales": 6,
+    "estado_vivo": 24,
+    "catalogo_datos": 41,
+    "historico_zombi": 25,
+    "total": 96
+  },
+  "higiene_2026_11_11": {
+    "valores_literales": 0,
+    "issue_45": "cerrado",
+    "issue_57": "cerrado",
+    "issues_abiertos_miu": 23
+  }
 }
