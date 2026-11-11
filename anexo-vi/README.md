@@ -114,3 +114,7 @@ Tokens por servicio: Zenodo 0 en el archivo (corrección), HF 4 formato real; or
 ## Ciclo 42 (2026-11-11)
 
 Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos con la palabra, 0 con token); orquestador 19 pestañas, 5 leídas, solo lectura; G05 re-verificada (3ª vez) sin escribir, PARCIAL. Claims 275 (hash_real 261).
+
+## Ciclo 43 (2026-11-11)
+
+Zenodo: DOI 10.5281/zenodo.20547558 existe (MIU V12.0, 2026-06-04); token cargado en runtime, no en archivos. Bots: 4 vivos de 6 (Micelio, Familiares, franbot_tablet_bot, AlmaOmni_Bot); 89 emails locales. Cero escritura. Claims 290 (hash_real 276).
