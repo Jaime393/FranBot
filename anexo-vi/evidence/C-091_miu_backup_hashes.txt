@@ -1,0 +1,16 @@
+EVIDENCIA — miu-backup (ciclo 30)
+Carpeta Drive: miu-backup (118 archivos cosecha_*.tar.gz).
+Metodo: descarga de 3 mas recientes + 3 mas antiguas, sha256 de cada una.
+Periodo: 2026-09-04T08:50:25Z a 2026-09-10T05:38:50Z (140,8 h). Tamano total 31.557.729 B, medio 267.438 B.
+
+reciente_1: cosecha_1789018731.tar.gz | 347997 B | sha256:928bc74112c6a6cf8d2cb04e60c457c2db51f99b2b7d18fcb0a1ec1d332d37ee
+reciente_2: cosecha_1789016877.tar.gz | 347982 B | sha256:5f34739b96d0a1fa159df5e26dab2b17f2f7ce776263efcfd5eb3ee76d265e3e
+reciente_3: cosecha_1789014887.tar.gz | 347977 B | sha256:ed602e1eb15139480aca6f789d9fd363b97dc05f266d0b0b10c68220d19afe05
+antiguo_1: cosecha_1788511826.tar.gz | 205714 B | sha256:59535d1b555214c03eb5e31d7335a1fb5ae74746c3fca27c0dce390e2704ebf1
+antiguo_2: cosecha_1788513647.tar.gz | 217475 B | sha256:f3750f127093dcdff69f25639dd18c8d1d260892d4ec185f400cdb2b65eaface
+antiguo_3: cosecha_1788515503.tar.gz | 220622 B | sha256:266de1e50e7c91d2a3e4bb4a39f8373a160664517e63f704fc3fa21f3d29fb20
+
+3 recientes identicas: NO
+3 antiguas identicas: NO
+reciente vs antiguo identicos: NO
+Conclusion: TESORO incremental (no Sombra Viral). Conservar 118, borrar 0.
