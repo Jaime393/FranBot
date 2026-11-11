@@ -276,3 +276,16 @@ lo declarará como carencia de entorno, no como grieta epistémica.
 - Zombis: frases mover (25) y borrar (12) verificadas presentes.
   Opción por defecto: no tocar nada. Nada borrado ni movido.
 - Claims C-156 a C-170 (15: SE 15). Total 170, hash_real 156.
+
+## Búsqueda de c, asíntota 0.618, G09 cerrada parcialmente ciclo 36 (2026-11-11)
+
+- c buscado exhaustivamente (Vault, issues, commits, 30/40, paper):
+  C_NO_DEFINIDO_PARA_GRACE. Issues MIU: 0 hits (4 queries). Commits
+  MIU: 0 hits (con repo:); sin qualifier, global contaminada por
+  hostnames Proxmox "pve-01". Tres PVE-01 incompatibles + homónimo.
+- Asíntota: 0.618 = φ⁻¹ exacto (c=10 → 0.617999, c=100/1000 → 0.618).
+  Corrección: 0.6138 era Ki en c=4.0, no la asíntota. La ley llega a
+  φ⁻¹ en el límite c→∞. Rango Ki [0.2106, 0.618); banda c ≥ 2.0025.
+- G09: CERRADA PARCIALMENTE. Compatible, no confirmada. Falta
+  definición de c con criterio independiente para el cierre total.
+- Claims C-171 a C-185 (15: SE 15). Total 185, hash_real 171.
