@@ -106,3 +106,7 @@ Poda de zombis con núcleo digerido: 13 movidos a historicos/, 12 borrados (103.
 ## Ciclo 40 (2026-11-11)
 
 Sondeo exhaustivo: 5/5 formatos leen; tokens_20260830 abierto (23.430 entradas, 6 telegram); bot Micelio @Jp393_bot vivo, webhook activo; G05 PARCIAL. Sin conector HF/Zenodo. Claims 245 (hash_real 231).
+
+## Ciclo 41 (2026-11-11)
+
+Tokens por servicio: Zenodo 0 en el archivo (corrección), HF 4 formato real; orquestador MIU_ORCHESTRATOR_V152_MAX_EXPANDED (19 pestañas, solo lectura); G05 re-verificada sin escribir, PARCIAL. Claims 260 (hash_real 246).
