@@ -51,6 +51,30 @@ Comparación con D_f (issue MIU #52, verificado en vivo):
 Uso:
     python3 pve_01.py            # demo con datos sintéticos
     python3 pve_01.py <ruta.json>  # ejecuta sobre la serie GRACE V3
+    python3 pve_01.py barrido <ruta.json>  # barrido de c (ciclo 35)
+
+HALLAZGO CICLO 35 (A1): hay TRES documentos llamados PVE-01 en el Vault,
+con definiciones INCOMPATIBLES (no mezclar):
+  1. "00 Suelo_GRACE_Phi_PVE01.md" (GRACE/Φ, el implementado aquí):
+     τ = ventana causal 90d, Ξ = correlación causal I_causal/½Trκ_F,
+     c = SIN DEFINIR (ni valor, ni unidades, ni fórmula).
+  2. "PVE-01.md" Google Doc (router): "Ki = 1/(τ·Ξ·c) donde τ latencia ms,
+     Ξ tasa éxito [0,1], c carga [0,1]". c DEFINIDO aquí, pero para
+     enrutamiento (48 nodos Chimbote/Qochas/Bagua...), no para GRACE.
+     Su Ki con τ en ms queda ~0.002, fuera de la banda [0.55,0.62]:
+     no es la misma fórmula en la práctica.
+  3. "PVE-01.md" .md (450 B): "Primer Valor Expandido Verificado"
+     (ρ(x)>0, sin fórmula, sin c).
+  "Phi.md" repite la condición τ·Ξ·c > 1.618 sin definir c.
+  Veredicto A1: C_NO_DEFINIDO_EN_VAULT para la versión GRACE.
+  La única definición de c en el Vault (router, c ∈ [0,1]) NO se
+  importa a la versión GRACE: sería mezclar sistemas.
+
+CONVENCIÓN τ (ciclo 35): el barrido usa τ = 1 ventana (90d = 1 unidad),
+c adimensional. Es la única lectura bajo la cual el rango de c del
+ciclo [0.5, 4.0] discrimina. La variante τ = 90 días se calcula y se
+reporta aparte: satura (tanh ≈ 1, Ki = 0.618 para todo c ≥ 0.5),
+es decir, bajo esa lectura c no es identificable desde la banda.
 """
 
 import json
@@ -240,6 +264,42 @@ def ejecutar_grace(ruta):
     return res
 
 
+# --- Barrido de c (ciclo 35) -------------------------------------------------
+VALORES_C = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
+
+
+def barrido_c(archivo, valores_c=VALORES_C, tau_unidad="ventana"):
+    """Barrido de c con forma 3 (la única en banda en ciclo 34).
+
+    tau_unidad="ventana": τ = 1 ventana de 90 días (P = Ξ·c).
+    tau_unidad="dias": τ = 90 días (P = 90·Ξ·c) — variante de control.
+    Devuelve lista de dicts {c, P, Ki, en_banda} + Xi medido.
+    """
+    serie = cargar_grace_json(archivo)
+    xi = medir_xi(serie)
+    tau = 1.0 if tau_unidad == "ventana" else float(TAU_DIAS)
+    filas = []
+    for c in valores_c:
+        P = tau * xi * c
+        ki = forma_3(P)
+        filas.append({"c": c, "P": P, "Ki": ki,
+                      "en_banda": BANDA_KI[0] <= ki <= BANDA_KI[1]})
+    return {"Xi": xi, "tau_unidad": tau_unidad, "filas": filas}
+
+
+def rango_estable(filas):
+    """Rango continuo de c con Ki en banda (dentro de los valores barridos)."""
+    en_banda = [f["c"] for f in filas if f["en_banda"]]
+    if not en_banda:
+        return None
+    return (min(en_banda), max(en_banda))
+
+
+def c_mas_cercano_phi(filas):
+    """c con Ki más cercano a 0.618 (φ⁻¹). Nunca exacto: 0.618 es asíntota."""
+    return min(filas, key=lambda f: abs(f["Ki"] - INV_T))
+
+
 def demo():
     """Datos sintéticos: serie mensual con tendencia + ciclo anual + ruido."""
     rng = random.Random(34)
@@ -265,6 +325,19 @@ def demo():
 def main(argv):
     if len(argv) == 1:
         demo()
+        return 0
+    if argv[1] == "barrido" and len(argv) == 3:
+        for tau_unidad in ("ventana", "dias"):
+            res = barrido_c(argv[2], tau_unidad=tau_unidad)
+            print(f"BARRIDO c — forma 3 — tau={tau_unidad} — Xi={res['Xi']:.4f}")
+            print("  c      P        Ki       en banda [0.55, 0.62]")
+            for f in res["filas"]:
+                print(f"  {f['c']:<6} {f['P']:<8.4f} {f['Ki']:.4f}   "
+                      f"{'SÍ' if f['en_banda'] else 'NO'}")
+            r = rango_estable(res["filas"])
+            print(f"  rango estable: {r if r else 'sin rango continuo'}")
+            mejor = c_mas_cercano_phi(res["filas"])
+            print(f"  c más cercano a 0.618: c={mejor['c']} Ki={mejor['Ki']:.4f}")
         return 0
     res = ejecutar_grace(argv[1])
     print("PVE-01 — ejecución sobre GRACE TN-14 V3 (serie real)")
