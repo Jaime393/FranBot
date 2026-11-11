@@ -1,0 +1,10 @@
+Evidencia ciclo 49 — siembra academico/ (C-373)
+Archivos y hashes sha256:
+TABLA_FISICA.md: sha256:5895fb1d050b7151cf64665ae3a21f9593241d12db01b055cef06fc203e96e14
+TABLA_INMUNE_Y_PROTOCOLOS.md: sha256:1c5f6c4acc0d3dff028e3fbe7b402740d3a738827641bdb0252774572e8cda57
+TABLA_DOIS_Y_ONTOLOGIA.md: sha256:cb892dd96517e035619dd216b253ad39e05c630673c0ee926e4762e73e7af02f
+PAPER_DOIS_MIU.md: sha256:91825cdb98685628baae9d9c5fd11b4b38e4bc53ec485e480e086b1728a81709
+dataset_nodos_Df.csv: sha256:265eaa5134dddc0db7a83dd057eb46a260f1077d71b46854421c97720630f568
+dataset_nodos_Df.md: sha256:1671cc8cb5bc674ff032ec66b0953a33705be7cdcc10a2d05f129bd199df9e1f
+README.md: sha256:f7a9754ac5d8b95d0060883adf822f47b86e1661e57727d2eb8fcaf0338dae89
+Destino: Jaime393/FranBot/academico/ (conector del chat, un commit por archivo).

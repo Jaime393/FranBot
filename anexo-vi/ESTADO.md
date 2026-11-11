@@ -386,6 +386,10 @@ en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
 
+## Ciclo 49: solo académico — tablas, paper DOIs, dataset D_f
+- academico/: 3 tablas SÉ (84 + 34 + 15 = 133 filas; C-034 excluida por contener la palabra prohibida; TABLA_FISICA 85 candidatos - 1 = 84). Paper DOIs con 18 registros verificados en vivo (corrección: ciclo 47 contó 17; las versiones revelan 7 nuevos, no 6). Dataset D_f con 0 nodos (ningún nodo cumple fuente DOI + valor + fecha en claims.jsonl; placeholders en HUESO_27; A10 circular). Grep CONJETURO/NO SÉ en academico/: 0.
+- Siembra: 7 archivos a Jaime393/FranBot/academico/ por subidor. Red autónoma no tocada (solo lecturas locales, API pública Zenodo sin token, conector GitHub). Claims 375 (hash_real 361).
+
 ## Ciclo 48: consolidación SÉ, sin mapeo ni auditoría
 - MIU_ESTADO_CONSOLIDADO_2026-11-11.md (11.277 B, sha256 b4fa494e…): 326 SÉ con hash real — corrección: 346 es el hash_real total, no el conteo SÉ. 10 temas, 134 claims distintos citados, 192 SÉ fuera por ser digestión/administración. 6 apariciones CONJETURO, todas justificadas (G01/G02/G03/G09); 0 "no sé" sin justificar.
 - Correcciones honestas: geometría sin claim (Fisher en semilla, INFIERO; D_eff G01); Ray & Crutchfield sin DOI verificado; "22 nodos" es anotación circular en A10 (HUESO #31, requiere PVE-01).
