@@ -289,3 +289,19 @@ lo declarará como carencia de entorno, no como grieta epistémica.
 - G09: CERRADA PARCIALMENTE. Compatible, no confirmada. Falta
   definición de c con criterio independiente para el cierre total.
 - Claims C-171 a C-185 (15: SE 15). Total 185, hash_real 171.
+
+## Definición de c sin éxito, nombres resueltos, zombis sin autorización ciclo 37 (2026-11-11)
+
+- c: SIN DEFINICIÓN. Papers (paper.md, paper.bib, MIU_PAPER_V2,
+  RAIZ_X): ninguno define c, ninguno menciona la asíntota.
+  Candidatos físicos con GRACE real: c1=1/90 → Ki=0.0049 (no
+  banda); c2=1 → Ki=0.3774 (no banda); c3 dimensionalmente
+  inválida. G09 sigue parcialmente cerrada.
+- Nombres: "PVE-01" en Vault: 60 archivos, 0 Proxmox. La
+  contaminación es solo de la búsqueda global de GitHub (20.626
+  hits). El Vault define PVE-01 funcionalmente (fórmula + GRACE);
+  no hay expansión literal del acrónimo.
+- Zombis: el Jardinero NO ha autorizado (verificado en historial
+  y memoria). Nada movido ni borrado. Estado ciclo 37 en el
+  documento.
+- Claims C-186 a C-200 (15: SE 15). Total 200, hash_real 186.
