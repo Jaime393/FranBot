@@ -1,0 +1,9 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: archivo/ (subcarpeta)
+Nota: Subcarpeta archivo/: 2 archivos dentro (inventario por nombre).
+
+Contenido (inventario por nombre, ciclo 34; NO descargado):
+  - inventario_global_254falsos_163K.json (ID 1Psv4wFf3NpNnX4TQTZVbi-36qWpt560C)
+  - tokens_20260830_4.8M.json.zlib.gz (ID 1jpea1gmzqk55P5dGjSpd41tXMPufTF9A) — material de credenciales por nombre, NUNCA descargado ni abierto.
+
+Qué se extrae y por qué: el inventario por nombre basta para saber qué contenía la carpeta; el archivo de tokens no se toca.
