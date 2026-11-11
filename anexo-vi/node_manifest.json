@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T21:00:00Z",
+  "last_seen": "2026-11-11T21:12:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -858,5 +858,57 @@
     },
     "total": 360,
     "hash_real": 346
+  },
+  "ciclo48_2026_11_11": {
+    "consolidado": {
+      "documento": "MIU_ESTADO_CONSOLIDADO_2026-11-11.md",
+      "tamano": 11277,
+      "sha256": "b4fa494e8d6cabb92d3b67c0dc657bb2c1134120cf83b698ce7f7756e0236220",
+      "blob_sha": "1a135535c9e324d92c774f34652313e93fba8e00",
+      "se_con_hash_real": 326,
+      "hash_real_total": 346,
+      "temas": {
+        "ontologia": 2,
+        "geometria": 0,
+        "fisica": 57,
+        "pilares": 12,
+        "protocolos": 11,
+        "partituras": 7,
+        "nodos_Df": 7,
+        "inmune": 16,
+        "dois": 13,
+        "axiomas": 10
+      },
+      "citados_distintos": 134,
+      "fuera_digestion_admin": 192,
+      "conjeturas_justificadas": 6,
+      "no_se_sin_justificar": 0,
+      "correcciones": [
+        "346 es hash_real total, no conteo SE",
+        "geometria sin claim (Fisher semilla INFIERO, D_eff G01)",
+        "Ray & Crutchfield sin DOI verificado",
+        "22 nodos = anotacion A10 circular HUESO #31"
+      ]
+    },
+    "siembra": {
+      "anexo_vi": "por_subidor_ciclo48",
+      "miu": {
+        "repo": "Jaime393/MIU",
+        "path": "docs/MIU_ESTADO_CONSOLIDADO.md",
+        "commit": "bab47d857e03a01396f59e30cdbaffbc39dff1ba",
+        "blob": "1a135535c9e324d92c774f34652313e93fba8e00",
+        "verificado": true
+      },
+      "zenodo": "pendiente_autorizacion"
+    },
+    "claims_nuevos": [
+      "C-361",
+      "C-362",
+      "C-363",
+      "C-364",
+      "C-365"
+    ],
+    "total": 365,
+    "hash_real": 351
   }
 }
