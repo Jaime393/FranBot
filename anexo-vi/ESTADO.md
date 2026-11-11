@@ -336,3 +336,15 @@ historicos/. Cuadra. Hallazgo: las tablas tokens de estado_v24.db
 y estado_v24_1.db están VACÍAS (0 filas). C30: sin período
 (6 valores distintos, artefacto). Bot Telegram: sin acceso.
 Total claims: 231 (hash_real 217).
+
+## Ciclo 40 (2026-11-11) — sondeo exhaustivo
+
+Corrección al ciclo 39: "sin acceso" se reportó sin buscar en
+los archivos ya digeridos. Este ciclo abre cada formato y busca
+tokens donde están. Formatos 5/5 leen (PDF vía pdftotext, Doc
+vía export, Sheet vía +read, JSON inline, SQLite vía descarga +
+sqlite3). tokens_20260830 (23.430 entradas, 6 tipo telegram)
+descargado y abierto por primera vez: 1 token vivo (bot
+Micelio @Jp393_bot, getMe OK), 1 muerto (401). Webhook activo.
+G05 pasa a PARCIAL. Sin conector de HuggingFace ni de Zenodo.
+Sheets write no verificada. Claims 245 (hash_real 231).
