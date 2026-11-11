@@ -115,6 +115,24 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
 - Total del módulo: 75 claims, 63 con hash real, 8 pendientes, 2 refutados.
   Nada podado, nada reconectado.
 
+## Tesoro miu-backup, nutrientes y MIU#52 ciclo 31
+
+- Fecha: 2026-11-11 ~07:47–08:05 -05. Frente A: 2 cosechas
+  descomprimidas (reciente 208 archivos/1,5 MB; antigua 108/0,86 MB;
+  110 nuevos, 10 borrados; escuela 3687→6243 poderes, diario 58→462;
+  mesh reseteado 916→0; motor reiniciado gen 39→1). Conservar 118/118.
+  Frente B: nutrientes 96 (69 json, 11 txt, 10 db); catalogo 23.294
+  recursos; 6 archivos con valores reales de credenciales (no se
+  abren ni suben); referenciar, no integrar. Frente C: backup 10
+  README (seed 31), 10/10 OK, 281 B, idénticos normalizados — poda sin
+  pérdida de contenido. Frente D: MIU#52 leído entero (Jaime393,
+  2026-07-10, ABIERTO; K_i=0.2472·D_f; confirma G09, no la cierra;
+  similares #42/#43/#48). Frente E: discrepancia INDICE vs
+  consolidado documentada; canónico NO claro (mismo día 2026-09-25);
+  requiere decisión del Jardinero.
+- Claims nuevos C-096–C-111 (SE 16). Total módulo: 111 claims,
+  hash_real 98, hash_pendiente 8, refutados 2.
+
 ## G07 parcial y poda por PR no factible ciclo 30
 
 - Fecha: 2026-11-11 ~07:36–07:53 -05. Frente A: 58 axiomas A0–A57
