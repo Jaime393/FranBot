@@ -101,6 +101,20 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
   2 abiertas (registro de datos, estructura MIU). Ninguna catalogada como G13.
 - Total del módulo: 69 claims. Nada podado, nada al remoto.
 
+## Cierre ciclo 27
+
+- Fecha: 2026-11-11 ~07:03–07:10 -05. Frente A: sincronización a GitHub
+  (27/28 archivos; P45-30.txt bloqueado por Secret Scanning — contiene
+  2 tokens completos de Cloudflare, queda solo en local, valores nunca
+  reproducidos). Frente B: estructura MIU mapeada.
+- Estructura MIU: 6 subcarpetas leídas por dentro (13 archivos descargados
+  y leídos). INVENTARIO_MAESTRO: 5 PRESENTE / 12 AUSENTE al cierre de AV.
+- HUESO_26 y HUESO_27: verificación en vivo de G09 (K_i circular) y G03
+  (7pred no falsable). Claims C-070–C-075.
+- G-NUEVA: cerradas 5/5. Ninguna catalogada como G13.
+- Total del módulo: 75 claims, 63 con hash real, 8 pendientes, 2 refutados.
+  Nada podado, nada reconectado.
+
 ## Última auditoría
 
 - audit.py v3: EXIT=0 — RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1
