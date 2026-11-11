@@ -1,0 +1,18 @@
+EVIDENCIA DE LISTADO — Drive (conector del chat)
+Generada en ciclo 26 a partir del listado de ciclo 25 (Tarea 4).
+Comando: hatch_gws_cli drive files list --params '{"q": "<folderId> in parents and trashed = false", "pageSize": 100, "fields": "nextPageToken,files(id,name,mimeType,size,modifiedTime,createdTime)"}'
+Listado obtenido: 2026-11-11 ~06:51 -05 (ciclo 25).
+Evidencia generada: 2026-11-11 ~07:00 -05 (ciclo 26).
+Carpeta padre: MIU_ABSORBIDO/MIU (drive).
+
+Subcarpeta: memoria/ — 3 elementos (3 archivos, 0 carpetas)
+  - MEMORIA_20260716.md | text/markdown | size=1066 | modified=2026-09-07T13:48:41.840Z
+  - MEMORIA_20260718.md | text/markdown | size=2208 | modified=2026-09-07T13:48:41.840Z
+  - NODO_SEMANA_2026-07-14.md | text/markdown | size=3513 | modified=2026-09-07T13:48:41.840Z
+
+Subcarpeta: huesos/ — 5 elementos (5 archivos, 0 carpetas)
+  - hueso_23_dimensionalidad_fractal_cuantica.md | text/markdown | size=1383 | modified=2026-09-07T13:48:41.840Z
+  - HUESO_27_verificacion_github.md | text/markdown | size=3773 | modified=2026-09-07T13:48:41.840Z
+  - hueso_25_nodo_amazonia_deter_inpe.md | text/markdown | size=1136 | modified=2026-09-07T13:48:41.840Z
+  - HUESO_26_estado_tejido.md | text/markdown | size=3271 | modified=2026-09-07T13:48:41.840Z
+  - hueso_24_conectoma_fractal_resonancia_neuronal.md | text/markdown | size=1405 | modified=2026-09-07T13:48:41.840Z
