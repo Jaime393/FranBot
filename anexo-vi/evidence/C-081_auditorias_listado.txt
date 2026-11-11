@@ -1,0 +1,9 @@
+EVIDENCIA DE LISTADO — Drive (conector del chat)
+Generada en ciclo 29. Carpeta: MIU_ABSORBIDO/auditorias/ (Drive).
+Listado obtenido: 2026-11-11 ~07:21 -05 (ciclo 29). NO se descargo ningun archivo (50+ MB).
+
+Total: 4 archivos, 79435177 B (75.8 MB).
+  - poda_ejecutada.log | size=4242756 B | modified=2026-09-08T16:05:03.110Z
+  - memoria_consolidada.md | size=10111581 B | modified=2026-09-08T16:03:37.390Z
+  - memoria_consolidada.json | size=50657509 B | modified=2026-09-08T16:03:36.460Z
+  - genealogia.md | size=14423331 B | modified=2026-09-08T16:03:11.950Z
