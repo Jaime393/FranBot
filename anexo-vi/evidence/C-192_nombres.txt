@@ -1,0 +1,27 @@
+Evidencia ciclo 37 — Nombres PVE-01 vs Proxmox (C-192 a C-195)
+Fecha: 2026-11-11.
+sha256 pve01_nombres.md: a2384e78a277859c63ddf013db6fbe3d5303c2736c4f78c56bdd675093d87214
+Tamaño: 2.496 B.
+
+B1 — Drive fullText contains 'PVE-01' (pageSize 100): 60 archivos.
+Todos del Vault / MIU (3 docs PVE-01, axiomas, manifiesto v10.6,
+HALLAZGOS, MIU_v13_CODICE, parte_*.json, memoria_imperial.json,
+imperial_data.json, orquestador_v8.py x2, zips FranBot).
+0 archivos Proxmox en Drive. La contaminación NO está en Drive.
+
+B2 — Contaminación en GitHub global: search_commits sin qualifier
+"PVE-01" → 20.626 hits globales (primer hit: homelab "Retain pve-01
+and split workloads across two Proxmox hosts"). Con qualifier
+repo:Jaime393/MIU → 0 hits. Única mención de PVE-01 en código MIU:
+cadena de prompt en orquestador_v8.py (ciclo 33).
+
+Cita textual del Vault que define PVE-01 (funcionalmente; el Vault
+NO contiene expansión literal del acrónimo):
+" PVE-01 — Validación sin D_f / Ki=1/(τ·Ξ·c) | T·1.618/(τ·Ξ·c) |
+T·tanh(τ·Ξ·c) solo τ ventana causal 90d + Ξ correlación causal
+I_causal/½Trκ_F sin D_f / * 48/48 nodos verificados τ·Ξ·c>1.618
+Ki∈banda [0.55,0.62] / * Requiere para HUESO #31 circular
+R²=0.989 validación independiente"
+(00 Suelo_GRACE_Phi_PVE01.md, ciclo 34).
+Y orquestador_v8.py: "Diseña un experimento para validar la Ley Ki
+en arrecifes de coral sin usar D_f (protocolo PVE-01)."
