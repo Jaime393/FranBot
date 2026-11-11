@@ -1,0 +1,32 @@
+Evidencia ciclo 34 — 25 zombis clasificados (C-150, C-151, C-152, C-154)
+Fecha: 2026-11-11.
+sha256 nutrientes_zombis_decision.md:
+7786d91b7ae28f6ea19cfdaa8e9c36359eab559be13f330496ce6988e1cce531
+Tamaño: 5.571 B. Fuente: listado ciclo 29 (nutrientes, 96 entradas).
+
+25 zombis (nombre | tamaño B | valor histórico):
+alimentador.db 20480 SÍ; alimentador_fractal.db 32768 SÍ;
+cola_sync.db 20480 NO; estado_v24.db 24576 SÍ; estado_v24_1.db 28672 SÍ;
+maestro.db 28672 NO; memoria_flujo.db 20480 SÍ; pliegues.db 12288 SÍ;
+plugin_manager_v24_2.db 24576 NO; token_metrics.db 16384 SÍ;
+memoria_ciclos.jsonl 13391 NO; historial_ejecuciones.jsonl 14398 NO;
+arquitecto_v2_log_20260831_224450.txt 415 SÍ;
+arquitecto_v2_log_20260831_224239.txt 415 SÍ;
+arquitecto_log_20260831_221820.txt 591 SÍ;
+ecm_resultado.txt 90 NO; evolucion_topologica.log 7250 SÍ;
+semilla_v24_1788176641.txt 294 NO; semilla_v24_1788176623.txt 293 NO;
+semilla_v24_1_1788172662.txt 227 NO; semilla_v24_1788167455.txt 294 NO;
+semilla_v24_1788167440.txt 293 NO; miu_brain.db.zlib 21942 SÍ;
+dummy.tflite 18 NO; archivo/ (subcarpeta) SÍ.
+Total 24 archivos: 289.287 B. Sin valor (12): 103.026 B.
+Histórico único: 13. Irrecuperables (sin valor): 12.
+Método: .db solo por esquema (.tables, sin filas); .txt leídos;
+.jsonl ya leídos en ciclo 31; miu_brain.db.zlib descomprimido solo
+para listar tablas (458.752 B, copia borrada).
+Sensible (filas NUNCA leídas, nunca subir): estado_v24.db y
+estado_v24_1.db (tabla tokens); token_metrics.db (token_metrics,
+token_relay_log); miu_brain.db.zlib (tabla token_estado);
+archivo/tokens_20260830_4.8M.json.zlib.gz (NO descargado, NO abierto).
+Recomendación: MOVER los 25 a MIU_ABSORBIDO/nutrientes/historicos/.
+Frases exactas en nutrientes_zombis_decision.md (mover 25 / borrar 12).
+Nada borrado ni movido en este ciclo.
