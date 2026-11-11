@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T21:45:00Z",
+  "last_seen": "2026-11-11T22:10:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -912,7 +912,7 @@
     "hash_real": 351
   },
   "academico": {
-    "fecha": "2026-11-11T21:45:00Z",
+    "fecha": "2026-11-11T22:10:00Z",
     "archivos": [
       "TABLA_FISICA.md",
       "TABLA_INMUNE_Y_PROTOCOLOS.md",
@@ -924,7 +924,7 @@
     ],
     "filas_totales_tablas": 134,
     "paper_dois_verificados": 18,
-    "dataset_nodos": 0,
+    "dataset_nodos": 23,
     "sembrado_github": true,
     "conector_usado": "chat_github",
     "no_toco_red_autonoma": true,
@@ -934,6 +934,16 @@
       "dataset_extraccion": "14 candidatos en TABLA_FISICA.md, 0 nodos con D_f medido",
       "paper_archivos_corregidos": "0->reales (18 valores)",
       "csv_parada": "0 filas <20, sin nodos inventados, CSV no re-subido"
+    },
+    "nodos_con_doi": 4,
+    "nodos_con_url": 19,
+    "metodo_box_counting": 23,
+    "ciclo52": {
+      "csv_hash": "sha256:01743296ea81370bbd05a51ef6b6e2715aba665eb7bb4b230178027120010a15",
+      "md_hash": "sha256:cf45b1730ab70c71da996e20b47472c092b855e3f00d6dbb3a99913e2070e80f",
+      "filas_datos": 23,
+      "md_dice_22_nodos": "titulo dice 22, tabla y CSV tienen 23 (22 + CMB)",
+      "k_i_fuera_de_formula": "Microbioma HMP2: D_f 2.50 K_i 0.508 (formula 0.2472*D_f da 0.618)"
     }
   }
 }
