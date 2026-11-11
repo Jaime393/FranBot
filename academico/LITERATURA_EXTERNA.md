@@ -75,11 +75,39 @@ Leídos completos el 2026-11-11 desde Jaime393/MIU (rama main). Cada CSV tiene c
 | fiji_wcs_macmon.csv | MIU_V12.0_FINAL/nodos/corales/fiji_wcs_macmon.csv | 1 | D_f | 1.96 | sí (Fiji 1.96) |
 | jamaica_agrra.csv | MIU_V12.0_FINAL/nodos/corales/jamaica_agrra.csv | 1 | D_f | 1.98 | sí (Jamaica 1.98) |
 | palk_bay_zsi2013.csv | MIU_V12.0_FINAL/nodos/corales/palk_bay_zsi2013.csv | 1 | D_f | 1.86 | sí (Palk Bay 1.86) |
-| allen_atlas_site_013.csv | MIU_V12.0_FINAL/nodos/corales/allen_atlas_site_013.csv | 1 | D_f | 2.0 | parcial (dataset Caribe SE 2.08; el archivo es un solo sitio, no el agregado) |
+| allen_atlas_site_013.csv | MIU_V12.0_FINAL/nodos/corales/allen_atlas_site_013.csv | 1 | D_f | 2.0 | un solo sitio (el agregado caribe_se_allen_atlas.csv tiene 2.08; ver ciclo 56) |
 | reef_conteos_miu.csv | MIU_V12.0_FINAL/nodos/corales/reef_conteos_miu.csv | 1 | D_f | 1.6 | no (ninguna fila del dataset tiene D_f 1.6; 12.805 polígonos, 2020) |
-| firms_df_Ki.csv | MIU_V12.0_FINAL/nodos/clima/firms_df_Ki.csv | 1 | D_f | 1.9690764062597914 | no (dataset Incendios 1.49; discrepancia anotada, valor sin tocar) |
+| firms_df_Ki.csv | MIU_V12.0_FINAL/nodos/clima/firms_df_Ki.csv | 1 | D_f | 1.9690764062597914 | otra medida (dataset 1.49 = serie anual; 1.969 = box-counting espacial; ver ciclo 56) |
 
-Cruce total: 3 confirmados, 2 discrepancias, 18 sin CSV. Ningún valor del dataset cambió.
+Cruce total (ciclo 55, solo 6 CSV): 3 confirmados, 2 discrepancias, 18 sin CSV. Corregido en ciclo 56 (ver sección siguiente): 17 confirmados, 1 discrepancia, 5 sin CSV buscable. Ningún valor del dataset cambió.
+
+## CSV completos leídos (ciclo 56)
+
+El ciclo 56 listó el árbol completo de MIU_V12.0_FINAL/nodos/ (336 archivos) y leyó los archivos fuente de los 18 nodos restantes. Todos son cabecera + 1 fila (salvo Chernozem, 7 filas con el mismo D_f).
+
+| Nodo del dataset | Archivo fuente | D_f en archivo | D_f dataset | Estado |
+|---|---|---|---|---|
+| Manglares GMW | nodos/manglares/gmw_v4_global_2024.csv | 2.28 | 2.28 | confirmado |
+| Chernozem Ucrania | nodos/suelos/wosis_chernozem_ukraine_dbd1.13.csv | 2.41 | 2.11 | discrepancia (única restante) |
+| Vertisol India | nodos/suelos/wosis_vertisol_india_cec25.csv | 2.10 | 2.10 | confirmado |
+| Red Sea corales | nodos/corales/red_sea_kaust_roberts2016.csv | 2.16 | 2.16 | confirmado |
+| Florida Reef Tract | nodos/corales/florida_reef_noaa_ncei_0208322.csv | 2.02 | 2.02 | confirmado |
+| Persian Gulf | nodos/corales/persian_gulf_aeby2020.csv | 1.89 | 1.89 | confirmado |
+| GBR Australia | nodos/corales/gbr_aims_thompson2014.csv | 1.95 | 1.95 | confirmado |
+| American Samoa | nodos/corales/american_samoa_noaa_pifsc.csv | 1.93 | 1.93 | confirmado |
+| Biodiversidad flora | nodos/biodiversidad/gbif_flora_875M_2026.csv | 2.31 | 2.31 | confirmado |
+| Microbioma humano | nodos/microbioma/hmp2_human_3150_metagenomes.csv | 2.50 (D_f_network) | 2.50 | confirmado (resuelve la anomalía K_i 0.508) |
+| Suelo fértil global | nodos/suelos/soilgrids_gsocseq_global.csv | 2.05 | 2.05 | confirmado |
+| Incendios globales | nodos/clima/firms_incendios_global_2000-2026.csv | 1.49 | 1.49 | confirmado (serie anual; 1.969 es espacial) |
+| Clima global | nodos/clima/noaa_gistemp_global_1880-2026.csv | 1.40 | 1.40 | confirmado |
+| Noosfera | nodos/noosfera/gdelt_events_1979-2026.csv | 1.48 | 1.48 | confirmado |
+| Caribe SE | nodos/corales/caribe_se_allen_atlas.csv | 2.08 | 2.08 | confirmado (agregado; site_013 = 2.0) |
+
+Sin archivo en MIU_V12.0_FINAL/nodos/ (5): Microtúbulos (PDB 3J6F), GBR Seagrass (TropWATER), Turbera Glen Carron (PANGAEA), Seagrass global (VLIZ), CMB (Planck 2018).
+
+Método del script FIRMS (df_from_firms.py, MIU_V12.0_FINAL/codigo/): lee un CSV con columnas value/x/y por --input, filtra value > 0, box-counting 2D con 10 tamaños logspace(0.5, 2.5, 10), D_f = pendiente del ajuste log-log, y escribe firms_df_Ki.csv con K_i 0.375 fijado en el código (no calculado). No tiene período ni región fijados: calcula lo que se le da. Su salida (1.969) es espacial; la serie anual (1.49) es temporal. El script compute_omegaF_firms_gdelt.py hace análisis espectral (Welch), no calcula D_f.
+
+reef_conteos_miu.csv (D_f 1.6): conteo global de polígonos de arrecife, no-nodo, sin fila en el dataset.
 
 ## Citas al MIU en Crossref
 
