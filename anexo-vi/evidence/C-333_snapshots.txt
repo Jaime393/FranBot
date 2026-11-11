@@ -1,0 +1,8 @@
+CICLO 46 - FRENTE B - Snapshots Zenodo (API publica, sin token)
+concepto 22650418: existe; resuelve 302 -> 200 a 22650419; all_versions=true: total versiones 1 (solo 22650419, 2026-09-07)
+busquedas:
+- "MIU Ecosistema": 2 hits (22650419 snapshot 2026-09-07; 22071505 MIU v4.0 publicacion 2026-08-23)
+- "Snapshot automatico": 2 hits (22650419; 22032896 registro brasileno de biologia del suelo, no relacionado)
+- "kv_snapshot": 0 hits
+snapshots posteriores a 2026-09-07: 0 (ninguno de 2026-10 ni 2026-11)
+serie: NO (serie de 1); hipotesis C-325 NO confirmada
