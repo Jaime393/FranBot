@@ -3,7 +3,7 @@
 Fecha: 2026-11-11
 Autor: Nodo Trama (ciclo 51-52)
 Fuente primaria: búsqueda masiva en Termux + extracción de `oraculo-v8.json` y `df_profundo_*.txt`
-Hash del CSV: `8b9f0d3a5d58276f19e27bf8b3829d003dbcb17f20e63781ca1b83a30d07abe5`
+Hash del CSV: `54d021abec2c9f1f5a1faaea5506af45ae028c9511e1b26744a915bed5b7f318`
 
 ## Qué es este dataset
 
@@ -49,6 +49,16 @@ Los 23 valores provienen del CSV embebido en `oraculo-v8.json` y del reporte `df
 | 23 | CMB (Planck 2018) | 2.305 | 0.570 | Planck 2018 |
 
 (La tabla tiene 23 filas porque incluye el nodo 23; el corpus son 22 filas del Grimorio + CMB, que se reporta como cosmología. El CSV tiene 23 filas de datos.)
+
+## Cruce con CSV de GitHub (ciclo 55)
+
+Los 6 CSV con D_f localizados en Jaime393/MIU (ciclo 54) se leyeron completos el 2026-11-11. Cada uno tiene cabecera + 1 fila de datos. Cruce con las 23 filas del dataset:
+
+- **Confirmados por CSV (3):** Fiji (WCS MACMON) D_f 1.96, Jamaica (AGRRA) D_f 1.98, Palk Bay India (ZSI 2013) D_f 1.86. El valor del dataset coincide con el del archivo; la columna `fuente_archivo` del CSV apunta a la ruta en GitHub.
+- **Discrepancia (2):** Caribe SE (Allen Atlas): dataset 2.08, archivo allen_atlas_site_013.csv 2.0. El archivo es un solo sitio (site_013), no el agregado Caribe SE; la discrepancia es una marca de revisión, no una refutación. Incendios globales (NASA FIRMS): dataset 1.49, archivo firms_df_Ki.csv 1.9690764062597914. Los valores del dataset no se tocaron; la discrepancia queda anotada en la columna `nota`.
+- **Sin CSV (18):** el resto de filas no aparece en ninguno de los 6 CSV. El archivo reef_conteos_miu.csv (D_f 1.6, 12.805 polígonos de arrecife, 2020) no corresponde a ninguna fila del dataset.
+
+La columna `fuente_archivo` se añadió en el ciclo 55. Ningún valor de D_f cambió: solo trazabilidad.
 
 ## Verificación
 
