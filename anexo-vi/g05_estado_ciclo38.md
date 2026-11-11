@@ -56,3 +56,17 @@ mensajes recientes. Estado: no verificable (no es "caído", es
 intervención del Jardinero (activar/conectar el bot, crear los
 secretos). El sondeo del ciclo 38 deja el estado documentado;
 el cierre depende de él.
+
+## Estado ciclo 39 (2026-11-11)
+
+- Bot Telegram getMe: **SIN ACCESO**. No hay conector de Telegram
+  en el chat y no hay token en variables. No se buscó token en
+  archivos (higiene). El bot no es verificable desde aquí.
+- Webhook: **SIN ACCESO** (misma razón).
+- Worker Oráculo: sin re-sondeo en ciclo 39 (ciclo 38: GET 200,
+  V∞+27, vive true). El foco del ciclo 39 fue la poda de zombis.
+- Qué falta para G05 (sin cambio): (1) bot Telegram conectado y
+  verificado de extremo a extremo; (2) worker propio de FranBot
+  desplegado, o confirmar que el Oráculo V∞+27 lo atiende;
+  (3) secretos del usuario (PENDING_ROTATION). Requiere
+  intervención del Jardinero.
