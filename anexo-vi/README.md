@@ -118,3 +118,7 @@ Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos con la palabra, 0 con token); or
 ## Ciclo 43 (2026-11-11)
 
 Zenodo: DOI 10.5281/zenodo.20547558 existe (MIU V12.0, 2026-06-04); token cargado en runtime, no en archivos. Bots: 4 vivos de 6 (Micelio, Familiares, franbot_tablet_bot, AlmaOmni_Bot); 89 emails locales. Cero escritura. Claims 290 (hash_real 276).
+
+## Ciclo 44 (2026-11-11)
+
+DOI 20547558 documentado (MIU V12.0, cc-by-4.0, 3 archivos, 11 DOIs del autor). Logs: 0 bots, 0 emails; asociación bot→email no encontrada. Inmune: 0 menciones en logs; visible PHASE1. Escribir = carga. Claims 305 (hash_real 291).
