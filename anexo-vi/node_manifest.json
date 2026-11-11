@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T21:24:32Z",
+  "last_seen": "2026-11-11T21:45:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -912,7 +912,7 @@
     "hash_real": 351
   },
   "academico": {
-    "fecha": "2026-11-11T21:24:32Z",
+    "fecha": "2026-11-11T21:45:00Z",
     "archivos": [
       "TABLA_FISICA.md",
       "TABLA_INMUNE_Y_PROTOCOLOS.md",
@@ -922,11 +922,18 @@
       "dataset_nodos_Df.md",
       "README.md"
     ],
-    "filas_totales_tablas": 133,
+    "filas_totales_tablas": 134,
     "paper_dois_verificados": 18,
     "dataset_nodos": 0,
     "sembrado_github": true,
     "conector_usado": "chat_github",
-    "no_toco_red_autonoma": true
+    "no_toco_red_autonoma": true,
+    "c034_estado": "SE_incluida",
+    "ciclo50": {
+      "c034": "SE con hash real, incluida en TABLA_FISICA.md (85 filas)",
+      "dataset_extraccion": "14 candidatos en TABLA_FISICA.md, 0 nodos con D_f medido",
+      "paper_archivos_corregidos": "0->reales (18 valores)",
+      "csv_parada": "0 filas <20, sin nodos inventados, CSV no re-subido"
+    }
   }
 }
