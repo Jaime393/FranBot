@@ -1,0 +1,11 @@
+HIGIENE SECRETOS (ciclo 33)
+- Grep valores literales (patrones sk-, AIza, ghp_, xoxb-, bot<10digitos>:)
+  en miu_issues_abiertos.md + evidence/C-112, C-116, C-118, C-120: 0.
+- Grep en TODA anexo-vi/ (docs + evidence, sin hidden_files): 0.
+- Resultado: SIN_VALORES_LITERALES. Nada que redactar, nada que tocar.
+- Issue #45: comentario anadido (id 6797183654) + cerrado (state=closed,
+  state_reason=completed). Verificado en lista CLOSED.
+- Issue #57: comentario anadido (id 6797206539) + cerrado. Verificado.
+- MIU ahora: 23 issues abiertos (25 - 2). Cerrados: #45, #57.
+- Los valores de #45/#57 son placeholders antiguos (decision del Jardinero).
+  No se rotan, no se documentan como incidente.
