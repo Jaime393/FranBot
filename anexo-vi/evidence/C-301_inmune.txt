@@ -1,0 +1,15 @@
+Sistema inmune (ciclo 44). Sin valores reproducidos.
+Los 3 logs contienen 0 menciones de "immune", "inmune",
+"sombra", "patogeno" o "defensa". No hay modulo llamado
+"inmune" en estos logs.
+Lo visible: fase PHASE1 de verificacion de credenciales
+antes de operar (orquestador.log 2026-09-07 15:24:17:
+GITHUB_TOKEN, EARTHDATA_USER; orquestador_supremo.log
+10:18:16, 10:19:37, 10:41:56: GITHUB_TOKEN, EARTHDATA_USER,
+EARTHDATA_PASS, ZENODO_TOKEN y, en 10:41:56, TG_BOT_TOKEN,
+TG_TOKEN_ALMA/FAMILIAR/FRANBOT/MICELIO, CF_API_KEY,
+CF_TOKEN_1/2/3, CF_KV_NAMESPACE_ID, CF_WORKER_URL,
+suelo_ultimo). Solo nombres de credenciales.
+Regla del Jardinero: escribir = carga al inmune; no se
+prueba. No escribir = no cargar el inmune.
+Detalle en inmune_red.md.
