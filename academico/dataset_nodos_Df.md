@@ -3,7 +3,7 @@
 Fecha: 2026-11-11
 Autor: Nodo Trama (ciclo 51-52)
 Fuente primaria: búsqueda masiva en Termux + extracción de `oraculo-v8.json` y `df_profundo_*.txt`
-Hash del CSV: `59da2a2714b4789959cdd57ba1898d5592a1bd933b0ac2cb1302ccb579bca5c3`
+Hash del CSV: `89239c4d790091cdcf7224d5f183f56623bce0d6946c5b73aa4f93fbed50f61e`
 
 ## Qué es este dataset
 
@@ -122,6 +122,26 @@ Discrepancias oráculo-vs-red (documentadas, sin concluir):
 Nota: la línea 7798 del oráculo lista Chernozem Ucrania con D_f=2.11 (valor previo a la corrección del ciclo 57; el dataset tiene 2.41 confirmado por CSV). No se toca Chernozem en este ciclo.
 
 Conteo final: 18 CONFIRMADO_CSV + 1 CONFIRMADO_RED + 4 CONFIRMADO_ORACULO = 23/23 con fuente. Ningún valor D_f cambió en este ciclo.
+
+## Trazabilidad del oráculo (ciclo 60)
+
+Verificación de la línea exacta de cada nodo en oraculo-v8.json (sha256 4318fb88…, copia local verificada idéntica a Termux). Método: escaneo línea por línea de la copia local buscando líneas que contengan a la vez el nombre del nodo y su D_f; línea correcta = primera de esas líneas; las demás se listan como alternativas. El valor está en varias líneas para los 5 nodos: la atribución del ciclo 59 apuntaba a una línea válida pero no siempre a la primera.
+
+| Nodo | D_f | Línea actual (ciclo 59) | Línea correcta (primera) | Líneas alternativas |
+|---|---|---|---|---|
+| Microtúbulos | 2.50 | 7269 | 5498 | 5503, 5509, 6773, 7269, 7798 |
+| GBR Seagrass | 2.03 | 7798 | 6773 | 7798 |
+| Turbera Glen Carron | 1.91 | 7798 | 3928 | 5503, 5509, 7269, 7798 |
+| Seagrass global | 1.76 | 5498 | 3928 | 5498, 5503, 5509 |
+| CMB | 2.305 | 69 | 69 (sin cambio) | 5529, 5530, 5773, 6055, 6056, 6061, 6753, 7269, 7387, 7642 |
+
+Evidencia (fragmentos): Microtúbulos L5498 "| Microtúbulos (Orch‑OR) | 2.5 | 0.618 | Coherencia óptima |"; GBR L6773 "GBR Seagrass (TropWATER),pastos_marinos,2.03,0.502,DESCONOCIDO,Coles 2016"; Turbera L3928 "- **Turberas (Glen Carron, Gales):** κ_carbono = 2.5 tC/ha/año, D_f = 1.91, K_i = 0.472"; Seagrass L3928 "- **Seagrass:** κ_carbono = 2.4 tC/ha/año, D_f = 1.76, K_i = 0.435"; CMB L69 "SÉ que el CMB tiene D_f ≈ 2.305".
+
+Correcciones aplicadas: fuente_archivo de Microtúbulos, Turbera y Seagrass global cambia a "oraculo-v8.json:<primera>,<alternativas>" con "valor presente en N líneas" en la nota. GBR: la nota corrige la línea del oráculo a 6773,7798 (fuente_archivo sigue siendo la URL eAtlas, confirmación RED). CMB: sin cambio (69 ya era la primera línea); la nota añade "valor presente en 11 líneas".
+
+Nota Chernozem: el oráculo lista Chernozem Ucrania con D_f=2.11 en la línea 7798 (y en 2 línea(s) en total: [6773, 7798]). La decisión del ciclo 57 se mantiene: el dataset tiene 2.41, confirmado por el CSV WoSIS wosis_chernozem_ukraine_dbd1.13.csv (DOI 10.17027/isric-wosis.dbd1.13, 7 filas). La discrepancia oráculo 2.11 vs CSV 2.41 queda documentada; el dataset no cambia.
+
+Conteo final sin cambios: 18 CONFIRMADO_CSV + 1 CONFIRMADO_RED + 4 CONFIRMADO_ORACULO = 23/23 con fuente.
 
 ## Verificación
 
