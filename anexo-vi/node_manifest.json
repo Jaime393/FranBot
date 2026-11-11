@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T19:20:00Z",
+  "last_seen": "2026-11-11T19:30:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -537,7 +537,7 @@
     "worker": "GET 200 (Oraculo Vinf+27, vive true)",
     "repo_head": "f18e2556 2026-11-11T18:10:00Z",
     "bot_telegram": "Micelio @Jp393_bot, getMe OK, webhook activo",
-    "estado": "PARCIAL (ciclo 41: re-verificado sin escritura)"
+    "estado": "PARCIAL (ciclo 42: re-verificado sin escritura)"
   },
   "ciclo38_2026_11_11": {
     "c20_periodo": "sin periodo dominante",
@@ -615,5 +615,26 @@
     },
     "total": 260,
     "hash_real": 246
+  },
+  "ciclo42_2026_11_11": {
+    "zenodo": {
+      "en_archivo": 0,
+      "fuera_archivo": 0,
+      "en_orquestador_muestra": 0,
+      "veredicto": "TOKEN_ZENODO_NO_ENCONTRADO"
+    },
+    "orquestador": {
+      "pestanas": 19,
+      "leidas": 5,
+      "solo_lectura": true
+    },
+    "g05": {
+      "getMe": "OK (3a verificacion)",
+      "webhook": "activo",
+      "mensaje_enviado": false,
+      "estado": "PARCIAL"
+    },
+    "total": 275,
+    "hash_real": 261
   }
 }
