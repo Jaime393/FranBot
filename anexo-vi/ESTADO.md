@@ -115,6 +115,18 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
 - Total del módulo: 75 claims, 63 con hash real, 8 pendientes, 2 refutados.
   Nada podado, nada reconectado.
 
+## Redacción ciclo 28
+
+- Fecha: 2026-11-11 ~07:15 -05. P45-30 redactado: 2 tokens CF reemplazados
+  por variables (`<REDACTED_CLOUDFLARE_TOKEN_1/2>`), original en Drive
+  intacto, sin rotación. Corrección: los tokens son cfat_ de 53 caracteres,
+  no de 40 — el patrón de 40 chars del ciclo no los cubría (y su grep
+  habría dado un falso 0); se usó el patrón cfat_ y la verificación es
+  cfat_ → 0. Los 10 runs de 40 chars restantes son IDs de contenido de la
+  partitura (idénticos a los del original, no marcados por el escáner).
+- Claim C-066: hash actualizado al del redactado, redactado: true. Estado
+  CONJETURO (se mantiene; el ciclo asumía SE).
+
 ## Última auditoría
 
 - audit.py v3: EXIT=0 — RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1
