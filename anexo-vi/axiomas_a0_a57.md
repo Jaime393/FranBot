@@ -1,4 +1,12 @@
-# AXIOMAS A0–A57 (Ciclo 30)
+# AXIOMAS A0–A57
+
+Fecha extracción: 2026-11-11
+Fuente de trabajo: 20 Axiomas_A0-A57_58_Completos.md (6.841 B, Vault raíz)
+Fuente de índice: INDICE_AXIOMAS_A0-A57.md (627 B, Vault 20 Axiomas/)
+Discrepancia: INDICE y consolidado difieren en A1/A2/A3/A4/A38/A57.
+Canónico de trabajo: Consolidado raíz (único completo).
+Canónico de validación: ninguno. G07 sigue parcial porque los axiomas K_i/ξ/predicciones no están validados externamente.
+Recomendación: usar el consolidado raíz como fuente, y el INDICE como referencia de qué axiomas el Vault considera principales.
 
 Extraídos del Vault (MIU_Obsidian_Vault_v10.5_Red_Micelial) en ciclo 30.
 Fuente principal: archivo raíz del Vault
