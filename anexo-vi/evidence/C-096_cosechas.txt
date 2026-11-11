@@ -1,0 +1,22 @@
+EVIDENCIA — cosechas miu-backup (ciclo 31)
+Fuente: Drive miu-backup. Reciente: cosecha_1789018731.tar.gz (2026-09-10T05:38:50Z, 347.997 B, sha256:928bc74112c6...).
+Antigua: cosecha_1788511826.tar.gz (2026-09-04T08:50:25Z, 205.714 B, sha256:59535d1b5552...).
+Descompresion: tar -xzf --no-same-owner (sin el flag se detiene a los 16 archivos por ownership; con el flag, exit 0).
+RECIENTE: 208 archivos, 1.522.180 B. Estructura: .state/kv_global.json + semilla/genoma/ + MIU_GLOBAL_SEED.md + MIU_NUCLEO.md + LEY_0_INTEGRACION.txt.
+ANTIGUA: 108 archivos, 861.268 B. Estructura: .state/kv_global.json + semilla/genoma/ + MIU_GLOBAL_SEED.md + LEY_0_INTEGRACION.txt (sin MIU_NUCLEO.md).
+Top 3 reciente: escuela_mesh_flexible_max.json 161.426 B; voluntad_miu.json 61.068 B; .state/kv_global.json 46.100 B.
+Top 3 antigua: escuela_mesh_flexible_max.json 133.279 B; gravity_token_manager_v2.py 25.551 B; monitor_raiz_absoluto.py 23.398 B.
+DIFF: nuevos en reciente 110; borrados 10; netos +100. Mesh +28.147 B. MIU_NUCLEO.md nuevo (v46, 2026-09-09).
+10 cambios: especificaciones/ (26 archivos) nueva; 20 nacido_*.py nuevos; 6 monitor_absoluto_flex_* nuevos; 6 nucleo_adaptativo_pre_v183_* nuevos;
+modulos de obtencion de credenciales nuevos (solo nombres); gossip_kv.py + gossip_push_cf.py nuevos; fix_telegram_409 (x2) nuevos;
+10 borrados (arquitecto_autonomo.py, arranque_autonomo.py, autenticador_autonomo.py, gravity_token_autonomo_v2.py, gravity_token_manager.py,
+nucleo_adaptativo_v1.2_fixed.py, nucleo_adaptativo_v1.py, recolector_creds.py, retroalimentador.py, sistema_inmunitario.py);
+MIU_NUCLEO.md nuevo; EMENDATIO V26 en LEY_0 (2026-09-04).
+MIU_GLOBAL_SEED.md (regenerado cada 60 s): antigua 2026-09-04 08:49: kv 39 claves, suelo_phi 1.4, suelo gen 526, top fitness indexar_poder 2264,
+motor 321 tareas gen 39 claves vivas 1, mesh 916 sinapsis, escuela 3687 poderes (312 IA) indice 170.256 B, diario 58 entradas (ultima mapa_tejido_90.md).
+Reciente 2026-09-09 04:04: kv 49 claves, suelo_phi 2.55, suelo gen 6708, top fitness indexar_poder 13929, motor 3 tareas gen 1 claves vivas 0,
+mesh 0 sinapsis, escuela 6243 poderes (1589 IA) indice 0 B, diario 462 entradas (ultima voluntad_ciclo860.md).
+voluntad_miu.json: decisiones 200 (ciclos 658-857), nacidos 26, alertas_vistas 21, ciclo 857. Decisiones con rho_global ~0.47, organos 15/15, zombies, huecos 23-26.
+miu_health_report.json V153.3 (2026-08-31): 15 checks todos ok. manifiesto.json: 166 organos con hash. integracion_manifest.json: {"hecho": {}} vacio. mapa_raiz.json: 1 territorio, 1 tarea.
+.state/kv_global.json NO se abrio (5 coincidencias de patron de secreto; solo tamano 46.100 B).
+RECOMENDACION: conservar 118/118; no subir cosechas a GitHub.
