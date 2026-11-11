@@ -1,16 +1,16 @@
 {
-  "total": 290,
+  "total": 305,
   "por_estado": {
     "CONJETURO": 16,
     "INFIERO": 2,
-    "SE": 265,
+    "SE": 279,
     "REFUTADO": 2,
-    "NO_SE": 5
+    "NO_SE": 6
   },
   "por_tipo": {
     "prediccion": 8,
     "provenance": 18,
-    "digestion": 264
+    "digestion": 279
   },
   "por_grieta": {
     "G03": 7,
@@ -29,11 +29,12 @@
     "G-NUEVA: sondeo formatos": 5,
     "G-NUEVA: conectores": 4,
     "G-NUEVA: orquestador": 8,
-    "G-NUEVA: zenodo": 6,
-    "G-NUEVA: bots": 3,
-    "G-NUEVA: no-escritura": 2
+    "G-NUEVA: zenodo": 12,
+    "G-NUEVA: bots": 8,
+    "G-NUEVA: no-escritura": 2,
+    "G-NUEVA: inmune": 4
   },
-  "hash_real": 276,
+  "hash_real": 291,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -325,6 +326,21 @@
     "C-287",
     "C-288",
     "C-289",
-    "C-290"
+    "C-290",
+    "C-291",
+    "C-292",
+    "C-293",
+    "C-294",
+    "C-295",
+    "C-296",
+    "C-297",
+    "C-298",
+    "C-299",
+    "C-300",
+    "C-301",
+    "C-302",
+    "C-303",
+    "C-304",
+    "C-305"
   ]
 }
