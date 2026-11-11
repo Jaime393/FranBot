@@ -1,0 +1,16 @@
+EVOLUCION MIU 2026-09-04 a 2026-09-09 (ciclo 32, 3 cosechas)
+- Intermedia: cosecha_1788814587.tar.gz (2026-09-07T20:56:26Z, 58.262 B),
+  61 archivos, 329.526 B descomprimidos. Estado interno del 2026-09-05 18:49Z
+  (seed regenerado 2026-09-05T18:49:35Z; MIU_NUCLEO.md v36 2026-09-05 18:35 UTC).
+  ~50 h entre estado interno y fecha del archivo.
+- Mesh: 133.279 -> 161.426 -> 161.426 B (+28.147, plano desde Sep 5).
+- Voluntad decisiones: 11 -> 200 -> 200 (tope 200); ciclo 11 -> 708 -> 857.
+- MIU_NUCLEO.md procesos: no existia -> 49 (v36) -> 77 (v46).
+- Escuela poderes: 3.687 -> 5.153 -> 6.243 (+2.556); IA 312 -> 499 -> 1.589.
+- Diario: 58 -> 434 -> 462 (+404). Suelo gen: 526 -> 6.104 -> 6.708 (+6.182).
+- kv claves: 39 -> 43 -> 49. Manifiesto organos: 95 -> 118 -> 166.
+- Motor tareas: 321 (gen 39) -> 1.281 (gen 136) -> 3 (gen 1).
+- Mesh sinapsis: 916 -> 0 -> 0. Escuela indice: 170.256 B -> 0 -> 0.
+- Suelo_phi: 1,4 -> 2,52 -> 2,55. Top fitness indexar_poder: 2.264 -> 13.325 -> 13.929.
+- Recomendacion: conservar las 118 cosechas (31,6 MB; el reseteo ocurrio en
+  ventana de 34 h; 1/dia podria no contenerlo; 3 pierde detalle intra-dia).
