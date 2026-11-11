@@ -1,0 +1,10 @@
+EVIDENCIA — backup de muestra para poda (ciclo 31)
+Muestra aleatoria seed 31 del lote miu-auto/miu-learn (147 estancados), 10 repos:
+miu-auto-cipher19051997-8, miu-auto-tabletonephantom-y, miu-auto-dereckcitovg16-b, miu-auto-tabletonephantom-3,
+miu-auto-dereckcitovg16-p, miu-auto-cipher19051997-n, miu-auto-dereckcitovg16-n, miu-learn-jaimepvicente-j-f,
+miu-auto-franchescopalacios9-l, miu-auto-dereckcitovg16-r.
+Descargados 10/10 OK via conector (get_file_contents, ref main). Tamano total 281 B. Guardados en anexo-vi/backup_poda/<repo>_README.md.
+Contenido de los 10: una sola linea '# <repo>' (27-32 B cada uno).
+Hashes crudos: 10 distintos (difieren solo por el nombre del repo).
+Normalizados (nombre reemplazado por placeholder): IDENTICOS, sha256 daaee53a605b6b97bc4edb34a219bc8fd136f2e9bc317ba7a5bc2d615ff1daf6 (10/10).
+Conclusion: la poda no pierde contenido real; solo borra plantillas.
