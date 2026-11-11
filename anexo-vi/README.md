@@ -87,6 +87,7 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 | reseteo_sep4_sep5.md | Reseteo Sep 4–5: reinicio, no poda (ciclos 33–34) | 2026-11-11 |
 | pve_01_estado.md | Estado de PVE-01: fórmula sí, código no, ejecución no (ciclo 33) | 2026-11-11 |
 | nutrientes_buzon.md | Buzón de 96 nutrientes clasificado en 4 grupos (ciclo 33) | 2026-11-11 |
-| pve_01.py | PVE-01 implementado: 3 formas, medir_pve01, ejecutar_grace, demo (ciclo 34) | 2026-11-11 |
+| pve_01.py | PVE-01 implementado: 3 formas, medir_pve01, ejecutar_grace, demo, barrido_c (ciclos 34–35) | 2026-11-11 |
+| pve_01_resultado_ciclo35.md | Barrido de c: rango estable [2.5, 4.0], Ki=0.5835, G09 ambigua (ciclo 35) | 2026-11-11 |
 | pve_01_implementado.md | Estado PVE-01: ejecutado en GRACE real, forma 3 viable, G09 abierta por c sin definir (ciclo 34) | 2026-11-11 |
-| nutrientes_zombis_decision.md | 25 zombis clasificados: 13 único, 12 sin valor; mover a historicos/ (ciclo 34) | 2026-11-11 |
+| nutrientes_zombis_decision.md | 25 zombis clasificados: 13 único, 12 sin valor; frases verificadas, defecto no tocar nada (ciclos 34–35) | 2026-11-11 |
