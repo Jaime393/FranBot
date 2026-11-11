@@ -348,3 +348,13 @@ descargado y abierto por primera vez: 1 token vivo (bot
 Micelio @Jp393_bot, getMe OK), 1 muerto (401). Webhook activo.
 G05 pasa a PARCIAL. Sin conector de HuggingFace ni de Zenodo.
 Sheets write no verificada. Claims 245 (hash_real 231).
+
+## Ciclo 41 (2026-11-11) — tokens por servicio y orquestador
+
+Corrección: Zenodo NO existe en tokens_20260830 (0 menciones
+en todo el archivo). HuggingFace SÍ (4 entradas, formato real
+hf_, viveza no probada). Orquestador localizado en Drive:
+MIU_ORCHESTRATOR_V152_MAX_EXPANDED, 19 pestañas, solo lectura.
+G05 re-verificada sin escribir (getMe OK, webhook activo);
+mensaje de prueba NO enviado por regla. G05 PARCIAL.
+Claims 260 (hash_real 246).
