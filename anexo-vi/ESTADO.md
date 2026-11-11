@@ -323,3 +323,16 @@ lo declarará como carencia de entorno, no como grieta epistémica.
 - Corrección: los "commit" de los reportes ciclos 34–37 son BLOB
   SHA; la verificación por blob sigue válida.
 - Claims C-201 a C-215 (15: SE 15). Total 215, hash_real 201.
+
+## Ciclo 39 (2026-11-11) — poda de zombis con núcleo digerido
+
+Autorización condicional del Jardinero: "Los zombies si ya
+digeren su núcleo se poda, con la base basta hasta para recrear."
+13 histórico único digeridos (claims C-216 a C-228, extractos en
+evidence/zombi_*_nucleo.txt) y movidos a historicos/
+(13/13, por files update, sin descarga). 12 irrecuperables
+borrados (12/12, 103.026 B). nutrientes/ 96 → 71 archivos +
+historicos/. Cuadra. Hallazgo: las tablas tokens de estado_v24.db
+y estado_v24_1.db están VACÍAS (0 filas). C30: sin período
+(6 valores distintos, artefacto). Bot Telegram: sin acceso.
+Total claims: 231 (hash_real 217).
