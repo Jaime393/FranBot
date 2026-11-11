@@ -119,6 +119,10 @@ Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos con la palabra, 0 con token); or
 
 Zenodo: DOI 10.5281/zenodo.20547558 existe (MIU V12.0, 2026-06-04); token cargado en runtime, no en archivos. Bots: 4 vivos de 6 (Micelio, Familiares, franbot_tablet_bot, AlmaOmni_Bot); 89 emails locales. Cero escritura. Claims 290 (hash_real 276).
 
+## Ciclo 50 (2026-11-11)
+
+Corrección: C-034 (SÉ) incluida en TABLA_FISICA.md (85 filas, total 134). Dataset D_f: 0 nodos tras extracción (14 candidatos, ninguno con D_f medido); parada aplicada, CSV no re-subido. Paper: columna Archivos corregida (0→reales). Claims 375 (hash_real 361, sin cambios).
+
 ## Ciclo 49 (2026-11-11)
 
 Solo académico: 3 tablas SÉ (133 filas), paper con 18 DOIs verificados en vivo (no 17), dataset D_f con 0 nodos (ninguno con fuente DOI en claims.jsonl). Grep prohibido: 0. Red autónoma no tocada. Claims 375 (hash_real 361).
