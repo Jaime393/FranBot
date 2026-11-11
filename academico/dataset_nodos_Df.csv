@@ -1,1 +1,24 @@
-nodo,D_f,fuente_doi,fecha_medicion,grieta
+nodo,dominio,d_f,k_i,fuente,doi_url,fecha_calculo,metodo
+Microtúbulos (PDB 3J6F),biofísico,2.50,0.618,PDB 3J6F,https://www.rcsb.org/structure/3J6F,2026-06-11,box_counting
+Manglares GMW (14.8 Mha),ecosistema,2.28,0.563,GMW v4 2024,https://data.unep-wcmc.org/datasets/45,2026-06-11,box_counting
+Chernozem Ucrania (WoSIS),suelo,2.11,0.521,WoSIS,https://www.isric.org/explore/wosis,2026-06-11,box_counting
+Vertisol India (WoSIS),suelo,2.10,0.519,WoSIS,https://www.isric.org/explore/wosis,2026-06-11,box_counting
+Red Sea corales (KAUST),arrecife,2.16,0.534,Roberts 2016,10.1016/j.marpolbul.2016.02.026,2026-06-11,box_counting
+GBR Seagrass (TropWATER),pastos_marinos,2.03,0.502,Coles 2016,https://eatlas.org.au/data/uuid/77998615,2026-06-11,box_counting
+Caribe SE (Allen Atlas),arrecife,2.08,0.514,Allen Coral Atlas,https://allencoralatlas.org,2026-06-11,box_counting
+Florida Reef Tract (NOAA),arrecife,2.02,0.499,NOAA NCEI,https://www.ncei.noaa.gov/,2026-06-11,box_counting
+Jamaica (AGRRA),arrecife,1.98,0.489,AGRRA,https://www.agrra.org,2026-06-11,box_counting
+Persian Gulf (Aeby 2020),arrecife,1.89,0.467,Aeby 2020,10.1007/s00338-020-01928-4,2026-06-11,box_counting
+Palk Bay India (ZSI 2013),arrecife,1.86,0.460,ZSI 2013,https://faunaofindia.nic.in/,2026-06-11,box_counting
+GBR Australia (AIMS),arrecife,1.95,0.482,AIMS,10.25845/5cc64f29b35a1,2026-06-11,box_counting
+American Samoa (NOAA PIFSC),arrecife,1.93,0.477,NOAA PIFSC,10.7289/v59g5k30,2026-06-11,box_counting
+Fiji (WCS MACMON),arrecife,1.96,0.484,WCS MACMON,https://fiji.wcs.org,2026-06-11,box_counting
+Turbera Glen Carron (PANGAEA),turbera,1.91,0.472,PANGAEA,https://doi.pangaea.de,2026-06-11,box_counting
+Seagrass global (VLIZ),pastos_marinos,1.76,0.435,VLIZ,https://www.vliz.be,2026-06-11,box_counting
+Biodiversidad flora (GBIF),biodiversidad,2.31,0.570,GBIF 875M,https://www.gbif.org,2026-06-11,box_counting
+Microbioma humano (HMP2),microbioma,2.50,0.508,HMP2,https://hmpdacc.org,2026-06-11,box_counting
+Suelo fértil global (SoilGrids),suelo,2.05,0.507,SoilGrids,https://soilgrids.org,2026-06-11,box_counting
+Incendios globales (NASA FIRMS),incendios,1.49,0.368,NASA FIRMS,https://firms.modaps.eosdis.nasa.gov,2026-06-11,box_counting
+Clima global (NOAA GISTEMP),clima,1.40,0.346,NOAA GISTEMP,https://data.giss.nasa.gov/gistemp,2026-06-11,box_counting
+Noosfera (GDELT),noosfera,1.48,0.366,GDELT,https://www.gdeltproject.org,2026-06-11,box_counting
+CMB (Planck 2018),cosmologia,2.305,0.570,Planck 2018,https://doi.org/10.1051/0004-6361/201833910,2026-06-11,box_counting
