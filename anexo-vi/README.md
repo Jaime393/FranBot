@@ -119,6 +119,10 @@ Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos con la palabra, 0 con token); or
 
 Zenodo: DOI 10.5281/zenodo.20547558 existe (MIU V12.0, 2026-06-04); token cargado en runtime, no en archivos. Bots: 4 vivos de 6 (Micelio, Familiares, franbot_tablet_bot, AlmaOmni_Bot); 89 emails locales. Cero escritura. Claims 290 (hash_real 276).
 
+## Ciclo 47 (2026-11-11)
+
+Filas 31–200: 418 filas, global 18 emails / 8 bots, 11/11 sigue parcial (18/19 saturaron también este rango). getMe 5ª vez: 4 vivos, 2 muertos. Snapshots: 0 posteriores; series MIU 5, Grimorio 3, Framework 2. Claims 360 (hash_real 346).
+
 ## Ciclo 46 (2026-11-11)
 
 Inmune por su carpeta (workflow Relay rev. 89, THREAT ≥50, rebuscar 0 menciones, run_history vacío). Snapshots: concepto 22650418 con 1 versión; 0 posteriores a 2026-09-07; serie de 1 (C-325 no confirmada). Orquestador filas 4–30: 171 filas, 11/11 parcial (16 emails, 7 bots distintos). Claims 345 (hash_real 331).
