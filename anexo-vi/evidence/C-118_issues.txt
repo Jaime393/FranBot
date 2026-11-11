@@ -1,0 +1,17 @@
+MIU ISSUES ABIERTOS (ciclo 32, leidos con el conector, 2026-11-11)
+- Total: 25 abiertos (#33-#57), todos por Jaime393 (OWNER), 2026-07-10, ABIERTO.
+- Correccion al ciclo 31: "20 issues" era el limite perPage 20; la lista real es 25.
+- Temas: K_i circular 6 (#35,#52,#42,#48,#34,#43); extensiones/no-codigo 6
+  (#51,#50,#49,#41,#40,#33); Omega_F aliasing 3 (#53,#44,#36); corrupcion CSV 2
+  (#47,#39); secretos 2 (#57,#45); codigo muerto 2 (#54,#46); tests 1 (#56);
+  licencia AGPL 1 (#55); placeholders 1 (#38); duplicacion 1 (#37).
+- Leidos en cuerpo: #52 (ciclo 31), #35 (diseno K_i), #48 (CSV invalido 0.494),
+  #43 (ALMA_OMNI reintroduce K_i), #56 (tests = CSV 207 B), #45 (secretos P0).
+- Duplican anexo-vi: 5 (#35,#52,#42,#48,#34, cluster K_i/CSV). Parcial: #56.
+  Nuevas: 19 (ALMA_OMNI, Omega_F 0.65625>Nyquist, secretos P0 clavesnew.txt,
+  26 archivos byte-identicos, extensiones mentirosas, AGPL, codigo muerto,
+  suelo fertil sobre placeholders, duplicacion).
+- #45 P0: clavesnew.txt + archivos con claves.zip en texto plano (Gemini,
+  OpenRouter, Mistral, Groq, Cohere, DeepSeek, NewsAPI; tokens >=3 bots
+  Telegram; contrasena de email), expuestos desde 2026-07-03. No se buscaron
+  ni abrieron esos archivos; solo se reporta lo que el issue dice.
