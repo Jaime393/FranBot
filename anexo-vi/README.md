@@ -119,10 +119,6 @@ Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos con la palabra, 0 con token); or
 
 Zenodo: DOI 10.5281/zenodo.20547558 existe (MIU V12.0, 2026-06-04); token cargado en runtime, no en archivos. Bots: 4 vivos de 6 (Micelio, Familiares, franbot_tablet_bot, AlmaOmni_Bot); 89 emails locales. Cero escritura. Claims 290 (hash_real 276).
 
-## Ciclo 49 (2026-11-11)
-
-Solo académico: 3 tablas SÉ (133 filas), paper con 18 DOIs verificados en vivo (no 17), dataset D_f con 0 nodos (ninguno con fuente DOI en claims.jsonl). Grep prohibido: 0. Red autónoma no tocada. Claims 375 (hash_real 361).
-
 ## Ciclo 48 (2026-11-11)
 
 Consolidación SÉ: MIU_ESTADO_CONSOLIDADO_2026-11-11.md (11.277 B) — 326 SÉ con hash real (346 es el hash_real total), 10 temas, 134 claims citados. Correcciones: geometría sin claim, Ray & Crutchfield sin DOI, "22 nodos" circular en A10. Siembra en Jaime393/MIU docs/ (commit bab47d8, blob verificado) y anexo-vi/. Zenodo pendiente autorización. Claims 365 (hash_real 351).
