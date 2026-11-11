@@ -1,0 +1,8 @@
+EVIDENCIA — sondeo issues/PRs ciclo 30 (repo Jaime393/FranBot)
+Crear issue: OK — issue #1 "Prueba de conector: no cerrar", label test, id 6328611542, https://github.com/Jaime393/FranBot/issues/1.
+Comentar issue: OK — comentario id 6796036769 en issue #1.
+Crear rama: OK — prueba-conector-ciclo-30 en FranBot, sha 9cb83a3336e0f36cf8447f47c76be9e72aa2f7c3 (HEAD de main).
+Abrir PR sin cambios: FALLO de validacion (no 403) — "failed to create pull request: Validation Failed / PullRequest (custom): No commits between main and prueba-conector-ciclo-30".
+Listar issues: OK — 0 abiertas antes de la prueba; 1 cerrada despues (issue #1, state CLOSED, labels [test], comments 1).
+Cerrar issue: OK — issue_write method update, state closed, state_reason completed.
+Conclusion: el conector crea/comenta/cierra issues; la herramienta de PR funciona pero GitHub exige un diff real.
