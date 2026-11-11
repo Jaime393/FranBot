@@ -1,0 +1,27 @@
+Evidencia ciclo 34 — PVE-01 implementado y ejecutado (C-141 a C-147)
+Fecha: 2026-11-11. Código: pve_01.py (11.939 B, py_compile OK).
+sha256 pve_01.py: 4834258479bd419a399020875fc50fedc2f271d3cd1637aa67a8114d8a000e63
+sha256 pve_01_implementado.md: ab4c938d14a6c7f3fce273dab85c96dfd04a5cca0ed42b2de25c833a1beb3d6e
+
+Fórmula (Vault 00 Suelo_GRACE_Phi_PVE01.md, copia literal):
+Ki=1/(τ·Ξ·c) | T·1.618/(τ·Ξ·c) | T·tanh(τ·Ξ·c), τ ventana 90d,
+Ξ correlación causal I_causal/½Trκ_F, T=0.618, banda Ki [0.55,0.62].
+
+Ejecución: python3 pve_01.py hidden_files/drive_ciclo34/grace_tn14_v3.json
+Datos: GRACE TN-14 V3, 281 filas, 2002-04-01 → 2025-08-01.
+c20 media = -0.000484169462243557; stdev = 6.36319e-11;
+min = -0.00048416960331758107; max = -0.00048416928124823803.
+Ξ medido (autocorr lag 3, sin tendencia) = 0.7100.
+P con c=1 (90*Xi) = 63.9022.
+c para caer en rango doc [1.62, 2.014] = [0.025351, 0.031517]/día.
+Formas sobre rango P doc [1.62, 2.014]:
+  forma 1: Ki min 0.4965 medio 0.5547 max 0.6173 — en banda todo el rango: NO
+  forma 2: Ki min 0.4965 medio 0.5547 max 0.6172 — en banda todo el rango: NO
+  forma 3: Ki min 0.5714 medio 0.5847 max 0.5964 — en banda todo el rango: SÍ
+Formas 1 y 2 idénticas: 0.618*1.618 = 0.999924.
+Ki con D_f: D_f=2.0 → 0.4944; D_f=2.5 → 0.6180.
+Forma 3 media 0.5847 vs D_f=2.0: +18.3%; vs D_f=2.5: -5.4%;
+vs Ki medio del doc (0.585): -0.1%.
+Demo sintética: python3 pve_01.py (120 meses, semilla 34) — OK.
+c NO definida en el documento fuente (ni valor ni unidades).
+G09 sigue ABIERTA: "implementado y ejecutado; c sin definir".
