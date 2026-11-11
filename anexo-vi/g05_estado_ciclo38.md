@@ -70,3 +70,19 @@ el cierre depende de él.
   desplegado, o confirmar que el Oráculo V∞+27 lo atiende;
   (3) secretos del usuario (PENDING_ROTATION). Requiere
   intervención del Jardinero.
+
+## Estado ciclo 40 (2026-11-11) — G05 PARCIAL
+
+- Token Telegram: **ENCONTRADO** en
+  tokens_20260830_4.8M.json.zlib.gz (6 entradas tipo telegram).
+- Bot getMe: **OK** — bot Micelio, @Jp393_bot, id 1192102910.
+  Probadas 2 de 6 entradas: 1 viva, 1 muerta (HTTP 401). Las 4
+  restantes sin probar.
+- Webhook: **ACTIVO** (tiene URL, pending_update_count 0).
+- Qué falta para G05: verificación de extremo a extremo
+  (enviar un mensaje al bot y recibir respuesta vía Worker →
+  Drive → respuesta; no autorizado en este ciclo: solo getMe) y
+  los secretos de PENDING_ROTATION (GitHub Secret DRIVE_FOLDER,
+  Cloudflare Secret DRIVE_FOLDER_ID, scripts/test-worker.sh).
+- Estado: **PARCIAL** (antes ABIERTA). El bot existe, responde
+  y tiene webhook activo. Falta el extremo a extremo.
