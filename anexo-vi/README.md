@@ -83,3 +83,7 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 
 | evolucion_miu_2026_09.md | Evolución del ecosistema Sep 4–9 (3 cosechas, ciclo 32) | 2026-11-11 |
 | miu_issues_abiertos.md | Mapa de los 25 issues abiertos de MIU (ciclo 32) | 2026-11-11 |
+
+| reseteo_sep4_sep5.md | Reseteo Sep 4–5 trazado con 5 puntos (ciclo 33) | 2026-11-11 |
+| pve_01_estado.md | Estado de PVE-01: fórmula sí, código no, ejecución no (ciclo 33) | 2026-11-11 |
+| nutrientes_buzon.md | Buzón de 96 nutrientes clasificado en 4 grupos (ciclo 33) | 2026-11-11 |
