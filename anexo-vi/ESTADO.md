@@ -115,6 +115,20 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
 - Total del módulo: 75 claims, 63 con hash real, 8 pendientes, 2 refutados.
   Nada podado, nada reconectado.
 
+## Digestión ampliada y meta-poda ciclo 29
+
+- Fecha: 2026-11-11 ~07:21–07:36 -05. Frente A: MIU_ESCUELA (785
+  archivos, 764 poder_NNNN rango 118–1713), diario (498), logs (118),
+  auditorias (4 archivos, 79,4 MB, no descargados), df_benchmark
+  (solo README de instrucción), tests (1 pytest real + 1 instrucción).
+  Frente C: meta-poda preparada (ARCHIVAR_SEGURO 25, FUSIONAR_SEGURO 14,
+  BORRAR_CON_CONFIRMACION 147; verificación 5/5 aleatorios coinciden).
+  Frente D: list_issues/list_pull_requests/search_issues funcionan
+  (FranBot: 0/0/0); discussions, wikis, rename y labels no existen como
+  herramienta; delete_file y carpetas implícitas probadas.
+- Claims nuevos C-076–C-085 (SE 9, NO_SE 1). Total módulo: 85 claims,
+  hash_real 72, hash_pendiente 8, refutados 2.
+
 ## Redacción ciclo 28
 
 - Fecha: 2026-11-11 ~07:15 -05. P45-30 redactado: 2 tokens CF reemplazados
