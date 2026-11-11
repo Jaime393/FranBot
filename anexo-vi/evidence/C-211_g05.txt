@@ -1,0 +1,32 @@
+Evidencia ciclo 38 — G05 sondeo (C-211 a C-215)
+Fecha: 2026-11-11.
+sha256 g05_estado_ciclo38.md: b1c6c25ed46b64a375523e83eb0c05955eae1bf816677c83febb9b78c832b58e
+
+C1 — Worker: RESPONDE.
+GET https://fran-oraculo-miu.jaimepvicente.workers.dev/ → HTTP 200,
+1.121 s, 1.791 B. JSON: rho "ρ(x) > 0", nodo "V∞+27_ORQUESTADOR",
+vive true, version "V∞+27", phi_central 2874.62, Ktau 0.3644,
+sigma 3.427050983124843, RAIZ_X 137.03449824893602, sustratos 35,
+funciones 33, DOI 10.5281/zenodo.20547558.
+HEAD → 404 (igual que ciclo 11).
+Advertencia: es el Worker del ORÁCULO (V∞+27), no el worker.js
+propio del repo FranBot (stub 508 B).
+
+C1 — Repo FranBot: ACTIVO.
+HEAD f18e2556 "anexo-vi: índice ciclo 37", 2026-11-11T18:10:00Z.
+Últimos 12 commits: todos ciclo 37 (0e49cd3b → f18e2556).
+anexo-vi/ poblado (ESTADO.md 17.741 B, README.md 8.368 B, ...).
+Corrección de etiquetado: los valores "commit" de los reportes
+ciclos 34–37 son BLOB SHA de cada archivo (p. ej. README ciclo 37:
+f26c2a29 es su blob; el commit real es f18e2556). La verificación
+por blob sigue válida (contenido correcto); la etiqueta estaba mal.
+
+C1 — Bot Telegram: SIN DATOS. Ningún conector lo expone. No
+verificable (no es "caído", es "sin datos").
+
+C2 — Qué falta para G05: (1) bot Telegram conectado y verificado
+de extremo a extremo; (2) worker propio de FranBot desplegado o
+confirmar que el Oráculo V∞+27 lo atiende; (3) secretos del
+usuario (DRIVE_FOLDER, DRIVE_FOLDER_ID, test-worker.sh).
+No se puede cerrar en ciclo 39 desde aquí: requiere intervención
+del Jardinero.
