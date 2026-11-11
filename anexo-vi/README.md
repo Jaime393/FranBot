@@ -40,6 +40,9 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 | meta_poda_2026-11-11.md | Meta-poda ciclo 29: ARCHIVAR_SEGURO 25, FUSIONAR_SEGURO 14, BORRAR_CON_CONFIRMACION 147. Preparada, no ejecutada; espera frase del Jardinero. | OPERATIVO |
 | axiomas_a0_a57.md | Axiomas A0-A57 extraídos del Vault (58, tabla completa) + discrepancia INDICE vs consolidado + G07 cerrada parcialmente (ciclo 30). | OPERATIVO |
 | miu_backup_analisis.md | Análisis miu-backup ciclo 30: 118 cosechas, 6 hashes distintos, tesoro incremental, conservar 118, borrar 0. | OPERATIVO |
+| miu_backup_contenido.md | Contenido de 2 cosechas descomprimidas (208 vs 108 archivos; escuela 3687→6243; mesh reseteado; conservar 118/118) (ciclo 31). | OPERATIVO |
+| nutrientes_analisis.md | Nutrientes 96 analizados (catalogo 23.294 recursos; 6 archivos con credenciales reales, no se suben; referenciar, no integrar) (ciclo 31). | OPERATIVO |
+| miu_issue_52.md | MIU#52 leído entero (K_i circular, Jaime393 2026-07-10, ABIERTO; confirma G09, no la cierra; similares #42/#43/#48) (ciclo 31). | OPERATIVO |
 
 ## Reglas que esta capa respeta
 
