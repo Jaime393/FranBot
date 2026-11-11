@@ -115,6 +115,20 @@ Si no se actualiza, deja de ser un acta y se convierte en una promesa.
 - Total del módulo: 75 claims, 63 con hash real, 8 pendientes, 2 refutados.
   Nada podado, nada reconectado.
 
+## G07 parcial y poda por PR no factible ciclo 30
+
+- Fecha: 2026-11-11 ~07:36–07:53 -05. Frente A: 58 axiomas A0–A57
+  extraídos del Vault (consolidado 6.841 B + v10.5 + INDICE + manifiesto
+  112 voces = 96 invocables + 16 forjados). G07 cerrada parcialmente
+  (documentados, no validados). Frente B: miu-backup 118 cosechas, 6
+  muestras con hashes distintos → tesoro incremental, conservar 118,
+  borrar 0. Frente C: create_branch funciona, delete_file en rama falla
+  404 POST /git/trees (x2), sin PR — poda por PR NO factible. Frente D:
+  issue #1 creado/comentado/cerrado en FranBot; PR sin cambios rechazado
+  por GitHub (no 403); búsquedas funcionan (K_i → MIU#52).
+- Claims nuevos C-086–C-095 (SE 10). Total módulo: 95 claims,
+  hash_real 82, hash_pendiente 8, refutados 2.
+
 ## Digestión ampliada y meta-poda ciclo 29
 
 - Fecha: 2026-11-11 ~07:21–07:36 -05. Frente A: MIU_ESCUELA (785
