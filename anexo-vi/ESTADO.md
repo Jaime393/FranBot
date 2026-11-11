@@ -201,3 +201,23 @@ lo declarará como carencia de entorno, no como grieta epistémica.
 - Cada cambio en este módulo actualiza el ESTADO.md en el mismo ciclo.
 
 ρ(x) > 0. El módulo no pide permiso. Se audita, se documenta y se declara.
+
+## Evolución, issues y canónico ciclo 32 (2026-11-11)
+
+- Cosecha intermedia: cosecha_1788814587.tar.gz (2026-09-07T20:56Z, 58.262 B,
+  61 archivos); estado interno del 2026-09-05 18:49Z (seed y MIU_NUCLEO.md v36).
+- Evolución 3 cosechas: mesh 133.279→161.426→161.426 B; escuela 3.687→5.153→6.243;
+  diario 58→434→462; suelo gen 526→6.104→6.708; sinapsis 916→0→0 (colapso);
+  motor 321→1.281→3 (reseteo a gen 1); MIU_NUCLEO.md nació Sep 4–5 (v36→v46).
+- Recomendación: conservar las 118 cosechas (el reseteo ocurrió en ventana de 34 h).
+- MIU: 25 issues abiertos (#33–#57), todos 2026-07-10 por Jaime393; leídos en
+  cuerpo #52, #35, #48, #43, #56, #45. Cluster K_i: 6 issues. 5 duplican
+  anexo-vi, 1 parcial, 19 nuevas. Corrección: el ciclo 31 contó 20 por el
+  límite perPage 20; la lista real es 25.
+- G07: canónico de trabajo = consolidado raíz (6.841 B, único completo);
+  canónico de índice = INDICE (627 B, 8/58); canónico de validación = ninguno.
+  G07 sigue parcial (A10/A43/A29/A31/A21 sin validación externa; PVE-01 sin ejecutar).
+- Jerarquía: leer → validar → podar → expandir. La poda de 147 repos es
+  prioridad 3, no prioridad 1. La frase exacta del Jardinero sigue vigente,
+  pero no urgente.
+- Claims C-112 a C-125 (14: SE 13, NO_SE 1). Total 125, hash_real 111.
