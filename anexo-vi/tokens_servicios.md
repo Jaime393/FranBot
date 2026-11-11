@@ -49,3 +49,13 @@ escritura y requiere su autorización.
 - Veredicto: **TOKEN_ZENODO_NO_ENCONTRADO**. No se inventa
   un token ni se pide uno. La grieta sigue abierta por falta
   de token.
+
+## Estado ciclo 43 — Zenodo vive en el runtime, no en el archivo
+
+- El token ZENODO_TOKEN está cargado en el runtime del
+  enjambre (orquestador_supremo.log: 4 checks de credenciales).
+- No está en tokens_20260830 ni en el orquestador (muestra).
+- La publicación existe: DOI 10.5281/zenodo.20547558
+  (MIU V12.0, 2026-06-04, verificado en la API pública).
+- Telegram: 4 bots vivos de 6 entradas (Micelio,
+  Familiares, franbot_tablet_bot, AlmaOmni_Bot).
