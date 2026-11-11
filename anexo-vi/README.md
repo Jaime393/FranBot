@@ -38,6 +38,8 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 | estructura_miu.md | Árbol de MIU_ABSORBIDO/MIU/ (32 archivos de raíz + 6 subcarpetas leídas por dentro) + INVENTARIO_MAESTRO (ciclo 27). | OPERATIVO |
 | digestion_ampliada_2026-11-11.md | Digestión ampliada ciclo 29: MIU_ESCUELA (764 poder_NNNN), diario (498), logs (118), auditorias (79,4 MB sin descargar), df_benchmark, tests. Claims C-076 a C-085. | OPERATIVO |
 | meta_poda_2026-11-11.md | Meta-poda ciclo 29: ARCHIVAR_SEGURO 25, FUSIONAR_SEGURO 14, BORRAR_CON_CONFIRMACION 147. Preparada, no ejecutada; espera frase del Jardinero. | OPERATIVO |
+| axiomas_a0_a57.md | Axiomas A0-A57 extraídos del Vault (58, tabla completa) + discrepancia INDICE vs consolidado + G07 cerrada parcialmente (ciclo 30). | OPERATIVO |
+| miu_backup_analisis.md | Análisis miu-backup ciclo 30: 118 cosechas, 6 hashes distintos, tesoro incremental, conservar 118, borrar 0. | OPERATIVO |
 
 ## Reglas que esta capa respeta
 
