@@ -35,6 +35,7 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 | protocols/ | Protocolos de Drive integrados (ciclo 26): pae_01.py, paf_01.py, pcp_01.py, PAI-01.md + README.md de defectos. Existen como código; no son funcionales (C-049 NO_SE). | OPERATIVO |
 | pilares_integrados.md | 6 pilares fundacionales + 4 validados con DOIs + 2 en conjetura + tabla cruzada + sección G07 (ciclo 26). | OPERATIVO |
 | partituras_catalogo.md | Catálogo de 10 partituras P42–P75 con datos/Ki/Qualia/referencias/estado (ciclo 26). | OPERATIVO |
+| estructura_miu.md | Árbol de MIU_ABSORBIDO/MIU/ (32 archivos de raíz + 6 subcarpetas leídas por dentro) + INVENTARIO_MAESTRO (ciclo 27). | OPERATIVO |
 
 ## Reglas que esta capa respeta
 
