@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T12:02:00Z",
+ "last_seen": "2026-11-11T12:10:00Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -207,5 +207,14 @@
   "g_nueva_cerradas": 3,
   "g_nueva_abiertas": 2,
   "veredicto": "suelos_integrados_parcialmente"
+ },
+ "estructura_2026_11_11": {
+  "subcarpetas_mapeadas": 6,
+  "archivos_leidos": 13,
+  "inventario_presente": 5,
+  "inventario_ausente": 12,
+  "claims_nuevos": 6,
+  "g_nueva_cerradas": 5,
+  "veredicto": "estructura_mapeada"
  }
 }
