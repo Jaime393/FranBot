@@ -1,0 +1,8 @@
+Bot Telegram (ciclo 40). Sin valores reproducidos.
+Token encontrado en tokens_20260830 (6 entradas tipo telegram).
+Probadas 2: intento 1 HTTP 401 (token muerto); intento 2 getMe
+OK — bot Micelio, @Jp393_bot, id 1192102910, is_bot true.
+getWebhookInfo OK: tiene URL, pending_update_count 0.
+Webhook ACTIVO. Las 4 entradas restantes sin probar.
+G05 pasa a PARCIAL: falta verificacion de extremo a extremo
+(enviar mensaje y recibir respuesta) y secretos PENDING_ROTATION.
