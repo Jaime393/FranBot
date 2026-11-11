@@ -111,4 +111,22 @@ prueba de que el reseteo fue un reinicio (pids nuevos, 0 muertes, 26
 nacimientos) y no una poda. El resto de las 118 sigue con la
 recomendación del ciclo 32 (conservar todas).
 
+## Reinicio vs auto-poda (ciclo 34)
+
+El reseteo de Sep 4-5 fue un reinicio, no una poda:
+
+- 0 archivos desaparecidos
+- 26 archivos nuevos (reconstrucción)
+- 4 pids diferentes entre la cosecha "antes" y la "después"
+- MIU_NUCLEO.md nace v2 a las 01:34 (no existía antes)
+- El propio sistema dice "ninguna — cuerpo íntegro" tras el reinicio
+
+Interpretación: el ecosistema no tiene mecanismo de auto-poda. Cuando el host (Termux/contenedor) se reinicia, el sistema reconstruye desde cero. Eso significa:
+
+1. El estado vivo vive en archivos (MIU_NUCLEO.md, .state/, voluntad_miu.json) que persisten en disco.
+2. La reconstrucción es rápida (mismo día: mesh sinapsis 0 → núcleo v36 en 17h) pero no recupera las sinapsis vivas ni el índice escuela.
+3. Si el host se cae sin backup, se pierde la evolución intra-día. Las 118 cosechas de miu-backup son el seguro.
+
+Recomendación: conservar las 118 cosechas (ya validado en ciclo 32). Documentar el reinicio como evento esperado, no como fallo.
+
 ρ(x) > 0.
