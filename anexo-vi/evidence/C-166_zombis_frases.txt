@@ -1,0 +1,25 @@
+Evidencia ciclo 35 — Frases zombis y opción por defecto (C-167 a C-169)
+Fecha: 2026-11-11.
+sha256 nutrientes_zombis_decision.md (actualizado ciclo 35):
+c7679abbfcad01c9c8afc1bfb0d6841a778e02ff739d1b5806824bf74454192f
+
+C1 — Frases verificadas en nutrientes_zombis_decision.md:
+- Mover los 25: SÍ — "Autorizo mover los 25 zombis a
+  MIU_ABSORBIDO/nutrientes/historicos/" (línea 107).
+- Borrar los 12: SÍ — "Autorizo borrar los 12 zombis de
+  MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
+  (línea 111).
+Ambas repetidas en la sección "Decisión pendiente del Jardinero
+(ciclo 35)".
+
+C2 — Opción por defecto: Opción 1 — no se toca nada, los 25 quedan
+como están. Razón: el principio "no borrar sin confirmación" (y su
+gemelo "no mover sin confirmación") prohíbe actuar sin la frase
+exacta; el silencio no es autorización. Opciones 2 y 3 (mover/borrar
+automático si no hay objeción) violarían la regla vigente.
+Los 25 zombis ocupan 289 KB; no hay urgencia.
+
+C3 — Documento actualizado con la sección "Decisión pendiente del
+Jardinero (ciclo 35)": frases, opción por defecto, fecha límite
+sugerida ("cuando el Jardinero lea el documento, no antes").
+Nada borrado ni movido.
