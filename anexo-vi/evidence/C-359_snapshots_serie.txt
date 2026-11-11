@@ -1,0 +1,12 @@
+CICLO 47 - FRENTE C - Snapshots posteriores y series (API publica Zenodo)
+consulta por nombre de creador (creators.name:"Vicente Gabancho"): HTTP 400 (2 intentos, size 100 y 50)
+lista del autor reconstruida por DOIs directos: 11 re-verificados vivos (20547558, 19320946, 20547677, 19723044, 21351630, 20436104, 20191874, 19373289, 22650419, 20200753, 19705899)
+solo 22650419 lleva "Snapshot" en el titulo -> 0 snapshots posteriores a 2026-09-07
+versiones por concepto (all_versions=true):
+- MIU V12.0 concepto 20279679: 5 versiones (22071488, 20483338, 22071505, 20547558, 20279680)
+- Grimorio concepto 20483562: 3 versiones (20499945, 20547677, 20483563)
+- Unified Framework GR/QM concepto 19338256: 2 versiones (19373289, 19338257)
+- resto: 1 version, incluido snapshot concepto 22650418 (solo 22650419)
+series: SI para papers (MIU 5, Grimorio 3, Framework 2); NO para el snapshot (1)
+6 DOIs mas del autor revelados por las versiones (mismos conceptos): total conocido 17 registros
+la lista puede no ser exhaustiva (la busqueda por nombre no funciona ahora)
