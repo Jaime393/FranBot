@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T19:45:00Z",
+  "last_seen": "2026-11-11T19:55:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -661,5 +661,27 @@
     },
     "total": 290,
     "hash_real": 276
+  },
+  "ciclo44_2026_11_11": {
+    "doi": {
+      "doi": "10.5281/zenodo.20547558",
+      "titulo": "MIU V12.0",
+      "fecha": "2026-06-04",
+      "licencia": "cc-by-4.0",
+      "archivos": 3,
+      "dois_autor": 11
+    },
+    "bots_logs": {
+      "bots_en_logs": 0,
+      "emails_en_logs": 0,
+      "asociacion": "no encontrada"
+    },
+    "inmune": {
+      "menciones_en_logs": 0,
+      "visible": "PHASE1 checks de credenciales",
+      "regla": "escribir = carga"
+    },
+    "total": 305,
+    "hash_real": 291
   }
 }
