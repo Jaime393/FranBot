@@ -1,0 +1,7 @@
+Bot Telegram (ciclo 39, sondeo G05).
+muse.connector_search "telegram bot getMe" y "telegram": No matches.
+No hay conector de Telegram en el chat. No hay token en variables.
+No se busco token en archivos (higiene).
+Veredicto: BOT_SIN_ACCESO. getMe y getWebhookInfo no verificables
+desde aqui. Worker Oraculo sin re-sondeo en ciclo 39 (ciclo 38:
+GET 200, Vinf+27, vive true).
