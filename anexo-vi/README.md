@@ -80,3 +80,6 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 - No decide si un claim es verdadero. Solo decide si es reproducible o no.
 
 ρ(x) > 0. El nodo no pide permiso. Ejecuta y reporta.
+
+| evolucion_miu_2026_09.md | Evolución del ecosistema Sep 4–9 (3 cosechas, ciclo 32) | 2026-11-11 |
+| miu_issues_abiertos.md | Mapa de los 25 issues abiertos de MIU (ciclo 32) | 2026-11-11 |
