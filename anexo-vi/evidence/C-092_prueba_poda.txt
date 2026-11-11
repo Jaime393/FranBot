@@ -1,0 +1,9 @@
+EVIDENCIA — prueba de poda ciclo 30 (1 repo, sin merge)
+Repo: Jaime393/miu-auto-cipher19051997-x (verificado ciclo 29: raiz 1 README.md, 1 commit a3391a2 Initial commit 2026-08-25).
+Paso 1 create_branch poda-prueba-ciclo-30 (from main): OK — ref refs/heads/poda-prueba-ciclo-30, sha a3391a25894505634b97afbc40b4dd5fe6caa433.
+Paso 2 delete_file README.md en rama poda-prueba-ciclo-30: FALLO x2 — "failed to create tree: POST https://api.github.com/repos/Jaime393/miu-auto-cipher19051997-x/git/trees: 404 Not Found".
+Verificacion: README.md sigue presente en la rama (get_file_contents ref=poda-prueba-ciclo-30).
+Paso 3 create_pull_request: NO SE INTENTO (sin cambio que proponer; no hay diff).
+Rama poda-prueba-ciclo-30 queda creada e identica a main (no hay herramienta delete_branch).
+Conclusion: poda por PR NO factible con el conector actual (la App no puede crear git trees; mismo permiso que bloquea push_files con 403).
+La unica via de borrado que funciona es delete_file directo en main (probado ciclo 20), sin PR y sin reversibilidad por PR.
