@@ -64,3 +64,17 @@ Pestañas muestreadas: 14, 16, 19.
 ## Regla
 
 Solo lectura. No escribir. No activar el inmune. No corregir. Los nombres de pestañas, encabezados y valores de celdas no se reproducen en documentos.
+
+## Ciclo 46: filas 4–30 de las 11 pestañas relevantes (autorización explícita del Jardinero)
+
+Lectura autorizada: filas 4 a 30 de las pestañas 2, 6, 10, 14, 15, 16, 17, 18, 19, 22, 25. Solo conteos; ningún valor reproducido.
+
+Filas con datos por pestaña (de 27 leídas): 2: 11; 6: 10; 10: 27; 14: 27; 15: 21; 16: 0; 17: 9; 18: 27; 19: 27; 22: 3; 25: 9. **Total: 171 filas con datos.**
+
+Conteos por pestaña (celdas con @ / menciones "bot" / DOIs / celdas de 40+ caracteres): 2: 0/0/0/2; 6: 5/0/0/10; 10: 11/0/0/18; 14: 22/0/0/11; 15: 5/18/0/5; 16: 0/0/0/0; 17: 9/0/0/0; 18: 36/11/0/18; 19: 31/7/0/16; 22: 3/0/0/1; 25: 0/2/0/17. Totales: @ 122, "bot" 38, DOIs 0, celdas 40+ 98.
+
+Distintos (conteo en proceso, sin reproducir valores): **16 emails distintos, 7 bots distintos. 12 filas contienen bot y email a la vez.** Menciones de servicios por fila: gmail 99, cloudflare 22, drive 15, telegram 14, github 3, huggingface 2, supabase 1, zenodo 0.
+
+Veredicto estructura 11/11: **PARCIAL**. Hay emails (16 distintos) y bots (7 distintos) con correspondencia en 12 filas, pero no son 11/11 exactos en este rango. 4 pestañas saturaron el rango (27/27 filas: 10, 14, 18, 19): hay más datos bajo la fila 30. La pestaña 16 está vacía en filas 4–30.
+
+Dónde puede estar la estructura si no está en filas 4–30: filas 31+ de las 4 pestañas saturadas, o distribuida entre pestañas (los 16 emails y 7 bots no cuadran con 11/11 en un solo rango). Queda por leer: filas 31 en adelante de las pestañas 10, 14, 18, 19 (y del resto si hace falta).
