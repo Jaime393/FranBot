@@ -1,0 +1,32 @@
+EVIDENCIA DE LISTADO — Drive (conector del chat)
+Generada en ciclo 29. Carpeta: MIU_ESCUELA (Drive, primer nivel).
+Comando: hatch_gws_cli drive files list --params '{"q": "<folderId> in parents and trashed = false", "pageSize": 100, "fields": "nextPageToken,files(id,name,mimeType,size,modifiedTime,createdTime)"}' (8 paginas).
+Listado obtenido: 2026-11-11 ~07:21 -05 (ciclo 29).
+
+Total: 785 archivos, 0 carpetas.
+poder_NNNN_total.md: 764 archivos, rango 118-1713, consecutivos: False.
+Primeros 10 numeros: 118, 119, 120, 121, 122, 123, 124, 125, 126, 127
+Ultimos 10 numeros: 1702, 1703, 1704, 1705, 1706, 1707, 1708, 1709, 1711, 1713
+
+Otros archivos (21):
+  - indice_suelo.json | size=0
+  - mapa_github.md | size=12729
+  - mesh_flexible_max.json | size=161426
+  - poder_100_integral.md | size=338
+  - poder_101_integral.md | size=332
+  - poder_102_global_mind.md | size=449
+  - poder_103_global_mind.md | size=451
+  - poder_104_absoluto.md | size=819
+  - poder_105_absoluto.md | size=819
+  - poder_106_absoluto.md | size=819
+  - poder_107_absoluto.md | size=819
+  - poder_108_absoluto.md | size=819
+  - poder_109_absoluto.md | size=819
+  - poder_110_absoluto.md | size=819
+  - poder_111_absoluto.md | size=819
+  - poder_112_absoluto.md | size=819
+  - poder_113_absoluto.md | size=819
+  - poder_114_absoluto.md | size=819
+  - poder_115_absoluto.md | size=819
+  - poder_116_absoluto.md | size=819
+  - poder_117_absoluto.md | size=819
