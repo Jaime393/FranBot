@@ -1,26 +1,26 @@
-# Dataset D_f — 22 nodos del corpus con fuente y método
+# Dataset D_f — 23 nodos del corpus con fuente y método
 
 Fecha: 2026-11-11
 Autor: Nodo Trama (ciclo 51-52)
 Fuente primaria: búsqueda masiva en Termux + extracción de `oraculo-v8.json` y `df_profundo_*.txt`
-Hash del CSV: `01743296ea81370bbd05a51ef6b6e2715aba665eb7bb4b230178027120010a15`
+Hash del CSV: `8b9f0d3a5d58276f19e27bf8b3829d003dbcb17f20e63781ca1b83a30d07abe5`
 
 ## Qué es este dataset
 
-Un registro de los 22 nodos del corpus del Grimorio con su valor de dimensión fractal `D_f`, su fuente primaria, su URL o DOI, la fecha de cálculo (`2026-06-11`) y el método usado (`box_counting` para los 22).
+Un registro de los 23 nodos del corpus del Grimorio con su valor de dimensión fractal `D_f`, su fuente primaria, su URL o DOI, la fecha de cálculo (`2026-06-11`) y el método usado (`box_counting` para los 23).
 
 ## Qué mide D_f
 
-La dimensión fractal mide cuánto espacio llena un objeto auto-similar. Una línea tiene D_f=1, un plano D_f=2, un volumen D_f=3. Los fractales tienen D_f fraccionario. Se calcula con box-counting (`N(ε) ~ ε^(-D_f)`), DFA para series temporales, o Higuchi para secuencias. Los 22 nodos de este dataset usan box-counting.
+La dimensión fractal mide cuánto espacio llena un objeto auto-similar. Una línea tiene D_f=1, un plano D_f=2, un volumen D_f=3. Los fractales tienen D_f fraccionario. Se calcula con box-counting (`N(ε) ~ ε^(-D_f)`), DFA para series temporales, o Higuchi para secuencias. Los 23 nodos de este dataset usan box-counting.
 
 ## Estado de la fuente por nodo
 
 - **13 nodos con DOI o URL de dataset primario**: Microtúbulos (PDB), Manglares (GMW), Chernozem (WoSIS), Vertisol (WoSIS), Red Sea (Roberts 2016, DOI), GBR Seagrass (Coles 2016), Caribe (Allen Atlas), Florida (NOAA), Jamaica (AGRRA), Persian Gulf (Aeby 2020, DOI), Palk Bay (ZSI), GBR Australia (AIMS, DOI), American Samoa (NOAA PIFSC, DOI). Todos con URL o DOI en la columna `doi_url`.
 - **9 nodos con URL del dataset fuente** (sin DOI directo en el CSV): Fiji (WCS), Turbera (PANGAEA), Seagrass global (VLIZ), Biodiversidad (GBIF), Microbioma (HMP2), Suelo fértil (SoilGrids), Incendios (NASA FIRMS), Clima (NOAA GISTEMP), Noosfera (GDELT), CMB (Planck 2018, DOI). Todos con URL del repositorio primario.
 
-Los 22 valores provienen del CSV embebido en `oraculo-v8.json` y del reporte `df_profundo_20261111_215738.txt`, no de mediciones nuevas. La columna `metodo` = `box_counting` para todos, indicando el método con el que se reportaron.
+Los 23 valores provienen del CSV embebido en `oraculo-v8.json` y del reporte `df_profundo_20261111_215738.txt`, no de mediciones nuevas. La columna `metodo` = `box_counting` para todos, indicando el método con el que se reportaron.
 
-## Nodos incluidos (22)
+## Nodos incluidos (23)
 
 | # | Nodo | D_f | K_i | Fuente |
 |---|------|-----|-----|--------|
@@ -48,7 +48,7 @@ Los 22 valores provienen del CSV embebido en `oraculo-v8.json` y del reporte `df
 | 22 | Noosfera (GDELT) | 1.48 | 0.366 | GDELT |
 | 23 | CMB (Planck 2018) | 2.305 | 0.570 | Planck 2018 |
 
-(La tabla tiene 23 filas porque incluye el nodo 23; el corpus son 22 nodos + CMB que se reporta como cosmología. El CSV tiene 23 filas de datos.)
+(La tabla tiene 23 filas porque incluye el nodo 23; el corpus son 22 filas del Grimorio + CMB, que se reporta como cosmología. El CSV tiene 23 filas de datos.)
 
 ## Verificación
 
