@@ -1,0 +1,14 @@
+Publicaciones Zenodo (ciclo 43). DOIs publicos reproducibles.
+DOI 10.5281/zenodo.20547558 verificado en API publica (HTTP 200):
+"Monismo Informacional Unificado (MIU) – MIU V12.0", 2026-06-04,
+creador Vicente Gabancho, Juan Diego, tipo publication.
+API publica sin token: query "Vicente Gabancho" total 13301
+(ruidosa, sin MIU en top 10); query "MIU" total 305 (sin MIU
+en top 10).
+Logs: orquestador_supremo.log tiene 4 lineas "CREDS:
+ZENODO_TOKEN" (10:18:16, 10:19:37, 10:41:56) — el token esta
+cargado en el runtime. orquestador.log 0, orquestador_cron.log 0.
+Sin DOIs ni deposit/published en logs.
+Orquestador 19 pestanas (muestra 3 filas): 0 menciones zenodo/
+DOI/10.5281. tokens_20260830: 0 en preview y archivo.
+Detalle en zenodo_publicaciones.md.
