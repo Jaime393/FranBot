@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T17:58:53Z",
+ "last_seen": "2026-11-11T18:06:46Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -437,7 +437,13 @@
   "rango_ki": [
    0.2106,
    0.618
-  ]
+  ],
+  "c_definicion": "SIN DEFINICION (ciclo 37: papers sin c, candidatos fuera de banda, c3 invalida)",
+  "nombres": {
+   "pve01_vault": 60,
+   "proxmox_en_drive": 0,
+   "commits_globales": 20626
+  }
  },
  "nutrientes_buzon_2026_11_11": {
   "archivo": "nutrientes_buzon.md",
@@ -453,7 +459,8 @@
    "recomendacion": "mover los 25 a historicos/",
    "frase_mover": true,
    "frase_borrar": true,
-   "opcion_defecto": "no tocar nada"
+   "opcion_defecto": "no tocar nada",
+   "autorizado": false
   }
  },
  "higiene_2026_11_11": {
@@ -501,6 +508,22 @@
   "claims": "C-171 a C-185 (15 SE)",
   "total_claims": 185,
   "hash_real": 171,
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "ciclo37_2026_11_11": {
+  "c_definicion": "SIN DEFINICION",
+  "candidatos": {
+   "c1": 0.004875,
+   "c2": 0.377398,
+   "c3": "invalida"
+  },
+  "nombres_pve01_vault": 60,
+  "zombis_autorizado": false,
+  "g09": "CERRADA PARCIALMENTE (sigue)",
+  "claims": "C-186 a C-200 (15 SE)",
+  "total_claims": 200,
+  "hash_real": 186,
   "g05": "ABIERTA",
   "g07": "parcial"
  }
