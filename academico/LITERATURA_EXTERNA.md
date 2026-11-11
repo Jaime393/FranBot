@@ -117,6 +117,20 @@ reef_conteos_miu.csv (D_f 1.6): conteo global de polígonos de arrecife, no-nodo
 
 Cruce final: 18 confirmados, 0 discrepancias, 5 SIN_CSV_BUSCABLE.
 
+## Buscados en Drive y red (ciclo 58)
+
+Los 5 nodos SIN_CSV_BUSCABLE (ciclo 57) se buscaron en Drive y en sus fuentes públicas. Resultado: 1 confirmado por red, 4 siguen sin fuente.
+
+| Nodo | Drive | Red | Cálculo | Estado |
+|---|---|---|---|---|
+| Microtúbulos (PDB 3J6F) | solo menciones | PDB 3J6F descargado (RCSB, 5,1 MB) | box-counting 3D: CA 1.772, todos 1.909 | no confirmado (dataset 2.50) |
+| GBR Seagrass (TropWATER) | solo menciones | eAtlas UUID 77998615 (Coles 2016); 66.201 sitios + 1.169 praderas | box-counting 2D polígonos rellenos: 1.99 fino / 1.95 rango | confirmado por red (dataset 2.03, dif. 0.04) |
+| Turbera Glen Carron (PANGAEA) | solo menciones | PANGAEA 10.1594/PANGAEA.927872 (Anderson 2021) | DFA: DBD 1.03, TC 0.99, TN 0.62 | no confirmado (dataset 1.91) |
+| Seagrass global (VLIZ) | solo menciones | UNEP-WCMC WCMC-013-014 (853 MB polígonos) | host inalcanzable | no confirmado |
+| CMB (Planck 2018) | NODO_FERTIL_05: D_f 2.305 como INFIERO | mapas Planck no descargables aquí | — | no confirmado |
+
+Scripts y evidencia en `academico/evidence/` (calcular_df_microtubulos.py, calcular_df_seagrass_gbr.py, calcular_df_seagrass_meadows.py, calcular_df_turbera.py).
+
 ## Citas al MIU en Crossref
 
 Resultado: 0 citas. Crossref devuelve 20 resultados para 'Monismo Informacional Unificado'; ninguno cita el MIU (monismo filosófico: anómalo, semántico, estético, transcendentalista). Ciclo 53.
