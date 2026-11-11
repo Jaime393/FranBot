@@ -221,3 +221,22 @@ lo declarará como carencia de entorno, no como grieta epistémica.
   prioridad 3, no prioridad 1. La frase exacta del Jardinero sigue vigente,
   pero no urgente.
 - Claims C-112 a C-125 (14: SE 13, NO_SE 1). Total 125, hash_real 111.
+
+## Reseteo, PVE-01, buzón, higiene ciclo 33 (2026-11-11)
+
+- Higiene: grep valores literales en miu_issues_abiertos.md + evidence ciclo 32
+  y en toda anexo-vi/: 0 coincidencias (SIN_VALORES_LITERALES). Nada redactado.
+- Issues MIU#45 y #57: comentados (ids 6797183654 y 6797206539) y CERRADOS
+  (state=closed, completed; verificados en lista CLOSED). Placeholders antiguos,
+  sin rotación, sin incidente. MIU ahora: 23 issues abiertos.
+- Reseteo: ventana entre 2026-09-04 08:49:46Z y 2026-09-05 01:43:05Z (~17 h).
+  Antes (126 archivos) → después (152): 0 muertes, 26 nacimientos (nacen
+  subsistemas "nacidos" y "zombi"). Causa CONJETURO: reinicio completo del
+  nodo (los 4 pids cambian). Los 10 "borrados" del ciclo 31 existen en las 3:
+  se borraron Sep 5–9, no en el reseteo. Escuela no monótona (8.586→5.153).
+- PVE-01: fórmula existe (Vault, 3 formas candidatas); código NO existe
+  (única mención: prompt en orquestador_v8.py); ejecución NO registrada
+  ("48/48" sin artefacto). G09 abierta por carencia de implementación.
+- Buzón nutrientes: 96 = 6 credenciales (cerrados) + 24 estado vivo + 41
+  catálogo/datos + 25 zombi (candidatos a poda local, requieren decisión).
+- Claims C-126 a C-140 (15: SE 14, CONJETURO 1). Total 140, hash_real 126.
