@@ -1,0 +1,30 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: token_metrics.db
+Nota: Métricas de tokens y relay (esquema; sin valores).
+
+Tablas (3): sqlite_sequence, token_metrics, token_relay_log
+Esquema + conteos (SIN valores de filas):
+Tabla sqlite_sequence: 2 filas
+  CREATE TABLE sqlite_sequence(name,seq)
+Tabla token_metrics: 33 filas
+  CREATE TABLE token_metrics (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    email TEXT,
+                    endpoint TEXT,
+                    status INTEGER,
+                    response_time REAL,
+                    valid INTEGER,
+                    timestamp TEXT,
+                    error_msg TEXT,
+                    token_prefix TEXT
+                )
+Tabla token_relay_log: 4 filas
+  CREATE TABLE token_relay_log (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    backend TEXT,
+                    url TEXT,
+                    status INTEGER,
+                    timestamp TEXT
+                )
+
+Qué se extrae y por qué: el esquema y los conteos bastan para recrear la estructura y saber qué contenía; los valores de las filas no se reproducen (higiene de secretos).
