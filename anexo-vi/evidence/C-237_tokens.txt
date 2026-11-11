@@ -1,0 +1,17 @@
+Tokens en archivos (ciclo 40). Sin valores reproducidos.
+tokens_20260830_4.8M.json.zlib.gz (720.412 B gz -> 4.930.355 B
+JSON): lista de 23.430 entradas, claves archivo/linea/preview/
+tipo/token. Por tipo: generic 23282, api_key_general 73,
+github_old 24, openai 13, groq 10, openrouter 6, telegram 6,
+github 4, anthropic 4, cloudflare 2, huggingface 2, groq_token 2,
+scaleway 1, google 1. Prefijos (conteos): sk- 108, ghp_ 16,
+xox 1, gsk_ 52, cfat_ 30. Formato bot Telegram: 6 (las 6 tipo
+telegram). REEMPLAZAR 2, PENDING 0.
+miu_brain.db.zlib token_estado: 5 filas, agregados
+(tokens_activos suma 15, tokens_validos suma 15), sin telegram.
+token_metrics.db: 33 filas (21 validas), 0 telegram/bot en
+endpoint. token_relay_log: 4 filas, 1 backend, 0 telegram/bot.
+zgrep: el .gz contiene 'telegram' y formato bot; ningun otro
+archivo de drive_ciclo40/ menciona telegram. drive_ciclo39/ no
+existe (el ciclo 39 guardo en drive_ciclo34/).
+Detalle en tokens_encontrados.md.
