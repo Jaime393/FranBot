@@ -366,3 +366,22 @@ mencionan la palabra, 0 contienen token; .db 0; Vault PVE-01
 0; orquestador muestra 0). Orquestador: 19 pestañas, 5 leídas,
 solo lectura. G05 re-verificada (3ª vez) sin escribir.
 Claims 275 (hash_real 261).
+
+## Ciclo 43: no se escribe
+- No se envió mensaje a ningún bot.
+- No se escribió en el orquestador.
+- No se publicó en Zenodo.
+- No se creó issue ni PR.
+- No se modificó ningún archivo de Drive.
+- Regla vigente: el micelio escribe solo; anexo-vi lee y sintetiza.
+
+## Ciclo 43 (2026-11-11) — publicaciones Zenodo y 11 bots / 11 emails
+
+La publicación existe: DOI 10.5281/zenodo.20547558 (MIU V12.0,
+2026-06-04, API pública). El token ZENODO_TOKEN está cargado
+en el runtime (orquestador_supremo.log, 4 checks) pero no en
+ningún archivo. Bots: 4 vivos de 6 entradas (Micelio,
+Familiares, franbot_tablet_bot, AlmaOmni_Bot); 5 mencionados
+en archivos locales; 11 afirmados. Emails: 89 únicos en
+archivos locales (87 gmail). No se escribió en ningún sitio.
+Claims 290 (hash_real 276).
