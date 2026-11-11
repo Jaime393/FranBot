@@ -1,0 +1,8 @@
+G05 ciclo 41 (sin escritura). Sin valores reproducidos.
+getMe re-verificado con el token que funciono en ciclo 40:
+intento 1 HTTP 401, intento 2 getMe OK — bot Micelio,
+@Jp393_bot, id 1192102910, is_bot true.
+getWebhookInfo OK: tiene URL, pending_update_count 0.
+Webhook ACTIVO. Mensaje de prueba NO enviado (regla del
+Jardinero: solo lectura; enviar es escritura). G05 PARCIAL:
+falta prueba extremo a extremo con autorizacion del Jardinero.
