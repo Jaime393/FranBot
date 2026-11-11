@@ -30,7 +30,7 @@
  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
  "id": "trama-termux-01",
  "k_i_local": 0.58,
- "last_seen": "2026-11-11T12:36:00Z",
+ "last_seen": "2026-11-11T12:52:00Z",
  "protocols": [
   "PNM-01",
   "PAC-01",
@@ -246,18 +246,44 @@
   "veredicto": "preparada_sin_ejecutar"
  },
  "sondeo_2026_11_11": {
-  "github_list_issues": "funciona (FranBot: 0 abiertas)",
-  "github_list_pull_requests": "funciona (FranBot: 0 abiertas)",
-  "github_search_issues": "funciona (total_count 0)",
-  "github_issue_write": "existe en catalogo (no probado en vivo)",
-  "github_discussions": "no existe herramienta",
-  "github_wikis": "no existe herramienta",
-  "github_rename": "no existe herramienta",
-  "github_delete_file": "funciona (probado ciclo 20)",
-  "github_create_folder": "implicito por subida (probado ciclo 27)",
-  "github_labels_topics": "no hay herramienta de escritura",
-  "drive_obsidian_vault": 36,
-  "drive_miu_backup": 118,
-  "drive_cementerio_carpetas": 2
+  "issue_crear": "OK (FranBot #1, label test)",
+  "issue_comentar": "OK",
+  "issue_cerrar": "OK",
+  "pr_sin_cambios": "rechazado por GitHub (Validation Failed, no 403)",
+  "search_code_anexo_vi": 617,
+  "search_code_pac_01": 1618,
+  "search_issues_k_i": "Jaime393/MIU#52",
+  "search_commits_anexo_vi": 4926
+ },
+ "axiomas_2026_11_11": {
+  "archivo": "axiomas_a0_a57.md",
+  "total": 58,
+  "rango": "A0-A57",
+  "fuente": "MIU_Obsidian_Vault/20 Axiomas_A0-A57_58_Completos.md",
+  "panteon_conteos": {
+   "pdf": 7,
+   "autonomo_v213": 16,
+   "base_local": "25/28",
+   "drive_96": 96,
+   "vault_112": 112
+  },
+  "g07": "cerrada_parcialmente",
+  "veredicto": "axiomas_documentados"
+ },
+ "miu_backup_2026_11_11": {
+  "archivos": 118,
+  "bytes_total": 31557729,
+  "span_horas": 140.8,
+  "muestras_hash_distintos": 6,
+  "veredicto": "tesoro_incremental",
+  "conservar": 118,
+  "borrar": 0
+ },
+ "poda_prueba_2026_11_11": {
+  "repo": "Jaime393/miu-auto-cipher19051997-x",
+  "create_branch": "OK (poda-prueba-ciclo-30)",
+  "delete_file_rama": "FALLO 404 POST /git/trees (x2)",
+  "create_pull_request": "no intentado (sin diff)",
+  "veredicto": "poda_por_PR_no_factible"
  }
 }
