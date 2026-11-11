@@ -1,0 +1,8 @@
+Orquestador mapeado (ciclo 42). Solo metadatos, sin contenido
+de celdas.
+Sheet MIU_ORCHESTRATOR_V152_MAX_EXPANDED: 19 pestanas,
+abierto en lectura. 5 pestanas leidas (3 filas cada una).
+Nombres, encabezados y valores no se reproducen en documentos.
+Token Zenodo en la muestra: 0 menciones en las 5 pestanas
+(no se escaneo el Sheet completo). Sin escritura, sin
+correccion. Es el orquestador vivo del enjambre.
