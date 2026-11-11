@@ -1,0 +1,14 @@
+Poda de zombis (ciclo 39), autorizacion condicional del Jardinero:
+"Los zombies si ya digieren su nucleo se poda, con la base basta
+hasta para recrear."
+Base verificada antes de podar: claims C-216 a C-228 con hash real
+de los 13 extractos (evidence/zombi_*_nucleo.txt); 12
+irrecuperables sin nada unico (inspeccion ciclo 34).
+Movidos a MIU_ABSORBIDO/nutrientes/historicos/ (ID
+1ouvCpzF1V6jFUlPRixIHAK781Vo2143L, creada ciclo 39) por
+files update addParents/removeParents: 13/13, sin descarga.
+Borrados con files delete (permanente, 12/12 status success):
+103.026 B.
+Verificacion: nutrientes/ 96 -> 72 entradas (71 archivos +
+historicos/); historicos/ 13 entradas; zombis en nutrientes/: 0.
+96 - 25 = 71. Cuadra.
