@@ -1,0 +1,33 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: alimentador_fractal.db
+Nota: Ciclos, qualia, recursos, semillas.
+
+Tablas (5): ciclos, qualia, recursos, semillas, sqlite_sequence
+Esquema + conteos (SIN valores de filas):
+Tabla ciclos: 1 filas
+  CREATE TABLE ciclos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                tipo TEXT, metrica REAL, timestamp TEXT
+            )
+Tabla qualia: 1 filas
+  CREATE TABLE qualia (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                valencia REAL, intensidad REAL, complejidad REAL,
+                timestamp TEXT
+            )
+Tabla recursos: 0 filas
+  CREATE TABLE recursos (
+                ruta TEXT PRIMARY KEY,
+                tipo TEXT, tamaño REAL, hash TEXT,
+                absorbido INTEGER, timestamp TEXT
+            )
+Tabla semillas: 3 filas
+  CREATE TABLE semillas (
+                id TEXT PRIMARY KEY,
+                tipo TEXT, contenido TEXT, fuente TEXT,
+                phi REAL, timestamp TEXT
+            )
+Tabla sqlite_sequence: 2 filas
+  CREATE TABLE sqlite_sequence(name,seq)
+
+Qué se extrae y por qué: el esquema y los conteos bastan para recrear la estructura y saber qué contenía; los valores de las filas no se reproducen (higiene de secretos).
