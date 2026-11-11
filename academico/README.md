@@ -27,8 +27,8 @@ Hashes a 2026-11-11:
 - TABLA_INMUNE_Y_PROTOCOLOS.md: sha256:1c5f6c4acc0d3dff028e3fbe7b402740d3a738827641bdb0252774572e8cda57
 - TABLA_DOIS_Y_ONTOLOGIA.md: sha256:cb892dd96517e035619dd216b253ad39e05c630673c0ee926e4762e73e7af02f
 - PAPER_DOIS_MIU.md: sha256:ca3fbd8735a309d100ff06fe58f407c2e4aea0f01b8f1f84c432133e92b26e50
-- dataset_nodos_Df.csv: sha256:59da2a2714b4789959cdd57ba1898d5592a1bd933b0ac2cb1302ccb579bca5c3
-- dataset_nodos_Df.md: sha256:4d337dacdae10948471bbf733986026dbece7f4319b711ad8f5581d10174396c
+- dataset_nodos_Df.csv: sha256:89239c4d790091cdcf7224d5f183f56623bce0d6946c5b73aa4f93fbed50f61e
+- dataset_nodos_Df.md: sha256:24e1db61345e1e1e94db26ece6c6021ee3ad201ffaf7e186a4eda45e7aeab194
 - LITERATURA_EXTERNA.md: sha256:f8a42f39f6b2de13f97b04f47d02758c3e0910ccf7e701a3a39e5f18e867b140
 
 El hash de este README se verifica con `sha256sum README.md` y está en el claim C-372.
