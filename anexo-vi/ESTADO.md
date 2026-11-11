@@ -240,3 +240,22 @@ lo declarará como carencia de entorno, no como grieta epistémica.
 - Buzón nutrientes: 96 = 6 credenciales (cerrados) + 24 estado vivo + 41
   catálogo/datos + 25 zombi (candidatos a poda local, requieren decisión).
 - Claims C-126 a C-140 (15: SE 14, CONJETURO 1). Total 140, hash_real 126.
+
+## PVE-01 implementado, reseteo como reinicio, zombis clasificados ciclo 34 (2026-11-11)
+
+- PVE-01: código existe (pve_01.py, 11.939 B, py_compile OK; 3 formas del
+  Vault como funciones puras de P=τ·Ξ·c). Ejecutado sobre GRACE TN-14 V3
+  real (281 filas, 2002-04 → 2025-08). Ξ medido = 0.7100. Formas 1 y 2
+  son la misma fórmula (0.618×1.618=0.999924). Forma 3 (T·tanh(P)) es la
+  única en banda en todo el rango P del documento [1.62, 2.014]:
+  Ki [0.5714, 0.5964], media 0.5847. Diferencia vs K_i con D_f: +18.3%
+  (D_f=2.0), -5.4% (D_f=2.5). c SIN definir en el Vault (con c=1,
+  P=63.9). G09 sigue ABIERTA: implementado y ejecutado, c sin definir.
+- Reseteo: reseteo_sep4_sep5.md actualizado con la sección "Reinicio vs
+  auto-poda (ciclo 34)". El ecosistema no tiene auto-poda; el estado vivo
+  vive en archivos que persisten en disco; las 118 cosechas son el seguro.
+- Zombis: 25 clasificados (13 histórico único, 12 irrecuperables).
+  Recomendación: mover los 25 a MIU_ABSORBIDO/nutrientes/historicos/.
+  Frases exactas en nutrientes_zombis_decision.md. Nada borrado ni movido.
+  5 ítems sensibles (tablas de tokens / archivo 4.8M): filas nunca leídas.
+- Claims C-141 a C-155 (15: SE 15). Total 155, hash_real 141.
