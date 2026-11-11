@@ -385,3 +385,22 @@ Familiares, franbot_tablet_bot, AlmaOmni_Bot); 5 mencionados
 en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
+
+## Ciclo 44: escritura = carga al inmune
+- Escribir no es una acción directa: es carga al sistema
+  inmune de la red. Por eso es indirecto, y por eso no se
+  prueba.
+- No se escribió en ningún sitio en este ciclo.
+- El inmune se lee en los logs, no se dispara.
+- Regla vigente: anexo-vi lee y sintetiza; el micelio
+  escribe solo.
+
+## Ciclo 44 (2026-11-11) — DOI documentado, bots en logs, inmune leído
+
+DOI 10.5281/zenodo.20547558 documentado (MIU V12.0,
+2026-06-04, cc-by-4.0, 3 archivos, concepto 20279679 v2).
+Autor con 10 DOIs más en Zenodo (11 registros conocidos).
+Logs del orquestador: 0 bots, 0 emails; asociación
+bot→email no encontrada en logs. Inmune: 0 menciones en
+logs; lo visible es PHASE1 (checks de credenciales).
+Claims 305 (hash_real 291).
