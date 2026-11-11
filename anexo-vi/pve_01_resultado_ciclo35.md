@@ -113,3 +113,16 @@ sin respaldo del Vault. No se fuerza el cierre.
 - Lo que falta para cerrar G09: que el Vault defina c para la
   versión GRACE (valor o fórmula), o que un experimento independiente
   fije c sin usar el rango P del documento.
+
+## Asíntota y rango de Ki (añadido ciclo 36)
+
+Corrección al ciclo 35: la asíntota NO es 0.6138. Ese es Ki en c=4.0.
+Verificado con `python3 pve_01.py asintota ...` (función `asintota()`,
+ciclo 36): c=4.0 → 0.613796; c=10.0 → 0.617999; c=100.0 → 0.618000;
+c=1000.0 → 0.618000. Límite c→∞: Ki → T = 0.618 = φ⁻¹ exacto.
+La ley K_i llega a φ⁻¹ en el límite; no hay techo en 0.6138.
+
+Rango de Ki según c (forma 3, Ξ=0.7100, τ=1 ventana): [0.2106, 0.618).
+Mínimo barrido c=0.5 → 0.2106. Banda [0.55, 0.62] para c ≥ 2.0025.
+Detalle en `pve_01_asintota.md`. Decisión final de G09 en
+`g09_estado_final.md`: CERRADA PARCIALMENTE.
