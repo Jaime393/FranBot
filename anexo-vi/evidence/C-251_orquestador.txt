@@ -1,0 +1,13 @@
+Orquestador del enjambre (ciclo 41). Solo metadatos, sin contenido
+de celdas.
+Drive nombre 'orquestador': 12 archivos (logs, .py, .json).
+Nombre 'swarm': 8 archivos (routers, protocolo, kanban).
+Nombre 'enjambre': partituras P46-10 y P49 (Docs de prosa).
+Nombre 'orchestrator': MIU_ORCHESTRATOR_V152_MAX_EXPANDED (Sheet,
+307.211 B, ID 1JpNTR8tCFLrAAuDvZdtLHkLdDlk13YBE0z8sKBWe2KQ) y
+MIU_ORCHESTRATOR (Sheet, 8.691 B). Nombre 'sheet_orquestador': 0.
+Sheet V152_MAX_EXPANDED abierto en lectura: 19 pestanas.
+Sin escritura, sin correccion. El mapeo detallado de su contenido
+no se reproduce en este documento; se consulta en Drive.
+Busqueda en GitHub no necesaria (orquestador ya en Drive).
+Detalle en orquestador_enjambre.md.
