@@ -132,3 +132,18 @@ si no hay objeción) actuarían sin la frase exacta, contra la regla
 vigente. Los 25 zombis ocupan 289 KB; no hay urgencia.
 
 Fecha límite sugerida: cuando el Jardinero lea el documento, no antes.
+
+## Estado ciclo 37: pendiente de autorización (2026-11-11)
+
+Verificación ciclo 37: se buscó en el historial del chat y en la
+memoria si el Jardinero ya dijo alguna de las frases. **No.**
+Ningún mensaje del Jardinero contiene "Autorizo mover los 25
+zombis" ni "Autorizo borrar los 12 zombis". Las frases existen
+solo en este documento y en los reportes de los ciclos 34–36.
+Node_manifest registra que las frases existen (frase_mover: true,
+frase_borrar: true), no una autorización.
+
+- Frase para mover (25): "Autorizo mover los 25 zombis a MIU_ABSORBIDO/nutrientes/historicos/"
+- Frase para borrar (12): "Autorizo borrar los 12 zombis de MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
+- Opción por defecto: no tocar nada.
+- Autorización del Jardinero: NO (ciclo 37). Nada movido ni borrado.
