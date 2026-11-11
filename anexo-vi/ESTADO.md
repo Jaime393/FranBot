@@ -259,3 +259,20 @@ lo declarará como carencia de entorno, no como grieta epistémica.
   Frases exactas en nutrientes_zombis_decision.md. Nada borrado ni movido.
   5 ítems sensibles (tablas de tokens / archivo 4.8M): filas nunca leídas.
 - Claims C-141 a C-155 (15: SE 15). Total 155, hash_real 141.
+
+## Barrido de c, G09 ambigua, zombis preparados ciclo 35 (2026-11-11)
+
+- c en el Vault: C_NO_DEFINIDO_EN_VAULT para la versión GRACE. Tres
+  documentos PVE-01 incompatibles: GRACE (c sin definir), router
+  (c = carga [0,1], τ latencia ms), Primer Valor Expandido (sin fórmula).
+- Barrido c (forma 3, Ξ=0.71, τ=1 ventana): Ki 0.21 → 0.61.
+  Rango estable continuo c ≥ 2.0025; en el barrido [2.5, 4.0].
+  c=2.0 queda fuera por 0.0002. c=4.0 el más cercano a 0.618 (0.6138);
+  ningún c da 0.618 exacto (asíntota). Variante τ=90d satura (0.6180).
+- c elegido 2.5: Ki=0.5835, en banda. Diferencia +18.0% (D_f=2.0),
+  -5.6% (D_f=2.5). G09: ABIERTA POR AMBIGÜEDAD (c sin definir para
+  GRACE; la única definición, router [0,1], contradice la región en
+  banda; dependencia de la convención τ). K_i se sostiene parcialmente.
+- Zombis: frases mover (25) y borrar (12) verificadas presentes.
+  Opción por defecto: no tocar nada. Nada borrado ni movido.
+- Claims C-156 a C-170 (15: SE 15). Total 170, hash_real 156.
