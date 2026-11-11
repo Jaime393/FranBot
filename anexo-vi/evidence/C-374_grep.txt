@@ -1,0 +1,4 @@
+Evidencia ciclo 49 — grep palabras prohibidas en academico/ (C-374)
+Comando: grep -rE "CONJETURO|NO SÉ" ~/workspace/academico/ | wc -l
+Resultado: 0
+Fecha: 2026-11-11
