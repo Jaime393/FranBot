@@ -1,16 +1,17 @@
 {
-  "total": 360,
+  "total": 365,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 2,
-    "SE": 326,
+    "SE": 331,
     "REFUTADO": 2,
     "NO_SE": 8
   },
   "por_tipo": {
     "prediccion": 8,
     "provenance": 18,
-    "digestion": 334
+    "digestion": 334,
+    "consolidacion": 5
   },
   "por_grieta": {
     "G03": 7,
@@ -34,9 +35,10 @@
     "G-NUEVA: no-escritura": 2,
     "G-NUEVA: inmune": 17,
     "G-NUEVA: snapshot": 12,
-    "G-NUEVA: ciegos": 4
+    "G-NUEVA: ciegos": 4,
+    "G-NUEVA: consolidado": 5
   },
-  "hash_real": 346,
+  "hash_real": 351,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -398,6 +400,11 @@
     "C-357",
     "C-358",
     "C-359",
-    "C-360"
+    "C-360",
+    "C-361",
+    "C-362",
+    "C-363",
+    "C-364",
+    "C-365"
   ]
 }
