@@ -88,7 +88,7 @@ El ciclo 56 listó el árbol completo de MIU_V12.0_FINAL/nodos/ (336 archivos) y
 | Nodo del dataset | Archivo fuente | D_f en archivo | D_f dataset | Estado |
 |---|---|---|---|---|
 | Manglares GMW | nodos/manglares/gmw_v4_global_2024.csv | 2.28 | 2.28 | confirmado |
-| Chernozem Ucrania | nodos/suelos/wosis_chernozem_ukraine_dbd1.13.csv | 2.41 | 2.11 | discrepancia (única restante) |
+| Chernozem Ucrania | nodos/suelos/wosis_chernozem_ukraine_dbd1.13.csv | 2.41 | 2.41 | confirmado en ciclo 57 (dataset cambió de 2.11 a 2.41) |
 | Vertisol India | nodos/suelos/wosis_vertisol_india_cec25.csv | 2.10 | 2.10 | confirmado |
 | Red Sea corales | nodos/corales/red_sea_kaust_roberts2016.csv | 2.16 | 2.16 | confirmado |
 | Florida Reef Tract | nodos/corales/florida_reef_noaa_ncei_0208322.csv | 2.02 | 2.02 | confirmado |
@@ -108,6 +108,14 @@ Sin archivo en MIU_V12.0_FINAL/nodos/ (5): Microtúbulos (PDB 3J6F), GBR Seagras
 Método del script FIRMS (df_from_firms.py, MIU_V12.0_FINAL/codigo/): lee un CSV con columnas value/x/y por --input, filtra value > 0, box-counting 2D con 10 tamaños logspace(0.5, 2.5, 10), D_f = pendiente del ajuste log-log, y escribe firms_df_Ki.csv con K_i 0.375 fijado en el código (no calculado). No tiene período ni región fijados: calcula lo que se le da. Su salida (1.969) es espacial; la serie anual (1.49) es temporal. El script compute_omegaF_firms_gdelt.py hace análisis espectral (Welch), no calcula D_f.
 
 reef_conteos_miu.csv (D_f 1.6): conteo global de polígonos de arrecife, no-nodo, sin fila en el dataset.
+
+## Resueltos en ciclo 57
+
+- **Chernozem Ucrania:** el archivo wosis_chernozem_ukraine_dbd1.13.csv (WoSIS 2024, DOI 10.17027/isric-wosis.dbd1.13, 7 filas) tiene D_f 2.41 y K_i 0.596. El dataset cambió de 2.11 a 2.41 y de 0.521 a 0.596. El archivo no tiene columna de método; el método es box-counting 3D (df_from_dbd.py, script DBD del repo). Era la única discrepancia restante.
+- **Microbioma humano:** el archivo hmp2_human_3150_metagenomes.csv tiene D_f_network 2.5 y K_i 0.508 (1 fila, 3150 muestras, Gut+Oral+Skin, HMP2, Nature 2019). El K_i 0.508 es el K_i de la red, no el valor de la fórmula base (que daría 0.618). Anomalía del ciclo 53 resuelta.
+- **README académico:** hash del CSV corregido al actual y conteos actualizados (18 CONFIRMADO_CSV, 0 DISCREPANCIA_CSV, 5 SIN_CSV_BUSCABLE).
+
+Cruce final: 18 confirmados, 0 discrepancias, 5 SIN_CSV_BUSCABLE.
 
 ## Citas al MIU en Crossref
 
