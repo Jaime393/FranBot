@@ -1,0 +1,9 @@
+Token Zenodo fuera del archivo principal (ciclo 42).
+Grep local (hidden_files/ + evidence/): 20 archivos mencionan
+la palabra "zenodo" (listados Drive, logs, codigo genoma,
+papers Vault, evidencia propia). 0 lineas con "zenodo" + run
+de 40+ chars (formato token). Ningun archivo contiene un token.
+token_metrics_fresh.db: 0 menciones (binario). Vault PVE-01
+(pve01_vault.md): 0 menciones. Los 6 archivos de credenciales
+de nutrientes no se abrieron (regla ciclo 31/33).
+TOKEN_ZENODO_NO_ENCONTRADO. No se inventa token ni se pide uno.
