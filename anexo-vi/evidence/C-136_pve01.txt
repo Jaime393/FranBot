@@ -1,0 +1,19 @@
+PVE-01 ESTADO (ciclo 33)
+- Formula (Vault, 00 Suelo_GRACE_Phi_PVE01.md, 2.659 B exportados, 2026-09-25):
+  Ki = 1/(tau*Xi*c) | T*1.618/(tau*Xi*c) | T*tanh(tau*Xi*c), solo tau (ventana
+  causal 90d) + Xi (correlacion causal), sin D_f. 3 formas candidatas, no una.
+- Afirma "48/48 nodos verificados" pero exige "validacion independiente" para
+  HUESO #31 (R2=0.989): la afirmacion no tiene artefacto (sin script, datos,
+  hash ni log).
+- GitHub: search_code "PVE-01"/"PVE" en Jaime393/MIU -> 1 hit:
+  entrenamiento/orquestador_v8.py (68.624 B). Unica mencion: cadena en lista de
+  prompts ("Disena un experimento para validar la Ley Ki en arrecifes de coral
+  sin usar D_f (protocolo PVE-01)"). 26 funciones; ninguna de validar/experiment/
+  pve/fractal/coral. K_i 51 menciones, D_f 20. NO es implementacion.
+- Drive validation/: test_omega_f_blind.py (instruccion) + df_benchmark/ (README).
+  Sin PVE-01. Drive protocolos/: pae/paf/pcp/PAI-01. Sin PVE-01.
+- Ejecucion: NO REGISTRADA (sin state, log ni resultado en ninguna fuente).
+- G09: abierta por carencia de implementacion (no por falta de voluntad).
+  Para cerrarla: elegir 1 forma, script sobre datos reales (GRACE TN-14, 220
+  filas, DOI 10.1029/2019GL085488), comparar contra nulo/permutacion, congelar
+  output con hash. Requiere ciclo de implementacion.
