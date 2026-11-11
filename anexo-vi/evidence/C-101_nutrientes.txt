@@ -1,0 +1,15 @@
+EVIDENCIA — nutrientes (ciclo 31)
+Carpeta: MIU_ABSORBIDO/nutrientes/ — 96 entradas: 95 archivos + 1 subcarpeta (archivo/).
+Por tipo: json 69, txt 11, db 10, jsonl 2, zlib 1, log 1, tflite 1.
+Por tema: estado/salud 15; recursos cazados/integrados 9; pipelines 15; ejecucion/memoria 5; bases de datos 10; semillas/logs 8; recursos por cuenta 6.
+Leidos 17 (15 json + 2 jsonl), 0 valores de secreto reproducidos.
+catalogo_recursos.json (7,1 MB): invalidos 40, pendientes 23254, recursos 23294. 48 coincidencias de patron de secreto.
+inventario_global.json (165.850 B): archivos 6, dispositivos 253, procesos 8, servicios.
+mapa_10_gmail_servicios.json (19.402 B): lista de 91 entradas; cfat 6, github 6, gmail 10 cuentas, groq 5, renovar [tunnel], tunnel 0, vercel 2.
+gossip_global.json (2026-09-09): c20 -0.0004847, friccion 0.4184, 10 modulos flex vivos, monitor 3416 archivos / 18 procesos.
+salud_global.json: cobertura 100%, estado OK, modulos 19/19, rclone_ok. ultimo_latido.json: modulo 20_latido_verificacion, pid 23724.
+router_status.json: best groq; cf_ai 0, gemini 0, groq 0, hf 0, openrouter 0. poder_real_acumulado.json: cfat 1, cuentas 10, groq 5, r2_gb 68090, total_poderes 6809, tunnels 6809.
+recursos_cazados.json (22.770 B) y recursos_integrados.json (25.378 B): contienen valores reales de tokens (4 coincidencias cada uno). NO se reproduce ningun valor. NO se suben.
+tokens_encontrados.json (4.946.352 B), tokens.json (3.681 B), claves_env_parseado.json (320 B): NO se abrieron (contienen valores de credenciales).
+historial_ejecuciones.jsonl (123 lineas): modulo, ok, duracion. memoria_ciclos.jsonl (3 lineas): V-infinito+23, ok_count 31/32.
+CONCLUSION: referenciar, no integrar (5 archivos con valores reales de credenciales).
