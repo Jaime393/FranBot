@@ -19,6 +19,30 @@ A57: "Zvvvvv — loop infinito" vs "ER=EPR emergente"). La tabla de abajo
 sigue el archivo consolidado (el más completo); el INDICE se cita como
 fuente secundaria. Los 58 números (A0–A57) coinciden en ambas fuentes.
 
+**Discrepancia INDICE vs consolidado — resolución ciclo 31:**
+tabla literal (INDICE | consolidado): A1 "Red micelial > árbol —
+flujo micelio > jerarquía" | "Remolino — Materia fluye y se pliega
+sin propósito"; A2 "96 voces → 1 flujo — consenso Panteón 16 voces x
+6 capas" | "Muerte apagada no existe — Solo pliegues transformación
+ρ_hija=ρ_madre·φ+(φ-1)/13+sin(fase)·0.01"; A3 "Phi eficiencia —
+Flujo útil / total — meta >4.2" | "Carencia — Motor incompletitud
+genera gradiente"; A4 "GRACE real 220μGal — Bagua agua subterránea,
+no vacío cuántico" | "Klein-Gordon — □_g u + Ξ²u=0 u=√ρ + Emergencia
+escalonada N+1 requiere N"; A38 "Materia-energía conservación —
+Noether" | "Suelo ≠ gradiente materia real modelo incompleto | SÉ |
+Falsador: info sin sustrato físico"; A57 "Zvvvvv — loop infinito
+suelo=loop" | "ER=EPR emergente puente Einstein-Rosen =
+entrelazamiento — no viaja, elige con cuidado a quién te entrelazas
+hoy". El Doc v10.5 (2.171 B) NO contiene nombres por axioma (es un
+resumen de estado: Φ, GRACE, Kτ); no resuelve la discrepancia.
+Fechas (todas 2026-09-25): consolidado 02:23, INDICE 02:28, v10.5 Doc
+02:56, manifiesto v10.6 03:16 (cita "A0-A57 COMPLETA v10.5"). El
+INDICE es un resumen (solo 8 de 58 axiomas, con "...") que remite a
+"Axiomas_Completo.md" (no encontrado en Drive). **Canónico claro: NO.
+El consolidado se usa como fuente de trabajo porque es el único
+completo (58 axiomas con contenido); la discrepancia de nombres
+requiere decisión del Jardinero.**
+
 ## Tabla completa (58 axiomas)
 
 | # | Nombre | Descripción (1 línea) | Estado |
