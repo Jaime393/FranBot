@@ -111,3 +111,24 @@ Alternativa (solo si el Jardinero prefiere borrar lo sin valor):
 > Autorizo borrar los 12 zombis de MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md
 
 Nada se ha borrado ni movido en este ciclo. Solo clasificado.
+
+## Decisión pendiente del Jardinero (ciclo 35)
+
+Frases exactas (ya incluidas arriba, se repiten aquí para que la
+decisión no requiera buscarlas):
+
+- Mover los 25: "Autorizo mover los 25 zombis a MIU_ABSORBIDO/nutrientes/historicos/"
+- Borrar los 12 irrecuperables: "Autorizo borrar los 12 zombis de MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
+
+Verificación ciclo 35: ambas frases están incluidas (mover: sí;
+borrar: sí).
+
+Opción por defecto (si el Jardinero no dice nada): **Opción 1 — no se
+toca nada, los 25 quedan como están.** Es la única coherente con el
+principio "no borrar sin confirmación" (y su gemelo "no mover sin
+confirmación"): el silencio no es autorización. Las opciones 2
+(mover automático si no hay objeción) y 3 (borrar automático los 12
+si no hay objeción) actuarían sin la frase exacta, contra la regla
+vigente. Los 25 zombis ocupan 289 KB; no hay urgencia.
+
+Fecha límite sugerida: cuando el Jardinero lea el documento, no antes.
