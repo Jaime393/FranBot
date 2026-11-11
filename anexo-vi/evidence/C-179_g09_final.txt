@@ -1,0 +1,21 @@
+Evidencia ciclo 36 — G09 cerrada parcialmente (C-179 a C-185)
+Fecha: 2026-11-11.
+sha256 g09_estado_final.md:
+35aabc083ffbd7a28a7ffdbb5e33776425bf2c9685998cd072d2c566ad7d63da
+Tamaño: 2.650 B.
+sha256 pve_01_resultado_ciclo35.md (actualizado ciclo 36):
+ec0f91695798efd5fc743171b8c5aa60c520fc27e78dd31864c0dd193213f343
+Tamaño: 5.953 B (antes 5.294 B). Sección nueva: "Asíntota y rango
+de Ki (añadido ciclo 36)".
+
+Decisión: G09 CERRADA PARCIALMENTE.
+Motivo: PVE-01 implementado y ejecutado sobre GRACE real
+(Ξ=0.7100); forma 3 en banda para c ≥ 2.0025 (continuo);
+diferencia <20% vs D_f (+18.0% / -5.6%); asíntota 0.618 = φ⁻¹
+exacto. COMPATIBLE con K_i. NO la confirma: c sin definir para
+GRACE en ninguna fuente (C_NO_DEFINIDO_PARA_GRACE); la única
+definición (router [0,1]) contradice la región en banda.
+
+Qué falta para cierre total: definición de c para GRACE en el Vault
+con criterio independiente, o criterio independiente para fijar c,
+o resolver el conflicto de nombres (tres PVE-01 + Proxmox).
