@@ -64,3 +64,14 @@ la ejecución existe, el resultado es compatible y la asíntota es
   inválida. Ninguno razonable da Ki en banda.
 - `c` no se puede definir sin más información. G09 SIGUE
   PARCIALMENTE CERRADA. Detalle en `c_definicion.md`.
+
+## Actualización ciclo 38 (2026-11-11): sigue parcial (C20)
+
+- C20 analizada (`c20_periodo.py`): 281 filas, sin periodo
+  dominante (DFT sin pico: top 5 en 42–58 meses dentro del 8%;
+  anual al 8.3% del máximo; autocorrelación decae monótona).
+- Candidatos: c=1/C20 literal → Ki=−0.618 (error de categoría);
+  c=1/P formal → 0.0231 (no banda); c=P/τ=19 y c=P·Ξ=13.49 →
+  0.618 saturado pero RECHAZADOS (P=57 meses es deriva, no
+  periodo; usarlos sería ajustar ruido al resultado).
+- G09 SIGUE PARCIALMENTE CERRADA. Detalle en `c20_definicion.md`.
