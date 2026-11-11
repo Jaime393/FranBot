@@ -386,6 +386,11 @@ en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
 
+## Ciclo 50: corrección C-034, dataset D_f, paper DOIs
+- C-034 es SÉ con hash real (dde9334e…): incluida en TABLA_FISICA.md (85 filas, total tablas 134). Su texto cita la palabra prohibida como etiqueta de estado de pilar: grep en academico/ pasa de 0 a 1, con causa documentada.
+- Dataset D_f: extracción de TABLA_FISICA.md (14 candidatos, 0 con D_f medido; D_f=2.0/2.5 son parámetros de sensibilidad, no mediciones; "48/48 nodos" sin artefacto; benchmark inexistente). Regla de parada aplicada: 0 filas < 20, sin nodos inventados, CSV no re-subido (conserva cabecera ciclo 49). Hallazgo: los 22 nodos no están en claims como sistemas medidos.
+- Paper DOIs: corregida la columna Archivos (estaba en 0 por error int/str; valores reales 1–68). 18 DOIs completos. Claims 375 (hash_real 361, sin cambios).
+
 ## Ciclo 49: solo académico — tablas, paper DOIs, dataset D_f
 - academico/: 3 tablas SÉ (84 + 34 + 15 = 133 filas; C-034 excluida por contener la palabra prohibida; TABLA_FISICA 85 candidatos - 1 = 84). Paper DOIs con 18 registros verificados en vivo (corrección: ciclo 47 contó 17; las versiones revelan 7 nuevos, no 6). Dataset D_f con 0 nodos (ningún nodo cumple fuente DOI + valor + fecha en claims.jsonl; placeholders en HUESO_27; A10 circular). Grep CONJETURO/NO SÉ en academico/: 0.
 - Siembra: 7 archivos a Jaime393/FranBot/academico/ por subidor. Red autónoma no tocada (solo lecturas locales, API pública Zenodo sin token, conector GitHub). Claims 375 (hash_real 361).
