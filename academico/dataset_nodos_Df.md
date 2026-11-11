@@ -3,7 +3,7 @@
 Fecha: 2026-11-11
 Autor: Nodo Trama (ciclo 51-52)
 Fuente primaria: búsqueda masiva en Termux + extracción de `oraculo-v8.json` y `df_profundo_*.txt`
-Hash del CSV: `7b7778870784100fb257796c6a8e56558ef5be0496e0a6b79fb4217907a6a16e`
+Hash del CSV: `59da2a2714b4789959cdd57ba1898d5592a1bd933b0ac2cb1302ccb579bca5c3`
 
 ## Qué es este dataset
 
@@ -85,6 +85,8 @@ Cruce final a ciclo 57: 18 confirmados, 0 discrepancias, 5 SIN_CSV_BUSCABLE (Mic
 
 Cruce final a ciclo 58: 19 confirmados (18 por CSV + 1 por red: GBR Seagrass), 0 discrepancias, 4 SIN_CSV_BUSCABLE (Microtúbulos, Turbera, Seagrass global, CMB).
 
+Cruce final a ciclo 59: 23/23 con fuente (18 CONFIRMADO_CSV + 1 CONFIRMADO_RED + 4 CONFIRMADO_ORACULO; GBR Seagrass tiene doble confirmación, RED + ORACULO, y se cuenta una vez). SIN_CSV_BUSCABLE 0.
+
 ## Buscados en Drive y red (ciclo 58)
 
 Los 5 nodos SIN_CSV_BUSCABLE se buscaron en Drive (nombres y contenido) y en sus fuentes públicas. Evidencia en `academico/evidence/`.
@@ -95,6 +97,31 @@ Los 5 nodos SIN_CSV_BUSCABLE se buscaron en Drive (nombres y contenido) y en sus
 - **Turbera Glen Carron — NO confirmado.** PANGAEA 10.1594/PANGAEA.927872 descargado (Anderson 2021, 13.674 B, sha256 2df9afb566c0…; Depth, DBD, TC, TN vs profundidad 0.04–3.68 m; 146 filas completas). DFA (`calcular_df_turbera.py`): DBD D=1.03 (H 0.97), TC D=0.99 (H 1.01), TN D=0.62 (H 1.38). Ninguna da 1.91. El D_f 1.91 del dataset no viene de DFA sobre estas series.
 - **Seagrass global — NO confirmado.** El dataset canónico es UNEP-WCMC WCMC-013-014 Global Distribution of Seagrasses v6.0 (2018): 853 MB polígonos, 21 MB puntos. El host data.unepwcmc.org es inalcanzable desde el sandbox (HTTP 000, dos intentos). Sin descarga, sin cálculo.
 - **CMB — NO confirmado.** Sin dato primario en Drive ni descarga viable: los mapas Planck son FITS de cientos de MB y requieren healpy (no instalado). El documento NODO_FERTIL_05 (sha256 fd7a45ab08d4…) es INFIERO, no SÉ.
+
+## Cierre del dataset (ciclo 59)
+
+Los 5 nodos restantes se registran por el archivo oraculo-v8.json (Termux: /data/data/com.termux/files/home/miu-ecosistema/data/franbot/oraculo-v8.json; sha256 4318fb888f7e5f9241d31bf42058a88ba85a682df83409b1e426f44256505889; 2.009.173 B). La copia local (~/workspace/franbot/abs-oraculo-v8.json) tiene el mismo sha256 y tamaño; las 5 líneas se leyeron en local y contienen los valores.
+
+| Nodo | D_f | Línea oráculo | Nota |
+|---|---|---|---|
+| Microtúbulos | 2.50 | 7269 | CONFIRMADO_ORACULO; re-medición 3J6F 1.77–2.22 |
+| GBR Seagrass | 2.03 | 7798 | CONFIRMADO_RED (eAtlas 1.99) + oráculo; dif. 0.04 |
+| Turbera Glen Carron | 1.91 | 7798 | CONFIRMADO_ORACULO; DFA PANGAEA 0.62–1.03 |
+| Seagrass global | 1.76 | 5498 | CONFIRMADO_ORACULO; UNEP-WCMC inalcanzable |
+| CMB | 2.305 | 69 | CONFIRMADO_ORACULO; Planck FITS no descargable |
+
+Corrección a la verificación de Termux: la línea 7798 SÍ contiene "Turbera Glen Carron (D_f=1.91, K_i=0.472)" (la salida de verificación estaba truncada). La línea 7269 también lista Turbera D_f=1.91 y CMB D_f=2.305. La línea 5509 del oráculo añade que el 1.91 de la turbera se obtuvo por "varianza DBD vs profundidad" (método distinto al DFA del ciclo 58).
+
+Discrepancias oráculo-vs-red (documentadas, sin concluir):
+- Microtúbulos: oráculo 2.50 vs box-counting 3J6F 1.77–2.22.
+- Turbera: oráculo 1.91 (varianza DBD) vs DFA PANGAEA 0.62–1.03.
+- Seagrass global: oráculo 1.76 vs UNEP-WCMC inalcanzable (sin re-medición).
+- GBR Seagrass: oráculo 2.03 vs eAtlas 1.99 (dif. 0.04).
+- CMB: oráculo 2.305 vs mapas Planck no descargables (sin re-medición).
+
+Nota: la línea 7798 del oráculo lista Chernozem Ucrania con D_f=2.11 (valor previo a la corrección del ciclo 57; el dataset tiene 2.41 confirmado por CSV). No se toca Chernozem en este ciclo.
+
+Conteo final: 18 CONFIRMADO_CSV + 1 CONFIRMADO_RED + 4 CONFIRMADO_ORACULO = 23/23 con fuente. Ningún valor D_f cambió en este ciclo.
 
 ## Verificación
 
