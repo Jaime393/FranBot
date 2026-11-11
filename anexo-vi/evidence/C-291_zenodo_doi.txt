@@ -1,0 +1,18 @@
+DOI 20547558 documentado (ciclo 44). API publica, HTTP 200.
+DOI 10.5281/zenodo.20547558. Titulo: Monismo Informacional
+Unificado (MIU) – MIU V12.0 - Modelo Integrado Unificado con
+Capa de Conciencia. Autor: Vicente Gabancho, Juan Diego
+(Arquitecto del MIU). Fecha 2026-06-04. Tipo publication.
+Licencia cc-by-4.0. Keywords: Information Field Theory,
+Monismo Informacional Unificado, Geometria de la informacion,
+Conciencia cuantica, Unificacion de fuerzas, Energia oscura
+dinamica, Constante de Perry, Otiogenesis.
+Archivos (no descargados): MIU_V12.0_FINAL.zip 25.738.312 B,
+MIU-v12.0[ES].pdf 445.573 B, MIU_v12.0[EN].pdf 440.503 B.
+Relaciones: version 2 del concepto 10.5281/zenodo.20279679.
+Query creators.name: 10 DOIs del autor (19320946, 20547677,
+19723044, 21351630, 20436104, 20191874, 19373289, 22650419,
+20200753, 19705899); 20547558 verificado aparte (11 registros
+conocidos). Query title:MIU: 45 resultados, todos zoologia
+(apellido Miu), 0 del proyecto.
+Detalle en zenodo_doi_20547558.md.
