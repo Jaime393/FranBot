@@ -1,17 +1,17 @@
-# Académico — MIU, ciclo 49
+# Académico — MIU, ciclos 49–50
 
 Fecha: 2026-11-11. Solo SÉ con hash real y fuente verificable.
 
 ## Qué hay en esta carpeta
 
-- `TABLA_FISICA.md` — 84 filas. Física, pilares, nodos D_f y axiomas. Solo SÉ con hash real.
+- `TABLA_FISICA.md` — 85 filas. Física, pilares, nodos D_f y axiomas. Solo SÉ con hash real.
 - `TABLA_INMUNE_Y_PROTOCOLOS.md` — 34 filas. Inmune, protocolos y partituras. Solo SÉ con hash real.
 - `TABLA_DOIS_Y_ONTOLOGIA.md` — 15 filas. DOIs y ontología. Solo SÉ con hash real.
 - `PAPER_DOIS_MIU.md` — Corpus DOI del proyecto MIU: 18 registros verificados a 2026-11-11.
 - `dataset_nodos_Df.csv` — 0 filas de datos (solo cabecera). Ningún nodo cumple el criterio de inclusión.
 - `dataset_nodos_Df.md` — Qué mide D_f, cómo se calcula y por qué el dataset tiene 0 filas.
 
-Total tablas: 133 filas.
+Total tablas: 134 filas.
 
 ## Cómo verificar cada archivo
 
@@ -21,18 +21,18 @@ sha256sum TABLA_FISICA.md TABLA_INMUNE_Y_PROTOCOLOS.md TABLA_DOIS_Y_ONTOLOGIA.md
 
 Hashes a 2026-11-11:
 
-- TABLA_FISICA.md: sha256:5895fb1d050b7151cf64665ae3a21f9593241d12db01b055cef06fc203e96e14
+- TABLA_FISICA.md: sha256:846efef877fa399d540c9ffffebe69a64ef04adb89cba1fc11609b59fd12503d
 - TABLA_INMUNE_Y_PROTOCOLOS.md: sha256:1c5f6c4acc0d3dff028e3fbe7b402740d3a738827641bdb0252774572e8cda57
 - TABLA_DOIS_Y_ONTOLOGIA.md: sha256:cb892dd96517e035619dd216b253ad39e05c630673c0ee926e4762e73e7af02f
-- PAPER_DOIS_MIU.md: sha256:91825cdb98685628baae9d9c5fd11b4b38e4bc53ec485e480e086b1728a81709
+- PAPER_DOIS_MIU.md: sha256:ca3fbd8735a309d100ff06fe58f407c2e4aea0f01b8f1f84c432133e92b26e50
 - dataset_nodos_Df.csv: sha256:265eaa5134dddc0db7a83dd057eb46a260f1077d71b46854421c97720630f568
-- dataset_nodos_Df.md: sha256:1671cc8cb5bc674ff032ec66b0953a33705be7cdcc10a2d05f129bd199df9e1f
+- dataset_nodos_Df.md: sha256:870530e95ff8a78ed328077906da6a79da08fdc1665252098c3c0ec06845db0b
 
 El hash de este README se verifica con `sha256sum README.md` y está en el claim C-372.
 
 ## Qué NO hay
 
-Nada que no tenga hash y fuente. Ninguna fila con conjeturas. Ningún nodo D_f sin fuente DOI. Ningún DOI sin metadatos verificados. Ninguna recomendación ni trabajo futuro.
+Nada que no tenga hash y fuente. Ninguna fila con conjeturas. Ningún nodo D_f sin fuente verificable y hash real. Ningún DOI sin metadatos verificados. Ninguna recomendación ni trabajo futuro.
 
 Todo lo que está aquí tiene hash y fuente. Lo que no cumple eso no está aquí.
 
