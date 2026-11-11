@@ -386,6 +386,11 @@ en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
 
+## Ciclo 48: consolidación SÉ, sin mapeo ni auditoría
+- MIU_ESTADO_CONSOLIDADO_2026-11-11.md (11.277 B, sha256 b4fa494e…): 326 SÉ con hash real — corrección: 346 es el hash_real total, no el conteo SÉ. 10 temas, 134 claims distintos citados, 192 SÉ fuera por ser digestión/administración. 6 apariciones CONJETURO, todas justificadas (G01/G02/G03/G09); 0 "no sé" sin justificar.
+- Correcciones honestas: geometría sin claim (Fisher en semilla, INFIERO; D_eff G01); Ray & Crutchfield sin DOI verificado; "22 nodos" es anotación circular en A10 (HUESO #31, requiere PVE-01).
+- Siembra: Jaime393/MIU docs/MIU_ESTADO_CONSOLIDADO.md, commit bab47d8, blob verificado (sin 403: el conector sí escribe en MIU). anexo-vi/ por subidor. Zenodo: pendiente autorización. Claims 365 (hash_real 351).
+
 ## Ciclo 47: filas 31–200, bots verificados (5ª vez), series de papers
 - Filas 31–200 de las 4 saturadas: 418 filas con datos (10: 6, 14: 72, 18: 170, 19: 170). Global: 18 emails distintos, 8 matches de bot (6 handles), 54 filas bot+email. Estructura 11/11 sigue PARCIAL. Pestañas 18/19 saturaron también 31–200 (más datos bajo fila 200).
 - getMe 5ª vez: 4 vivos, 2 muertos, sin cambios. Los 4 vivos coinciden con handles del Sheet. Nuevo handle imperio_franbot sin token → no verificable.
