@@ -1,0 +1,10 @@
+C30 (ciclo 39) — GRACE TN-14 V3, columna c30_value, 281 filas.
+No vacios: 162. Distintos: solo 6 valores — 9,57E+08 (121x),
+9,57E+07 (30x), 9,58E+08 (5x), 9,57E+06 (3x), 9,58E+07 (2x),
+9,58E+06 (1x). Columna cuantizada (saltos x10), no serie fisica.
+Autocorrelacion lag 1 r=-0,137; lag 3 r=-0,099; resto ~0.
+DFT sin pico agudo (top P=4; 37-39 por fuga de baja frecuencia).
+Veredicto: C30_SIN_PERIODO. No define c. C20 y C30 no comparten
+periodo (ninguno lo tiene). Correccion al ciclo 34: la columna
+no esta "vacia en la mayoria de filas" (162/281 no vacias), pero
+sus valores son artefactos.
