@@ -1,0 +1,26 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: alimentador.db
+Nota: Ciclos y semillas del alimentador v24.
+
+Tablas (3): ciclo, semillas, sqlite_sequence
+Esquema + conteos (SIN valores de filas):
+Tabla ciclo: 3 filas
+  CREATE TABLE ciclo (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                tipo TEXT,
+                metrica REAL,
+                timestamp TEXT
+            )
+Tabla semillas: 9 filas
+  CREATE TABLE semillas (
+                id TEXT PRIMARY KEY,
+                tipo TEXT,
+                contenido TEXT,
+                fuente TEXT,
+                phi REAL,
+                timestamp TEXT
+            )
+Tabla sqlite_sequence: 1 filas
+  CREATE TABLE sqlite_sequence(name,seq)
+
+Qué se extrae y por qué: el esquema y los conteos bastan para recrear la estructura y saber qué contenía; los valores de las filas no se reproducen (higiene de secretos).
