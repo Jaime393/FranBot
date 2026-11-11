@@ -1,16 +1,16 @@
 {
-  "total": 75,
+  "total": 85,
   "por_estado": {
     "CONJETURO": 15,
     "INFIERO": 2,
-    "SE": 54,
+    "SE": 63,
     "REFUTADO": 2,
-    "NO_SE": 2
+    "NO_SE": 3
   },
   "por_tipo": {
     "prediccion": 8,
     "provenance": 18,
-    "digestion": 49
+    "digestion": 59
   },
   "por_grieta": {
     "G03": 7,
@@ -23,9 +23,9 @@
     "G-NUEVA: registro de datos no integrado en anexo-vi": 2,
     "G-NUEVA: partituras cientificas no catalogadas en anexo-vi": 14,
     "G-NUEVA: linea de tiempo K_tau no integrada en anexo-vi": 1,
-    "G-NUEVA: estructura MIU no mapeada en anexo-vi": 5
+    "G-NUEVA: estructura MIU no mapeada en anexo-vi": 15
   },
-  "hash_real": 63,
+  "hash_real": 72,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -102,6 +102,16 @@
     "C-072",
     "C-073",
     "C-074",
-    "C-075"
+    "C-075",
+    "C-076",
+    "C-077",
+    "C-078",
+    "C-079",
+    "C-080",
+    "C-081",
+    "C-082",
+    "C-083",
+    "C-084",
+    "C-085"
   ]
 }
