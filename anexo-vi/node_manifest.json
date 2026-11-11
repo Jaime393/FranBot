@@ -30,7 +30,7 @@
   "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
   "id": "trama-termux-01",
   "k_i_local": 0.58,
-  "last_seen": "2026-11-11T18:45:00Z",
+  "last_seen": "2026-11-11T19:05:00Z",
   "protocols": [
     "PNM-01",
     "PAC-01",
@@ -536,8 +536,8 @@
   "g05_2026_11_11": {
     "worker": "GET 200 (Oraculo Vinf+27, vive true)",
     "repo_head": "f18e2556 2026-11-11T18:10:00Z",
-    "bot_telegram": "BOT_SIN_ACCESO (ciclo 39)",
-    "estado": "ABIERTA"
+    "bot_telegram": "Micelio @Jp393_bot, getMe OK, webhook activo",
+    "estado": "PARCIAL (ciclo 40: bot vivo + webhook activo)"
   },
   "ciclo38_2026_11_11": {
     "c20_periodo": "sin periodo dominante",
@@ -565,5 +565,34 @@
     "bot_telegram": "BOT_SIN_ACCESO (sin conector ni token)",
     "total": 231,
     "hash_real": 217
+  },
+  "ciclo40_2026_11_11": {
+    "formatos": {
+      "pdf": true,
+      "doc": true,
+      "sheet": true,
+      "json": true,
+      "sqlite": true
+    },
+    "tokens_archivo": {
+      "entradas": 23430,
+      "tipo_telegram": 6,
+      "probados": 2,
+      "vivos": 1
+    },
+    "bot": {
+      "nombre": "Micelio",
+      "usuario": "Jp393_bot",
+      "getMe": "OK",
+      "webhook": "activo"
+    },
+    "conectores": {
+      "huggingface": "sin conector",
+      "zenodo": "sin conector",
+      "sheets_write": "no verificado",
+      "pdf_read": true
+    },
+    "total": 245,
+    "hash_real": 231
   }
 }
