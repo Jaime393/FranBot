@@ -33,3 +33,19 @@ Estos tokens se usan para lectura y mapeo, NO para escritura
 ni corrección, hasta que el Jardinero autorice. La prueba
 extremo a extremo de G05 (enviar un mensaje al bot) es
 escritura y requiere su autorización.
+
+## Estado ciclo 42 — Zenodo buscado fuera del archivo
+
+- Grep local (hidden_files/ + evidence/): 20 archivos mencionan
+  la palabra "zenodo" (listados, logs, código genoma, papers
+  del Vault, evidencia propia). Ninguno contiene un token
+  (0 líneas con "zenodo" + run de 40+ chars).
+- token_metrics_fresh.db: 0 menciones de zenodo (binario).
+- Vault PVE-01 (pve01_vault.md): 0 menciones de zenodo.
+- Los 6 archivos de credenciales de nutrientes no se abrieron
+  (regla ciclo 31/33); sus nombres no mencionan Zenodo.
+- Orquestador (5 pestañas muestreadas, 3 filas cada una):
+  0 menciones de zenodo.
+- Veredicto: **TOKEN_ZENODO_NO_ENCONTRADO**. No se inventa
+  un token ni se pide uno. La grieta sigue abierta por falta
+  de token.
