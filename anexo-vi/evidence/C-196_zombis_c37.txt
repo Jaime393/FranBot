@@ -1,0 +1,21 @@
+Evidencia ciclo 37 — Zombis: frases y autorización (C-196 a C-199)
+Fecha: 2026-11-11.
+
+C1 — Frases literales en nutrientes_zombis_decision.md
+(líneas 107 y 111, verificadas ciclos 35 y 37):
+- Mover los 25: "Autorizo mover los 25 zombis a
+  MIU_ABSORBIDO/nutrientes/historicos/"
+- Borrar los 12: "Autorizo borrar los 12 zombis de
+  MIU_ABSORBIDO/nutrientes/ según nutrientes_zombis_decision.md"
+
+C2 — ¿Autorizó el Jardinero? NO.
+Búsqueda en historial del chat y memoria ("Autorizo mover los 25
+zombis", "Autorizo borrar los 12 zombis", "zombis autorización
+Jardinero"): las frases aparecen solo en el documento y en los
+reportes de los ciclos 34–36. Ningún mensaje del Jardinero las
+contiene. Node_manifest registra que las frases existen
+(frase_mover: true, frase_borrar: true), no una autorización.
+
+C3 — Documento actualizado con sección "Estado ciclo 37: pendiente
+de autorización" (frases, opción por defecto, autorización: NO).
+Opción por defecto: no tocar nada. Nada movido ni borrado.
