@@ -1,0 +1,38 @@
+Evidencia ciclo 48 — consolidación SÉ (C-361 a C-365)
+Fecha: 2026-11-11
+Documento: MIU_ESTADO_CONSOLIDADO_2026-11-11.md (11277 B)
+sha256 documento: sha256:b4fa494e8d6cabb92d3b67c0dc657bb2c1134120cf83b698ce7f7756e0236220
+blob sha documento: 1a135535c9e324d92c774f34652313e93fba8e00
+
+Filtro aplicado a claims.jsonl (360 claims):
+- estado == SE y hash empieza por "sha256:" sin PENDIENTE ni NO_DISPONIBLE
+- Resultado: 326 SÉ con hash real
+- hash_real total: 346 (326 SÉ + 16 CONJETURO + 4 NO_SE)
+- Corrección a la orden del ciclo: 346 es el hash_real total, NO el conteo SÉ
+
+Claims SÉ con hash real por tema (10 temas, 134 distintos citados):
+1 ontología: 2 (C-051, C-057; axioma rho(x)>0 sin claim, nivel semilla)
+2 geometría: 0 (sin claim; Fisher en semilla INFIERO; D_eff G01)
+3 física: 57 (GRACE C-201-C-208, C-229; PVE-01 C-136-C-137, C-141-C-147, C-153, C-156-C-166, C-170-C-194, C-200, C-274)
+4 pilares: 12 (C-034-C-037, C-050-C-052, C-055-C-059; Ray & Crutchfield sin claim, sin DOI)
+5 protocolos: 11 (C-027-C-033, C-046-C-048, C-195)
+6 partituras: 7 (C-039-C-042, C-062-C-064)
+7 nodos D_f: 7 (C-044, C-073, C-082, C-106-C-108, C-165; "22 nodos" = anotación A10 circular, HUESO #31)
+8 inmune: 16 (C-302-C-305, C-308, C-317-C-319, C-321, C-326-C-332)
+9 DOIs: 13 (C-276, C-281, C-291-C-296, C-306, C-309, C-356, C-358, C-359)
+10 axiomas: 10 (C-086-C-090, C-095, C-109, C-110, C-112, C-113)
+Exclusión citada: C-074 (Tabla 7pred), C-138 (G09)
+Fuera del documento: 192 SÉ (proveniencia, digestión, administración: tokens, bots, orquestador, snapshots, issues, backups, zombis)
+
+Verificación A3 (grep en el documento):
+- CONJETURO: 6 apariciones, todas justificadas (conteo línea 11; G01/G02 §2; C-039 §6.1; G09 §7; no-DOI §10; G03 exclusión)
+- NO_SE: 1 aparición (conteo línea 11) + "NO SÉ" 1 vez (§2, D_eff, G01, justificada)
+- "no sé": 1 aparición (línea 15, frase de exclusión, justificada)
+- "pendiente": 3 reales (C-001-C-008, exclusión, G03) + 2 substrings de "independiente"
+- "no sé" sin justificar: 0
+- "carencia": 5 apariciones, todas de alcance/exclusión
+
+Siembra:
+- Jaime393/MIU docs/MIU_ESTADO_CONSOLIDADO.md: commit bab47d857e03a01396f59e30cdbaffbc39dff1ba, blob 1a135535c9e324d92c774f34652313e93fba8e00, verificado local==remoto, 2026-11-11T21:09:15Z. Sin 403: el conector sí escribe en MIU.
+- anexo-vi/ (Jaime393/FranBot): por subidor ciclo 48.
+- Zenodo: pendiente autorización del Jardinero (no se sube).
