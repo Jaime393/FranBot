@@ -110,3 +110,7 @@ Sondeo exhaustivo: 5/5 formatos leen; tokens_20260830 abierto (23.430 entradas, 
 ## Ciclo 41 (2026-11-11)
 
 Tokens por servicio: Zenodo 0 en el archivo (corrección), HF 4 formato real; orquestador MIU_ORCHESTRATOR_V152_MAX_EXPANDED (19 pestañas, solo lectura); G05 re-verificada sin escribir, PARCIAL. Claims 260 (hash_real 246).
+
+## Ciclo 42 (2026-11-11)
+
+Zenodo: TOKEN_ZENODO_NO_ENCONTRADO (20 archivos con la palabra, 0 con token); orquestador 19 pestañas, 5 leídas, solo lectura; G05 re-verificada (3ª vez) sin escribir, PARCIAL. Claims 275 (hash_real 261).
