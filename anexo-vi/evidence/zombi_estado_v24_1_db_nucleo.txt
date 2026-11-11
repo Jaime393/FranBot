@@ -1,0 +1,31 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: estado_v24_1.db
+Nota: Acciones, carencias, estados, recursos y tabla tokens (esquema).
+
+Tablas (6): acciones, carencias, estados, recursos, sqlite_sequence, tokens
+Esquema + conteos (SIN valores de filas):
+Tabla acciones: 0 filas
+  CREATE TABLE acciones (
+                id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT, tipo TEXT,
+                destino TEXT, resultado TEXT, exito INTEGER, latencia REAL)
+Tabla carencias: 0 filas
+  CREATE TABLE carencias (
+                id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT,
+                carencia TEXT, severidad TEXT, resuelta INTEGER, resolucion TEXT)
+Tabla estados: 2 filas
+  CREATE TABLE estados (
+                id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT, version TEXT,
+                phi REAL, modulo TEXT, status TEXT, data TEXT, sha256 TEXT)
+Tabla recursos: 0 filas
+  CREATE TABLE recursos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT,
+                cpu_percent REAL, memoria_percent REAL, disco_percent REAL,
+                red_bytes_sent REAL, red_bytes_recv REAL, procesos INTEGER)
+Tabla sqlite_sequence: 1 filas
+  CREATE TABLE sqlite_sequence(name,seq)
+Tabla tokens: 0 filas
+  CREATE TABLE tokens (
+                id INTEGER PRIMARY KEY AUTOINCREMENT, servicio TEXT, token TEXT,
+                valido INTEGER, descubierto_en TEXT, ultimo_uso TEXT)
+
+Qué se extrae y por qué: el esquema y los conteos bastan para recrear la estructura y saber qué contenía; los valores de las filas no se reproducen (higiene de secretos).
