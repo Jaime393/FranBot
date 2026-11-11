@@ -1,9 +1,10 @@
 # Tabla académica — Física, pilares, nodos D_f y axiomas
 
-Fecha: 2026-11-11. Filas: 84. Fuente: claims.jsonl (solo SÉ con hash real).
+Fecha: 2026-11-11. Filas: 85. Fuente: claims.jsonl (solo SÉ con hash real).
 
 | ID | Claim | Fuente | Hash (primeros 12) | Grieta |
 |---|---|---|---|---|
+| C-034 | PILARES_FUNDAMENTALES.md define 6 pilares auditados 2026-07-08 (Relay.app) con estados SOLIDO/CIRCULAR/NO SE/CONJETURO y DOIs reales | drive:MIU_ABSORBIDO/MIU/PILARES_FUNDAMENTALES.md | dde9334e96fa | G-NUEVA: pilares auditados no integrados en anexo-vi |
 | C-035 | PILARES_VALIDADOS.md define 4 pilares (1, 2, 3, 6) SOLIDO/VERIFICADO con evidencia independiente (Mandelbrot 1967 DOI 10.1126/science.156.3775.636; Berut 2012 Nature) | drive:MIU_ABSORBIDO/MIU/PILARES_VALIDADOS.md | d2390e4804b5 | G-NUEVA: pilares auditados no integrados en anexo-vi |
 | C-036 | PILARES_CONJETURA.md define 2 pilares sin evidencia independiente (Pilar 4 CIRCULAR, Pilar 5 MIXTO), auditados 2026-07-08 | drive:MIU_ABSORBIDO/MIU/PILARES_CONJETURA.md | 7fd58c829875 | G-NUEVA: pilares auditados no integrados en anexo-vi |
 | C-037 | La auditoria de Drive (2026-07-08) marca "xi = 8.57 medido en IBM a 23 sigma" como NO SE / NO VERIFICABLE (sin publicacion que lo respalde; "riesgo de fabricacion o confusion de otra sesion") | drive:MIU_ABSORBIDO/MIU/PILARES_CONJETURA.md | 7fd58c829875 | G03 |
