@@ -1,0 +1,15 @@
+Tokens por servicio (ciclo 41). Sin valores reproducidos.
+Fuente: tokens_20260830_4.8M.json.zlib.gz (23.430 entradas).
+Zenodo: 0 menciones en todo el archivo (tipo, preview, archivo,
+token y JSON completo como texto). SIN_TOKEN_ZENODO. Si existe un
+token de Zenodo, esta en otro archivo.
+HuggingFace: 4 entradas (2 tipo huggingface + 2 generic con hf_
+en preview). Tokens de 37 chars, empiezan hf_, sin placeholder.
+TOKEN_HF_ENCONTRADO (formato real; viveza no probada).
+api_key_general + generic (23.355): preview con zenodo 0,
+con huggingface 0, con hf_ 2 (las 2 generic anteriores).
+Otros servicios por tipo: generic 23282, api_key_general 73,
+github_old 24, openai 13, groq 10, openrouter 6, telegram 6,
+github 4, anthropic 4, cloudflare 2, huggingface 2, groq_token 2,
+scaleway 1, google 1. Telegram: 6 entradas, 46 chars cada una.
+Detalle en tokens_servicios.md.
