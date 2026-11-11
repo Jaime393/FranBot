@@ -60,3 +60,19 @@ candidato literal (1/C20) da Ki negativo. **G09 sigue
 parcialmente cerrada.** La última oportunidad de definir `c`
 sin ajustarlo (ciclo 38) no dio definición: el resultado es que
 la ley K_i no se confirma por esta vía, y queda documentado así.
+
+## C30 (ciclo 39)
+
+Columna c30_value del mismo GRACE TN-14 V3 (281 filas): 162 valores
+no vacíos, pero solo 6 distintos — 9,57E+08 (121×), 9,57E+07 (30×),
+9,58E+08 (5×), 9,57E+06 (3×), 9,58E+07 (2×), 9,58E+06 (1×).
+La columna es un artefacto cuantizado (saltos ×10), no una serie
+temporal física. Autocorrelación ≈ 0 en todos los lags (lag 1
+r=−0,137; lag 3 r=−0,099). DFT sin pico agudo (top P=4, luego
+37–39 por fuga de baja frecuencia, igual que C20).
+
+Veredicto: **C30_SIN_PERIODO**. C30 no define un `c` en banda
+(ni fuera de ella: no es una serie usable). C20 y C30 no
+comparten período — ninguno de los dos lo tiene. Corrección al
+ciclo 34: la columna no está "vacía en la mayoría de filas"
+(162/281 no vacías), pero sus valores son artefactos, no datos.
