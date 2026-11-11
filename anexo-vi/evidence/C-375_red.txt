@@ -1,0 +1,6 @@
+Evidencia ciclo 49 — red autónoma no tocada (C-375)
+Comandos usados en este ciclo:
+- Lecturas locales: claims.jsonl, snapshots_zenodo.md, evidence/, node_manifest.json (bash/python, sin red).
+- API pública de Zenodo (GET sin token, solo metadatos de 18 registros DOI, sin escritura).
+- Conector del chat de GitHub: subida de 7 archivos a Jaime393/FranBot/academico/ y de los archivos del módulo a anexo-vi/.
+- Ningún comando contra bots, Telegram, Sheets, orquestador, Drive o tokens.
