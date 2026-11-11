@@ -1,0 +1,12 @@
+NÚCLEO — zombi histórico único — ciclo 39
+Archivo: pliegues.db
+Nota: Pliegues topológicos.
+
+Tablas (1): pliegues
+Esquema + conteos (SIN valores de filas):
+Tabla pliegues: 1 filas
+  CREATE TABLE pliegues (
+            id TEXT PRIMARY KEY, nombre TEXT, codigo TEXT, impacto REAL, timestamp TEXT
+        )
+
+Qué se extrae y por qué: el esquema y los conteos bastan para recrear la estructura y saber qué contenía; los valores de las filas no se reproducen (higiene de secretos).
