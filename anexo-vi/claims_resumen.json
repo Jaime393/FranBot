@@ -1,15 +1,15 @@
 {
- "total": 415,
+ "total": 421,
  "por_estado": {
   "CONJETURO": 22,
   "INFIERO": 2,
-  "SE": 381,
+  "SE": 387,
   "REFUTADO": 2,
   "NO_SE": 8
  },
  "por_tipo": {
   "prediccion": 8,
-  "provenance": 68,
+  "provenance": 74,
   "digestion": 334,
   "consolidacion": 5
  },
@@ -18,7 +18,7 @@
   "G09": 69,
   "G01": 1,
   "G12": 4,
-  "G05": 97,
+  "G05": 103,
   "G-NUEVA: protocolos Drive no integrados en anexo-vi": 11,
   "G-NUEVA: pilares auditados no integrados en anexo-vi": 13,
   "G-NUEVA: registro de datos no integrado en anexo-vi": 2,
