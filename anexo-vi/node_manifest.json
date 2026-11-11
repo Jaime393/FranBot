@@ -1,964 +1,980 @@
 {
-  "capa_archivos": 18,
-  "capabilities": [
-    "scan_termux",
-    "scan_sd",
-    "scan_github",
-    "scan_sqlite",
-    "vision",
-    "polinizador"
+ "capa_archivos": 18,
+ "capabilities": [
+  "scan_termux",
+  "scan_sd",
+  "scan_github",
+  "scan_sqlite",
+  "vision",
+  "polinizador"
+ ],
+ "docs": {
+  "README": "memoria/anexo-vi/README.md",
+  "ESTADO": "memoria/anexo-vi/ESTADO.md"
+ },
+ "endpoints": {
+  "local": "http://127.0.0.1:8080",
+  "relay_hub": "https://run.relay.app/workflows/cmrfab6ry04vw0qm1ffks29py",
+  "tunnel": null
+ },
+ "estado": "OPERATIVO_PARCIAL",
+ "grietas_conocidas": [
+  "G01",
+  "G03",
+  "G05",
+  "G09",
+  "G10",
+  "G11",
+  "G12"
+ ],
+ "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
+ "id": "trama-termux-01",
+ "k_i_local": 0.58,
+ "last_seen": "2026-11-11T22:21:42Z",
+ "protocols": [
+  "PNM-01",
+  "PAC-01",
+  "PGL-01",
+  "PPF"
+ ],
+ "repo_hash": "sha256:537d643001af9a47fb097aa7023361f43d7263cf9f55fe18e33be787f67c4dcd",
+ "repo_total": 102,
+ "resumen_claims": "sha256:2486ab109fe5b62fea0ef67941b66901024a8588317179f6096dcb7c9d86844b",
+ "runtime": {
+  "api_path": "~/workspace/miu_api.py",
+  "ecosystem_map": null,
+  "host": "sandbox_vm",
+  "nota": "En Termux, api_path será ~/miu-ecosistema/miu_api.py y scanner_path ~/miu-ecosistema/miu_scanner.py. Aquí no existen.",
+  "scanner_path": null
+ },
+ "secret_refs": [
+  "GITHUB_TOKEN_ENV",
+  "TELEGRAM_TOKEN_ENV",
+  "BOT_TABLET_TOKEN_ENV"
+ ],
+ "version": "153",
+ "last_audit": "2026-11-10T04:05:51Z",
+ "audit_status": "OK",
+ "audit_resumen": "RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1",
+ "ciclo_cierre": 10,
+ "verify_all_version": 3,
+ "verify_all_fallos_actuales": 8,
+ "verify_all_fallos_esperados": 8,
+ "verify_all_nota": "Los 8 fallos son C-001 a C-008 (prediccion, hash PENDIENTE por diseño, G03 abierta). REFUTADO y NO_SE no cuentan. C-024 ya no falla: tiene hash real de la evidencia de ausencia.",
+ "last_probe": "2026-11-10T05:27:44Z",
+ "g05_probe": {
+  "repo_accesible": true,
+  "repo_total_archivos": 169,
+  "repo_ultimo_commit": "2026-11-07 23:42:58 +0000 M4c: mark 16 absorption-refuted pairs as refutado (semantic criterion; 3 honest + 1140 excluded)",
+  "worker_url": "https://fran-oraculo-miu.jaimepvicente.workers.dev",
+  "worker_estado": "WORKER_RESPONDE",
+  "refs_integracion": [
+   "TG_BOT_TOKEN",
+   "DRIVE_FOLDER",
+   "GITHUB_TOKEN",
+   "TELEGRAM_API",
+   "ORACLE"
   ],
-  "docs": {
-    "README": "memoria/anexo-vi/README.md",
-    "ESTADO": "memoria/anexo-vi/ESTADO.md"
-  },
-  "endpoints": {
-    "local": "http://127.0.0.1:8080",
-    "relay_hub": "https://run.relay.app/workflows/cmrfab6ry04vw0qm1ffks29py",
-    "tunnel": null
-  },
-  "estado": "OPERATIVO_PARCIAL",
-  "grietas_conocidas": [
-    "G01",
-    "G03",
-    "G05",
-    "G09",
-    "G10",
-    "G11",
-    "G12"
+  "fugas_literales": [
+   "DRIVE_FOLDER",
+   "drive"
   ],
-  "hash": "sha256:PENDIENTE_AL_PRIMER_SCAN",
-  "id": "trama-termux-01",
-  "k_i_local": 0.58,
-  "last_seen": "2026-11-11T22:21:42Z",
-  "protocols": [
-    "PNM-01",
-    "PAC-01",
-    "PGL-01",
-    "PPF"
+  "fase": "rotacion_codigo_limpia",
+  "estructura_publica": {
+   "gitignore": true,
+   "wrangler_toml": true,
+   "dev_vars_example": true,
+   "readme_deploy": true,
+   "pending_rotation": true,
+   "test_worker_sh": true
+  },
+  "rotacion_pendiente": [
+   "DRIVE_FOLDER en micelio.yml",
+   "drive en worker.js"
   ],
-  "repo_hash": "sha256:537d643001af9a47fb097aa7023361f43d7263cf9f55fe18e33be787f67c4dcd",
-  "repo_total": 102,
-  "resumen_claims": "sha256:2486ab109fe5b62fea0ef67941b66901024a8588317179f6096dcb7c9d86844b",
-  "runtime": {
-    "api_path": "~/workspace/miu_api.py",
-    "ecosystem_map": null,
-    "host": "sandbox_vm",
-    "nota": "En Termux, api_path será ~/miu-ecosistema/miu_api.py y scanner_path ~/miu-ecosistema/miu_scanner.py. Aquí no existen.",
-    "scanner_path": null
-  },
-  "secret_refs": [
-    "GITHUB_TOKEN_ENV",
-    "TELEGRAM_TOKEN_ENV",
-    "BOT_TABLET_TOKEN_ENV"
+  "worker_test_resultado": "OK",
+  "commit_local": "f093677",
+  "push_estado": "PATCH_GENERADO",
+  "patch_path": "/home/hatch/workspace/franbot_patches/0001-franbot-rotar-DRIVE_FOLDER-a-secrets.DRIVE_FOLDER-y-.patch",
+  "secretos_pendientes_usuario": [
+   "DRIVE_FOLDER en GitHub Actions",
+   "DRIVE_FOLDER_ID en Cloudflare"
   ],
-  "version": "153",
-  "last_audit": "2026-11-10T04:05:51Z",
-  "audit_status": "OK",
-  "audit_resumen": "RESUMEN: ok=10 discrepancia=0 no_encontrado=0 omitido=1",
-  "ciclo_cierre": 10,
-  "verify_all_version": 3,
-  "verify_all_fallos_actuales": 8,
-  "verify_all_fallos_esperados": 8,
-  "verify_all_nota": "Los 8 fallos son C-001 a C-008 (prediccion, hash PENDIENTE por diseño, G03 abierta). REFUTADO y NO_SE no cuentan. C-024 ya no falla: tiene hash real de la evidencia de ausencia.",
-  "last_probe": "2026-11-10T05:27:44Z",
-  "g05_probe": {
-    "repo_accesible": true,
-    "repo_total_archivos": 169,
-    "repo_ultimo_commit": "2026-11-07 23:42:58 +0000 M4c: mark 16 absorption-refuted pairs as refutado (semantic criterion; 3 honest + 1140 excluded)",
-    "worker_url": "https://fran-oraculo-miu.jaimepvicente.workers.dev",
-    "worker_estado": "WORKER_RESPONDE",
-    "refs_integracion": [
-      "TG_BOT_TOKEN",
-      "DRIVE_FOLDER",
-      "GITHUB_TOKEN",
-      "TELEGRAM_API",
-      "ORACLE"
-    ],
-    "fugas_literales": [
-      "DRIVE_FOLDER",
-      "drive"
-    ],
-    "fase": "rotacion_codigo_limpia",
-    "estructura_publica": {
-      "gitignore": true,
-      "wrangler_toml": true,
-      "dev_vars_example": true,
-      "readme_deploy": true,
-      "pending_rotation": true,
-      "test_worker_sh": true
-    },
-    "rotacion_pendiente": [
-      "DRIVE_FOLDER en micelio.yml",
-      "drive en worker.js"
-    ],
-    "worker_test_resultado": "OK",
-    "commit_local": "f093677",
-    "push_estado": "PATCH_GENERADO",
-    "patch_path": "/home/hatch/workspace/franbot_patches/0001-franbot-rotar-DRIVE_FOLDER-a-secrets.DRIVE_FOLDER-y-.patch",
-    "secretos_pendientes_usuario": [
-      "DRIVE_FOLDER en GitHub Actions",
-      "DRIVE_FOLDER_ID en Cloudflare"
-    ],
-    "test_worker_exit": 0,
-    "configuracion_funcional_pendiente": [
-      "GitHub Secret DRIVE_FOLDER",
-      "Cloudflare Secret DRIVE_FOLDER_ID",
-      "ejecutar test-worker.sh",
-      "(opcional) activar Telegram cuando se decida"
-    ],
-    "patches_eliminados": true,
-    "framing_seguridad_retirado": true,
-    "nota": "Folder ID movido a secreto. Es higiene, no incidente. No rotar carpeta ni reescribir historial."
+  "test_worker_exit": 0,
+  "configuracion_funcional_pendiente": [
+   "GitHub Secret DRIVE_FOLDER",
+   "Cloudflare Secret DRIVE_FOLDER_ID",
+   "ejecutar test-worker.sh",
+   "(opcional) activar Telegram cuando se decida"
+  ],
+  "patches_eliminados": true,
+  "framing_seguridad_retirado": true,
+  "nota": "Folder ID movido a secreto. Es higiene, no incidente. No rotar carpeta ni reescribir historial."
+ },
+ "evidence_dir": "memoria/anexo-vi/evidence/",
+ "publicacion": {
+  "fecha": "2026-11-10T05:10:27Z",
+  "intento": "ciclo 20 con conector GitHub del chat (GitHub App)",
+  "franbot_push": "PARCIAL_7_DE_8",
+  "franbot_commits_remotos": {
+   "worker.js": "4b6599dd",
+   "PENDING_ROTATION.md": "e0719e68",
+   "SECRETS_SETUP.md": "d40b4fc4",
+   "wrangler.toml": "e6185b1f",
+   ".gitignore": "19329790",
+   ".dev.vars.example": "e0ecad3f",
+   "scripts/test-worker.sh": "fb32f9a9"
   },
-  "evidence_dir": "memoria/anexo-vi/evidence/",
-  "publicacion": {
-    "fecha": "2026-11-10T05:10:27Z",
-    "intento": "ciclo 20 con conector GitHub del chat (GitHub App)",
-    "franbot_push": "PARCIAL_7_DE_8",
-    "franbot_commits_remotos": {
-      "worker.js": "4b6599dd",
-      "PENDING_ROTATION.md": "e0719e68",
-      "SECRETS_SETUP.md": "d40b4fc4",
-      "wrangler.toml": "e6185b1f",
-      ".gitignore": "19329790",
-      ".dev.vars.example": "e0ecad3f",
-      "scripts/test-worker.sh": "fb32f9a9"
-    },
-    "franbot_no_publicado": {
-      ".github/workflows/micelio.yml": "403 sin permiso workflows"
-    },
-    "anexo_vi_publicado": true,
-    "anexo_vi_repo": "Jaime393/FranBot/anexo-vi",
-    "anexo_vi_url": "https://github.com/Jaime393/FranBot/tree/main/anexo-vi",
-    "anexo_vi_head": "c45632c1",
-    "conector_permisos": {
-      "contents_write": true,
-      "workflows_write": false,
-      "administration_write": false,
-      "git_trees": false
-    },
-    "nota": "Publicacion parcial por permisos de la GitHub App, no por tokens. micelio.yml pendiente de opcion 1 (ajustar App) u opcion 2 (subir a mano)."
+  "franbot_no_publicado": {
+   ".github/workflows/micelio.yml": "403 sin permiso workflows"
   },
-  "inventario_2026_11_11": {
-    "github_repos": 239,
-    "github_activos": 88,
-    "github_estancados": 151,
-    "github_abandonados_180d": 0,
-    "repos_sin_lectura": 1,
-    "drive_carpetas": 18,
-    "drive_activas": 0,
-    "drive_estancadas": 9,
-    "drive_abandonadas": 9,
-    "poda_propuesta_archivar": 24,
-    "poda_propuesta_fusionar": 14,
-    "poda_propuesta_borrar": 148,
-    "poda_propuesta_mantener": 53,
-    "conectores": {
-      "github": "read_write_parcial",
-      "google_drive": "read",
-      "google_docs": "read",
-      "google_sheets": "read"
-    },
-    "fecha": "2026-11-11T11:41:40Z"
+  "anexo_vi_publicado": true,
+  "anexo_vi_repo": "Jaime393/FranBot/anexo-vi",
+  "anexo_vi_url": "https://github.com/Jaime393/FranBot/tree/main/anexo-vi",
+  "anexo_vi_head": "c45632c1",
+  "conector_permisos": {
+   "contents_write": true,
+   "workflows_write": false,
+   "administration_write": false,
+   "git_trees": false
   },
-  "comparacion_drive_2026_11_11": {
-    "carpetas_revisadas": [
-      "MIU - Micelio y Deuda",
-      "MIU_ABSORBIDO",
-      "MIU_ABSORBIDO/MIU"
-    ],
-    "anexo_vi_piezas_totales": 18,
-    "piezas_reemplazar": 0,
-    "piezas_complementar": 2,
-    "piezas_duplicar": 0,
-    "piezas_ignorar": 16,
-    "veredicto": "necesario"
+  "nota": "Publicacion parcial por permisos de la GitHub App, no por tokens. micelio.yml pendiente de opcion 1 (ajustar App) u opcion 2 (subir a mano)."
+ },
+ "inventario_2026_11_11": {
+  "github_repos": 239,
+  "github_activos": 88,
+  "github_estancados": 151,
+  "github_abandonados_180d": 0,
+  "repos_sin_lectura": 1,
+  "drive_carpetas": 18,
+  "drive_activas": 0,
+  "drive_estancadas": 9,
+  "drive_abandonadas": 9,
+  "poda_propuesta_archivar": 24,
+  "poda_propuesta_fusionar": 14,
+  "poda_propuesta_borrar": 148,
+  "poda_propuesta_mantener": 53,
+  "conectores": {
+   "github": "read_write_parcial",
+   "google_drive": "read",
+   "google_docs": "read",
+   "google_sheets": "read"
   },
-  "digestion_2026_11_11": {
-    "archivos_leidos": 17,
-    "protocolos_encontrados": [
-      "PAE-01",
-      "PAF-01",
-      "PCP-01",
-      "PAI-01"
-    ],
-    "partituras_leidas": 5,
-    "pilares_leidos": 6,
-    "claims_nuevos": 19,
-    "claims_se": 19,
-    "claims_infiero": 0,
-    "claims_conjeturo": 0,
-    "claims_no_se": 0,
-    "grietas_nuevas": [
-      "G-NUEVA: protocolos Drive no integrados en anexo-vi",
-      "G-NUEVA: pilares auditados no integrados en anexo-vi",
-      "G-NUEVA: partituras cientificas no catalogadas en anexo-vi",
-      "G-NUEVA: registro de datos no integrado en anexo-vi",
-      "G-NUEVA: estructura MIU no mapeada en anexo-vi"
-    ],
-    "veredicto": "suelos_fertiles"
-  },
-  "integracion_2026_11_11": {
-    "protocolos_integrados": 3,
-    "pilares_integrados": 10,
-    "partituras_catalogadas": 10,
-    "claims_nuevos": 24,
-    "g_nueva_cerradas": 3,
-    "g_nueva_abiertas": 2,
-    "veredicto": "suelos_integrados_parcialmente"
-  },
-  "estructura_2026_11_11": {
-    "subcarpetas_mapeadas": 6,
-    "archivos_leidos": 13,
-    "inventario_presente": 5,
-    "inventario_ausente": 12,
-    "claims_nuevos": 6,
-    "g_nueva_cerradas": 5,
-    "veredicto": "estructura_mapeada"
-  },
-  "redaccion_2026_11_11": {
-    "archivo": "evidence/P45-30.redacted.txt",
-    "tokens_reemplazados": 2,
-    "original_intacto_en_drive": true,
-    "rotado": false,
-    "motivo": "publicacion publica sin exponer credenciales; original en Drive sigue operativo"
-  },
-  "digestion_ampliada_2026_11_11": {
-    "escuela_archivos": 785,
-    "escuela_poder_total": 764,
-    "escuela_poder_rango": "118-1713",
-    "diario_archivos": 498,
-    "logs_archivos": 118,
-    "auditorias_archivos": 4,
-    "auditorias_bytes": 79434177,
-    "df_benchmark_archivos": 1,
-    "tests_archivos": 2,
-    "claims_nuevos": 10,
-    "veredicto": "suelos_ampliados"
-  },
-  "meta_poda_2026_11_11": {
-    "archivar_seguro": 25,
-    "fusionar_seguro": 14,
-    "borrar_con_confirmacion": 147,
-    "verificacion_aleatoria": "5/5 coinciden (raiz 1 README.md, 1 commit Initial commit 2026-08-25)",
-    "decision": "pendiente del Jardinero",
-    "veredicto": "preparada_sin_ejecutar"
-  },
-  "sondeo_2026_11_11": {
-    "issue_crear": "OK (FranBot #1, label test)",
-    "issue_comentar": "OK",
-    "issue_cerrar": "OK",
-    "pr_sin_cambios": "rechazado por GitHub (Validation Failed, no 403)",
-    "search_code_anexo_vi": 617,
-    "search_code_pac_01": 1618,
-    "search_issues_k_i": "Jaime393/MIU#52",
-    "search_commits_anexo_vi": 4926
-  },
-  "axiomas_2026_11_11": {
-    "archivo": "axiomas_a0_a57.md",
-    "total": 58,
-    "rango": "A0-A57",
-    "fuente": "MIU_Obsidian_Vault/20 Axiomas_A0-A57_58_Completos.md",
-    "panteon_conteos": {
-      "pdf": 7,
-      "autonomo_v213": 16,
-      "base_local": "25/28",
-      "drive_96": 96,
-      "vault_112": 112
-    },
-    "g07": "cerrada_parcialmente",
-    "veredicto": "axiomas_documentados"
-  },
-  "miu_backup_2026_11_11": {
-    "archivos": 118,
-    "bytes_total": 31557729,
-    "span_horas": 140.8,
-    "muestras_hash_distintos": 6,
-    "veredicto": "tesoro_incremental",
-    "conservar": 118,
-    "borrar": 0
-  },
-  "poda_prueba_2026_11_11": {
-    "repo": "Jaime393/miu-auto-cipher19051997-x",
-    "create_branch": "OK (poda-prueba-ciclo-30)",
-    "delete_file_rama": "FALLO 404 POST /git/trees (x2)",
-    "create_pull_request": "no intentado (sin diff)",
-    "veredicto": "poda_por_PR_no_factible"
-  },
-  "miu_backup_contenido_2026_11_11": {
-    "archivo": "miu_backup_contenido.md",
-    "reciente_archivos": 208,
-    "reciente_bytes": 1522180,
-    "antigua_archivos": 108,
-    "antigua_bytes": 861268,
-    "nuevos": 110,
-    "borrados": 10,
-    "escuela_poderes": "3687 a 6243",
-    "diario_entradas": "58 a 462",
-    "veredicto": "tesoro_incremental",
-    "conservar": 118,
-    "borrar": 0
-  },
-  "nutrientes_2026_11_11": {
-    "archivo": "nutrientes_analisis.md",
-    "total": 96,
-    "json": 69,
-    "txt": 11,
-    "db": 10,
-    "catalogo_recursos": 23294,
-    "dispositivos": 253,
-    "con_credenciales": 6,
-    "veredicto": "referenciar_no_integrar"
-  },
-  "poda_backup_2026_11_11": {
-    "muestra": 10,
-    "seed": 31,
-    "descargados_ok": 10,
-    "bytes_total": 281,
-    "readme_identicos_normalizados": true,
-    "hash_normalizado": "daaee53a605b6b97bc4edb34a219bc8fd136f2e9bc317ba7a5bc2d615ff1daf6",
-    "veredicto": "poda_sin_perdida_de_contenido"
-  },
-  "miu_issue_52_2026_11_11": {
-    "archivo": "miu_issue_52.md",
-    "numero": 52,
-    "autor": "Jaime393",
-    "fecha": "2026-07-10",
-    "estado": "ABIERTO",
-    "g09": "confirma_no_cierra",
-    "similares": [
-      42,
-      43,
-      48,
-      44,
-      53,
-      56,
-      57,
-      45
-    ]
-  },
-  "g07_discrepancia_2026_11_11": {
-    "diferencias": [
-      "A1",
-      "A2",
-      "A3",
-      "A4",
-      "A38",
-      "A57"
-    ],
-    "canonico_claro": false,
-    "veredicto": "requiere_decision_jardinero"
+  "fecha": "2026-11-11T11:41:40Z"
+ },
+ "comparacion_drive_2026_11_11": {
+  "carpetas_revisadas": [
+   "MIU - Micelio y Deuda",
+   "MIU_ABSORBIDO",
+   "MIU_ABSORBIDO/MIU"
+  ],
+  "anexo_vi_piezas_totales": 18,
+  "piezas_reemplazar": 0,
+  "piezas_complementar": 2,
+  "piezas_duplicar": 0,
+  "piezas_ignorar": 16,
+  "veredicto": "necesario"
+ },
+ "digestion_2026_11_11": {
+  "archivos_leidos": 17,
+  "protocolos_encontrados": [
+   "PAE-01",
+   "PAF-01",
+   "PCP-01",
+   "PAI-01"
+  ],
+  "partituras_leidas": 5,
+  "pilares_leidos": 6,
+  "claims_nuevos": 19,
+  "claims_se": 19,
+  "claims_infiero": 0,
+  "claims_conjeturo": 0,
+  "claims_no_se": 0,
+  "grietas_nuevas": [
+   "G-NUEVA: protocolos Drive no integrados en anexo-vi",
+   "G-NUEVA: pilares auditados no integrados en anexo-vi",
+   "G-NUEVA: partituras cientificas no catalogadas en anexo-vi",
+   "G-NUEVA: registro de datos no integrado en anexo-vi",
+   "G-NUEVA: estructura MIU no mapeada en anexo-vi"
+  ],
+  "veredicto": "suelos_fertiles"
+ },
+ "integracion_2026_11_11": {
+  "protocolos_integrados": 3,
+  "pilares_integrados": 10,
+  "partituras_catalogadas": 10,
+  "claims_nuevos": 24,
+  "g_nueva_cerradas": 3,
+  "g_nueva_abiertas": 2,
+  "veredicto": "suelos_integrados_parcialmente"
+ },
+ "estructura_2026_11_11": {
+  "subcarpetas_mapeadas": 6,
+  "archivos_leidos": 13,
+  "inventario_presente": 5,
+  "inventario_ausente": 12,
+  "claims_nuevos": 6,
+  "g_nueva_cerradas": 5,
+  "veredicto": "estructura_mapeada"
+ },
+ "redaccion_2026_11_11": {
+  "archivo": "evidence/P45-30.redacted.txt",
+  "tokens_reemplazados": 2,
+  "original_intacto_en_drive": true,
+  "rotado": false,
+  "motivo": "publicacion publica sin exponer credenciales; original en Drive sigue operativo"
+ },
+ "digestion_ampliada_2026_11_11": {
+  "escuela_archivos": 785,
+  "escuela_poder_total": 764,
+  "escuela_poder_rango": "118-1713",
+  "diario_archivos": 498,
+  "logs_archivos": 118,
+  "auditorias_archivos": 4,
+  "auditorias_bytes": 79434177,
+  "df_benchmark_archivos": 1,
+  "tests_archivos": 2,
+  "claims_nuevos": 10,
+  "veredicto": "suelos_ampliados"
+ },
+ "meta_poda_2026_11_11": {
+  "archivar_seguro": 25,
+  "fusionar_seguro": 14,
+  "borrar_con_confirmacion": 147,
+  "verificacion_aleatoria": "5/5 coinciden (raiz 1 README.md, 1 commit Initial commit 2026-08-25)",
+  "decision": "pendiente del Jardinero",
+  "veredicto": "preparada_sin_ejecutar"
+ },
+ "sondeo_2026_11_11": {
+  "issue_crear": "OK (FranBot #1, label test)",
+  "issue_comentar": "OK",
+  "issue_cerrar": "OK",
+  "pr_sin_cambios": "rechazado por GitHub (Validation Failed, no 403)",
+  "search_code_anexo_vi": 617,
+  "search_code_pac_01": 1618,
+  "search_issues_k_i": "Jaime393/MIU#52",
+  "search_commits_anexo_vi": 4926
+ },
+ "axiomas_2026_11_11": {
+  "archivo": "axiomas_a0_a57.md",
+  "total": 58,
+  "rango": "A0-A57",
+  "fuente": "MIU_Obsidian_Vault/20 Axiomas_A0-A57_58_Completos.md",
+  "panteon_conteos": {
+   "pdf": 7,
+   "autonomo_v213": 16,
+   "base_local": "25/28",
+   "drive_96": 96,
+   "vault_112": 112
   },
   "g07": "cerrada_parcialmente",
-  "evolucion_2026_11_11": {
-    "archivo": "evolucion_miu_2026_09.md",
-    "cosecha_intermedia": "cosecha_1788814587.tar.gz (2026-09-07T20:56:26Z, 58.262 B, 61 archivos)",
-    "estado_interno": "2026-09-05 18:49Z",
-    "mesh": "133279 -> 161426 -> 161426",
-    "escuela_poderes": "3687 -> 5153 -> 6243",
-    "diario": "58 -> 434 -> 462",
-    "suelo_gen": "526 -> 6104 -> 6708",
-    "mesh_sinapsis": "916 -> 0 -> 0",
-    "recomendacion": "conservar 118"
+  "veredicto": "axiomas_documentados"
+ },
+ "miu_backup_2026_11_11": {
+  "archivos": 118,
+  "bytes_total": 31557729,
+  "span_horas": 140.8,
+  "muestras_hash_distintos": 6,
+  "veredicto": "tesoro_incremental",
+  "conservar": 118,
+  "borrar": 0
+ },
+ "poda_prueba_2026_11_11": {
+  "repo": "Jaime393/miu-auto-cipher19051997-x",
+  "create_branch": "OK (poda-prueba-ciclo-30)",
+  "delete_file_rama": "FALLO 404 POST /git/trees (x2)",
+  "create_pull_request": "no intentado (sin diff)",
+  "veredicto": "poda_por_PR_no_factible"
+ },
+ "miu_backup_contenido_2026_11_11": {
+  "archivo": "miu_backup_contenido.md",
+  "reciente_archivos": 208,
+  "reciente_bytes": 1522180,
+  "antigua_archivos": 108,
+  "antigua_bytes": 861268,
+  "nuevos": 110,
+  "borrados": 10,
+  "escuela_poderes": "3687 a 6243",
+  "diario_entradas": "58 a 462",
+  "veredicto": "tesoro_incremental",
+  "conservar": 118,
+  "borrar": 0
+ },
+ "nutrientes_2026_11_11": {
+  "archivo": "nutrientes_analisis.md",
+  "total": 96,
+  "json": 69,
+  "txt": 11,
+  "db": 10,
+  "catalogo_recursos": 23294,
+  "dispositivos": 253,
+  "con_credenciales": 6,
+  "veredicto": "referenciar_no_integrar"
+ },
+ "poda_backup_2026_11_11": {
+  "muestra": 10,
+  "seed": 31,
+  "descargados_ok": 10,
+  "bytes_total": 281,
+  "readme_identicos_normalizados": true,
+  "hash_normalizado": "daaee53a605b6b97bc4edb34a219bc8fd136f2e9bc317ba7a5bc2d615ff1daf6",
+  "veredicto": "poda_sin_perdida_de_contenido"
+ },
+ "miu_issue_52_2026_11_11": {
+  "archivo": "miu_issue_52.md",
+  "numero": 52,
+  "autor": "Jaime393",
+  "fecha": "2026-07-10",
+  "estado": "ABIERTO",
+  "g09": "confirma_no_cierra",
+  "similares": [
+   42,
+   43,
+   48,
+   44,
+   53,
+   56,
+   57,
+   45
+  ]
+ },
+ "g07_discrepancia_2026_11_11": {
+  "diferencias": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A38",
+   "A57"
+  ],
+  "canonico_claro": false,
+  "veredicto": "requiere_decision_jardinero"
+ },
+ "g07": "cerrada_parcialmente",
+ "evolucion_2026_11_11": {
+  "archivo": "evolucion_miu_2026_09.md",
+  "cosecha_intermedia": "cosecha_1788814587.tar.gz (2026-09-07T20:56:26Z, 58.262 B, 61 archivos)",
+  "estado_interno": "2026-09-05 18:49Z",
+  "mesh": "133279 -> 161426 -> 161426",
+  "escuela_poderes": "3687 -> 5153 -> 6243",
+  "diario": "58 -> 434 -> 462",
+  "suelo_gen": "526 -> 6104 -> 6708",
+  "mesh_sinapsis": "916 -> 0 -> 0",
+  "recomendacion": "conservar 118"
+ },
+ "miu_issues_2026_11_11": {
+  "archivo": "miu_issues_abiertos.md",
+  "total_abiertos": 25,
+  "rango": "#33-#57",
+  "fecha": "2026-07-10",
+  "autor": "Jaime393",
+  "leidos_cuerpo": [
+   52,
+   35,
+   48,
+   43,
+   56,
+   45
+  ],
+  "duplican_anexo_vi": 5,
+  "parcial": 1,
+  "nuevas": 19,
+  "cluster_k_i": 6
+ },
+ "g07_canonico_2026_11_11": {
+  "canonico_trabajo": "Consolidado raiz (6.841 B, unico completo)",
+  "canonico_indice": "INDICE (627 B, 8/58)",
+  "canonico_validacion": "ninguno",
+  "g07": "cerrada_parcialmente"
+ },
+ "frente_actual": "leer_antes_de_podar",
+ "nutrientes_emitidos": 0,
+ "buzon_depositado": false,
+ "config_global_tocada": false,
+ "reseteo_2026_11_11": {
+  "archivo": "reseteo_sep4_sep5.md",
+  "ventana": "2026-09-04 08:49:46Z a 2026-09-05 01:43:05Z (~17 h)",
+  "antes": "cosecha_1788572604.tar.gz (237.816 B, 126 archivos)",
+  "despues": "cosecha_1788598379.tar.gz (252.339 B, 152 archivos)",
+  "muertes": 0,
+  "nacimientos": 26,
+  "causa": "reinicio del nodo (CONJETURO)",
+  "recomendacion": "guardar las 2 cosechas como testigo historico",
+  "documentado_como": "reinicio, no poda (ciclo 34)"
+ },
+ "pve01_2026_11_11": {
+  "archivo": "pve_01_estado.md",
+  "codigo": "pve_01.py (11.939 B)",
+  "implementado": true,
+  "ejecutado": true,
+  "datos": "GRACE TN-14 V3, 281 filas 2002-04-01 a 2025-08-01",
+  "xi_medido": 0.71,
+  "forma_viable": "3 (T*tanh(P))",
+  "formas_1_2": "identicas (0.618*1.618=0.999924)",
+  "diferencia_vs_df": "+18.3% (D_f=2.0), -5.4% (D_f=2.5)",
+  "g09": "CERRADA PARCIALMENTE (sigue, ciclo 38)",
+  "c_vault": "C_NO_DEFINIDO_PARA_GRACE (busqueda exhaustiva ciclo 36)",
+  "barrido_c": {
+   "valores": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0
+   ],
+   "rango_estable": [
+    2.5,
+    4.0
+   ],
+   "umbral_continuo": 2.0025,
+   "c_elegido": 2.5,
+   "ki_c2.5": 0.5835
   },
-  "miu_issues_2026_11_11": {
-    "archivo": "miu_issues_abiertos.md",
-    "total_abiertos": 25,
-    "rango": "#33-#57",
-    "fecha": "2026-07-10",
-    "autor": "Jaime393",
-    "leidos_cuerpo": [
-      52,
-      35,
-      48,
-      43,
-      56,
-      45
-    ],
-    "duplican_anexo_vi": 5,
-    "parcial": 1,
-    "nuevas": 19,
-    "cluster_k_i": 6
+  "asintota": 0.618,
+  "rango_ki": [
+   0.2106,
+   0.618
+  ],
+  "c_definicion": "SIN DEFINICION (ciclo 38: C20 sin periodo; 1/C20 Ki=-0.618)",
+  "nombres": {
+   "pve01_vault": 60,
+   "proxmox_en_drive": 0,
+   "commits_globales": 20626
   },
-  "g07_canonico_2026_11_11": {
-    "canonico_trabajo": "Consolidado raiz (6.841 B, unico completo)",
-    "canonico_indice": "INDICE (627 B, 8/58)",
-    "canonico_validacion": "ninguno",
-    "g07": "cerrada_parcialmente"
-  },
-  "frente_actual": "leer_antes_de_podar",
-  "nutrientes_emitidos": 0,
-  "buzon_depositado": false,
-  "config_global_tocada": false,
-  "reseteo_2026_11_11": {
-    "archivo": "reseteo_sep4_sep5.md",
-    "ventana": "2026-09-04 08:49:46Z a 2026-09-05 01:43:05Z (~17 h)",
-    "antes": "cosecha_1788572604.tar.gz (237.816 B, 126 archivos)",
-    "despues": "cosecha_1788598379.tar.gz (252.339 B, 152 archivos)",
-    "muertes": 0,
-    "nacimientos": 26,
-    "causa": "reinicio del nodo (CONJETURO)",
-    "recomendacion": "guardar las 2 cosechas como testigo historico",
-    "documentado_como": "reinicio, no poda (ciclo 34)"
-  },
-  "pve01_2026_11_11": {
-    "archivo": "pve_01_estado.md",
-    "codigo": "pve_01.py (11.939 B)",
-    "implementado": true,
-    "ejecutado": true,
-    "datos": "GRACE TN-14 V3, 281 filas 2002-04-01 a 2025-08-01",
-    "xi_medido": 0.71,
-    "forma_viable": "3 (T*tanh(P))",
-    "formas_1_2": "identicas (0.618*1.618=0.999924)",
-    "diferencia_vs_df": "+18.3% (D_f=2.0), -5.4% (D_f=2.5)",
-    "g09": "CERRADA PARCIALMENTE (sigue, ciclo 38)",
-    "c_vault": "C_NO_DEFINIDO_PARA_GRACE (busqueda exhaustiva ciclo 36)",
-    "barrido_c": {
-      "valores": [
-        0.5,
-        1.0,
-        1.5,
-        2.0,
-        2.5,
-        3.0,
-        3.5,
-        4.0
-      ],
-      "rango_estable": [
-        2.5,
-        4.0
-      ],
-      "umbral_continuo": 2.0025,
-      "c_elegido": 2.5,
-      "ki_c2.5": 0.5835
-    },
-    "asintota": 0.618,
-    "rango_ki": [
-      0.2106,
-      0.618
-    ],
-    "c_definicion": "SIN DEFINICION (ciclo 38: C20 sin periodo; 1/C20 Ki=-0.618)",
-    "nombres": {
-      "pve01_vault": 60,
-      "proxmox_en_drive": 0,
-      "commits_globales": 20626
-    },
-    "c20_periodo": "sin periodo dominante (DFT sin pico; anual 8.3% del max)"
-  },
-  "nutrientes_buzon_2026_11_11": {
-    "archivo": "nutrientes_buzon.md",
-    "credenciales": 6,
-    "estado_vivo": 24,
-    "catalogo_datos": 41,
-    "historico_zombi": 25,
-    "total": 96,
-    "zombis_decision": {
-      "archivo": "nutrientes_zombis_decision.md",
-      "historico_unico": 13,
-      "irrecuperables": 12,
-      "recomendacion": "mover los 25 a historicos/",
-      "frase_mover": true,
-      "frase_borrar": true,
-      "opcion_defecto": "no tocar nada",
-      "autorizado": true,
-      "condicion": "nucleo digerido (claims C-216 a C-228)",
-      "podados_ciclo39": {
-        "movidos": 13,
-        "borrados": 12
-      }
-    }
-  },
-  "higiene_2026_11_11": {
-    "valores_literales": 0,
-    "issue_45": "cerrado",
-    "issue_57": "cerrado",
-    "issues_abiertos_miu": 23
-  },
-  "ciclo34_2026_11_11": {
-    "pve01": "implementado y ejecutado (GRACE real)",
-    "reseteo": "reinicio, no poda",
-    "zombis": "25 clasificados (13 unico, 12 sin valor)",
-    "claims": "C-141 a C-155 (15 SE)",
-    "total_claims": 155,
-    "hash_real": 141,
-    "g09": "abierta: c sin definir",
-    "g05": "ABIERTA",
-    "g07": "parcial"
-  },
-  "ciclo35_2026_11_11": {
-    "c_vault": "C_NO_DEFINIDO_EN_VAULT (GRACE)",
-    "barrido": "8 valores, forma 3",
-    "rango_estable": [
-      2.5,
-      4.0
-    ],
-    "ki_c2.5": 0.5835,
-    "g09": "ABIERTA POR AMBIGÜEDAD",
-    "zombis": "frases verificadas, defecto no tocar nada",
-    "claims": "C-156 a C-170 (15 SE)",
-    "total_claims": 170,
-    "hash_real": 156,
-    "g05": "ABIERTA",
-    "g07": "parcial"
-  },
-  "ciclo36_2026_11_11": {
-    "c_vault": "C_NO_DEFINIDO_PARA_GRACE",
-    "asintota": 0.618,
-    "correccion": "0.6138 era Ki en c=4.0, no la asintota",
-    "rango_ki": [
-      0.2106,
-      0.618
-    ],
-    "g09": "CERRADA PARCIALMENTE",
-    "claims": "C-171 a C-185 (15 SE)",
-    "total_claims": 185,
-    "hash_real": 171,
-    "g05": "ABIERTA",
-    "g07": "parcial"
-  },
-  "ciclo37_2026_11_11": {
-    "c_definicion": "SIN DEFINICION",
-    "candidatos": {
-      "c1": 0.004875,
-      "c2": 0.377398,
-      "c3": "invalida"
-    },
-    "nombres_pve01_vault": 60,
-    "zombis_autorizado": false,
-    "g09": "CERRADA PARCIALMENTE (sigue)",
-    "claims": "C-186 a C-200 (15 SE)",
-    "total_claims": 200,
-    "hash_real": 186,
-    "g05": "ABIERTA",
-    "g07": "parcial"
-  },
-  "g05_2026_11_11": {
-    "worker": "GET 200 (Oraculo Vinf+27, vive true)",
-    "repo_head": "f18e2556 2026-11-11T18:10:00Z",
-    "bot_telegram": "Micelio @Jp393_bot, getMe OK, webhook activo",
-    "estado": "PARCIAL (ciclo 45: 4 vivos, 2 muertos, 5 sin verificar; sin mensaje)"
-  },
-  "ciclo38_2026_11_11": {
-    "c20_periodo": "sin periodo dominante",
-    "c_definicion": "SIN DEFINICION",
-    "g09": "CERRADA PARCIALMENTE (sigue)",
-    "zombis_autorizado": false,
-    "g05": "ABIERTA (worker OK, bot sin datos)",
-    "claims": "C-201 a C-215 (15 SE)",
-    "total_claims": 215,
-    "hash_real": 201,
-    "g07": "parcial"
-  },
-  "ciclo39_2026_11_11": {
-    "zombis_podados": {
-      "movidos_historicos": 13,
-      "borrados": 12,
-      "bytes_borrados": 103026,
-      "historicos_id": "1ouvCpzF1V6jFUlPRixIHAK781Vo2143L",
-      "autorizacion": "condicional del Jardinero: digerir nucleo, base lo captura, podar",
-      "nutrientes_antes": 96,
-      "nutrientes_despues": 71,
-      "cuadra": true
-    },
-    "c30": "C30_SIN_PERIODO (6 valores distintos, artefacto cuantizado)",
-    "bot_telegram": "BOT_SIN_ACCESO (sin conector ni token)",
-    "total": 231,
-    "hash_real": 217
-  },
-  "ciclo40_2026_11_11": {
-    "formatos": {
-      "pdf": true,
-      "doc": true,
-      "sheet": true,
-      "json": true,
-      "sqlite": true
-    },
-    "tokens_archivo": {
-      "entradas": 23430,
-      "tipo_telegram": 6,
-      "probados": 2,
-      "vivos": 1
-    },
-    "bot": {
-      "nombre": "Micelio",
-      "usuario": "Jp393_bot",
-      "getMe": "OK",
-      "webhook": "activo"
-    },
-    "conectores": {
-      "huggingface": "sin conector",
-      "zenodo": "sin conector",
-      "sheets_write": "no verificado",
-      "pdf_read": true
-    },
-    "total": 245,
-    "hash_real": 231
-  },
-  "ciclo41_2026_11_11": {
-    "tokens": {
-      "zenodo": 0,
-      "huggingface": 4,
-      "telegram": 6
-    },
-    "orquestador": {
-      "sheet": "MIU_ORCHESTRATOR_V152_MAX_EXPANDED",
-      "id": "1JpNTR8tCFLrAAuDvZdtLHkLdDlk13YBE0z8sKBWe2KQ",
-      "pestanas": 19,
-      "solo_lectura": true
-    },
-    "g05": {
-      "getMe": "OK (2a verificacion)",
-      "webhook": "activo",
-      "mensaje_enviado": false,
-      "estado": "PARCIAL"
-    },
-    "total": 260,
-    "hash_real": 246
-  },
-  "ciclo42_2026_11_11": {
-    "zenodo": {
-      "en_archivo": 0,
-      "fuera_archivo": 0,
-      "en_orquestador_muestra": 0,
-      "veredicto": "TOKEN_ZENODO_NO_ENCONTRADO"
-    },
-    "orquestador": {
-      "pestanas": 19,
-      "leidas": 5,
-      "solo_lectura": true
-    },
-    "g05": {
-      "getMe": "OK (3a verificacion)",
-      "webhook": "activo",
-      "mensaje_enviado": false,
-      "estado": "PARCIAL"
-    },
-    "total": 275,
-    "hash_real": 261
-  },
-  "ciclo43_2026_11_11": {
-    "zenodo": {
-      "doi": "10.5281/zenodo.20547558",
-      "titulo": "MIU V12.0",
-      "fecha": "2026-06-04",
-      "token_en_runtime": true,
-      "token_en_archivo": false
-    },
-    "bots": {
-      "vivos": 4,
-      "mencionados_local": 5,
-      "afirmados": 11,
-      "emails_locales": 89,
-      "emails_afirmados": 11
-    },
-    "no_escritura": {
-      "mensajes": 0,
-      "pestanas": 0,
-      "publicaciones": 0,
-      "issues_prs": 0,
-      "drive_modificado": 0
-    },
-    "total": 290,
-    "hash_real": 276
-  },
-  "ciclo44_2026_11_11": {
-    "doi": {
-      "doi": "10.5281/zenodo.20547558",
-      "titulo": "MIU V12.0",
-      "fecha": "2026-06-04",
-      "licencia": "cc-by-4.0",
-      "archivos": 3,
-      "dois_autor": 11
-    },
-    "bots_logs": {
-      "bots_en_logs": 0,
-      "emails_en_logs": 0,
-      "asociacion": "no encontrada"
-    },
-    "inmune": {
-      "menciones_en_logs": 0,
-      "visible": "PHASE1 checks de credenciales",
-      "regla": "escribir = carga"
-    },
-    "total": 305,
-    "hash_real": 291
-  },
-  "ciclo45_2026_11_11": {
-    "snapshot": {
-      "doi": "10.5281/zenodo.22650419",
-      "tipo": "dataset",
-      "fecha": "2026-09-07",
-      "generador": "Tablet Executor V2",
-      "archivos": 1,
-      "claves_raiz": 49,
-      "estructura_11_11": false,
-      "inmune_ataques": 854,
-      "tareas_inmunes": 30,
-      "mecanismos": {
-        "total": 15,
-        "vivos": 13,
-        "muertos": 2
-      },
-      "colmena_emails": {
-        "procesados": 6500,
-        "total": 134000,
-        "ratio": "4.85%"
-      }
-    },
-    "otros_dois": {
-      "20200753": "publicacion, 1 PDF",
-      "21351630": "publicacion, datos biodiversidad",
-      "con_estructura_11_11": false
-    },
-    "orquestador": {
-      "pestanas": 26,
-      "ciclo41": 19,
-      "nuevas": 7,
-      "relevantes": 11,
-      "sin_bot_zenodo_doi_en_encabezados": true,
-      "muestra": {
-        "pestanas": [
-          14,
-          16,
-          19
-        ],
-        "bots": 0,
-        "dois": 0,
-        "celdas_con_arroba": 1
-      },
-      "estructura_11_11": "no confirmada en muestra"
-    },
-    "bots": {
-      "vivos": 4,
-      "muertos": 2,
-      "sin_verificar": 5,
-      "total_afirmado": 11,
-      "asociacion_bot_email": "NO_SE"
-    },
-    "inmune": {
-      "archivos_drive": 5,
-      "archivos_github": 2,
-      "carpeta": 3,
-      "scorer": {
-        "senales": {
-          "INJECTION": 35,
-          "POLICY": 30,
-          "BEHAVIORAL": 25,
-          "CONTENT": 15
-        },
-        "BLOCK": ">=70",
-        "AUDIT": "40-69",
-        "ALLOW": "<40"
-      },
-      "auto_reparador": "sistema_inmunitario.py V1",
-      "doctrina": "corazon determinista sin LLM; inmune LLM solo ante anomalia",
-      "rebuscar_documentado": false
-    },
-    "puntos_ciegos": {
-      "doc": "puntos_ciegos_2026-11-11.md",
-      "hipotesis": 3
-    },
-    "total": 325,
-    "hash_real": 311
-  },
-  "ciclo46_2026_11_11": {
-    "inmune_carpeta": {
-      "workflow": {
-        "export": "Relay revision 89, 2026-07-10",
-        "hilos": 3,
-        "pasos": 8,
-        "trigger": "webhook POST",
-        "modelo": "relay.gpt-5.4-mini",
-        "rama_threat": "score >= 50",
-        "rebuscar_menciones": 0
-      },
-      "prompt": {
-        "doctrina": "webhook -> IA evalua -> actua segun score",
-        "apps": [
-          "GitHub",
-          "Telegram",
-          "Webhook"
-        ]
-      },
-      "run_history": {
-        "filas": 0
-      },
-      "rebuscar_documentado": false
-    },
-    "snapshots": {
-      "concepto_22650418": {
-        "existe": true,
-        "versiones": 1,
-        "ultima": "2026-09-07"
-      },
-      "posteriores_2026_09_07": 0,
-      "serie": false,
-      "hipotesis_C325": "no confirmada"
-    },
-    "orquestador_filas_4_30": {
-      "pestanas": 11,
-      "filas_con_datos": 171,
-      "emails_distintos": 16,
-      "bots_distintos": 7,
-      "filas_bot_y_email": 12,
-      "estructura_11_11": "parcial",
-      "saturadas": [
-        10,
-        14,
-        18,
-        19
-      ],
-      "vacia": [
-        16
-      ],
-      "dois": 0,
-      "celdas_40plus": 98
-    },
-    "total": 345,
-    "hash_real": 331
-  },
-  "ciclo47_2026_11_11": {
-    "filas_31_200": {
-      "pestanas": {
-        "10": 6,
-        "14": 72,
-        "18": 170,
-        "19": 170
-      },
-      "total_filas": 418,
-      "global": {
-        "emails_distintos": 18,
-        "bots_distintos": 8,
-        "handles": 6,
-        "filas_bot_email": 54
-      },
-      "estructura_11_11": "parcial",
-      "saturadas_31_200": [
-        18,
-        19
-      ]
-    },
-    "bots_getme": {
-      "vivos": 4,
-      "muertos": 2,
-      "verificacion": 5,
-      "nuevo_handle": "imperio_franbot (sin token)"
-    },
-    "snapshots": {
-      "posteriores_2026_09_07": 0,
-      "series": {
-        "MIU": 5,
-        "Grimorio": 3,
-        "Framework": 2,
-        "snapshot": 1
-      },
-      "consulta_autor_http400": true,
-      "dois_conocidos": 17
-    },
-    "total": 360,
-    "hash_real": 346
-  },
-  "ciclo48_2026_11_11": {
-    "consolidado": {
-      "documento": "MIU_ESTADO_CONSOLIDADO_2026-11-11.md",
-      "tamano": 11277,
-      "sha256": "b4fa494e8d6cabb92d3b67c0dc657bb2c1134120cf83b698ce7f7756e0236220",
-      "blob_sha": "1a135535c9e324d92c774f34652313e93fba8e00",
-      "se_con_hash_real": 326,
-      "hash_real_total": 346,
-      "temas": {
-        "ontologia": 2,
-        "geometria": 0,
-        "fisica": 57,
-        "pilares": 12,
-        "protocolos": 11,
-        "partituras": 7,
-        "nodos_Df": 7,
-        "inmune": 16,
-        "dois": 13,
-        "axiomas": 10
-      },
-      "citados_distintos": 134,
-      "fuera_digestion_admin": 192,
-      "conjeturas_justificadas": 6,
-      "no_se_sin_justificar": 0,
-      "correcciones": [
-        "346 es hash_real total, no conteo SE",
-        "geometria sin claim (Fisher semilla INFIERO, D_eff G01)",
-        "Ray & Crutchfield sin DOI verificado",
-        "22 nodos = anotacion A10 circular HUESO #31"
-      ]
-    },
-    "siembra": {
-      "anexo_vi": "por_subidor_ciclo48",
-      "miu": {
-        "repo": "Jaime393/MIU",
-        "path": "docs/MIU_ESTADO_CONSOLIDADO.md",
-        "commit": "bab47d857e03a01396f59e30cdbaffbc39dff1ba",
-        "blob": "1a135535c9e324d92c774f34652313e93fba8e00",
-        "verificado": true
-      },
-      "zenodo": "pendiente_autorizacion"
-    },
-    "claims_nuevos": [
-      "C-361",
-      "C-362",
-      "C-363",
-      "C-364",
-      "C-365"
-    ],
-    "total": 365,
-    "hash_real": 351
-  },
-  "academico": {
-    "fecha": "2026-11-11T22:21:42Z",
-    "archivos": [
-      "TABLA_FISICA.md",
-      "TABLA_INMUNE_Y_PROTOCOLOS.md",
-      "TABLA_DOIS_Y_ONTOLOGIA.md",
-      "PAPER_DOIS_MIU.md",
-      "dataset_nodos_Df.csv",
-      "dataset_nodos_Df.md",
-      "README.md"
-    ],
-    "filas_totales_tablas": 134,
-    "paper_dois_verificados": 18,
-    "dataset_nodos": 23,
-    "sembrado_github": true,
-    "conector_usado": "chat_github",
-    "no_toco_red_autonoma": true,
-    "c034_estado": "SE_incluida",
-    "ciclo50": {
-      "c034": "SE con hash real, incluida en TABLA_FISICA.md (85 filas)",
-      "dataset_extraccion": "14 candidatos en TABLA_FISICA.md, 0 nodos con D_f medido",
-      "paper_archivos_corregidos": "0->reales (18 valores)",
-      "csv_parada": "0 filas <20, sin nodos inventados, CSV no re-subido"
-    },
-    "nodos_con_doi": 4,
-    "nodos_con_url": 19,
-    "metodo_box_counting": 23,
-    "ciclo52": {
-      "csv_hash": "sha256:01743296ea81370bbd05a51ef6b6e2715aba665eb7bb4b230178027120010a15",
-      "md_hash": "sha256:cf45b1730ab70c71da996e20b47472c092b855e3f00d6dbb3a99913e2070e80f",
-      "filas_datos": 23,
-      "md_dice_22_nodos": "titulo dice 22, tabla y CSV tienen 23 (22 + CMB)",
-      "k_i_fuera_de_formula": "Microbioma HMP2: D_f 2.50 K_i 0.508 (formula 0.2472*D_f da 0.618)"
-    },
-    "l_corr_microbioma_documentada": false,
-    "observacion_externa": {
-      "fecha": "2026-11-11T22:21:42Z",
-      "zenodo_papers": 0,
-      "github_repos": 232,
-      "crossref_citas": 0,
-      "archivo_subido": true
-    },
-    "ciclo53": {
-      "microbioma": "Opcion B (nota, sin l_corr en claims)",
-      "zenodo": "HTTP 400",
-      "github_total": 232,
-      "crossref_miu_citas": 0,
-      "df_topicos_dois_unicos": 6
-    }
+  "c20_periodo": "sin periodo dominante (DFT sin pico; anual 8.3% del max)"
+ },
+ "nutrientes_buzon_2026_11_11": {
+  "archivo": "nutrientes_buzon.md",
+  "credenciales": 6,
+  "estado_vivo": 24,
+  "catalogo_datos": 41,
+  "historico_zombi": 25,
+  "total": 96,
+  "zombis_decision": {
+   "archivo": "nutrientes_zombis_decision.md",
+   "historico_unico": 13,
+   "irrecuperables": 12,
+   "recomendacion": "mover los 25 a historicos/",
+   "frase_mover": true,
+   "frase_borrar": true,
+   "opcion_defecto": "no tocar nada",
+   "autorizado": true,
+   "condicion": "nucleo digerido (claims C-216 a C-228)",
+   "podados_ciclo39": {
+    "movidos": 13,
+    "borrados": 12
+   }
   }
+ },
+ "higiene_2026_11_11": {
+  "valores_literales": 0,
+  "issue_45": "cerrado",
+  "issue_57": "cerrado",
+  "issues_abiertos_miu": 23
+ },
+ "ciclo34_2026_11_11": {
+  "pve01": "implementado y ejecutado (GRACE real)",
+  "reseteo": "reinicio, no poda",
+  "zombis": "25 clasificados (13 unico, 12 sin valor)",
+  "claims": "C-141 a C-155 (15 SE)",
+  "total_claims": 155,
+  "hash_real": 141,
+  "g09": "abierta: c sin definir",
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "ciclo35_2026_11_11": {
+  "c_vault": "C_NO_DEFINIDO_EN_VAULT (GRACE)",
+  "barrido": "8 valores, forma 3",
+  "rango_estable": [
+   2.5,
+   4.0
+  ],
+  "ki_c2.5": 0.5835,
+  "g09": "ABIERTA POR AMBIGÜEDAD",
+  "zombis": "frases verificadas, defecto no tocar nada",
+  "claims": "C-156 a C-170 (15 SE)",
+  "total_claims": 170,
+  "hash_real": 156,
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "ciclo36_2026_11_11": {
+  "c_vault": "C_NO_DEFINIDO_PARA_GRACE",
+  "asintota": 0.618,
+  "correccion": "0.6138 era Ki en c=4.0, no la asintota",
+  "rango_ki": [
+   0.2106,
+   0.618
+  ],
+  "g09": "CERRADA PARCIALMENTE",
+  "claims": "C-171 a C-185 (15 SE)",
+  "total_claims": 185,
+  "hash_real": 171,
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "ciclo37_2026_11_11": {
+  "c_definicion": "SIN DEFINICION",
+  "candidatos": {
+   "c1": 0.004875,
+   "c2": 0.377398,
+   "c3": "invalida"
+  },
+  "nombres_pve01_vault": 60,
+  "zombis_autorizado": false,
+  "g09": "CERRADA PARCIALMENTE (sigue)",
+  "claims": "C-186 a C-200 (15 SE)",
+  "total_claims": 200,
+  "hash_real": 186,
+  "g05": "ABIERTA",
+  "g07": "parcial"
+ },
+ "g05_2026_11_11": {
+  "worker": "GET 200 (Oraculo Vinf+27, vive true)",
+  "repo_head": "f18e2556 2026-11-11T18:10:00Z",
+  "bot_telegram": "Micelio @Jp393_bot, getMe OK, webhook activo",
+  "estado": "PARCIAL (ciclo 45: 4 vivos, 2 muertos, 5 sin verificar; sin mensaje)"
+ },
+ "ciclo38_2026_11_11": {
+  "c20_periodo": "sin periodo dominante",
+  "c_definicion": "SIN DEFINICION",
+  "g09": "CERRADA PARCIALMENTE (sigue)",
+  "zombis_autorizado": false,
+  "g05": "ABIERTA (worker OK, bot sin datos)",
+  "claims": "C-201 a C-215 (15 SE)",
+  "total_claims": 215,
+  "hash_real": 201,
+  "g07": "parcial"
+ },
+ "ciclo39_2026_11_11": {
+  "zombis_podados": {
+   "movidos_historicos": 13,
+   "borrados": 12,
+   "bytes_borrados": 103026,
+   "historicos_id": "1ouvCpzF1V6jFUlPRixIHAK781Vo2143L",
+   "autorizacion": "condicional del Jardinero: digerir nucleo, base lo captura, podar",
+   "nutrientes_antes": 96,
+   "nutrientes_despues": 71,
+   "cuadra": true
+  },
+  "c30": "C30_SIN_PERIODO (6 valores distintos, artefacto cuantizado)",
+  "bot_telegram": "BOT_SIN_ACCESO (sin conector ni token)",
+  "total": 231,
+  "hash_real": 217
+ },
+ "ciclo40_2026_11_11": {
+  "formatos": {
+   "pdf": true,
+   "doc": true,
+   "sheet": true,
+   "json": true,
+   "sqlite": true
+  },
+  "tokens_archivo": {
+   "entradas": 23430,
+   "tipo_telegram": 6,
+   "probados": 2,
+   "vivos": 1
+  },
+  "bot": {
+   "nombre": "Micelio",
+   "usuario": "Jp393_bot",
+   "getMe": "OK",
+   "webhook": "activo"
+  },
+  "conectores": {
+   "huggingface": "sin conector",
+   "zenodo": "sin conector",
+   "sheets_write": "no verificado",
+   "pdf_read": true
+  },
+  "total": 245,
+  "hash_real": 231
+ },
+ "ciclo41_2026_11_11": {
+  "tokens": {
+   "zenodo": 0,
+   "huggingface": 4,
+   "telegram": 6
+  },
+  "orquestador": {
+   "sheet": "MIU_ORCHESTRATOR_V152_MAX_EXPANDED",
+   "id": "1JpNTR8tCFLrAAuDvZdtLHkLdDlk13YBE0z8sKBWe2KQ",
+   "pestanas": 19,
+   "solo_lectura": true
+  },
+  "g05": {
+   "getMe": "OK (2a verificacion)",
+   "webhook": "activo",
+   "mensaje_enviado": false,
+   "estado": "PARCIAL"
+  },
+  "total": 260,
+  "hash_real": 246
+ },
+ "ciclo42_2026_11_11": {
+  "zenodo": {
+   "en_archivo": 0,
+   "fuera_archivo": 0,
+   "en_orquestador_muestra": 0,
+   "veredicto": "TOKEN_ZENODO_NO_ENCONTRADO"
+  },
+  "orquestador": {
+   "pestanas": 19,
+   "leidas": 5,
+   "solo_lectura": true
+  },
+  "g05": {
+   "getMe": "OK (3a verificacion)",
+   "webhook": "activo",
+   "mensaje_enviado": false,
+   "estado": "PARCIAL"
+  },
+  "total": 275,
+  "hash_real": 261
+ },
+ "ciclo43_2026_11_11": {
+  "zenodo": {
+   "doi": "10.5281/zenodo.20547558",
+   "titulo": "MIU V12.0",
+   "fecha": "2026-06-04",
+   "token_en_runtime": true,
+   "token_en_archivo": false
+  },
+  "bots": {
+   "vivos": 4,
+   "mencionados_local": 5,
+   "afirmados": 11,
+   "emails_locales": 89,
+   "emails_afirmados": 11
+  },
+  "no_escritura": {
+   "mensajes": 0,
+   "pestanas": 0,
+   "publicaciones": 0,
+   "issues_prs": 0,
+   "drive_modificado": 0
+  },
+  "total": 290,
+  "hash_real": 276
+ },
+ "ciclo44_2026_11_11": {
+  "doi": {
+   "doi": "10.5281/zenodo.20547558",
+   "titulo": "MIU V12.0",
+   "fecha": "2026-06-04",
+   "licencia": "cc-by-4.0",
+   "archivos": 3,
+   "dois_autor": 11
+  },
+  "bots_logs": {
+   "bots_en_logs": 0,
+   "emails_en_logs": 0,
+   "asociacion": "no encontrada"
+  },
+  "inmune": {
+   "menciones_en_logs": 0,
+   "visible": "PHASE1 checks de credenciales",
+   "regla": "escribir = carga"
+  },
+  "total": 305,
+  "hash_real": 291
+ },
+ "ciclo45_2026_11_11": {
+  "snapshot": {
+   "doi": "10.5281/zenodo.22650419",
+   "tipo": "dataset",
+   "fecha": "2026-09-07",
+   "generador": "Tablet Executor V2",
+   "archivos": 1,
+   "claves_raiz": 49,
+   "estructura_11_11": false,
+   "inmune_ataques": 854,
+   "tareas_inmunes": 30,
+   "mecanismos": {
+    "total": 15,
+    "vivos": 13,
+    "muertos": 2
+   },
+   "colmena_emails": {
+    "procesados": 6500,
+    "total": 134000,
+    "ratio": "4.85%"
+   }
+  },
+  "otros_dois": {
+   "20200753": "publicacion, 1 PDF",
+   "21351630": "publicacion, datos biodiversidad",
+   "con_estructura_11_11": false
+  },
+  "orquestador": {
+   "pestanas": 26,
+   "ciclo41": 19,
+   "nuevas": 7,
+   "relevantes": 11,
+   "sin_bot_zenodo_doi_en_encabezados": true,
+   "muestra": {
+    "pestanas": [
+     14,
+     16,
+     19
+    ],
+    "bots": 0,
+    "dois": 0,
+    "celdas_con_arroba": 1
+   },
+   "estructura_11_11": "no confirmada en muestra"
+  },
+  "bots": {
+   "vivos": 4,
+   "muertos": 2,
+   "sin_verificar": 5,
+   "total_afirmado": 11,
+   "asociacion_bot_email": "NO_SE"
+  },
+  "inmune": {
+   "archivos_drive": 5,
+   "archivos_github": 2,
+   "carpeta": 3,
+   "scorer": {
+    "senales": {
+     "INJECTION": 35,
+     "POLICY": 30,
+     "BEHAVIORAL": 25,
+     "CONTENT": 15
+    },
+    "BLOCK": ">=70",
+    "AUDIT": "40-69",
+    "ALLOW": "<40"
+   },
+   "auto_reparador": "sistema_inmunitario.py V1",
+   "doctrina": "corazon determinista sin LLM; inmune LLM solo ante anomalia",
+   "rebuscar_documentado": false
+  },
+  "puntos_ciegos": {
+   "doc": "puntos_ciegos_2026-11-11.md",
+   "hipotesis": 3
+  },
+  "total": 325,
+  "hash_real": 311
+ },
+ "ciclo46_2026_11_11": {
+  "inmune_carpeta": {
+   "workflow": {
+    "export": "Relay revision 89, 2026-07-10",
+    "hilos": 3,
+    "pasos": 8,
+    "trigger": "webhook POST",
+    "modelo": "relay.gpt-5.4-mini",
+    "rama_threat": "score >= 50",
+    "rebuscar_menciones": 0
+   },
+   "prompt": {
+    "doctrina": "webhook -> IA evalua -> actua segun score",
+    "apps": [
+     "GitHub",
+     "Telegram",
+     "Webhook"
+    ]
+   },
+   "run_history": {
+    "filas": 0
+   },
+   "rebuscar_documentado": false
+  },
+  "snapshots": {
+   "concepto_22650418": {
+    "existe": true,
+    "versiones": 1,
+    "ultima": "2026-09-07"
+   },
+   "posteriores_2026_09_07": 0,
+   "serie": false,
+   "hipotesis_C325": "no confirmada"
+  },
+  "orquestador_filas_4_30": {
+   "pestanas": 11,
+   "filas_con_datos": 171,
+   "emails_distintos": 16,
+   "bots_distintos": 7,
+   "filas_bot_y_email": 12,
+   "estructura_11_11": "parcial",
+   "saturadas": [
+    10,
+    14,
+    18,
+    19
+   ],
+   "vacia": [
+    16
+   ],
+   "dois": 0,
+   "celdas_40plus": 98
+  },
+  "total": 345,
+  "hash_real": 331
+ },
+ "ciclo47_2026_11_11": {
+  "filas_31_200": {
+   "pestanas": {
+    "10": 6,
+    "14": 72,
+    "18": 170,
+    "19": 170
+   },
+   "total_filas": 418,
+   "global": {
+    "emails_distintos": 18,
+    "bots_distintos": 8,
+    "handles": 6,
+    "filas_bot_email": 54
+   },
+   "estructura_11_11": "parcial",
+   "saturadas_31_200": [
+    18,
+    19
+   ]
+  },
+  "bots_getme": {
+   "vivos": 4,
+   "muertos": 2,
+   "verificacion": 5,
+   "nuevo_handle": "imperio_franbot (sin token)"
+  },
+  "snapshots": {
+   "posteriores_2026_09_07": 0,
+   "series": {
+    "MIU": 5,
+    "Grimorio": 3,
+    "Framework": 2,
+    "snapshot": 1
+   },
+   "consulta_autor_http400": true,
+   "dois_conocidos": 17
+  },
+  "total": 360,
+  "hash_real": 346
+ },
+ "ciclo48_2026_11_11": {
+  "consolidado": {
+   "documento": "MIU_ESTADO_CONSOLIDADO_2026-11-11.md",
+   "tamano": 11277,
+   "sha256": "b4fa494e8d6cabb92d3b67c0dc657bb2c1134120cf83b698ce7f7756e0236220",
+   "blob_sha": "1a135535c9e324d92c774f34652313e93fba8e00",
+   "se_con_hash_real": 326,
+   "hash_real_total": 346,
+   "temas": {
+    "ontologia": 2,
+    "geometria": 0,
+    "fisica": 57,
+    "pilares": 12,
+    "protocolos": 11,
+    "partituras": 7,
+    "nodos_Df": 7,
+    "inmune": 16,
+    "dois": 13,
+    "axiomas": 10
+   },
+   "citados_distintos": 134,
+   "fuera_digestion_admin": 192,
+   "conjeturas_justificadas": 6,
+   "no_se_sin_justificar": 0,
+   "correcciones": [
+    "346 es hash_real total, no conteo SE",
+    "geometria sin claim (Fisher semilla INFIERO, D_eff G01)",
+    "Ray & Crutchfield sin DOI verificado",
+    "22 nodos = anotacion A10 circular HUESO #31"
+   ]
+  },
+  "siembra": {
+   "anexo_vi": "por_subidor_ciclo48",
+   "miu": {
+    "repo": "Jaime393/MIU",
+    "path": "docs/MIU_ESTADO_CONSOLIDADO.md",
+    "commit": "bab47d857e03a01396f59e30cdbaffbc39dff1ba",
+    "blob": "1a135535c9e324d92c774f34652313e93fba8e00",
+    "verificado": true
+   },
+   "zenodo": "pendiente_autorizacion"
+  },
+  "claims_nuevos": [
+   "C-361",
+   "C-362",
+   "C-363",
+   "C-364",
+   "C-365"
+  ],
+  "total": 365,
+  "hash_real": 351
+ },
+ "academico": {
+  "fecha": "2026-11-11T22:21:42Z",
+  "archivos": [
+   "TABLA_FISICA.md",
+   "TABLA_INMUNE_Y_PROTOCOLOS.md",
+   "TABLA_DOIS_Y_ONTOLOGIA.md",
+   "PAPER_DOIS_MIU.md",
+   "dataset_nodos_Df.csv",
+   "dataset_nodos_Df.md",
+   "README.md"
+  ],
+  "filas_totales_tablas": 134,
+  "paper_dois_verificados": 18,
+  "dataset_nodos": 23,
+  "sembrado_github": true,
+  "conector_usado": "chat_github",
+  "no_toco_red_autonoma": true,
+  "c034_estado": "SE_incluida",
+  "ciclo50": {
+   "c034": "SE con hash real, incluida en TABLA_FISICA.md (85 filas)",
+   "dataset_extraccion": "14 candidatos en TABLA_FISICA.md, 0 nodos con D_f medido",
+   "paper_archivos_corregidos": "0->reales (18 valores)",
+   "csv_parada": "0 filas <20, sin nodos inventados, CSV no re-subido"
+  },
+  "nodos_con_doi": 4,
+  "nodos_con_url": 19,
+  "metodo_box_counting": 23,
+  "ciclo52": {
+   "csv_hash": "sha256:01743296ea81370bbd05a51ef6b6e2715aba665eb7bb4b230178027120010a15",
+   "md_hash": "sha256:cf45b1730ab70c71da996e20b47472c092b855e3f00d6dbb3a99913e2070e80f",
+   "filas_datos": 23,
+   "md_dice_22_nodos": "titulo dice 22, tabla y CSV tienen 23 (22 + CMB)",
+   "k_i_fuera_de_formula": "Microbioma HMP2: D_f 2.50 K_i 0.508 (formula 0.2472*D_f da 0.618)"
+  },
+  "l_corr_microbioma_documentada": false,
+  "observacion_externa": {
+   "fecha": "2026-11-11T22:21:42Z",
+   "zenodo_papers": 0,
+   "github_repos": 232,
+   "crossref_citas": 0,
+   "archivo_subido": true
+  },
+  "ciclo53": {
+   "microbioma": "Opcion B (nota, sin l_corr en claims)",
+   "zenodo": "HTTP 400",
+   "github_total": 232,
+   "crossref_miu_citas": 0,
+   "df_topicos_dois_unicos": 6
+  },
+  "literatura_externa": {
+   "fecha": "2026-11-11T22:33:20Z",
+   "zenodo_query_variante": "V3",
+   "zenodo_hits": 19,
+   "zenodo_hits_autor": 10,
+   "zenodo_registros_nuevos": 0,
+   "github_repos_con_df": 3,
+   "github_repos_buscables": 4,
+   "candidatos_csv": 6,
+   "candidatos_json": 0,
+   "candidatos_py": 3,
+   "archivo_subido": true
+  },
+  "ciclo54": {
+   "fecha": "2026-11-11T22:33:20Z"
+  }
+ }
 }
