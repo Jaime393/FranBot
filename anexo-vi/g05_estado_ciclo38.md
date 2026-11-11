@@ -86,3 +86,14 @@ el cierre depende de él.
   Cloudflare Secret DRIVE_FOLDER_ID, scripts/test-worker.sh).
 - Estado: **PARCIAL** (antes ABIERTA). El bot existe, responde
   y tiene webhook activo. Falta el extremo a extremo.
+
+## Estado ciclo 41 (2026-11-11) — G05 PARCIAL (sin escritura)
+
+- getMe re-verificado: **OK** — bot Micelio, @Jp393_bot,
+  id 1192102910. (2ª verificación; intento 1 HTTP 401, intento 2 OK.)
+- Webhook: **ACTIVO** (tiene URL, pending_update_count 0).
+- Mensaje de prueba: **NO enviado** (regla del Jardinero: solo
+  lectura; enviar un mensaje es escritura).
+- G05 sigue **PARCIAL**: falta la prueba de extremo a extremo,
+  que requiere autorización del Jardinero para enviar un mensaje.
+- Si el Jardinero autoriza: listo para prueba extremo a extremo.
