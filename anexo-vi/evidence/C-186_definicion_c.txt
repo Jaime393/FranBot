@@ -1,0 +1,28 @@
+Evidencia ciclo 37 — Definición de c (C-186 a C-191)
+Fecha: 2026-11-11.
+
+A1 — Papers revisados (contenido entero, grep PVE-01 / parámetro c /
+carga c / GRACE / TN-14 / asíntota / 0.618):
+- paper.md (28.521 B): 0 coincidencias.
+- paper.bib (22.356 B): 0 coincidencias.
+- MIU_PAPER_V2_rho_v92_coherence_nov3_2026 (18.522 B): GRACE
+  (C20 = -4.847e-4, K_tau [0.3381, 0.3934], GRACE-FO RL06 Mascon);
+  NO PVE-01, NO parámetro c, NO asíntota 0.618, NO criterio para c.
+- RAIZ_X_paper_v2_zenodo_ready.md (8.390 B): GRACE/K_tau; mismo
+  resultado (sin PVE-01, sin c, sin asíntota).
+- 40 Global Mind: vacía (confirmado ciclo 36 y 37).
+Ningún paper define c. Ninguno menciona la asíntota 0.618.
+
+A2 — Candidatos físicos (forma 3, Xi=0.7100, tau=1 ventana, T=0.618):
+- c1 = 1/90 = 0.011111: P=0.007889, Ki=0.004875, NO en banda.
+- c2 = Xi/Xi_ref = 1: P=0.71, Ki=0.377398, NO en banda.
+  Variante c2' = 0.71: P=0.5041, Ki=0.287577, NO en banda.
+- c3 = 1/(Xi*tau*c_luz): SIN CÁLCULO — dimensionalmente inválida
+  (1/longitud; el argumento de tanh debe ser adimensional).
+
+A3 — Decisión: SIN DEFINICIÓN. Ningún paper define c; ningún
+candidato razonable da Ki en banda; elegir c desde el rango P del
+documento sería elegir el resultado (prohibido). Diagnóstico:
+la región en banda implica escala de tiempo 1/c <= 0.5 ventanas
+(~45 días; c=2.5 → 36 días), sin justificación en el Vault.
+G09 sigue parcialmente cerrada.
