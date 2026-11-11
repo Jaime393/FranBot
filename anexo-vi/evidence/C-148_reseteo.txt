@@ -1,0 +1,17 @@
+Evidencia ciclo 34 — Reseteo documentado como reinicio (C-148, C-149, C-155)
+Fecha: 2026-11-11.
+sha256 reseteo_sep4_sep5.md (actualizado ciclo 34):
+1e1b5d50b8189822121ce0913b32586424f67265ab2c84fa0f0a991e7aa0646a
+Tamaño: 6.867 B (antes 5.863 B). Sección nueva:
+"Reinicio vs auto-poda (ciclo 34)".
+
+Hechos (ciclo 33, verificados en cosechas):
+- Ventana: 2026-09-04 08:49:46Z → 2026-09-05 01:43:05Z (~17 h).
+- 0 archivos desaparecidos entre "antes" y "después".
+- 26 archivos nuevos (nacimientos) en la ventana.
+- 4 pids diferentes entre antigua y "antes" (reinicio completo del nodo).
+- MIU_NUCLEO.md nace v2 a las 01:34 del 2026-09-05 (no existía antes).
+- El propio sistema dice "ninguna — cuerpo íntegro" tras el reinicio.
+- Mesh sinapsis 916 → 0; escuela índice 170.256 B → 0 (estado volátil).
+- Recomendación: conservar las 118 cosechas; documentar el reinicio
+  como evento esperado, no como fallo.
