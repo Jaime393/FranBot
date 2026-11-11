@@ -3,7 +3,7 @@
 Fecha: 2026-11-11
 Autor: Nodo Trama (ciclo 51-52)
 Fuente primaria: búsqueda masiva en Termux + extracción de `oraculo-v8.json` y `df_profundo_*.txt`
-Hash del CSV: `6d644106a64625b2b79e5d107cd05962d2e06041e9192b9c216d4f71b6945ade`
+Hash del CSV: `7b7778870784100fb257796c6a8e56558ef5be0496e0a6b79fb4217907a6a16e`
 
 ## Qué es este dataset
 
@@ -82,6 +82,19 @@ Resoluciones:
 - **Microbioma humano: K_i 0.508 aclarado.** El archivo hmp2_human_3150_metagenomes.csv tiene columnas Body_Site, Samples, D_f_network, K_i, Source, DOI_URL; una fila (Gut+Oral+Skin, 3150 muestras, D_f_network 2.5, K_i 0.508, HMP2, Nature 2019). La columna D_f se llama D_f_network (dimensión de red, no box-counting) y el K_i 0.508 es el K_i de esa red. La fórmula base con D_f 2.5 daría 0.618, pero no aplica aquí porque la dimensión es de red. La nota anterior (ciclo 53, sobre l_corr no documentada) queda sustituida por esta explicación. No hay derivación de 0.508 en el archivo: es el valor declarado.
 
 Cruce final a ciclo 57: 18 confirmados, 0 discrepancias, 5 SIN_CSV_BUSCABLE (Microtúbulos, GBR Seagrass, Turbera, Seagrass global, CMB). Ningún otro valor D_f cambió.
+
+Cruce final a ciclo 58: 19 confirmados (18 por CSV + 1 por red: GBR Seagrass), 0 discrepancias, 4 SIN_CSV_BUSCABLE (Microtúbulos, Turbera, Seagrass global, CMB).
+
+## Buscados en Drive y red (ciclo 58)
+
+Los 5 nodos SIN_CSV_BUSCABLE se buscaron en Drive (nombres y contenido) y en sus fuentes públicas. Evidencia en `academico/evidence/`.
+
+- **Drive:** sin archivos de datos para 3J6F, Coles, turbera, Glen Carron, PANGAEA, VLIZ o seagrass global. Solo menciones en documentos MIU (Glosario, MIU v12, INVENTARIO_MAESTRO). Para CMB: NODO_FERTIL_05_CMB_Planck2018_2026-07-11.md (3.269 B) dice D_f ≈ 2.305 con método box-counting sobre mapas de anisotropía, pero con nivel epistémico MIXTO: los valores puntuales son INFIERO (ejecución única, sin validación cruzada). No es fuente primaria ni SÉ.
+- **Microtúbulos — NO confirmado.** PDB 3J6F descargado de RCSB (5.153.544 B, 60.318 átomos, Alushin et al. 2014, Cell 157:1117; sha256 b78d75ae2a7b…). Box-counting 3D (`calcular_df_microtubulos.py`): CA 1.772 (R² 0.9634), todos los átomos pesados 1.909 (R² 0.9665). El D_f depende de la escala (1.17–2.22 según el rango); ningún rango da 2.50. El valor 2.50 del dataset no se reproduce con box-counting sobre las coordenadas 3J6F.
+- **GBR Seagrass — CONFIRMADO_RED (con diferencia 0.04 documentada).** Dataset eAtlas UUID 77998615 (Coles et al. 2016, NESP TWQ 3.1, TropWATER JCU, 1984–2014; coincide con el doi_url del dataset). Descargados: sitios de muestreo (66.201 puntos, .shp 1.853.728 B) y praderas (1.169 polígonos, 191.153 vértices, .shp 3.125.764 B, sha256 db8cd9c99814…). Box-counting 2D (`calcular_df_seagrass_gbr.py`): sitios 1.189 (R² 0.9786) — los puntos siguen la costa, casi 1D. Box-counting 2D sobre polígonos rellenos por scanline (`calcular_df_seagrass_meadows.py`): 1.99 en régimen fino 0.5–5 km (R² 0.9999), 1.95 en rango 0.5–32 km (R² 0.9994). El dataset dice 2.03 (dif. 0.04 en fino, 0.08 en rango). El D_f del dataset no se cambia; la confirmación es de fuente + método + valor aproximado, con la diferencia anotada. Artefacto conocido: N=0 a eps 64 km (scanline a escalas gruesas), excluido del ajuste.
+- **Turbera Glen Carron — NO confirmado.** PANGAEA 10.1594/PANGAEA.927872 descargado (Anderson 2021, 13.674 B, sha256 2df9afb566c0…; Depth, DBD, TC, TN vs profundidad 0.04–3.68 m; 146 filas completas). DFA (`calcular_df_turbera.py`): DBD D=1.03 (H 0.97), TC D=0.99 (H 1.01), TN D=0.62 (H 1.38). Ninguna da 1.91. El D_f 1.91 del dataset no viene de DFA sobre estas series.
+- **Seagrass global — NO confirmado.** El dataset canónico es UNEP-WCMC WCMC-013-014 Global Distribution of Seagrasses v6.0 (2018): 853 MB polígonos, 21 MB puntos. El host data.unepwcmc.org es inalcanzable desde el sandbox (HTTP 000, dos intentos). Sin descarga, sin cálculo.
+- **CMB — NO confirmado.** Sin dato primario en Drive ni descarga viable: los mapas Planck son FITS de cientos de MB y requieren healpy (no instalado). El documento NODO_FERTIL_05 (sha256 fd7a45ab08d4…) es INFIERO, no SÉ.
 
 ## Verificación
 
