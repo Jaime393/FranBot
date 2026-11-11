@@ -102,3 +102,7 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 ## Ciclo 39 (2026-11-11)
 
 Poda de zombis con núcleo digerido: 13 movidos a historicos/, 12 borrados (103.026 B). nutrientes/ 96 → 71. C30 sin período. Bot Telegram sin acceso. Claims 231 (hash_real 217).
+
+## Ciclo 40 (2026-11-11)
+
+Sondeo exhaustivo: 5/5 formatos leen; tokens_20260830 abierto (23.430 entradas, 6 telegram); bot Micelio @Jp393_bot vivo, webhook activo; G05 PARCIAL. Sin conector HF/Zenodo. Claims 245 (hash_real 231).
