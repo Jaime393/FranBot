@@ -1,0 +1,23 @@
+BUZON NUTRIENTES (ciclo 33, 96 entradas por nombre)
+- CREDENCIALES 6 (cerrados, no se abren ni suben): tokens_encontrados.json,
+  catalogo_recursos.json, recursos_cazados.json, recursos_integrados.json,
+  tokens.json, claves_env_parseado.json.
+- ESTADO VIVO 24 (referenciar, no integrar): gossip_global, poder_real_acumulado,
+  salud_global, ultimo_latido, router_status, estado_consolidado_V201,
+  prevenor_reporte, estado_10_cuentas_vivo, estado_cuentas, estado_local,
+  estado_para_kimi, consenso, cuarentena, evolucion_ciclo, mesh_10_gmail_vivo,
+  mesh_10_gmail_vivo.redacted, top10_gmail_reales, escalado_final,
+  escalado_10_gmail, cf_api_real, mesh_flexible_max, pool_flexible,
+  cuentas_para_gtm, recursos_activos.
+- CATALOGO/DATOS 41: mapa_10_gmail_servicios, inventario_global,
+  inventario_global_v2, 15 pipeline_*, 10 mecanismos/datos, 6 recurso_*,
+  4 otros (drive_mano_urls, organoide, alimentacion_0001, ciclo_0001),
+  3 cf_api_vivos (0 B, 2 B, 2 B).
+- HISTORICO/ZOMBI 25: 10 .db, 2 .jsonl, 5 logs arquitecto, 5 semilla_v24,
+  miu_brain.db.zlib, dummy.tflite, subcarpeta archivo/.
+- Total 6+24+41+25 = 96. (El ciclo estimaba 6/15/35/40; la clasificacion real
+  es 6/24/41/25.)
+- 5 clave para consulta: mapa_10_gmail_servicios, inventario_global,
+  gossip_global, estado_consolidado_V201, salud_global.
+- 25 zombis: candidatos a poda LOCAL (Drive, no GitHub), requieren decision
+  del Jardinero.
