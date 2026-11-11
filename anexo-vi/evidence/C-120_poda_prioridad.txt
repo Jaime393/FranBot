@@ -1,0 +1,10 @@
+JERARQUIA DE PRIORIDADES (ciclo 32)
+1. Leer lo que existe (miu-backup, issues, nutrientes) - en curso.
+2. Validar lo que se afirma (PVE-01, cerrar G09, verificar predicciones).
+3. Podar lo que no vale (147 repos lote miu-auto, 96 nutrientes con credenciales
+   que no se integran, 117 cosechas si solo se conservan 3).
+4. Expandir (nuevos claims, nuevos ciclos, nuevos repos).
+- La poda de 147 repos es prioridad 3, no prioridad 1.
+- La frase exacta del Jardinero sigue vigente, pero no urgente.
+- Por que la poda espera: miu-backup = estado real; issues MIU = autocriticas
+  vigentes; nutrientes = credenciales operativas (no se tocan).
