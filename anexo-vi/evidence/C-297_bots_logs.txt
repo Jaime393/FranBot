@@ -1,0 +1,10 @@
+Bots y emails en logs (ciclo 44). Sin valores ni direcciones.
+Los 3 logs del orquestador (orquestador.log 166.130 B,
+orquestador_supremo.log 12.633 B, orquestador_cron.log 6.213 B):
+0 nombres @...bot. 0 emails. 0 lineas que asocien bot con email.
+Asociacion bot -> email NO encontrada en logs (NO_SE).
+Lo visible: orquestador_supremo.log 10:41:56 lista nombres de
+credenciales TG_TOKEN_ALMA, TG_TOKEN_FAMILIAR, TG_TOKEN_FRANBOT,
+TG_TOKEN_MICELIO (los 4 bots vivos) y TG_BOT_TOKEN (quinto
+nombre generico). Solo nombres, nunca valores.
+Detalle en bots_emails_estructura.md.
