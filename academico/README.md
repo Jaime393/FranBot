@@ -8,8 +8,8 @@ Fecha: 2026-11-11. Solo SÉ con hash real y fuente verificable.
 - `TABLA_INMUNE_Y_PROTOCOLOS.md` — 34 filas. Inmune, protocolos y partituras. Solo SÉ con hash real.
 - `TABLA_DOIS_Y_ONTOLOGIA.md` — 15 filas. DOIs y ontología. Solo SÉ con hash real.
 - `PAPER_DOIS_MIU.md` — Corpus DOI del proyecto MIU: 18 registros verificados a 2026-11-11.
-- `dataset_nodos_Df.csv` — 0 filas de datos (solo cabecera). Ningún nodo cumple el criterio de inclusión.
-- `dataset_nodos_Df.md` — Qué mide D_f, cómo se calcula y por qué el dataset tiene 0 filas.
+- `dataset_nodos_Df.csv` — 23 filas de datos (22 nodos del corpus + CMB), con fuente DOI/URL y método box_counting.
+- `dataset_nodos_Df.md` — Qué mide D_f, los 23 nodos, su fuente y su método.
 
 Total tablas: 134 filas.
 
@@ -25,7 +25,7 @@ Hashes a 2026-11-11:
 - TABLA_INMUNE_Y_PROTOCOLOS.md: sha256:1c5f6c4acc0d3dff028e3fbe7b402740d3a738827641bdb0252774572e8cda57
 - TABLA_DOIS_Y_ONTOLOGIA.md: sha256:cb892dd96517e035619dd216b253ad39e05c630673c0ee926e4762e73e7af02f
 - PAPER_DOIS_MIU.md: sha256:ca3fbd8735a309d100ff06fe58f407c2e4aea0f01b8f1f84c432133e92b26e50
-- dataset_nodos_Df.csv: sha256:265eaa5134dddc0db7a83dd057eb46a260f1077d71b46854421c97720630f568
+- dataset_nodos_Df.csv: sha256:8b9f0d3a5d58276f19e27bf8b3829d003dbcb17f20e63781ca1b83a30d07abe5
 - dataset_nodos_Df.md: sha256:870530e95ff8a78ed328077906da6a79da08fdc1665252098c3c0ec06845db0b
 
 El hash de este README se verifica con `sha256sum README.md` y está en el claim C-372.
