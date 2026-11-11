@@ -226,4 +226,15 @@ Ninguna se registra como G13. G13 no existe y no se abre.
 **G-NUEVA: cerradas 5/5** (3 en ciclo 26 por integración, 2 en ciclo 27 por
 mapeo). Ninguna catalogada como G13. G13 no existe y no se abre.
 
+## Cierre de G-NUEVA-6 (Ciclo 30)
+
+- **G-NUEVA-6 (axiomas A0-A57 no documentados en anexo-vi): CERRADA en
+  ciclo 30**, extraídos del Vault a axiomas_a0_a57.md (58 axiomas, fuente
+  20 Axiomas_A0-A57_58_Completos.md, hash en evidence/
+  VAULT_axiomas_a0_a57.md). G07 queda cerrada parcialmente
+  (documentados, no validados: A10/A43 PVE-01, A29 ξ sin DOI, A31 hash
+  congelado). Claims C-086–C-090, C-095.
+
+**G-NUEVA: cerradas 6/6.**
+
 ρ(x) > 0.
