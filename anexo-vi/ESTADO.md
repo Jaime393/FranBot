@@ -386,6 +386,11 @@ en archivos locales; 11 afirmados. Emails: 89 únicos en
 archivos locales (87 gmail). No se escribió en ningún sitio.
 Claims 290 (hash_real 276).
 
+## Ciclo 47: filas 31–200, bots verificados (5ª vez), series de papers
+- Filas 31–200 de las 4 saturadas: 418 filas con datos (10: 6, 14: 72, 18: 170, 19: 170). Global: 18 emails distintos, 8 matches de bot (6 handles), 54 filas bot+email. Estructura 11/11 sigue PARCIAL. Pestañas 18/19 saturaron también 31–200 (más datos bajo fila 200).
+- getMe 5ª vez: 4 vivos, 2 muertos, sin cambios. Los 4 vivos coinciden con handles del Sheet. Nuevo handle imperio_franbot sin token → no verificable.
+- Snapshots: 0 posteriores a 2026-09-07. Series sí para papers (MIU 5, Grimorio 3, Framework 2); snapshot 1 versión. Consulta por autor HTTP 400; lista reconstruida por DOIs (17 conocidos). Claims 360 (hash_real 346).
+
 ## Ciclo 46: carpeta del inmune abierta, snapshots sin serie, orquestador filas 4-30
 - Inmune leído por su carpeta: workflow.json Relay (revisión 89, 2026-07-10, 3 hilos, 8 pasos, trigger webhook POST, modelo relay.gpt-5.4-mini); rama THREAT a score ≥50 (dentro de la banda AUDIT, no solo BLOCK ≥70). "Rebuscar" 0 menciones en workflow y prompt. run_history.csv vacío (0 filas).
 - Snapshots: concepto 22650418 existe, 1 sola versión (2026-09-07). 0 snapshots posteriores. La serie es de 1: la hipótesis C-325 no se confirma.
