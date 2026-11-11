@@ -1,0 +1,13 @@
+CICLO 46 - FRENTE C - Orquestador filas 4-30 (autorizacion explicita del Jardinero; solo conteos, sin valores)
+pestanas leidas (indices): 2, 6, 10, 14, 15, 16, 17, 18, 19, 22, 25
+filas con datos (de 27): 2:11, 6:10, 10:27, 14:27, 15:21, 16:0, 17:9, 18:27, 19:27, 22:3, 25:9 | TOTAL 171
+celdas con @ / menciones bot / DOIs / celdas 40+ por pestana:
+2: 0/0/0/2; 6: 5/0/0/10; 10: 11/0/0/18; 14: 22/0/0/11; 15: 5/18/0/5; 16: 0/0/0/0; 17: 9/0/0/0; 18: 36/11/0/18; 19: 31/7/0/16; 22: 3/0/0/1; 25: 0/2/0/17
+totales: @ 122, bot 38, DOIs 0, celdas 40+ 98
+distintos (conteo en proceso, sin reproducir valores): 16 emails distintos, 7 bots distintos
+filas con bot Y email a la vez: 12
+menciones de servicios por fila: gmail 99, cloudflare 22, drive 15, telegram 14, github 3, huggingface 2, supabase 1, zenodo 0
+estructura 11/11: PARCIAL (16 emails y 7 bots, no 11/11 exactos en este rango)
+pestanas saturadas (27/27, mas datos bajo fila 30): 10, 14, 18, 19
+pestana 16 vacia en filas 4-30
+nombres de pestanas, encabezados y valores de celdas NO reproducidos (regla de seguridad)
