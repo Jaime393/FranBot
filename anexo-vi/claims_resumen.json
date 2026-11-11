@@ -1,15 +1,15 @@
 {
-  "total": 365,
+  "total": 375,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 2,
-    "SE": 331,
+    "SE": 341,
     "REFUTADO": 2,
     "NO_SE": 8
   },
   "por_tipo": {
     "prediccion": 8,
-    "provenance": 18,
+    "provenance": 28,
     "digestion": 334,
     "consolidacion": 5
   },
@@ -18,7 +18,7 @@
     "G09": 69,
     "G01": 1,
     "G12": 4,
-    "G05": 47,
+    "G05": 57,
     "G-NUEVA: protocolos Drive no integrados en anexo-vi": 11,
     "G-NUEVA: pilares auditados no integrados en anexo-vi": 13,
     "G-NUEVA: registro de datos no integrado en anexo-vi": 2,
@@ -38,7 +38,7 @@
     "G-NUEVA: ciegos": 4,
     "G-NUEVA: consolidado": 5
   },
-  "hash_real": 351,
+  "hash_real": 361,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -405,6 +405,16 @@
     "C-362",
     "C-363",
     "C-364",
-    "C-365"
+    "C-365",
+    "C-366",
+    "C-367",
+    "C-368",
+    "C-369",
+    "C-370",
+    "C-371",
+    "C-372",
+    "C-373",
+    "C-374",
+    "C-375"
   ]
 }
