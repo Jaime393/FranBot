@@ -90,8 +90,11 @@ sea migrable, auditable y federable sin mezclar S1/S2/S3.
 | pve_01.py | PVE-01 implementado: 3 formas, medir_pve01, ejecutar_grace, demo, barrido_c, asintota (ciclos 34–36) | 2026-11-11 |
 | pve_01_resultado_ciclo35.md | Barrido de c: rango estable [2.5, 4.0], Ki=0.5835, G09 ambigua; asíntota 0.618 (ciclos 35–36) | 2026-11-11 |
 | pve_01_asintota.md | Asíntota 0.618 = φ⁻¹ exacto; corrección del 0.6138 (ciclo 36) | 2026-11-11 |
-| g09_estado_final.md | G09 cerrada parcialmente: compatible, no confirmada; sigue parcial (ciclos 36–37) | 2026-11-11 |
+| g09_estado_final.md | G09 cerrada parcialmente: compatible, no confirmada; sigue parcial (ciclos 36–38) | 2026-11-11 |
+| c20_definicion.md | C20 sin periodo dominante; c no definible desde C20 (ciclo 38) | 2026-11-11 |
+| c20_periodo.py | Autocorrelación + DFT de C20 en stdlib (ciclo 38) | 2026-11-11 |
+| g05_estado_ciclo38.md | G05 sondeada: worker 200, repo activo, bot sin datos (ciclo 38) | 2026-11-11 |
 | c_definicion.md | c sin definición: papers sin c, candidatos fuera de banda (ciclo 37) | 2026-11-11 |
 | pve01_nombres.md | PVE-01 protocolo (60 en Vault) vs pve-01 Proxmox (ciclo 37) | 2026-11-11 |
 | pve_01_implementado.md | Estado PVE-01: ejecutado en GRACE real, forma 3 viable, G09 abierta por c sin definir (ciclo 34) | 2026-11-11 |
-| nutrientes_zombis_decision.md | 25 zombis clasificados: 13 único, 12 sin valor; frases verificadas, defecto no tocar nada, sin autorización (ciclos 34–37) | 2026-11-11 |
+| nutrientes_zombis_decision.md | 25 zombis clasificados: 13 único, 12 sin valor; frases verificadas, defecto no tocar nada, sin autorización (ciclos 34–38) | 2026-11-11 |
