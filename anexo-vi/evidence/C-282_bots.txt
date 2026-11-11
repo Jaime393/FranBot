@@ -1,0 +1,13 @@
+Bots y emails (ciclo 43). Sin valores de tokens ni direcciones.
+getMe de las 6 entradas tipo telegram (solo lectura):
+entrada 1 HTTP 401; entrada 2 Micelio @Jp393_bot OK;
+entrada 3 Familiares @FranFamiliar_bot OK; entrada 4 HTTP 401;
+entrada 5 franbot_tablet_bot @franbottablet_bot OK;
+entrada 6 AlmaOmni_Bot @AlmaOmni_bot OK. 4 vivos, 2 muertos.
+Bots mencionados en archivos locales: 5 (los 4 vivos +
+@FranSell_Bot, 1 mencion, sin token vivo en el archivo).
+Afirmados por el Jardinero: 11 bots, 11 emails.
+Emails unicos en archivos locales: 89 (87 gmail.com,
+1 fosstodon.org, 1 artefacto). Direcciones no reproducidas.
+mapa_10_gmail_servicios.json (ciclo 31): 10 cuentas Gmail.
+Detalle en bots_emails_estructura.md.
