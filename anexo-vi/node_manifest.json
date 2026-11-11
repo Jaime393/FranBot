@@ -977,22 +977,45 @@
    "fecha": "2026-11-11T22:33:20Z"
   },
   "dataset_cruzado_csv": {
-   "fecha": "2026-11-11T22:57:40Z",
+   "fecha": "2026-11-11T23:07:03Z",
    "csv_leidos": [
     "fiji_wcs_macmon.csv",
     "jamaica_agrra.csv",
     "palk_bay_zsi2013.csv",
     "allen_atlas_site_013.csv",
     "reef_conteos_miu.csv",
-    "firms_df_Ki.csv"
+    "firms_df_Ki.csv",
+    "caribe_se_allen_atlas.csv",
+    "firms_incendios_global_2000-2026.csv",
+    "gmw_v4_global_2024.csv",
+    "wosis_chernozem_ukraine_dbd1.13.csv",
+    "wosis_vertisol_india_cec25.csv",
+    "red_sea_kaust_roberts2016.csv",
+    "florida_reef_noaa_ncei_0208322.csv",
+    "persian_gulf_aeby2020.csv",
+    "gbr_aims_thompson2014.csv",
+    "american_samoa_noaa_pifsc.csv",
+    "gbif_flora_875M_2026.csv",
+    "hmp2_human_3150_metagenomes.csv",
+    "soilgrids_gsocseq_global.csv",
+    "noaa_gistemp_global_1880-2026.csv",
+    "gdelt_events_1979-2026.csv"
    ],
-   "filas_confirmadas_csv": 3,
-   "filas_sin_csv": 18,
-   "filas_discrepancia": 2,
-   "fuente_archivo_columna": true
+   "filas_confirmadas_csv": 17,
+   "filas_sin_csv": 5,
+   "filas_discrepancia": 1,
+   "fuente_archivo_columna": true,
+   "sin_csv_buscable": 5,
+   "archivos_datos_encontrados": 13,
+   "sin_mencion_en_miu": 5,
+   "decision_firms": "conserva 1.49 (serie anual); 1.969 espacial, sin conflicto",
+   "reef_conteos": "no-nodo, sin fila"
   },
   "ciclo55": {
    "fecha": "2026-11-11T22:57:40Z"
+  },
+  "ciclo56": {
+   "fecha": "2026-11-11T23:07:03Z"
   }
  }
 }
