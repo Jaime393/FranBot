@@ -1,0 +1,16 @@
+EVIDENCIA — MIU#52 (ciclo 31)
+Issue: https://github.com/Jaime393/MIU/issues/52
+Titulo: "K_i es circular por construcción (tautología) y usa constantes hardcodeadas"
+Autor: Jaime393 (OWNER, id 70607642). Fecha: 2026-07-10T07:57:01Z. Estado: ABIERTO. Sin assignees, 0 reacciones, sin PRs de cierre.
+Cuerpo: archivos afectados ki_from_timeseries.py, miu_constants.py, df_from_firms.py, nodo_amazonia.py.
+compute_Ki(D_f, ell_corr=0.5, ell_0=0.5) = phi * (D_f / 2.5) * (ell_corr / ell_0), phi = 0.6180339887498949.
+Con defaults ell_corr == ell_0 => K_i = 0.2472·D_f, funcion lineal determinista de D_f.
+Correlacion K_i-D_f = 1.0 tautologica; el script imprime "K_i ley" y "K_i medido esperado" con el mismo valor.
+Divisor 2.5 hardcodeado en miu_constants.py. En df_from_firms.py, K_i = 0.375 puesto a mano, ni siquiera obedece la formula.
+Sugerencia: retirar K_i como metrica de validacion (ya rechazado en NUCLEO_TEORICO_MIU §3); medir una metrica independiente por via fisica ajena a D_f;
+mientras tanto calcular solo D_f; documentar la deprecacion en README y docstrings tras restaurar los modulos.
+Contexto: lote de 20 issues de auditoria abiertos el mismo dia (#38-#57) por Jaime393. Cita HUESO #24-#27.
+Relacion con G09: confirma que el ecosistema ya sabia; NO cierra G09 (PVE-01 sigue sin ejecutarse).
+Issues similares (MIU, abiertos, 2026-07-10): #48 (CSV corales invalido, K_i tautologico), #42 (CSV corales, K_i_measured == K_i_law == 0.494),
+#43 (scoring K_i fractal de ALMA_OMNI reintroduce metrica RECHAZADA), #44 y #53 (Omega_F aliasing/argmin), #56 (test_random_phi.py y test_ift_solver.py no son tests),
+#57 (secretos en texto plano), #45 (secretos en artefactos, P0). Busqueda semantica "circular"/"tautolog": 0 resultados.
