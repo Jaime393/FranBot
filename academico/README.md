@@ -8,7 +8,7 @@ Fecha: 2026-11-11. Solo SÉ con hash real y fuente verificable.
 - `TABLA_INMUNE_Y_PROTOCOLOS.md` — 34 filas. Inmune, protocolos y partituras. Solo SÉ con hash real.
 - `TABLA_DOIS_Y_ONTOLOGIA.md` — 15 filas. DOIs y ontología. Solo SÉ con hash real.
 - `PAPER_DOIS_MIU.md` — Corpus DOI del proyecto MIU: 18 registros verificados a 2026-11-11.
-- `dataset_nodos_Df.csv` — 23 filas de datos (22 nodos del corpus + CMB), con fuente DOI/URL, método box_counting y columna `fuente_archivo` (ruta en GitHub cuando el valor está confirmado por CSV). Cruce completo a ciclo 57: 18 CONFIRMADO_CSV, 0 DISCREPANCIA_CSV, 5 SIN_CSV_BUSCABLE.
+- `dataset_nodos_Df.csv` — 23 filas de datos (22 nodos del corpus + CMB), con fuente DOI/URL, método box_counting y columna `fuente_archivo` (ruta en GitHub cuando el valor está confirmado por CSV). Cruce completo a ciclo 58: 19 confirmados (18 CONFIRMADO_CSV + 1 CONFIRMADO_RED: GBR Seagrass), 0 DISCREPANCIA_CSV, 4 SIN_CSV_BUSCABLE.
 - `dataset_nodos_Df.md` — Qué mide D_f, los 23 nodos, su fuente y su método. Incluye el cruce con los CSV de GitHub (ciclos 55–57).
 - `LITERATURA_EXTERNA.md` — Literatura externa verificada: corpus DOI, repos, citas y CSV reales con D_f (ciclos 54–57).
 - `OBSERVACION_EXTERNA_2026-11-11.md` — Observación externa paralela sobre fuentes públicas (ciclo 53).
@@ -27,9 +27,9 @@ Hashes a 2026-11-11:
 - TABLA_INMUNE_Y_PROTOCOLOS.md: sha256:1c5f6c4acc0d3dff028e3fbe7b402740d3a738827641bdb0252774572e8cda57
 - TABLA_DOIS_Y_ONTOLOGIA.md: sha256:cb892dd96517e035619dd216b253ad39e05c630673c0ee926e4762e73e7af02f
 - PAPER_DOIS_MIU.md: sha256:ca3fbd8735a309d100ff06fe58f407c2e4aea0f01b8f1f84c432133e92b26e50
-- dataset_nodos_Df.csv: sha256:6d644106a64625b2b79e5d107cd05962d2e06041e9192b9c216d4f71b6945ade
-- dataset_nodos_Df.md: sha256:9ce6e06dab8ed5d6e7de58379550161e37a1dc60f00769860b4dac75d52cb4d2
-- LITERATURA_EXTERNA.md: sha256:00848e4fb9526b8f64dfe2ae7e2adf97a7539dd2e74d4a66080001c5e4ab5523
+- dataset_nodos_Df.csv: sha256:7b7778870784100fb257796c6a8e56558ef5be0496e0a6b79fb4217907a6a16e
+- dataset_nodos_Df.md: sha256:25fd3617f4decd33e94242d1b19bb1cf0583aac334030559e148da1336049d2c
+- LITERATURA_EXTERNA.md: sha256:f8a42f39f6b2de13f97b04f47d02758c3e0910ccf7e701a3a39e5f18e867b140
 
 El hash de este README se verifica con `sha256sum README.md` y está en el claim C-372.
 
