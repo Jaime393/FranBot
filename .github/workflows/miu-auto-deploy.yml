@@ -5,12 +5,10 @@ on:
     branches: [main]
 permissions:
   contents: write
+  pages: write
 concurrency:
   group: franbot-auto-deploy
   cancel-in-progress: false
-permissions:
-  contents: write
-  pages: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
