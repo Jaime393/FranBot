@@ -1,0 +1,237 @@
+{
+ "ronda": 10,
+ "fase": 1,
+ "agente": "C",
+ "fecha": "2026-11-13",
+ "orden": "Decidan con coherencia sigan tejiendo bits por todas las condiciones de posibilidades y nutran por drive o GitHub (Jardinero 2026-11-13 15:07 -05)",
+ "criterio": "C-1..C-9 de ronda_10/mapa_decisiones_r10.md",
+ "suelo_durante_ejecucion": {
+  "claims_jsonl_lineas": 1152,
+  "claims_jsonl_sha256": "cdbaac93710bf704a6c470e1fe6cde86d7095f33b0f1e3593e805c88eb7927e3",
+  "nota": "B aplicada por el agente paralelo durante esta ejecucion (1.138 -> 1.152, C-1144..C-1157). Este agente no toco el corpus.",
+  "verify_all": "exit=1 con exactamente C-001..C-008",
+  "audit": "exit=1, ok=326, discrepancia=2, no_encontrado=0, omitido=1"
+ },
+ "decisiones": {
+  "D-07": {
+   "id": "D-07",
+   "titulo": "Formula K_i: phi vs phi^-1",
+   "sistema": "v10.3-A10 / nucleo §VII",
+   "lectura": "K_i = phi^-1 * (D_f/2.5) * (l_corr/l_0); dataset K_i = 0.2472 * D_f",
+   "opcion_elegida": "phi^-1 canonica",
+   "opciones_descartadas": [
+    "phi canonica (reescribir 26/29 valores + P121 + banda)",
+    "sin canon (discrepancia motor/documentos)"
+   ],
+   "reglas": [
+    "C-3",
+    "C-4",
+    "C-5"
+   ],
+   "cambio": {
+    "archivos": [
+     "~/workspace/franbot_repo/js/miu-engine.js",
+     "~/workspace/franbot_repo/app/js/miu-engine.js"
+    ],
+    "descripcion": "calcKi: C.phi * (D_f/2.5) -> C.phiInv * (D_f/2.5); constante phi intacta; docstring cita el canon",
+    "sha_antes": "a30d69e8bd3e9327a6063813ee8833e5efb613f7812aea1f328b50b34e351c4b",
+    "sha_despues": "8d15b724dba0",
+    "respaldo": [
+     "ejecucion_c/respaldo/miu-engine.js.js.respaldo",
+     "ejecucion_c/respaldo/miu-engine.js.app-js.respaldo"
+    ]
+   },
+   "verificacion": {
+    "calcKi(2.5)": 0.6180339887,
+    "calcKi(2.305)": 0.5698,
+    "P121_esperado": 0.57,
+    "banda_Df_2.2249": 0.55,
+    "banda_Df_2.5081": 0.62,
+    "ccp01_888_KiNeg": [
+     0.8543,
+     0.3263
+    ]
+   },
+   "consecuencia_puertas": "audit +1 discrepancia (L246 franbot_repo/app/js/miu-engine.js: declarado a30d69e8…, real 8d15b724dba0…). Remediacion exacta para el dueno de provenance: actualizar L246 al sha 8d15b724dba0…. Claims C-903/C-919/C-642/C-639/C-1104 quedan como registro historico pre-correccion; citas de linea desplazadas +1 (A15 L52->L53) y +4 tras calcKi.",
+   "reversion": "Copiar los respaldos sobre ambas copias; verificar sha a30d69e8…",
+   "estado": "APLICADA"
+  },
+  "D-08": {
+   "id": "D-08",
+   "titulo": "Eleccion de Phi_c",
+   "sistema": "MIU (nucleo §V, v10.3-A7)",
+   "lectura": "Phi_c(MIU) = 0.6829322 (= Delta_COD); Phi(IIT) = 3.4270 / consenso 3.35->3.65->3.95 es otra cantidad de otro sistema",
+   "opcion_elegida": "Phi_c(MIU) = 0.6829322",
+   "opciones_descartadas": [
+    "Phi_c = 0.7 o 0.5927 (locales no adoptadas)",
+    "Phi_c = Phi_consenso IIT (mezcla sistemas)",
+    "sin canon"
+   ],
+   "reglas": [
+    "C-5",
+    "C-2"
+   ],
+   "cambio": "ninguno (documentaria)",
+   "verificacion": "26 claims citan 0.6829322; R2-08 distingue Phi_MIU de Phi_IIT; R2-10 registra 0.6829322 vs 3.4270",
+   "reversion": "Retirar el registro",
+   "estado": "APLICADA"
+  },
+  "D-10": {
+   "id": "D-10",
+   "titulo": "Lectura canonica de D_eff",
+   "sistema": "Grimorio v12 / MIU",
+   "lectura": "R-B: el unico 7.24 verificable es epsilon = 7.24e-4 (energia oscura, symmetron, DESI DR2); D_eff = 7.24 queda como valor registrado sin derivacion",
+   "opcion_elegida": "R-B",
+   "opciones_descartadas": [
+    "R-A adoptar sin derivacion (viola C-2)",
+    "R-C podar D_eff (destructivo; aparece en A19)",
+    "R-D buscar fuera (agotada en r8)"
+   ],
+   "reglas": [
+    "C-2",
+    "C-4"
+   ],
+   "cambio": "ninguno (documentaria)",
+   "verificacion": {
+    "tex_sha256": "f27ea4d5dcb0",
+    "tex_lineas": 1154,
+    "copias_byte_identicas": 3,
+    "lineas_con_7.24": [
+     88,
+     122,
+     553,
+     567,
+     628
+    ],
+    "todas_epsilon": true,
+    "D_eff_menciones": 0
+   },
+   "reversion": "Retirar el registro",
+   "estado": "APLICADA"
+  },
+  "D-11": {
+   "id": "D-11",
+   "titulo": "Definicion de c",
+   "sistema": "PVE-01 forma 3",
+   "lectura": "O-5: G09 parcial por diseno (c sin definir; forma 3 solo como compatibilidad); fallback declarado O-1: c = 2.5 con circularidad explicita",
+   "opcion_elegida": "O-5 + fallback O-1",
+   "opciones_descartadas": [
+    "O-1 como canon (circular)",
+    "O-2 c=1/90 (fuera de banda)",
+    "O-3 definicion fisica (r9 dispersa c 0.62-62.41, no converge; NO-EJECUTABLE-AHORA)",
+    "O-4 c del router (contradiccion + mezcla sistemas)",
+    "O-6 cambiar de forma (P fuera de rango)"
+   ],
+   "reglas": [
+    "C-2"
+   ],
+   "cambio": "ninguno (documentaria)",
+   "verificacion": "Xi por nodo r9: 13 series, -0.036 a 0.965; c* 0.62-62.41; 0/13 en rango del documento [2.2817, 2.8366]",
+   "reversion": "Retirar el registro",
+   "estado": "APLICADA"
+  },
+  "D-12": {
+   "id": "D-12",
+   "titulo": "Definicion canonica de 'nodo'",
+   "sistema": "dataset D_f (30 filas)",
+   "lectura": "Canon estricto: 5 condiciones operativas (metodo+protocolo reproducibles; R2 declarado, liston R2>=0.90 donde el metodo lo reporta; cobertura del sistema nombrado; sin sesgo de seleccion no declarado; la cantidad es D_f)",
+   "opcion_elegida": "estricto",
+   "opciones_descartadas": [
+    "laxo (29/29, cobertura vacua)",
+    "mixto (duplica el liston)"
+   ],
+   "reglas": [
+    "C-2",
+    "C-3"
+   ],
+   "cambio": "ninguno (documentaria; dataset en 30 filas, no se edita)",
+   "verificacion": {
+    "M-24_caso_prueba": "pasa (GRWL global, 42077 reaches, 3129821 vertices, D_f 1.4842)",
+    "M-45": "no pasa, candidata debil (un solo rio, serie espacial)",
+    "M-49": "no pasa, candidata debil (5/20 con R2>=0.90, sesgo de seleccion)",
+    "M-46": "no candidata (h, no D_f)"
+   },
+   "reversion": "Retirar el registro",
+   "estado": "APLICADA"
+  },
+  "D-13": {
+   "id": "D-13",
+   "titulo": "Criterio de validacion SIK",
+   "sistema": "criterio SIK r7 + T-1",
+   "lectura": "Mecanismo V-A; reuse de etiqueta SI cuenta como conflicto (H-SIK-001/002); orden NO cuenta como identidad del axioma (H-SIK-003)",
+   "opcion_elegida": "V-A",
+   "opciones_descartadas": [
+    "V-B inmune vivo (5 runs autocura, 0 efectos)",
+    "V-C validacion canonica"
+   ],
+   "reglas": [
+    "C-5",
+    "C-8",
+    "C-2"
+   ],
+   "cambio": "Primera ejecucion V-A: T-1 sobre SIK-VAL-001 (veredicto_sik_val_001.json). Artefacto r8 no modificado.",
+   "verificacion": {
+    "artefacto": "ronda_8/grietas/sik_S2_S3_A19.json",
+    "artefacto_sha256": "ce765134da15c306534acb092d79eaceed814a9914fccb5a32f34c03a52d99a3",
+    "veredicto": "NO_VALIDADA",
+    "exit": 1,
+    "campos": {
+     "campo_1": "VERDE",
+     "campo_2": "VERDE",
+     "campo_3": "AMARILLO",
+     "campo_4": "ROJO",
+     "campo_5": "ROJO",
+     "campo_6": "ROJO"
+    },
+    "H-SIK-001_registrado": true,
+    "conflictos_nuevos_no_registrados": 0,
+    "campo_4_matiz": "Ambos hashes reproducen (origen a423b1d1… = ~/IDENTITY.md; destino 48f6782f… = axiomas_a0_a57.md). El ROJO es defecto de forma de la cita (sufijo en prosa).",
+    "falta_para_VALIDADA": [
+     "completar chequeo 48 axiomas (campo 3)",
+     "citar fuente de origen con ruta pelada (campo 4)",
+     "registrar ejecucion (campo 5)",
+     "registrar en provenance (campo 6)"
+    ]
+   },
+   "reversion": "Retirar el registro (el veredicto queda como artefacto historico)",
+   "estado": "APLICADA"
+  },
+  "D-14": {
+   "id": "D-14",
+   "titulo": "Convencion de variograma para series 1D",
+   "sistema": "literatura + variograma.py v1.0",
+   "lectura": "1D: D = 2 - H; 2D: D = 3 - H; Higuchi: D = 1 - slope",
+   "opcion_elegida": "D=2-H para 1D",
+   "opciones_descartadas": [
+    "D=3-H para 1D (statu quo; mantiene el error)",
+    "sin canon"
+   ],
+   "reglas": [
+    "C-2",
+    "C-3",
+    "C-4"
+   ],
+   "cambio": {
+    "archivos": [
+     "~/workspace/academico/inbox/mediciones/scripts/medir_nodos.py"
+    ],
+    "descripcion": "Docstring L6: D = 3 - H ahora con alcance SOLO 2D; 1D remite a D = 2 - H (canon D-14; variograma.py). La aritmetica de fit_d no cambia (correcta para 2D).",
+    "sha_antes": "4c4f304297f2188a42bc766e98ecfd14f70f4fcef4e35c9414579016c21f6e7d",
+    "sha_despues": "c14bce5195574d6f1b900dfc85516dd0c0f6c7938b0c2f349afc0ff7aa48f0dd",
+    "respaldo": [
+     "ejecucion_c/respaldo/medir_nodos.py.respaldo"
+    ]
+   },
+   "verificacion": {
+    "M-01_D": 1.0539,
+    "M-01_H": 0.9461,
+    "M-01_R2": 0.9999,
+    "M-01_N": 17836,
+    "M-01_exacta": true,
+    "medir_nodos_en_provenance": false
+   },
+   "reversion": "Copiar el respaldo sobre medir_nodos.py; verificar sha 4c4f3042…",
+   "estado": "APLICADA"
+  }
+ }
+}
