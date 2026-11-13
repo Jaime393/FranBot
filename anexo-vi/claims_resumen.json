@@ -1,9 +1,9 @@
 {
-  "total": 1160,
+  "total": 1162,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1028,
+    "SE": 1030,
     "REFUTADO": 2,
     "NO_SE": 8
   },
@@ -11,8 +11,8 @@
     "prediccion": 8,
     "provenance": 78,
     "digestion": 658,
-    "consolidacion": 5,
-    "verificacion": 294,
+    "consolidacion": 6,
+    "verificacion": 295,
     "conflicto": 64,
     "hueco": 40,
     "calculo": 3,
@@ -33,7 +33,7 @@
     "G-NUEVA: partituras cientificas no catalogadas en anexo-vi": 14,
     "G-NUEVA: linea de tiempo K_tau no integrada en anexo-vi": 1,
     "G-NUEVA: estructura MIU no mapeada en anexo-vi": 59,
-    "G07": 12,
+    "G07": 13,
     "G-NUEVA-ZOMBI": 28,
     "G-NUEVA: sondeo formatos": 5,
     "G-NUEVA: conectores": 4,
@@ -48,10 +48,10 @@
     "G-NUEVA: tejido_2026-11-12 no integrado en anexo-vi": 510,
     "G02": 22,
     "G06": 1,
-    "G04": 1,
+    "G04": 2,
     "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi": 18
   },
-  "hash_real": 1146,
+  "hash_real": 1148,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1213,6 +1213,8 @@
     "C-1162",
     "C-1163",
     "C-1164",
-    "C-1165"
+    "C-1165",
+    "C-1166",
+    "C-1167"
   ]
 }
