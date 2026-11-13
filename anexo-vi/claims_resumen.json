@@ -3,8 +3,8 @@
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1030,
-    "REFUTADO": 2,
+    "SE": 1028,
+    "REFUTADO": 4,
     "NO_SE": 8
   },
   "por_tipo": {
