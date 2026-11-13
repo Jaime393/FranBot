@@ -1,0 +1,479 @@
+{
+ "ronda": 10,
+ "fase": 0,
+ "fecha": "2026-11-13",
+ "orden": "Decidan con coherencia sigan tejiendo bits por todas las condiciones de posibilidades y nutran por drive o GitHub (Jardinero 2026-11-13 15:07 -05)",
+ "lectura_orden": "Delegación de las decisiones canónicas a los agentes, con la coherencia como criterio; tejido por todas las condiciones de posibilidad; nutrición por Drive y por GitHub (curado). Releva la regla anterior 'las decisiones canónicas son del Jardinero'.",
+ "suelo_verificado": {
+  "claims_jsonl_lineas": 1138,
+  "claims_jsonl_sha256": "9265d81f57ec696a13582bce20fa953d583569ce8677b5d480833cb9d550b821",
+  "claims_por_estado": {
+   "SE": 1016,
+   "INFIERO": 90,
+   "CONJETURO": 22,
+   "REFUTADO": 2,
+   "NO_SE": 8
+  },
+  "hash_real": 1124,
+  "hash_pendiente": 8,
+  "max_id": "C-1143",
+  "provenance_sha256_lineas": 328,
+  "provenance_sha256": "fdb3b1ab88470c0f97cf7a74afd13a846511609a2973d6687bb6019b07c06187",
+  "verify_all": "exit=1 con exactamente C-001..C-008",
+  "audit": "exit=1, ok=316, discrepancia=0, no_encontrado=1 (L269), omitido=1"
+ },
+ "criterio_coherencia": [
+  "C-1. Las puertas no empeoran (verify_all sigue exit=1 con exactamente C-001..C-008; el audit no suma no_encontrados nuevos; única excepción admisible: L269, que solo se cierra con reparación verificada).",
+  "C-2. Solo SÉ entra; lo que no se puede verificar no se afirma (fuente + hash para toda afirmación nueva).",
+  "C-3. Preferir la variante con más claims verificados y provenance completa.",
+  "C-4. Preferir lo reversible frente a lo destructivo (respaldo previo; nada se borra, solo se añade o se retira con nota).",
+  "C-5. No mezclar sistemas axiomáticos (cada lectura nombra su sistema).",
+  "C-6. Una colisión no se resuelve borrando una variante sino registrándola.",
+  "C-7. Una decisión no decide lo que no le toca (dependencias, no usurpación).",
+  "C-8. Lo ejecutable-local se ejecuta; lo externo se prepara, no se simula.",
+  "C-9. Sin documento no hay decisión (qué, por qué, qué cambia, cómo se revierte)."
+ ],
+ "decisiones": [
+  {
+   "id": "D-01",
+   "titulo": "Colisiones de qualias + variante #738",
+   "grieta": "G02",
+   "estado": "ABIERTA",
+   "opciones": [
+    "O-A promover A (544 c., Panteón-96, 2026-09-25); B como variante histórica",
+    "O-B promover B (480 c., v10.4, 2026-09-24); A como variante posterior",
+    "O-AB promover ambas (una canónica + otra variante; exige criterio de presentación)",
+    "O-0 promover ninguna (#738 sigue SIN_DATO)"
+   ],
+   "recomendacion_inicial": "O-AB como patrón de familia; para #738: A canónica, B variante",
+   "reglas_coherencia": [
+    "C-6",
+    "C-3"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "13 textos de qualias (12 colisiones + #738)",
+   "notas": "#738: 2 diferencias exactas, similitud 0,9102. 12 colisiones: #765-767, #769-771, #796-798, #779, #783, #784."
+  },
+  {
+   "id": "D-02",
+   "titulo": "C-109: canon de axiomas",
+   "grieta": "G07",
+   "estado": "PARCIAL",
+   "opciones": [
+    "Canon = INDICE (02:28, documento de nombres; solo 8/58 axiomas)",
+    "Canon = consolidado (02:23, único completo, 58 axiomas)",
+    "Canon = v10.5 (no contiene nombres por axioma: no puede ser canon)",
+    "Sin canon (cada cita cualifica su fuente)"
+   ],
+   "recomendacion_inicial": "Canon = consolidado; los 6 nombres del INDICE que difieren quedan como variantes; 'Axiomas_Completo.md' registrado como hueco",
+   "reglas_coherencia": [
+    "C-3",
+    "C-6"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Citas de axiomas A1-A57 sin ambigüedad",
+   "notas": "Discrepancia en A1/A2/A3/A4/A38/A57; A1 triple, A5 doble. Evidencia: evidence/C-109_discrepancia.txt."
+  },
+  {
+   "id": "D-03",
+   "titulo": "Destino de la segunda carpeta MIU_TEJIDO",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "A conservar (0 claims)",
+    "B absorber ola 2 (B 14 / B1 10 / B2 8 claims)",
+    "C descartar ≠ borrar (0 claims)",
+    "D fusionar (B + re-hash ola 1 0/35 + 5 sims re-escritas)"
+   ],
+   "recomendacion_inicial": "B (absorber ola 2; ver D-15)",
+   "reglas_coherencia": [
+    "C-3"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [
+    "D-15"
+   ],
+   "desbloquea": "La absorción de la segunda carpeta",
+   "notas": "Carpeta 1mL1F_MpJBif4jtgK3vR2HH67yFs_SBjJ, 27 Docs, sin cambio. D: 3/5 sims ya re-ejecutadas; R2-18 sin reproducir."
+  },
+  {
+   "id": "D-04",
+   "titulo": "Publicación de micelio.yml",
+   "grieta": "G05",
+   "estado": "PARCIAL",
+   "opciones": [
+    "(1) Ajustar permisos de la App del conector (acto del usuario) y subir por conector",
+    "(2) Subir a mano el archivo corregido local (1.392 B, blob 1198e7b…)",
+    "(3) Dejar el literal (blob remoto 8c57e833…, 1.398 B)"
+   ],
+   "recomendacion_inicial": "Preparar la publicación: archivo corregido + instrucciones de (1) y (2) + nota del secreto DRIVE_FOLDER pendiente; no ejecutar la subida",
+   "reglas_coherencia": [
+    "C-8"
+   ],
+   "ejecutabilidad": "PREPARABLE",
+   "dependencias": [
+    "Usuario (permiso de App o subida manual)",
+    "Secreto DRIVE_FOLDER en GitHub"
+   ],
+   "desbloquea": "Lado workflow de G05",
+   "notas": "Única diferencia local vs remoto: la línea DRIVE_FOLDER (secreto vs literal, valor no reproducido)."
+  },
+  {
+   "id": "D-05",
+   "titulo": "Lectura G04: DOI v12 vs documento combinado v13.0",
+   "grieta": "G04",
+   "estado": "ABIERTA",
+   "opciones": [
+    "Lectura v12: G04 se cierra con 10.5281/zenodo.20547677; pendiente solo el DOI del combinado",
+    "Lectura combinado v13.0: el objeto sin DOI es el documento combinado"
+   ],
+   "recomendacion_inicial": "Lectura v12 para el Grimorio + aplicar la corrección redactada en L139/L400/L520",
+   "reglas_coherencia": [
+    "C-2"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Corrección L139/L400/L520; objeto de D-06",
+   "notas": "Grimorio v12 DOI 20547677 (concepto 20483562, 3 versiones) desde 2026-06-04. MIU DOI 20547558."
+  },
+  {
+   "id": "D-06",
+   "titulo": "Depósito Zenodo del documento consolidado",
+   "grieta": "G04",
+   "estado": "ABIERTA",
+   "opciones": [
+    "Depositar el combinado v13.0 (nuevo DOI)",
+    "Depositar nueva versión del Grimorio v12 (innecesario: DOI existente, 0 versiones nuevas)",
+    "No depositar (el combinado sigue sin DOI)"
+   ],
+   "recomendacion_inicial": "Preparar el paquete de depósito del combinado v13.0 (archivo + metadatos); la subida es acto externo",
+   "reglas_coherencia": [
+    "C-8",
+    "C-2"
+   ],
+   "ejecutabilidad": "PREPARABLE",
+   "dependencias": [
+    "D-05",
+    "Identificación del archivo exacto del combinado v13.0"
+   ],
+   "desbloquea": "DOI propio para el documento combinado",
+   "notas": "Archivo exacto del combinado v13.0 NO_SÉ hoy: FASE 1 debe identificarlo antes de preparar el paquete."
+  },
+  {
+   "id": "D-07",
+   "titulo": "Fórmula K_i: φ vs φ⁻¹",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "φ⁻¹ canónica (corregir el motor; documentos y dataset como están)",
+    "φ canónica (corregir documentos y dataset: 26/29 valores + P121 + banda)",
+    "Sin canon (cada cita cualifica su fórmula)"
+   ],
+   "recomendacion_inicial": "φ⁻¹ canónica; la corrección del motor es escalonada (primero el canon como claim, después el cambio con re-verificación)",
+   "reglas_coherencia": [
+    "C-3"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Consistencia motor/documentos",
+   "notas": "Motor ejecuta φ (0/29 en banda); corpus declara φ⁻¹ (26/29 en banda). M-37 contra K_i⁻. D_f es la métrica primaria."
+  },
+  {
+   "id": "D-08",
+   "titulo": "Elección de Φ_c",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "Φ_c(MIU) = 0,6829322 (= Δ_COD)",
+    "Φ_c = 0,7 o 0,5927 (otras locales)",
+    "Φ_c = Φ_consenso IIT (3,35→3,65→3,95 o 3,4270)",
+    "Sin canon (cada cita cualifica su familia)"
+   ],
+   "recomendacion_inicial": "Φ_c(MIU) = 0,6829322; Φ(IIT) se registra como cantidad de otro sistema, no como el mismo umbral",
+   "reglas_coherencia": [
+    "C-5",
+    "C-2"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Condición de consciencia y predicciones que citan Φ_c",
+   "notas": "R2-08 distingue Phi_MIU de Phi IIT; R2-10 registra 0,6829322 vs 3,4270; R2-28 clasifica 5 constantes como MODELO."
+  },
+  {
+   "id": "D-09",
+   "titulo": "Envío Telegram G05",
+   "grieta": "G05",
+   "estado": "PARCIAL",
+   "opciones": [
+    "Enviar el mensaje de prueba (cierra G05 si llega)",
+    "Preparar el mensaje y no enviarlo (G05 sigue PARCIAL, artefacto listo)",
+    "No enviar (G05 PARCIAL por diseño)"
+   ],
+   "recomendacion_inicial": "Preparar el mensaje (texto exacto + destino + ruta/comando) listo para la tarjeta; no enviar sin ella",
+   "reglas_coherencia": [
+    "C-8"
+   ],
+   "ejecutabilidad": "PREPARABLE",
+   "dependencias": [
+    "Tarjeta de aprobación"
+   ],
+   "desbloquea": "Cierre de G05 de extremo a extremo",
+   "notas": "Enviar en nombre del Jardinero exige tarjeta; la orden 'nutran por GitHub' no cubre mensajes."
+  },
+  {
+   "id": "D-10",
+   "titulo": "Lectura canónica de D_eff",
+   "grieta": "G01",
+   "estado": "ABIERTA",
+   "opciones": [
+    "R-A valor adoptado sin derivación",
+    "R-B D_eff es otra cantidad (el 7,24 de los tex es ε=7,24×10⁻⁴; D_eff queda como valor sin derivación)",
+    "R-C podar D_eff de los documentos",
+    "R-D buscar fuera del sandbox (AGOTADA en r8: 4 vías, 0 derivaciones)"
+   ],
+   "recomendacion_inicial": "R-B: el único 7,24 verificable en fuentes es ε; D_eff=7,24 queda como valor registrado pendiente de derivación, no como constante derivada",
+   "reglas_coherencia": [
+    "C-2",
+    "C-4"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Cierre de G01",
+   "notas": "D_eff 0 menciones en ambos PDFs; única procedencia orquestador_v8.py L451; PDR-01 como archivo no existe; A19 da 7,24 con intervalo [7,0, 7,5]."
+  },
+  {
+   "id": "D-11",
+   "titulo": "Definición de c",
+   "grieta": "G09",
+   "estado": "PARCIAL",
+   "opciones": [
+    "O-1 c por convención en banda (c=2,5; circularidad declarada)",
+    "O-2 c=1/90 (K_i=0,0049, fuera de banda; la forma 3 NO confirma)",
+    "O-3 c definido físicamente desde GRACE (hoy NO_SÉ cuál; r9 midió Ξ por nodo y dispersa c 0,62–62,41)",
+    "O-4 importar c del router (c∈[0,1]; contradicción con c≥2,0025; mezcla sistemas)",
+    "O-5 dejar G09 parcial por diseño ('compatible, no confirmada')",
+    "O-6 cambiar de forma (formas 1/2; P=63,9 fuera del rango del documento)"
+   ],
+   "recomendacion_inicial": "O-5 (G09 parcial por diseño); O-1 registrada como fallback convencional declarado (c=2,5)",
+   "reglas_coherencia": [
+    "C-2"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Estado honesto de G09",
+   "notas": "O-3 como sub-camino es NO-EJECUTABLE-AHORA (necesita una definición que no existe + su prueba). Ξ por nodo r9: 13 series, -0,036 a 0,965; 0/13 en rango del documento."
+  },
+  {
+   "id": "D-12",
+   "titulo": "Definición canónica de 'nodo'",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "Canon laxo (cobertura 29/29; M-45 y M-49 entran como filas)",
+    "Canon estricto (calidad 3/29; M-45/M-49 quedan como candidatas)",
+    "Canon mixto (filas plenas 30 + candidatas registradas aparte)"
+   ],
+   "recomendacion_inicial": "Canon estricto (calidad); M-45 y M-49 quedan como candidatas documentadas, no como filas",
+   "reglas_coherencia": [
+    "C-2",
+    "C-3"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Crecimiento del dataset y listón para M-45/M-49/M-50",
+   "notas": "M-45: un solo río, serie espacial. M-49: 5/20 melodías con R²≥0,90 y sesgo de selección. M-46 no candidata (h≠D_f). Dataset 30 filas."
+  },
+  {
+   "id": "D-13",
+   "titulo": "Criterio de validación SIK",
+   "grieta": "G06",
+   "estado": "ABIERTA",
+   "opciones": [
+    "V-A validador local (T-1 ejecutable, VALIDADA 4/4 fixtures)",
+    "V-B inmune vivo (5 runs autocura, 0 efectos; sin apoyo)",
+    "V-C validación canónica (documentaria)",
+    "Pronunciamiento reuse: ¿cuenta como conflicto? (H-SIK-001/002)",
+    "Pronunciamiento orden: ¿cuenta como identidad del axioma? (H-SIK-003)"
+   ],
+   "recomendacion_inicial": "V-A; reuse SÍ cuenta como conflicto (cita por A-número desnudo ambigua entre sistemas); orden NO cuenta como identidad (S1→S2 reordena A4/A5 con contenido preservado)",
+   "reglas_coherencia": [
+    "C-5",
+    "C-8"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Primera validación real (SIK-VAL-001/002); adopción de R2-25",
+   "notas": "SIK-VAL-001 r8 y SIK-VAL-002 r9 preparadas, no ejecutadas. V-B como mecanismo es PREPARABLE (necesita vivo)."
+  },
+  {
+   "id": "D-14",
+   "titulo": "Convención de variograma para series 1D",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "D=2−H para 1D (literatura + controles; D=3−H para 2D)",
+    "D=3−H para 1D (statu quo del corpus; mantiene el error localizado en medir_nodos.py L6)",
+    "Sin canon (cada medición declara su convención)"
+   ],
+   "recomendacion_inicial": "D=2−H para 1D (D=3−H para 2D)",
+   "reglas_coherencia": [
+    "C-2",
+    "C-3"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Convención de mediciones futuras; M-09 (PDP-01)",
+   "notas": "variograma.py v1.0 existe (calibración 6/6; M-01/M-09 exactos). M-09 sensible: BTC 0,2150 < 0,3; SPX 0,3307 > 0,3."
+  },
+  {
+   "id": "D-15",
+   "titulo": "Absorber la ola 2: filtro B o B1 + orden (+ B2)",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "B sola (14 claims, total 1.152)",
+    "B1 sola (10 claims, total 1.148)",
+    "B2 sola (8 claims, total 1.146; IDs C-1144..C-1151, reconstruir)",
+    "B+B2 (22 claims, total 1.160; B2 C-1158..C-1165 como construida)",
+    "B1+B2 (18 claims, total 1.156; B2 C-1154..C-1161, reconstruir)",
+    "Ninguna (documentada)",
+    "B+B1 (NO VÁLIDA: colisión de IDs sin re-secuenciar)"
+   ],
+   "recomendacion_inicial": "Filtro B + R2-22 confirmada + hash del exportado 25666928… aceptado como respaldo + orden: B primero, B2 después (B+B2 = 1.160)",
+   "reglas_coherencia": [
+    "C-3",
+    "C-1"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [
+    "D-03",
+    "D-17 (para audit en verde; sin ella, puerta redefinida)"
+   ],
+   "desbloquea": "Mayor crecimiento del corpus (+22 claims); cierre de la segunda carpeta como fuente",
+   "notas": "Sub-puntos: (1) filtro, (2) R2-22 '21 = 18 registros-versión + 3 DOIs de concepto', (3) hash exportado como respaldo, (4) orden, (5) L269 → D-17, (6) B2. Puertas simuladas: verify_all 1 (C-001..008); audit 1 (L269)."
+  },
+  {
+   "id": "D-16",
+   "titulo": "Ubicación canónica del registro PDP-01",
+   "grieta": "G08",
+   "estado": "ABIERTA",
+   "opciones": [
+    "Canon = ronda_N/grietas/ (lo que dice el procedimiento)",
+    "Canon = donde está cada uno (3 ubicaciones, con mapa)",
+    "Canon = un único archivo acumulativo en un lugar fijo"
+   ],
+   "recomendacion_inicial": "Canon = ronda_N/grietas/ por ronda (DIS-2026-001 → ronda_7/grietas/, DIS-2026-002 → ronda_8/grietas/, DIS-2026-003 → ronda_9/grietas/), con respaldo y nota de redirección",
+   "reglas_coherencia": [
+    "C-4",
+    "C-9"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [],
+   "desbloquea": "Orden del registro; la 4.ª ejecución (sim_04) sabe dónde registrarse",
+   "notas": "3 archivos en 3 ubicaciones; contenido intacto (shas bacda342… / 1d0f7387… / 15865a5a…)."
+  },
+  {
+   "id": "D-17",
+   "titulo": "H-SUELO-2026-001: qué hacer con L269 de provenance",
+   "grieta": "—",
+   "estado": "ABIERTA",
+   "opciones": [
+    "O-D restaurar el archivo (solo si hay copia byte-idéntica en algún respaldo; NO_SÉ)",
+    "O-A re-apuntar + archivar (copiar la conversation.md superviviente dentro del corpus y re-apuntar a ella; hash de C-896 cambia)",
+    "O-B retirar la entrada (C-896 → hash_pendiente; pendientes 8 → 9)",
+    "O-C aceptar exit=1 (registrar como no resoluble; audit nunca vuelve a verde)"
+   ],
+   "recomendacion_inicial": "Orden de intento: (1) buscar O-D; (2) si no, O-A con archivo; (3) si O-A se juzga frágil, O-B; (4) O-C solo si ninguna anterior es aceptable",
+   "reglas_coherencia": [
+    "C-1",
+    "C-4"
+   ],
+   "ejecutabilidad": "EJECUTABLE-LOCAL",
+   "dependencias": [
+    "Búsqueda de copia byte-idéntica en respaldos (para O-D)"
+   ],
+   "desbloquea": "Puerta audit en verde para CUALQUIER absorción futura",
+   "notas": "L269: 18daf17b… → proactivity/hidden_files/1794483713759-…/conversation.md (desaparecido). C-896. Rotación r9: candidata O-A hoy 1794508912052-… (hash 8d20779f…). Audit exit=1 ok=316."
+  }
+ ],
+ "triaje": {
+  "EJECUTABLE-LOCAL": 14,
+  "PREPARABLE": 3,
+  "NO-EJECUTABLE-AHORA": 0,
+  "subcaminos_no_ejecutables": [
+   "D-11/O-3 (necesita una definición física de c que no existe + su prueba)",
+   "D-17/O-D (necesita una copia byte-idéntica del original; NO_SÉ si existe)",
+   "D-13/V-B (necesita ejecución en vivo)"
+  ]
+ },
+ "fertilidad": [
+  "D-17",
+  "D-03",
+  "D-15",
+  "D-13",
+  "D-14",
+  "D-12",
+  "D-01",
+  "D-11",
+  "D-02",
+  "D-05",
+  "D-07",
+  "D-08",
+  "D-10",
+  "D-16",
+  "D-04",
+  "D-06",
+  "D-09"
+ ],
+ "espacio_condiciones_absorcion": {
+  "ninguna": {
+   "claims_nuevos": 0,
+   "total": 1138
+  },
+  "B": {
+   "claims_nuevos": 14,
+   "total": 1152,
+   "hash_real": 1138,
+   "provenance_nuevas": 11
+  },
+  "B1": {
+   "claims_nuevos": 10,
+   "total": 1148,
+   "hash_real": 1134,
+   "provenance_nuevas": 10
+  },
+  "B2_sola": {
+   "claims_nuevos": 8,
+   "total": 1146,
+   "hash_real": 1131,
+   "provenance_nuevas": 7,
+   "ids": "C-1144..C-1151 (reconstruir)"
+  },
+  "B_mas_B2": {
+   "claims_nuevos": 22,
+   "total": 1160,
+   "hash_real": 1145,
+   "provenance_nuevas": 18,
+   "ids_B2": "C-1158..C-1165 (como construida)"
+  },
+  "B1_mas_B2": {
+   "claims_nuevos": 18,
+   "total": 1156,
+   "hash_real": 1141,
+   "provenance_nuevas": 17,
+   "ids_B2": "C-1154..C-1161 (reconstruir)"
+  },
+  "B_mas_B1": "NO VÁLIDA: colisión de IDs sin re-secuenciar"
+ },
+ "fuentes": [
+  "ronda_9/sintesis_integrada_r1_r2_r3_r4_r5_r6_r7_r8_r9.md (89621032…)",
+  "ronda_9/conectar/conectar_r9.md (d0223190…)",
+  "ronda_9/preparacion_b2/preparacion_b2.md (4f2c33bf…)",
+  "ronda_8/preparacion_ola2/preparacion_ola2.md (5093d2fc…)",
+  "ronda_7/grietas/grietas_r7.md (opciones O-A/O-B/O-AB/O-0 y O-1..O-6)",
+  "ronda_9/grietas/g04_dois_r9.md (corrección L139/L400/L520)",
+  "anexo-vi/evidence/C-109_discrepancia.txt (ciclo 31)"
+ ]
+}
