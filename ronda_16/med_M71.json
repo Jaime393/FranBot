@@ -1,0 +1,33 @@
+{
+  "medicion": "M-71",
+  "dominio": "d05 escalamiento urbano (ley de escala ciudad): número de intersecciones limpias de la red viaria vs población residente",
+  "fuente": "Urban centre database (UCD/GHSL) + OpenStreetMap (indicators.tab, mismo archivo que M-52/M-57/M-65/M-68, 5.538.726 B, sha re-verificado aquí; copia en datos/ de r16).",
+  "url": "indicators.tab local (copia en datos/, sha256 en este JSON); fuente original: GHSL Urban Centre Database R2019A + OSM enero 2021",
+  "sha256_dato": "7ec636c8722b54586067bfd7f71032804fa1743daaacd12ad08fc449e399d9c7",
+  "metodo": "Protocolo idéntico a M-52/M-57/M-65/M-68 con otra variable Y: Y = intersect_count_clean (columna 33; intersecciones limpias de la red viaria, variable de conteo, misma familia que las cuatro anteriores, NO medida antes) vs X = resident_pop, OLS log-log base 10. Inclusión: resident_pop>0, intersect_count_clean>0, valores finitos (sin umbral adicional).",
+  "parametros": {
+    "variable_Y": "intersect_count_clean",
+    "variable_X": "resident_pop",
+    "n_total": 10351,
+    "n_incluido": 10351,
+    "beta": 0.9733,
+    "se_beta": 0.0118,
+    "intercepto": -2.0938,
+    "se_intercepto": 0.0611,
+    "r2": 0.3974,
+    "n": 10351,
+    "umbral_beta_min": 0.8,
+    "umbral_beta_max": 0.9,
+    "umbral_r2_min": 0.9
+  },
+  "valor": 0.9733,
+  "error": 0.0118,
+  "limites_validez": "Mismos que M-57/M-65/M-68 (población 2015 UCD frente a red OSM enero 2021; cobertura OSM desigual; ciudad = área urbana GHSL/UCD; OLS log-log supone errores homocedásticos en log-log). intersect_count_clean es la variante limpia del conteo de intersecciones (distinta columna de intersect_count, medida en M-68).",
+  "criterio_falsacion": "CONFIRMA si β ∈ [0,80, 0,90] con R²≥0,90; NO_CONFIRMA en caso contrario. Declarado en declaracion_falsadores_r16.md antes de correr (mismos umbrales que M-52/M-57/M-65/M-68).",
+  "veredicto": "NO_CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-14",
+  "extra": {
+    "comparacion_M52_M57_M65_M68": "M-52 (length_total): β=0,9177, R²=0,6037. M-57 (node_count): β=0,9828, R²=0,4148. M-65 (street_segment_count): β=0,9911, R²=0,4080. M-68 (intersect_count): β=0,9876, R²=0,4020. Las cuatro NO_CONFIRMA con el mismo modo de fallo (R² ~0,4, β ~0,99). M-71 es la quinta variable de la misma familia."
+  }
+}
