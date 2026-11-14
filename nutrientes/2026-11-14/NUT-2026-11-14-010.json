@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-010",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/sondeo_puntas.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:02a553f653f2784818f8399cbcbdbaf611c410d890272adf3d61e9e09568646e",
+  "estado": "SE",
+  "contenido": "miu-autocura corrió el run 10 el 2026-11-14T21:27:27Z con conclusión success; el run 9 era del 2026-11-14T17:03:57Z. Como en rondas anteriores, el run 10 no escribió nada en el repositorio.",
+  "contexto": "miu-autocura corrió el run 10 el 2026-11-14T21:27:27Z con conclusión success; el run 9 era del 2026-11-14T17:03:57Z. Como en rondas anteriores, el run 10 no escribió nada en el repositorio.",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/sondeo_puntas.md"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
