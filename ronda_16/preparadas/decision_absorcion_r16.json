@@ -1,0 +1,126 @@
+{
+  "anexo_M69": {
+    "archivo": "item_anexo_M69.md",
+    "estado": "APLICADO AL ANEXO (N-19, 2026-11-14)",
+    "nota": "Ítem M-69 añadido a academico/incertidumbre_mediciones.md (12 ítems, sha acdde423…); tally NO_CONFIRMA 5. CSV byte-idéntico (0852d58f…, 30 filas, 0 filas nuevas).",
+    "precedente": "C-935 + ítem M-63 en el anexo + N-18 (M-66)"
+  },
+  "corpus_antes": {
+    "claims": 1178,
+    "claims_sha": "7e5f016d2b565c7833cc9fe9df0cae20a1de543068ede0e687a20bebbdc78183",
+    "hash_real": 1164,
+    "por_tipo_verificacion": 304,
+    "provenance": 361,
+    "provenance_sha": "b5cb6b432f939d99e86c8c54e5266c88fac6ff712fe3f9ab9efd56329914cde5",
+    "resumen_sha": "ae402126f121b9eb39f94d210e3ec7cd05bb206938b1e5b65172cdf9d8230c18",
+    "se": 1044
+  },
+  "corpus_despues": {
+    "claims": 1181,
+    "claims_sha": "fd1df2dbbb830b00b4d3db23e725ae73d03f482c7c1cfca18daecfe488f3ea42",
+    "hash_real": 1167,
+    "por_tipo_verificacion": 307,
+    "provenance": 363,
+    "provenance_sha": "728f6770ef0eec785fe9d6456e7b9f2ba9441c26b3029269ecf5ff10082c27ce",
+    "resumen_sha": "ebaa1e53d17dcc8b57b34f7315452d5f8cca3d24f1eb61463aca55dadca4e214",
+    "se": 1047
+  },
+  "decision": "absorcion_r16_f7",
+  "decisiones_sin_numero_para_fase2": [
+    "Añadir el ítem M-69 al anexo de incertidumbre. → N-19, numerada por FASE 2 §10.1, APLICADA el 2026-11-14."
+  ],
+  "dedup": {
+    "archivo": "dedup_f7_r16.json",
+    "entre_propuestas_max": 0.1654,
+    "global_max": 0.3838,
+    "metodo": "r9 (Jaccard, tokens NFKD sin acentos [a-z0-9]+, umbral 0,5; corpus 1.178)",
+    "pares_ge_0_5": 0,
+    "verificado_tres_veces": "F7 (script + inline) + F8 (corrida propia, 3 corridas) + FASE 2 (corrida propia, 3 corridas), idénticas cifra por cifra"
+  },
+  "ejecutor": "F1 bajo el régimen 01:43, o FASE 4. F7 no aplica nada.",
+  "estado": "APLICADA",
+  "fecha": "2026-11-14",
+  "fecha_aplicacion": "2026-11-14",
+  "incidencia": "Ninguna. El ok de audit post es 349 = 347 pre + 2, como predice la regla de r14/r15 (sin repetición de NM-03).",
+  "no_preparado": [
+    "M-69 NO_CONFIRMA como claim (veredicto de medición, 0 precedentes de veredictos como claims). Su ítem de anexo SÍ se prepara (2 precedentes de columna/ítem).",
+    "M-70 NO_SÉ (ni claim ni ítem de anexo; 0 precedentes). Su corrección de serie (CORR-SERIE-R16) SÍ se prepara como claim.",
+    "M-71 NO_CONFIRMA (ni claim ni ítem de anexo; 0 precedentes).",
+    "F6 H-SIK resto (identidad S3 ≡ v10.3 27/58; F-F 11/8; A14 0,8000/27; verificador 740/740 bajo canon N-17; vía voces→S2 AGOTADA en 0,50): resultados de medición depositados, no claims.",
+    "F2 resto (flow 0,0% run 140, tg_audit 0/0 run 141, bots 14.ª, V213, folderId 15.ª, heartbeat 32/99, autocura run 8): recurrencias de fenómenos ya enunciados como claims.",
+    "F5 resto (G03 2026-11-21, G05 18.ª, H-SUELO 16.ª, G01 0 D_eff, G04 21 DOIs, D-06/D-09).",
+    "F4 r16 (CORR-RUTA-DRIVE-R16, forjados 16/16): cerró después de F7; preparable en r17 (FASE 2 H2)."
+  ],
+  "orden": "mapa FASE 0 r16 §F7; régimen 2026-11-14 01:43 -05 (las decisiones se aplican automáticamente)",
+  "paquete": {
+    "archivo": "claims_nuevos_r16_auto.jsonl",
+    "lineas": 3,
+    "sha256": "064dfb400ff3e7378e182b61e9f7dd6525c4fab6cdd95b4e9a469c877ffca5fd"
+  },
+  "propuestas": [
+    {
+      "archivo": "lectura_ventana_167_r16.md",
+      "dedup_max": 0.3838,
+      "dedup_max_id": "C-1182",
+      "estado": "SE",
+      "fuente": "ronda_16/ejecucion_f2/estado_vivo_r16.md",
+      "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+      "hash": "sha256:e9e95687001257b78d35c7fc506fa5cb48559c31c6c7fe3135e02693b7c84e20",
+      "id_proyectado": "C-1184",
+      "pares_ge_0_5": 0,
+      "tipo": "verificacion"
+    },
+    {
+      "archivo": "lectura_estado_completo_ausente_r16.md",
+      "dedup_max": 0.3188,
+      "dedup_max_id": "C-1178",
+      "estado": "SE",
+      "fuente": "ronda_16/ejecucion_f2/estado_vivo_r16.md",
+      "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+      "hash": "sha256:e9e95687001257b78d35c7fc506fa5cb48559c31c6c7fe3135e02693b7c84e20",
+      "id_proyectado": "C-1185",
+      "pares_ge_0_5": 0,
+      "tipo": "verificacion"
+    },
+    {
+      "archivo": "lectura_corr_serie_r16.md",
+      "dedup_max": 0.1377,
+      "dedup_max_id": "C-670",
+      "estado": "SE",
+      "fuente": "ronda_16/ejecucion_f3/mediciones_r16.md",
+      "grieta": "G-NUEVA: d05 L4 polarización (medida y mecanismo)",
+      "hash": "sha256:b352d70979004d735e43f99809bf339668d348c458fd82e59f408ee02d1548c8",
+      "id_proyectado": "C-1186",
+      "pares_ge_0_5": 0,
+      "tipo": "verificacion"
+    }
+  ],
+  "provenance_nuevas": [
+    "e9e95687001257b78d35c7fc506fa5cb48559c31c6c7fe3135e02693b7c84e20  academico/tejido_2026-11-12/ronda_16/ejecucion_f2/estado_vivo_r16.md",
+    "b352d70979004d735e43f99809bf339668d348c458fd82e59f408ee02d1548c8  academico/tejido_2026-11-12/ronda_16/ejecucion_f3/mediciones_r16.md"
+  ],
+  "proyeccion": {
+    "claims": "1178 -> 1181",
+    "confirmaciones": "sin cambio",
+    "hash_pendiente": 8,
+    "hash_real": "1164 -> 1167",
+    "huecos": "sin cambio (139, LOCAL)",
+    "por_grieta_d05_L4": "0 -> 1 (nueva)",
+    "por_grieta_observabilidad": "4 -> 6",
+    "por_tipo_verificacion": "304 -> 307",
+    "provenance": "361 -> 363",
+    "se": "1044 -> 1047"
+  },
+  "puertas_post": {
+    "archivo": "ronda_16/ejecucion_f1/puertas_post_absorcion_r16.txt",
+    "audit": "exit=0, ok=349, discrepancia=0, no_encontrado=0, omitido=1",
+    "verify_all": "exit=1, exactamente C-001..C-008"
+  },
+  "regla_reasignacion": "Los IDs C-1184/C-1185/C-1186 suponen el corpus en 1.178 (C-1183 ya inscrito en r15). Si otro claim se inscribe antes, reasignar al aplicar en el orden de la tabla. Absorción parcial exige script nuevo con la orden transcrita.",
+  "respaldo": {
+    "archivos": 7,
+    "directorio": "ronda_16/respaldo_pre_absorcion_r16/",
+    "manifiesto_sha256": "cfd3fb28",
+    "poda_id": "P-54"
+  }
+}
