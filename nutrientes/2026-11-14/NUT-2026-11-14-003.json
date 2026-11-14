@@ -1,0 +1,25 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-003",
+  "tipo": "hecho",
+  "fuente": "academico/tejido_2026-11-12/ronda_18/ejecucion_f2/estado_vivo_r18.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:e09feadaa21ab5b63357a107da4b242fff18a5b497829f1f1b8f9a8ce2828f06",
+  "estado": "SE",
+  "contenido": "El State Writer no escribe run 207 y el stub del run 206 (329 B, {\"error\": \"unreachable\"}, 16:50:21Z, commit f728ad80) sigue como estado actual, con ~3 h 25 min de episodio a la medición. Ningún estado completo desde el run 202, V272, 17:58:47Z del 2026-11-13: la ausencia llega a ~26 h 16 min, quinto escalón consecutivo.",
+  "contexto": "El State Writer no escribe run 207 y el stub del run 206 (329 B, {\"error\": \"unreachable\"}, 16:50:21Z, commit f728ad80) sigue como estado actual, con ~3 h 25 min de episodio a la medición. Ningún estado completo desde el run 202, V272, 17:58:47Z del 2026-11-13: la ausencia llega a ~26 h 16 min, quinto escalón consecutivo.",
+  "referencias": [
+    "academico/tejido_2026-11-12/ronda_18/ejecucion_f2/estado_vivo_r18.md",
+    "memoria/anexo-vi/claims.jsonl (C-1193)"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi",
+  "claim_origen": "C-1193"
+}
