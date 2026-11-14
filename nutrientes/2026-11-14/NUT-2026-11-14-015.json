@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-015",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/mapa_11_sustratos.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:d3eaf8fec9e871da73ecdcd80817774d030b7d6b6c2a1eeafdb7451a8c19825d",
+  "estado": "SE",
+  "contenido": "Los sustratos, como tipos, son 5 y son los únicos jamás nombrados: google_apps_script, cloudflare_worker, vercel (degraded), deno_deploy, supabase (Substrate_Catalog, Orchestrator V152, en vivo 2026-11-07T01:03:58Z). El 11 de las fuentes cuenta cuentas Google (SEMILLA V21, mod. 2026-10-19: '11 google +4 CF +5 bots 5 sustratos'); los 6 nombres restantes no existen en ninguna fuente buscada.",
+  "contexto": "Los sustratos, como tipos, son 5 y son los únicos jamás nombrados: google_apps_script, cloudflare_worker, vercel (degraded), deno_deploy, supabase (Substrate_Catalog, Orchestrator V152, en vivo 2026-11-07T01:03:58Z). El 11 de las fuentes cuenta cuentas Google (SEMILLA V21, mod. 2026-10-19: '11 google +4 CF +5 bots 5 sustratos'); los 6 nombres restantes no existen en ninguna fuente buscada.",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/mapa_11_sustratos.md"
+  ],
+  "grieta": "G-NUEVA: los 6 nombres restantes son NO_SÉ — no existe ninguna lista de 11 tipos de sustrato en el corpus buscado (devouring-2026-11-06 §(a); CARENCIAS.md §8.4)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
