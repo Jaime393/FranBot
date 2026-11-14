@@ -1,0 +1,24 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-008",
+  "tipo": "hecho",
+  "fuente": "produccion-fractal/publicacion/verificacion_publicacion.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:9f439c2a0d9d7fd29dd10ff9e7fc13efb72e9a308ecbe14e72ad7ce87c9defb2",
+  "estado": "SE",
+  "contenido": "El paquete de producción fractal (49 archivos, 258.482 B) se publicó en Jaime393/FranBot el 2026-11-14: 49/49 archivos verificados por blob, commit 7ef78ed5. El paquete contiene vectores (42/42 comprobaciones), métricas (23/23), 22 protocolos de falsación (11/11) y 11 recetas (134 comprobaciones).",
+  "contexto": "El paquete de producción fractal (49 archivos, 258.482 B) se publicó en Jaime393/FranBot el 2026-11-14: 49/49 archivos verificados por blob, commit 7ef78ed5. El paquete contiene vectores (42/42 comprobaciones), métricas (23/23), 22 protocolos de falsación (11/11) y 11 recetas (134 comprobaciones).",
+  "referencias": [
+    "produccion-fractal/publicacion/verificacion_publicacion.md",
+    "produccion-fractal/manifiesto_shas_produccion.json"
+  ],
+  "grieta": "ninguna",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
