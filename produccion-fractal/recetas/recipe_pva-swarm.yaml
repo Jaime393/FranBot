@@ -1,0 +1,46 @@
+id: pva-swarm
+nombre: pva-swarm — Validación adversarial distribuida V202
+esencias:
+  - validate
+  - attest
+fuente:
+  parent_path: mineria/pva-swarm/LECTURA.md
+  parent_hash: 'sha256:18a4a9604cd74595479454ca9e4386f47aad08e83095dc9e8ccab7a999486de4'
+  definicion: 'LECTURA.md L1: POST /api/papers; registro en papers.json (2 papers iniciales); stdlib fallback; sin validadores ni tablero en el código.'
+parametros:
+  - nombre: db_path
+    tipo: string
+    default: papers.json
+    descripcion: Registro de papers en disco.
+  - nombre: port
+    tipo: integer
+    default: 8000
+    descripcion: Puerto del servidor stdlib.
+outputs:
+  - nombre: papers.json
+    formato: 'JSON: lista [{doi, title}]'
+tests:
+  - nombre: dos_papers_iniciales
+    contrato: El fixture papers.json trae 2 papers con DOI 10.5281/zenodo.N.
+    prueba: 'Cargar el fixture: 2 papers, DOIs con formato.'
+  - nombre: registro_nuevo
+    contrato: Registrar un DOI nuevo incrementa el total en 1.
+    prueba: De 2 a 3 papers.
+  - nombre: duplicado_rechazado
+    contrato: El mismo DOI no se registra dos veces.
+    prueba: 'Registrar el mismo DOI: False, total sigue en 3.'
+  - nombre: doi_mal_formato
+    contrato: Un DOI sin formato 10.N/... se rechaza.
+    prueba: '''no-es-doi'': False.'
+presupuesto:
+  tokens_estimados: 800
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 4096
+procedencia:
+  parent_hash: 'sha256:18a4a9604cd74595479454ca9e4386f47aad08e83095dc9e8ccab7a999486de4'
+  parent_path: mineria/pva-swarm/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - El origen no implementa registro de validadores ni lógica fail_refutation/counterexample ni tablero (el README lo promete, el código no lo tiene).
+  - El runner cubre solo el registro de papers, y lo declara; lo demás queda como NO_SÉ del origen.

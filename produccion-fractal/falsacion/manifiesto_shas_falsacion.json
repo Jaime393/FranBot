@@ -1,0 +1,34 @@
+{
+  "frente": "C — protocolos de falsación (22 claims CONJETURO)",
+  "timestamp": "2026-11-14T08:40:00Z",
+  "author": "Hebra",
+  "parent_path": "~/workspace/memoria/anexo-vi/claims.jsonl",
+  "parent_hash": "7e5f016d2b565c7833cc9fe9df0cae20a1de543068ede0e687a20bebbdc78183",
+  "parent_lineas": 1178,
+  "archivos": {
+    "protocolos_falsacion.jsonl": {
+      "sha256": "8f9e2d1fcbffe83b1bfb3704e02477aa6b4cc581ff9d770823973b2177d8cb8a",
+      "bytes": 34125
+    },
+    "protocolo_C001_C005_predicciones.md": {
+      "sha256": "15d4d32cf3c3dd304b789c2474d97c48b58bc01bfa0947f43275f71e9152d9f1",
+      "bytes": 4498
+    },
+    "protocolo_C008_D_eff.md": {
+      "sha256": "9477c540ffe23b2026fa56cd724f8d9a8cc39ccbafb7258da8623465af9fc614",
+      "bytes": 3157
+    },
+    "protocolo_C053_C054_pilares.md": {
+      "sha256": "71a193604174a84454a03e6c050fba842dede5de0da3d6a7790f7c506daf0b17",
+      "bytes": 4360
+    },
+    "run_falsacion.py": {
+      "sha256": "69057d41a28d312b29ce92c703a22d7d580d88807ba27254e419545facce4af4",
+      "bytes": 5704
+    },
+    "README_falsacion.md": {
+      "sha256": "612843316e5297ef2f6eb689e638b012894d8cf49c7da2d7d23ccb03e75e8247",
+      "bytes": 2056
+    }
+  }
+}

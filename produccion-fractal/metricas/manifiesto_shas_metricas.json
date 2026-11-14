@@ -1,0 +1,30 @@
+{
+  "artefactos": [
+    {
+      "archivo": "metrica_ki.json",
+      "sha256": "748a408b388056f7951e8716a78830f2b8faa539ada941c80f37378316590653",
+      "bytes": 13163
+    },
+    {
+      "archivo": "metrica_phi.json",
+      "sha256": "578d99e4d2787790bafb0df4e44ce65e774ddb5ddd21f071c73bd89a2ea174e3",
+      "bytes": 3568
+    },
+    {
+      "archivo": "metrica_rho.json",
+      "sha256": "986ce10883597cb83bd364fc6caef502d0ebebad8d980d781d5a729d6cbc6a4d",
+      "bytes": 2988
+    },
+    {
+      "archivo": "run_metricas.py",
+      "sha256": "ef0c655e8ece0830ddba156c33fc69370ab1f9d8646b5f4a4d8bebf2d3f32946",
+      "bytes": 5386
+    },
+    {
+      "archivo": "README_metricas.md",
+      "sha256": "628d4017947ceb13d7ae7dfba8490facbc2af4a01c198e1722016bbd57a42f33",
+      "bytes": 2419
+    }
+  ],
+  "total_bytes": 27524
+}

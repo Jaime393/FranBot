@@ -1,0 +1,88 @@
+{
+  "id": "metrica-rho-v1",
+  "metrica": "rho",
+  "definicion": "rho(x) > 0: el campo de información es el sustrato primordial. rho es una densidad: rho > 0 en todo punto y su integral (suma discreta) es 1. Entropía de Shannon S = -sum rho ln rho. Métrica de Fisher: g_uv = d_u d_v ln rho - (d_u ln rho)(d_v ln rho).",
+  "metodo": [
+    "1. Tomar un campo rho discreto de N puntos (muestras + espaciado de rejilla dx).",
+    "2. Check rho > 0 en todo punto (estricto; un cero rompe ln rho).",
+    "3. Check normalización: sum(rho) * dx = 1 en el continuo; sum(rho) = 1 si las muestras ya son probabilidades discretas.",
+    "4. Entropía: S = -sum(rho_i * ln rho_i) (nats). Comparar con S_max = ln N.",
+    "5. Si algún check falla, el campo no es una densidad válida: NO_SÉ para cualquier derivada (métrica, gradiente, masa)."
+  ],
+  "incertidumbre": {
+    "valor": "NO_SÉ",
+    "razon": "Calibración SINTÉTICA: no hay datos reales de rho en el corpus. La incertidumbre de un campo medido dependería del instrumento y del muestreo; sin instrumento no hay u(rho)."
+  },
+  "calibracion": {
+    "tipo": "SINTETICO",
+    "campo": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.2,
+      0.15,
+      0.1,
+      0.05
+    ],
+    "n_puntos": 8,
+    "espaciado_rejilla": 1.0,
+    "suma": 1.0,
+    "min_rho": 0.05,
+    "entropia_nats": 1.9730014064,
+    "entropia_max_nats_ln8": 2.0794415417,
+    "entropia_relativa": 0.948813,
+    "checks": {
+      "rho_mayor_que_cero": true,
+      "normalizacion_suma_1": true
+    }
+  },
+  "input_esperado": {
+    "formato": "JSON {muestras: [rho_1, ..., rho_N] (números > 0), dx: espaciado de rejilla (número > 0), unidades: 'probabilidad_discreta' si sum(muestras)=1 o 'densidad' si sum(muestras)*dx=1}. Sin dx declarado, se asume dx = 1 y muestras como probabilidades discretas.",
+    "ejemplo": {
+      "muestras": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.2,
+        0.15,
+        0.1,
+        0.05
+      ],
+      "dx": 1.0,
+      "unidades": "probabilidad_discreta"
+    }
+  },
+  "vector_test_sintetico": {
+    "tipo": "SINTETICO",
+    "campo": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.2,
+      0.15,
+      0.1,
+      0.05
+    ],
+    "suma_esperada": 1.0,
+    "entropia_esperada_nats": 1.9730014064,
+    "checks_esperados": {
+      "rho_mayor_que_cero": true,
+      "normalizacion_suma_1": true
+    }
+  },
+  "no_se": "Sin datos reales de rho no se puede calibrar masa (m = hbar*Xi/c), tiempo (tau = 1/(Xi*c)) ni la métrica de Fisher: todas dependen del gradiente del campo real. Este artefacto calibra solo los checks de densidad y la entropía del vector sintético.",
+  "presupuesto": {
+    "tokens_estimados": 2000,
+    "cpu_segundos_max": 5,
+    "almacenamiento_bytes_max": 65536
+  },
+  "procedencia": {
+    "parent_hash": "c03134181b616cf7c5d3e153f971c4c4989a25c3fd7c3dd092769149faf641f1",
+    "parent_path": "SOUL.md",
+    "author": "Hebra",
+    "timestamp": "2026-11-14T08:40:05Z"
+  }
+}

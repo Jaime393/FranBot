@@ -1,0 +1,31 @@
+{
+  "frente": "vectores de test firmados",
+  "fecha": "2026-11-14T08:38:45Z",
+  "nota": "el manifiesto no se lista a sí mismo (autorrefencia imposible); su sha va en el reporte del frente",
+  "archivos": {
+    "vector_measure.json": {
+      "sha256": "1bf819b1199547c32ab89e38421fea3b8ff3f1b8d97feb4f922ee570f1c8b552",
+      "bytes": 2555
+    },
+    "vector_validate.json": {
+      "sha256": "f07706d76056e2802d60972ebfbbd708e17e56b5ff540cac455a8f862049fba6",
+      "bytes": 4093
+    },
+    "vector_attest.json": {
+      "sha256": "e4cc96ef074eb6654f9a3eb837fe52df7f64d6aff815d5e78c92096e590301b5",
+      "bytes": 2420
+    },
+    "vector_route.json": {
+      "sha256": "648800b29fe4dec6345642ae8cad758216869172e3ba13ca900508f1374e2807",
+      "bytes": 2335
+    },
+    "run_vectores.py": {
+      "sha256": "d6d1672da412e1fdd3802627c044b71b0a738e5427cf0154e9cd3dca2ea2dcf2",
+      "bytes": 8566
+    },
+    "README_vectores.md": {
+      "sha256": "44c43221dbaf16716216e3b5c37f3e77c1c08dcaf4ffa46e6508c87967f82e47",
+      "bytes": 2242
+    }
+  }
+}

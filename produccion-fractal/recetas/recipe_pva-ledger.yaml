@@ -1,0 +1,43 @@
+id: pva-ledger
+nombre: pva-ledger — Registro inmutable V202
+esencias:
+  - attest
+fuente:
+  parent_path: mineria/pva-ledger/LECTURA.md
+  parent_hash: 'sha256:b7c66e38bd539feb58b986fbb99f7ef5136ae7ba946787a65a29ae8bcf875d38'
+  definicion: 'LECTURA.md L1: cli.py publish paper.pdf --zenodo; verify <sha256>; salida <archivo>.pva-ledger.json con tx Arweave + DOI (simulados en el origen).'
+parametros:
+  - nombre: archivo
+    tipo: string
+    default: paper.pdf
+    descripcion: Archivo a registrar.
+  - nombre: zenodo
+    tipo: boolean
+    default: false
+    descripcion: Si es True, el origen intentaría generar un DOI en Zenodo sandbox (simulado).
+outputs:
+  - nombre: '<archivo>.pva-ledger.json'
+    formato: 'JSON: {sha256, arweave_tx, zenodo_doi, timestamp, author}'
+tests:
+  - nombre: roundtrip_publish_verify
+    contrato: publish calcula el sha256 y verify lo re-comprueba como OK.
+    prueba: 'Archivo fixture: publish y luego verify True.'
+  - nombre: tamper_detectado
+    contrato: Si el archivo cambia tras publicar, verify devuelve False.
+    prueba: 'Modificar 1 byte tras publicar: verify False.'
+  - nombre: formato_ledger
+    contrato: El JSON del ledger tiene sha256 de 64 hex y timestamp ISO.
+    prueba: Validar formato de ambos campos.
+presupuesto:
+  tokens_estimados: 600
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 2048
+procedencia:
+  parent_hash: 'sha256:b7c66e38bd539feb58b986fbb99f7ef5136ae7ba946787a65a29ae8bcf875d38'
+  parent_path: mineria/pva-ledger/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - Arweave y Zenodo son SIMULADOS en el origen (sin llamadas de red; el propio código lo dice en sus comentarios).
+  - 'El runner marca arweave_tx y zenodo_doi como ''SIMULADO'': no emite identificadores reales.'
+  - 'El comando verify del origen no verifica nada (imprime ''OK inmutable'' sin comprobar); el runner SÍ re-computa el hash.'

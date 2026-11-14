@@ -1,0 +1,47 @@
+id: pva-orchestrator
+nombre: pva-orchestrator — Orquestador PVA V202
+esencias:
+  - route
+fuente:
+  parent_path: mineria/pva-orchestrator/LECTURA.md
+  parent_hash: 'sha256:5bc9bbff40a67e22d222fe6b2209433003405dd0704b5834d61221a8eb45a964'
+  definicion: 'LECTURA.md L1: cli.py encadena 5 pasos (pva-lint, pva-docker-template, pva-lean-bridge, pva-ledger, pva-swarm); pva.yml con 5 fases (2026-2030+); pva_dashboard.json.'
+parametros:
+  - nombre: config
+    tipo: string
+    default: pva.yml
+    descripcion: Archivo de configuración con las fases.
+  - nombre: pasos
+    tipo: list
+    default:
+      - pva-lint
+      - pva-docker-template
+      - pva-lean-bridge
+      - pva-ledger
+      - pva-swarm
+    descripcion: Pasos encadenados, en orden.
+outputs:
+  - nombre: pva_dashboard.json
+    formato: 'JSON: {phi, repos, status}'
+tests:
+  - nombre: cinco_fases
+    contrato: pva.yml define 5 fases con id, nombre y plazo.
+    prueba: 'Fixture pva.yml: 5 fases.'
+  - nombre: dashboard_cinco_repos
+    contrato: El dashboard lista los 5 repos en orden.
+    prueba: Comparar la lista de repos con los 5 pasos.
+  - nombre: config_se_lee
+    contrato: El runner lee el archivo de config dado por parámetro.
+    prueba: 'Config con phi distinto: el dashboard refleja el phi leído.'
+presupuesto:
+  tokens_estimados: 700
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 1024
+procedencia:
+  parent_hash: 'sha256:5bc9bbff40a67e22d222fe6b2209433003405dd0704b5834d61221a8eb45a964'
+  parent_path: mineria/pva-orchestrator/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'Corrección documentada frente al origen: su cli.py acepta --config y no lo lee, y no ejecuta ningún paso (solo imprime OK); el runner SÍ lee la config.'
+  - Dos phi distintos circulan en el origen (9158.79 en pva.yml, 5478.42 en el dashboard); el runner usa el phi de la config leída.

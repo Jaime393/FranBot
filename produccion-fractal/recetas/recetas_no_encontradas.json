@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pae-02",
+    "buscado_en": [
+      "memoria/anexo-vi/protocols/",
+      "memoria/ (grep -r 'PAE-02')",
+      "mineria/ (grep -r 'PAE-02')"
+    ],
+    "estado": "NO_SÉ",
+    "nota": "Sin definición en disco: ningún archivo nombra PAE-02. No se inventa la receta."
+  },
+  {
+    "id": "paf-02",
+    "buscado_en": [
+      "memoria/anexo-vi/protocols/",
+      "memoria/ (grep -r 'PAF-02')",
+      "mineria/ (grep -r 'PAF-02')"
+    ],
+    "estado": "NO_SÉ",
+    "nota": "Sin definición en disco: ningún archivo nombra PAF-02. No se inventa la receta."
+  },
+  {
+    "id": "pcp-02",
+    "buscado_en": [
+      "memoria/anexo-vi/protocols/",
+      "memoria/ (grep -r 'PCP-02')",
+      "mineria/ (grep -r 'PCP-02')"
+    ],
+    "estado": "NO_SÉ",
+    "nota": "Sin definición en disco: ningún archivo nombra PCP-02. No se inventa la receta."
+  },
+  {
+    "id": "pai-02",
+    "buscado_en": [
+      "memoria/anexo-vi/protocols/",
+      "memoria/ (grep -r 'PAI-02')",
+      "mineria/ (grep -r 'PAI-02')"
+    ],
+    "estado": "NO_SÉ",
+    "nota": "Sin definición en disco: ningún archivo nombra PAI-02. No se inventa la receta."
+  }
+]

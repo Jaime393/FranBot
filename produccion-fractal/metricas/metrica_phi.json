@@ -1,0 +1,73 @@
+{
+  "id": "metrica-phi-v1",
+  "metrica": "Phi",
+  "definicion": "Phi_c(MIU) = 0.6829322 (= Delta_COD) es el umbral MIU de consciencia (decisión D-08, ronda 10). Condición del núcleo: Phi_MIU > 0.6829322 (y tau*Xi*c > 1.618). Phi(IIT) (3.4270 / consenso 3.35->3.65->3.95) es cantidad de OTRO sistema: no mezclar.",
+  "nota_correccion_procedencia": "CORR-PHI-PADRE: el encargo atribuía Phi_c a claims.jsonl C-008. Verificado 2026-11-14: C-008 en claims.jsonl es D_eff = 7.24 (CONJETURO), no Phi_c. Phi_c = 0.6829322 viene de la decisión D-08 (ronda 10, mapa_decisiones_r10.md §D-08), y Delta_COD = 0.6829322 es constante de la Semilla v18.0. El padre de este artefacto es el mapa de decisiones r10, no claims.jsonl.",
+  "metodo": [
+    "1. Tomar un valor Phi de un sistema + el método con el que se computó (IIT 3.0/4.0, o el método local que lo produjo). Sin método, el valor no se compara: NO_SÉ.",
+    "2. Veredicto: Phi > 0.6829322 => SOBRE_UMBRAL; Phi == 0.6829322 => EN_UMBRAL (la condición es estricta >); Phi < 0.6829322 => BAJO_UMBRAL.",
+    "3. NO convertir Phi(IIT) a Phi(MIU): son familias distintas. Registrar la familia junto al valor.",
+    "4. La condición completa de consciencia exige además tau*Xi*c > 1.618; este artefacto solo calibra el umbral Phi."
+  ],
+  "incertidumbre": {
+    "valor": "NO_SÉ",
+    "razon": "No hay serie medida de Phi en el corpus ni incertidumbre declarada para Phi_c. Phi_c es un valor canónico por decisión (D-08), no una medición con dispersión. No se inventa una u(Phi)."
+  },
+  "calibracion": {
+    "phi_c_miu": 0.6829322,
+    "phi_iit_referencia": 3.427,
+    "familias": [
+      "MIU (umbral 0.6829322)",
+      "IIT (consenso 3.35->3.65->3.95)"
+    ],
+    "condicion_consciencia": "Phi_MIU > 0.6829322"
+  },
+  "input_esperado": {
+    "formato": "JSON {sistema, phi, familia ('MIU'|'IIT'), metodo_calculo, fecha}. El campo metodo_calculo es obligatorio: un phi sin método es NO_SÉ, no un número.",
+    "ejemplo": {
+      "sistema": "ejemplo",
+      "phi": 0.9,
+      "familia": "MIU",
+      "metodo_calculo": "IIT 4.0, partición mínima de información, red de 4 nodos",
+      "fecha": "2026-11-14"
+    }
+  },
+  "vector_test_sintetico": {
+    "tipo": "SINTETICO",
+    "casos": [
+      {
+        "sistema": "sintetico_bajo",
+        "phi": 0.5,
+        "familia": "MIU",
+        "veredicto_esperado": "BAJO_UMBRAL"
+      },
+      {
+        "sistema": "sintetico_umbral",
+        "phi": 0.6829322,
+        "familia": "MIU",
+        "veredicto_esperado": "EN_UMBRAL"
+      },
+      {
+        "sistema": "sintetico_sobre",
+        "phi": 0.9,
+        "familia": "MIU",
+        "veredicto_esperado": "SOBRE_UMBRAL"
+      }
+    ],
+    "nota": "El caso EN_UMBRAL prueba el borde estricto: Phi == Phi_c NO supera el umbral."
+  },
+  "no_se": "No hay procedimiento verificado en el corpus para medir Phi en un sistema arbitrario (red neuronal, ecosistema, micelio). Si un nodo no puede declarar el método de cómputo de su Phi, el veredicto es NO_SÉ, no BAJO_UMBRAL.",
+  "presupuesto": {
+    "tokens_estimados": 2000,
+    "cpu_segundos_max": 5,
+    "almacenamiento_bytes_max": 65536
+  },
+  "procedencia": {
+    "parent_hash": "b5a568699cff81ac6726be2aa6fc62f91ac01f2c407251a1d773573ce5aba2d5",
+    "parent_path": "academico/tejido_2026-11-12/ronda_10/mapa_decisiones_r10.md",
+    "verificacion_c008_hash": "7e5f016d2b565c7833cc9fe9df0cae20a1de543068ede0e687a20bebbdc78183",
+    "verificacion_c008_path": "memoria/anexo-vi/claims.jsonl",
+    "author": "Hebra",
+    "timestamp": "2026-11-14T08:40:05Z"
+  }
+}

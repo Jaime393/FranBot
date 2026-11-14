@@ -1,0 +1,50 @@
+id: pcp-01
+nombre: PCP-01 — Protocolo de Consenso Planetario V153.2
+esencias:
+  - validate
+  - attest
+fuente:
+  parent_path: memoria/anexo-vi/protocols/pcp_01.py
+  parent_hash: 'sha256:4052f0d15d5a2f2175fbf526dceec44751e28c3ab07a627ac9746f9ce7055203'
+  definicion: 'clase PlanetaryConsensus (líneas 13-73): propose L18, vote L32, tally L46, save L69, demo L76; 101 líneas.'
+parametros:
+  - nombre: umbral_aprobacion
+    tipo: float
+    default: 0.66
+    descripcion: yes_ratio mayor que este valor aprueba la propuesta.
+  - nombre: umbral_rechazo
+    tipo: float
+    default: 0.33
+    descripcion: yes_ratio menor que este valor rechaza la propuesta.
+  - nombre: proposer
+    tipo: string
+    default: trama_termux
+    descripcion: Proponente por defecto.
+outputs:
+  - nombre: pcp_votes.json
+    formato: 'JSON: {proposals[{id, title, description, proposer, timestamp, status, votes, voters}], timestamp}'
+tests:
+  - nombre: id_determinista
+    contrato: El mismo título y proponente producen el mismo id en dos instancias.
+    prueba: 'Dos propose iguales: ids iguales. El origen usa hash() de Python, no estable entre procesos; el runner usa sha256.'
+  - nombre: doble_voto_rechazado
+    contrato: El mismo votante no puede votar dos veces en una propuesta.
+    prueba: 'Segundo vote del mismo votante: False.'
+  - nombre: tally_aprueba
+    contrato: 'yes_ratio > 0.66 da status approved.'
+    prueba: 'yes 0.95 + 0.88, abstain 0.77: ratio 0.7038, status approved.'
+  - nombre: tally_indeciso
+    contrato: Sin votos el tally devuelve undecided.
+    prueba: 'Propuesta sin votar: tally undecided.'
+presupuesto:
+  tokens_estimados: 700
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 4096
+procedencia:
+  parent_hash: 'sha256:4052f0d15d5a2f2175fbf526dceec44751e28c3ab07a627ac9746f9ce7055203'
+  parent_path: memoria/anexo-vi/protocols/pcp_01.py
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'Corrección documentada frente al origen: los IDs de propuesta usan hash() de Python (no estable); el runner usa sha256(título + proponente) mod 10000.'
+  - El origen no valida votantes contra una lista de nodos ni define el umbral fuera de tally(); el runner declara los umbrales como parámetros.

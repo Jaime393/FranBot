@@ -1,0 +1,51 @@
+id: pai-01
+nombre: PAI-01 — Protocolo de Absorción de Inteligencia
+esencias:
+  - route
+  - validate
+  - attest
+fuente:
+  parent_path: memoria/anexo-vi/protocols/PAI-01.md
+  parent_hash: 'sha256:d60919c7a81467d904da6e9b092afd67f702a9c6b7a59fb870c1f784e112787b'
+  definicion: 'documento, 15 líneas: 6 pasos en ## Pasos (L6-L13): Detección, Búsqueda, Selección, Integración, Validación, Publicación. No implementado.'
+parametros:
+  - nombre: carencia
+    tipo: string
+    default: datos de mercado
+    descripcion: Carencia que dispara el protocolo (ejemplo del documento).
+  - nombre: api_candidata
+    tipo: string
+    default: ''
+    descripcion: API candidata si ya se conoce; vacío si hay que buscarla.
+  - nombre: criterios
+    tipo: list
+    default:
+      - K_i
+      - D_f
+      - FDC
+    descripcion: Criterios de coherencia para la selección.
+outputs:
+  - nombre: plan_absorcion.json
+    formato: 'JSON: {carencia, pasos[6] con {nombre, estado}, plugin, validado}'
+tests:
+  - nombre: seis_pasos_en_orden
+    contrato: 'El documento padre define los 6 pasos en orden: Detección, Búsqueda, Selección, Integración, Validación, Publicación.'
+    prueba: Leer PAI-01.md y verificar que los 6 nombres aparecen en ese orden.
+  - nombre: modulos_referenciados
+    contrato: El documento nombra tejedor.py, absorber.py y miu_plugin_manager.py.
+    prueba: Los 3 nombres presentes en el archivo padre.
+  - nombre: plan_seis_entradas
+    contrato: El plan generado tiene 6 entradas, una por paso.
+    prueba: 'Correr con la carencia de ejemplo: 6 entradas.'
+presupuesto:
+  tokens_estimados: 500
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 1024
+procedencia:
+  parent_hash: 'sha256:d60919c7a81467d904da6e9b092afd67f702a9c6b7a59fb870c1f784e112787b'
+  parent_path: memoria/anexo-vi/protocols/PAI-01.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'Solo documento, no implementado en el origen (ESTADO.md: ''PAI-01 solo como documento (6 pasos, no implementado)'').'
+  - El runner valida el contrato contra el documento padre y simula el plan; no llama a ninguna API real.

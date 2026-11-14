@@ -1,0 +1,401 @@
+{
+  "id": "metrica-ki-v1",
+  "metrica": "K_i",
+  "definicion": "K_i = phi^-1 * (D_f / 2.5) * (l_corr / l_0), con phi^-1 = 0.6180339887 (canon D-07). Banda de resiliencia [0.55, 0.62]; colapso K_i < 0.3.",
+  "convenciones": {
+    "dataset": "K_i = 0.2472 * D_f (0.2472 = phi^-1 / 2.5). Es la convención de las 30 filas del CSV.",
+    "canonica": "K_i = phi^-1 * (D_f / 2.5) * (l_corr / l_0), con l_corr y l_0 explícitos.",
+    "equivalencia": "Ambas coinciden exactamente cuando l_corr = l_0. El dataset no registra l_corr por nodo: asume l_corr = l_0. Si un nodo trae l_corr distinto, usar la canónica.",
+    "excepcion_microbioma": "Fila Microbioma humano (HMP2): el CSV guarda k_i = 0.508 (K_i propio de la red) aunque D_f = 2.5 daría 0.618 por la fórmula. Caso especial confirmado en r8 M-37; la tabla de calibración usa el valor recalculado (0.618) y lo marca.",
+    "ruido_redondeo_csv": "La columna k_i del CSV es un render a 3 decimales: en 29/30 filas |K_i recalculado - k_i CSV| <= 0.0011; solo Microbioma difiere (0.1100, excepción documentada)."
+  },
+  "metodo": [
+    "1. Leer dataset_nodos_Df.csv (30 filas + cabecera; sha en procedencia).",
+    "2. Por fila: K_i = 0.2472 * D_f (6 decimales).",
+    "3. u(K_i) = 0.2472 * u(D_f) = 0.2472 * 0.0604 = 0.01493088 (propagación lineal, factor constante; M-63).",
+    "4. en_banda: 0.55 <= K_i <= 0.62.",
+    "5. pertenencia_resuelta: en_banda Y distancia al borde más cercano > u(K_i). Si la distancia es menor que u(K_i), la pertenencia NO está resuelta por la columna de incertidumbre (criterio M-66).",
+    "6. Contar: en banda 9/30; de ellas resueltas 3/9 (Chernozem, Flora GBIF, CMB); no resueltas 6/9."
+  ],
+  "incertidumbre": {
+    "u_d_f": 0.0604,
+    "u_d_f_se": 0.005,
+    "fuente": "M-63 (anexo de incertidumbre): u(D_f) = 0.0604 +- 0.0050, columna común hipotética (dispersiones EEG 1D transferidas a los 30 nodos).",
+    "u_k_i": 0.01493088,
+    "u_k_i_se": 0.001236,
+    "metodo_propagacion": "Lineal exacta: K_i = c * D_f con c constante => u(K_i) = |c| * u(D_f). Sin términos de orden superior.",
+    "limite": "La columna u(D_f) es una escala común hipotética (M-63): no verifica la incertidumbre por nodo. Los 30 nodos comparten el mismo u(K_i)."
+  },
+  "calibracion": {
+    "n_nodos": 30,
+    "en_banda": 9,
+    "en_banda_resuelta": 3,
+    "en_banda_no_resuelta": 6,
+    "fuera_de_banda": 21,
+    "por_encima_de_banda": 1,
+    "tabla": [
+      {
+        "nodo": "Microtúbulos (PDB 3J6F)",
+        "dominio": "biofísico",
+        "d_f": 2.5,
+        "k_i_recalculado": 0.618,
+        "k_i_csv": 0.618,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Manglares GMW (14.8 Mha)",
+        "dominio": "ecosistema",
+        "d_f": 2.28,
+        "k_i_recalculado": 0.563616,
+        "k_i_csv": 0.563,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Chernozem Ucrania (WoSIS)",
+        "dominio": "suelo",
+        "d_f": 2.41,
+        "k_i_recalculado": 0.595752,
+        "k_i_csv": 0.596,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": true,
+        "nota": ""
+      },
+      {
+        "nodo": "Vertisol India (WoSIS)",
+        "dominio": "suelo",
+        "d_f": 2.1,
+        "k_i_recalculado": 0.51912,
+        "k_i_csv": 0.519,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Red Sea corales (KAUST)",
+        "dominio": "arrecife",
+        "d_f": 2.16,
+        "k_i_recalculado": 0.533952,
+        "k_i_csv": 0.534,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "GBR Seagrass (TropWATER)",
+        "dominio": "pastos_marinos",
+        "d_f": 2.03,
+        "k_i_recalculado": 0.501816,
+        "k_i_csv": 0.502,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Caribe SE (Allen Atlas)",
+        "dominio": "arrecife",
+        "d_f": 2.08,
+        "k_i_recalculado": 0.514176,
+        "k_i_csv": 0.514,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Florida Reef Tract (NOAA)",
+        "dominio": "arrecife",
+        "d_f": 2.02,
+        "k_i_recalculado": 0.499344,
+        "k_i_csv": 0.499,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Jamaica (AGRRA)",
+        "dominio": "arrecife",
+        "d_f": 1.98,
+        "k_i_recalculado": 0.489456,
+        "k_i_csv": 0.489,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Persian Gulf (Aeby 2020)",
+        "dominio": "arrecife",
+        "d_f": 1.89,
+        "k_i_recalculado": 0.467208,
+        "k_i_csv": 0.467,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Palk Bay India (ZSI 2013)",
+        "dominio": "arrecife",
+        "d_f": 1.86,
+        "k_i_recalculado": 0.459792,
+        "k_i_csv": 0.46,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "GBR Australia (AIMS)",
+        "dominio": "arrecife",
+        "d_f": 1.95,
+        "k_i_recalculado": 0.48204,
+        "k_i_csv": 0.482,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "American Samoa (NOAA PIFSC)",
+        "dominio": "arrecife",
+        "d_f": 1.93,
+        "k_i_recalculado": 0.477096,
+        "k_i_csv": 0.477,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Fiji (WCS MACMON)",
+        "dominio": "arrecife",
+        "d_f": 1.96,
+        "k_i_recalculado": 0.484512,
+        "k_i_csv": 0.484,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Turbera Glen Carron (PANGAEA)",
+        "dominio": "turbera",
+        "d_f": 1.91,
+        "k_i_recalculado": 0.472152,
+        "k_i_csv": 0.472,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Seagrass global (VLIZ)",
+        "dominio": "pastos_marinos",
+        "d_f": 1.76,
+        "k_i_recalculado": 0.435072,
+        "k_i_csv": 0.435,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Biodiversidad flora (GBIF)",
+        "dominio": "biodiversidad",
+        "d_f": 2.31,
+        "k_i_recalculado": 0.571032,
+        "k_i_csv": 0.57,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": true,
+        "nota": ""
+      },
+      {
+        "nodo": "Microbioma humano (HMP2)",
+        "dominio": "microbioma",
+        "d_f": 2.5,
+        "k_i_recalculado": 0.618,
+        "k_i_csv": 0.508,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": false,
+        "nota": "EXCEPCION_DOCUMENTADA: el k_i del CSV (0.508) es el K_i propio de la red (D_f 2.5 = D_f_network); la fórmula base daría 0.618. Caso especial confirmado r8 M-37. La tabla usa el valor recalculado por la fórmula."
+      },
+      {
+        "nodo": "Suelo fértil global (SoilGrids)",
+        "dominio": "suelo",
+        "d_f": 2.05,
+        "k_i_recalculado": 0.50676,
+        "k_i_csv": 0.507,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Incendios globales (NASA FIRMS)",
+        "dominio": "incendios",
+        "d_f": 1.49,
+        "k_i_recalculado": 0.368328,
+        "k_i_csv": 0.368,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Clima global (NOAA GISTEMP)",
+        "dominio": "clima",
+        "d_f": 1.4,
+        "k_i_recalculado": 0.34608,
+        "k_i_csv": 0.346,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Noosfera (GDELT)",
+        "dominio": "noosfera",
+        "d_f": 1.48,
+        "k_i_recalculado": 0.365856,
+        "k_i_csv": 0.366,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "CMB (Planck 2018)",
+        "dominio": "cosmologia",
+        "d_f": 2.305,
+        "k_i_recalculado": 0.569796,
+        "k_i_csv": 0.57,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": true,
+        "nota": ""
+      },
+      {
+        "nodo": "Rugosidad arrecifal GBR (GMRT)",
+        "dominio": "arrecife",
+        "d_f": 2.45,
+        "k_i_recalculado": 0.60564,
+        "k_i_csv": 0.606,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Superficie cortical (fsaverage6)",
+        "dominio": "biofísico",
+        "d_f": 2.24,
+        "k_i_recalculado": 0.553728,
+        "k_i_csv": 0.554,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Cobertura forestal amazónica (Hansen)",
+        "dominio": "ecosistema",
+        "d_f": 2.83,
+        "k_i_recalculado": 0.699576,
+        "k_i_csv": 0.699,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Batimetría arrecife fragmentado (GMRT Florida)",
+        "dominio": "arrecife",
+        "d_f": 2.23,
+        "k_i_recalculado": 0.551256,
+        "k_i_csv": 0.552,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": true,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Manchas solares (SILSO)",
+        "dominio": "clima",
+        "d_f": 1.44,
+        "k_i_recalculado": 0.355968,
+        "k_i_csv": 0.357,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Red fluvial amazónica (HydroRIVERS)",
+        "dominio": "ecosistema",
+        "d_f": 1.89,
+        "k_i_recalculado": 0.467208,
+        "k_i_csv": 0.467,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      },
+      {
+        "nodo": "Caudal Amazonas Óbidos (ANA/CAMELS-BR)",
+        "dominio": "ecosistema",
+        "d_f": 1.0539,
+        "k_i_recalculado": 0.260524,
+        "k_i_csv": 0.261,
+        "u_k_i": 0.01493088,
+        "en_banda_0.55_0.62": false,
+        "pertenencia_resuelta": false,
+        "nota": ""
+      }
+    ]
+  },
+  "input_esperado": {
+    "formato": "CSV con cabecera nodo,dominio,d_f,k_i,fuente,doi_url,fecha_calculo,metodo,nota,fuente_archivo (mismo esquema que dataset_nodos_Df.csv) o JSON {nodo, d_f, l_corr, l_0} por nodo. D_f en [1, 3] para series 1D/2D según la convención D=2-H (1D) o D=3-H (2D, decisión D-14). Si se da l_corr distinto de l_0, usar la fórmula canónica.",
+    "ejemplo": {
+      "nodo": "Ejemplo",
+      "d_f": 2.5,
+      "l_corr": 0.5,
+      "l_0": 0.5
+    }
+  },
+  "vector_test_sintetico": {
+    "tipo": "SINTETICO",
+    "caso": "D_f = 2.5, l_corr = l_0 = 0.5 mm => K_i = phi^-1 * (2.5/2.5) * (0.5/0.5) = 0.6180339887. En banda [0.55, 0.62], pertenencia NO resuelta (distancia al borde 0.62 - 0.6180339887 = 0.0019660113 < u(K_i) = 0.01493088).",
+    "d_f": 2.5,
+    "l_corr": 0.5,
+    "l_0": 0.5,
+    "k_i_esperado": 0.6180339888,
+    "en_banda_esperado": true,
+    "pertenencia_resuelta_esperada": false
+  },
+  "presupuesto": {
+    "tokens_estimados": 4000,
+    "cpu_segundos_max": 5,
+    "almacenamiento_bytes_max": 65536
+  },
+  "procedencia": {
+    "parent_hash": "0852d58f92356eee572dc7a9141d195efe2a2adcef0d91b0e03c4aeeb42bf0af",
+    "parent_path": "academico/dataset_nodos_Df.csv",
+    "fuente_incertidumbre_hash": "6b9ea2aadb2e1f1261e9ffed25b69875abf5613fa943b01db0fc4f6aaa9c9e4e",
+    "fuente_incertidumbre_path": "academico/incertidumbre_mediciones.md",
+    "author": "Hebra",
+    "timestamp": "2026-11-14T08:40:05Z"
+  }
+}
