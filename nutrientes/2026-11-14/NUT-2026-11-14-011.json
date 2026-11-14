@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-011",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/sondeo_sustratos_5.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:f9ed73c3e196dbb38173a2098436cd504f6998686a1a85014a5cee62ccd4b43b",
+  "estado": "SE",
+  "contenido": "El proyecto Vercel miu-global-1 responde 200 en /api/health (ok:true, marca de tiempo) el 2026-11-14T22:05:38Z. En la línea base del 2026-11-06 estaba muerto en todas las rutas probadas; es el único proyecto Vercel que cambia de estado en esta medición.",
+  "contexto": "El proyecto Vercel miu-global-1 responde 200 en /api/health (ok:true, marca de tiempo) el 2026-11-14T22:05:38Z. En la línea base del 2026-11-06 estaba muerto en todas las rutas probadas; es el único proyecto Vercel que cambia de estado en esta medición.",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/sondeo_sustratos_5.md"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
