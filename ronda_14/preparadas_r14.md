@@ -1,7 +1,7 @@
 # LECTURAS PREPARADAS — RONDA 14, F7 (índice)
 
 - **Fecha:** 2026-11-14. **Orden:** mapa FASE 0 r14 §F7.
-- **Estado: PREPARADA_NO_APLICADA.** Nada añadido a claims.jsonl, provenance.sha256 ni ningún archivo del corpus (corpus vivo verificado al cierre: 1.168 líneas, sha 7deb15ff…). La única absorción posible de la ronda es F1 (C-1174/C-1175/C-1176, condicionada a orden nueva).
+- **Estado: APLICADA, 2026-11-14.** Las 3 propuestas (C-1177/C-1178/C-1179) entraron al corpus por orden del Jardinero 2026-11-14 01:43 -05 (aplicación automática de decisiones), junto con C-1174/C-1175/C-1176 de F1. Claims 1.168 → 1.174; hash_real 1154 → 1160; provenance 354 → 358; SE 1034 → 1040. Puertas post-absorción: audit exit=0 (ok=344), verify_all exit=1 con exactamente C-001..C-008 (ver `ejecucion_f1/puertas_post_absorcion_auto.txt`).
 - **Formato:** mismo que `ronda_13/ejecucion_f7/preparadas_r13.md` (formato `lecturas_canonicas_r10.md`).
 
 ## §1. Propuestas (3, SÉ)
@@ -14,7 +14,7 @@
 
 - **Máx. global:** 0,2475. **0 pares ≥ 0,5.** Máx. entre propuestas: 0,2045 (silencio_termina / primer_fallo).
 - **Dedup verificado dos veces, idéntico cifra por cifra:** corrida por script (`_dedup_f7_r14.py`) + corrida inline. Salida: `dedup_f7_r14.json`.
-- **Proyección si se absorben tras F1 (C-1174/C-1175/C-1176 aplicadas):** claims 1.171 → 1.174, hash_real 1157 → 1160, provenance 357 → 359 (2 fuentes nuevas: `nombres_fuera_doc_r14.md` 5669c1ad… y `estado_vivo_r14.md` fff12cee…; ninguna está hoy en provenance, grep 0), SE 1037 → 1040, IDs C-1177/C-1178/C-1179.
+- **APLICADA (real, no proyección):** claims 1.168 → 1.174, hash_real 1154 → 1160, provenance 354 → 358, SE 1034 → 1040, IDs C-1177/C-1178/C-1179. La proyección 357 → 359 queda superada por la cifra real: C-1176 comparte fuente con C-1177 (`nombres_fuera_doc_r14.md`, sha corregido `3068b24a…`, antes `5669c1ad…`); las fuentes nuevas son 4 en total para las 6 (ver decisión F1). C-1177 absorbida con los números corregidos 44/12 (CORR-P32-NUM-R14).
 - **Proyección si se absorben solas (F1 no aplicada):** claims 1.168 → 1.171, hash_real 1154 → 1157, provenance 354 → 356, SE 1034 → 1037; IDs a reasignar al aplicar (regla de r13: el ID proyectado supone F1 aplicada).
 
 ## §1b. Interacción con F1 — C-1176 queda con una cláusula superada (aviso, no reescritura)
