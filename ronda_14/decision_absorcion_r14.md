@@ -1,8 +1,31 @@
 # DECISIÓN — ABSORCIÓN CONDICIONADA RONDA 14 FASE 1 (F1)
 
 - **Fecha:** 2026-11-13. **Ejecutor:** F1 (único escritor del corpus en la tanda, si se ordena).
-- **Orden:** PENDIENTE. La absorción espera una orden nueva del Jardinero, que NO se ha dado. N-12 cubrió solo r12 (C-1168..C-1173); la orden 16:51 (2026-11-13) cubrió la absorción de r11 F1, no esta ola. Este documento es PREPARACIÓN, no ejecución. Criterio C-1..C-9 de r10.
-- **Estado: PREPARADO, pendiente de orden nueva.** Nada ha entrado al corpus. Nada se ha enviado ni subido.
+- **Orden:** APLICADA por orden del Jardinero 2026-11-14 01:43 -05: "sí y continúen con coherencia apliquen las decisiones siempre automáticamente" (régimen nuevo: las decisiones pendientes se aplican automáticamente; orden transcrita en `ORDEN_N14_AUTO.md`). N-12 cubrió solo r12; la orden 16:51 cubrió r11 F1. Criterio C-1..C-9 de r10.
+- **Estado: APLICADA, 2026-11-14.** 6 claims en el corpus (C-1174..C-1179). Ver bloque APLICADA abajo.
+
+
+## APLICADA — absorción automática, 6 claims (2026-11-14)
+
+- **Orden:** Jardinero 2026-11-14 01:43 -05 (ver `ORDEN_N14_AUTO.md`). Primera aplicación del régimen de aplicación automática.
+- **Script:** `aplicar_absorcion_r14_auto.py` (guarda `ORDEN_N14_AUTO.md`, probada exit=2 sin orden; `aplicar_absorcion_r14.py` queda SUPERSEDO — aplicaba solo las 3 de F1 con el texto viejo de C-1176).
+- **Paquete:** `claims_nuevos_r14_auto.jsonl` (sha `652d4bba…`, 6 líneas, todas SE). Dedup re-corrido de las 6 (textos corregidos): máx. global 0,2475 (C-1179/C-856), entre propuestas 0,2919 (C-1176/C-1177), 0 pares ≥ 0,5 (`dedup_f7_r14_auto.json`).
+- **Resultado:** claims 1.168 → 1.174 (sha `7deb15ff…` → `d4924c9b…`); hash_real 1154 → 1160; provenance 354 → 358 (sha `dbe4a490…` → `1ff77190…`, 4 entradas nuevas — nombres_fuera_doc_r14.md cubre C-1176+C-1177, estado_vivo_r14.md cubre C-1178+C-1179); SE 1034 → 1040; verificacion 295 → 301; resumen sha `315b80b5…` → `49f1a17e…`. Confirmaciones y huecos sin cambio.
+- **Puertas post-absorción** (`puertas_post_absorcion_auto.txt`): audit exit=0 (ok=344, discrepancia=0, no_encontrado=0, omitido=1); verify_all exit=1 con exactamente C-001..C-008.
+- **Reversión:** restaurar los 5 archivos desde `ronda_14/respaldo_pre_r14/` (shas en `manifiesto_shas.json`) y re-correr las puertas: vuelve claims 1.168, provenance 354, audit ok=340.
+
+### Correcciones previas aplicadas (DICTAMEN-C1176-R14, FASE 2 r14 §10 — C-1176/C-1177 BLOQUEADAS hasta corregir)
+
+| # | Archivo | Antes | Después |
+|---|---|---|---|
+| 1 | `ejecucion_f1/claims_nuevos_r14.jsonl` (C-1176, cláusula final) | "quedan dos vías sin agotar (graph_v10.6_112_nodos.json, 6.252 caracteres, no en local; Doc MIU_PANTEON_32_DETALLADO_ENDPOINTS, 404)" | "las dos vías de r13 quedan agotadas: el graph JSON no está en Drive ni en el Vault; el Doc 32 existe con ID completo y se leyó entero, 32 nodos culturales, otro sistema" — sha del archivo `85de362b…` → `37c6e742…`; C-1174/C-1175 byte-idénticas |
+| 2 | `ejecucion_f4/nombres_fuera_doc_r14.md` §CORR-P32-R14 | "(33 caracteres)" / "(10 caracteres)" | "(44 caracteres)" / "(12 caracteres)" — contados desde el campo documentId del raw JSON (completo 44, truncado 12); sha `5669c1ad…` → `3068b24a…` |
+| 3 | `ejecucion_f7/lectura_corr_p32_r14.md` (texto + bloque JSON) | "(33 caracteres)" / "(10 caracteres)" (×2) | "(44 caracteres)" / "(12 caracteres)" (×2) — Lectura == JSON tras corregir; sha `ec75f031…` → `0e9e84d5…` |
+| 4 | C-1176 (claim absorbido) | fuente `ronda_13/ejecucion_f4/nombres_fuera_doc_r13.md`, hash `sha256:024e52c3…` | fuente `ronda_14/ejecucion_f4/nombres_fuera_doc_r14.md`, hash `sha256:3068b24a…` (el hash sigue al documento que atestigua la cláusula corregida; la medición original queda en el motivo) |
+| 5 | C-1177 (claim absorbido) | hash `sha256:5669c1ad…` (documento fuente pre-corrección) | hash `sha256:3068b24a…` (documento corregido) + nota CORR-P32-NUM-R14 en el motivo |
+
+- **Provenance verificada:** nombres_fuera_doc_r13.md NO entra (C-1176 ya no lo cita); las 4 entradas nuevas son las de la tabla de resultado. La proyección F1/F7 (354→357/359) queda superada por la cifra real 354→358: C-1176 comparte fuente con C-1177.
+- **GitHub:** claims.jsonl, provenance.sha256, claims_resumen.json + estos 3 documentos actualizados se suben en PASO 3 (el Jardinero presente, tarjetas). El relanzamiento pendiente de FASE 4 (decision .json + preparadas) queda subsumido: se suben las versiones APLICADA.
 
 ## Qué se absorbería (3 piezas, lecturas SÉ preparadas)
 
