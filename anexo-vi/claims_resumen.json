@@ -1,9 +1,9 @@
 {
-  "total": 1162,
+  "total": 1168,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1028,
+    "SE": 1034,
     "REFUTADO": 4,
     "NO_SE": 8
   },
@@ -11,7 +11,7 @@
     "prediccion": 8,
     "provenance": 78,
     "digestion": 658,
-    "consolidacion": 6,
+    "consolidacion": 12,
     "verificacion": 295,
     "conflicto": 64,
     "hueco": 40,
@@ -23,8 +23,8 @@
   },
   "por_grieta": {
     "G03": 44,
-    "G09": 70,
-    "G01": 5,
+    "G09": 71,
+    "G01": 6,
     "G12": 4,
     "G05": 165,
     "G-NUEVA: protocolos Drive no integrados en anexo-vi": 34,
@@ -49,9 +49,13 @@
     "G02": 22,
     "G06": 1,
     "G04": 2,
-    "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi": 18
+    "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi": 18,
+    "G-NUEVA: destino segunda carpeta (D-03)": 1,
+    "G-NUEVA: conflicto Phi_c (D-08)": 1,
+    "G-NUEVA: canon nodo (D-12)": 1,
+    "G-NUEVA: canon variograma 1D/2D (D-14)": 1
   },
-  "hash_real": 1148,
+  "hash_real": 1154,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1215,6 +1219,12 @@
     "C-1164",
     "C-1165",
     "C-1166",
-    "C-1167"
+    "C-1167",
+    "C-1168",
+    "C-1169",
+    "C-1170",
+    "C-1171",
+    "C-1172",
+    "C-1173"
   ]
 }
