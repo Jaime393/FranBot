@@ -1,9 +1,9 @@
 {
-  "total": 1174,
+  "total": 1175,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1040,
+    "SE": 1041,
     "REFUTADO": 4,
     "NO_SE": 8
   },
@@ -11,7 +11,7 @@
     "prediccion": 8,
     "provenance": 78,
     "digestion": 658,
-    "consolidacion": 12,
+    "consolidacion": 13,
     "verificacion": 301,
     "conflicto": 64,
     "hueco": 40,
@@ -49,7 +49,7 @@
     "G02": 22,
     "G06": 1,
     "G04": 2,
-    "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi": 18,
+    "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi": 19,
     "G-NUEVA: destino segunda carpeta (D-03)": 1,
     "G-NUEVA: conflicto Phi_c (D-08)": 1,
     "G-NUEVA: canon nodo (D-12)": 1,
@@ -59,7 +59,7 @@
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7; cara r12 #1)": 2,
     "G-NUEVA: estado vivo del ecosistema (observabilidad)": 2
   },
-  "hash_real": 1160,
+  "hash_real": 1161,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1235,6 +1235,7 @@
     "C-1176",
     "C-1177",
     "C-1178",
-    "C-1179"
+    "C-1179",
+    "C-1180"
   ]
 }
