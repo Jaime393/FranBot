@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-014",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/sondeo_puntas.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:02a553f653f2784818f8399cbcbdbaf611c410d890272adf3d61e9e09568646e",
+  "estado": "SE",
+  "contenido": "La ventana de 30 runs (2026-11-14T18:16:07Z → 21:27:35Z) es 25 éxito / 2 fallo / 3 cancelados = 6,7% de fallo, segundo descenso consecutivo (r18: 13,3%). El monitor Flow-ID Coverage corre el run 142 y registra cobertura 0,0%, estado critico: 8.ª ronda en 0,0%.",
+  "contexto": "La ventana de 30 runs (2026-11-14T18:16:07Z → 21:27:35Z) es 25 éxito / 2 fallo / 3 cancelados = 6,7% de fallo, segundo descenso consecutivo (r18: 13,3%). El monitor Flow-ID Coverage corre el run 142 y registra cobertura 0,0%, estado critico: 8.ª ronda en 0,0%.",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/sondeo_puntas.md"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
