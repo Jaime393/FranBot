@@ -1,0 +1,27 @@
+{
+  "frente": "F4",
+  "ronda": 16,
+  "fecha": "2026-11-14",
+  "hora_utc": "16:0x",
+  "herramienta": "conector GitHub, call-read-tool search_code",
+  "repos_cubiertos": [
+    "Jaime393/MIU",
+    "Jaime393/FranBot",
+    "Jaime393/FranBot-Private",
+    "Jaime393/miu-portable-skills"
+  ],
+  "leccion_parametro": "search_code exige el parámetro \"query\" (no \"q\"). Sin repo: en la consulta, filename:graph.json sin calificar devuelve 228.352 resultados globales — el scope por repo: es obligatorio.",
+  "consultas": [
+    {
+      "query": "filename:graph_v10.6_112_nodos.json repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "total_count": 0,
+      "items": []
+    },
+    {
+      "query": "filename:graph.json repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "total_count": 0,
+      "items": []
+    }
+  ],
+  "conclusion": "H1 r15 se sostiene en r16: el graph JSON no existe en los 4 repos cubiertos. NO_SÉ para los otros 228 repos públicos."
+}
