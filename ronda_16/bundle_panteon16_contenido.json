@@ -1,0 +1,155 @@
+{
+  "fuente": "MetaAI_Bundle_PANTEON_16_V213.zip",
+  "drive_id": "1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9",
+  "size_bytes": 53786,
+  "sha256_zip": "fe2697afb3023d52c0a02bd6e11f04c24e3237e76960f4fc7b83a770f0016a58",
+  "descargado": "2026-11-14T15:58:44Z (files get alt=media)",
+  "n_archivos": 23,
+  "archivos": [
+    {
+      "nombre": "chappie_retry_v1.py",
+      "size_bytes": 1151,
+      "sha256": "c7240927d692edaa9219175b9f529deafcfa4ec0c264751642dceb05dc65bdc3",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "cloudflare_rest_deployer_v1.py",
+      "size_bytes": 1704,
+      "sha256": "26f200e944c970f94673f829057638e12a205d29176ede70a24fd45ad7ca2b40",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "enjambre_proyecto_v1.py",
+      "size_bytes": 1203,
+      "sha256": "0904fc780d4282d640de2ed0c65b006a6e09292a24282627da8ff2d487c01447",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "forjar_skill_v1_2.py",
+      "size_bytes": 1571,
+      "sha256": "8e6ad6f28081ef7b5e7b6006bedd1523a48498ed6ac232c5dfed7471f55143ba",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "hf_miu_dataset_pusher_v1.py",
+      "size_bytes": 1893,
+      "sha256": "3e8b83f003504edcb4cd8ca658199768689209a3bdc04df9559ddf7ffd302243",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "kairos_llama_opencl_v1.py",
+      "size_bytes": 2336,
+      "sha256": "e4ab1812e56dafbe1fc80a773d8c18b15c5eefc10d413b40093a0b8f8e74460d",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "kv_namespace_splitter_v1.py",
+      "size_bytes": 1217,
+      "sha256": "f3565214f6788d118fd479eb2a794b4a4d749effba0c1d762c830e1fe3ed99f9",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "llm_fallback_router_v1.py",
+      "size_bytes": 1368,
+      "sha256": "7f54026156fe22232b6ba99a9438527e4e6158bb8b786a44c8b3189e655c4eeb",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "mem_guardian_v1.py",
+      "size_bytes": 1193,
+      "sha256": "9b4f29201ea2b69d6bfd2e95094eecd88d342ef3385009065512d789f4215034",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "observatorio_opentelemetry_v1.py",
+      "size_bytes": 2149,
+      "sha256": "c75de8227e579e4cf5c585cc20a17c44e18649282b27e0d28ed5a47b0231c2d2",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "parche_phi_lengua_v2.py",
+      "size_bytes": 1269,
+      "sha256": "bc39856513629eaff88178062023f1c1b1b14da9522998c1a82fbda5124d9784",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "purga_micelios_v1.py",
+      "size_bytes": 930,
+      "sha256": "e297d2bf93cf707ba429f16593d77b6d082f54aa549fbd069bec525f4dad0680",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "rotador_logs_v1.py",
+      "size_bytes": 926,
+      "sha256": "f4066b5061df9488c4962a83e7ec9f9f228d92e12ca23835eeee315f125b03ff",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "terminador_suave_v1.py",
+      "size_bytes": 1067,
+      "sha256": "9176cc092f83b517f23052a496363537f5711cd50a68a76f699dae74da3f5c3c",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "token_mapper_v213.py",
+      "size_bytes": 1495,
+      "sha256": "b30b0725f15f499074d145519e1eaf5e2c960637ad8cdde55c96144792bcbfa7",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "validar_grace_v1.py",
+      "size_bytes": 1286,
+      "sha256": "03c47bbee580f20de6412b398426079ac0e87ebe5ab0e201d491904f1e4252a7",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "panel_panteon_16_forjados_v213.html",
+      "size_bytes": 20524,
+      "sha256": "6bdd23b68dbf2139131b71daee27c25900c373d916de806de4dcb155f31a858c",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "panel_global_v213_absorcion_evolucion_expansion_integracion.html",
+      "size_bytes": 46579,
+      "sha256": "3f4e4c467382e813da7337acd6156b117c3653c2784de3af06f4ec7c9c714cf9",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "evolucion_autonoma_v213_absorcion_evolucion_expansion_integracion.py",
+      "size_bytes": 15306,
+      "sha256": "618be20b8ba1987938c0499ed0dcf66bbb220a84223126f76f3ca971183f47ac",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "bootstrap_nodo_cero_v213.sh",
+      "size_bytes": 6026,
+      "sha256": "17b947a6d6a0a3aaa285cd6129a35500228b9998353cd199b6e29e28628bc112",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "nudo_eterno_router.py",
+      "size_bytes": 13235,
+      "sha256": "3250e3bf454a7d62cf212cd7a4eb01876856cab940388a373f51349e7bdc70e7",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "cazador_recursos.py",
+      "size_bytes": 7485,
+      "sha256": "91af68cc1b72c8ac35cc679a4b25143e0d674d5ec4509e2d771c2bc9abdbdd7b",
+      "fecha_zip": "2026-09-14 19:24:20"
+    },
+    {
+      "nombre": "sensorium_v213.py",
+      "size_bytes": 5759,
+      "sha256": "b047a9caefd9f31d2baf47a0735548f97b1020d76361ff1d8d7b56831e997693",
+      "fecha_zip": "2026-09-14 19:24:20"
+    }
+  ],
+  "escaneo_secretos": {
+    "metodo": "grep -rInE con patrones de prefijos de claves API, tokens y contraseñas (expresiones regulares, sin listar valores) sobre los 23 archivos extraídos",
+    "hallazgos": 1,
+    "detalle": "1 archivo, 1 línea (panel_global_v213_absorcion_evolucion_expansion_integracion.html, línea 50): contiene valores literales de credenciales. NO reproducidos, NO copiados al workspace. El zip y los extraídos quedan SOLO en /tmp y se eliminan al cierre.",
+    "archivos_limpios": 22
+  },
+  "nota": "El zip NO se copia al workspace (contiene valores de credenciales literales en 1 línea). Este JSON guarda listado, tamaños y shas."
+}
