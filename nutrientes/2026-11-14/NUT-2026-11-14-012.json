@@ -1,0 +1,24 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-012",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/sondeo_puntas.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:02a553f653f2784818f8399cbcbdbaf611c410d890272adf3d61e9e09568646e",
+  "estado": "SE",
+  "contenido": "El escritor Vercel miu-autonomo-v92 (esquema V93) sigue escribiendo: 3 payloads nuevos el 2026-11-14 (20:37:56Z, 21:07:41Z, 21:37:43Z), cadencia ~30 min. El total acumulado es 13 payloads y los valores son idénticos a r17/r18 en 3/3 (9 nodos, savia 920, phi 31.847, rho 0.687).",
+  "contexto": "El escritor Vercel miu-autonomo-v92 (esquema V93) sigue escribiendo: 3 payloads nuevos el 2026-11-14 (20:37:56Z, 21:07:41Z, 21:37:43Z), cadencia ~30 min. El total acumulado es 13 payloads y los valores son idénticos a r17/r18 en 3/3 (9 nodos, savia 920, phi 31.847, rho 0.687).",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/sondeo_puntas.md",
+    "nutrientes/2026-11-14/sondeo/sondeo_sustratos_5.md"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
