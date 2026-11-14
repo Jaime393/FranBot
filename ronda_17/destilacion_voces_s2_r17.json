@@ -1,0 +1,180 @@
+{
+  "medicion": "M-destilacion-voces-S2-r17",
+  "fecha": "2026-11-14",
+  "ronda": 17,
+  "frente": "F6",
+  "falsador": "F-VOZ-S2 (declaracion_falsador_h_sik_r17.md)",
+  "metodo": "Banderas = pick de mejor-contención hacia S2 con max(c1,c2) >= 0,50 (REGLA-PICK-SIK-01, canon N-17). Baseline re-derivada de reuse_sik_r16.json (no hardcodeada). Control cruzado: conteo desde-solo (definición del verificador).",
+  "umbrales": {
+    "contencion_bandera": 0.5,
+    "jaccard_identidad": 0.8
+  },
+  "baseline_r16": {
+    "FranBot": {
+      "n": 2,
+      "banderas": [
+        {
+          "desde": 6,
+          "hacia": 4,
+          "contencion_desde_en_hacia": 0.5172,
+          "contencion_hacia_en_desde": 0.2941,
+          "max_contencion": 0.5172
+        },
+        {
+          "desde": 8,
+          "hacia": 5,
+          "contencion_desde_en_hacia": 0.5,
+          "contencion_hacia_en_desde": 0.2273,
+          "max_contencion": 0.5
+        }
+      ]
+    },
+    "P48": {
+      "n": 1,
+      "banderas": [
+        {
+          "desde": 3,
+          "hacia": 9,
+          "contencion_desde_en_hacia": 0.6,
+          "contencion_hacia_en_desde": 0.0984,
+          "max_contencion": 0.6
+        }
+      ]
+    },
+    "Base": {
+      "n": 0,
+      "banderas": []
+    }
+  },
+  "medicion_r17": {
+    "FranBot": {
+      "n": 2,
+      "banderas": [
+        {
+          "desde": 6,
+          "hacia": 4,
+          "contencion_desde_en_hacia": 0.5172,
+          "contencion_hacia_en_desde": 0.2941,
+          "max_contencion": 0.5172
+        },
+        {
+          "desde": 8,
+          "hacia": 5,
+          "contencion_desde_en_hacia": 0.5,
+          "contencion_hacia_en_desde": 0.2273,
+          "max_contencion": 0.5
+        }
+      ]
+    },
+    "P48": {
+      "n": 1,
+      "banderas": [
+        {
+          "desde": 3,
+          "hacia": 9,
+          "contencion_desde_en_hacia": 0.6,
+          "contencion_hacia_en_desde": 0.0984,
+          "max_contencion": 0.6
+        }
+      ]
+    },
+    "Base": {
+      "n": 0,
+      "banderas": []
+    }
+  },
+  "conjuntos_identicos": true,
+  "banderas_nuevas": [],
+  "jaccard_de_las_banderas_r17": [
+    {
+      "sistema": "FranBot",
+      "desde": 6,
+      "hacia": 4,
+      "jaccard": 0.2308,
+      "jaccard_ge_0_80": false
+    },
+    {
+      "sistema": "FranBot",
+      "desde": 8,
+      "hacia": 5,
+      "jaccard": 0.1852,
+      "jaccard_ge_0_80": false
+    },
+    {
+      "sistema": "P48",
+      "desde": 3,
+      "hacia": 9,
+      "jaccard": 0.0923,
+      "jaccard_ge_0_80": false
+    }
+  ],
+  "cruce_identidad_J_ge_0_80": [],
+  "top_jaccard_voz_hacia_S2": {
+    "FranBot": [
+      {
+        "desde": 6,
+        "hacia": 4,
+        "jaccard": 0.2308
+      },
+      {
+        "desde": 8,
+        "hacia": 5,
+        "jaccard": 0.1852
+      },
+      {
+        "desde": 5,
+        "hacia": 4,
+        "jaccard": 0.1538
+      }
+    ],
+    "P48": [
+      {
+        "desde": 3,
+        "hacia": 9,
+        "jaccard": 0.0923
+      },
+      {
+        "desde": 2,
+        "hacia": 9,
+        "jaccard": 0.0606
+      },
+      {
+        "desde": 5,
+        "hacia": 7,
+        "jaccard": 0.058
+      }
+    ],
+    "Base": [
+      {
+        "desde": 7,
+        "hacia": 5,
+        "jaccard": 0.1341
+      },
+      {
+        "desde": 10,
+        "hacia": 9,
+        "jaccard": 0.0909
+      },
+      {
+        "desde": 9,
+        "hacia": 4,
+        "jaccard": 0.0658
+      }
+    ]
+  },
+  "control_desde_solo": {
+    "r16": {
+      "FranBot": 2,
+      "P48": 1,
+      "Base": 0
+    },
+    "r17": {
+      "FranBot": 2,
+      "P48": 1,
+      "Base": 0
+    }
+  },
+  "veredicto": "VIA_AGOTADA_UMBRAL_0_50",
+  "falsador_disparado": false,
+  "estado": "MEDIDO"
+}
