@@ -1,0 +1,771 @@
+{
+  "nodos": [
+    {
+      "id": "r16:F1",
+      "tipo": "frente",
+      "etiqueta": "GUARDIA — sin aplicación en FASE 1; aplica lo que F7 prepare post-FASE 4"
+    },
+    {
+      "id": "r16:F2",
+      "tipo": "frente",
+      "etiqueta": "ESTADO VIVO — run 205 stub; ventana 25/30 (16,7 %); flow 0,0 % run 140"
+    },
+    {
+      "id": "r16:F3",
+      "tipo": "frente",
+      "etiqueta": "MEDIR — M-69 NO_CONFIRMA / M-70 NO_SÉ / M-71 NO_CONFIRMA; CORR-SERIE-R16"
+    },
+    {
+      "id": "r16:F4",
+      "tipo": "frente",
+      "etiqueta": "PANTEÓN-96 — 2 fuentes Drive leídas (CORR-RUTA-DRIVE-R16); forjados 16/16; cara r12 #1 AVANZA"
+    },
+    {
+      "id": "r16:F5",
+      "tipo": "frente",
+      "etiqueta": "GRIETAS — G03 2026-11-21; G05 18.ª; H-SUELO 16.ª/17.ª; D-06/D-09 sin cambio"
+    },
+    {
+      "id": "r16:F6",
+      "tipo": "frente",
+      "etiqueta": "MECANISMOS — H-SIK sostiene 0 diffs bajo canon N-17; voces→S2 vía agotada; 6.º precedente N-01 CERRADO"
+    },
+    {
+      "id": "r16:F7",
+      "tipo": "frente",
+      "etiqueta": "PREPARAR — 3 propuestas C-1184/C-1185/C-1186 + ítem anexo M-69"
+    },
+    {
+      "id": "r16:F8",
+      "tipo": "frente",
+      "etiqueta": "CONECTAR — 0 caras cierran, 11 avanzan; balance 77/18/59"
+    },
+    {
+      "id": "r16:F9",
+      "tipo": "frente",
+      "etiqueta": "PODA — tally 72; 11 temporales prorrogados; T-4 5.393 archivos, 0 FALTA"
+    },
+    {
+      "id": "r16:H-F2-run205",
+      "tipo": "hallazgo",
+      "etiqueta": "Run 205 stub \"unreachable\" 329 B, blob a3add0bc…, episodio run 204 de 7 h 20 min"
+    },
+    {
+      "id": "r16:H-F2-ventana167",
+      "tipo": "hallazgo",
+      "etiqueta": "Ventana 25/30 (16,7 %), peor de la serie; 3 fallos nuevos"
+    },
+    {
+      "id": "r16:H-F2-flow140",
+      "tipo": "hallazgo",
+      "etiqueta": "Flow 0,0 % CRÍTICO run 140, quinta ronda en 0,0 %"
+    },
+    {
+      "id": "r16:H-F2-heartbeat",
+      "tipo": "hallazgo",
+      "etiqueta": "Heartbeat 99 nuevas, censo vacío 32/99 = 32,3 %"
+    },
+    {
+      "id": "r16:H-F2-bots",
+      "tipo": "hallazgo",
+      "etiqueta": "Bots 4/4 VIVO, 14.ª confirmación; 5.º token 401 MUERTO"
+    },
+    {
+      "id": "r16:H-F2-autocura8",
+      "tipo": "hallazgo",
+      "etiqueta": "Autocura run 8 (10:20:43Z, success), primero desde el run 7"
+    },
+    {
+      "id": "r16:H-F3-M69",
+      "tipo": "hallazgo",
+      "etiqueta": "M-69 NO_CONFIRMA: u* = 0,05 vs umbral 0,0302 (grupo central de 24 nodos)"
+    },
+    {
+      "id": "r16:H-F3-M70",
+      "tipo": "hallazgo",
+      "etiqueta": "M-70 NO_SÉ: ancla degenerada P2(106) = 0 exacto"
+    },
+    {
+      "id": "r16:H-F3-M71",
+      "tipo": "hallazgo",
+      "etiqueta": "M-71 NO_CONFIRMA: β = 0,9733, R² = 0,3974, n = 10.351 (5.ª variable)"
+    },
+    {
+      "id": "r16:H-F3-corrserie",
+      "tipo": "hallazgo",
+      "etiqueta": "CORR-SERIE-R16: la serie 25..119 son 83 congresos, no 95"
+    },
+    {
+      "id": "r16:H-F6-hsik",
+      "tipo": "hallazgo",
+      "etiqueta": "H-SIK sostiene: S3 ≡ v10.3, 27/58 contenido, 32/58 nombre; verificador 0 diffs"
+    },
+    {
+      "id": "r16:H-F6-ff",
+      "tipo": "hallazgo",
+      "etiqueta": "F-F se dispara: 11 tuplas / 8 distintos, mismas que r15"
+    },
+    {
+      "id": "r16:H-F6-a14",
+      "tipo": "hallazgo",
+      "etiqueta": "A14 = 0,8000 exacto bajo R-KS, conteo 27"
+    },
+    {
+      "id": "r16:H-F6-vocesagotada",
+      "tipo": "hallazgo",
+      "etiqueta": "Voces → S2: vía AGOTADA en 0,50, mejor Jaccard 0,2308"
+    },
+    {
+      "id": "r16:H-F6-n01sexto",
+      "tipo": "hallazgo",
+      "etiqueta": "N-01: 6.º precedente CERRADO por la propia ejecución N-01"
+    },
+    {
+      "id": "r16:H-F5-g03",
+      "tipo": "hallazgo",
+      "etiqueta": "G03: inserción BepiColombo 2026-11-21 re-confirmada (7 días)"
+    },
+    {
+      "id": "r16:H-F5-g05",
+      "tipo": "hallazgo",
+      "etiqueta": "G05: blob 8c57e833…, 1.398 B, 18.ª verificación sin cambio"
+    },
+    {
+      "id": "r16:H-F5-hsuelo",
+      "tipo": "hallazgo",
+      "etiqueta": "H-SUELO: sin reaparición, 16.ª medición (F5) / 17.ª estricta (FASE 2)"
+    },
+    {
+      "id": "r16:H-F4-rutadrive",
+      "tipo": "hallazgo",
+      "etiqueta": "CORR-RUTA-DRIVE-R16: files get alt=media descarga el contenido"
+    },
+    {
+      "id": "r16:H-F4-forjados16",
+      "tipo": "hallazgo",
+      "etiqueta": "Forjados 16/16 como scripts en el bundle Drive"
+    },
+    {
+      "id": "r16:H-F4-caraavanza",
+      "tipo": "hallazgo",
+      "etiqueta": "Cara r12 #1 AVANZA: 0/61 encontradas, 0/35 como voz"
+    },
+    {
+      "id": "r16:H-F9-tally72",
+      "tipo": "hallazgo",
+      "etiqueta": "Poda tally 72 entradas (11/7/1/33/12/2/6)"
+    },
+    {
+      "id": "r16:H-F9-temporales",
+      "tipo": "hallazgo",
+      "etiqueta": "11 temporales prorrogados, 5.ª consecutiva; condición 1 nunca intentada"
+    },
+    {
+      "id": "r16:H-F9-t4",
+      "tipo": "hallazgo",
+      "etiqueta": "T-4: 5.393 archivos, 0 FALTA, 6 CAMBIO explicados"
+    },
+    {
+      "id": "r16:D-C-1184",
+      "tipo": "decision",
+      "etiqueta": "C-1184 — Ventana 25/30 (16,7 %), tercera ronda consecutiva ≠ 0,0 % y peor de la serie (SE PREPARADA_NO_APLICADA)"
+    },
+    {
+      "id": "r16:D-C-1185",
+      "tipo": "decision",
+      "etiqueta": "C-1185 — Estado completo ausente ~20 h 54 min, run 205 stub (SE PREPARADA_NO_APLICADA)"
+    },
+    {
+      "id": "r16:D-C-1186",
+      "tipo": "decision",
+      "etiqueta": "C-1186 — CORR-SERIE-R16: la serie 25..119 son 83 congresos, no 95 (SE PREPARADA_NO_APLICADA)"
+    },
+    {
+      "id": "r16:D-N-19",
+      "tipo": "decision",
+      "etiqueta": "N-19 — Añadan el ítem M-69 al anexo de incertidumbre (ADOPTADA por FASE 2)"
+    },
+    {
+      "id": "r16:D-N-15",
+      "tipo": "decision",
+      "etiqueta": "N-15 — M-50 vía navegador, 4.º intento (EJECUCIÓN DEL PRINCIPAL)"
+    },
+    {
+      "id": "r16:D-N-03",
+      "tipo": "decision",
+      "etiqueta": "N-03 — Licencia Zenodo (PENDIENTE, parte de D-06)"
+    },
+    {
+      "id": "r16:D-D-06",
+      "tipo": "decision",
+      "etiqueta": "D-06 — Depósito Zenodo v13.0 (PREPARABLE, 0 tex; bloqueado por N-03)"
+    },
+    {
+      "id": "r16:D-D-09",
+      "tipo": "decision",
+      "etiqueta": "D-09 — Telegram G05 (PREPARABLE, mensaje listo 3.639 B, sin enviar)"
+    },
+    {
+      "id": "r16:D-N-01",
+      "tipo": "decision",
+      "etiqueta": "N-01 — Política P1–P10 + 2 adendas como canon (APLICADA r15; 6.º precedente CERRADO r16)"
+    },
+    {
+      "id": "r16:D-N-17",
+      "tipo": "decision",
+      "etiqueta": "N-17 — REGLA-PICK-SIK-01 como canon (APLICADA r15)"
+    },
+    {
+      "id": "r16:D-D-04",
+      "tipo": "decision",
+      "etiqueta": "D-04 — micelio.yml (CERRADA por la corrección 21:02)"
+    },
+    {
+      "id": "r16:R-corpus",
+      "tipo": "referencia",
+      "etiqueta": "Corpus 1.178 claims (7e5f016d…), SE 1044, hash_real 1164"
+    },
+    {
+      "id": "r16:R-dataset",
+      "tipo": "referencia",
+      "etiqueta": "Dataset 30 filas + cabecera (0852d58f…), byte-idéntico"
+    },
+    {
+      "id": "r16:R-anexo",
+      "tipo": "referencia",
+      "etiqueta": "Anexo de incertidumbre, 11 ítems M-56..M-66 (6b9ea2aa…)"
+    },
+    {
+      "id": "r16:R-franbot",
+      "tipo": "referencia",
+      "etiqueta": "FranBot HEAD 7ef78ed5 (producción fractal 49/49 por blob)"
+    },
+    {
+      "id": "r16:R-micelio",
+      "tipo": "referencia",
+      "etiqueta": "micelio.yml remoto, blob 8c57e833…, 1.398 B"
+    },
+    {
+      "id": "r16:R-run167",
+      "tipo": "referencia",
+      "etiqueta": "Estado de cierre: run 167 \"paused\", 290 B, blob 0268ab38…, HEAD 2cba6023"
+    },
+    {
+      "id": "r16:R-flow140",
+      "tipo": "referencia",
+      "etiqueta": "flow_id_coverage.json run 140, 0,0 %, 0 eventos"
+    },
+    {
+      "id": "r16:R-persistente",
+      "tipo": "referencia",
+      "etiqueta": "estado_persistente.json V213, 14.718 B, byte-idéntico"
+    },
+    {
+      "id": "r16:R-doc96",
+      "tipo": "referencia",
+      "etiqueta": "Doc índice Panteón-96 (1R0RGvCEYv0Ax-0o9QwwB6kGxUKxLLh_YJ0qVc3Ab4G8)"
+    },
+    {
+      "id": "r16:R-panteon16",
+      "tipo": "referencia",
+      "etiqueta": "Panteón-16 v213 autónomo, 7 voces con nombre + A0-A57"
+    },
+    {
+      "id": "r16:R-bundle",
+      "tipo": "referencia",
+      "etiqueta": "MetaAI_Bundle_PANTEON_16_V213.zip, 53.786 B, 23 archivos"
+    },
+    {
+      "id": "r16:R-carpeta",
+      "tipo": "referencia",
+      "etiqueta": "Carpeta Drive «10 Panteón», exactamente 2 hijos"
+    },
+    {
+      "id": "r16:R-hsall",
+      "tipo": "referencia",
+      "etiqueta": "HSall_members.csv, 6.201.455 B (Voteview)"
+    },
+    {
+      "id": "r16:R-indicators",
+      "tipo": "referencia",
+      "etiqueta": "indicators.tab, 5.538.726 B (UCD/GHSL + OSM)"
+    },
+    {
+      "id": "r16:R-audit",
+      "tipo": "referencia",
+      "etiqueta": "audit.py exit=0 (ok=347, discrepancia=0)"
+    },
+    {
+      "id": "r16:R-verifyall",
+      "tipo": "referencia",
+      "etiqueta": "verify_all.py exit=1 exactamente C-001..C-008"
+    },
+    {
+      "id": "r16:R-provenance",
+      "tipo": "referencia",
+      "etiqueta": "provenance.sha256, 361 líneas (b5cb6b43…)"
+    }
+  ],
+  "aristas": [
+    {
+      "origen": "r16:H-F2-run205",
+      "destino": "r16:F2",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F2-ventana167",
+      "destino": "r16:F2",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F2-flow140",
+      "destino": "r16:F2",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F2-heartbeat",
+      "destino": "r16:F2",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F2-bots",
+      "destino": "r16:F2",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F2-autocura8",
+      "destino": "r16:F2",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F3-M69",
+      "destino": "r16:F3",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F3-M70",
+      "destino": "r16:F3",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F3-M71",
+      "destino": "r16:F3",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F3-corrserie",
+      "destino": "r16:F3",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F6-hsik",
+      "destino": "r16:F6",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F6-ff",
+      "destino": "r16:F6",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F6-a14",
+      "destino": "r16:F6",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F6-vocesagotada",
+      "destino": "r16:F6",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F6-n01sexto",
+      "destino": "r16:F6",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F5-g03",
+      "destino": "r16:F5",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F5-g05",
+      "destino": "r16:F5",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F5-hsuelo",
+      "destino": "r16:F5",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F4-rutadrive",
+      "destino": "r16:F4",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F4-forjados16",
+      "destino": "r16:F4",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F4-caraavanza",
+      "destino": "r16:F4",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F9-tally72",
+      "destino": "r16:F9",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F9-temporales",
+      "destino": "r16:F9",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F9-t4",
+      "destino": "r16:F9",
+      "relacion": "de"
+    },
+    {
+      "origen": "r16:H-F2-run205",
+      "destino": "r16:R-run167",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-run205",
+      "destino": "r16:R-persistente",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-run205",
+      "destino": "r16:D-C-1185",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-ventana167",
+      "destino": "r16:D-C-1184",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-ventana167",
+      "destino": "r16:R-flow140",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-flow140",
+      "destino": "r16:R-flow140",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-heartbeat",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-bots",
+      "destino": "r16:D-D-09",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-bots",
+      "destino": "r16:R-verifyall",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F2-autocura8",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-M69",
+      "destino": "r16:D-N-19",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-M69",
+      "destino": "r16:R-anexo",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-M70",
+      "destino": "r16:D-C-1186",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-M70",
+      "destino": "r16:R-hsall",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-M71",
+      "destino": "r16:R-indicators",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-M71",
+      "destino": "r16:R-dataset",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-corrserie",
+      "destino": "r16:D-C-1186",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F3-corrserie",
+      "destino": "r16:R-hsall",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-hsik",
+      "destino": "r16:D-N-17",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-hsik",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-ff",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-ff",
+      "destino": "r16:D-N-17",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-a14",
+      "destino": "r16:D-N-17",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-vocesagotada",
+      "destino": "r16:D-N-17",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F6-n01sexto",
+      "destino": "r16:D-N-01",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F5-g03",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F5-g05",
+      "destino": "r16:R-micelio",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F5-g05",
+      "destino": "r16:D-D-04",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F5-hsuelo",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F4-rutadrive",
+      "destino": "r16:R-bundle",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F4-forjados16",
+      "destino": "r16:R-bundle",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F4-forjados16",
+      "destino": "r16:R-panteon16",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F4-caraavanza",
+      "destino": "r16:R-doc96",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F4-caraavanza",
+      "destino": "r16:R-carpeta",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F9-tally72",
+      "destino": "r16:R-corpus",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F9-tally72",
+      "destino": "r16:R-audit",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F9-temporales",
+      "destino": "r16:R-provenance",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:H-F9-t4",
+      "destino": "r16:R-audit",
+      "relacion": "cita"
+    },
+    {
+      "origen": "r16:F3",
+      "destino": "r16:F7",
+      "relacion": "alimenta"
+    },
+    {
+      "origen": "r16:F2",
+      "destino": "r16:F7",
+      "relacion": "alimenta"
+    },
+    {
+      "origen": "r16:F6",
+      "destino": "r16:F7",
+      "relacion": "alimenta"
+    },
+    {
+      "origen": "r16:F4",
+      "destino": "r16:F7",
+      "relacion": "alimenta"
+    },
+    {
+      "origen": "r16:F9",
+      "destino": "r16:F7",
+      "relacion": "alimenta"
+    },
+    {
+      "origen": "r16:F7",
+      "destino": "r16:F1",
+      "relacion": "alimenta"
+    },
+    {
+      "origen": "r16:D-C-1184",
+      "destino": "r16:F1",
+      "relacion": "pendiente_de"
+    },
+    {
+      "origen": "r16:D-C-1185",
+      "destino": "r16:F1",
+      "relacion": "pendiente_de"
+    },
+    {
+      "origen": "r16:D-C-1186",
+      "destino": "r16:F1",
+      "relacion": "pendiente_de"
+    },
+    {
+      "origen": "r16:D-N-19",
+      "destino": "r16:F1",
+      "relacion": "pendiente_de"
+    },
+    {
+      "origen": "r16:D-D-06",
+      "destino": "r16:D-N-03",
+      "relacion": "pendiente_de"
+    },
+    {
+      "origen": "r16:D-N-03",
+      "destino": "r16:D-D-06",
+      "relacion": "pendiente_de"
+    },
+    {
+      "origen": "r16:H-F6-n01sexto",
+      "destino": "r16:D-N-01",
+      "relacion": "cerrada_por"
+    },
+    {
+      "origen": "r16:H-F6-a14",
+      "destino": "r16:D-N-17",
+      "relacion": "cerrada_por"
+    },
+    {
+      "origen": "r16:H-F6-hsik",
+      "destino": "r16:D-N-17",
+      "relacion": "cerrada_por"
+    },
+    {
+      "origen": "r16:H-F5-g05",
+      "destino": "r16:D-D-04",
+      "relacion": "cerrada_por"
+    },
+    {
+      "origen": "r16:H-F6-vocesagotada",
+      "destino": "r16:D-N-17",
+      "relacion": "cerrada_por"
+    },
+    {
+      "origen": "r16:H-F2-run205",
+      "destino": "r16:H-F2-ventana167",
+      "relacion": "acompaña"
+    },
+    {
+      "origen": "r16:H-F5-g05",
+      "destino": "r16:H-F5-hsuelo",
+      "relacion": "acompaña"
+    },
+    {
+      "origen": "r16:F4",
+      "destino": "r16:H-F4-forjados16",
+      "relacion": "incluye"
+    },
+    {
+      "origen": "r16:R-carpeta",
+      "destino": "r16:R-panteon16",
+      "relacion": "incluye"
+    },
+    {
+      "origen": "r16:H-F3-corrserie",
+      "destino": "r16:H-F3-M70",
+      "relacion": "relaciona"
+    },
+    {
+      "origen": "r16:D-N-17",
+      "destino": "r16:H-F6-hsik",
+      "relacion": "sostiene"
+    },
+    {
+      "origen": "r16:H-F4-forjados16",
+      "destino": "r16:H-F4-rutadrive",
+      "relacion": "refuerza"
+    },
+    {
+      "origen": "r16:F1",
+      "destino": "r16:D-N-15",
+      "relacion": "registra"
+    },
+    {
+      "origen": "r16:F1",
+      "destino": "r16:D-N-03",
+      "relacion": "registra"
+    },
+    {
+      "origen": "r16:F1",
+      "destino": "r16:D-D-06",
+      "relacion": "registra"
+    },
+    {
+      "origen": "r16:F1",
+      "destino": "r16:D-D-09",
+      "relacion": "registra"
+    },
+    {
+      "origen": "r16:F8",
+      "destino": "r16:D-N-19",
+      "relacion": "registra"
+    },
+    {
+      "origen": "r16:H-F5-g05",
+      "destino": "r16:R-franbot",
+      "relacion": "cita"
+    }
+  ]
+}
