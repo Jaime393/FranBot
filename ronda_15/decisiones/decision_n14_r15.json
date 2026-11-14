@@ -1,0 +1,121 @@
+{
+ "adopcion": {
+  "artefacto": "ronda_8/retejido_ola1/fuentes_ola1/pipeline_verificacion_r8.md",
+  "artefacto_lineas": 39,
+  "artefacto_sha": "845bab8ee0ffcc567393e42ad996d8bf6724e39e4c20126e78913ff8df80d67c",
+  "costes_afirmados": {
+   "indice": "O(n log n) por conteo de comparaciones (F4b, ratio 1,073)",
+   "verificacion": "O(n) medida en r12 (ratio 1,11-1,14)",
+   "wall_clock_indice": "NO se afirma (falsador F4 FALLO en r12, mediana 1,524, 4 pasan / 10 fallan)"
+  },
+  "no_adopta": [
+   "el texto de R2-25 como esta (juicio r11: una propuesta no se vuelve SE por estar bien escrita)",
+   "el enunciado de costes sin cualificar",
+   "resucitar F4 ni cambiar el veredicto de la via B (FALLA_F4 queda como hecho ejecutado)",
+   "nada mas (C-7/P10)"
+  ],
+  "procedimiento": "PIPELINE-VERIFICACION-01"
+ },
+ "cambio_estado_r2_25": {
+  "archivo": "ronda_9/preparacion_b2/b2_normalizado.jsonl",
+  "campo_nuevo": "nota_adopcion",
+  "estado_antes": "CONJETURO",
+  "estado_despues": "SE",
+  "intactos": [
+   "texto_literal",
+   "texto_original_retejido",
+   "sha256",
+   "archivo_evidencia",
+   "artefacto_fuente_fijado"
+  ],
+  "nota_adopcion": "Adoptado como procedimiento canonico (PIPELINE-VERIFICACION-01) por decision N-14 el 2026-11-14 (documento de decision: ronda_15/ejecucion_f1/decision_n14_r15.md; claim de adopcion: C-1180). El texto propuesto de R2-25 NO se absorbe como esta (juicio r11): lo adoptado es el procedimiento con la cualificacion F4 (O(n) medido r12; O(n log n) por conteo F4b 1,073; wall-clock NO afirmado, falsador F4 FALLO en r12, mediana 1,524). Via B sigue FALLA_F4 como hecho ejecutado."
+ },
+ "claim": {
+  "dedup": {
+   "max": 0.1474,
+   "max_id": "C-1179",
+   "pares_ge_0_5": 0,
+   "top3": [
+    [
+     0.1474,
+     "C-1179"
+    ],
+    [
+     0.1368,
+     "C-998"
+    ],
+    [
+     0.1364,
+     "C-361"
+    ]
+   ]
+  },
+  "estado": "SE",
+  "fecha_limite": null,
+  "fuente": "ronda_15/ejecucion_f1/decision_n14_r15.md",
+  "grieta": "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi",
+  "hash": "sha256:131409ebcf23a314ccfe68aefd099caf64d1a05d513ec2192c520c1c4ba6756c",
+  "id": "C-1180",
+  "motivo": "Adopcion canonica N-14 (via A). Juicio r11 (NO SE ELEVA sin adopcion); ejecucion r12 via B (FALLA_F4, falsador 23:49:21Z, corrida 23:52:13Z); F4b suplementario 1,073. El texto propuesto de R2-25 no se absorbe (juicio r11).",
+  "texto": "El procedimiento PIPELINE-VERIFICACION-01 (pipeline_verificacion_r8.md, sha 845bab8e…) fue adoptado como procedimiento canonico del tejido el 2026-11-14 por decision N-14. Costes afirmados por la adopcion: verificacion O(n) medida en r12; indice O(n log n) por conteo de comparaciones (F4b 1,073); el coste wall-clock del indice no se afirma (falsador F4 FALLO en r12, mediana 1,524).",
+  "tipo": "consolidacion",
+  "verificador": "sha256sum del archivo de dominio"
+ },
+ "corpus_antes": {
+  "claims_lineas": 1174,
+  "claims_sha": "d4924c9b8a4e4c96a1c265a718ffda6de2cd3e46ff792da237ad4933a846c419",
+  "hash_real": 1160,
+  "provenance_lineas": 358,
+  "provenance_sha": "1ff7719061fda482a56a65fa9ae502a6d541516bd8afca03aa3c55c96a90ed27",
+  "resumen_sha": "49f1a17e3521b5fefad4b70b2c3dede6032be0cf1b5c0b61d96c9c513046fb31",
+  "se": 1040
+ },
+ "decision": "N-14",
+ "decision_doc_sha": "131409ebcf23a314ccfe68aefd099caf64d1a05d513ec2192c520c1c4ba6756c",
+ "estado": "APLICADA",
+ "fecha": "2026-11-14",
+ "manifiesto_respaldo_sha": "dfed9a56972a04fd06dd33f303ef287fc1849ed9f73d801b721ded9bd27c70b5",
+ "orden": "Jardinero 2026-11-14 01:43 -05: aplican las decisiones siempre automaticamente (regimen nuevo)",
+ "paquete": {
+  "borrador": "ronda_13/ejecucion_f6/r2_25_via_r13.md",
+  "reverificacion": "ronda_14/ejecucion_f6/r2_25_via_r14.md",
+  "sha_borrador": "0d1ef7959499d01828e690408537ea4556be602a1bdf47e98f473d6244c30423",
+  "sha_reverificacion": "801601adf7c12e1f67b8f938e5a189015f0c39fab4e66c72a21f587e5482214e"
+ },
+ "proyeccion": {
+  "claims_lineas": 1175,
+  "hash_real": 1161,
+  "provenance_lineas": 359,
+  "se": 1041
+ },
+ "puertas_post": {
+  "salida": "puertas_n14.txt",
+  "script": "aplicar_n14_r15.py"
+ },
+ "puertas_pre": {
+  "audit_exit": 0,
+  "audit_ok": 344,
+  "verify_all_exit": 1,
+  "verify_all_ids": [
+   "C-001",
+   "C-002",
+   "C-003",
+   "C-004",
+   "C-005",
+   "C-006",
+   "C-007",
+   "C-008"
+  ]
+ },
+ "respaldo": "ronda_15/respaldo_pre_r15_n14/",
+ "post_estado": {
+  "claims_lineas": 1175,
+  "claims_sha": "6b5fac7fb313be10009cd49904fde90cd179e6ed195448797b5c9c61575ddc66",
+  "provenance_lineas": 359,
+  "provenance_sha": "5fda0383aea72ad3e6101319d024ce35591a6917a5afbc08c567426fe1257521",
+  "resumen_sha": "1c6464d25ed5e9cadd3fc182e32ba447cda526aceb92724794b2f26cda94cef5",
+  "se": 1041,
+  "hash_real": 1161,
+  "verificacion_por_tipo": 301
+ }
+}
