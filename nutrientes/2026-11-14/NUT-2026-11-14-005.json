@@ -1,0 +1,26 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-005",
+  "tipo": "hecho",
+  "fuente": "academico/tejido_2026-11-12/ronda_18/ejecucion_f3/mediciones_r18.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:a14cca98931442772b5e6c9101b9cf32a48d981a35fd0ebad127a9c5f5beef9e",
+  "estado": "SE",
+  "contenido": "La serie DW-NOMINATE 25..119 cubre 86 congresos (34..119), no 83: el parseo tolerante restaura los Congresos 115–117, cuyo party_code viene como cadena flotante ('100.0'/'200.0'). CORR-SERIE-R17 corrige a C-1186, que registraba 83 congresos por el descarte de esas filas con int(). La serie se re-midió en M-74 (r17) y se re-confirma en M-75 (r18).",
+  "contexto": "La serie DW-NOMINATE 25..119 cubre 86 congresos (34..119), no 83: el parseo tolerante restaura los Congresos 115–117, cuyo party_code viene como cadena flotante ('100.0'/'200.0'). CORR-SERIE-R17 corrige a C-1186, que registraba 83 congresos por el descarte de esas filas con int(). La serie se re-midió en M-74 (r17) y se re-confirma en M-75 (r18).",
+  "referencias": [
+    "academico/tejido_2026-11-12/ronda_18/ejecucion_f3/mediciones_r18.md",
+    "academico/tejido_2026-11-12/ronda_17/ejecucion_f3/mediciones_r17.md (M-74, CORR-SERIE-R17)",
+    "memoria/anexo-vi/claims.jsonl (C-1186)"
+  ],
+  "grieta": "G-NUEVA: d05 L4 polarización (medida y mecanismo)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi",
+  "claim_origen": "C-1186"
+}
