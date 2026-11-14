@@ -1,0 +1,85 @@
+{
+  "medicion": "M-76",
+  "dominio": "d05 escalamiento urbano: superficie del área urbana (area_km2) vs población residente, OLS log-log base 10, 10.351 áreas urbanas GHSL/UCD",
+  "fuente": "indicators.tab (mismo archivo que M-52/M-57/M-65/M-68/M-71/M-73, 5.538.726 B, sha re-verificado aquí; copia en datos/ de r18). Variables: area_km2 (columna 38, superficie del área urbana) y resident_pop (columna 37).",
+  "url": "Archivo local en datos/ (sha256 en este JSON); serie urbana GHSL/UCD, misma fuente que M-52/M-57/M-65/M-68/M-71/M-73",
+  "sha256_dato": "7ec636c8722b54586067bfd7f71032804fa1743daaacd12ad08fc449e399d9c7",
+  "metodo": "OLS log-log base 10, Y = area_km2 vs X = resident_pop, sin umbral adicional. Inclusión: resident_pop>0, area_km2>0 y valores finitos (mismo criterio que M-52/M-57/M-65/M-68/M-71/M-73, otra variable Y: 10.351/10.351 filas incluidas). El campo 'error' lleva el SE de beta.",
+  "parametros": {
+    "n_total_filas": 10351,
+    "n_incluidas": 10351,
+    "beta": 0.8627,
+    "se_beta": 0.0049,
+    "alfa": -2.9872,
+    "R2": 0.749,
+    "umbral_beta": [
+      0.8,
+      0.9
+    ],
+    "umbral_R2": 0.9,
+    "beta_en_banda": true,
+    "R2_en_umbral": false
+  },
+  "valor": 0.8627,
+  "error": 0.0049,
+  "limites_validez": "Mismos que M-57/M-65/M-68/M-71/M-73 (población 2015 UCD frente a área GHSL/UCD; ciudad = área urbana GHSL/UCD; OLS log-log supone errores homocedásticos en log-log). area_km2 es variable geométrica extensiva, no un conteo de la red viaria; 0 menciones en claims.jsonl antes de esta medición.",
+  "criterio_falsacion": "CONFIRMA si beta estimado cae en [0,80, 0,90] con R²>=0,90; NO_CONFIRMA en caso contrario. Declarado en declaracion_falsadores_r18.md (2026-11-14T20:16:05Z) antes de correr. Mismos umbrales que M-52/M-57/M-65/M-68/M-71/M-73.",
+  "veredicto": "NO_CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-14",
+  "extra": {
+    "serie_variables": [
+      {
+        "variable": "length_total",
+        "medicion": "M-52",
+        "beta": 0.9177,
+        "R2": 0.6037,
+        "veredicto": "NO_CONFIRMA"
+      },
+      {
+        "variable": "node_count",
+        "medicion": "M-57",
+        "beta": 0.9828,
+        "R2": 0.4148,
+        "veredicto": "NO_CONFIRMA"
+      },
+      {
+        "variable": "street_segment_count",
+        "medicion": "M-65",
+        "beta": 0.9911,
+        "R2": 0.408,
+        "veredicto": "NO_CONFIRMA"
+      },
+      {
+        "variable": "intersect_count",
+        "medicion": "M-68",
+        "beta": 0.9876,
+        "R2": 0.402,
+        "veredicto": "NO_CONFIRMA"
+      },
+      {
+        "variable": "intersect_count_clean",
+        "medicion": "M-71",
+        "beta": 0.9733,
+        "R2": 0.3974,
+        "veredicto": "NO_CONFIRMA"
+      },
+      {
+        "variable": "intersect_count_clean_topo",
+        "medicion": "M-73",
+        "beta": 0.9757,
+        "R2": 0.3989,
+        "veredicto": "NO_CONFIRMA"
+      },
+      {
+        "variable": "area_km2",
+        "medicion": "M-76",
+        "beta": 0.8627,
+        "R2": 0.749,
+        "veredicto": "NO_CONFIRMA"
+      }
+    ],
+    "lectura_serie": "Primera variable con beta DENTRO de [0,80, 0,90] (0,8627 ± 0,0049); las seis anteriores estaban en 0,92-0,99. Pero R² = 0,7490 sigue muy por debajo de 0,90: el modo de fallo dominante sigue siendo el R² bajo, no beta. Séptima variable, mismo veredicto por la misma pierna.",
+    "verificacion_independiente": "Re-cómputo con pandas (otro camino de código): n = 10.351, beta = 0,8627, R² = 0,7490 — idéntico dígito a dígito."
+  }
+}
