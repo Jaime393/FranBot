@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-009",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/sondeo_puntas.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:02a553f653f2784818f8399cbcbdbaf611c410d890272adf3d61e9e09568646e",
+  "estado": "SE",
+  "contenido": "El State Writer escribió el run 207 el 2026-11-14T21:03:53Z (success, commit 1717f147) y estado_vivo.json sigue siendo un stub {\"error\": \"unreachable\"} de 329 B, blob 395bc5ad…. El episodio del run 206 duró ~4 h 13 min (16:50:21Z → 21:03:57Z) y el estado completo lleva ausente ~28 h desde el run 202 (2026-11-13T17:58:47Z).",
+  "contexto": "El State Writer escribió el run 207 el 2026-11-14T21:03:53Z (success, commit 1717f147) y estado_vivo.json sigue siendo un stub {\"error\": \"unreachable\"} de 329 B, blob 395bc5ad…. El episodio del run 206 duró ~4 h 13 min (16:50:21Z → 21:03:57Z) y el estado completo lleva ausente ~28 h desde el run 202 (2026-11-13T17:58:47Z).",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/sondeo_puntas.md"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
