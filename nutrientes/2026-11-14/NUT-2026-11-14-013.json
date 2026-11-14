@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-013",
+  "tipo": "hecho",
+  "fuente": "nutrientes/2026-11-14/sondeo/sondeo_puntas.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:02a553f653f2784818f8399cbcbdbaf611c410d890272adf3d61e9e09568646e",
+  "estado": "SE",
+  "contenido": "Los 4 bots Telegram están VIVO por getMe el 2026-11-14T22:06:30Z: 17.ª confirmación consecutiva, webhook sí en los 4, pending 0. El 5.º token sigue 401 MUERTO, confirmado en los 2 tokens del pool para ese id.",
+  "contexto": "Los 4 bots Telegram están VIVO por getMe el 2026-11-14T22:06:30Z: 17.ª confirmación consecutiva, webhook sí en los 4, pending 0. El 5.º token sigue 401 MUERTO, confirmado en los 2 tokens del pool para ese id.",
+  "referencias": [
+    "nutrientes/2026-11-14/sondeo/sondeo_puntas.md"
+  ],
+  "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi"
+}
