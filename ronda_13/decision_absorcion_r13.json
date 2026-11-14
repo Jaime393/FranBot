@@ -1,0 +1,120 @@
+{
+ "ronda": 13,
+ "fase": 1,
+ "frente": "F1",
+ "titulo": "Absorción condicionada — 2 lecturas F7 r12 (Panteón-96, folderId)",
+ "fecha": "2026-11-13",
+ "orden": "PENDIENTE — orden nueva no dada. N-12 cubrió solo r12 (C-1168..C-1173); la orden 16:51 cubrió la absorción de r11 F1, no esta ola.",
+ "estado": "PREPARADO",
+ "piezas": [
+  {
+   "lectura": "Panteón-96: 35 con nombre + 61 sin nombre en el Doc índice",
+   "id_proyectado": "C-1174",
+   "dedup_max": 0.1689,
+   "dedup_max_id": "C-838",
+   "hash_fuente": "sha256:528f65356b1122ef2de484fe0615cd2892fafc8060e62b7aac0b34438b3e3fbb",
+   "fuente": "ronda_12/ejecucion_f4/voces_panteon96_nombres.md",
+   "grieta": "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7)"
+  },
+  {
+   "lectura": "Causa del censo vacío: V151 → folderId l (404); V152 → I (existe)",
+   "id_proyectado": "C-1175",
+   "dedup_max": 0.1641,
+   "dedup_max_id": "C-1171",
+   "hash_fuente": "sha256:5496f88360d05d752efcb10437cef8bedfbf4112d5a00de5595f83733cdc434e",
+   "fuente": "ronda_12/ejecucion_f2/estado_vivo_r12.md",
+   "grieta": "G-NUEVA: censo vacío heartbeat, causa folderId (F6 r11/r12)"
+  }
+ ],
+ "dedup": {
+  "metodo": "r9, Jaccard, umbral 0,5",
+  "max_global": 0.1689,
+  "max_global_id": "C-838",
+  "max_entre_propuestas": 0.125,
+  "par_entre_propuestas": [
+   "panteon96",
+   "folderid"
+  ],
+  "pares_ge_0_5": 0,
+  "re_corridas": [
+   "FASE 0 r13",
+   "F1 r13 (dedup_f7_r13.json)",
+   "F7 r12 (dedup_f7_r12.json)"
+  ],
+  "coincidencia": "idéntico cifra por cifra en las 3 corridas"
+ },
+ "proyeccion": {
+  "claims": [
+   1168,
+   1170
+  ],
+  "hash_real": [
+   1154,
+   1156
+  ],
+  "provenance": [
+   354,
+   356
+  ],
+  "SE": [
+   1034,
+   1036
+  ],
+  "REFUTADO": [
+   4,
+   4
+  ],
+  "verificacion": [
+   295,
+   297
+  ],
+  "hash_pendiente": 8
+ },
+ "provenance_nuevas": [
+  "528f65356b1122ef2de484fe0615cd2892fafc8060e62b7aac0b34438b3e3fbb  academico/tejido_2026-11-12/ronda_12/ejecucion_f4/voces_panteon96_nombres.md",
+  "5496f88360d05d752efcb10437cef8bedfbf4112d5a00de5595f83733cdc434e  academico/tejido_2026-11-12/ronda_12/ejecucion_f2/estado_vivo_r12.md"
+ ],
+ "pre_estado": {
+  "claims.jsonl": {
+   "lineas": 1168,
+   "sha256": "7deb15ffb25fd7a01da015a5950be2dc7ea104d6a673dfac36f2f2cd5cbb9854"
+  },
+  "provenance.sha256": {
+   "lineas": 354,
+   "no_vacias": 352,
+   "comentarios": 11,
+   "sha256": "dbe4a4909242be911c4b72b4eef9109079bb80f55af1fb5b98e18aaa5efbeb3d"
+  },
+  "claims_resumen.json": {
+   "sha256": "315b80b5e0b8cc39d8842d1b4686f7766ea4b73b40bde67b0b2b9101a5fafee5"
+  },
+  "confirmaciones.jsonl": {
+   "lineas": 294,
+   "sha256": "dc94458bc42a9854d16a8f74da20ac6481f6fe241fe2cfae11a6f44633dc7cc5"
+  },
+  "huecos.jsonl": {
+   "lineas": 139,
+   "sha256": "3713376a243b05756fbfce434ccdb63e118562ac0ec4e351243086dcb1ce52fb"
+  }
+ },
+ "puertas_pre": {
+  "audit.py": "exit=0, ok=340, discrepancia=0, no_encontrado=0, omitido=1",
+  "verify_all.py": "exit=1 con exactamente C-001..C-008"
+ },
+ "puertas_post_esperadas": {
+  "audit.py": "exit=0, ok=342",
+  "verify_all.py": "exit=1 con exactamente C-001..C-008"
+ },
+ "guarda_orden": "aplicar_absorcion_r13.py exige ORDEN_N13.md; probado: exit=2 sin él, corpus intacto",
+ "no_hecho": "Nada absorbido; no B1 ni R2-25; no C-112, C-001..C-008, C-416..C-420; nada en GitHub ni Drive",
+ "archivos": [
+  "aplicar_absorcion_r13.py",
+  "claims_nuevos_r13.jsonl",
+  "decision_absorcion_r13.md",
+  "decision_absorcion_r13.json",
+  "_dedup_f7_r13.py",
+  "dedup_f7_r13.json",
+  "puertas_pre_absorcion.txt",
+  "respaldo_pre_r13/manifiesto_shas.json"
+ ]
+}
