@@ -1,9 +1,9 @@
 {
-  "total": 1168,
+  "total": 1174,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1034,
+    "SE": 1040,
     "REFUTADO": 4,
     "NO_SE": 8
   },
@@ -12,7 +12,7 @@
     "provenance": 78,
     "digestion": 658,
     "consolidacion": 12,
-    "verificacion": 295,
+    "verificacion": 301,
     "conflicto": 64,
     "hueco": 40,
     "calculo": 3,
@@ -53,9 +53,13 @@
     "G-NUEVA: destino segunda carpeta (D-03)": 1,
     "G-NUEVA: conflicto Phi_c (D-08)": 1,
     "G-NUEVA: canon nodo (D-12)": 1,
-    "G-NUEVA: canon variograma 1D/2D (D-14)": 1
+    "G-NUEVA: canon variograma 1D/2D (D-14)": 1,
+    "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7)": 1,
+    "G-NUEVA: censo vacío heartbeat, causa folderId (F6 r11/r12)": 1,
+    "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7; cara r12 #1)": 2,
+    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 2
   },
-  "hash_real": 1154,
+  "hash_real": 1160,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1225,6 +1229,12 @@
     "C-1170",
     "C-1171",
     "C-1172",
-    "C-1173"
+    "C-1173",
+    "C-1174",
+    "C-1175",
+    "C-1176",
+    "C-1177",
+    "C-1178",
+    "C-1179"
   ]
 }
