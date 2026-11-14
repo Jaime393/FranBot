@@ -1,0 +1,90 @@
+{
+ "regla_tok_sik": {
+  "max": 0.2819,
+  "max_id": "C-1181",
+  "top3": [
+   [
+    0.2819,
+    "C-1181"
+   ],
+   [
+    0.1558,
+    "C-1171"
+   ],
+   [
+    0.1548,
+    "C-1175"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "ventana_2630": {
+  "max": 0.4677,
+  "max_id": "C-1189",
+  "top3": [
+   [
+    0.4677,
+    "C-1189"
+   ],
+   [
+    0.3388,
+    "C-1184"
+   ],
+   [
+    0.256,
+    "C-1182"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "run206_persiste": {
+  "max": 0.419,
+  "max_id": "C-1190",
+  "top3": [
+   [
+    0.419,
+    "C-1190"
+   ],
+   [
+    0.3866,
+    "C-1185"
+   ],
+   [
+    0.2695,
+    "C-1178"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "bot_audit_poblacion": {
+  "max": 0.184,
+  "max_id": "C-1101",
+  "top3": [
+   [
+    0.184,
+    "C-1101"
+   ],
+   [
+    0.1831,
+    "C-1184"
+   ],
+   [
+    0.1736,
+    "C-744"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "_entre_propuestas": {
+  "max": 0.2129,
+  "pares": {
+   "regla_tok_sik/ventana_2630": 0.1207,
+   "regla_tok_sik/run206_persiste": 0.128,
+   "regla_tok_sik/bot_audit_poblacion": 0.1292,
+   "ventana_2630/run206_persiste": 0.1862,
+   "ventana_2630/bot_audit_poblacion": 0.2129,
+   "run206_persiste/bot_audit_poblacion": 0.1484
+  }
+ },
+ "_global_max": 0.4677
+}
