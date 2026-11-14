@@ -1,0 +1,25 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-001",
+  "tipo": "hecho",
+  "fuente": "academico/tejido_2026-11-12/ronda_18/ejecucion_f6/especificacion_regla_tok_sik_r18.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:9eab0662e354716c01986e21ce7dae82b6819df42646f2e46a8ea0e95eaf7c9a",
+  "estado": "SE",
+  "contenido": "La regla de tokenización R-KS quedó especificada por escrito en ronda 18: el token se conserva con sus partes por '_', se excluyen las partes vacías y se emite además la forma sin '_' en los extremos. El verificador independiente r18 la reproduce con 0 diferencias en 7/7 comprobaciones: A14 S3↔v10.3 = 0,8000 exacto bajo R-KS, conteo 27. FASE 2 r18 la adoptó como canon SIK (N-21), cerrando el hueco que FASE 2 r17 dejó registrado.",
+  "contexto": "La regla de tokenización R-KS quedó especificada por escrito en ronda 18: el token se conserva con sus partes por '_', se excluyen las partes vacías y se emite además la forma sin '_' en los extremos. El verificador independiente r18 la reproduce con 0 diferencias en 7/7 comprobaciones: A14 S3↔v10.3 = 0,8000 exacto bajo R-KS, conteo 27. FASE 2 r18 la adoptó como canon SIK (N-21), cerrando el hueco que FASE 2 r17 dejó registrado.",
+  "referencias": [
+    "academico/tejido_2026-11-12/ronda_18/ejecucion_f6/especificacion_regla_tok_sik_r18.md",
+    "memoria/anexo-vi/claims.jsonl (C-1191)"
+  ],
+  "grieta": "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi",
+  "claim_origen": "C-1191"
+}
