@@ -1,0 +1,64 @@
+{
+  "frente": "F4",
+  "ronda": 16,
+  "fecha": "2026-11-14",
+  "ruta_nueva": "CORR-RUTA-DRIVE-R16: files get --params {fileId, alt=media} -o <ruta> descarga el contenido. En r15 la descarga directa de la URL dio 403 missing API key; la ruta por el CLI con alt=media funciona.",
+  "fuentes": [
+    {
+      "archivo": "Panteon_16_Voces_v213.md",
+      "drive_id": "1-_ltuKJlv3BVZsk7Qp9QELQLvwBhzdq4",
+      "mimeType": "text/markdown",
+      "size_bytes": 428,
+      "modifiedTime": "2026-09-25T02:47:53.702Z",
+      "padre": "1VVf6MJcU6LL5DacUw8YhTPVbNPwqybR6",
+      "metadatos_reverificados": "2026-11-14T16:00:01Z — sin cambio vs r15 (mismo tamaño, misma modifiedTime)",
+      "descarga": {
+        "metodo": "files get alt=media -o /tmp/panteon16_md_altmedia.bin",
+        "cuando": "2026-11-14T15:58:25Z",
+        "bytes": 428,
+        "sha256": "873e87b5790bd85999d6028c70da10127d36a6d1aea9b5d683ac7603f768152c",
+        "status": "success"
+      },
+      "contenido": "Texto íntegro guardado en panteon16_md_r16.md (428 B, sin valores de credenciales). Título: Panteón 16 Voces — v213 Autónomo. 16 voces: 7 con nombre (Física, Geofísica, Biología, Mercado, Kun, Hardware, Software) + 8-16. Axiomas A0-A57. Phi consenso: 3.95. Bundle: MetaAI_Bundle_PANTEON_16_V213.zip en Vault raíz. Operativo: Lima 2026-06-04."
+    },
+    {
+      "archivo": "MetaAI_Bundle_PANTEON_16_V213.zip",
+      "drive_id": "1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9",
+      "mimeType": "application/zip",
+      "size_bytes": 53786,
+      "modifiedTime": "2026-09-19T11:04:59.070Z",
+      "padre": "1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD",
+      "metadatos_reverificados": "2026-11-14T16:00:02Z — sin cambio vs r15 (mismo tamaño, misma modifiedTime)",
+      "descarga": {
+        "metodo": "files get alt=media -o /tmp/panteon16_bundle.zip",
+        "cuando": "2026-11-14T15:58:44Z",
+        "bytes": 53786,
+        "sha256": "fe2697afb3023d52c0a02bd6e11f04c24e3237e76960f4fc7b83a770f0016a58",
+        "status": "success"
+      },
+      "contenido": "23 archivos (listado + shas en bundle_panteon16_contenido.json). 16 .py = los 16 forjados. 7 más: 2 paneles HTML, evolucion_autonoma_v213, bootstrap_nodo_cero_v213.sh, nudo_eterno_router.py, cazador_recursos.py, sensorium_v213.py. AVISO: 1 archivo, 1 línea (panel_global, línea 50) contiene valores literales de credenciales — NO reproducidos, NO copiados al workspace. El zip NO se copia al workspace; los extraídos quedan solo en /tmp y se eliminan al cierre."
+    }
+  ],
+  "carpeta_padre": {
+    "id": "1VVf6MJcU6LL5DacUw8YhTPVbNPwqybR6",
+    "nombre": "10 Panteón",
+    "listada": "2026-11-14T16:00:05Z",
+    "n_hijos": 2,
+    "hijos": [
+      {
+        "id": "1-_ltuKJlv3BVZsk7Qp9QELQLvwBhzdq4",
+        "nombre": "Panteon_16_Voces_v213.md",
+        "size": 428
+      },
+      {
+        "id": "1R0RGvCEYv0Ax-0o9QwwB6kGxUKxLLh_YJ0qVc3Ab4G8",
+        "nombre": "10 Panteon_96_Voces_Funciones_Invocables.md",
+        "mimeType": "application/vnd.google-apps.document",
+        "size": 8230,
+        "modifiedTime": "2026-09-25T02:17:48Z"
+      }
+    ],
+    "nota": "El Doc índice del Panteón-96 y el .md del Panteón-16 viven en la MISMA carpeta Drive (10 Panteón). Dos sistemas, un suelo."
+  },
+  "rutas_no_necesarias": "files export (el .md no es un Doc de Google; no se intentó: files get funcionó primero). revisions get alt=media (no se intentó: files get funcionó primero; en r15 revisions get devolvió solo metadatos)."
+}
