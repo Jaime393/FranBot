@@ -1,0 +1,415 @@
+{
+  "medicion": "M-75",
+  "dominio": "d05 polarización (medida y mecanismo): distancia entre medianas partidistas en DW-NOMINATE dim2, Cámara de Representantes de EE.UU., serie restaurada de 86 congresos (115-117 incluidos), ancla no degenerada por regla argmin sobre P2>0, vs umbral >2",
+  "fuente": "Voteview (Lewis, Poole, Rosenthal et al.), HSall_members.csv (mismo archivo que M-61/M-64/M-67/M-70/M-74, 6.201.455 B, sha re-verificado aquí; copia en datos/ de r18). DW-NOMINATE: McCarty, Poole y Rosenthal, 'Polarized America' (MIT Press).",
+  "url": "https://voteview.com/static/data/out/members/HSall_members.csv (copia local en datos/, sha256 en este JSON)",
+  "sha256_dato": "495aee958a00c83c6300548e5b197d9900e7230c8eb08358bcfe06d042191140",
+  "metodo": "Protocolo de M-74 con dimensión 2 y regla de ancla distinta: filtro chamber == House, party_code 100/200 por float() y luego int() (restaura los Congresos 115-117), nominate_dim2 no vacío y finito. Por Congreso: P2(C) = |mediana dim2 D - mediana dim2 R|. Ancla declarada POR REGLA antes de correr: argmin P2(C) sobre P2(C) > 0 (excluye el degenerado P2 = 0 que hizo NO_SÉ a M-70); Congreso de comparación: 119. El cociente máximo es un extremo determinista sobre la serie, sin bootstrap. El campo 'error' lleva la SD bootstrap del cociente secundario P2(119)/P2(ancla) con ancla fija (500 réplicas, semilla 0).",
+  "parametros": {
+    "n_congresos_serie_restaurada": 86,
+    "congreso_ancla": 62,
+    "congreso_ancla_regla_seleccion": "argmin P2(C) sobre P2(C) > 0, serie restaurada de 86 congresos, calculada en este script",
+    "congreso_final": 119,
+    "medida_ancla": {
+      "congreso": 62,
+      "n_dem": 237,
+      "n_rep": 169,
+      "mediana_dem": -0.002,
+      "mediana_rep": -0.004,
+      "distancia_P2": 0.002
+    },
+    "medida_maximo": {
+      "congreso": 80,
+      "n_dem": 194,
+      "n_rep": 253,
+      "mediana_dem": 0.6275,
+      "mediana_rep": -0.3,
+      "distancia_P2": 0.9275
+    },
+    "medida_final": {
+      "congreso": 119,
+      "n_dem": 223,
+      "n_rep": 227,
+      "mediana_dem": -0.049,
+      "mediana_rep": 0.075,
+      "distancia_P2": 0.124
+    },
+    "cociente_maximo_serie_restaurada": 463.75,
+    "cociente_maximo_estado": "definido",
+    "congreso_P2_maximo": 80,
+    "ratio_P2_119": 62.0,
+    "umbral_cociente_maximo": 2.0,
+    "n_congresos_P2_cero": 1,
+    "congresos_P2_cero": [
+      106
+    ],
+    "n_congresos_P2_menor_0_01": 4,
+    "n_congresos_P2_menor_0_05": 9,
+    "P2_mediana_serie": 0.226,
+    "P2_maximo_serie": 0.9275,
+    "cociente_maximo_sobre_mediana": 4.104,
+    "cociente_maximo_sobre_p5": 47.2611,
+    "bootstrap_replicas": 500,
+    "bootstrap_semilla": 0,
+    "bootstrap_sd_cociente_P2_119": 13.2384,
+    "bootstrap_estado": "ejecutado"
+  },
+  "valor": 463.75,
+  "error": 13.2384,
+  "limites_validez": "Mismos que M-61/M-64/M-67/M-74 (DW-NOMINATE; Cámara EE.UU.), con dimensión 2 en vez de 1. El ancla se elige por regla argmin sobre P2>0, no por hipótesis previa. ADVERTENCIA DE LECTURA (no cambia el veredicto declarado): el ancla P2 = 0,002 es casi-degenerada — 113 veces menor que la mediana de la serie (0,226) — así que el cociente máximo 463,75 está dominado por el denominador; el umbral >2 sobre máx/mín es vacuo cuando el mínimo roza cero. El muro de M-70 (ancla degenerada) no se cruzó: se desplazó de 0 exacto a 0,002. La cara d05 L4 NO se cierra con esta medición.",
+  "criterio_falsacion": "CONFIRMA si máx_C P2(C)/P2(ancla) > 2 sobre la serie restaurada de 86 congresos; NO_CONFIRMA en caso contrario. Declarado en declaracion_falsadores_r18.md (2026-11-14T20:16:05Z) antes de correr. NO_SÉ si todos los P2(C) == 0 exacto (misma guarda que M-70).",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-14",
+  "extra": {
+    "serie_P2_por_congreso": [
+      {
+        "congreso": 34,
+        "P2": 0.607
+      },
+      {
+        "congreso": 35,
+        "P2": 0.398
+      },
+      {
+        "congreso": 36,
+        "P2": 0.2585
+      },
+      {
+        "congreso": 37,
+        "P2": 0.5075
+      },
+      {
+        "congreso": 38,
+        "P2": 0.2495
+      },
+      {
+        "congreso": 39,
+        "P2": 0.3745
+      },
+      {
+        "congreso": 40,
+        "P2": 0.1735
+      },
+      {
+        "congreso": 41,
+        "P2": 0.067
+      },
+      {
+        "congreso": 42,
+        "P2": 0.062
+      },
+      {
+        "congreso": 43,
+        "P2": 0.098
+      },
+      {
+        "congreso": 44,
+        "P2": 0.044
+      },
+      {
+        "congreso": 45,
+        "P2": 0.007
+      },
+      {
+        "congreso": 46,
+        "P2": 0.081
+      },
+      {
+        "congreso": 47,
+        "P2": 0.0335
+      },
+      {
+        "congreso": 48,
+        "P2": 0.057
+      },
+      {
+        "congreso": 49,
+        "P2": 0.074
+      },
+      {
+        "congreso": 50,
+        "P2": 0.2305
+      },
+      {
+        "congreso": 51,
+        "P2": 0.2615
+      },
+      {
+        "congreso": 52,
+        "P2": 0.222
+      },
+      {
+        "congreso": 53,
+        "P2": 0.1695
+      },
+      {
+        "congreso": 54,
+        "P2": 0.143
+      },
+      {
+        "congreso": 55,
+        "P2": 0.169
+      },
+      {
+        "congreso": 56,
+        "P2": 0.005
+      },
+      {
+        "congreso": 57,
+        "P2": 0.106
+      },
+      {
+        "congreso": 58,
+        "P2": 0.06
+      },
+      {
+        "congreso": 59,
+        "P2": 0.0615
+      },
+      {
+        "congreso": 60,
+        "P2": 0.0185
+      },
+      {
+        "congreso": 61,
+        "P2": 0.0685
+      },
+      {
+        "congreso": 62,
+        "P2": 0.002
+      },
+      {
+        "congreso": 63,
+        "P2": 0.095
+      },
+      {
+        "congreso": 64,
+        "P2": 0.156
+      },
+      {
+        "congreso": 65,
+        "P2": 0.201
+      },
+      {
+        "congreso": 66,
+        "P2": 0.199
+      },
+      {
+        "congreso": 67,
+        "P2": 0.3675
+      },
+      {
+        "congreso": 68,
+        "P2": 0.274
+      },
+      {
+        "congreso": 69,
+        "P2": 0.4685
+      },
+      {
+        "congreso": 70,
+        "P2": 0.468
+      },
+      {
+        "congreso": 71,
+        "P2": 0.461
+      },
+      {
+        "congreso": 72,
+        "P2": 0.529
+      },
+      {
+        "congreso": 73,
+        "P2": 0.513
+      },
+      {
+        "congreso": 74,
+        "P2": 0.409
+      },
+      {
+        "congreso": 75,
+        "P2": 0.2955
+      },
+      {
+        "congreso": 76,
+        "P2": 0.6015
+      },
+      {
+        "congreso": 77,
+        "P2": 0.483
+      },
+      {
+        "congreso": 78,
+        "P2": 0.776
+      },
+      {
+        "congreso": 79,
+        "P2": 0.647
+      },
+      {
+        "congreso": 80,
+        "P2": 0.9275
+      },
+      {
+        "congreso": 81,
+        "P2": 0.5805
+      },
+      {
+        "congreso": 82,
+        "P2": 0.6495
+      },
+      {
+        "congreso": 83,
+        "P2": 0.794
+      },
+      {
+        "congreso": 84,
+        "P2": 0.621
+      },
+      {
+        "congreso": 85,
+        "P2": 0.68
+      },
+      {
+        "congreso": 86,
+        "P2": 0.581
+      },
+      {
+        "congreso": 87,
+        "P2": 0.5435
+      },
+      {
+        "congreso": 88,
+        "P2": 0.511
+      },
+      {
+        "congreso": 89,
+        "P2": 0.421
+      },
+      {
+        "congreso": 90,
+        "P2": 0.3935
+      },
+      {
+        "congreso": 91,
+        "P2": 0.3575
+      },
+      {
+        "congreso": 92,
+        "P2": 0.4
+      },
+      {
+        "congreso": 93,
+        "P2": 0.335
+      },
+      {
+        "congreso": 94,
+        "P2": 0.2345
+      },
+      {
+        "congreso": 95,
+        "P2": 0.243
+      },
+      {
+        "congreso": 96,
+        "P2": 0.248
+      },
+      {
+        "congreso": 97,
+        "P2": 0.2385
+      },
+      {
+        "congreso": 98,
+        "P2": 0.229
+      },
+      {
+        "congreso": 99,
+        "P2": 0.2645
+      },
+      {
+        "congreso": 100,
+        "P2": 0.27
+      },
+      {
+        "congreso": 101,
+        "P2": 0.237
+      },
+      {
+        "congreso": 102,
+        "P2": 0.223
+      },
+      {
+        "congreso": 103,
+        "P2": 0.138
+      },
+      {
+        "congreso": 104,
+        "P2": 0.085
+      },
+      {
+        "congreso": 105,
+        "P2": 0.023
+      },
+      {
+        "congreso": 106,
+        "P2": 0.0
+      },
+      {
+        "congreso": 107,
+        "P2": 0.043
+      },
+      {
+        "congreso": 108,
+        "P2": 0.058
+      },
+      {
+        "congreso": 109,
+        "P2": 0.065
+      },
+      {
+        "congreso": 110,
+        "P2": 0.0825
+      },
+      {
+        "congreso": 111,
+        "P2": 0.071
+      },
+      {
+        "congreso": 112,
+        "P2": 0.138
+      },
+      {
+        "congreso": 113,
+        "P2": 0.166
+      },
+      {
+        "congreso": 114,
+        "P2": 0.155
+      },
+      {
+        "congreso": 115,
+        "P2": 0.1415
+      },
+      {
+        "congreso": 116,
+        "P2": 0.13
+      },
+      {
+        "congreso": 117,
+        "P2": 0.1625
+      },
+      {
+        "congreso": 118,
+        "P2": 0.159
+      },
+      {
+        "congreso": 119,
+        "P2": 0.124
+      }
+    ],
+    "comparacion_M70": "M-70 (dim2, ancla argmin sin excluir el cero): ancla Congreso 106, P2 = 0,0 exacto (medianas -0,026/-0,026) -> cociente indefinido -> NO_SÉ. M-75 excluye el cero por regla: ancla Congreso 62, P2 = 0,002. El degenerado se mueve de 0 a 0,002; el cociente pasa de indefinido a 463,75.",
+    "comparacion_M67_M74": "M-67/M-74 (dim1): ancla Congreso 80, P = 0,4975 (lejos de cero); máximo 1,9719 < 2 -> NO_CONFIRMA. En dim1 el mínimo está acotado lejos de cero; en dim2 el mínimo roza cero (1 congreso en 0 exacto, 4 por debajo de 0,01, 9 por debajo de 0,05). El umbral >2 sobre máx/mín no se transfiere entre dimensiones.",
+    "verificacion_independiente": "Re-cómputo con pandas (otro camino de código): 86 congresos, ancla 62 (P2 0,002), máximo 463,75 (Congreso 80), ratio 119 = 62,0 — idéntico dígito a dígito."
+  }
+}
