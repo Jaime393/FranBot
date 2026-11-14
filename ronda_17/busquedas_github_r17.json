@@ -1,0 +1,760 @@
+{
+  "frente": "F4",
+  "ronda": 17,
+  "fecha": "2026-11-14",
+  "hora_utc": "18:42:01Z-18:43:07Z",
+  "herramienta": "conector GitHub, call-read-tool search_code",
+  "repos_cubiertos": [
+    "Jaime393/MIU",
+    "Jaime393/FranBot",
+    "Jaime393/FranBot-Private",
+    "Jaime393/miu-portable-skills"
+  ],
+  "leccion_parametro": "search_code exige el parámetro \"query\" (no \"q\"). Sin repo: en la consulta, filename:graph.json sin calificar devuelve 228.352 resultados globales — el scope por repo: es obligatorio.",
+  "hallazgo_metodo": "Los totales crudos suben vs r15 (0->5 en 14 forjados; 2->12 parche_phi_lengua; 2->11 validar_grace; token_mapper 0->6) SOLO porque los documentos de las rondas 15 y 16, depositados en FranBot en FASE 4, ya están indexados por search_code y se mencionan a sí mismos. La atestación OPERATIVA es byte-idéntica a r15: parche_phi_lengua 2, validar_grace 2, los otros 14 cero. Por eso el jsonl distingue total crudo / ronda / operativo; el campo histórico en_github_4repos_hits sigue contando solo archivos operativos.",
+  "consultas": [
+    {
+      "nombre": "mem_guardian",
+      "query": "mem_guardian repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:01Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"mem_guardian_v1.py\",\n      \"size_bytes\": 1193,\n      \"sha256\": \"9b4f29201ea2b69d6bfd2e95094eecd88d342ef3385009065512d789f4215034\""
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "terminador_suave",
+      "query": "terminador_suave repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:05Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"terminador_suave_v1.py\",\n      \"size_bytes\": 1067,\n      \"sha256\": \"9176cc092f83b517f23052a496363537f5711cd50a68a76f699dae74da3f5"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "purga_micelios",
+      "query": "purga_micelios repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:09Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"purga_micelios_v1.py\",\n      \"size_bytes\": 930,\n      \"sha256\": \"e297d2bf93cf707ba429f16593d77b6d082f54aa549fbd069bec525f4dad0680"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "rotador_logs",
+      "query": "rotador_logs repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:12Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 1, \"nombre\": \"mem_guardian\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"SÍ\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"rotador_logs_v1.py\",\n      \"size_bytes\": 926,\n      \"sha256\": \"f4066b5061df9488c4962a83e7ec9f9f228d92e12ca23835eeee315f125b03ff\","
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "token_mapper",
+      "query": "token_mapper repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:16Z",
+      "total_count": 6,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:00"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0 entradas `[[...]]`), **M[51]**: «16 forjados invocables: mem_guardian, terminador_suave, purga_mic"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/conectar_r16.md",
+          "clase": "RONDA",
+          "fragmento": "| **CORR-SERIE-R16 (NUEVA)** | **La serie 25..119 son 83 congresos, no 95** (34..119 medidos). Dos causas: Congresos 25–33 sin partido R (party_code 200 ausente); Congresos 115–117 caen por el parseo "
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 2, \"nombre\": \"terminador_suave\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 2, \"nombre\": \"terminador_suave\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"token_mapper_v213.py\",\n      \"size_bytes\": 1495,\n      \"sha256\": \"b30b0725f15f499074d145519e1eaf5e2c960637ad8cdde55c96144792bcbfa"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 6
+    },
+    {
+      "nombre": "kv_namespace_splitter",
+      "query": "kv_namespace_splitter repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:20Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 3, \"nombre\": \"purga_micelios\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 3, \"nombre\": \"purga_micelios\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"kv_namespace_splitter_v1.py\",\n      \"size_bytes\": 1217,\n      \"sha256\": \"f3565214f6788d118fd479eb2a794b4a4d749effba0c1d762c830e1f"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "cloudflare_rest_deployer",
+      "query": "cloudflare_rest_deployer repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:23Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 4, \"nombre\": \"rotador_logs\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 4, \"nombre\": \"rotador_logs\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"cloudflare_rest_deployer_v1.py\",\n      \"size_bytes\": 1704,\n      \"sha256\": \"26f200e944c970f94673f829057638e12a205d29176ede70a24fd"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "llm_fallback_router",
+      "query": "llm_fallback_router repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:27Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 5, \"nombre\": \"token_mapper\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 5, \"nombre\": \"token_mapper\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\": ["
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"llm_fallback_router_v1.py\",\n      \"size_bytes\": 1368,\n      \"sha256\": \"7f54026156fe22232b6ba99a9438527e4e6158bb8b786a44c8b3189e65"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "parche_phi_lengua",
+      "query": "parche_phi_lengua repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:31Z",
+      "total_count": 12,
+      "items": [
+        {
+          "repo": "Jaime393/MIU",
+          "path": "estado/miu-agent-toolkit/README.md",
+          "clase": "OPERATIVO",
+          "fragmento": "| `tunnel_guard.sh` | auto-repara cloudflared cada 2min | `~/oraculo/tunnel_guard.sh` |\n| `parche_phi_lengua_v4.py` | actualiza phi local cada 1min | `~/miu-ecosistema/` |\n| `miu_resiliente_v270.py` |"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0 entradas `[[...]]`), **M[51]**: «16 forjados invocables: mem_guardian, terminador_suave, purga_mic"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/conectar_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n### 1.4 F4 — Panteón-96 fuera del Doc (cara r12 #1; ¿qué caras toca?)\n\n- **Los 16 extra (112−96) TIENEN NOMBRE y NO SON VOCES (sub-pregunta resuelta, SÉ):** el manifiesto Vault M[51] lista exactament"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/conectar_r16.md",
+          "clase": "RONDA",
+          "fragmento": "| **CORR-SERIE-R16 (NUEVA)** | **La serie 25..119 son 83 congresos, no 95** (34..119 medidos). Dos causas: Congresos 25–33 sin partido R (party_code 200 ausente); Congresos 115–117 caen por el parseo "
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/verificacion_fase2_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n- `nombres_fuera_doc_r15.jsonl`: **96 filas** re-contadas (35 CON_NOMBRE / 61 SIN_NOMBRE_EN_DOC, números 1–96 completos, mismos 10 campos). Diff programa a programa vs r14: única diferencia top-level"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 6, \"nombre\": \"kv_namespace_splitter\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_arc"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/tejido/sintesis_integrada_r1_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n#### F4 — Panteón-96 fuera del Doc (cara r12 #1; SÉ)\n\n- **Los 16 extra (112−96) TIENEN NOMBRE y NO SON VOCES (sub-pregunta resuelta, SÉ):** el manifiesto Vault M[51] lista exactamente los 16 «forjado"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 6, \"nombre\": \"kv_namespace_splitter\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_arc"
+        },
+        {
+          "repo": "Jaime393/MIU",
+          "path": "estado/corpus_high_ktau_v275.jsonl",
+          "clase": "OPERATIVO",
+          "fragmento": "{\"instruction\": \"58 Axiomas MIU — núcleo semilla v10.3\", \"output\": \"A0 ρ>0 Positividad densidad (Landauer 2012). A1 Remolino: materia fluye sin propósito — EL REMOLINO NO GIRA PARA SÍ GIRA PARA SEMBRA"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"parche_phi_lengua_v2.py\",\n      \"size_bytes\": 1269,\n      \"sha256\": \"bc39856513629eaff88178062023f1c1b1b14da9522998c1a82fbda5124d"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/tejido_cruzado.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"dominio\": \"grietas\", \"drive_id_si_existe\": \"\", \"estado\": \"SÉ\", \"fuente\": \"ronda_16/ejecucion_f5/grietas_r16.md\", \"hallazgo\": \"G01 / G04 sin cambio: 3 tex f27ea4d5… + 2 copias 6bc8c573…, D_eff 0 menc"
+        }
+      ],
+      "operativos": 2,
+      "ronda": 10
+    },
+    {
+      "nombre": "chappie_retry",
+      "query": "chappie_retry repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:35Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 7, \"nombre\": \"cloudflare_rest_deployer\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 7, \"nombre\": \"cloudflare_rest_deployer\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "  \"n_archivos\": 23,\n  \"archivos\": [\n    {\n      \"nombre\": \"chappie_retry_v1.py\",\n      \"size_bytes\": 1151,\n      \"sha256\": \"c7240927d692edaa9219175b9f529deafcfa4ec0c264751642dceb05dc65bdc3\",\n      \"fe"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "validar_grace",
+      "query": "validar_grace repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:38Z",
+      "total_count": 11,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0 entradas `[[...]]`), **M[51]**: «16 forjados invocables: mem_guardian, terminador_suave, purga_mic"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "anexo-vi/evidence/C-171_busqueda_c.txt",
+          "clase": "OPERATIVO",
+          "fragmento": "  nodo_B_V91, optimizar_carga.sh, CICLO_11 router darwiniano,\n  sensorium, auto_escalado, partituras) — dominio router.\n- name contains 'GRACE': 50 archivos (partituras TWS tejedor agua\n  en prosa; va"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "academico/TABLA_FISICA.md",
+          "clase": "OPERATIVO",
+          "fragmento": "| C-165 | K_i se sostiene parcialmente sin circularidad: el calculo no usa D_f en ningun paso y la forma 3 mantiene Ki en banda para un rango continuo de c, pero el valor de Ki depende del parametro l"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/conectar_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n### 1.4 F4 — Panteón-96 fuera del Doc (cara r12 #1; ¿qué caras toca?)\n\n- **Los 16 extra (112−96) TIENEN NOMBRE y NO SON VOCES (sub-pregunta resuelta, SÉ):** el manifiesto Vault M[51] lista exactament"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/verificacion_fase2_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n- `nombres_fuera_doc_r15.jsonl`: **96 filas** re-contadas (35 CON_NOMBRE / 61 SIN_NOMBRE_EN_DOC, números 1–96 completos, mismos 10 campos). Diff programa a programa vs r14: única diferencia top-level"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 8, \"nombre\": \"llm_fallback_router\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archi"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/tejido/sintesis_integrada_r1_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n#### F4 — Panteón-96 fuera del Doc (cara r12 #1; SÉ)\n\n- **Los 16 extra (112−96) TIENEN NOMBRE y NO SON VOCES (sub-pregunta resuelta, SÉ):** el manifiesto Vault M[51] lista exactamente los 16 «forjado"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 8, \"nombre\": \"llm_fallback_router\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archi"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"validar_grace_v1.py\",\n      \"size_bytes\": 1286,\n      \"sha256\": \"03c47bbee580f20de6412b398426079ac0e87ebe5ab0e201d491904f1e4252a7"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/tejido_cruzado.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"dominio\": \"grietas\", \"drive_id_si_existe\": \"\", \"estado\": \"SÉ\", \"fuente\": \"ronda_16/ejecucion_f5/grietas_r16.md\", \"hallazgo\": \"G01 / G04 sin cambio: 3 tex f27ea4d5… + 2 copias 6bc8c573…, D_eff 0 menc"
+        }
+      ],
+      "operativos": 2,
+      "ronda": 9
+    },
+    {
+      "nombre": "hf_miu_dataset_pusher",
+      "query": "hf_miu_dataset_pusher repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:42Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 9, \"nombre\": \"parche_phi_lengua\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 2, \"en_github_4repos_archivo"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 9, \"nombre\": \"parche_phi_lengua\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 2, \"en_github_4repos_archivo"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"hf_miu_dataset_pusher_v1.py\",\n      \"size_bytes\": 1893,\n      \"sha256\": \"3e8b83f003504edcb4cd8ca658199768689209a3bdc04df9559ddf7f"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "forjar_skill",
+      "query": "forjar_skill repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:46Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"forjar_skill_v1_2.py\",\n      \"size_bytes\": 1571,\n      \"sha256\": \"8e6ad6f28081ef7b5e7b6006bedd1523a48498ed6ac232c5dfed7471f55143b"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "enjambre_proyecto",
+      "query": "enjambre_proyecto repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:51Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"enjambre_proyecto_v1.py\",\n      \"size_bytes\": 1203,\n      \"sha256\": \"0904fc780d4282d640de2ed0c65b006a6e09292a24282627da8ff2d487c0"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "kairos_llama_opencl",
+      "query": "kairos_llama_opencl repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:54Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "- Descarga: `files get alt=media -o /tmp/panteon16_bundle.zip`, 2026-11-14T15:58:44Z, 53.786 B, sha256 `fe2697afb3023d52…`, status success. Listado + shas por archivo en `bundle_panteon16_contenido.js"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"kairos_llama_opencl_v1.py\",\n      \"size_bytes\": 2336,\n      \"sha256\": \"e4ab1812e56dafbe1fc80a773d8c18b15c5eefc10d413b40093a0b8f8e"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "observatorio_opentelemetry",
+      "query": "observatorio_opentelemetry repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:42:58Z",
+      "total_count": 5,
+      "items": [
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/nombres_fuera_doc_r16.md",
+          "clase": "RONDA",
+          "fragmento": "\n- Drive `1be2Dwn4o_xon10aD6LkefvzgZjXY7m-9`, application/zip, 53.786 B, mod. 2026-09-19T11:04:59Z, padre raíz del Vault (`1D496yjkI4S5tL-TdZHovGb0uRj0WgVGD`). Metadatos re-verificados 2026-11-14T16:0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/nombres_fuera_doc_r15.md",
+          "clase": "RONDA",
+          "fragmento": "\n**SÍ — tienen nombre, y no son voces.** Fuentes (crudos locales de r13, re-leídos en esta ronda):\n\n1. **Manifiesto Vault** (`13kO6Wm602UzOFk9WWv3KVaWQIRADhZT36-zf21IXNF4`, 71 párrafos, 6.724 chars, 0"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/forjados_16_r16.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_15/forjados_16_r15.jsonl",
+          "clase": "RONDA",
+          "fragmento": "{\"numero\": 10, \"nombre\": \"chappie_retry\", \"en_manifiesto_m51\": \"SÍ\", \"en_graph112\": \"NO\", \"en_v104\": \"NO\", \"en_doc32\": \"NO\", \"en_indice\": \"NO\", \"en_github_4repos_hits\": 0, \"en_github_4repos_archivos\":"
+        },
+        {
+          "repo": "Jaime393/FranBot",
+          "path": "ronda_16/bundle_panteon16_contenido.json",
+          "clase": "RONDA",
+          "fragmento": "      \"fecha_zip\": \"2026-09-14 19:24:20\"\n    },\n    {\n      \"nombre\": \"observatorio_opentelemetry_v1.py\",\n      \"size_bytes\": 2149,\n      \"sha256\": \"c75de8227e579e4cf5c585cc20a17c44e18649282b27e0d28ed"
+        }
+      ],
+      "operativos": 0,
+      "ronda": 5
+    },
+    {
+      "nombre": "graph_v106",
+      "query": "filename:graph_v10.6_112_nodos.json repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:43:02Z",
+      "total_count": 0,
+      "items": [],
+      "operativos": 0,
+      "ronda": 0
+    },
+    {
+      "nombre": "graph_json",
+      "query": "filename:graph.json repo:Jaime393/MIU repo:Jaime393/FranBot repo:Jaime393/FranBot-Private repo:Jaime393/miu-portable-skills",
+      "hora_utc": "2026-11-14T18:43:06Z",
+      "total_count": 0,
+      "items": [],
+      "operativos": 0,
+      "ronda": 0
+    }
+  ],
+  "conclusion": "H3 FASE 2 r16 CERRADA como hueco de procedimiento: las 16 búsquedas de forjados quedan re-corridas en r17 (18:42-18:43Z). Graph JSON: 0/0 por tercera ronda consecutiva (r15, r16, r17). NO_SÉ para los otros 228 repos públicos."
+}
