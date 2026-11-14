@@ -1,0 +1,25 @@
+{
+  "_metabolismo": {
+    "timestamp": 1794694280.89266,
+    "phi": 1.6180339887,
+    "nodo": "anexo-vi"
+  },
+  "timestamp": 1794694280.89266,
+  "id": "NUT-2026-11-14-006",
+  "tipo": "hecho",
+  "fuente": "academico/tejido_2026-11-12/ronda_18/ejecucion_f6/h_sik_r18.md",
+  "fecha": "2026-11-14",
+  "hash_fuente": "sha256:3660edf75cc60e6abb6ac3f6bf677029ca81f94bbe62a71abeac7335def3da1f",
+  "estado": "SE",
+  "contenido": "El verificador independiente SIK reproduce las mediciones con 0 diferencias por cuarta vuelta consecutiva (r15–r18) bajo el canon N-17. En r18 reproduce mejor-contención 740/740 y mejor correspondencia 740/740. La regla que verifica es REGLA-PICK-SIK-01, especificada en r15 y adoptada como canon por N-17.",
+  "contexto": "El verificador independiente SIK reproduce las mediciones con 0 diferencias por cuarta vuelta consecutiva (r15–r18) bajo el canon N-17. En r18 reproduce mejor-contención 740/740 y mejor correspondencia 740/740. La regla que verifica es REGLA-PICK-SIK-01, especificada en r15 y adoptada como canon por N-17.",
+  "referencias": [
+    "academico/tejido_2026-11-12/ronda_18/ejecucion_f6/h_sik_r18.md",
+    "memoria/anexo-vi/claims.jsonl (C-1181)"
+  ],
+  "grieta": "G-NUEVA: retejido_2026-11-12 no integrado en anexo-vi",
+  "nodo_origen": "anexo-vi",
+  "destino": "nutrientes",
+  "origen": "anexo-vi",
+  "claim_origen": "C-1181"
+}
