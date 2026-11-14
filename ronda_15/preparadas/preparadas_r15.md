@@ -1,7 +1,7 @@
 # LECTURAS PREPARADAS — RONDA 15, F7 (índice)
 
 - **Fecha:** 2026-11-14. **Orden:** mapa FASE 0 r15 §F7.
-- **Estado: PREPARADA_NO_APLICADA.** Nada añadido a claims.jsonl, provenance.sha256 ni ningún archivo del corpus. La absorción la ejecuta F1 bajo el régimen 01:43 o FASE 4 (ver `decision_absorcion_r15.md`); este frente no aplica nada.
+- **Estado: APLICADA (2026-11-14, post-FASE 4, bajo el régimen 01:43).** C-1181/C-1182/C-1183 absorbidos (claims 1.175 → 1.178, hash_real 1161 → 1164, provenance 359 → 361, SE 1041 → 1044); N-17 (canon REGLA-PICK-SIK-01) y N-18 (ítem M-66 al anexo) aplicadas en la misma tanda. Ver `decision_absorcion_r15.md` (bloque APLICADA) y `ejecucion_f1/decision_n17_r15.md` / `decision_n18_r15.md`. CORR-C1181-R15: el texto de C-1181 quedó corregido antes de absorber (la adopción es N-17, no "pendiente de numerar"). La copia en Drive queda como el snapshot FASE 4.
 - **Formato:** mismo que `ronda_14/ejecucion_f7/preparadas_r14.md` (formato `lecturas_canonicas_r10.md`).
 
 ## §1. Propuestas (3, SÉ)
