@@ -1,0 +1,34 @@
+{
+  "medicion": "M-77",
+  "dominio": "Predicción falsable del campo: Pilar 4 (C-053, CONJETURO) — una métrica derivada de D_f anticipa colapsos con semanas de antelación (Sahel 30 días, S&P500 29-34 días). Ejecución del protocolo de falsación publicado, paso 1.",
+  "fuente": "PILARES_FUNDAMENTALES.md (copia local en anexo-vi/evidence/, 86 líneas según wc, 87 con el salto final; sha dde9334e…; otras 2 copias locales byte-idénticas, mismo sha). Protocolo: produccion-fractal/falsacion/protocolo_C053_C054_pilares.md (paso 1: localizar la fórmula en la fuente citada; sin fórmula no hay backtest).",
+  "url": "Archivo local (sha256 en este JSON); protocolo en ~/workspace/produccion-fractal/falsacion/protocolo_C053_C054_pilares.md",
+  "sha256_dato": "dde9334e96fa7280a1b029a5170d4317604a1c1b2873a4a6ac5d5e8403515ff6",
+  "metodo": "Lectura completa de PILARES_FUNDAMENTALES.md (86 líneas) y búsqueda de la fórmula de la métrica del Pilar 4: patrones 'fórmula', 'umbral', 'D_f =/+/-/*', 'alerta', 'variable del Sahel' y 'K_i('. Verificación de que las 3 copias locales sean byte-idénticas (sha256). La sección del Pilar 4 se leyó entera (9 líneas). CORR-PATRON-M77: el patrón 'K_i(' dio un positivo que es una cita — 'K_i (ver HALLAZGOS filas 37, 39-43)' — no una fórmula; auditado a mano y descartado. Con 0 fórmulas localizadas el protocolo se detiene en el paso 1 (BLOQUEADO): no se corrió backtest.",
+  "parametros": {
+    "n_lineas_fuente": 86,
+    "copias_locales_verificadas": 3,
+    "copias_byte_identicas": true,
+    "patrones_buscados": 8,
+    "patrones_con_hallazgo_real": 0,
+    "falso_positivo_patron_Ki": "cita, no fórmula (CORR-PATRON-M77)",
+    "formulas_localizadas": 0,
+    "umbrales_localizados": 0,
+    "variable_sahel_localizada": false,
+    "estado_documento_pilar4": "CIRCULAR / EVIDENCIA NO INDEPENDIENTE",
+    "n_casos_citados": "<5 (frágil según #RIGOR_EPISTEMICO_v2)",
+    "backtest_ejecutado": false,
+    "paso_bloqueo": 1
+  },
+  "valor": 0,
+  "error": 0,
+  "limites_validez": "El protocolo es el publicado en producción fractal; la fuente citada es drive:MIU_ABSORBIDO/MIU/PILARES_FUNDAMENTALES.md, cuya copia local es la verificada aquí (3 copias byte-idénticas). Un NO_SÉ por bloqueo no es un veredicto sobre la métrica, sino sobre la ejecutabilidad del claim tal como está escrito: sin fórmula no hay nada que backtestear.",
+  "criterio_falsacion": "CONFIRMA si la fórmula existe Y ambos casos caen en los intervalos declarados (Sahel 30 días; S&P500 29-34 días) Y la antelación supera el azar a p < 0,05. NO_CONFIRMA si la fórmula existe pero la antelación cae fuera de los intervalos o no supera el azar. NO_SÉ si la fórmula NO existe en la fuente citada (paso 1 BLOQUEADO). Declarado en declaracion_falsadores_r18.md (2026-11-14T20:16:05Z) antes de correr.",
+  "veredicto": "NO_SÉ",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-14",
+  "extra": {
+    "seccion_pilar4_texto": "Que afirma: Existe una metrica (derivada de D_f) que permite anticipar colapsos en sistemas sociales, financieros o ecologicos con semanas de antelacion. Casos citados: Sahel Central (30 dias), S&P500/EuroStoxx50/Nikkei225 (29-34 dias). Estado: CIRCULAR / EVIDENCIA NO INDEPENDIENTE. Pendiente para validar: replicar la deteccion con datos crudos independientes y un protocolo de prediccion CONGELADA (declarada antes de ver el resultado), no ajustada a posteriori.",
+    "lectura": "El propio documento no trae la fórmula: trae la afirmación, la marca circular y pide replicar con protocolo congelado. El claim C-053, tal como está escrito, no es ejecutable: no hay métrica que aplicar a ninguna serie. El bloqueo es del claim, no de la búsqueda (la fuente se leyó entera, 3 copias idénticas)."
+  }
+}
