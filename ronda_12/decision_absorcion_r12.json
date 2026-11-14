@@ -1,0 +1,211 @@
+{
+  "ronda": 12,
+  "fase": 1,
+  "frente": "F1",
+  "titulo": "Absorción condicionada — 6 lecturas F7 (D-03/D-08/D-10/D-11/D-12/D-14)",
+  "fecha": "2026-11-13",
+  "orden": "N-12 dada 2026-11-13 18:43 -05 por el Jardinero, tal cual: \"Sí, absorban las 6 lecturas\" (ORDEN_N12.md).",
+  "estado": "APLICADA",
+  "piezas": [
+    {
+      "lectura": "D-03",
+      "id_proyectado": "C-1168",
+      "dedup_max": 0.2336,
+      "dedup_max_id": "C-865",
+      "hash_fuente": "sha256:c8e902aa3f59d45d305eb52a37d85d8f573411e41bb816c81307709bc3d3d512",
+      "fuente": "ronda_10/ejecucion_b/decision_d03.md",
+      "grieta": "G-NUEVA: destino segunda carpeta (D-03)"
+    },
+    {
+      "lectura": "D-08",
+      "id_proyectado": "C-1169",
+      "dedup_max": 0.2553,
+      "dedup_max_id": "C-807",
+      "hash_fuente": "sha256:add7ac256d3bd14449f76b680fad7ce2be00b6230f4027557e969e631775ab32",
+      "fuente": "ronda_10/ejecucion_c/lecturas_canonicas_r10.md",
+      "grieta": "G-NUEVA: conflicto Phi_c (D-08)"
+    },
+    {
+      "lectura": "D-10",
+      "id_proyectado": "C-1170",
+      "dedup_max": 0.1812,
+      "dedup_max_id": "C-1090",
+      "hash_fuente": "sha256:add7ac256d3bd14449f76b680fad7ce2be00b6230f4027557e969e631775ab32",
+      "fuente": "ronda_10/ejecucion_c/lecturas_canonicas_r10.md",
+      "grieta": "G01"
+    },
+    {
+      "lectura": "D-11",
+      "id_proyectado": "C-1171",
+      "dedup_max": 0.2529,
+      "dedup_max_id": "C-165",
+      "hash_fuente": "sha256:add7ac256d3bd14449f76b680fad7ce2be00b6230f4027557e969e631775ab32",
+      "fuente": "ronda_10/ejecucion_c/lecturas_canonicas_r10.md",
+      "grieta": "G09"
+    },
+    {
+      "lectura": "D-12",
+      "id_proyectado": "C-1172",
+      "dedup_max": 0.1953,
+      "dedup_max_id": "C-899",
+      "hash_fuente": "sha256:add7ac256d3bd14449f76b680fad7ce2be00b6230f4027557e969e631775ab32",
+      "fuente": "ronda_10/ejecucion_c/lecturas_canonicas_r10.md",
+      "grieta": "G-NUEVA: canon nodo (D-12)"
+    },
+    {
+      "lectura": "D-14",
+      "id_proyectado": "C-1173",
+      "dedup_max": 0.1466,
+      "dedup_max_id": "C-626",
+      "hash_fuente": "sha256:add7ac256d3bd14449f76b680fad7ce2be00b6230f4027557e969e631775ab32",
+      "fuente": "ronda_10/ejecucion_c/lecturas_canonicas_r10.md",
+      "grieta": "G-NUEVA: canon variograma 1D/2D (D-14)"
+    }
+  ],
+  "dedup": {
+    "metodo": "r9, Jaccard, umbral 0,5",
+    "max_global": 0.2553,
+    "max_global_id": "C-807",
+    "max_entre_propuestas": 0.2248,
+    "par_entre_propuestas": [
+      "d11",
+      "d12"
+    ],
+    "pares_ge_0_5": 0,
+    "re_corridas": [
+      "FASE 0 r12 (dedup_f7_r12.json)",
+      "F1 r12 (dedup_f7_r12_mio.json)",
+      "F7 r11"
+    ],
+    "coincidencia": "idéntico cifra por cifra en las 3 corridas"
+  },
+  "proyeccion": {
+    "claims": [
+      1162,
+      1168
+    ],
+    "hash_real": [
+      1148,
+      1154
+    ],
+    "provenance": [
+      352,
+      354
+    ],
+    "SE": [
+      1028,
+      1034
+    ],
+    "REFUTADO": [
+      4,
+      4
+    ],
+    "consolidacion": [
+      6,
+      12
+    ],
+    "hash_pendiente": 8
+  },
+  "provenance_nuevas": [
+    "add7ac256d3bd14449f76b680fad7ce2be00b6230f4027557e969e631775ab32  academico/tejido_2026-11-12/ronda_10/ejecucion_c/lecturas_canonicas_r10.md",
+    "c8e902aa3f59d45d305eb52a37d85d8f573411e41bb816c81307709bc3d3d512  academico/tejido_2026-11-12/ronda_10/ejecucion_b/decision_d03.md"
+  ],
+  "proyeccion_provenance_corregida": "352 → 354 (la de F7, 350 → 352, era un desliz: provenance ya era 352)",
+  "pre_estado": {
+    "claims.jsonl": {
+      "lineas": 1162,
+      "sha256": "397cb10cbf5e95ca4bc3aa1b304a0c0274197b1a874597ce226daec51105be85"
+    },
+    "provenance.sha256": {
+      "lineas": 352,
+      "sha256": "db22d64735b30ce06be34903c241b85cff6f1049458d2e03f90d9ed7c03e91a5"
+    },
+    "claims_resumen.json": {
+      "sha256": "33b787d2571e0e59fb1a08610cb577b095f527047b246ce493738c6e18fb5580"
+    },
+    "confirmaciones.jsonl": {
+      "lineas": 294,
+      "sha256": "dc94458bc42a9854d16a8f74da20ac6481f6fe241fe2cfae11a6f44633dc7cc5"
+    },
+    "huecos.jsonl": {
+      "lineas": 139,
+      "sha256": "3713376a243b05756fbfce434ccdb63e118562ac0ec4e351243086dcb1ce52fb"
+    }
+  },
+  "puertas_pre": {
+    "audit": {
+      "exit": 0,
+      "ok": 338,
+      "discrepancia": 0,
+      "no_encontrado": 0,
+      "omitido": 1
+    },
+    "verify_all": {
+      "exit": 1,
+      "fallos": [
+        "C-001",
+        "C-002",
+        "C-003",
+        "C-004",
+        "C-005",
+        "C-006",
+        "C-007",
+        "C-008"
+      ]
+    }
+  },
+  "puertas_post_esperadas": {
+    "audit": {
+      "exit": 0,
+      "ok": 340
+    },
+    "verify_all": {
+      "exit": 1,
+      "fallos": [
+        "C-001",
+        "C-002",
+        "C-003",
+        "C-004",
+        "C-005",
+        "C-006",
+        "C-007",
+        "C-008"
+      ]
+    }
+  },
+  "guarda_orden": "aplicar_absorcion_r12.py exige ORDEN_N12.md en ejecucion_f1/; sin él sale exit=2 sin tocar nada (probado 2026-11-13, corpus intacto)",
+  "no_hecho": [
+    "B1",
+    "R2-25",
+    "C-112",
+    "C-001..C-008",
+    "C-416..C-420",
+    "GitHub",
+    "Drive"
+  ],
+  "archivos": [
+    "aplicar_absorcion_r12.py",
+    "claims_nuevos_r12.jsonl",
+    "decision_absorcion_r12.md",
+    "decision_absorcion_r12.json",
+    "_dedup_f7_r12_mio.py",
+    "dedup_f7_r12_mio.json",
+    "puertas_pre_absorcion.txt",
+    "../respaldo_pre_r12/manifiesto_shas.json"
+  ],
+  "aplicada": {
+    "fecha": "2026-11-13 18:43 -05",
+    "orden": "N-12",
+    "claims": "1162->1168",
+    "ids": "C-1168..C-1173",
+    "hash_real": "1148->1154",
+    "provenance": "352->354",
+    "se": "1028->1034",
+    "puertas": "audit exit=0 ok=340; verify_all exit=1 C-001..C-008",
+    "shas": {
+      "claims.jsonl": "7deb15ff…",
+      "provenance.sha256": "dbe4a490…",
+      "claims_resumen.json": "315b80b5…"
+    }
+  }
+}
