@@ -1,0 +1,52 @@
+id: pva-api
+nombre: pva-api — API PVA V202/V203
+esencias:
+  - measure
+  - route
+fuente:
+  parent_path: mineria/pva-api/LECTURA.md
+  parent_hash: 'sha256:8482d1a1dd2359ed0044d99016c65beaa3a6cd6a525b215f36cfb02d391b0795'
+  definicion: 'LECTURA.md L1: app dual FastAPI/stdlib; endpoints GET /api/phi, /api/ki, /api/falsador, /api/micelio/lexico; POST /api/micelio, /api/publish; dict PHI; falsador; fix V203 de firma.'
+parametros:
+  - nombre: port
+    tipo: integer
+    default: 8003
+    descripcion: Puerto por defecto del código (no 8001 del README).
+  - nombre: mode
+    tipo: string
+    default: stdlib
+    descripcion: 'Modo de arranque: stdlib (http.server) o fastapi si está disponible.'
+  - nombre: host
+    tipo: string
+    default: 127.0.0.1
+    descripcion: Interfaz de escucha del servidor de prueba.
+outputs:
+  - nombre: respuesta /api/phi
+    formato: 'JSON: dict PHI {phi_global, phi_colmena, phi_miu, rho, sustratos, Phi_lengua, Phi_binocular, topologia}'
+  - nombre: respuesta /api/falsador
+    formato: 'JSON: {prediccion: ''Phi>Phi_c debe implicar experiencia si Ki en [0.55,0.62]''}'
+tests:
+  - nombre: constantes_phi
+    contrato: El dict PHI contiene los 8 literales del código.
+    prueba: 'Comparar phi_global 9158.79, phi_colmena 6284.17, phi_miu 2874.62, rho ''>0'', sustratos 36, Phi_lengua 1.1194, Phi_binocular 17924.26, topologia 70508.'
+  - nombre: falsador_presente
+    contrato: El falsador es la cadena literal del código.
+    prueba: 'Igualdad literal con ''Phi>Phi_c debe implicar experiencia si Ki en [0.55,0.62]''.'
+  - nombre: firma_v203
+    contrato: 'La firma es sha256(tipo :: contenido), 64 hexadecimales, estable.'
+    prueba: 'sha256(''oraculo::{}''): 64 hex y mismo valor en dos cómputos.'
+  - nombre: servidor_stdlib
+    contrato: GET /api/phi en localhost devuelve 200 y phi_global 9158.79.
+    prueba: Levantar http.server en un hilo y pedir /api/phi.
+presupuesto:
+  tokens_estimados: 900
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 1024
+procedencia:
+  parent_hash: 'sha256:8482d1a1dd2359ed0044d99016c65beaa3a6cd6a525b215f36cfb02d391b0795'
+  parent_path: mineria/pva-api/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'Discrepancias del origen documentadas en LECTURA: README V202 frente a código V203; POST /api/oraculo no existe en el código (404); puerto por defecto 8003, no 8001; el Dockerfile arranca ''uvicorn app:app'' pero app.py no define ningún objeto app.'
+  - El runner usa solo stdlib; no requiere FastAPI.

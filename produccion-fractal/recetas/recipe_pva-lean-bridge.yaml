@@ -1,0 +1,45 @@
+id: pva-lean-bridge
+nombre: pva-lean-bridge — Puente LaTeX a Lean 4 V202
+esencias:
+  - validate
+  - attest
+fuente:
+  parent_path: mineria/pva-lean-bridge/LECTURA.md
+  parent_hash: 'sha256:8edc1c2d9c8d9b83080d5d413ec55482c3eda688106fdb2a9fb50558eaf073bc'
+  definicion: 'LECTURA.md L1: cli.py --tex paper.tex --out lean; esqueletos Mathlib con sorry; gaps.json {theorems, gaps}; ejemplo NavierStokes.lean.'
+parametros:
+  - nombre: tex_path
+    tipo: string
+    default: paper.tex
+    descripcion: Archivo .tex de entrada.
+  - nombre: out_dir
+    tipo: string
+    default: lean
+    descripcion: Directorio de salida de los esqueletos.
+outputs:
+  - nombre: esqueleto .lean
+    formato: Archivo Lean con definiciones sorry y TODO; no afirma ningún teorema.
+  - nombre: gaps.json
+    formato: 'JSON: {theorems, gaps[]}'
+tests:
+  - nombre: dos_teoremas_tres_gaps
+    contrato: Un paper.tex con 2 teoremas produce gaps.json con theorems 2 y los 3 gaps del origen.
+    prueba: 'Fixture paper.tex: gaps [''definir Sobolev'', ''definir solucion debil'', ''definir suavidad''].'
+  - nombre: esqueleto_con_sorry
+    contrato: El .lean generado contiene sorry y no presenta el teorema como probado.
+    prueba: '''sorry'' presente en el esqueleto generado.'
+  - nombre: gaps_json_valido
+    contrato: gaps.json es JSON válido con las claves theorems y gaps.
+    prueba: json.load correcto y claves presentes.
+presupuesto:
+  tokens_estimados: 800
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 4096
+procedencia:
+  parent_hash: 'sha256:8edc1c2d9c8d9b83080d5d413ec55482c3eda688106fdb2a9fb50558eaf073bc'
+  parent_path: mineria/pva-lean-bridge/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'Los esqueletos son vacíos por diseño declarado (''esqueleto vacio'', ''TODO: formalizar'').'
+  - El axioma falsador_blindsight del origen es un placeholder para medición empírica; no se reproduce como teorema.

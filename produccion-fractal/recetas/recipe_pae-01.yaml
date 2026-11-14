@@ -1,0 +1,55 @@
+id: pae-01
+nombre: PAE-01 — Protocolo de Auto-Evolución V153.2
+esencias:
+  - measure
+  - validate
+fuente:
+  parent_path: memoria/anexo-vi/protocols/pae_01.py
+  parent_hash: 'sha256:3bbac9239416741897966238d4ccdc140ad06d1a651c229617e0f1222e881175'
+  definicion: 'clase AutoEvolution (líneas 13-84): scan_carencia L18, generate_patch L53, evolve L63, main L86; 99 líneas.'
+parametros:
+  - nombre: miu_dir
+    tipo: string
+    default: ~/miu-ecosistema
+    descripcion: Directorio del ecosistema a escanear.
+  - nombre: required_files
+    tipo: list
+    default:
+      - miu_memory.py
+      - miu_github.py
+      - miu_scanner.py
+      - miu_control.py
+    descripcion: Archivos cuya ausencia es carencia missing_file.
+  - nombre: max_patches
+    tipo: integer
+    default: 3
+    descripcion: Máximo de parches generados por ciclo (top por severidad).
+outputs:
+  - nombre: pae_state.json
+    formato: 'JSON: {timestamp, carencias_found, patches_generated, patches[{carencia, patch}]}'
+tests:
+  - nombre: scan_detecta_faltante
+    contrato: Todo archivo requerido ausente aparece como carencia tipo missing_file con severidad 0.9.
+    prueba: 'Fixture con 2 de 4 archivos ausentes: 2 carencias missing_file, severidad 0.9.'
+  - nombre: orden_por_severidad
+    contrato: Las carencias salen ordenadas por severidad descendente.
+    prueba: 'Fixture con severidades 0.9, 0.8 y 0.6: orden de salida 0.9, 0.8, 0.6.'
+  - nombre: patch_menciona_target
+    contrato: El patch generado nombra el target de la carencia.
+    prueba: 'Carencia missing_file miu_github.py: el patch contiene ''miu_github.py''.'
+  - nombre: evolve_escribe_estado
+    contrato: evolve escribe pae_state.json válido con carencias_found igual al número de carencias.
+    prueba: 'Correr evolve sobre el fixture: JSON válido, campos presentes, carencias_found correcto.'
+presupuesto:
+  tokens_estimados: 600
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 2048
+procedencia:
+  parent_hash: 'sha256:3bbac9239416741897966238d4ccdc140ad06d1a651c229617e0f1222e881175'
+  parent_path: memoria/anexo-vi/protocols/pae_01.py
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'Defecto del origen (README de protocols/): MIU_DIR es una cadena literal sin expandir; el runner usa el directorio dado por parámetro, no el literal.'
+  - 'El generate_patch del origen incluye una línea con un placeholder de credencial; el runner NO la reproduce: genera solo comentarios TODO.'
+  - 'Claim C-049: NO_SE — el protocolo existe pero no es funcional sin corregir los defectos en su host original.'

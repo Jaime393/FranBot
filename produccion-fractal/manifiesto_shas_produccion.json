@@ -1,0 +1,201 @@
+{
+  "paquete": "produccion-fractal",
+  "fecha": "2026-11-14",
+  "author": "Hebra",
+  "archivos": {
+    "README.md": {
+      "sha256": "8328d1635eb9b9adbd85bf5cb92c414463f7568e65fb9b281bdc1c05fec3c04a",
+      "bytes": 5133
+    },
+    "falsacion/README_falsacion.md": {
+      "sha256": "612843316e5297ef2f6eb689e638b012894d8cf49c7da2d7d23ccb03e75e8247",
+      "bytes": 2056
+    },
+    "falsacion/manifiesto_shas_falsacion.json": {
+      "sha256": "b666f5a3826817e5d558a033e34045dbab4a023e811ff5c4c822118d4bb63e3f",
+      "bytes": 1199
+    },
+    "falsacion/protocolo_C001_C005_predicciones.md": {
+      "sha256": "15d4d32cf3c3dd304b789c2474d97c48b58bc01bfa0947f43275f71e9152d9f1",
+      "bytes": 4498
+    },
+    "falsacion/protocolo_C008_D_eff.md": {
+      "sha256": "9477c540ffe23b2026fa56cd724f8d9a8cc39ccbafb7258da8623465af9fc614",
+      "bytes": 3157
+    },
+    "falsacion/protocolo_C053_C054_pilares.md": {
+      "sha256": "71a193604174a84454a03e6c050fba842dede5de0da3d6a7790f7c506daf0b17",
+      "bytes": 4360
+    },
+    "falsacion/protocolos_falsacion.jsonl": {
+      "sha256": "8f9e2d1fcbffe83b1bfb3704e02477aa6b4cc581ff9d770823973b2177d8cb8a",
+      "bytes": 34125
+    },
+    "falsacion/run_falsacion.py": {
+      "sha256": "69057d41a28d312b29ce92c703a22d7d580d88807ba27254e419545facce4af4",
+      "bytes": 5704
+    },
+    "metricas/README_metricas.md": {
+      "sha256": "628d4017947ceb13d7ae7dfba8490facbc2af4a01c198e1722016bbd57a42f33",
+      "bytes": 2419
+    },
+    "metricas/manifiesto_shas_metricas.json": {
+      "sha256": "8fcc4f287ad7d391c2b379280bdd8d9ba63af28cbdf19fd9a8f9f8656027d507",
+      "bytes": 820
+    },
+    "metricas/metrica_ki.json": {
+      "sha256": "748a408b388056f7951e8716a78830f2b8faa539ada941c80f37378316590653",
+      "bytes": 13163
+    },
+    "metricas/metrica_phi.json": {
+      "sha256": "578d99e4d2787790bafb0df4e44ce65e774ddb5ddd21f071c73bd89a2ea174e3",
+      "bytes": 3568
+    },
+    "metricas/metrica_rho.json": {
+      "sha256": "986ce10883597cb83bd364fc6caef502d0ebebad8d980d781d5a729d6cbc6a4d",
+      "bytes": 2988
+    },
+    "metricas/run_metricas.py": {
+      "sha256": "ef0c655e8ece0830ddba156c33fc69370ab1f9d8646b5f4a4d8bebf2d3f32946",
+      "bytes": 5386
+    },
+    "recetas/README_recetas.md": {
+      "sha256": "0d58dd0df2fb42e0d1da23a0259807a50db7da906a1ef29dd47c5bde660213b7",
+      "bytes": 5754
+    },
+    "recetas/_generar_recetas.py": {
+      "sha256": "629a09030ad5481eae1df60e0ac9ec490b2961289926ad2f2d7b885d0d8f0f62",
+      "bytes": 73290
+    },
+    "recetas/manifiesto_shas_recetas.json": {
+      "sha256": "b2cf70c58a3fa5ecd66ea583c1fd5a3be835026840e26e321914f3616bb869c5",
+      "bytes": 2848
+    },
+    "recetas/recetas_no_encontradas.json": {
+      "sha256": "71417d0f5bb05b9c3f037910ecb8d2ee3e03d7ab70c1d3b3b125ae3db2ecbfba",
+      "bytes": 1147
+    },
+    "recetas/recipe_pae-01.yaml": {
+      "sha256": "5d4acd42f51c13c47fcd8c1b4cdce98b505ef01ae7227ccef93d4d528cd1301c",
+      "bytes": 2572
+    },
+    "recetas/recipe_paf-01.yaml": {
+      "sha256": "55d0e01a0d82f079cec4f3cda5898c3e2129b24e52dcb44f6831d7085714c21a",
+      "bytes": 2291
+    },
+    "recetas/recipe_pai-01.yaml": {
+      "sha256": "51b3ec2472a39a2d4bf11603e146439f78452c3bb8cd157c19a1a6ce8cd9020c",
+      "bytes": 2113
+    },
+    "recetas/recipe_pcp-01.yaml": {
+      "sha256": "213bd542853baed7d2d9300f45a7597a0f035aa7c0b8aaf45d8c4b8cd83c5a26",
+      "bytes": 2221
+    },
+    "recetas/recipe_pva-api.yaml": {
+      "sha256": "93afa36907a77d5925494192404a7c77a1a7990e2a22c6a8bb7c46a5fbf49ddb",
+      "bytes": 2516
+    },
+    "recetas/recipe_pva-docker-template.yaml": {
+      "sha256": "ac212ad16913dfcc141fccc4f24b01d4e0749f0145fba26f075a6c0777f2b4df",
+      "bytes": 2057
+    },
+    "recetas/recipe_pva-lean-bridge.yaml": {
+      "sha256": "4e113bb544b162095a13ec550d3ede3734a646ecd54b522823c907c6b458d7d8",
+      "bytes": 1927
+    },
+    "recetas/recipe_pva-ledger.yaml": {
+      "sha256": "280c33b198f566e8ad6338341eb328c372ebd91e680340c8e91d3899aeab0a2d",
+      "bytes": 1904
+    },
+    "recetas/recipe_pva-lint.yaml": {
+      "sha256": "b2fbfaaeaa5dcf69c3ba853583294de6276e3806556181d1d5dd8e5ef847dca9",
+      "bytes": 2098
+    },
+    "recetas/recipe_pva-orchestrator.yaml": {
+      "sha256": "b646fad8ef4fe8749e61b3ce09f4e5fe427fa78e183a082d0fb68205bf0c602b",
+      "bytes": 1880
+    },
+    "recetas/recipe_pva-swarm.yaml": {
+      "sha256": "7da6e0dcae0d11c3ad66f6370f290269d4f6c04de2c108f6d0e902242b95cd4e",
+      "bytes": 1820
+    },
+    "recetas/run_recetas.py": {
+      "sha256": "e3d72fdfea65c6d88cb99957eb77c2062187bfa528fbfe79c4b88239a09c8e17",
+      "bytes": 9382
+    },
+    "recetas/runner_pae-01.py": {
+      "sha256": "4b868fb30d444bc126b538a16bf9b2199f2daa87d0d6608af25831d265582337",
+      "bytes": 3188
+    },
+    "recetas/runner_paf-01.py": {
+      "sha256": "af8c9f4ba727d4fca0492de25587a25e072673ac55cc45bdda596bf5e09604ae",
+      "bytes": 2582
+    },
+    "recetas/runner_pai-01.py": {
+      "sha256": "cede24bcafc472932491788469fbcee9481e7a20d51df2b58e1b07f6912d7110",
+      "bytes": 1970
+    },
+    "recetas/runner_pcp-01.py": {
+      "sha256": "c3fcea1d309e7a18c97b275c78c49fd62a84e431610eca49d017302c385fb7ca",
+      "bytes": 3414
+    },
+    "recetas/runner_pva-api.py": {
+      "sha256": "4fd8b02ebf75de6d9bda31700d90a3822f1bb8a925dbbc31c9db699dc12c328d",
+      "bytes": 3087
+    },
+    "recetas/runner_pva-docker-template.py": {
+      "sha256": "0116b7396e4bfce915ba3f0ea46a440388b572429a708f63c056229180684731",
+      "bytes": 3898
+    },
+    "recetas/runner_pva-lean-bridge.py": {
+      "sha256": "215b98d6aa88318a3c52e48eb92e5ad6e04842b2e599c67fc3d3b00fb82832f2",
+      "bytes": 2713
+    },
+    "recetas/runner_pva-ledger.py": {
+      "sha256": "35aa3072d99a1662dbc6b5594f223513aa35ef0d5daaaa1ba030ac752e93e14f",
+      "bytes": 1993
+    },
+    "recetas/runner_pva-lint.py": {
+      "sha256": "71e86a0277efea53f70b3386c60970d118a9b30451f2438a61808e79c4b23281",
+      "bytes": 3046
+    },
+    "recetas/runner_pva-orchestrator.py": {
+      "sha256": "ef4bcb0d936e33679c89bef6b0d02035ec6f68e981f707519f0f3a01491756b0",
+      "bytes": 2688
+    },
+    "recetas/runner_pva-swarm.py": {
+      "sha256": "b6b3a49fb2c988e4a39d0e2de0c3297dbcd7db98cddfaa35e637ef56b7b5fe5f",
+      "bytes": 2252
+    },
+    "vectores/README_vectores.md": {
+      "sha256": "44c43221dbaf16716216e3b5c37f3e77c1c08dcaf4ffa46e6508c87967f82e47",
+      "bytes": 2242
+    },
+    "vectores/manifiesto_shas_vectores.json": {
+      "sha256": "920d955d18d91d74459cba6f623474d768deda611a9bd62e8cb8ff1b862def90",
+      "bytes": 1044
+    },
+    "vectores/run_vectores.py": {
+      "sha256": "d6d1672da412e1fdd3802627c044b71b0a738e5427cf0154e9cd3dca2ea2dcf2",
+      "bytes": 8566
+    },
+    "vectores/vector_attest.json": {
+      "sha256": "e4cc96ef074eb6654f9a3eb837fe52df7f64d6aff815d5e78c92096e590301b5",
+      "bytes": 2420
+    },
+    "vectores/vector_measure.json": {
+      "sha256": "1bf819b1199547c32ab89e38421fea3b8ff3f1b8d97feb4f922ee570f1c8b552",
+      "bytes": 2555
+    },
+    "vectores/vector_route.json": {
+      "sha256": "648800b29fe4dec6345642ae8cad758216869172e3ba13ca900508f1374e2807",
+      "bytes": 2335
+    },
+    "vectores/vector_validate.json": {
+      "sha256": "f07706d76056e2802d60972ebfbbd708e17e56b5ff540cac455a8f862049fba6",
+      "bytes": 4093
+    }
+  },
+  "total_archivos": 48,
+  "total_bytes": 258482
+}

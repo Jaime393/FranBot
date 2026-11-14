@@ -1,0 +1,44 @@
+id: pva-docker-template
+nombre: pva-docker-template — Plantilla de reproducibilidad V202
+esencias:
+  - validate
+fuente:
+  parent_path: mineria/pva-docker-template/LECTURA.md
+  parent_hash: 'sha256:cecc3b7a331cce3e68717358e9a0945fc28cd2fc5351ea2ba604372995557310'
+  definicion: 'LECTURA.md L1: Dockerfile python:3.11-slim + make; Makefile con repro, dev, test, lint, reproduce; scripts/repro.py y scripts/verify_data.py; data GRACE TN14.'
+parametros:
+  - nombre: target_dir
+    tipo: string
+    default: .
+    descripcion: Directorio del repo a verificar.
+  - nombre: min_filas_csv
+    tipo: integer
+    default: 3
+    descripcion: Mínimo de filas de datos para declarar integridad OK.
+outputs:
+  - nombre: fig_C20.png
+    formato: 'Bytes dummy: el origen escribe bytes dummy y lo declara como figura generada.'
+  - nombre: reporte repro
+    formato: stdout con número de filas, último C20 y línea Ktau de ejemplo.
+tests:
+  - nombre: fixture_completo
+    contrato: 'Dockerfile FROM python:3.11-slim, Makefile con 5 objetivos, scripts/repro.py, scripts/verify_data.py y CSV de datos.'
+    prueba: 'Fixture con todo presente: PASS.'
+  - nombre: verify_min_filas
+    contrato: 'Un CSV con al menos min_filas_csv filas da ''OK integridad datos''.'
+    prueba: 'CSV de 7 filas: OK. CSV de 2 filas: FAIL.'
+  - nombre: repro_lee_c20
+    contrato: repro imprime el último valor C20 del CSV.
+    prueba: 'CSV con último C20 -0.0004846999: la salida lo contiene.'
+presupuesto:
+  tokens_estimados: 700
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 8192
+procedencia:
+  parent_hash: 'sha256:cecc3b7a331cce3e68717358e9a0945fc28cd2fc5351ea2ba604372995557310'
+  parent_path: mineria/pva-docker-template/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'El origen escribe fig_C20.png con bytes dummy y anuncia ''Repro OK''; el runner declara el archivo como dummy, no como figura real.'
+  - 'El CI del origen traga el fallo de verificación (''python scripts/verify_data.py || echo skip''); el runner no lo traga: un FAIL es FAIL.'

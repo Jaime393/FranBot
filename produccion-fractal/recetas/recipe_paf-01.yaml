@@ -1,0 +1,55 @@
+id: paf-01
+nombre: PAF-01 — Protocolo de Aprendizaje Federado V153.2
+esencias:
+  - measure
+  - route
+fuente:
+  parent_path: memoria/anexo-vi/protocols/paf_01.py
+  parent_hash: 'sha256:c9d8ced3caf9e4c044efa18ae500c824a6a19f3447fae0d12778b0ed853e687f'
+  definicion: 'clase FederatedLearningNode (líneas 14-85): train_local L22, aggregate L31, export_gradient L48, import_gradient L59, save L66, load L78, demo L88; 117 líneas.'
+parametros:
+  - nombre: node_id
+    tipo: string
+    default: trama_termux
+    descripcion: Identificador del nodo local.
+  - nombre: reputation_min
+    tipo: float
+    default: 0.5
+    descripcion: Reputación mínima para aceptar un gradiente entrante.
+  - nombre: metricas
+    tipo: list
+    default:
+      - phi_coherence
+      - k_tau
+      - sigma
+    descripcion: Métricas que el nodo entrena en local.
+outputs:
+  - nombre: gradiente
+    formato: 'JSON: {node_id, round, params, reputation, hash (16 hex de sha256)}'
+  - nombre: paf_state.json
+    formato: 'JSON: {node_id, round, reputation, local_params, global_params, timestamp}'
+tests:
+  - nombre: fedavg_media
+    contrato: aggregate promedia por clave los valores locales y los de otros nodos.
+    prueba: 'Local 0.77 + otro 0.82 en phi_coherence: agregado 0.795.'
+  - nombre: hash_estable
+    contrato: export_gradient produce un hash sha256 de 16 hex, estable para los mismos parámetros.
+    prueba: 'Dos exports con los mismos params: mismo hash.'
+  - nombre: rechaza_baja_reputacion
+    contrato: import_gradient devuelve False si reputation < 0.5.
+    prueba: 'Gradiente con reputation 0.4: False.'
+  - nombre: round_avanza
+    contrato: aggregate con otros nodos incrementa round en 1.
+    prueba: 'round 0 tras un aggregate con otro nodo: round 1.'
+presupuesto:
+  tokens_estimados: 700
+  cpu: bajo (<1 s en CPU local)
+  almacenamiento_bytes: 2048
+procedencia:
+  parent_hash: 'sha256:c9d8ced3caf9e4c044efa18ae500c824a6a19f3447fae0d12778b0ed853e687f'
+  parent_path: memoria/anexo-vi/protocols/paf_01.py
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'El origen es simulado: train_local no entrena de verdad y aggregate promedia diccionarios en memoria; no hay transporte real entre nodos.'
+  - El hash del gradiente es sha256 del JSON ordenado, truncado a 16 hexadecimales.

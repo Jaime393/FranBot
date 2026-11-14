@@ -1,0 +1,47 @@
+id: pva-lint
+nombre: pva-lint — Linter PVA V202
+esencias:
+  - validate
+fuente:
+  parent_path: mineria/pva-lint/LECTURA.md
+  parent_hash: 'sha256:b28600cecd5c511a83472d02a2e2c41ba24cc5adc7ad9c0479cf663774228eec'
+  definicion: 'LECTURA.md L1: 6 comprobaciones (doi, datos, codigo, docker, reproduce, figuras); score round(puntos/6, 3); umbral de fase >0.999.'
+parametros:
+  - nombre: target_dir
+    tipo: string
+    default: .
+    descripcion: Directorio del repo a verificar.
+  - nombre: umbral_fase
+    tipo: float
+    default: 0.999
+    descripcion: 'Umbral de transición de fase: score mayor que este valor.'
+  - nombre: timeout_doi_s
+    tipo: integer
+    default: 5
+    descripcion: Timeout en segundos para la resolución de DOIs por red.
+outputs:
+  - nombre: pva_report.json
+    formato: 'JSON: {pva_score, carencias, checks{doi, datos, codigo, docker, reproduce, figuras}}'
+tests:
+  - nombre: fixture_completo_score_1
+    contrato: Los 6 checks pasan y el score es 1.0.
+    prueba: 'Fixture con DOI en .md, data/, .git, Dockerfile, Makefile con ''reproduce'' y fig_plot.py: score 1.0.'
+  - nombre: fixture_vacio_score_0
+    contrato: Sin nada en el directorio el score es 0.0.
+    prueba: 'Directorio vacío: score 0.0.'
+  - nombre: reproduce_sin_palabra
+    contrato: 'Un Makefile sin la palabra ''reproduce'' hace fallar el check reproduce.'
+    prueba: 'Makefile sin la palabra: check reproduce False.'
+presupuesto:
+  tokens_estimados: 800
+  cpu: bajo (<1 s en CPU local, sin red)
+  almacenamiento_bytes: 1024
+procedencia:
+  parent_hash: 'sha256:b28600cecd5c511a83472d02a2e2c41ba24cc5adc7ad9c0479cf663774228eec'
+  parent_path: mineria/pva-lint/LECTURA.md
+  author: Hebra
+  timestamp: '2026-11-14T08:42:19Z'
+notas:
+  - 'La verificación de DOIs por red (GET doi.org/api/handles) queda fuera del runner: el check valida presencia y formato del DOI con la regex 10.\d{4,}/[^\s}]+.'
+  - 'Score: round(puntos/6, 3). Umbral de transición de fase >0.999 según el README del repo.'
+  - 'NO_SÉ del origen: cuáles son ''las 5 capas'' del ecosistema PVA; el README las nombra sin listarlas.'
