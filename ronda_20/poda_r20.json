@@ -1,0 +1,391 @@
+{
+ "ronda": 20,
+ "frente": "F9 PODA",
+ "fecha": "2026-11-15",
+ "medicion": "2026-11-15T07:52-07:54Z",
+ "regla": "SOLO DOCUMENTO — nada se borro, nada se movio, nada se elimino",
+ "corpus_a_la_medicion": {
+  "claims_jsonl_lineas": 1192,
+  "claims_jsonl_sha256": "33a7f0e686a643daec5da72d43eb8a9a3c90b9fa4981eb5d1f1288c2ecee2c23",
+  "provenance_lineas": 370,
+  "provenance_sha256": "82d39f151c86567989fb8830081b8fefd9e0d39dc24fe86c6be5ec6b2c8ac8e8",
+  "claims_resumen_sha256": "315fd22b109805895a279286414d1f948c3f22b716e1c3994655b86d4eabd84d",
+  "confirmaciones_filas": 294,
+  "huecos_filas": 139,
+  "dataset_filas": 30,
+  "anexo_incertidumbre_items": 18,
+  "anexo_incertidumbre_sha256": "23acd4d089ef5ead6ba87c479568573541e33874c2909a88d5a33470c69a21d8"
+ },
+ "tally": {
+  "total_entradas": 84,
+  "filas_tabla": 83,
+  "nota_conteo": "83 filas para 84 entradas: el padre P-15 cuenta como RESUELTO sin fila propia (convencion CORR-TALLY-R15)",
+  "PODAR": 11,
+  "PODAR_CONDICIONADO": 7,
+  "MOVER": 1,
+  "CONSERVAR": 37,
+  "CONSERVAR_TEMPORAL": 16,
+  "RESUELTO": 2,
+  "NO_CANDIDATO": 10
+ },
+ "ahorro_si_se_ejecutaran": "~508 MB locales (sin cambio respecto a r10-r19; 0 podas nuevas en r20)",
+ "temporales": {
+  "ids": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63"
+  ],
+  "nuevo_temporal": "P-63",
+  "retirados_r19": [],
+  "veces_prorroga": {
+   "novena": [
+    "P-27",
+    "P-28",
+    "P-29b",
+    "P-31a",
+    "P-35",
+    "P-37",
+    "P-38",
+    "P-41",
+    "P-44"
+   ],
+   "quinta_reevaluacion": [
+    "P-47",
+    "P-48"
+   ],
+   "cuarta_reevaluacion": [
+    "P-51"
+   ],
+   "tercera_reevaluacion": [
+    "P-54",
+    "P-57"
+   ],
+   "segunda_reevaluacion": [
+    "P-60"
+   ],
+   "primera": [
+    "P-63"
+   ]
+  },
+  "nuevo_horizonte": "FASE 4 r20 + FASE 2 r20; re-evaluar en r21",
+  "cadena_reversion": {
+   "eslabones": 19,
+   "bytes": 23924263,
+   "orden": [
+    "P-63 (1.189)",
+    "P-60 (1.185)",
+    "P-57 (1.181)",
+    "P-54 (1.178)",
+    "P-51 (1.175)",
+    "P-47 (1.174)",
+    "P-44 (1.168)",
+    "P-41 (1.168)",
+    "P-38 (1.162 post-N-11)",
+    "P-37 (1.162 pre-N-11)",
+    "P-35 (1.160)",
+    "P-28 (B, 1.152)",
+    "P-27 (pre-r10, 1.138)"
+   ],
+   "ramas": [
+    "P-29b (D-05)",
+    "P-31a (D-01)"
+   ],
+   "haz_paralelo": "P-48 (4 dirs por decision r15)"
+  },
+  "condiciones_retiro_r12": {
+   "condicion_1_copias_drive_reverificadas_por_descarga": "CUMPLIDA (r17, CORR-COND1-R17); SOSTENIDA en r20 por spot-check 4/4 (CORR-COND1-R20)",
+   "condicion_2_deposito_congelado": "CUMPLIDA (r19 congelado; r18 sigue congelado)",
+   "condicion_3_p15_reapuntadas_o_podas_condicionadas_ejecutadas": "NO CUMPLIDA",
+   "puerta": "2 de 3 — el unico bloqueo restante es la autorizacion (condicion 3)"
+  },
+  "prorrogados_r20": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60"
+  ]
+ },
+ "condicion_1_medicion": {
+  "script": "_spot_drive_r20.py",
+  "salida": "_spot_drive_r20.json",
+  "fecha": "2026-11-15T07:53Z",
+  "metodo": "spot-check por descarga de 4 copias Drive del conjunto 60/60 verificado en r17 (files get alt=media -o /tmp + sha256; JSON por md5 de metadatos + stdout parseado, CORR-DESCARGA-JSON-R17); sin archivos nuevos con copia que verificar (P-54/P-57/P-60/P-63 SIN_COPIA: 0 menciones en _upload_log_r19.jsonl, manifiesto_shas_r19_fase4.json y _upload_github_r19.jsonl)",
+  "por_temporal": {
+   "P-27": {
+    "con_copia": 5,
+    "descarga": 4,
+    "md5_contenido": 1,
+    "sin_copia": 0
+   },
+   "P-28": {
+    "con_copia": 5,
+    "descarga": 4,
+    "md5_contenido": 1,
+    "sin_copia": 0
+   },
+   "P-29b": {
+    "con_copia": 3,
+    "descarga": 3,
+    "md5_contenido": 0,
+    "sin_copia": 0
+   },
+   "P-31a": {
+    "con_copia": 1,
+    "descarga": 1,
+    "md5_contenido": 0,
+    "sin_copia": 0
+   },
+   "P-35": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-37": {
+    "con_copia": 3,
+    "descarga": 2,
+    "md5_contenido": 1,
+    "sin_copia": 0
+   },
+   "P-38": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-41": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-44": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-47": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-48": {
+    "con_copia": 18,
+    "descarga": 10,
+    "md5_contenido": 8,
+    "sin_copia": 0
+   },
+   "P-51": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-54": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-57": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-60": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-63": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   }
+  },
+  "resultado_final": {
+   "verificados_por_contenido": 60,
+   "descarga_byte_identica": 39,
+   "md5_y_contenido_json": 21,
+   "sin_copia_drive_huecos_por_regla": 5,
+   "sin_copia_drive_p51_p54_p57_p60_post_fase4": "P-51 (8 archivos), P-54 (8 archivos), P-57 (8 archivos) y P-60 (8 archivos)",
+   "diferencias_reales": 0,
+   "errores_descarga": 0
+  },
+  "spot_check_r20": {
+   "n": 4,
+   "ok": 4,
+   "diferente": 0,
+   "P-27_claims.jsonl": "OK_BYTE_IDENTICO",
+   "P-35_claims.jsonl": "OK_BYTE_IDENTICO",
+   "P-48_n16_claims.jsonl": "OK_BYTE_IDENTICO",
+   "P-47_claims_resumen.json": "OK_MD5_Y_CONTENIDO"
+  }
+ },
+ "p32": {
+  "es_clase_3": false,
+  "fundamento_conservar": "D-07 + historia citada en motivo (CORR-P32-B-R15 adoptada FASE 2 r15)",
+  "hash_campo_claims_vivos": 0,
+  "ocurrencias_totales": 14,
+  "claims_con_ocurrencias": 5,
+  "git_show_head_sha256": "a30d69e8bd3e9327a6063813ee8833e5efb613f7812aea1f328b50b34e351c4b",
+  "git_show_head_bytes": 19987,
+  "git_show_head_byte_identico_a_respaldo": true,
+  "c1195_c1196_c1197_ocurrencias": 0
+ },
+ "criba": {
+  "provenance_lineas": 370,
+  "provenance_sha256": "82d39f151c86567989fb8830081b8fefd9e0d39dc24fe86c6be5ec6b2c8ac8e8",
+  "rutas_0_ocurrencias": 48,
+  "hashes_0_ocurrencias": 33,
+  "ocurrencias_vivas_conocidas": {
+   "5fdce82d": "1 (comentario L22, reparacion D-01)",
+   "8d15b724": "1 (entrada L248, motor corregido)",
+   "0cf743ca": "1 (entrada L251, GRIMORIO corregido)",
+   "a30d69e8": "1 (comentario L247, reparacion D-07)",
+   "131409eb": "1 (entrada L359, documento decision N-14)"
+  },
+  "cambio_recomendacion": "ninguno"
+ },
+ "nuevos_candidatos": {
+  "P-63": {
+   "ruta": "ronda_19/respaldo_pre_absorcion_r19/",
+   "archivos": 8,
+   "bytes": 1414257,
+   "estado": "1.189 pre-absorcion r19",
+   "copia_drive": false,
+   "horizonte": "FASE 4 r20 + FASE 2 r20; re-evaluar r21",
+   "veredicto": "CONSERVAR-TEMPORAL"
+  },
+  "P-64": {
+   "ruta": "ronda_19/deposito/",
+   "archivos": 16,
+   "bytes": 113550,
+   "motivo": "patron + registro",
+   "veredicto": "CONSERVAR"
+  },
+  "P-65": {
+   "ruta": "ronda_20/ejecucion_f2/heartbeat_rev_r20_*.json (101) + raw_r20_*.json (11) + lock",
+   "archivos": 113,
+   "bytes": 1342003,
+   "motivo": "evidencia; excluir del deposito; raw bootstrap NO guardado (JWT anon, solo metadatos)",
+   "veredicto": "NO CANDIDATO"
+  }
+ },
+ "correcciones": {
+  "CORR-CADENA-R20": "cadena de reversion 19 eslabones, 23.924.263 B (r19: 18 eslabones, 22.510.006 B)",
+  "CORR-COND1-R20": "condicion 1 sigue cumplida y sostenida por spot-check 4/4 en r20; sin archivos nuevos con copia Drive que verificar (P-54/P-57/P-60/P-63 SIN_COPIA); puerta de retiro sigue 2 de 3",
+  "CORR-P63-SIN-COPIA": "P-63 no fue depositado en FASE 4 r19 (0 menciones en manifiesto_shas_r19_fase4.json, _upload_log_r19.jsonl y _upload_github_r19.jsonl); creado durante la absorcion r19, post-FASE 4",
+  "CORR-P54-P57-P60-R20": "FASE 4 r19 tampoco deposito P-54, P-57 ni P-60 (0 menciones en los mismos tres archivos); deposito solo ronda_19/",
+  "CORR-P65-RAW-R20": "estado_vivo_r20.md dice '13 archivos de estado' recuperados por API contents y la verificacion r20 registro 12: en disco hay 11 raw_r20_*.json + 1 lock = 12 archivos; el 13 es observabilidad/bootstrap_V270.json, no guardado (JWT anon, solo metadatos); misma convencion que P-62 (r19)",
+  "CORR-DIFF-PYC-R20": "_diff_inventario_r19.py imprimia el censo .pyc como 'r17 -> r18' cuando comparaba r18 vs r19; corregido en _diff_inventario_r20.py ('r19 -> r20'); solo la etiqueta, los conteos eran correctos",
+  "CORR-MANIFIESTO-HUECOS-R17": "sigue vigente: manifiestos fase4 r11-r15 sobreestiman el deposito en 1 archivo por respaldo (5 en total); el manifiesto fase4 r20 debe construirse DESPUES de subir, no antes",
+  "P-64": "en r20 se registra la linea base de los 16 archivos de P-64; en r21 se verifica contra esa linea base. P-61 se verifica en r20 contra la linea base r19: 15/15 OK",
+  "P-32": "total preciso 14 en 5 claims, sin cambio en r20 (C-1195..C-1197 no lo mencionan: 0 ocurrencias)",
+  "P-15h/P-16": "conteo/existencia verificados en r20; sin re-verificacion individual, como en r11-r19",
+  "F1-r20": "sin respaldo_pre_r20/ a la hora de este cierre (F1 en guardia, sin aplicacion); si F1 aplica despues, su respaldo sera candidato en r21"
+ },
+ "reglas": {
+  "REGLA-PODA-PROV-01": "practica documentada, no canon adoptado",
+  "REGLA-PODA-PROV-02": "ADOPTADA (N-13, r15); clase 3 con refinamiento (a); P-32 ya NO es clase 3 bajo lectura estricta (CORR-P32-B-R15, adoptada FASE 2 r15)"
+ },
+ "entregables": [
+  "poda_r20.md",
+  "poda_r20.json",
+  "inventario_t4_r20.md",
+  "diff_inventario_r20.md",
+  "manifiesto_shas_r20_f9.json"
+ ],
+ "verificacion_p01_p65": {
+  "script": "_verificar_p20.py",
+  "salida": "_verificacion_p20.json",
+  "fecha": "2026-11-15T07:52Z",
+  "resultado": "326/326 OK, 0 no-OK"
+ },
+ "t4_r20": {
+  "script": "_inventario_r20.py",
+  "salida": "manifiesto_tejido_r20.json",
+  "diff_script": "_diff_inventario_r20.py",
+  "diff_salida": "diff_inventario_r20.md",
+  "escaneo": "2026-11-15T07:53:18Z",
+  "archivos": 6221,
+  "bytes": 1603968988,
+  "errores_lectura": 0,
+  "base_r19": {
+   "archivos": 5952,
+   "bytes": 1585006479,
+   "escaneo": "2026-11-14T23:50:09Z"
+  },
+  "diff": {
+   "OK": 5948,
+   "CAMBIO": 4,
+   "MOVIDO": 0,
+   "FALTA": 0,
+   "NUEVO": 269
+  },
+  "cambio": [
+   "ronda_12/afirmaciones_pendientes.md 43412 -> 49829 B (FASE 5 r19)",
+   "memoria/anexo-vi/claims.jsonl 995923 -> 999657 B (absorcion r19, 1.189 -> 1.192)",
+   "memoria/anexo-vi/claims_resumen.json 17636 -> 17678 B (regenerado)",
+   "memoria/anexo-vi/provenance.sha256 49194 -> 49476 B (368 -> 370 lineas)"
+  ],
+  "nuevo_desglose": {
+   "ronda_19/absorcion": 11,
+   "ronda_19/deposito": 16,
+   "ronda_19/ejecucion_f7": 7,
+   "ronda_19/ejecucion_f8": 5,
+   "ronda_19/ejecucion_f9": 7,
+   "ronda_19/ejecucion_fase3": 7,
+   "ronda_19/respaldo_pre_absorcion_r19": 8,
+   "ronda_19/verificacion_fase2": 19,
+   "ronda_20/ESTADO_FASE0.md": 1,
+   "ronda_20/frentes_r20.json": 1,
+   "ronda_20/manifiesto_shas_r20_fase0.json": 1,
+   "ronda_20/mapa_frentes_r20.md": 1,
+   "ronda_20/ejecucion_f1": 4,
+   "ronda_20/ejecucion_f2": 133,
+   "ronda_20/ejecucion_f3": 12,
+   "ronda_20/ejecucion_f4": 12,
+   "ronda_20/ejecucion_f5": 2,
+   "ronda_20/ejecucion_f6": 16,
+   "ronda_20/ejecucion_f9": 6
+  },
+  "fragil_02": "testA-D.err 0 en manifiesto r20, sin tercer evento; causa sigue NO_SE",
+  "p18": "variograma.pyc sigue ausente; variograma.py intacto (6351 B, sha f8ec697e...)",
+  "pyc_censo": {
+   "r19": 18,
+   "r20": 18,
+   "nuevos": 0,
+   "faltan": 0
+  }
+ }
+}
