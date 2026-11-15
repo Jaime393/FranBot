@@ -1,4 +1,4 @@
-# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-80
+# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-83
 
 - **Creado:** 2026-11-14, por decisión N-16 (opción C, anexo de incertidumbre).
 - **Decisión:** N-16, aplicada en ronda 15 F1 bajo el régimen 2026-11-14 01:43 -05 (las decisiones se aplican automáticamente). Paquete: `ronda_13/ejecucion_f7/propuesta_inscripcion_dataset_r13.md` (sha `707f98c1…`, DC-R13-F7-01, opción C recomendada). Registro de la decisión: `ronda_15/ejecucion_f1/decision_n16_r15.md` / `.json`.
@@ -186,6 +186,31 @@
 - **Cara:** d04 L13 (columna u de D_f) — **CERRADA en r15; este ítem es seguimiento, no reapertura.** La cara se cerró con M-66/M-72 (5/23 huecos ≥ 0,05, u* = 0,05); M-80 añade el respaldo publicado de esa columna para su clase fundante.
 
 
+## M-82 — CONFIRMA (r20, 2026-11-15) — ítem añadido por N-29
+
+- **Valor:** censo del exponente β con el mismo protocolo OLS log-log base 10 vs resident_pop (inclusión pop>0, Y>0, finitos) para las **32 variables numéricas candidatas** de indicators.tab (10.351 áreas urbanas GHSL/UCD): **solo area_km2 tiene β en banda [0,80, 0,90]** (β = **0,8627 ± 0,0049**, R² = 0,7490 — M-76, reproducido); **0 variables además de area_km2** caen en banda por estimación puntual → **CONFIRMA** (el β en banda es un singleton).
+- **CORR-M82-PROSA-R20 (FASE 2 r20, H2):** la prosa de F7 decía mediana 0,0083 y 8 variables > 0,90; el JSON (med_M82.json) dice mediana 0,01 y 7 — el 0,0083 es la mediana excluyendo area_km2, exclusión no declarada. Este ítem inscribe los valores del JSON. Mediana del censo: β = 0,01. 7 variables tienen β > 0,90.
+- **Falsador:** CONFIRMA si 0 variables además de area_km2 tienen β en banda [0,80, 0,90] por estimación puntual (el β en banda es un singleton); NO_CONFIRMA si ≥ 1 variable más cae en banda (es una familia; la lectura de M-76 se debilita). Declarado en `declaracion_falsadores_r20.md` (2026-11-15T07:06:00Z) antes de correr. **Veredicto:** CONFIRMA (singleton).
+- **Matiz — singleton por estimación puntual, con un casi-caso en el borde:** built_up_area_m2 queda fuera de banda por 0,0023 (β = 0,9023 ± 0,0065, IC 95% [0,8896, 0,9150] solapa el borde 0,90). El veredicto sigue el falsador declarado (estimación puntual), y el matiz queda registrado sin cambiarlo: por intervalo, built_up_area_m2 es compatible con la banda. La familia β-en-banda, si existe, es de una sola variable por estimación puntual y de a lo sumo dos por intervalo. Las 7 variables medidas antes se reproducen como control (R² dentro de 0,0005). La cara **d05 L7 NO se cierra** con esta medición (el muro R² sistemático de M-79 y el singleton β de M-82 describen el archivo, no lo resuelven), pero la pregunta "¿singleton o familia?" queda respondida: singleton por estimación puntual.
+- **Secundarios (NO decisorios):** 7 variables con β > 0,90 (la más cercana: built_up_area_m2, 0,9023); mediana del censo β = 0,0083; variables con β más alto: street_segment_count 0,9911, intersect_count 0,9876, node_count 0,9828.
+- **Lección para la próxima vuelta:** el censo de β agota la pregunta "¿singleton o familia?" por estimación puntual. Una próxima especificación distinta tendría que cambiar el criterio (p. ej. intervalo en vez de puntual, o banda distinta declarada antes de correr) — repetir el censo con el mismo protocolo es repetición, no medición.
+- **Fuente:** indicators.tab (mismo archivo que M-52/M-57/M-65/M-68/M-71/M-73/M-76/M-79, 5.538.726 B, sha `7ec636c8…`; copias en `datos/` de r20, verificados antes de correr). **sha_dato:** `92d48f966545e3ac9ac082c9bcab22a66928404fc6ac3fc9b86b8baf9b7a7dbb` (med_M82.json, 15 claves; verificación independiente con pandas + np.polyfit, otro camino de código, idéntica dígito a dígito: 32 variables, máx diff β 0,000047, máx diff R² 0,000050, en banda solo area_km2).
+- **¿Da fila?** NO (anotación): refina la línea de escalamiento urbano (ítems M-57/M-65, M-76, M-79) y registra que el β en banda es un singleton por estimación puntual; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** d05 L7 (escalamiento urbano) — **ABIERTA**. Este ítem es seguimiento del límite de una cara abierta (censo de β tras el censo de R² de M-79), no cierre.
+
+
+## M-83 — CONFIRMA (r20, 2026-11-15) — ítem añadido por N-30
+
+- **Valor:** las 3 mediciones fuera del dataset — **Topografía andina SRTM (D_f 2,20), Dosel amazónico GLAD (D_f 2,79), Porosidad del suelo SoilGrids bdod (D_f 2,82)** — **son verificables en el corpus con fuente + hash**: **C-791** (verificacion, SE) y **C-944** (hueco, SE) las nombran a las 3 con sus D_f y citan paper_df.md con hash `sha256:304a41bf…`, que **coincide byte a byte con el paper_df.md local** (sha256 directo). Las 3 siguen fuera del dataset CSV (**0 coincidencias** SRTM/GLAD/bdod en 30 filas) por exclusión deliberada (fuera de banda), como registran ambos claims. Control: las 3 están en mediciones_informe.md (ciclo 74, M1/M2/M5). → **CONFIRMA: la cara d08 L13 CIERRA** (primera cara que cierra desde d04 L13 en r15).
+- **Falsador:** CONFIRMA si las 3 mediciones son verificables en el corpus con fuente + hash (claim SE que las nombra a las 3, con hash de archivo que coincide con el archivo local) — la cara cierra; NO_CONFIRMA si alguna de las 3 carece de fuente + hash verificable en el corpus (la cara avanza, sigue paper-only); NO_SÉ si el hash no se puede verificar o el corpus es ilegible. Declarado en `declaracion_falsadores_r20.md` (2026-11-15T07:06:00Z) antes de correr. **Veredicto:** CONFIRMA (cierre de cara).
+- **Matiz — cierre por verificación, no por re-medición:** el hueco era de existencia en el corpus, no de medida: los D_f 2,20/2,79/2,82 se toman como publicados, sin re-correrlos. Que las 3 estén en el corpus no las convierte en filas del dataset: la distinción 32/29 se preserva por orden (C-944 la registra explícitamente). El cierre es de la cara d08 L13 como hueco de integración corpus↔paper; el dataset sigue en 30 filas.
+- **Secundarios (NO decisorios):** C-791 aparece 1 vez, C-944 1 vez en claims.jsonl; 'topografía andina' 2 líneas, 'dosel' 2, 'bdod' 2 (las 2 son C-791 y C-944 en cada caso); paper_df.md en Drive ID 1yucWNIXOtp8NRW-kliJj41UC3WlsyaJt (Consulta v4, citado por C-791).
+- **Lección para la próxima vuelta:** el cierre de d08 L13 no abre trabajo nuevo — es un cierre. La lección es de método: una cara "solo en paper" se cierra verificando fuente + hash en el corpus, no re-midiendo. El patrón vale para otras caras paper-only si aparecen (hoy no hay otra cara paper-only en el censo).
+- **Fuente:** claims.jsonl (1.192 líneas, corpus post-r19) + paper_df.md local (sha en este ítem) + dataset_nodos_Df.csv (30 filas + cabecera) + academico/inbox/mediciones/mediciones_informe.md (control, ciclo 74). **sha_dato:** `c80b15b74bdf06f07ab093e40752593685554ea4ac2667ced42e7dd59f47e41f` (med_M83.json, 15 claves; verificación independiente por re-búsqueda con grep -n y sha256sum directo, idéntica).
+- **¿Da fila?** NO (anotación): registra el cierre de la cara d08 L13 como hueco de integración corpus↔paper; las 3 mediciones siguen fuera del dataset por exclusión deliberada. No se inscribe en el CSV.
+- **Cara:** d08 L13 (3 mediciones solo en paper_df) — **CERRADA en r20**. Caras: 18 cerradas → 19 si FASE 2 adopta; 59 abiertas → 58. Primera cara que cierra desde d04 L13 en r15.
+
+
 ## Resumen
 
 | Med. | Veredicto | Valor | Fila | Cara |
@@ -208,8 +233,10 @@
 | M-78 | CONFIRMA | cociente máx 50,1351; ancla Congreso 60, P2 = 0,0185 | NO (anotación) | d05 L4 |
 | M-79 | CONFIRMA | censo 32 variables, 0 con R² > 0,8; máx area_km2 0,7490 | NO (anotación) | d05 L7 |
 | M-80 | CONFIRMA | Górski et al. 2012, Tabla 1: 1-D ±0,020 (n = 1.000) | NO (anotación) | d04 L13 (cerrada) |
+| M-82 | CONFIRMA | censo 32 variables, solo area_km2 β en banda; singleton; mediana β = 0,01; 7 con β > 0,90 | NO (anotación) | d05 L7 |
+| M-83 | CONFIRMA | 3/3 mediciones solo en paper_df verificadas con fuente + hash; d08 L13 CIERRA | NO (anotación) | d08 L13 (cerrada) |
 
-**Tally:** CONFIRMA 10 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80) · NO_CONFIRMA 6 (M-57, M-61, M-64, M-65, M-69, M-76) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58). Ítems: 18 (M-56..M-72, M-75, M-76, M-78, M-79, M-80). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
+**Tally:** CONFIRMA 12 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83) · NO_CONFIRMA 6 (M-57, M-61, M-64, M-65, M-69, M-76) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58). Ítems: 20 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
 
 **Ítems futuros:** las mediciones que tampoco den fila se añaden a este anexo por la misma vía (F7 prepara el ítem, F1 lo añade). Una medición que entregue un D_f de nodo inscribe su fila en el CSV por decisión propia, no por este anexo.
 
