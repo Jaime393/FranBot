@@ -1,0 +1,379 @@
+{
+  "medicion": "M-79",
+  "dominio": "d05 escalamiento urbano: censo de R² con el mismo protocolo (OLS log-log base 10 vs resident_pop) para las 32 variables numéricas candidatas de indicators.tab, 10.351 áreas urbanas GHSL/UCD",
+  "fuente": "indicators.tab (mismo archivo que M-52/M-57/M-65/M-68/M-71/M-73/M-76, 5.538.726 B, sha re-verificado aquí; copia en datos/ de r19). Variables: 32 columnas Y candidatas (se excluyen identificadores y la propia X resident_pop).",
+  "url": "Archivo local en datos/ (sha256 en este JSON); serie urbana GHSL/UCD, misma fuente que M-52/M-57/M-65/M-68/M-71/M-73/M-76",
+  "sha256_dato": "7ec636c8722b54586067bfd7f71032804fa1743daaacd12ad08fc449e399d9c7",
+  "metodo": "OLS log-log base 10 por variable, Y vs X = resident_pop. Inclusión por variable: resident_pop>0, Y>0 y valores finitos (mismo criterio que M-52/M-57/M-65/M-68/M-71/M-73/M-76; n_incluidas se reporta por variable). Las 7 variables ya medidas se re-miden como control de consistencia. El campo 'valor' lleva el R² máximo del censo; el campo 'error' lleva el SE de beta de esa variable.",
+  "parametros": {
+    "n_total_filas": 10351,
+    "n_variables_censo": 32,
+    "variables_censo": [
+      "area_km2",
+      "built_up_area_m2",
+      "length_total",
+      "node_count",
+      "street_segment_count",
+      "intersect_count",
+      "intersect_count_clean_topo",
+      "intersect_count_clean",
+      "pagerank_max",
+      "cc_wt_avg_dir",
+      "cc_wt_avg_undir",
+      "bc_max",
+      "bc_gini",
+      "self_loop_proportion",
+      "elev_range",
+      "elev_std",
+      "elev_iqr",
+      "orientation_entropy",
+      "grade_mean",
+      "length_median",
+      "length_mean",
+      "grade_median",
+      "k_avg",
+      "elev_median",
+      "cc_avg_dir",
+      "elev_mean",
+      "prop_3way",
+      "cc_avg_undir",
+      "circuity",
+      "prop_deadend",
+      "straightness",
+      "prop_4way"
+    ],
+    "umbral_R2_primario": 0.8,
+    "umbral_R2_secundario": 0.9,
+    "n_R2_mayor_0_8": 0,
+    "variables_R2_mayor_0_8": [],
+    "n_R2_mayor_o_igual_0_9": 0,
+    "variables_R2_mayor_o_igual_0_9": [],
+    "R2_maximo_censo": 0.749,
+    "variable_R2_maximo": "area_km2",
+    "beta_R2_maximo": 0.8627,
+    "se_beta_R2_maximo": 0.0049,
+    "n_R2_maximo": 10351,
+    "control_previas_7": [
+      {
+        "variable": "area_km2",
+        "medicion": "M-76",
+        "R2_recomputado": 0.749,
+        "R2_publicado": 0.749,
+        "coincide": true
+      },
+      {
+        "variable": "length_total",
+        "medicion": "M-52",
+        "R2_recomputado": 0.6037,
+        "R2_publicado": 0.6037,
+        "coincide": true
+      },
+      {
+        "variable": "node_count",
+        "medicion": "M-57",
+        "R2_recomputado": 0.4148,
+        "R2_publicado": 0.4148,
+        "coincide": true
+      },
+      {
+        "variable": "street_segment_count",
+        "medicion": "M-65",
+        "R2_recomputado": 0.408,
+        "R2_publicado": 0.408,
+        "coincide": true
+      },
+      {
+        "variable": "intersect_count",
+        "medicion": "M-68",
+        "R2_recomputado": 0.402,
+        "R2_publicado": 0.402,
+        "coincide": true
+      },
+      {
+        "variable": "intersect_count_clean_topo",
+        "medicion": "M-73",
+        "R2_recomputado": 0.3989,
+        "R2_publicado": 0.3989,
+        "coincide": true
+      },
+      {
+        "variable": "intersect_count_clean",
+        "medicion": "M-71",
+        "R2_recomputado": 0.3974,
+        "R2_publicado": 0.3974,
+        "coincide": true
+      }
+    ],
+    "n_R2_entre_0_7_y_0_8": 1,
+    "R2_mediana_censo": 0.0321
+  },
+  "valor": 0.749,
+  "error": 0.0049,
+  "limites_validez": "Mismos que M-57/M-65/M-68/M-71/M-73/M-76 (población 2015 UCD frente a indicadores GHSL/UCD; ciudad = área urbana GHSL/UCD; OLS log-log supone errores homocedásticos en log-log). El censo describe qué variables del archivo escalan con R² alto; no prueba la ley de escalamiento fuera del archivo. Las variables con ceros o negativos (proporciones, grades, elevación) tienen n_incluidas menor por el criterio Y>0, declarado antes de correr.",
+  "criterio_falsacion": "CONFIRMA si 0 variables superan R² > 0,8 (el muro es sistemático); NO_CONFIRMA si >= 1 variable supera R² > 0,8 (el muro no es universal). Declarado en declaracion_falsadores_r19.md (2026-11-14T23:36:05Z) antes de correr. Conteo secundario (no decisorio del veredicto primario): nº de variables con R² >= 0,90 (umbral del encargo; el usado como pierna en M-52..M-76).",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-14",
+  "extra": {
+    "censo_R2_ordenado": [
+      {
+        "variable": "area_km2",
+        "n_incluidas": 10351,
+        "beta": 0.8627,
+        "se_beta": 0.0049,
+        "alfa": -2.9872,
+        "R2": 0.749
+      },
+      {
+        "variable": "built_up_area_m2",
+        "n_incluidas": 10351,
+        "beta": 0.9023,
+        "se_beta": 0.0065,
+        "alfa": 2.0514,
+        "R2": 0.6519
+      },
+      {
+        "variable": "length_total",
+        "n_incluidas": 10351,
+        "beta": 0.9177,
+        "se_beta": 0.0073,
+        "alfa": 0.6477,
+        "R2": 0.6037
+      },
+      {
+        "variable": "node_count",
+        "n_incluidas": 10351,
+        "beta": 0.9828,
+        "se_beta": 0.0115,
+        "alfa": -1.9817,
+        "R2": 0.4148
+      },
+      {
+        "variable": "street_segment_count",
+        "n_incluidas": 10351,
+        "beta": 0.9911,
+        "se_beta": 0.0117,
+        "alfa": -1.8839,
+        "R2": 0.408
+      },
+      {
+        "variable": "intersect_count",
+        "n_incluidas": 10351,
+        "beta": 0.9876,
+        "se_beta": 0.0118,
+        "alfa": -2.0954,
+        "R2": 0.402
+      },
+      {
+        "variable": "intersect_count_clean_topo",
+        "n_incluidas": 10351,
+        "beta": 0.9757,
+        "se_beta": 0.0118,
+        "alfa": -2.1024,
+        "R2": 0.3989
+      },
+      {
+        "variable": "intersect_count_clean",
+        "n_incluidas": 10351,
+        "beta": 0.9733,
+        "se_beta": 0.0118,
+        "alfa": -2.0938,
+        "R2": 0.3974
+      },
+      {
+        "variable": "pagerank_max",
+        "n_incluidas": 10351,
+        "beta": -0.8825,
+        "se_beta": 0.0108,
+        "alfa": 1.9698,
+        "R2": 0.3929
+      },
+      {
+        "variable": "cc_wt_avg_dir",
+        "n_incluidas": 10278,
+        "beta": -0.3203,
+        "se_beta": 0.007,
+        "alfa": -1.1843,
+        "R2": 0.1708
+      },
+      {
+        "variable": "cc_wt_avg_undir",
+        "n_incluidas": 10278,
+        "beta": -0.311,
+        "se_beta": 0.0068,
+        "alfa": -1.1836,
+        "R2": 0.1698
+      },
+      {
+        "variable": "bc_max",
+        "n_incluidas": 10351,
+        "beta": -0.1735,
+        "se_beta": 0.0039,
+        "alfa": 0.2579,
+        "R2": 0.1626
+      },
+      {
+        "variable": "bc_gini",
+        "n_incluidas": 10351,
+        "beta": 0.0579,
+        "se_beta": 0.0013,
+        "alfa": -0.4729,
+        "R2": 0.1589
+      },
+      {
+        "variable": "self_loop_proportion",
+        "n_incluidas": 5537,
+        "beta": -0.2787,
+        "se_beta": 0.0133,
+        "alfa": -1.4601,
+        "R2": 0.0738
+      },
+      {
+        "variable": "elev_range",
+        "n_incluidas": 10351,
+        "beta": 0.2741,
+        "se_beta": 0.0098,
+        "alfa": 0.3728,
+        "R2": 0.0702
+      },
+      {
+        "variable": "elev_std",
+        "n_incluidas": 10351,
+        "beta": 0.1925,
+        "se_beta": 0.01,
+        "alfa": -0.017,
+        "R2": 0.0345
+      },
+      {
+        "variable": "elev_iqr",
+        "n_incluidas": 10350,
+        "beta": 0.187,
+        "se_beta": 0.0105,
+        "alfa": 0.0996,
+        "R2": 0.0298
+      },
+      {
+        "variable": "orientation_entropy",
+        "n_incluidas": 10351,
+        "beta": 0.0153,
+        "se_beta": 0.001,
+        "alfa": 0.4357,
+        "R2": 0.0215
+      },
+      {
+        "variable": "grade_mean",
+        "n_incluidas": 10351,
+        "beta": 0.0751,
+        "se_beta": 0.0051,
+        "alfa": -1.9669,
+        "R2": 0.0206
+      },
+      {
+        "variable": "length_median",
+        "n_incluidas": 10351,
+        "beta": -0.0767,
+        "se_beta": 0.0056,
+        "alfa": 2.379,
+        "R2": 0.0175
+      },
+      {
+        "variable": "length_mean",
+        "n_incluidas": 10351,
+        "beta": -0.0733,
+        "se_beta": 0.0058,
+        "alfa": 2.5316,
+        "R2": 0.0151
+      },
+      {
+        "variable": "grade_median",
+        "n_incluidas": 10349,
+        "beta": 0.051,
+        "se_beta": 0.0063,
+        "alfa": -2.0737,
+        "R2": 0.0063
+      },
+      {
+        "variable": "k_avg",
+        "n_incluidas": 10351,
+        "beta": 0.0083,
+        "se_beta": 0.001,
+        "alfa": 0.3988,
+        "R2": 0.0062
+      },
+      {
+        "variable": "elev_median",
+        "n_incluidas": 10316,
+        "beta": -0.0997,
+        "se_beta": 0.0169,
+        "alfa": 2.5702,
+        "R2": 0.0033
+      },
+      {
+        "variable": "cc_avg_dir",
+        "n_incluidas": 10278,
+        "beta": -0.0256,
+        "se_beta": 0.0045,
+        "alfa": -1.3964,
+        "R2": 0.0032
+      },
+      {
+        "variable": "elev_mean",
+        "n_incluidas": 10320,
+        "beta": -0.0851,
+        "se_beta": 0.0166,
+        "alfa": 2.5098,
+        "R2": 0.0025
+      },
+      {
+        "variable": "prop_3way",
+        "n_incluidas": 10351,
+        "beta": 0.007,
+        "se_beta": 0.0017,
+        "alfa": -0.2433,
+        "R2": 0.0016
+      },
+      {
+        "variable": "cc_avg_undir",
+        "n_incluidas": 10278,
+        "beta": -0.013,
+        "se_beta": 0.0049,
+        "alfa": -1.3843,
+        "R2": 0.0007
+      },
+      {
+        "variable": "circuity",
+        "n_incluidas": 10351,
+        "beta": -0.0006,
+        "se_beta": 0.0003,
+        "alfa": 0.0254,
+        "R2": 0.0004
+      },
+      {
+        "variable": "prop_deadend",
+        "n_incluidas": 10351,
+        "beta": -0.0122,
+        "se_beta": 0.0061,
+        "alfa": -0.7473,
+        "R2": 0.0004
+      },
+      {
+        "variable": "straightness",
+        "n_incluidas": 10351,
+        "beta": 0.0006,
+        "se_beta": 0.0003,
+        "alfa": -0.0254,
+        "R2": 0.0004
+      },
+      {
+        "variable": "prop_4way",
+        "n_incluidas": 10303,
+        "beta": 0.0118,
+        "se_beta": 0.0074,
+        "alfa": -0.8917,
+        "R2": 0.0002
+      }
+    ],
+    "lectura_censo": "Censo completo sobre las 32 variables candidatas con el protocolo de M-52..M-76; las 7 previas se reproducen como control.",
+    "verificacion_independiente": "Re-cómputo con pandas + np.polyfit (otro camino de código): 32 variables, 0 diferencias ≥ 0,0005 en R² vs la medición, n R² > 0,8 = 0, n R² ≥ 0,9 = 0, máximo area_km2 R² = 0.749 — idéntico dígito a dígito."
+  }
+}
