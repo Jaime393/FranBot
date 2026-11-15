@@ -1,0 +1,412 @@
+{
+ "ronda": 21,
+ "frente": "F9 PODA",
+ "fecha": "2026-11-15",
+ "medicion": "2026-11-15T19:44-19:47Z",
+ "regla": "SOLO DOCUMENTO — nada se borro, nada se movio, nada se elimino",
+ "corpus_a_la_medicion": {
+  "claims_jsonl_lineas": 1197,
+  "claims_jsonl_sha256": "7c689fef3e851e5a378b6a536eb8399e6b4180728f2dbc1e9ab478e44b0c7ebc",
+  "provenance_lineas": 373,
+  "provenance_sha256": "f1932a5eae72b698d4990b7719e41f30a5feca47a2696c13d8357571aadbdb9a",
+  "claims_resumen_sha256": "443d940f81ea4cb4052d958f589d2ced93c25dfd059c5511533e8cdbd89d8ab6",
+  "confirmaciones_filas": 294,
+  "huecos_filas": 139,
+  "dataset_filas": 30,
+  "anexo_incertidumbre_items": 20,
+  "anexo_incertidumbre_sha256": "344e00eb7604bfced905a1f4eb2fe7c66b16b039843413f12abb8ab34d61e00d"
+ },
+ "tally": {
+  "total_entradas": 87,
+  "filas_tabla": 86,
+  "nota_conteo": "86 filas para 87 entradas: el padre P-15 cuenta como RESUELTO sin fila propia (convencion CORR-TALLY-R15)",
+  "PODAR": 11,
+  "PODAR_CONDICIONADO": 7,
+  "MOVER": 1,
+  "CONSERVAR": 38,
+  "CONSERVAR_TEMPORAL": 17,
+  "RESUELTO": 2,
+  "NO_CANDIDATO": 11
+ },
+ "ahorro_si_se_ejecutaran": "~508 MB locales (sin cambio respecto a r10-r20; 0 podas nuevas en r21)",
+ "temporales": {
+  "ids": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63",
+   "P-66"
+  ],
+  "nuevo_temporal": "P-66",
+  "retirados_r19": [],
+  "veces_prorroga": {
+   "decima": [
+    "P-27",
+    "P-28",
+    "P-29b",
+    "P-31a",
+    "P-35",
+    "P-37",
+    "P-38",
+    "P-41",
+    "P-44"
+   ],
+   "sexta_reevaluacion": [
+    "P-47",
+    "P-48"
+   ],
+   "quinta_reevaluacion": [
+    "P-51"
+   ],
+   "cuarta_reevaluacion": [
+    "P-54",
+    "P-57"
+   ],
+   "tercera_reevaluacion": [
+    "P-60"
+   ],
+   "segunda_reevaluacion": [
+    "P-63"
+   ],
+   "primera": [
+    "P-66"
+   ]
+  },
+  "nuevo_horizonte": "FASE 4 r21 + FASE 2 r21; re-evaluar en r22",
+  "cadena_reversion": {
+   "eslabones": 20,
+   "bytes": 25352716,
+   "orden": [
+    "P-66 (1.192)",
+    "P-63 (1.189)",
+    "P-60 (1.185)",
+    "P-57 (1.181)",
+    "P-54 (1.178)",
+    "P-51 (1.175)",
+    "P-47 (1.174)",
+    "P-44 (1.168)",
+    "P-41 (1.168)",
+    "P-38 (1.162 post-N-11)",
+    "P-37 (1.162 pre-N-11)",
+    "P-35 (1.160)",
+    "P-28 (B, 1.152)",
+    "P-27 (pre-r10, 1.138)"
+   ],
+   "ramas": [
+    "P-29b (D-05)",
+    "P-31a (D-01)"
+   ],
+   "haz_paralelo": "P-48 (4 dirs por decision r15)"
+  },
+  "condiciones_retiro_r12": {
+   "condicion_1_copias_drive_reverificadas_por_descarga": "CUMPLIDA (r17, CORR-COND1-R17); SOSTENIDA en r21 por spot-check 4/4 (CORR-COND1-R21)",
+   "condicion_2_deposito_congelado": "CUMPLIDA (r20 congelado; r19 sigue congelado)",
+   "condicion_3_p15_reapuntadas_o_podas_condicionadas_ejecutadas": "NO CUMPLIDA",
+   "puerta": "2 de 3 — el unico bloqueo restante es la autorizacion (condicion 3)"
+  },
+  "prorrogados_r21": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63"
+  ]
+ },
+ "condicion_1_medicion": {
+  "script": "_spot_drive_r21.py",
+  "salida": "_spot_drive_r21.json",
+  "fecha": "2026-11-15T19:45Z",
+  "metodo": "spot-check por descarga de 4 copias Drive del conjunto 60/60 verificado en r17 (files get alt=media -o <workspace>/_spot_tmp + sha256; JSON por md5 de metadatos + stdout parseado, CORR-DESCARGA-JSON-R17); sin archivos nuevos con copia que verificar (P-54/P-57/P-60/P-63/P-66 SIN_COPIA: 0 menciones en manifiesto_shas_r20_fase4.json, _upload_log_r20.jsonl, _upload_github_r20.jsonl y los dos logs de relanzamiento)",
+  "por_temporal": {
+   "P-27": {
+    "con_copia": 5,
+    "descarga": 4,
+    "md5_contenido": 1,
+    "sin_copia": 0
+   },
+   "P-28": {
+    "con_copia": 5,
+    "descarga": 4,
+    "md5_contenido": 1,
+    "sin_copia": 0
+   },
+   "P-29b": {
+    "con_copia": 3,
+    "descarga": 3,
+    "md5_contenido": 0,
+    "sin_copia": 0
+   },
+   "P-31a": {
+    "con_copia": 1,
+    "descarga": 1,
+    "md5_contenido": 0,
+    "sin_copia": 0
+   },
+   "P-35": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-37": {
+    "con_copia": 3,
+    "descarga": 2,
+    "md5_contenido": 1,
+    "sin_copia": 0
+   },
+   "P-38": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-41": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-44": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-47": {
+    "con_copia": 5,
+    "descarga": 3,
+    "md5_contenido": 2,
+    "sin_copia": 1
+   },
+   "P-48": {
+    "con_copia": 18,
+    "descarga": 10,
+    "md5_contenido": 8,
+    "sin_copia": 0
+   },
+   "P-51": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-54": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-57": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-60": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-63": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   },
+   "P-66": {
+    "con_copia": 0,
+    "descarga": 0,
+    "md5_contenido": 0,
+    "sin_copia": 8
+   }
+  },
+  "resultado_final": {
+   "verificados_por_contenido": 60,
+   "descarga_byte_identica": 39,
+   "md5_y_contenido_json": 21,
+   "sin_copia_drive_huecos_por_regla": 5,
+   "diferencias_reales": 0,
+   "errores_descarga": 0,
+   "sin_copia_drive_p51_p54_p57_p60_p63_p66_post_fase4": "P-51 (8 archivos), P-54 (8 archivos), P-57 (8 archivos), P-60 (8 archivos), P-63 (8 archivos) y P-66 (8 archivos)"
+  },
+  "spot_check_r21": {
+   "n": 4,
+   "ok": 4,
+   "diferente": 0,
+   "P-27_claims.jsonl": "OK_BYTE_IDENTICO",
+   "P-35_claims.jsonl": "OK_BYTE_IDENTICO",
+   "P-48_n16_claims.jsonl": "OK_BYTE_IDENTICO",
+   "P-47_claims_resumen.json": "OK_MD5_Y_CONTENIDO"
+  }
+ },
+ "p32": {
+  "es_clase_3": false,
+  "fundamento_conservar": "D-07 + historia citada en motivo (CORR-P32-B-R15 adoptada FASE 2 r15)",
+  "hash_campo_claims_vivos": 0,
+  "ocurrencias_totales": 14,
+  "claims_con_ocurrencias": 5,
+  "git_show_head_sha256": "a30d69e8bd3e9327a6063813ee8833e5efb613f7812aea1f328b50b34e351c4b",
+  "git_show_head_bytes": 19987,
+  "git_show_head_byte_identico_a_respaldo": true,
+  "c1198_c1199_c1200_c1201_c1202_ocurrencias": 0
+ },
+ "criba": {
+  "provenance_lineas": 373,
+  "provenance_sha256": "f1932a5eae72b698d4990b7719e41f30a5feca47a2696c13d8357571aadbdb9a",
+  "rutas_0_ocurrencias": 55,
+  "hashes_0_ocurrencias": 38,
+  "ocurrencias_vivas_conocidas": {
+   "5fdce82d": "1 (comentario L22, reparacion D-01)",
+   "8d15b724": "1 (entrada L248, motor corregido)",
+   "0cf743ca": "1 (entrada L251, GRIMORIO corregido)",
+   "a30d69e8": "1 (comentario L247, reparacion D-07)",
+   "131409eb": "1 (entrada L359, documento decision N-14)"
+  },
+  "cambio_recomendacion": "ninguno"
+ },
+ "nuevos_candidatos": {
+  "P-66": {
+   "ruta": "ronda_20/respaldo_pre_absorcion_r20/",
+   "archivos": 8,
+   "bytes": 1428453,
+   "estado": "1.192 pre-absorcion r20",
+   "copia_drive": false,
+   "horizonte": "FASE 4 r21 + FASE 2 r21; re-evaluar r22",
+   "veredicto": "CONSERVAR-TEMPORAL"
+  },
+  "P-67": {
+   "ruta": "ronda_20/deposito/",
+   "archivos": 18,
+   "bytes": 208733,
+   "motivo": "patron + registro",
+   "veredicto": "CONSERVAR"
+  },
+  "P-68": {
+   "ruta": "ronda_21/ejecucion_f2/heartbeat_rev_r21_*.json (100) + raw_r21_*.json (11) + lock",
+   "archivos": 112,
+   "bytes": 1250827,
+   "motivo": "evidencia; excluir del deposito; raw bootstrap NO guardado (JWT anon, solo metadatos); revision idx 80 perdida (NO_SE)",
+   "veredicto": "NO CANDIDATO"
+  }
+ },
+ "correcciones": {
+  "CORR-CADENA-R21": "cadena de reversion 20 eslabones, 25.352.716 B (r20: 19 eslabones, 23.924.263 B)",
+  "CORR-COND1-R21": "condicion 1 sigue cumplida y sostenida por spot-check 4/4 en r21; sin archivos nuevos con copia Drive que verificar (P-54/P-57/P-60/P-63/P-66 SIN_COPIA); puerta de retiro sigue 2 de 3",
+  "CORR-P66-SIN-COPIA": "P-66 no fue depositado en FASE 4 r20 (0 menciones en manifiesto_shas_r20_fase4.json, _upload_log_r20.jsonl, _upload_github_r20.jsonl y los dos logs de relanzamiento); creado durante la absorcion r20, post-FASE 4",
+  "CORR-P54-P57-P60-P63-P66-R21": "FASE 4 r20 no deposito ningun respaldo (0 menciones de respaldo_pre_absorcion_r* en manifiesto_shas_r20_fase4.json, _upload_log_r20.jsonl, _upload_github_r20.jsonl, ambos logs de relanzamiento, _upload_r20.log, verificacion_deposito_r20.md y _push_grandes_r20.log); deposito solo ronda_20/",
+  "CORR-P68-RAW-R21": "F2 r21 dice '13 archivos de estado' leidos por raw; en disco hay 11 raw_r21_*.json + 1 lock = 12 archivos; el 13 es observabilidad/bootstrap_V270.json, no guardado (JWT anon, solo metadatos); misma convencion que P-65 (r20)",
+  "CORR-DIFF-PYC-R21": "_diff_inventario_r21.py se escribio con las etiquetas .pyc de r20 ('r19 -> r20') y el encabezado de r20 ('Base r19'/'Base r20'/'NUEVO (en r20, no en r19)'); corregidos a 'r20 -> r21', 'Base r20'/'Base r21'/'NUEVO (en r21, no en r20)' antes de re-ejecutar; el diff regenerado difiere del anterior solo en esas 3 lineas, conteos identicos",
+  "CORR-ENCABEZADO-R21": "el encabezado de la tabla §10 en poda_r20.md decia 'Recomendacion r19' (arrastrado de r19 sin actualizar); corregido a 'Recomendacion r21' en poda_r21.md",
+  "CORR-ERR-R21": "el .err de F4 r21 (ronda_21/ejecucion_f4/indice_doc_meta_r21.err, 0 B) estaba en el manifiesto r21 (escaneo 19:46:21Z) y ya no esta en disco a la hora de escribir (desaparecido tras el escaneo, causa NO_SE); no es FALTA del diff r21; si no reaparece, contara como FALTA en el diff r22. El .err de F4 r20 tampoco esta en disco y nunca entro en el manifiesto r20",
+  "CORR-MANIFIESTO-HUECOS-R17": "sigue vigente: manifiestos fase4 r11-r15 sobreestiman el deposito en 1 archivo por respaldo (5 en total); el manifiesto fase4 r21 debe construirse DESPUES de subir, no antes",
+  "P-67": "en r21 se registra la linea base de los 18 archivos de P-67; en r22 se verifica contra esa linea base. P-64 se verifica en r21 contra la linea base r20: 16/16 OK",
+  "P-32": "total preciso 14 en 5 claims, sin cambio en r21 (C-1198..C-1202 no lo mencionan: 0 ocurrencias)",
+  "P-15h/P-16": "conteo/existencia verificados en r21; sin re-verificacion individual, como en r11-r20",
+  "F1-r21": "sin respaldo_pre_r21/ a la hora de este cierre (F1 en guardia, sin aplicacion); si F1 aplica despues, su respaldo sera candidato en r22",
+  "CORR-VERIFICACION-P21": "F1 r21 re-midio el corpus en 1.197 lineas con audit ok=359 y verify_all exactamente C-001..C-008 — los mismos valores que la verificacion de este frente; convergencia, no correccion de un error",
+  "CORR-CONTADOR-R21": "F2 r21 conto 100 payloads de heartbeat (idx 80 perdido entre listado y descarga) frente a los 101 de r20; el conteo de este frente (P-68: 100 + 11 + lock) coincide con el de F2"
+ },
+ "reglas": {
+  "REGLA-PODA-PROV-01": "practica documentada, no canon adoptado",
+  "REGLA-PODA-PROV-02": "ADOPTADA (N-13, r15); clase 3 con refinamiento (a); P-32 ya NO es clase 3 bajo lectura estricta (CORR-P32-B-R15, adoptada FASE 2 r15)"
+ },
+ "entregables": [
+  "poda_r21.md",
+  "poda_r21.json",
+  "inventario_t4_r21.md",
+  "diff_inventario_r21.md",
+  "manifiesto_shas_r21_f9.json"
+ ],
+ "verificacion_p01_p68": {
+  "script": "_verificar_p21.py",
+  "salida": "_verificacion_p21.json",
+  "fecha": "2026-11-15T19:44Z",
+  "resultado": "357/357 OK, 0 no-OK"
+ },
+ "t4_r21": {
+  "script": "_inventario_r21.py",
+  "salida": "manifiesto_tejido_r21.json",
+  "diff_script": "_diff_inventario_r21.py",
+  "diff_salida": "diff_inventario_r21.md",
+  "escaneo": "2026-11-15T19:46:21Z",
+  "archivos": 6517,
+  "bytes": 1622894997,
+  "errores_lectura": 0,
+  "base_r20": {
+   "archivos": 6221,
+   "bytes": 1603968988,
+   "escaneo": "2026-11-15T07:53:18Z"
+  },
+  "diff": {
+   "OK": 6217,
+   "CAMBIO": 4,
+   "MOVIDO": 0,
+   "FALTA": 0,
+   "NUEVO": 296
+  },
+  "cambio": [
+   "ronda_12/afirmaciones_pendientes.md 49829 -> 58408 B (FASE 5 r20 + cierre de pendientes 2026-11-15)",
+   "memoria/anexo-vi/claims.jsonl 999657 -> 1005348 B (absorcion r20, 1.192 -> 1.197)",
+   "memoria/anexo-vi/claims_resumen.json 17678 -> 17794 B (regenerado)",
+   "memoria/anexo-vi/provenance.sha256 49476 -> 49869 B (370 -> 373 lineas)"
+  ],
+  "nuevo_desglose": {
+   "ronda_20/README_r20.md": 1,
+   "ronda_20/absorcion": 12,
+   "ronda_20/deposito": 18,
+   "ronda_20/ejecucion_f1": 2,
+   "ronda_20/ejecucion_f4": 2,
+   "ronda_20/ejecucion_f7": 13,
+   "ronda_20/ejecucion_f8": 5,
+   "ronda_20/ejecucion_f9": 12,
+   "ronda_20/ejecucion_fase3": 7,
+   "ronda_20/ejecucion_fase5": 2,
+   "ronda_20/respaldo_pre_absorcion_r20": 8,
+   "ronda_20/verificacion_fase2": 11,
+   "ronda_21/ESTADO_FASE0.md": 1,
+   "ronda_21/frentes_r21.json": 1,
+   "ronda_21/manifiesto_shas_r21_fase0.json": 1,
+   "ronda_21/mapa_frentes_r21.md": 1,
+   "ronda_21/ejecucion_f1": 4,
+   "ronda_21/ejecucion_f2": 132,
+   "ronda_21/ejecucion_f3": 12,
+   "ronda_21/ejecucion_f4": 14,
+   "ronda_21/ejecucion_f5": 2,
+   "ronda_21/ejecucion_f6": 16,
+   "ronda_21/ejecucion_f7": 11,
+   "ronda_21/ejecucion_f9": 8
+  },
+  "fragil_02": "testA-D.err 0 en manifiesto r21, sin tercer evento; causa sigue NO_SE; .err de F4 r21 presente en el escaneo y ausente despues (CORR-ERR-R21)",
+  "p18": "variograma.pyc sigue ausente; variograma.py intacto (6351 B, sha f8ec697e...)",
+  "pyc_censo": {
+   "r20": 18,
+   "r21": 18,
+   "nuevos": 0,
+   "faltan": 0
+  }
+ }
+}
