@@ -1,0 +1,151 @@
+{
+  "medicion": "M-83",
+  "dominio": "d08 L13: 3 mediciones con D_f medido y fuente pública que viven solo en paper_df.md (evidencia adicional, ciclo 74) — Topografía andina SRTM 2,20, Dosel amazónico GLAD 2,79, Porosidad del suelo SoilGrids bdod 2,82 — ¿existen en el corpus con fuente + hash verificable?",
+  "fuente": "claims.jsonl (1.192 líneas, corpus post-r19) + paper_df.md local (sha en este JSON) + dataset_nodos_Df.csv (30 filas + cabecera) + academico/inbox/mediciones/mediciones_informe.md (control, ciclo 74). Claims decisorios: C-791 (verificacion, SE) y C-944 (hueco, SE), ambos absorbidos en ronda 5.",
+  "url": "Archivos locales (shas en este JSON); paper_df.md en Drive ID 1yucWNIXOtp8NRW-kliJj41UC3WlsyaJt (Consulta v4, citado por C-791)",
+  "sha256_dato": "304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+  "metodo": "Verificación en tres pasos: (1) búsqueda literal por alias en claims.jsonl (1.192 líneas parseadas como JSON) de cada una de las 3 mediciones; un claim cuenta como verificador solo si nombra a las 3, tiene estado SE y lleva hash de archivo; (2) comparación del hash citado (sin prefijo sha256:) con el sha256 del paper_df.md local; (3) búsqueda literal de los alias en dataset_nodos_Df.csv para confirmar la exclusión deliberada (fuera de banda), no por descuido. Control: presencia de las 3 en mediciones_informe.md (ciclo 74). El campo 'valor' lleva el número de mediciones verificables en el corpus con fuente + hash; el campo 'error' es 0 (verificación por conteo, sin error estadístico).",
+  "parametros": {
+    "n_claims_corpus": 1192,
+    "mediciones_buscadas": [
+      "Topografía andina SRTM",
+      "Dosel amazónico GLAD",
+      "Porosidad del suelo SoilGrids bdod"
+    ],
+    "df_mediciones": [
+      2.2,
+      2.79,
+      2.82
+    ],
+    "por_medicion": [
+      {
+        "medicion": "Topografía andina SRTM",
+        "df": 2.2,
+        "n_claims_que_la_nombran": 3,
+        "claims": [
+          {
+            "id": "C-791",
+            "estado": "SE",
+            "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+            "fuente": "Drive paper_df.md (Consulta v4) / auditoría completa ronda 2"
+          },
+          {
+            "id": "C-935",
+            "estado": "SE",
+            "hash": "sha256:c78ad5445c640e3e15fe0adcf2a9bf8a5c059623ec29ef6b24d41d9130c00de3",
+            "fuente": "~/workspace/academico/dataset_nodos_Df.csv"
+          },
+          {
+            "id": "C-944",
+            "estado": "SE",
+            "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+            "fuente": "/home/hatch/workspace/academico/paper_df/paper_df.md"
+          }
+        ]
+      },
+      {
+        "medicion": "Dosel amazónico GLAD",
+        "df": 2.79,
+        "n_claims_que_la_nombran": 2,
+        "claims": [
+          {
+            "id": "C-791",
+            "estado": "SE",
+            "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+            "fuente": "Drive paper_df.md (Consulta v4) / auditoría completa ronda 2"
+          },
+          {
+            "id": "C-944",
+            "estado": "SE",
+            "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+            "fuente": "/home/hatch/workspace/academico/paper_df/paper_df.md"
+          }
+        ]
+      },
+      {
+        "medicion": "Porosidad del suelo SoilGrids bdod",
+        "df": 2.82,
+        "n_claims_que_la_nombran": 2,
+        "claims": [
+          {
+            "id": "C-791",
+            "estado": "SE",
+            "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+            "fuente": "Drive paper_df.md (Consulta v4) / auditoría completa ronda 2"
+          },
+          {
+            "id": "C-944",
+            "estado": "SE",
+            "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+            "fuente": "/home/hatch/workspace/academico/paper_df/paper_df.md"
+          }
+        ]
+      }
+    ],
+    "claims_que_nombran_las_3": [
+      {
+        "id": "C-791",
+        "estado": "SE",
+        "fuente": "Drive paper_df.md (Consulta v4) / auditoría completa ronda 2",
+        "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+        "nombra_las_3": true
+      },
+      {
+        "id": "C-944",
+        "estado": "SE",
+        "fuente": "/home/hatch/workspace/academico/paper_df/paper_df.md",
+        "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+        "nombra_las_3": true
+      }
+    ],
+    "claims_se_que_nombran_las_3_con_hash": [
+      {
+        "id": "C-791",
+        "estado": "SE",
+        "fuente": "Drive paper_df.md (Consulta v4) / auditoría completa ronda 2",
+        "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+        "nombra_las_3": true
+      },
+      {
+        "id": "C-944",
+        "estado": "SE",
+        "fuente": "/home/hatch/workspace/academico/paper_df/paper_df.md",
+        "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+        "nombra_las_3": true
+      }
+    ],
+    "hash_paper_df_local": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+    "hash_verificado_contra_local": {
+      "claim": "C-791",
+      "hash": "sha256:304a41bf5bde2ccd5a579c83452fda698f354e834f073fc386805d60d4d64755",
+      "coincide_con_paper_df_local": true
+    },
+    "n_filas_dataset_csv": 30,
+    "mediciones_como_filas_dataset": {
+      "Topografía andina SRTM": false,
+      "Dosel amazónico GLAD": false,
+      "Porosidad del suelo SoilGrids bdod": false
+    },
+    "todas_fuera_del_dataset": true,
+    "mediciones_en_mediciones_informe": {
+      "Topografía andina SRTM": true,
+      "Dosel amazónico GLAD": true,
+      "Porosidad del suelo SoilGrids bdod": true
+    },
+    "todas_en_informe": true,
+    "n_verificables_con_fuente_mas_hash": 3
+  },
+  "valor": 3,
+  "error": 0,
+  "limites_validez": "La verificación es de existencia en el corpus con fuente + hash, no de re-medición de los D_f (los valores 2,20/2,79/2,82 se toman del paper y de mediciones_informe.md como publicados, sin re-correrlos). Que las 3 estén en el corpus no las convierte en filas del dataset: la distinción 32/29 se preserva por orden. El hash verificado es el de paper_df.md (documento que contiene las 3), no un hash por medición.",
+  "criterio_falsacion": "CONFIRMA si las 3 mediciones son verificables en el corpus con fuente + hash (claim SE que las nombra a las 3, con hash de archivo que coincide con el archivo local) — la cara cierra; NO_CONFIRMA si alguna de las 3 carece de fuente + hash verificable en el corpus (la cara avanza, sigue paper-only); NO_SÉ si el hash no se puede verificar o el corpus es ilegible. Declarado en declaracion_falsadores_r20.md (2026-11-15T07:06:00Z) antes de correr.",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-15",
+  "extra": {
+    "texto_literal_C-791": "Las 3 mediciones FUERA_BANDA del paper D_f (topografía andina SRTM D_f 2.20, dosel amazónico GLAD 2.79, porosidad SoilGrids bdod 2.82) ya existen en Drive dentro de paper_df.md (ID 1yucWNIXOtp8NRW-kliJj41UC3WlsyaJt, subido 2026-11-12T04:00:22Z en Consulta v4): el hueco #13 de la ronda 1 queda resuelto en Drive. Siguen fuera del dataset CSV (29 filas) — no se tocan por orden.",
+    "texto_literal_C-944": "3 mediciones con D_f medido y fuente pública (SRTM topografía andina 2.20, GLAD dosel 2.79, SoilGrids bdod 2.82) existen solo en paper_df.md y en mediciones_informe.md: no son filas del dataset por exclusión deliberada (fuera de banda). El corpus mide 32 sistemas pero solo 29 son filas; la distinción 32/29 debe preservarse y no perderse.",
+    "lectura": "C-791 y C-944 nombran a las 3 mediciones con sus D_f y citan paper_df.md con su hash; el hash coincide byte a byte con el archivo local. Las 3 siguen fuera del dataset CSV (0 coincidencias) por exclusión deliberada (fuera de banda), como registran ambos claims.",
+    "verificacion_independiente": "Re-búsqueda con grep -n sobre claims.jsonl y sha256sum directo de paper_df.md: C-791 aparece 1 vez, C-944 1 vez; 'topografía andina' 2 líneas, 'dosel' 2, 'bdod' 2 (las 2 son C-791 y C-944 en cada caso); sha local 304a41bf… = hash citado — coincide=True; dataset CSV: 0 coincidencias SRTM/GLAD/bdod — coincide=True."
+  }
+}
