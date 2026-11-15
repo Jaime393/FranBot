@@ -1,0 +1,754 @@
+{
+  "medicion": "M-84",
+  "dominio": "d05 polarización (medida y mecanismo): tendencia temporal LINEAL de la distancia entre medianas partidistas en DW-NOMINATE dim2, Cámara de Representantes de EE.UU., serie restaurada de 86 congresos (115-117 incluidos), ajuste OLS de P2 contra el índice de congreso con IC bootstrap de la pendiente",
+  "fuente": "Voteview (Lewis, Poole, Rosenthal et al.), HSall_members.csv (mismo archivo que M-61/M-64/M-67/M-70/M-74/M-75/M-78/M-81, 6.201.455 B, sha re-verificado aquí; copia en datos/ de r21). DW-NOMINATE: McCarty, Poole y Rosenthal, 'Polarized America' (MIT Press).",
+  "url": "https://voteview.com/static/data/out/members/HSall_members.csv (copia local en datos/, sha256 en este JSON)",
+  "sha256_dato": "495aee958a00c83c6300548e5b197d9900e7230c8eb08358bcfe06d042191140",
+  "metodo": "Protocolo de serie de M-78/M-81: chamber == House, party_code 100/200 por float() y luego int(), nominate_dim2 no vacío y finito. Por Congreso: P2(C) = |mediana dim2 D - mediana dim2 R| (86 congresos 34..119). Ajuste OLS de P2 contra el índice de congreso (x = número de congreso, SIN logaritmo: el P2 = 0 exacto del Congreso 106 es un punto válido, no un bloqueo) con IC bootstrap 95% por remuestreo de pares, 500 réplicas, semilla 0, percentiles 2,5/97,5. El campo 'valor' es la pendiente lineal; el campo 'error' es su SE analítico.",
+  "parametros": {
+    "n_congresos": 86,
+    "congreso_inicial": 34,
+    "congreso_final": 119,
+    "P2_minimo_serie": 0.0,
+    "congreso_P2_minimo": 106,
+    "P2_congreso_106": 0.0,
+    "P2_maximo_serie": 0.9275,
+    "congreso_P2_maximo": 80,
+    "P2_congreso_119": 0.124,
+    "pendiente_lineal": -1e-06,
+    "intercepto": 0.270771,
+    "se_pendiente_analitico": 0.000943,
+    "ic95_analitico_pendiente": [
+      -0.001877,
+      0.001874
+    ],
+    "t_pendiente": -0.0015,
+    "p_valor_t": 0.998806,
+    "R2_ajuste": 0.0,
+    "bootstrap_ic95_pendiente": [
+      -0.001364,
+      0.001661
+    ],
+    "bootstrap_replicas": 500,
+    "bootstrap_semilla": 0,
+    "tramo_34_80": {
+      "congresos": [
+        34,
+        80
+      ],
+      "n": 47,
+      "pendiente": 0.007744,
+      "intercepto": -0.175855
+    },
+    "tramo_81_119": {
+      "congresos": [
+        81,
+        119
+      ],
+      "n": 39,
+      "pendiente": -0.015666,
+      "intercepto": 1.843463
+    }
+  },
+  "valor": -1e-06,
+  "error": 0.000943,
+  "limites_validez": "Mismos que M-61/M-64/M-67/M-74/M-75/M-78/M-81 (DW-NOMINATE dim2; Cámara EE.UU.). La pendiente lineal es una tendencia sobre una serie no monótona (sube hasta el Congreso 80 y baja después); un NO_CONFIRMA no niega la subida 34–80, solo que no hay tendencia lineal detectable sobre el rango completo. El bootstrap de pares supone los 86 puntos intercambiables y no modela la autocorrelación temporal.",
+  "criterio_falsacion": "CONFIRMA si el IC bootstrap 95% de la pendiente excluye 0 con pendiente > 0 (hay tendencia lineal creciente detectable en dim2); NO_CONFIRMA si el IC bootstrap 95% incluye 0 (no hay tendencia lineal detectable en dim2 sobre el rango completo; el cociente máximo sigue siendo artefacto de selección del rango histórico). Declarado en declaracion_falsadores_r21.md (2026-11-15T19:33:00Z) antes de correr.",
+  "veredicto": "NO_CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-15",
+  "extra": {
+    "serie_P2_por_congreso": [
+      {
+        "congreso": 34,
+        "P2": 0.607,
+        "n_dem": 85,
+        "n_rep": 1,
+        "mediana_dem": -0.076,
+        "mediana_rep": -0.683
+      },
+      {
+        "congreso": 35,
+        "P2": 0.398,
+        "n_dem": 135,
+        "n_rep": 94,
+        "mediana_dem": 0.031,
+        "mediana_rep": -0.367
+      },
+      {
+        "congreso": 36,
+        "P2": 0.2585,
+        "n_dem": 87,
+        "n_rep": 118,
+        "mediana_dem": -0.006,
+        "mediana_rep": -0.2645
+      },
+      {
+        "congreso": 37,
+        "P2": 0.5075,
+        "n_dem": 51,
+        "n_rep": 114,
+        "mediana_dem": 0.263,
+        "mediana_rep": -0.2445
+      },
+      {
+        "congreso": 38,
+        "P2": 0.2495,
+        "n_dem": 74,
+        "n_rep": 86,
+        "mediana_dem": 0.1145,
+        "mediana_rep": -0.135
+      },
+      {
+        "congreso": 39,
+        "P2": 0.3745,
+        "n_dem": 44,
+        "n_rep": 137,
+        "mediana_dem": 0.2315,
+        "mediana_rep": -0.143
+      },
+      {
+        "congreso": 40,
+        "P2": 0.1735,
+        "n_dem": 50,
+        "n_rep": 178,
+        "mediana_dem": 0.069,
+        "mediana_rep": -0.1045
+      },
+      {
+        "congreso": 41,
+        "P2": 0.067,
+        "n_dem": 72,
+        "n_rep": 180,
+        "mediana_dem": -0.025,
+        "mediana_rep": -0.092
+      },
+      {
+        "congreso": 42,
+        "P2": 0.062,
+        "n_dem": 106,
+        "n_rep": 142,
+        "mediana_dem": -0.018,
+        "mediana_rep": -0.08
+      },
+      {
+        "congreso": 43,
+        "P2": 0.098,
+        "n_dem": 94,
+        "n_rep": 204,
+        "mediana_dem": -0.0155,
+        "mediana_rep": -0.1135
+      },
+      {
+        "congreso": 44,
+        "P2": 0.044,
+        "n_dem": 187,
+        "n_rep": 111,
+        "mediana_dem": -0.111,
+        "mediana_rep": -0.155
+      },
+      {
+        "congreso": 45,
+        "P2": 0.007,
+        "n_dem": 158,
+        "n_rep": 143,
+        "mediana_dem": -0.084,
+        "mediana_rep": -0.091
+      },
+      {
+        "congreso": 46,
+        "P2": 0.081,
+        "n_dem": 145,
+        "n_rep": 135,
+        "mediana_dem": -0.048,
+        "mediana_rep": -0.129
+      },
+      {
+        "congreso": 47,
+        "P2": 0.0335,
+        "n_dem": 136,
+        "n_rep": 159,
+        "mediana_dem": -0.0835,
+        "mediana_rep": -0.05
+      },
+      {
+        "congreso": 48,
+        "P2": 0.057,
+        "n_dem": 203,
+        "n_rep": 125,
+        "mediana_dem": -0.062,
+        "mediana_rep": -0.005
+      },
+      {
+        "congreso": 49,
+        "P2": 0.074,
+        "n_dem": 187,
+        "n_rep": 143,
+        "mediana_dem": -0.052,
+        "mediana_rep": 0.022
+      },
+      {
+        "congreso": 50,
+        "P2": 0.2305,
+        "n_dem": 170,
+        "n_rep": 153,
+        "mediana_dem": -0.1825,
+        "mediana_rep": 0.048
+      },
+      {
+        "congreso": 51,
+        "P2": 0.2615,
+        "n_dem": 169,
+        "n_rep": 184,
+        "mediana_dem": -0.206,
+        "mediana_rep": 0.0555
+      },
+      {
+        "congreso": 52,
+        "P2": 0.222,
+        "n_dem": 247,
+        "n_rep": 89,
+        "mediana_dem": -0.206,
+        "mediana_rep": 0.016
+      },
+      {
+        "congreso": 53,
+        "P2": 0.1695,
+        "n_dem": 228,
+        "n_rep": 133,
+        "mediana_dem": -0.2015,
+        "mediana_rep": -0.032
+      },
+      {
+        "congreso": 54,
+        "P2": 0.143,
+        "n_dem": 103,
+        "n_rep": 253,
+        "mediana_dem": -0.091,
+        "mediana_rep": 0.052
+      },
+      {
+        "congreso": 55,
+        "P2": 0.169,
+        "n_dem": 132,
+        "n_rep": 212,
+        "mediana_dem": 0.122,
+        "mediana_rep": -0.047
+      },
+      {
+        "congreso": 56,
+        "P2": 0.005,
+        "n_dem": 169,
+        "n_rep": 197,
+        "mediana_dem": -0.01,
+        "mediana_rep": -0.005
+      },
+      {
+        "congreso": 57,
+        "P2": 0.106,
+        "n_dem": 160,
+        "n_rep": 206,
+        "mediana_dem": 0.0425,
+        "mediana_rep": -0.0635
+      },
+      {
+        "congreso": 58,
+        "P2": 0.06,
+        "n_dem": 176,
+        "n_rep": 214,
+        "mediana_dem": 0.016,
+        "mediana_rep": -0.044
+      },
+      {
+        "congreso": 59,
+        "P2": 0.0615,
+        "n_dem": 138,
+        "n_rep": 259,
+        "mediana_dem": -0.0075,
+        "mediana_rep": -0.069
+      },
+      {
+        "congreso": 60,
+        "P2": 0.0185,
+        "n_dem": 168,
+        "n_rep": 230,
+        "mediana_dem": -0.01,
+        "mediana_rep": -0.0285
+      },
+      {
+        "congreso": 61,
+        "P2": 0.0685,
+        "n_dem": 179,
+        "n_rep": 222,
+        "mediana_dem": 0.018,
+        "mediana_rep": -0.0505
+      },
+      {
+        "congreso": 62,
+        "P2": 0.002,
+        "n_dem": 237,
+        "n_rep": 169,
+        "mediana_dem": -0.002,
+        "mediana_rep": -0.004
+      },
+      {
+        "congreso": 63,
+        "P2": 0.095,
+        "n_dem": 301,
+        "n_rep": 138,
+        "mediana_dem": 0.025,
+        "mediana_rep": 0.12
+      },
+      {
+        "congreso": 64,
+        "P2": 0.156,
+        "n_dem": 234,
+        "n_rep": 200,
+        "mediana_dem": 0.169,
+        "mediana_rep": 0.013
+      },
+      {
+        "congreso": 65,
+        "P2": 0.201,
+        "n_dem": 225,
+        "n_rep": 223,
+        "mediana_dem": 0.201,
+        "mediana_rep": 0.0
+      },
+      {
+        "congreso": 66,
+        "P2": 0.199,
+        "n_dem": 204,
+        "n_rep": 248,
+        "mediana_dem": 0.2575,
+        "mediana_rep": 0.0585
+      },
+      {
+        "congreso": 67,
+        "P2": 0.3675,
+        "n_dem": 138,
+        "n_rep": 311,
+        "mediana_dem": 0.4085,
+        "mediana_rep": 0.041
+      },
+      {
+        "congreso": 68,
+        "P2": 0.274,
+        "n_dem": 217,
+        "n_rep": 233,
+        "mediana_dem": 0.383,
+        "mediana_rep": 0.109
+      },
+      {
+        "congreso": 69,
+        "P2": 0.4685,
+        "n_dem": 185,
+        "n_rep": 250,
+        "mediana_dem": 0.521,
+        "mediana_rep": 0.0525
+      },
+      {
+        "congreso": 70,
+        "P2": 0.468,
+        "n_dem": 198,
+        "n_rep": 241,
+        "mediana_dem": 0.523,
+        "mediana_rep": 0.055
+      },
+      {
+        "congreso": 71,
+        "P2": 0.461,
+        "n_dem": 173,
+        "n_rep": 277,
+        "mediana_dem": 0.515,
+        "mediana_rep": 0.054
+      },
+      {
+        "congreso": 72,
+        "P2": 0.529,
+        "n_dem": 231,
+        "n_rep": 220,
+        "mediana_dem": 0.503,
+        "mediana_rep": -0.026
+      },
+      {
+        "congreso": 73,
+        "P2": 0.513,
+        "n_dem": 322,
+        "n_rep": 120,
+        "mediana_dem": 0.3105,
+        "mediana_rep": -0.2025
+      },
+      {
+        "congreso": 74,
+        "P2": 0.409,
+        "n_dem": 327,
+        "n_rep": 105,
+        "mediana_dem": 0.166,
+        "mediana_rep": -0.243
+      },
+      {
+        "congreso": 75,
+        "P2": 0.2955,
+        "n_dem": 340,
+        "n_rep": 93,
+        "mediana_dem": 0.1355,
+        "mediana_rep": -0.16
+      },
+      {
+        "congreso": 76,
+        "P2": 0.6015,
+        "n_dem": 273,
+        "n_rep": 178,
+        "mediana_dem": 0.358,
+        "mediana_rep": -0.2435
+      },
+      {
+        "congreso": 77,
+        "P2": 0.483,
+        "n_dem": 276,
+        "n_rep": 168,
+        "mediana_dem": 0.2735,
+        "mediana_rep": -0.2095
+      },
+      {
+        "congreso": 78,
+        "P2": 0.776,
+        "n_dem": 228,
+        "n_rep": 218,
+        "mediana_dem": 0.509,
+        "mediana_rep": -0.267
+      },
+      {
+        "congreso": 79,
+        "P2": 0.647,
+        "n_dem": 250,
+        "n_rep": 195,
+        "mediana_dem": 0.404,
+        "mediana_rep": -0.243
+      },
+      {
+        "congreso": 80,
+        "P2": 0.9275,
+        "n_dem": 194,
+        "n_rep": 253,
+        "mediana_dem": 0.6275,
+        "mediana_rep": -0.3
+      },
+      {
+        "congreso": 81,
+        "P2": 0.5805,
+        "n_dem": 267,
+        "n_rep": 176,
+        "mediana_dem": 0.344,
+        "mediana_rep": -0.2365
+      },
+      {
+        "congreso": 82,
+        "P2": 0.6495,
+        "n_dem": 240,
+        "n_rep": 207,
+        "mediana_dem": 0.4305,
+        "mediana_rep": -0.219
+      },
+      {
+        "congreso": 83,
+        "P2": 0.794,
+        "n_dem": 218,
+        "n_rep": 222,
+        "mediana_dem": 0.5655,
+        "mediana_rep": -0.2285
+      },
+      {
+        "congreso": 84,
+        "P2": 0.621,
+        "n_dem": 235,
+        "n_rep": 203,
+        "mediana_dem": 0.407,
+        "mediana_rep": -0.214
+      },
+      {
+        "congreso": 85,
+        "P2": 0.68,
+        "n_dem": 240,
+        "n_rep": 204,
+        "mediana_dem": 0.4435,
+        "mediana_rep": -0.2365
+      },
+      {
+        "congreso": 86,
+        "P2": 0.581,
+        "n_dem": 286,
+        "n_rep": 156,
+        "mediana_dem": 0.349,
+        "mediana_rep": -0.232
+      },
+      {
+        "congreso": 87,
+        "P2": 0.5435,
+        "n_dem": 273,
+        "n_rep": 176,
+        "mediana_dem": 0.352,
+        "mediana_rep": -0.1915
+      },
+      {
+        "congreso": 88,
+        "P2": 0.511,
+        "n_dem": 262,
+        "n_rep": 181,
+        "mediana_dem": 0.324,
+        "mediana_rep": -0.187
+      },
+      {
+        "congreso": 89,
+        "P2": 0.421,
+        "n_dem": 301,
+        "n_rep": 143,
+        "mediana_dem": 0.229,
+        "mediana_rep": -0.192
+      },
+      {
+        "congreso": 90,
+        "P2": 0.3935,
+        "n_dem": 250,
+        "n_rep": 189,
+        "mediana_dem": 0.2365,
+        "mediana_rep": -0.157
+      },
+      {
+        "congreso": 91,
+        "P2": 0.3575,
+        "n_dem": 250,
+        "n_rep": 199,
+        "mediana_dem": 0.2275,
+        "mediana_rep": -0.13
+      },
+      {
+        "congreso": 92,
+        "P2": 0.4,
+        "n_dem": 259,
+        "n_rep": 185,
+        "mediana_dem": 0.256,
+        "mediana_rep": -0.144
+      },
+      {
+        "congreso": 93,
+        "P2": 0.335,
+        "n_dem": 246,
+        "n_rep": 195,
+        "mediana_dem": 0.217,
+        "mediana_rep": -0.118
+      },
+      {
+        "congreso": 94,
+        "P2": 0.2345,
+        "n_dem": 294,
+        "n_rep": 147,
+        "mediana_dem": 0.1165,
+        "mediana_rep": -0.118
+      },
+      {
+        "congreso": 95,
+        "P2": 0.243,
+        "n_dem": 294,
+        "n_rep": 147,
+        "mediana_dem": 0.111,
+        "mediana_rep": -0.132
+      },
+      {
+        "congreso": 96,
+        "P2": 0.248,
+        "n_dem": 281,
+        "n_rep": 161,
+        "mediana_dem": 0.094,
+        "mediana_rep": -0.154
+      },
+      {
+        "congreso": 97,
+        "P2": 0.2385,
+        "n_dem": 247,
+        "n_rep": 196,
+        "mediana_dem": 0.07,
+        "mediana_rep": -0.1685
+      },
+      {
+        "congreso": 98,
+        "P2": 0.229,
+        "n_dem": 272,
+        "n_rep": 167,
+        "mediana_dem": 0.049,
+        "mediana_rep": -0.18
+      },
+      {
+        "congreso": 99,
+        "P2": 0.2645,
+        "n_dem": 257,
+        "n_rep": 182,
+        "mediana_dem": 0.058,
+        "mediana_rep": -0.2065
+      },
+      {
+        "congreso": 100,
+        "P2": 0.27,
+        "n_dem": 262,
+        "n_rep": 179,
+        "mediana_dem": 0.049,
+        "mediana_rep": -0.221
+      },
+      {
+        "congreso": 101,
+        "P2": 0.237,
+        "n_dem": 265,
+        "n_rep": 180,
+        "mediana_dem": 0.012,
+        "mediana_rep": -0.225
+      },
+      {
+        "congreso": 102,
+        "P2": 0.223,
+        "n_dem": 270,
+        "n_rep": 170,
+        "mediana_dem": 0.0115,
+        "mediana_rep": -0.2115
+      },
+      {
+        "congreso": 103,
+        "P2": 0.138,
+        "n_dem": 262,
+        "n_rep": 180,
+        "mediana_dem": -0.0055,
+        "mediana_rep": -0.1435
+      },
+      {
+        "congreso": 104,
+        "P2": 0.085,
+        "n_dem": 208,
+        "n_rep": 236,
+        "mediana_dem": -0.0055,
+        "mediana_rep": -0.0905
+      },
+      {
+        "congreso": 105,
+        "P2": 0.023,
+        "n_dem": 212,
+        "n_rep": 231,
+        "mediana_dem": -0.03,
+        "mediana_rep": -0.053
+      },
+      {
+        "congreso": 106,
+        "P2": 0.0,
+        "n_dem": 213,
+        "n_rep": 225,
+        "mediana_dem": -0.026,
+        "mediana_rep": -0.026
+      },
+      {
+        "congreso": 107,
+        "P2": 0.043,
+        "n_dem": 214,
+        "n_rep": 228,
+        "mediana_dem": -0.0325,
+        "mediana_rep": 0.0105
+      },
+      {
+        "congreso": 108,
+        "P2": 0.058,
+        "n_dem": 208,
+        "n_rep": 231,
+        "mediana_dem": -0.036,
+        "mediana_rep": 0.022
+      },
+      {
+        "congreso": 109,
+        "P2": 0.065,
+        "n_dem": 203,
+        "n_rep": 235,
+        "mediana_dem": -0.04,
+        "mediana_rep": 0.025
+      },
+      {
+        "congreso": 110,
+        "P2": 0.0825,
+        "n_dem": 243,
+        "n_rep": 206,
+        "mediana_dem": -0.022,
+        "mediana_rep": 0.0605
+      },
+      {
+        "congreso": 111,
+        "P2": 0.071,
+        "n_dem": 265,
+        "n_rep": 183,
+        "mediana_dem": -0.01,
+        "mediana_rep": 0.061
+      },
+      {
+        "congreso": 112,
+        "P2": 0.138,
+        "n_dem": 200,
+        "n_rep": 245,
+        "mediana_dem": -0.078,
+        "mediana_rep": 0.06
+      },
+      {
+        "congreso": 113,
+        "P2": 0.166,
+        "n_dem": 204,
+        "n_rep": 240,
+        "mediana_dem": -0.078,
+        "mediana_rep": 0.088
+      },
+      {
+        "congreso": 114,
+        "P2": 0.155,
+        "n_dem": 190,
+        "n_rep": 251,
+        "mediana_dem": -0.078,
+        "mediana_rep": 0.077
+      },
+      {
+        "congreso": 115,
+        "P2": 0.1415,
+        "n_dem": 200,
+        "n_rep": 250,
+        "mediana_dem": -0.061,
+        "mediana_rep": 0.0805
+      },
+      {
+        "congreso": 116,
+        "P2": 0.13,
+        "n_dem": 240,
+        "n_rep": 208,
+        "mediana_dem": -0.017,
+        "mediana_rep": 0.113
+      },
+      {
+        "congreso": 117,
+        "P2": 0.1625,
+        "n_dem": 232,
+        "n_rep": 223,
+        "mediana_dem": -0.0325,
+        "mediana_rep": 0.13
+      },
+      {
+        "congreso": 118,
+        "P2": 0.159,
+        "n_dem": 221,
+        "n_rep": 230,
+        "mediana_dem": -0.05,
+        "mediana_rep": 0.109
+      },
+      {
+        "congreso": 119,
+        "P2": 0.124,
+        "n_dem": 223,
+        "n_rep": 227,
+        "mediana_dem": -0.049,
+        "mediana_rep": 0.075
+      }
+    ],
+    "comparacion_M81": "M-81 (dim2, pendiente log): NO_SÉ por bloqueo — P2(106) = 0,0 exacto hace ln indefinido; la pendiente log no se calculó. M-84 usa la pendiente LINEAL sobre la misma serie de 86 congresos: el cero exacto es un punto válido. La serie P2 debe ser idéntica dígito a dígito a M-78/M-81 (86/86 dentro de 0,00005).",
+    "verificacion_independiente": "Re-cómputo de la serie P2 con pivot_table + medianas (otro camino de código): 86 congresos, máx diff vs serie medida 0.0; vs serie M-81 (r20) máx diff 0.0 — idéntica. Pendiente por np.polyfit: -1e-06 (medida -1e-06). IC bootstrap 95% con semilla distinta (123): [-0.00133, 0.001581] (medido [-0.001364, 0.001661]) — coincide = True."
+  }
+}
