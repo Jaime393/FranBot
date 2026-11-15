@@ -1,9 +1,9 @@
 {
-  "total": 1192,
+  "total": 1197,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1058,
+    "SE": 1063,
     "REFUTADO": 4,
     "NO_SE": 8
   },
@@ -12,7 +12,7 @@
     "provenance": 78,
     "digestion": 658,
     "consolidacion": 13,
-    "verificacion": 318,
+    "verificacion": 323,
     "conflicto": 64,
     "hueco": 40,
     "calculo": 3,
@@ -45,7 +45,7 @@
     "G-NUEVA: snapshot": 12,
     "G-NUEVA: ciegos": 33,
     "G-NUEVA: consolidado": 5,
-    "G-NUEVA: tejido_2026-11-12 no integrado en anexo-vi": 510,
+    "G-NUEVA: tejido_2026-11-12 no integrado en anexo-vi": 511,
     "G02": 22,
     "G06": 1,
     "G04": 2,
@@ -57,10 +57,11 @@
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7)": 1,
     "G-NUEVA: censo vacío heartbeat, causa folderId (F6 r11/r12)": 1,
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7; cara r12 #1)": 4,
-    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 13,
-    "G-NUEVA: d05 L4 polarización (medida y mecanismo)": 1
+    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 16,
+    "G-NUEVA: d05 L4 polarización (medida y mecanismo)": 1,
+    "G-NUEVA: d05 L7 escalamiento urbano": 1
   },
-  "hash_real": 1178,
+  "hash_real": 1183,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1254,6 +1255,11 @@
     "C-1194",
     "C-1195",
     "C-1196",
-    "C-1197"
+    "C-1197",
+    "C-1198",
+    "C-1199",
+    "C-1200",
+    "C-1201",
+    "C-1202"
   ]
 }
