@@ -1,0 +1,412 @@
+{
+  "medicion": "M-78",
+  "dominio": "d05 polarización (medida y mecanismo): distancia entre medianas partidistas en DW-NOMINATE dim2, Cámara de Representantes de EE.UU., serie restaurada de 86 congresos (115-117 incluidos), ancla con filtro P2 >= 0,01, vs umbral >2 con IC bootstrap",
+  "fuente": "Voteview (Lewis, Poole, Rosenthal et al.), HSall_members.csv (mismo archivo que M-61/M-64/M-67/M-70/M-74/M-75, 6.201.455 B, sha re-verificado aquí; copia en datos/ de r19). DW-NOMINATE: McCarty, Poole y Rosenthal, 'Polarized America' (MIT Press).",
+  "url": "https://voteview.com/static/data/out/members/HSall_members.csv (copia local en datos/, sha256 en este JSON)",
+  "sha256_dato": "495aee958a00c83c6300548e5b197d9900e7230c8eb08358bcfe06d042191140",
+  "metodo": "Protocolo de M-75 con filtro de ancla: chamber == House, party_code 100/200 por float() y luego int(), nominate_dim2 no vacío y finito. Por Congreso: P2(C) = |mediana dim2 D - mediana dim2 R|. Serie filtrada: solo congresos con P2(C) >= 0,01 (4 excluidos por regla); ancla = argmin P2(C) sobre la filtrada; cociente máximo filtrado = máx P2(filtrada)/P2(ancla). Bootstrap del cociente máximo: remuestreo de miembros dentro de cada congreso-partido, 500 réplicas, semilla 0, IC 95% por percentiles 2,5/97,5. El campo 'error' lleva la SD bootstrap del cociente secundario P2(119)/P2(ancla) con ancla fija (500 réplicas, semilla 0).",
+  "parametros": {
+    "n_congresos_serie_restaurada": 86,
+    "umbral_filtro_ancla_P2": 0.01,
+    "n_congresos_excluidos_filtro": 4,
+    "congresos_excluidos_filtro": [
+      45,
+      56,
+      62,
+      106
+    ],
+    "n_congresos_serie_filtrada": 82,
+    "congreso_ancla": 60,
+    "congreso_ancla_regla_seleccion": "argmin P2(C) sobre la serie filtrada (P2 >= 0,01), serie restaurada de 86 congresos, calculada en este script",
+    "congreso_final": 119,
+    "medida_ancla": {
+      "congreso": 60,
+      "n_dem": 168,
+      "n_rep": 230,
+      "mediana_dem": -0.01,
+      "mediana_rep": -0.0285,
+      "distancia_P2": 0.0185
+    },
+    "medida_maximo": {
+      "congreso": 80,
+      "n_dem": 194,
+      "n_rep": 253,
+      "mediana_dem": 0.6275,
+      "mediana_rep": -0.3,
+      "distancia_P2": 0.9275
+    },
+    "medida_final": {
+      "congreso": 119,
+      "n_dem": 223,
+      "n_rep": 227,
+      "mediana_dem": -0.049,
+      "mediana_rep": 0.075,
+      "distancia_P2": 0.124
+    },
+    "cociente_maximo_filtrado": 50.1351,
+    "cociente_maximo_estado": "definido",
+    "congreso_P2_maximo": 80,
+    "ratio_P2_119": 6.7027,
+    "umbral_cociente_maximo": 2.0,
+    "P2_mediana_serie": 0.226,
+    "P2_maximo_serie": 0.9275,
+    "cociente_maximo_sobre_mediana": 4.104,
+    "bootstrap_replicas": 500,
+    "bootstrap_semilla": 0,
+    "bootstrap_ic95_cociente_filtrado": [
+      38.0194,
+      95.3462
+    ],
+    "bootstrap_ic_excluye_2": true,
+    "bootstrap_sd_cociente_P2_119": 1354811189209737.2,
+    "bootstrap_mediana_cociente_P2_119": 2.9032,
+    "bootstrap_iqr_cociente_P2_119": [
+      1.798,
+      5.8571
+    ],
+    "bootstrap_frac_cociente_P2_119_mayor_2": 0.7014,
+    "bootstrap_replicas_ratio_119_validas": 499,
+    "bootstrap_estado": "ejecutado"
+  },
+  "valor": 50.1351,
+  "error": 1354811189209737.2,
+  "limites_validez": "Mismos que M-61/M-64/M-67/M-74/M-75 (DW-NOMINATE; Cámara EE.UU.), con dimensión 2 y filtro de ancla P2 >= 0,01. El ancla se elige por regla argmin sobre la serie filtrada, no por hipótesis previa. NOTA SOBRE EL ERROR: la SD bootstrap del cociente secundario P2(119)/P2(ancla) está dominada por 1-2 réplicas con denominador casi nulo (cola pesada del cociente; 499/500 réplicas válidas, 1 excluida por denominador 0 exacto) — la dispersión interpretable es la mediana y el IQR del cociente (ver parametros), no la SD. GUARDA DE LECTURA (no cambia el veredicto declarado): el cociente máximo es un extremo de dispersión transversal de dim2; el control máx/mediana (4,10 en M-75) se reporta junto al cociente para distinguir dispersión propia de crecimiento temporal.",
+  "criterio_falsacion": "CONFIRMA si el cociente máximo filtrado >= 2 con el IC bootstrap 95% excluyendo 2 (el muro se cruza); NO_CONFIRMA si el cociente máximo filtrado < 2 (el muro se sostiene; M-75 queda como artefacto de ancla casi-degenerada). Declarado en declaracion_falsadores_r19.md (2026-11-14T23:36:05Z) antes de correr. NO_SÉ si la serie filtrada queda vacía o sin ancla.",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-14",
+  "extra": {
+    "serie_P2_filtrada_por_congreso": [
+      {
+        "congreso": 34,
+        "P2": 0.607
+      },
+      {
+        "congreso": 35,
+        "P2": 0.398
+      },
+      {
+        "congreso": 36,
+        "P2": 0.2585
+      },
+      {
+        "congreso": 37,
+        "P2": 0.5075
+      },
+      {
+        "congreso": 38,
+        "P2": 0.2495
+      },
+      {
+        "congreso": 39,
+        "P2": 0.3745
+      },
+      {
+        "congreso": 40,
+        "P2": 0.1735
+      },
+      {
+        "congreso": 41,
+        "P2": 0.067
+      },
+      {
+        "congreso": 42,
+        "P2": 0.062
+      },
+      {
+        "congreso": 43,
+        "P2": 0.098
+      },
+      {
+        "congreso": 44,
+        "P2": 0.044
+      },
+      {
+        "congreso": 46,
+        "P2": 0.081
+      },
+      {
+        "congreso": 47,
+        "P2": 0.0335
+      },
+      {
+        "congreso": 48,
+        "P2": 0.057
+      },
+      {
+        "congreso": 49,
+        "P2": 0.074
+      },
+      {
+        "congreso": 50,
+        "P2": 0.2305
+      },
+      {
+        "congreso": 51,
+        "P2": 0.2615
+      },
+      {
+        "congreso": 52,
+        "P2": 0.222
+      },
+      {
+        "congreso": 53,
+        "P2": 0.1695
+      },
+      {
+        "congreso": 54,
+        "P2": 0.143
+      },
+      {
+        "congreso": 55,
+        "P2": 0.169
+      },
+      {
+        "congreso": 57,
+        "P2": 0.106
+      },
+      {
+        "congreso": 58,
+        "P2": 0.06
+      },
+      {
+        "congreso": 59,
+        "P2": 0.0615
+      },
+      {
+        "congreso": 60,
+        "P2": 0.0185
+      },
+      {
+        "congreso": 61,
+        "P2": 0.0685
+      },
+      {
+        "congreso": 63,
+        "P2": 0.095
+      },
+      {
+        "congreso": 64,
+        "P2": 0.156
+      },
+      {
+        "congreso": 65,
+        "P2": 0.201
+      },
+      {
+        "congreso": 66,
+        "P2": 0.199
+      },
+      {
+        "congreso": 67,
+        "P2": 0.3675
+      },
+      {
+        "congreso": 68,
+        "P2": 0.274
+      },
+      {
+        "congreso": 69,
+        "P2": 0.4685
+      },
+      {
+        "congreso": 70,
+        "P2": 0.468
+      },
+      {
+        "congreso": 71,
+        "P2": 0.461
+      },
+      {
+        "congreso": 72,
+        "P2": 0.529
+      },
+      {
+        "congreso": 73,
+        "P2": 0.513
+      },
+      {
+        "congreso": 74,
+        "P2": 0.409
+      },
+      {
+        "congreso": 75,
+        "P2": 0.2955
+      },
+      {
+        "congreso": 76,
+        "P2": 0.6015
+      },
+      {
+        "congreso": 77,
+        "P2": 0.483
+      },
+      {
+        "congreso": 78,
+        "P2": 0.776
+      },
+      {
+        "congreso": 79,
+        "P2": 0.647
+      },
+      {
+        "congreso": 80,
+        "P2": 0.9275
+      },
+      {
+        "congreso": 81,
+        "P2": 0.5805
+      },
+      {
+        "congreso": 82,
+        "P2": 0.6495
+      },
+      {
+        "congreso": 83,
+        "P2": 0.794
+      },
+      {
+        "congreso": 84,
+        "P2": 0.621
+      },
+      {
+        "congreso": 85,
+        "P2": 0.68
+      },
+      {
+        "congreso": 86,
+        "P2": 0.581
+      },
+      {
+        "congreso": 87,
+        "P2": 0.5435
+      },
+      {
+        "congreso": 88,
+        "P2": 0.511
+      },
+      {
+        "congreso": 89,
+        "P2": 0.421
+      },
+      {
+        "congreso": 90,
+        "P2": 0.3935
+      },
+      {
+        "congreso": 91,
+        "P2": 0.3575
+      },
+      {
+        "congreso": 92,
+        "P2": 0.4
+      },
+      {
+        "congreso": 93,
+        "P2": 0.335
+      },
+      {
+        "congreso": 94,
+        "P2": 0.2345
+      },
+      {
+        "congreso": 95,
+        "P2": 0.243
+      },
+      {
+        "congreso": 96,
+        "P2": 0.248
+      },
+      {
+        "congreso": 97,
+        "P2": 0.2385
+      },
+      {
+        "congreso": 98,
+        "P2": 0.229
+      },
+      {
+        "congreso": 99,
+        "P2": 0.2645
+      },
+      {
+        "congreso": 100,
+        "P2": 0.27
+      },
+      {
+        "congreso": 101,
+        "P2": 0.237
+      },
+      {
+        "congreso": 102,
+        "P2": 0.223
+      },
+      {
+        "congreso": 103,
+        "P2": 0.138
+      },
+      {
+        "congreso": 104,
+        "P2": 0.085
+      },
+      {
+        "congreso": 105,
+        "P2": 0.023
+      },
+      {
+        "congreso": 107,
+        "P2": 0.043
+      },
+      {
+        "congreso": 108,
+        "P2": 0.058
+      },
+      {
+        "congreso": 109,
+        "P2": 0.065
+      },
+      {
+        "congreso": 110,
+        "P2": 0.0825
+      },
+      {
+        "congreso": 111,
+        "P2": 0.071
+      },
+      {
+        "congreso": 112,
+        "P2": 0.138
+      },
+      {
+        "congreso": 113,
+        "P2": 0.166
+      },
+      {
+        "congreso": 114,
+        "P2": 0.155
+      },
+      {
+        "congreso": 115,
+        "P2": 0.1415
+      },
+      {
+        "congreso": 116,
+        "P2": 0.13
+      },
+      {
+        "congreso": 117,
+        "P2": 0.1625
+      },
+      {
+        "congreso": 118,
+        "P2": 0.159
+      },
+      {
+        "congreso": 119,
+        "P2": 0.124
+      }
+    ],
+    "comparacion_M75": "M-75 (dim2, ancla argmin sobre P2>0 sin filtro): ancla Congreso 62, P2 = 0,002, cociente 463,75. M-78 excluye por regla los 4 congresos con P2 < 0,01; el ancla se mueve al menor P2 >= 0,01 y el cociente cae en proporción. La pregunta era si el CONFIRMA sobrevive al filtro.",
+    "verificacion_independiente": "Re-cómputo con pandas groupby + medianas (otro camino de código): 86 congresos, ancla 60 (P2 0.0185), cociente filtrado 50.1351, ratio 119 = 6.7027 — idéntico dígito a dígito. Bootstrap independiente con semilla 1 (otra corriente): IC 95% [37.6042, 97.9487], excluye 2 = True — confirma el veredicto."
+  }
+}
