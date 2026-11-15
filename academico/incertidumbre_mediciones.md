@@ -1,4 +1,4 @@
-# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-76
+# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-80
 
 - **Creado:** 2026-11-14, por decisión N-16 (opción C, anexo de incertidumbre).
 - **Decisión:** N-16, aplicada en ronda 15 F1 bajo el régimen 2026-11-14 01:43 -05 (las decisiones se aplican automáticamente). Paquete: `ronda_13/ejecucion_f7/propuesta_inscripcion_dataset_r13.md` (sha `707f98c1…`, DC-R13-F7-01, opción C recomendada). Registro de la decisión: `ronda_15/ejecucion_f1/decision_n16_r15.md` / `.json`.
@@ -150,6 +150,42 @@
 - **Cara:** d05 L7 (escalamiento urbano) — **ABIERTA**. Este ítem es seguimiento del límite de una cara abierta, no cierre.
 
 
+## M-78 — CONFIRMA formal (r19, 2026-11-14) — ítem añadido por N-25
+
+- **Valor:** serie dim2 restaurada con parseo tolerante: 86 congresos (34..119); filtro de ancla P2 ≥ 0,01 excluye 4 congresos (45, 56, 62, 106); ancla filtrada por regla argmin: **Congreso 60, P2 = 0,0185**; **cociente máximo filtrado = 50,1351** (Congreso 80, P2 = 0,9275); **IC bootstrap 95% [38,0194, 95,3462]** (500 réplicas, semilla 0), excluye 2 → **CONFIRMA** según el falsador declarado.
+- **Falsador:** CONFIRMA si el cociente máximo filtrado ≥ 2 con el IC bootstrap 95% excluyendo 2 (el muro se cruza); NO_CONFIRMA si el cociente máximo filtrado < 2 (el muro se sostiene; M-75 queda como artefacto de ancla casi-degenerada). Declarado en `declaracion_falsadores_r19.md` (2026-11-14T23:36:05Z) antes de correr. **Veredicto:** CONFIRMA (formal).
+- **Matiz — el CONFIRMA sobrevive al filtro, pero el umbral no discrimina en dim2:** el ancla filtrada sigue siendo pequeña (12× bajo la mediana de la serie, 0,226; en M-75 era 113×). El cociente es un extremo máx/mín con sesgo de selección: el ancla es el mínimo de la serie por regla. El bootstrap del cociente temporal P2(119)/P2(ancla) lo delata: punto 6,7027, pero mediana bootstrap 2,9032, IQR [1,798, 5,8571], solo el 70,14% de las réplicas supera 2 (499/500 válidas; 1 excluida por denominador 0 exacto). La SD bootstrap del cociente secundario (1,35e15) está dominada por 1-2 réplicas con denominador casi nulo y no se interpreta; la dispersión interpretable es la mediana y el IQR. Cualquier ancla por debajo de 0,46 da cociente > 2 (máx/mediana solo ya es 4,10): en dim2 el umbral >2 se supera por el rango histórico propio de la serie — dim2 parte de casi cero en el siglo XIX y llega a 0,9275 — no por un crecimiento que el umbral distinga. La cara **d05 L4 NO se cierra** con esta medición (el veredicto es formal; la pregunta central — si el umbral >2 se transfiere a dim2 como prueba de crecimiento — queda respondida en negativo por el propio diseño: el umbral no discrimina).
+- **Secundarios (NO decisorios):** P2(119)/P2(ancla) = 6,7027; máx/mediana = 4,10; P2(119) = 0,124. Bootstrap independiente con semilla 1 (otra corriente): IC 95% [37,6042, 97,9487], excluye 2.
+- **Lección para la próxima vuelta:** el umbral >2 sobre máx/mín no es la herramienta para dim2. Una próxima especificación distinta tendría que abandonar el cociente de extremos (p. ej. medir el crecimiento temporal con una regla de ancla fija en el tiempo, no el mínimo de la serie). Repetir argmin con otro filtro solo mueve el degenerado.
+- **Fuente:** datos DW-NOMINATE (HSall_members.csv, sha `495aee95…`; copias en `datos/` de r19, verificados antes de correr). **sha_dato:** `0863a3060fe5e5a02e32505c7917763f0d73868b112089cdf7e69d605c181735` (med_M78.json, 15 claves; verificación independiente con pandas groupby + medianas, otro camino de código, idéntica dígito a dígito: 86 congresos, ancla 60, cociente 50,1351, ratio 119 = 6,7027).
+- **¿Da fila?** NO (anotación): refina la línea de polarización (ítems M-61/M-64, dim1, y M-75, dim2 sin filtro) y registra que el CONFIRMA sobrevive al filtro pero el umbral no discrimina en dim2; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** d05 L4 (polarización, medida y mecanismo) — **ABIERTA**. Este ítem es seguimiento del límite de una cara abierta (segunda CONFIRMA formal de la línea, tras M-75), no cierre.
+
+
+## M-79 — CONFIRMA (r19, 2026-11-14) — ítem añadido por N-26
+
+- **Valor:** censo de R² con el mismo protocolo (OLS log-log base 10 vs resident_pop, inclusión pop>0, Y>0, finitos) para las **32 variables numéricas candidatas** de indicators.tab (n = 10.351 áreas urbanas): **0 variables superan R² > 0,8; 0 alcanzan R² ≥ 0,90** → **CONFIRMA** (el muro es sistemático). Máximo del censo: **area_km2, R² = 0,7490** (M-76, reproducido); segundo: built_up_area_m2, R² = 0,6519; tercero: length_total, R² = 0,6037 (M-52, reproducido). Mediana del censo: R² = 0,0321. Solo 1 variable entre 0,7 y 0,8.
+- **Falsador:** CONFIRMA si 0 variables superan R² > 0,8 (el muro es sistemático); NO_CONFIRMA si ≥ 1 variable supera R² > 0,8 (el muro no es universal). Declarado en `declaracion_falsadores_r19.md` (2026-11-14T23:36:05Z) antes de correr. Conteo secundario (no decisorio): nº de variables con R² ≥ 0,90 (umbral del encargo; el usado como pierna en M-52..M-76). **Veredicto:** CONFIRMA.
+- **Matiz — el muro es sistemático, no un accidente de familia:** las 7 variables medidas antes se reproducen como control (M-52 0,6037, M-57 0,4148, M-65 0,408, M-68 0,402, M-71 0,3974, M-73 0,3989, M-76 0,7490 — todas dentro de 0,0005). Ninguna de las 25 variables nuevas supera 0,65: el muro R² no era un accidente de la familia viaria ni del área — ninguna variable del archivo escala con R² alto. El techo del archivo es 0,7490. La cara **d05 L7 NO se cierra** (el muro se confirma como sistemático, no se resuelve), pero la pregunta "¿es el muro universal dentro del archivo?" queda respondida: sí, 0/32 por encima de 0,8.
+- **Secundarios (NO decisorios):** R² máximo 0,7490 con β = 0,8627 ± 0,0049 (area_km2); la mediana del censo (0,0321) muestra que la mayoría de las variables ni siquiera escala.
+- **Lección para la próxima vuelta:** la línea de escalamiento urbano por variable suelta está agotada como vía de cierre: el censo cubre todas las variables del archivo. Una próxima especificación distinta tendría que cambiar de archivo (otra fuente de datos urbanos) o de protocolo (p. ej. no log-log), no medir una 8.ª variable suelta.
+- **Fuente:** datos de escalamiento urbano (indicators.tab, sha `7ec636c8…`, copia en `datos/` de r19, verificada antes de correr). **sha_dato:** `bb5502ee30fb9cbcb6b47499fe08b6357e7aad8871ef451af208ae7d34742806` (med_M79.json, 15 claves; verificación independiente con pandas + np.polyfit, otro camino de código, idéntica dígito a dígito: 32 variables, 0 diferencias ≥ 0,0005 en R², n R² > 0,8 = 0, n R² ≥ 0,9 = 0, máximo area_km2 0,749).
+- **¿Da fila?** NO (anotación): refina la línea de escalamiento urbano (ítems M-57/M-65, M-76) y registra el censo completo del archivo; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** d05 L7 (escalamiento urbano) — **ABIERTA**. Este ítem es seguimiento del límite de una cara abierta (el muro R², confirmado como sistemático), no cierre.
+
+
+## M-80 — CONFIRMA con alcance acotado (r19, 2026-11-14) — ítem añadido por N-27
+
+- **Valor:** la literatura publicada SÍ contiene una columna con u ≤ 0,05 aplicable: **Górski, Drożdż, Mokrzycka & Pawlik (2012), "Accuracy analysis of the box-counting algorithm", Acta Physica Polonica A 121, 2-B (arXiv:1111.5749), Tabla 1** — errores absolutos REALES del box-counting por n_tot: fractales 1-D: **±0,020 (n = 1.000), ±0,006 (n = 10.000), ±0,002 (n = 100.000)**; fractales 2-D: ±0,060 / ±0,030 / ±0,020; curva W-M 2-D: ±0,200 / ±0,150 / ±0,100. Para la clase 1-D — la que fundamenta la columna u (M-63: dispersiones medidas solo en series EEG corticales 1D) — el error real es ≤ 0,05 en todos los n_tot tabulados → **CONFIRMA**.
+- **Falsador:** CONFIRMA si existe literatura publicada con u ≤ 0,05 aplicable; NO_CONFIRMA si la literatura encontrada solo da u > 0,05 para los métodos aplicables; NO_EJECUTADO si no se encuentra ruta verificable en fuentes abiertas. Declarado en `declaracion_falsadores_r19.md` (2026-11-14T23:36:05Z) antes de correr. **Veredicto:** CONFIRMA (con alcance acotado).
+- **Matiz — alcance acotado:** la columna con u = 0,05 tiene respaldo publicado como escala común para series 1-D y para conjuntos 2-D con n_tot ≥ 10.000 (±0,030). NO queda respaldada como cota universal por nodo: un nodo 2-D con n_tot ~ 1.000 tendría error real ±0,060 > 0,05, y una función fractal 2-D (W-M) ±0,100..±0,200. El refinamiento por tipo de nodo queda fuera de esta medición. Es seguimiento de una cara cerrada (d04 L13, r15), no reapertura: F8 lo cuenta solo porque se ejecuta con producto (CORR-MAPA-R18).
+- **Secundarios (NO decisorios):** fuentes secundarias revisadas y no decisorias: SD de FD en EEG 0,000112448 (dispersión entre segmentos, no error vs valor verdadero); Douglass 2025 (D = 1,835 ± 0,0037, método optimizado, caso físico 2-D; apoyo, no decisoria). La Tabla 1 mide el error REAL sobre conjuntos fractales matemáticos con valor verdadero conocido, no sobre datos reales con ruido (el propio artículo advierte que el ruido degrada la precisión).
+- **Lección para la próxima vuelta:** la columna u = 0,05 ya tiene respaldo publicado para su clase fundante; la próxima pregunta no es si u ≤ 0,05 existe en la literatura, sino si la cota se sostiene por tipo de nodo (1-D vs 2-D vs W-M) — eso exige un refinamiento por tipo, no otra búsqueda de la misma columna.
+- **Fuente:** Górski et al. 2012, Tabla 1 (PDF 84.837 B, sha `fcbc42a5…`, líneas 287-306 del texto extraído con pdftotext; resumen verificado en arXiv abs/1111.5749, 2026-11-14T23:38Z). **sha_dato:** `ca2e3f01bd67fe78352d7eadf1869fe15504ff43b508bd6a70719c6ced00c371` (med_M80.json, 15 claves; Tabla 1 re-leída por dos vías — snippet de búsqueda web y PDF descargado — idénticos).
+- **¿Da fila?** NO (anotación): refina la línea de la columna u (ítems M-59/M-60/M-62/M-63/M-66/M-69/M-72, d04 L13) y registra el respaldo publicado de u = 0,05 para la clase 1-D; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** d04 L13 (columna u de D_f) — **CERRADA en r15; este ítem es seguimiento, no reapertura.** La cara se cerró con M-66/M-72 (5/23 huecos ≥ 0,05, u* = 0,05); M-80 añade el respaldo publicado de esa columna para su clase fundante.
+
+
 ## Resumen
 
 | Med. | Veredicto | Valor | Fila | Cara |
@@ -169,8 +205,11 @@
 | M-72 | CONFIRMA | 5 huecos ≥ 0,05 de 23 | NO (anotación) | d04 L13 (cerrada) |
 | M-75 | CONFIRMA | cociente máx 463,75; ancla Congreso 62, P2 = 0,002 | NO (anotación) | d05 L4 |
 | M-76 | NO_CONFIRMA | β = 0,8627 ± 0,0049, R² = 0,7490 | NO (anotación) | d05 L7 |
+| M-78 | CONFIRMA | cociente máx 50,1351; ancla Congreso 60, P2 = 0,0185 | NO (anotación) | d05 L4 |
+| M-79 | CONFIRMA | censo 32 variables, 0 con R² > 0,8; máx area_km2 0,7490 | NO (anotación) | d05 L7 |
+| M-80 | CONFIRMA | Górski et al. 2012, Tabla 1: 1-D ±0,020 (n = 1.000) | NO (anotación) | d04 L13 (cerrada) |
 
-**Tally:** CONFIRMA 7 (M-59, M-60, M-62, M-63, M-66, M-72, M-75) · NO_CONFIRMA 6 (M-57, M-61, M-64, M-65, M-69, M-76) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58). Ítems: 15 (M-56..M-72, M-75, M-76). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
+**Tally:** CONFIRMA 10 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80) · NO_CONFIRMA 6 (M-57, M-61, M-64, M-65, M-69, M-76) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58). Ítems: 18 (M-56..M-72, M-75, M-76, M-78, M-79, M-80). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
 
 **Ítems futuros:** las mediciones que tampoco den fila se añaden a este anexo por la misma vía (F7 prepara el ítem, F1 lo añade). Una medición que entregue un D_f de nodo inscribe su fila en el CSV por decisión propia, no por este anexo.
 
