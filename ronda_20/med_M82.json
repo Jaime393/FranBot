@@ -1,0 +1,567 @@
+{
+  "medicion": "M-82",
+  "dominio": "d05 escalamiento urbano: censo del exponente beta con el mismo protocolo (OLS log-log base 10 vs resident_pop) para las 32 variables numéricas candidatas de indicators.tab, 10.351 áreas urbanas GHSL/UCD, banda beta [0,80, 0,90]",
+  "fuente": "indicators.tab (mismo archivo que M-52/M-57/M-65/M-68/M-71/M-73/M-76/M-79, 5.538.726 B, sha re-verificado aquí; copia en datos/ de r20). Variables: 32 columnas Y candidatas (se excluyen identificadores y la propia X resident_pop).",
+  "url": "Archivo local en datos/ (sha256 en este JSON); serie urbana GHSL/UCD, misma fuente que M-52/M-57/M-65/M-68/M-71/M-73/M-76/M-79",
+  "sha256_dato": "7ec636c8722b54586067bfd7f71032804fa1743daaacd12ad08fc449e399d9c7",
+  "metodo": "OLS log-log base 10 por variable, Y vs X = resident_pop. Inclusión por variable: resident_pop>0, Y>0 y valores finitos (mismo criterio que M-52/M-57/M-65/M-68/M-71/M-73/M-76/M-79; n_incluidas se reporta por variable). El estadístico censado es beta (no R2): banda [0,80, 0,90], la misma usada en M-76. Las 7 variables ya medidas se re-miden como control de consistencia. El campo 'valor' lleva el número de variables además de area_km2 con beta en banda; el campo 'error' lleva el SE de beta de area_km2.",
+  "parametros": {
+    "n_total_filas": 10351,
+    "n_variables_censo": 32,
+    "variables_censo": [
+      "area_km2",
+      "built_up_area_m2",
+      "length_total",
+      "node_count",
+      "street_segment_count",
+      "intersect_count",
+      "intersect_count_clean_topo",
+      "intersect_count_clean",
+      "pagerank_max",
+      "cc_wt_avg_dir",
+      "cc_wt_avg_undir",
+      "bc_max",
+      "bc_gini",
+      "self_loop_proportion",
+      "elev_range",
+      "elev_std",
+      "elev_iqr",
+      "orientation_entropy",
+      "grade_mean",
+      "length_median",
+      "length_mean",
+      "grade_median",
+      "k_avg",
+      "elev_median",
+      "cc_avg_dir",
+      "elev_mean",
+      "prop_3way",
+      "cc_avg_undir",
+      "circuity",
+      "prop_deadend",
+      "straightness",
+      "prop_4way"
+    ],
+    "banda_beta": [
+      0.8,
+      0.9
+    ],
+    "n_beta_en_banda_total": 1,
+    "variables_beta_en_banda": [
+      "area_km2"
+    ],
+    "n_beta_en_banda_ademas_area": 0,
+    "variables_beta_en_banda_ademas_area": [],
+    "beta_area_km2": 0.8627,
+    "se_beta_area_km2": 0.0049,
+    "ic95_beta_area_km2": [
+      0.8531,
+      0.8723
+    ],
+    "R2_area_km2": 0.749,
+    "control_previas_7": [
+      {
+        "variable": "area_km2",
+        "medicion": "M-76",
+        "R2_recomputado": 0.749,
+        "R2_publicado": 0.749,
+        "coincide": true
+      },
+      {
+        "variable": "length_total",
+        "medicion": "M-52",
+        "R2_recomputado": 0.6037,
+        "R2_publicado": 0.6037,
+        "coincide": true
+      },
+      {
+        "variable": "node_count",
+        "medicion": "M-57",
+        "R2_recomputado": 0.4148,
+        "R2_publicado": 0.4148,
+        "coincide": true
+      },
+      {
+        "variable": "street_segment_count",
+        "medicion": "M-65",
+        "R2_recomputado": 0.408,
+        "R2_publicado": 0.408,
+        "coincide": true
+      },
+      {
+        "variable": "intersect_count",
+        "medicion": "M-68",
+        "R2_recomputado": 0.402,
+        "R2_publicado": 0.402,
+        "coincide": true
+      },
+      {
+        "variable": "intersect_count_clean_topo",
+        "medicion": "M-73",
+        "R2_recomputado": 0.3989,
+        "R2_publicado": 0.3989,
+        "coincide": true
+      },
+      {
+        "variable": "intersect_count_clean",
+        "medicion": "M-71",
+        "R2_recomputado": 0.3974,
+        "R2_publicado": 0.3974,
+        "coincide": true
+      }
+    ],
+    "beta_maximo_censo": 0.9911,
+    "variable_beta_maximo": "street_segment_count",
+    "beta_mediana_censo": 0.01,
+    "n_beta_mayor_0_90": 7,
+    "variables_beta_mayor_0_90": [
+      "street_segment_count",
+      "intersect_count",
+      "node_count",
+      "intersect_count_clean_topo",
+      "intersect_count_clean",
+      "length_total",
+      "built_up_area_m2"
+    ],
+    "fuera_de_banda_con_ic_solapando_banda": [
+      {
+        "variable": "built_up_area_m2",
+        "beta": 0.9023,
+        "ic95_beta": [
+          0.8896,
+          0.915
+        ],
+        "distancia_al_borde": 0.0023
+      }
+    ]
+  },
+  "valor": 0,
+  "error": 0.0049,
+  "limites_validez": "Mismos que M-57/M-65/M-68/M-71/M-73/M-76/M-79 (población 2015 UCD frente a indicadores GHSL/UCD; ciudad = área urbana GHSL/UCD; OLS log-log supone errores homocedásticos en log-log). El censo describe qué variables del archivo tienen exponente en banda; no prueba la ley de escalamiento fuera del archivo. El criterio es la estimación puntual de beta; los IC 95% se reportan como secundarios y el solape de borde se registra como matiz, sin cambiar el veredicto declarado.",
+  "criterio_falsacion": "CONFIRMA si 0 variables además de area_km2 tienen beta en banda [0,80, 0,90] por estimación puntual (el beta en banda es un singleton); NO_CONFIRMA si >= 1 variable más cae en banda (es una familia; la lectura de M-76 se debilita). Declarado en declaracion_falsadores_r20.md (2026-11-15T07:06:00Z) antes de correr.",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-15",
+  "extra": {
+    "censo_beta_ordenado": [
+      {
+        "variable": "street_segment_count",
+        "n_incluidas": 10351,
+        "beta": 0.9911,
+        "se_beta": 0.0117,
+        "ic95_beta": [
+          0.9681,
+          1.0141
+        ],
+        "alfa": -1.8839,
+        "R2": 0.408,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "intersect_count",
+        "n_incluidas": 10351,
+        "beta": 0.9876,
+        "se_beta": 0.0118,
+        "ic95_beta": [
+          0.9644,
+          1.0108
+        ],
+        "alfa": -2.0954,
+        "R2": 0.402,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "node_count",
+        "n_incluidas": 10351,
+        "beta": 0.9828,
+        "se_beta": 0.0115,
+        "ic95_beta": [
+          0.9603,
+          1.0053
+        ],
+        "alfa": -1.9817,
+        "R2": 0.4148,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "intersect_count_clean_topo",
+        "n_incluidas": 10351,
+        "beta": 0.9757,
+        "se_beta": 0.0118,
+        "ic95_beta": [
+          0.9526,
+          0.9987
+        ],
+        "alfa": -2.1024,
+        "R2": 0.3989,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "intersect_count_clean",
+        "n_incluidas": 10351,
+        "beta": 0.9733,
+        "se_beta": 0.0118,
+        "ic95_beta": [
+          0.9502,
+          0.9964
+        ],
+        "alfa": -2.0938,
+        "R2": 0.3974,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "length_total",
+        "n_incluidas": 10351,
+        "beta": 0.9177,
+        "se_beta": 0.0073,
+        "ic95_beta": [
+          0.9034,
+          0.9321
+        ],
+        "alfa": 0.6477,
+        "R2": 0.6037,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "built_up_area_m2",
+        "n_incluidas": 10351,
+        "beta": 0.9023,
+        "se_beta": 0.0065,
+        "ic95_beta": [
+          0.8896,
+          0.915
+        ],
+        "alfa": 2.0514,
+        "R2": 0.6519,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "area_km2",
+        "n_incluidas": 10351,
+        "beta": 0.8627,
+        "se_beta": 0.0049,
+        "ic95_beta": [
+          0.8531,
+          0.8723
+        ],
+        "alfa": -2.9872,
+        "R2": 0.749,
+        "beta_en_banda_0_80_0_90": true
+      },
+      {
+        "variable": "elev_range",
+        "n_incluidas": 10351,
+        "beta": 0.2741,
+        "se_beta": 0.0098,
+        "ic95_beta": [
+          0.2549,
+          0.2934
+        ],
+        "alfa": 0.3728,
+        "R2": 0.0702,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "elev_std",
+        "n_incluidas": 10351,
+        "beta": 0.1925,
+        "se_beta": 0.01,
+        "ic95_beta": [
+          0.1729,
+          0.2122
+        ],
+        "alfa": -0.017,
+        "R2": 0.0345,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "elev_iqr",
+        "n_incluidas": 10350,
+        "beta": 0.187,
+        "se_beta": 0.0105,
+        "ic95_beta": [
+          0.1665,
+          0.2076
+        ],
+        "alfa": 0.0996,
+        "R2": 0.0298,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "grade_mean",
+        "n_incluidas": 10351,
+        "beta": 0.0751,
+        "se_beta": 0.0051,
+        "ic95_beta": [
+          0.0651,
+          0.0851
+        ],
+        "alfa": -1.9669,
+        "R2": 0.0206,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "bc_gini",
+        "n_incluidas": 10351,
+        "beta": 0.0579,
+        "se_beta": 0.0013,
+        "ic95_beta": [
+          0.0553,
+          0.0604
+        ],
+        "alfa": -0.4729,
+        "R2": 0.1589,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "grade_median",
+        "n_incluidas": 10349,
+        "beta": 0.051,
+        "se_beta": 0.0063,
+        "ic95_beta": [
+          0.0387,
+          0.0633
+        ],
+        "alfa": -2.0737,
+        "R2": 0.0063,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "orientation_entropy",
+        "n_incluidas": 10351,
+        "beta": 0.0153,
+        "se_beta": 0.001,
+        "ic95_beta": [
+          0.0133,
+          0.0173
+        ],
+        "alfa": 0.4357,
+        "R2": 0.0215,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "prop_4way",
+        "n_incluidas": 10303,
+        "beta": 0.0118,
+        "se_beta": 0.0074,
+        "ic95_beta": [
+          -0.0026,
+          0.0262
+        ],
+        "alfa": -0.8917,
+        "R2": 0.0002,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "k_avg",
+        "n_incluidas": 10351,
+        "beta": 0.0083,
+        "se_beta": 0.001,
+        "ic95_beta": [
+          0.0063,
+          0.0103
+        ],
+        "alfa": 0.3988,
+        "R2": 0.0062,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "prop_3way",
+        "n_incluidas": 10351,
+        "beta": 0.007,
+        "se_beta": 0.0017,
+        "ic95_beta": [
+          0.0036,
+          0.0104
+        ],
+        "alfa": -0.2433,
+        "R2": 0.0016,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "straightness",
+        "n_incluidas": 10351,
+        "beta": 0.0006,
+        "se_beta": 0.0003,
+        "ic95_beta": [
+          0.0,
+          0.0012
+        ],
+        "alfa": -0.0254,
+        "R2": 0.0004,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "circuity",
+        "n_incluidas": 10351,
+        "beta": -0.0006,
+        "se_beta": 0.0003,
+        "ic95_beta": [
+          -0.0012,
+          -0.0
+        ],
+        "alfa": 0.0254,
+        "R2": 0.0004,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "prop_deadend",
+        "n_incluidas": 10351,
+        "beta": -0.0122,
+        "se_beta": 0.0061,
+        "ic95_beta": [
+          -0.0241,
+          -0.0003
+        ],
+        "alfa": -0.7473,
+        "R2": 0.0004,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "cc_avg_undir",
+        "n_incluidas": 10278,
+        "beta": -0.013,
+        "se_beta": 0.0049,
+        "ic95_beta": [
+          -0.0227,
+          -0.0033
+        ],
+        "alfa": -1.3843,
+        "R2": 0.0007,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "cc_avg_dir",
+        "n_incluidas": 10278,
+        "beta": -0.0256,
+        "se_beta": 0.0045,
+        "ic95_beta": [
+          -0.0343,
+          -0.0168
+        ],
+        "alfa": -1.3964,
+        "R2": 0.0032,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "length_mean",
+        "n_incluidas": 10351,
+        "beta": -0.0733,
+        "se_beta": 0.0058,
+        "ic95_beta": [
+          -0.0847,
+          -0.0619
+        ],
+        "alfa": 2.5316,
+        "R2": 0.0151,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "length_median",
+        "n_incluidas": 10351,
+        "beta": -0.0767,
+        "se_beta": 0.0056,
+        "ic95_beta": [
+          -0.0877,
+          -0.0656
+        ],
+        "alfa": 2.379,
+        "R2": 0.0175,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "elev_mean",
+        "n_incluidas": 10320,
+        "beta": -0.0851,
+        "se_beta": 0.0166,
+        "ic95_beta": [
+          -0.1176,
+          -0.0525
+        ],
+        "alfa": 2.5098,
+        "R2": 0.0025,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "elev_median",
+        "n_incluidas": 10316,
+        "beta": -0.0997,
+        "se_beta": 0.0169,
+        "ic95_beta": [
+          -0.1329,
+          -0.0665
+        ],
+        "alfa": 2.5702,
+        "R2": 0.0033,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "bc_max",
+        "n_incluidas": 10351,
+        "beta": -0.1735,
+        "se_beta": 0.0039,
+        "ic95_beta": [
+          -0.1811,
+          -0.1659
+        ],
+        "alfa": 0.2579,
+        "R2": 0.1626,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "self_loop_proportion",
+        "n_incluidas": 5537,
+        "beta": -0.2787,
+        "se_beta": 0.0133,
+        "ic95_beta": [
+          -0.3047,
+          -0.2527
+        ],
+        "alfa": -1.4601,
+        "R2": 0.0738,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "cc_wt_avg_undir",
+        "n_incluidas": 10278,
+        "beta": -0.311,
+        "se_beta": 0.0068,
+        "ic95_beta": [
+          -0.3243,
+          -0.2977
+        ],
+        "alfa": -1.1836,
+        "R2": 0.1698,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "cc_wt_avg_dir",
+        "n_incluidas": 10278,
+        "beta": -0.3203,
+        "se_beta": 0.007,
+        "ic95_beta": [
+          -0.3339,
+          -0.3067
+        ],
+        "alfa": -1.1843,
+        "R2": 0.1708,
+        "beta_en_banda_0_80_0_90": false
+      },
+      {
+        "variable": "pagerank_max",
+        "n_incluidas": 10351,
+        "beta": -0.8825,
+        "se_beta": 0.0108,
+        "ic95_beta": [
+          -0.9036,
+          -0.8613
+        ],
+        "alfa": 1.9698,
+        "R2": 0.3929,
+        "beta_en_banda_0_80_0_90": false
+      }
+    ],
+    "lectura_censo": "Censo completo de beta sobre las 32 variables candidatas con el protocolo de M-52..M-79; las 7 previas se reproducen como control.",
+    "verificacion_independiente": "Re-cómputo con pandas + np.polyfit (otro camino de código): 32 variables, máx diff beta 0.000047, máx diff R2 0.000050 — coincide=True. Variables con beta en banda [0,80, 0,90]: ['area_km2'] (solo area_km2). built_up_area_m2 beta 0.9023 queda fuera por 0,0023 con IC [0.8896, 0.915] solapando el borde 0,90 — matiz registrado, veredicto por estimación puntual según el falsador declarado."
+  }
+}
