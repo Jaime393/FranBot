@@ -1,0 +1,187 @@
+{
+ "b1": {
+  "archivo_propuestas": "ronda_8/preparacion_ola2/propuestas_ola2_B1.jsonl",
+  "archivo_propuestas_sha": "e6ae7f04ae4ae355d0728e9d4214e10fb91af4d9ca75812458c33f4706c7ce5a",
+  "claims_archivo": "ronda_8/preparacion_ola2/claims.jsonl.nuevo_B1",
+  "claims_archivo_lineas": 1148,
+  "claims_archivo_sha": "3e745468b7bd1c9c11aa14857ce611504d0b50da2e86fe3f1fba22a7f24e7153",
+  "estado": "VARIANTE PREPARADA NO ELEGIDA. Sin cambio."
+ },
+ "corpus": {
+  "anexo_items": 18,
+  "anexo_sha": "23acd4d089ef5ead6ba87c479568573541e33874c2909a88d5a33470c69a21d8",
+  "claims": 1192,
+  "claims_sha": "33a7f0e686a643daec5da72d43eb8a9a3c90b9fa4981eb5d1f1288c2ecee2c23",
+  "dataset_filas": 30,
+  "dataset_sha": "0852d58f92356eee572dc7a9141d195efe2a2adcef0d91b0e03c4aeeb42bf0af",
+  "provenance": 368,
+  "provenance_sha": "82d39f151c86567989fb8830081b8fefd9e0d39dc24fe86c6be5ec6b2c8ac8e8"
+ },
+ "criterio_no_preparar": "Práctica de 17 rondas (r18 F7 §4): los veredictos de medición NO se preparan como claims — se depositan como resultados y entran al corpus por inscripción en el dataset/anexo. Un veredicto solo se prepara como claim si tiene precedente de claim que lo enuncie; un ítem de anexo solo se prepara si tiene precedente de columna o de ítem al que refinar. DESVIACIÓN REGISTRADA r20: las 2 propuestas del §1 se preparan como claims por orden expresa del encargo F7 r20 (no por precedente); FASE 2 adjudica (ver preparadas_r20.md §4).",
+ "decisiones_sin_numero_para_fase2": [
+  {
+   "afirmacion": "Adopto el umbral 0,50 de contención como bandera de identidad de voces: una etiqueta de voz es bandera hacia S2 si su pick de mejor-contención (REGLA-PICK-SIK-01) alcanza max(c1,c2) ≥ 0,50, y es destilación si su Jaccard es < 0,80; toda bandera se verifica leyendo el par.",
+   "autoriza": "Que las mediciones SIK futuras usen el umbral 0,50 como método canónico; F-VOZ-S2 queda resuelto por regla (3 banderas, vía agotada en 0,50, 6.ª medición) y deja de citarse como caveat del umbral.",
+   "fuente": "ronda_20/ejecucion_f6/especificacion_umbral_sik_r20.md",
+   "nombre": "Adoptar el umbral 0,50 de contención como bandera de identidad de voces (REGLA-UMB-SIK-01)",
+   "nota": "Sin claim hermano preparado (el encargo F7 r20 pidió solo la decisión); a diferencia de N-17/N-21/N-24, que llegaron con su claim. FASE 2 adjudica si la adopción necesita un claim que la registre."
+  },
+  {
+   "afirmacion": "Añadan el ítem M-82 al anexo de incertidumbre.",
+   "autoriza": "Añadir al anexo el ítem M-82 preparado (censo de β de las 32 variables: solo area_km2 en banda, β = 0,8627 ± 0,0049; singleton por estimación puntual; built_up_area_m2 en el borde, IC solapa 0,90).",
+   "fuente": "item_anexo_M82.md",
+   "nombre": "Añadir el ítem M-82 al anexo de incertidumbre"
+  },
+  {
+   "afirmacion": "Añadan el ítem M-83 al anexo de incertidumbre.",
+   "autoriza": "Añadir al anexo el ítem M-83 preparado (cierre de la cara d08 L13 por verificación: 3/3 mediciones verificables en el corpus con fuente + hash, hash 304a41bf… byte-idéntico; siguen fuera del dataset CSV por exclusión deliberada).",
+   "fuente": "item_anexo_M83.md",
+   "nombre": "Añadir el ítem M-83 al anexo de incertidumbre"
+  }
+ ],
+ "dedup": {
+  "archivo": "dedup_f7_r20.json",
+  "archivo_sha": "7dd4774252c363de049fc505e49e01aa320d855ea6bda88ffb04c4945bc44717",
+  "cercania_umbral": "Stub 'paused' en 0,3730 vs C-1197 (la más cercana; 1.ª redacción 0,5273 — reescrita, ver preparadas_r20.md §1b). Cierre d08 L13 en 0,3696 vs C-944. Ventana en 0,2692 vs C-1179 (1.ª redacción 0,5532 vs C-1196 — reescrita). Flow en 0,2386 vs C-852. Censo β en 0,1500 vs C-1171. 0 pares ≥ 0,5.",
+  "entre_propuestas_max": 0.1732,
+  "entre_propuestas_par": "stub_paused/flow_run144",
+  "global_max": 0.373,
+  "global_max_id": "C-1197",
+  "metodo": "r9 (Jaccard, umbral 0,5; corpus 1.192)",
+  "pares_ge_0_5": 0,
+  "reescritura": "Ventana y stub: 1.ª redacción ≥ 0,5 (0,5532 vs C-1196; 0,5273 vs C-1197) — reescritas con la lección r17/r18 §1b; valores finales 0,2692 y 0,3730. Detalle en sus lecturas.",
+  "verificado_tres_veces": "script _dedup_f7_r20.py, 3 corridas byte-idénticas (sha 7dd47742…); valores de las 2 lecturas originales idénticos a la salida anterior (sha 8212ce8a…)"
+ },
+ "estado": "PREPARADA_NO_APLICADA",
+ "f4_reverificado_al_cierre": "ejecucion_f4/ re-verificado antes de escribir preparadas_r20.md (lección H2 FASE 2 r16): nombres_fuera_doc_r20.md (1572f313…), nombres_fuera_doc_r20.jsonl (0d68c837…, 96 filas), manifiesto_shas_r20_f4.json (785feac8…). Cara r12 #1 AVANZA (0/61; 0 fuentes Drive nuevas; atestación operativa sin cambio parche 2 / validar 2; graph JSON 0/0 sexta ronda consecutiva; Doc índice byte-idéntico). Nada de F4 r20 se prepara como claim (§4).",
+ "fecha": "2026-11-15",
+ "item_anexo_M82": {
+  "archivo": "item_anexo_M82.md",
+  "estado": "PREPARADO, NO APLICADO AL ANEXO",
+  "precedente": "Ítems M-57/M-65 (escalamiento urbano) + M-76 (primera β en banda) + M-79 (censo R²) en el anexo + N-18/N-19/N-20/N-22/N-23/N-25/N-26/N-27",
+  "veredicto": "M-82 CONFIRMA: censo de 32 variables, solo area_km2 con β en banda [0,80, 0,90] (β = 0,8627 ± 0,0049, R² = 0,7490); singleton por estimación puntual; built_up_area_m2 en el borde (β = 0,9023, IC solapa 0,90); d05 L7 NO se cierra"
+ },
+ "item_anexo_M83": {
+  "archivo": "item_anexo_M83.md",
+  "estado": "PREPARADO, NO APLICADO AL ANEXO",
+  "precedente": "Ítem M-80 (seguimiento de cara cerrada d04 L13) + N-16 + N-18/N-19/N-20/N-22/N-23/N-25/N-26/N-27",
+  "veredicto": "M-83 CONFIRMA: las 3 mediciones solo en paper_df son verificables en el corpus con fuente + hash (C-791/C-944, hash 304a41bf… byte-idéntico); siguen fuera del dataset CSV por exclusión deliberada; la cara d08 L13 CIERRA (primera desde d04 L13 en r15)"
+ },
+ "no_preparado": [
+  {
+   "motivo": "Veredicto NO_SÉ por bloqueo (P2 = 0 exacto en el Congreso 106, ln indefinido). Sin ítem de anexo, como M-70/M-77: el bloqueo no refina ninguna línea del anexo. Se registra como carencia local; candidata para r21 con regla de exclusión declarada antes de correr.",
+   "que": "M-81 NO_SÉ como claim y como ítem de anexo"
+  },
+  {
+   "motivo": "Resultados de medición depositados en h_sik_r20.md + reuse_sik_r20.json + verificador_independiente_r20.json + destilacion_voces_s2_r20.json. La vía voces→S2 AGOTADA en 0,50 (6.ª medición) tampoco se prepara: 0 claims enuncian 'destila' o 'vía agotada'; no hay precedente de claim que enuncie un agotamiento de vía de mecanismo.",
+   "que": "F6 H-SIK resto (F-TOK20 PASA canon N-21 segunda vuelta 0 diffs; F-PART20 PASA canon N-24 primera vuelta 0 diffs; F-R20 PASA 0 diffs 6.ª vuelta; F-PICK20 PASA 0 diffs; F-F20 PASA 11/8; F-A20 PASA 0,8000/27; F-VOZ-S2 no se dispara; N-01 10.º precedente)"
+  },
+  {
+   "motivo": "CORR-CONTINUACION-F7-R20: la nota 2 del §4 queda resuelta — las tres novedades F2 se prepararon por orden de continuación. Lo que queda sin preparar es recurrencia (V93, bots) o incidencia de método (CORR-RAW-R20) o medición sin precedente de claim (cadencia, folderId). Self-Diagnosis run 144 y autocura sin run 12 quedan como datos secundarios en C-1201 (igual que en r19).",
+   "que": "F2 resto (estado vivo r20) — PARCIALMENTE RESUELTO POR CONTINUACIÓN: C-1200/C-1201/C-1202 preparados (§1 n.º 3–5). Sin preparar: V93 (31 payloads), bots 19.ª, CORR-RAW-R20, cadencia heartbeat, folderId (ver §4c)."
+  },
+  {
+   "motivo": "Monitor sin novedad (G03 2026-11-21; G05 27.ª; H-SUELO 28.ª; folderId 28.ª; G01 D_eff 0; G04 21 DOIs; D-06/D-09).",
+   "que": "F5 resto (grietas r20)"
+  },
+  {
+   "motivo": "Cara r12 #1 AVANZA (0/61; 0 fuentes Drive nuevas; atestación operativa sin cambio; graph JSON 0/0 sexta ronda; Doc índice byte-idéntico). NO_ENCONTRADO en rutas probadas + recurrencia: nada se prepara como claim.",
+   "que": "F4 r20 (re-verificado al cierre)"
+  },
+  {
+   "motivo": "Sin entregables finales al cierre de este frente (scripts de inventario y diff en curso, sin poda_r20.md ni manifiesto_shas_f9).",
+   "que": "F9 r20 (poda)"
+  },
+  {
+   "motivo": "Guardia (sin decisiones pendientes de aplicación automática al inicio, según el mapa FASE 0 r20). F1 aplica lo que F7 prepare, post-FASE 4.",
+   "que": "F1 r20 (guardia)"
+  },
+  {
+   "motivo": "Tarea del principal, fuera de la ronda.",
+   "que": "N-15 (M-50 vía navegador)"
+  },
+  {
+   "motivo": "Variante preparada no elegida (§2).",
+   "que": "B1"
+  }
+ ],
+ "orden": "mapa FASE 0 r20 §F7 + encargo F7 r20 + H2 FASE 2 r16 + continuación F7 r20 (nota 2 del §4: propuestas F2 C-1200..C-1202)",
+ "propuestas": [
+  {
+   "archivo": "lectura_censo_beta_m82_r20.md",
+   "dedup_max": 0.15,
+   "dedup_max_id": "C-1171",
+   "estado": "SE",
+   "fuente": "ronda_20/ejecucion_f3/med_M82.json",
+   "grieta": "G-NUEVA: d05 L7 escalamiento urbano",
+   "hash": "sha256:92d48f966545e3ac9ac082c9bcab22a66928404fc6ac3fc9b86b8baf9b7a7dbb",
+   "id_proyectado": "C-1198",
+   "pares_ge_0_5": 0,
+   "tipo": "verificacion"
+  },
+  {
+   "archivo": "lectura_cierre_d08l13_m83_r20.md",
+   "dedup_max": 0.3696,
+   "dedup_max_id": "C-944",
+   "estado": "SE",
+   "fuente": "ronda_20/ejecucion_f3/med_M83.json",
+   "grieta": "G-NUEVA: tejido_2026-11-12 no integrado en anexo-vi",
+   "hash": "sha256:c80b15b74bdf06f07ab093e40752593685554ea4ac2667ced42e7dd59f47e41f",
+   "id_proyectado": "C-1199",
+   "pares_ge_0_5": 0,
+   "tipo": "verificacion"
+  },
+  {
+   "archivo": "lectura_ventana_3000_r20.md",
+   "dedup_max": 0.2692,
+   "dedup_max_id": "C-1179",
+   "estado": "SE",
+   "fuente": "ronda_20/ejecucion_f2/estado_vivo_r20.md",
+   "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+   "hash": "sha256:00897d6ea3a88bb10df3b87037319bfa6c598824ff314039b890317cbdaf2a09",
+   "id_proyectado": "C-1200",
+   "pares_ge_0_5": 0,
+   "tipo": "verificacion"
+  },
+  {
+   "archivo": "lectura_stub_paused_r20.md",
+   "dedup_max": 0.373,
+   "dedup_max_id": "C-1197",
+   "estado": "SE",
+   "fuente": "ronda_20/ejecucion_f2/estado_vivo_r20.md",
+   "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+   "hash": "sha256:00897d6ea3a88bb10df3b87037319bfa6c598824ff314039b890317cbdaf2a09",
+   "id_proyectado": "C-1201",
+   "pares_ge_0_5": 0,
+   "tipo": "verificacion"
+  },
+  {
+   "archivo": "lectura_flow_run144_r20.md",
+   "dedup_max": 0.2386,
+   "dedup_max_id": "C-852",
+   "estado": "SE",
+   "fuente": "ronda_20/ejecucion_f2/estado_vivo_r20.md",
+   "grieta": "G-NUEVA: estado vivo del ecosistema (observabilidad)",
+   "hash": "sha256:00897d6ea3a88bb10df3b87037319bfa6c598824ff314039b890317cbdaf2a09",
+   "id_proyectado": "C-1202",
+   "pares_ge_0_5": 0,
+   "tipo": "verificacion"
+  }
+ ],
+ "proyeccion": {
+  "audit_ok": "356 -> 359 (+3 fuentes distintas)",
+  "claims": "1192 -> 1197",
+  "hash_real": "1178 -> 1183",
+  "por_grieta_d05_L7": "nueva clave 1",
+  "por_grieta_observabilidad": "13 -> 16",
+  "por_grieta_tejido": "510 -> 511",
+  "por_tipo_verificacion": "318 -> 323",
+  "provenance": "368 -> 371",
+  "se": "1058 -> 1063"
+ },
+ "correccion_continuacion": {
+  "id": "CORR-CONTINUACION-F7-R20",
+  "que": "Añadidas 3 propuestas F2 (C-1200 ventana 30/0/0, C-1201 stub 'paused', C-1202 flow run 144) a las 2 originales; dedup re-corrido con las 5 juntas (3 corridas byte-idénticas, sha 7dd47742…); ventana y stub reescritos por dedup ≥ 0,5 en 1.ª redacción; §4c nueva: CORR-FOLDERID-R20 (F2 29.ª, no 28.ª).",
+  "fecha": "2026-11-15"
+ }
+}
