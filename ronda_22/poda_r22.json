@@ -1,0 +1,295 @@
+{
+ "ronda": 22,
+ "frente": "F9 PODA",
+ "fecha": "2026-11-16",
+ "medicion": "2026-11-16T08:26-08:30Z",
+ "regla": "SOLO DOCUMENTO — nada se borro, nada se movio, nada se elimino",
+ "corpus_a_la_medicion": {
+  "claims_jsonl_lineas": 1203,
+  "claims_jsonl_sha256": "fb09179d58b876989954cfebb22ca660a972cd8001b7b3073c13c0575db8744d",
+  "provenance_lineas": 377,
+  "provenance_sha256": "b680af9d5394079b25935371cb7551dc826d36f2097e64991e2ea4f3387d8451",
+  "claims_resumen_sha256": "76312918889c8051d41244e48d34c75e6df4827af41ad3a49b381dadd1daadde",
+  "confirmaciones_filas": 294,
+  "huecos_filas": 139,
+  "dataset_filas": 30,
+  "anexo_incertidumbre_items": 23,
+  "anexo_incertidumbre_sha256": "35d136fe645b9adf4878752caf6ac06fbdd798c52e023394759c878ba33255cd"
+ },
+ "tally": {
+  "total_entradas": 90,
+  "filas_tabla": 89,
+  "nota_conteo": "89 filas para 90 entradas: el padre P-15 cuenta como RESUELTO sin fila propia (convencion CORR-TALLY-R15)",
+  "PODAR": 11,
+  "PODAR_CONDICIONADO": 7,
+  "MOVER": 1,
+  "CONSERVAR": 39,
+  "CONSERVAR_TEMPORAL": 18,
+  "RESUELTO": 2,
+  "NO_CANDIDATO": 12
+ },
+ "ahorro_si_se_ejecutaran": "~508 MB locales (sin cambio respecto a r10-r21; 0 podas nuevas en r22)",
+ "temporales": {
+  "ids": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63",
+   "P-66",
+   "P-69"
+  ],
+  "nuevo_temporal": "P-69",
+  "retirados_r19": [],
+  "veces_prorroga": {
+   "undecima": [
+    "P-27",
+    "P-28",
+    "P-29b",
+    "P-31a",
+    "P-35",
+    "P-37",
+    "P-38",
+    "P-41",
+    "P-44"
+   ],
+   "septima_reevaluacion": [
+    "P-47",
+    "P-48"
+   ],
+   "sexta_reevaluacion": [
+    "P-51"
+   ],
+   "quinta_reevaluacion": [
+    "P-54",
+    "P-57"
+   ],
+   "cuarta_reevaluacion": [
+    "P-60"
+   ],
+   "tercera_reevaluacion": [
+    "P-63"
+   ],
+   "segunda_reevaluacion": [
+    "P-66"
+   ],
+   "primera": [
+    "P-69"
+   ]
+  },
+  "nuevo_horizonte": "FASE 4 r22 + FASE 2 r22; re-evaluar en r23",
+  "cadena_reversion": {
+   "eslabones": 21,
+   "bytes": 26794344,
+   "nota": "20 de r21 (25.352.716 B) + P-69 (1.441.628 B)"
+  },
+  "condiciones_retiro_r12": {
+   "copias_drive_reverificadas": "CUMPLIDA (sostenida; spot-check r22 4/4 OK)",
+   "deposito_r21_congelado": "Cumplida",
+   "condiciones_p15_reapuntadas": "NO cumplida",
+   "puerta": "2 de 3 (solo falta autorizacion)"
+  },
+  "prorrogados_r22": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63",
+   "P-66"
+  ]
+ },
+ "condicion_1_medicion": {
+  "script": "_spot_drive_r22.py",
+  "salida": "_spot_drive_r22.json",
+  "fecha": "2026-11-16T08:28Z",
+  "metodo": "Re-verificacion por descarga de 4 copias Drive de temporales (3 byte-identicas + 1 JSON por md5+contenido), muestra del conjunto 60/60 verificado en r17; descargas en el workspace, nunca en /tmp.",
+  "por_temporal": {
+   "P-27": "OK_BYTE_IDENTICO",
+   "P-35": "OK_BYTE_IDENTICO",
+   "P-48": "OK_BYTE_IDENTICO",
+   "P-47": "OK_MD5_Y_CONTENIDO"
+  },
+  "resultado_final": {
+   "n": 4,
+   "ok": 4,
+   "diferente": 0
+  },
+  "spot_check_r22": {
+   "n": 4,
+   "ok": 4
+  }
+ },
+ "p32": {
+  "es_clase_3": false,
+  "fundamento_conservar": "Reversion de D-07 + historia citada en motivo (CORR-P32-B-R15)",
+  "hash_campo_claims_vivos": 0,
+  "ocurrencias_totales": 14,
+  "claims_con_ocurrencias": 5,
+  "git_show_head_sha256": "a30d69e8bd3e9327",
+  "git_show_head_bytes": 19987,
+  "git_show_head_byte_identico_a_respaldo": true,
+  "c1203_c1204_c1205_c1206_c1207_c1208_ocurrencias": 0
+ },
+ "criba": {
+  "provenance_lineas": 377,
+  "provenance_sha256": "b680af9d5394079b25935371cb7551dc826d36f2097e64991e2ea4f3387d8451",
+  "rutas_0_ocurrencias": 60,
+  "hashes_0_ocurrencias": 43,
+  "ocurrencias_vivas_conocidas": {
+   "5fdce82d": 1,
+   "8d15b724": 1,
+   "0cf743ca": 1,
+   "a30d69e8": 1,
+   "131409eb": 1
+  },
+  "cambio_recomendacion": "ninguno"
+ },
+ "nuevos_candidatos": {
+  "P-69": {
+   "ruta": "ronda_21/respaldo_pre_absorcion_r21/",
+   "archivos": 8,
+   "bytes": 1441628,
+   "veredicto": "CONSERVAR-TEMPORAL",
+   "manifiesto_sha256": "24a0fc86335583d82170bb9ba2b2e4913c0c673ad2711c8e255709280c3d40ad",
+   "manifiesto_poda_id_historico": "P-67",
+   "sin_copia_drive": true,
+   "checks_verificacion": 8
+  },
+  "P-70": {
+   "ruta": "ronda_21/deposito/",
+   "archivos": 17,
+   "bytes": 132960,
+   "veredicto": "CONSERVAR",
+   "checks_verificacion": 17
+  },
+  "P-71": {
+   "ruta": "ronda_22/ejecucion_f2/",
+   "heartbeat": 101,
+   "raw": 11,
+   "lock_bytes": 6,
+   "bytes": 1253153,
+   "veredicto": "NO CANDIDATO",
+   "checks_verificacion": 3
+  }
+ },
+ "correcciones": {
+  "CORR-PODA-P67-R21": "P-67 asignado dos veces en r21 (F9: scripts+logs FASE 4 r20; absorcion: respaldo pre-absorcion r21). Desambiguacion r22: el respaldo es P-69 (re-etiqueta registral; el manifiesto interno conserva poda_id P-67; no se reescribe el respaldo). FASE 2 adjudica.",
+  "CORR-CADENA-R22": "La cadena de reversion tiene 21 eslabones (20 de r21 + P-69), 26.794.344 B.",
+  "CORR-COND1-R22": "Condicion 1 SOSTENIDA (spot-check 4/4 en r22); sin archivos nuevos con copia Drive que verificar (P-69 sin copia; FASE 4 r21 no deposito P-54/P-57/P-60/P-63/P-66).",
+  "CORR-P69-SIN-COPIA": "P-69 (respaldo_pre_absorcion_r21/, 8 archivos, 1.441.628 B) no tiene copia Drive: 0 menciones en los 5 archivos FASE 4 r21.",
+  "CORR-P54-P57-P60-P63-P66-R22": "FASE 4 r21 no deposito ningun respaldo: 0 menciones de respaldo_pre_absorcion_r* en los 5 archivos. Los siete temporales de absorcion (P-51, P-54, P-57, P-60, P-63, P-66, P-69) son solo locales.",
+  "CORR-ERR-R22": "El .err de F4 r21 NO reaparecio (FALTA mecanica 1 en el diff r22). Flapeo observado en vivo en r22: los .err de busqueda de F4 r22 existian ~08:25Z y ya no estaban en el escaneo T-4 (08:27:15Z). Juicio del Jardinero 2026-11-16: probablemente actividad viva del ecosistema. No es perdida de evidencia.",
+  "CORR-PYC-R22": "Censo .pyc 18 -> 19: 1 nuevo (_upload_github_r21.cpython-312.pyc, 12.649 B); 0 faltan; variograma.pyc sigue ausente.",
+  "CORR-MANIFIESTO-HUECOS-R17": "Sigue vigente: el manifiesto fase4 r22 debe construirse DESPUES de subir, no antes, o reflejar la exclusion de huecos.jsonl.",
+  "P-70": "Linea base registrada en r22 (17 archivos); en r23 se verifica contra ella. P-67 verificado en r22 contra la linea base r21: 18/18 OK.",
+  "P-32": "Total preciso 14 ocurrencias en 5 claims, sin cambio en r22 (C-1203..C-1208: 0 ocurrencias).",
+  "P-15h/P-16": "Conteo/existencia verificados en r22; sin re-verificacion individual; sin evidencia de cambio.",
+  "F1-r22": "Sin respaldo_pre_r22/ a la hora de este cierre (F1 en guardia); si F1 aplica despues, su respaldo sera candidato en r23.",
+  "CORR-VERIFICACION-P22": "F2 r22 re-midio el corpus en 1.203 lineas, mismo valor que este frente. Convergencia, no correccion.",
+  "CORR-CONTADOR-R22": "F2 r22 conto 101 payloads de heartbeat (101/101, 0 perdidas) frente a los 100 de r21; coincide con P-71. Ventana deslizada completa sin perdida."
+ },
+ "reglas": {
+  "REGLA-PODA-PROV-01": "Practica documentada, no canon adoptado",
+  "REGLA-PODA-PROV-02": "ADOPTADA (N-13, r15 F1): clase 3 con refinamiento de (a) — campo hash o motivo/nota"
+ },
+ "entregables": [
+  "poda_r22.md",
+  "poda_r22.json",
+  "inventario_t4_r22.md",
+  "diff_inventario_r22.md",
+  "manifiesto_tejido_r22.json",
+  "_verificacion_p22.json",
+  "_spot_drive_r22.json",
+  "_criba_r22.json"
+ ],
+ "verificacion_p01_p71": {
+  "script": "_verificar_p22.py",
+  "salida": "_verificacion_p22.json",
+  "fecha": "2026-11-16T08:26Z",
+  "resultado": "387/387 OK"
+ },
+ "t4_r22": {
+  "script": "_inventario_r22.py",
+  "salida": "manifiesto_tejido_r22.json",
+  "diff_script": "_diff_inventario_r22.py",
+  "diff_salida": "diff_inventario_r22.md",
+  "escaneo": "2026-11-16T08:27:15Z",
+  "archivos": 6805,
+  "bytes": 1651054424,
+  "errores_lectura": 0,
+  "base_r21": {
+   "archivos": 6517,
+   "escaneo": "2026-11-15T19:46:21Z"
+  },
+  "diff": {
+   "ok": 6512,
+   "cambio": 4,
+   "movido": 0,
+   "falta": 1,
+   "nuevo": 289
+  },
+  "cambio": [
+   "ronda_12/afirmaciones_pendientes.md",
+   "memoria/anexo-vi/claims.jsonl",
+   "memoria/anexo-vi/claims_resumen.json",
+   "memoria/anexo-vi/provenance.sha256"
+  ],
+  "nuevo_desglose": {
+   "ronda_21/absorcion": 12,
+   "ronda_21/deposito": 17,
+   "ronda_21/deposito/__pycache__": 1,
+   "ronda_21/ejecucion_f4": 2,
+   "ronda_21/ejecucion_f7": 3,
+   "ronda_21/ejecucion_f8": 8,
+   "ronda_21/ejecucion_f9": 10,
+   "ronda_21/fase_3": 9,
+   "ronda_21/fase_5": 1,
+   "ronda_21/respaldo_pre_absorcion_r21": 8,
+   "ronda_21/verificacion_fase2": 9,
+   "ronda_22/ESTADO_FASE0.md": 1,
+   "ronda_22/ejecucion_f1": 3,
+   "ronda_22/ejecucion_f2": 135,
+   "ronda_22/ejecucion_f3": 12,
+   "ronda_22/ejecucion_f3/datos": 3,
+   "ronda_22/ejecucion_f4": 16,
+   "ronda_22/ejecucion_f5": 2,
+   "ronda_22/ejecucion_f6": 16,
+   "ronda_22/ejecucion_f7": 11,
+   "ronda_22/ejecucion_f9": 7,
+   "ronda_22/frentes_r22.json": 1,
+   "ronda_22/manifiesto_shas_r22_fase0.json": 1,
+   "ronda_22/mapa_frentes_r22.md": 1
+  },
+  "fragil_02": "Sigue abierto por causa (NO_SE), sin tercer evento en r22 (testA-D siguen ausentes).",
+  "p18": "variograma.pyc sigue ausente; variograma.py intacto (sha f8ec697e...).",
+  "pyc_censo": {
+   "r21": 18,
+   "r22": 19,
+   "nuevos": 1,
+   "faltan": 0,
+   "nuevo": "ronda_21/deposito/__pycache__/_upload_github_r21.cpython-312.pyc"
+  }
+ }
+}
