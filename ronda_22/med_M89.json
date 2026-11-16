@@ -1,0 +1,173 @@
+{
+  "medicion": "M-89",
+  "dominio": "Secuencia de autocura 11→15: cadencia y efecto (metadatos de GitHub Actions, repo Jaime393/miu-ecosistema, workflow miu-autocura id 417018123)",
+  "fuente": "GitHub Actions API pública (REST sin autenticar): lista de workflows (27, 2026-11-16 ~08:19Z, cuota restante 53/60) + lista de runs del workflow miu-autocura (per_page=20, total_count 15, cuota restante 40/60) + lista de commits desde 2026-11-15T00:00:00Z (23 commits, per_page=30, cuota restante 54/60). Copias locales en datos/.",
+  "url": "https://api.github.com/repos/Jaime393/miu-ecosistema/actions/workflows/417018123/runs?per_page=20 (copia local en datos/autocura_runs_2026-11-16.json, sha256 en este JSON)",
+  "sha256_dato": "047b3702b3b0df90b905c9b6cc8da91cc0cd11023c3278675fa3b0fe3db6bafd",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r22.md, 2026-11-16T08:17:23Z): solo metadatos de la API pública (nombres/IDs de workflows, runs, commits); NUNCA el contenido del archivo YAML del workflow. Por cada run 11–15: run_number, id, created_at, updated_at, conclusion, duración (updated−created), head_sha, mensaje y timestamp del head_commit, evento, estado. Intervalos entre created_at consecutivos en minutos; cociente máx/mín como estadístico de decisión. Efecto: cruce de los head_sha con la lista de commits del repo (¿dejó la autocura algún commit propio?).",
+  "parametros": {
+    "workflow_id": 417018123,
+    "workflow_nombre": "miu-autocura",
+    "total_runs_workflow": 15,
+    "run_16_existe_al_consultar": false,
+    "runs_tabla": [
+      {
+        "run_number": 11,
+        "id": 43665102127,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T01:52:22Z",
+        "updated_at": "2026-11-15T01:52:31Z",
+        "duracion_s": 9.0,
+        "head_sha": "e758ec86aaad8837ff1d38c17c8c2ac34fed5846",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T01:10Z run 208",
+        "head_commit_timestamp": "2026-11-15T01:10:19Z"
+      },
+      {
+        "run_number": 12,
+        "id": 43698746487,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T09:20:08Z",
+        "updated_at": "2026-11-15T09:20:17Z",
+        "duracion_s": 9.0,
+        "head_sha": "138ee56b9438970f2a4aa0d0b2874a51f86ff430",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T08:08Z run 209",
+        "head_commit_timestamp": "2026-11-15T08:08:13Z"
+      },
+      {
+        "run_number": 13,
+        "id": 43739159627,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T17:05:50Z",
+        "updated_at": "2026-11-15T17:06:00Z",
+        "duracion_s": 10.0,
+        "head_sha": "85c3d72d91a4ff16d5e312add76d0b80277f6912",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T15:45Z run 210",
+        "head_commit_timestamp": "2026-11-15T15:45:46Z"
+      },
+      {
+        "run_number": 14,
+        "id": 43765476720,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T21:45:50Z",
+        "updated_at": "2026-11-15T21:46:02Z",
+        "duracion_s": 12.0,
+        "head_sha": "35d30ec2facac04e6eef69556ce9169465807af0",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T20:46Z run 211",
+        "head_commit_timestamp": "2026-11-15T20:46:29Z"
+      },
+      {
+        "run_number": 15,
+        "id": 43789672353,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T02:01:49Z",
+        "updated_at": "2026-11-16T02:01:59Z",
+        "duracion_s": 10.0,
+        "head_sha": "c331af1e2293b6244249cd72f1b09d3cce8f47f8",
+        "head_commit_mensaje": "state: auto V270 2026-11-16T00:42Z run 212",
+        "head_commit_timestamp": "2026-11-16T00:42:20Z"
+      }
+    ],
+    "intervalos_min": [
+      {
+        "de_run": 11,
+        "a_run": 12,
+        "intervalo_min": 447.77,
+        "intervalo_h": 7.463
+      },
+      {
+        "de_run": 12,
+        "a_run": 13,
+        "intervalo_min": 465.7,
+        "intervalo_h": 7.762
+      },
+      {
+        "de_run": 13,
+        "a_run": 14,
+        "intervalo_min": 280.0,
+        "intervalo_h": 4.667
+      },
+      {
+        "de_run": 14,
+        "a_run": 15,
+        "intervalo_min": 255.98,
+        "intervalo_h": 4.266
+      }
+    ],
+    "intervalo_minimo_min": 255.98,
+    "intervalo_maximo_min": 465.7,
+    "intervalo_mediana_min": 363.88,
+    "cociente_max_min_intervalos": 1.819,
+    "intervalo_10_a_11_min_contexto": 264.92,
+    "lags_head_commit_a_run_min": [
+      {
+        "run_number": 11,
+        "lag_min": 42.05
+      },
+      {
+        "run_number": 12,
+        "lag_min": 71.92
+      },
+      {
+        "run_number": 13,
+        "lag_min": 80.07
+      },
+      {
+        "run_number": 14,
+        "lag_min": 59.35
+      },
+      {
+        "run_number": 15,
+        "lag_min": 79.48
+      }
+    ],
+    "duraciones_s": [
+      9.0,
+      9.0,
+      10.0,
+      12.0,
+      10.0
+    ],
+    "conclusiones": [
+      "success",
+      "success",
+      "success",
+      "success",
+      "success"
+    ],
+    "eventos": [
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule"
+    ],
+    "heads_son_state_writer": true,
+    "commits_desde_2026_11_15": 23,
+    "commits_de_autocura_en_ventana": 0,
+    "efecto_interior_visible": false
+  },
+  "valor": 1.819,
+  "error": null,
+  "limites_validez": "La API pública no da los logs (403 en ciclos anteriores); lo que la autocura hizo dentro de cada run no es visible desde el sandbox, solo sus metadatos y el commit sobre el que corrió. La cuota sin autenticar (60/h) limita las llamadas; se usaron 3 (workflows, runs, commits). El criterio REGULAR (cociente < 2) es una convención declarada antes de correr, no un umbral derivado de primeros principios.",
+  "criterio_falsacion": "Cadencia REGULAR si el cociente máx/mín de los intervalos < 2 (todos los intervalos dentro de un factor 2 entre sí); IRREGULAR en caso contrario. La existencia del run 14 se establece como SÉ desde la API (existe con su timestamp, o falta en la secuencia). Efecto: head_commit por run; si los runs no dejan rastro verificable de cambio de estado más allá de sus propios metadatos → NO_SÉ parcial con el alcance exacto. Declarado en declaracion_falsadores_r22.md (2026-11-16T08:17:23Z) antes de correr.",
+  "veredicto": "REGULAR",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-16",
+  "extra": {
+    "run_14": "EXISTE: id 43765476720, created 2026-11-15T21:45:50Z, updated 21:46:02Z (12 s), conclusion success, event schedule, head 35d30ec2, head_commit \"state: auto V270 2026-11-15T20:46Z run 211\" (20:46:29Z). La secuencia 11→15 está completa, sin saltos; FASE 0 no lo había verificado porque caía fuera de su ventana de 30 runs.",
+    "estructura_de_la_cadencia": "Dos racimos: 11→12 = 447,77 min (7 h 27 m) y 12→13 = 465,70 min (7 h 45 m); luego 13→14 = 280,00 min (4 h 40 m) y 14→15 = 255,98 min (4 h 15 m). La cadencia se acorta tras el run 13 (media de los dos primeros 456,7 min; media de los dos últimos 268,0 min; cociente entre medias 1,70). El cociente global 1,819 < 2 da REGULAR por el criterio declarado, pero no es una cadencia constante: es regular dentro de un factor 2 con un escalón a la baja. El intervalo 10→11 (contexto, fuera de la secuencia) fue 264,92 min — del orden del segundo racimo.",
+    "efecto": "Cada run 11–15 corrió sobre el último commit \"state: auto V270\" del State Writer (runs 208–212; lag head_commit→run de 42,05 a 80,07 min). En la ventana 2026-11-15T00:00Z→consulta hay 23 commits y NINGUNO es de la autocura: todos son state (State Writer), monitor flow_id, diagnosis (Self-Diagnosis) o pulse-v2. La autocura no dejó ningún commit propio verificable en esa ventana. NO_SÉ parcial: lo que hizo dentro de cada run (10–12 s, todos success, todos event schedule) no es visible sin los logs (403).",
+    "vivo_despues_del_cierre": "Tras el run 15 (02:01:49Z) el vivo siguió: state run 213 (commit c9c926d9, 2026-11-16T07:36:49Z) ya existe en la lista de commits, pero ningún run 16 de autocura existía al consultar (~08:19Z, total_count 15).",
+    "verificacion_independiente": "Re-cómputo de intervalos, lags y cociente desde la copia local datos/autocura_runs_2026-11-16.json (otro camino de código): intervalos [447.77, 465.7, 280.0, 255.98] (medidos [447.77, 465.7, 280.0, 255.98]); cociente 1.819 (medido 1.819); lags [42.05, 71.92, 80.07, 59.35, 79.48]; duraciones [9.0, 9.0, 10.0, 12.0, 10.0]; conclusiones 5/5 success — coincide = True."
+  }
+}
