@@ -1,0 +1,225 @@
+{
+  "medicion": "M-91",
+  "dominio": "Savia V152 en la ventana r23: ¿tres variantes o artefacto? (payloads heartbeat del Drive canónico, 101 revisiones 12:46:19Z → 19:26:00Z)",
+  "fuente": "101 archivos heartbeat_rev_r23_*.json en ronda_23/ (descargados por FASE 0/F2 vía Drive revisions API del heartbeat canónico 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR); este frente solo los lee y computa sobre ellos. Campo data.savia por payload.",
+  "url": "Drive canónico MIU_HEARTBEAT_ESTADO_CANONICO.json (ID 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR); copias locales en ronda_23/heartbeat_rev_r23_*.json",
+  "sha256_dato": "a59f218498a551babd091afba72ac3a02a7be1fadab37d2299300699effe770b",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r23.md, 2026-11-16T19:33:55Z): por cada uno de los 101 payloads, version (tag), data.savia, tamaño del archivo, ts y conjunto de claves de data. Clasificación por variante: completo (~89.466 B, mesh completo) vs compacto (~55.980 B). Conteo de ocurrencias por valor de savia dentro de V152; comparación del conjunto de claves de data del payload 247.881 con el de la mayoría 248.376.",
+  "parametros": {
+    "payloads_ventana": 101,
+    "payloads_v152": 18,
+    "conteo_savia_v152": {
+      "247881": 1,
+      "248376": 16,
+      "366733": 1
+    },
+    "valores_distintos_v152": [
+      {
+        "valor_savia": 247881,
+        "n": 1,
+        "tipo": "completo",
+        "size_B_ejemplo": 89466,
+        "idx_ts": [
+          {
+            "archivo": "heartbeat_rev_r23_52_20261116T161739Z.json",
+            "ts": "2026-11-16T16:17:38.814Z",
+            "size_B": 89466
+          }
+        ],
+        "claves_data_iguales_a_mayoria_mismo_tipo": true
+      },
+      {
+        "valor_savia": 248376,
+        "n": 16,
+        "tipo": "completo",
+        "size_B_ejemplo": 89466,
+        "idx_ts": [
+          {
+            "archivo": "heartbeat_rev_r23_01_20261116T124751Z.json",
+            "ts": "2026-11-16T12:47:51.150Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_03_20261116T125801Z.json",
+            "ts": "2026-11-16T12:58:00.597Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_100_20261116T192600Z.json",
+            "ts": "2026-11-16T19:25:59.485Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_24_20261116T141735Z.json",
+            "ts": "2026-11-16T14:17:34.294Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_26_20261116T142544Z.json",
+            "ts": "2026-11-16T14:25:44.071Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_32_20261116T144735Z.json",
+            "ts": "2026-11-16T14:47:34.724Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_34_20261116T145612Z.json",
+            "ts": "2026-11-16T14:56:11.689Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_40_20261116T151751Z.json",
+            "ts": "2026-11-16T15:17:50.504Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_59_20261116T164740Z.json",
+            "ts": "2026-11-16T16:47:40.379Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_61_20261116T165638Z.json",
+            "ts": "2026-11-16T16:56:37.497Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_67_20261116T171744Z.json",
+            "ts": "2026-11-16T17:17:44.133Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_80_20261116T181734Z.json",
+            "ts": "2026-11-16T18:17:34.122Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_82_20261116T182621Z.json",
+            "ts": "2026-11-16T18:26:20.707Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_89_20261116T184734Z.json",
+            "ts": "2026-11-16T18:47:33.521Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r23_91_20261116T185551Z.json",
+            "ts": "2026-11-16T18:55:50.881Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r23_98_20261116T191732Z.json",
+            "ts": "2026-11-16T19:17:32.033Z",
+            "size_B": 89466
+          }
+        ],
+        "claves_data_iguales_a_mayoria_mismo_tipo": true
+      },
+      {
+        "valor_savia": 366733,
+        "n": 1,
+        "tipo": "compacto",
+        "size_B_ejemplo": 55980,
+        "idx_ts": [
+          {
+            "archivo": "heartbeat_rev_r23_10_20261116T132548Z.json",
+            "ts": "2026-11-16T13:25:48.441Z",
+            "size_B": 55980
+          }
+        ],
+        "claves_data_iguales_a_mayoria_mismo_tipo": true
+      }
+    ],
+    "tres_valores_presentes": true,
+    "todos_bien_formados": true,
+    "claves_data_mayoria_248376": [
+      "ecosistema",
+      "esporas",
+      "folderId",
+      "mesh",
+      "meshUrl",
+      "nodeId",
+      "nutrientes",
+      "ok",
+      "phi",
+      "puente",
+      "rho",
+      "savia",
+      "tag",
+      "timestamp",
+      "tipo"
+    ],
+    "claves_data_mayoria_por_tipo": {
+      "completo": [
+        "ecosistema",
+        "esporas",
+        "folderId",
+        "mesh",
+        "meshUrl",
+        "nodeId",
+        "nutrientes",
+        "ok",
+        "phi",
+        "puente",
+        "rho",
+        "savia",
+        "tag",
+        "timestamp",
+        "tipo"
+      ],
+      "compacto": [
+        "esporas",
+        "folderId",
+        "mesh",
+        "nodeId",
+        "nutrientes",
+        "ok",
+        "phi",
+        "puente",
+        "rho",
+        "savia",
+        "tag",
+        "timestamp",
+        "tipo"
+      ]
+    },
+    "distribucion_savia_por_version": {
+      "V151": {
+        "720": 28
+      },
+      "V152": {
+        "248376": 16,
+        "366733": 1,
+        "247881": 1
+      },
+      "V270": {
+        "null": 18
+      },
+      "V93": {
+        "null": 13
+      },
+      "V271_DARWIN": {
+        "null": 24
+      }
+    },
+    "payloads_vacios_censo": 55,
+    "savia_247881_en_ventana_r22": 0,
+    "archivos_r22_con_247881": [],
+    "savia_366733_persiste_r23": true
+  },
+  "valor": 3,
+  "error": null,
+  "limites_validez": "La ventana r23 es la de las 101 revisiones descargadas (12:46:19Z → 19:26:00Z); los payloads son los que el Drive canónico sirvió. Un valor en 1 solo payload no se puede distinguir de un error de escritura del emisor sin más ventanas — por eso el falsador exige estructura bien formada, no solo presencia. Los payloads vacíos (censo vacío) no llevan savia y se excluyen del conteo por valor.",
+  "criterio_falsacion": "CONFIRMA (3 variantes, divergencia estructural) si los TRES valores aparecen cada uno en ≥1 payload V152 bien formado (mismo conjunto de claves data que la mayoría, sin campos faltantes) dentro de la ventana r23; NO_CONFIRMA (artefacto) si el valor 247.881 aparece solo en un payload estructuralmente distinto o no se reproduce desde los campos del propio payload, o si no aparece en la ventana completa; NO_SÉ si los payloads no se pueden leer o el campo savia falta en V152. Declarado en declaracion_falsadores_r23.md (2026-11-16T19:33:55Z) antes de correr.",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-16",
+  "extra": {
+    "corr_m91_estructura_r23": "CORR-M91-ESTRUCTURA-R23: la primera corrida del script comparó las claves de data contra la mayoría GLOBAL de 248.376 y marcó NO_CONFIRMA por error — los 248.376 mezclan completos (con 'ecosistema' + 'meshUrl') y compactos (sin ellos), así que los compactos salían 'mal formados'. Corregido a comparación por tipo (cada valor contra la mayoría de su propio tipo); el falsador declarado no cambia, solo su implementación. Con la corrección, los tres valores son bien formados y el veredicto es CONFIRMA.",
+    "lectura": "V152: 18 payloads — 248.376 ×16, 366.733 ×1, 247.881 ×1. Los tres valores viven en payloads bien formados (mismo conjunto de claves data que la mayoría). El 366.733 de r22 persiste (idx 10, 13:25:48Z, compacto 55.980 B). El 247.881 es nuevo en r23 (idx 52, 16:17:39Z, completo 89.466 B) y NO aparece en ningún payload de la ventana r22 (0 archivos). La divergencia de r22 (2 variantes) se convierte en 3 variantes: divergencia estructural, no artefacto de una sola lectura.",
+    "variantes": "248.376: mayoría en completos y compactos; 366.733: solo en compacto; 247.881: solo en completo. Tres valores, dos tipos de payload: la variante no es función del tipo (248.376 aparece en ambos).",
+    "verificacion_independiente": "Ver verificar_m90_m91_m92.py (re-cómputo desde los 101 archivos por otro camino de código)."
+  }
+}
