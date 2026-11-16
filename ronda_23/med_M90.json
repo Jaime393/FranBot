@@ -1,0 +1,234 @@
+{
+  "medicion": "M-90",
+  "dominio": "Secuencia de autocura 11→16: ¿se rompe el escalón ~4,5 h? (metadatos de GitHub Actions, repo Jaime393/miu-ecosistema, workflow miu-autocura id 417018123)",
+  "fuente": "GitHub Actions API pública (REST sin autenticar): lista de runs del workflow miu-autocura (per_page=20, total_count 16) + lista de commits desde 2026-11-16T00:00:00Z (per_page=30). Copias locales en datos/.",
+  "url": "https://api.github.com/repos/Jaime393/miu-ecosistema/actions/workflows/417018123/runs?per_page=20 (copia local en datos/autocura_runs_2026-11-16.json, sha256 en este JSON)",
+  "sha256_dato": "ea1e79e1818827d3223a9e8173c907f31085e74849b8095e2570f5bc9c83db7d",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r23.md, 2026-11-16T19:33:55Z): solo metadatos de la API pública (nombres/IDs de workflows, runs, commits); NUNCA el contenido del archivo YAML del workflow. Por cada run 11–16: run_number, id, created_at, updated_at, conclusion, duración (updated−created), head_sha, mensaje y timestamp del head_commit, evento, estado. Intervalos entre created_at consecutivos en minutos; bandas de referencia publicadas en r22: racimo ~7,5 h [447,77, 465,70] min, escalón ~4,5 h [255,98, 280,00] min; cociente máx/mín como control.",
+  "parametros": {
+    "workflow_id": 417018123,
+    "workflow_nombre": "miu-autocura",
+    "total_runs_workflow": 16,
+    "run_17_existe_al_consultar": false,
+    "runs_tabla": [
+      {
+        "run_number": 11,
+        "id": 43665102127,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T01:52:22Z",
+        "updated_at": "2026-11-15T01:52:31Z",
+        "duracion_s": 9.0,
+        "head_sha": "e758ec86aaad8837ff1d38c17c8c2ac34fed5846",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T01:10Z run 208",
+        "head_commit_timestamp": "2026-11-15T01:10:19Z"
+      },
+      {
+        "run_number": 12,
+        "id": 43698746487,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T09:20:08Z",
+        "updated_at": "2026-11-15T09:20:17Z",
+        "duracion_s": 9.0,
+        "head_sha": "138ee56b9438970f2a4aa0d0b2874a51f86ff430",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T08:08Z run 209",
+        "head_commit_timestamp": "2026-11-15T08:08:13Z"
+      },
+      {
+        "run_number": 13,
+        "id": 43739159627,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T17:05:50Z",
+        "updated_at": "2026-11-15T17:06:00Z",
+        "duracion_s": 10.0,
+        "head_sha": "85c3d72d91a4ff16d5e312add76d0b80277f6912",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T15:45Z run 210",
+        "head_commit_timestamp": "2026-11-15T15:45:46Z"
+      },
+      {
+        "run_number": 14,
+        "id": 43765476720,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T21:45:50Z",
+        "updated_at": "2026-11-15T21:46:02Z",
+        "duracion_s": 12.0,
+        "head_sha": "35d30ec2facac04e6eef69556ce9169465807af0",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T20:46Z run 211",
+        "head_commit_timestamp": "2026-11-15T20:46:29Z"
+      },
+      {
+        "run_number": 15,
+        "id": 43789672353,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T02:01:49Z",
+        "updated_at": "2026-11-16T02:01:59Z",
+        "duracion_s": 10.0,
+        "head_sha": "c331af1e2293b6244249cd72f1b09d3cce8f47f8",
+        "head_commit_mensaje": "state: auto V270 2026-11-16T00:42Z run 212",
+        "head_commit_timestamp": "2026-11-16T00:42:20Z"
+      },
+      {
+        "run_number": 16,
+        "id": 43841322776,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T09:36:57Z",
+        "updated_at": "2026-11-16T09:37:07Z",
+        "duracion_s": 10.0,
+        "head_sha": "c9c926d9a5d00316dcbcd416c3e00e506d2dc6b2",
+        "head_commit_mensaje": "state: auto V270 2026-11-16T07:36Z run 213",
+        "head_commit_timestamp": "2026-11-16T07:36:49Z"
+      }
+    ],
+    "intervalos_min": [
+      {
+        "de_run": 11,
+        "a_run": 12,
+        "intervalo_min": 447.77,
+        "intervalo_h": 7.463
+      },
+      {
+        "de_run": 12,
+        "a_run": 13,
+        "intervalo_min": 465.7,
+        "intervalo_h": 7.762
+      },
+      {
+        "de_run": 13,
+        "a_run": 14,
+        "intervalo_min": 280.0,
+        "intervalo_h": 4.667
+      },
+      {
+        "de_run": 14,
+        "a_run": 15,
+        "intervalo_min": 255.98,
+        "intervalo_h": 4.266
+      },
+      {
+        "de_run": 15,
+        "a_run": 16,
+        "intervalo_min": 455.13,
+        "intervalo_h": 7.585
+      }
+    ],
+    "intervalo_minimo_min": 255.98,
+    "intervalo_maximo_min": 465.7,
+    "intervalo_mediana_min": 447.77,
+    "cociente_max_min_intervalos": 1.819,
+    "intervalo_15_a_16_min": 455.13,
+    "banda_75h_min": [
+      447.77,
+      465.7
+    ],
+    "banda_45h_min": [
+      255.98,
+      280.0
+    ],
+    "intervalo_15_a_16_en_banda_75h": true,
+    "intervalo_15_a_16_en_banda_45h": false,
+    "lags_head_commit_a_run_min": [
+      {
+        "run_number": 11,
+        "lag_min": 42.05
+      },
+      {
+        "run_number": 12,
+        "lag_min": 71.92
+      },
+      {
+        "run_number": 13,
+        "lag_min": 80.07
+      },
+      {
+        "run_number": 14,
+        "lag_min": 59.35
+      },
+      {
+        "run_number": 15,
+        "lag_min": 79.48
+      },
+      {
+        "run_number": 16,
+        "lag_min": 120.13
+      }
+    ],
+    "duraciones_s": [
+      9.0,
+      9.0,
+      10.0,
+      12.0,
+      10.0,
+      10.0
+    ],
+    "conclusiones": [
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success"
+    ],
+    "eventos": [
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule"
+    ],
+    "heads_son_state_writer": true,
+    "commits_desde_2026_11_16": 10,
+    "commits_posteriores_al_head_del_run16": 4,
+    "commits_posteriores_lista": [
+      {
+        "sha": "fc03539a",
+        "ts": "2026-11-16T17:53:15Z",
+        "autor": "MIU State Writer",
+        "mensaje": "state: auto V270 2026-11-16T17:53Z run 214"
+      },
+      {
+        "sha": "1308c710",
+        "ts": "2026-11-16T17:14:19Z",
+        "autor": "MIU Flow-ID Monitor",
+        "mensaje": "monitor: flow_id coverage 17:14Z"
+      },
+      {
+        "sha": "1747eb86",
+        "ts": "2026-11-16T12:09:33Z",
+        "autor": "MIU Self-Diagnosis",
+        "mensaje": "diagnosis: auto 2026-11-16T12:09Z ciclo="
+      },
+      {
+        "sha": "443c62ca",
+        "ts": "2026-11-16T10:57:34Z",
+        "autor": "MIU Pulse V2",
+        "mensaje": "pulse-v2: run 175 10:57Z"
+      }
+    ],
+    "efecto_interior_visible": false
+  },
+  "valor": 455.13,
+  "error": null,
+  "limites_validez": "La API pública no da los logs (403 en ciclos anteriores); lo que la autocura hizo dentro de cada run no es visible desde el sandbox, solo sus metadatos y el commit sobre el que corrió. Las bandas de referencia son racimos observados en r22 (2 puntos cada uno), no umbrales derivados de primeros principios. La cuota sin autenticar (60/h) es compartida por los frentes en paralelo; la llamada a /contents devolvió 403 rate limit en esta ronda (ver M-92).",
+  "criterio_falsacion": "CONFIRMA si el intervalo 15→16 cae FUERA de la banda del escalón [255,98, 280,00] Y DENTRO de la banda ~7,5 h [447,77, 465,70] (el escalón era transitorio, la cadencia vuelve a ~7,5 h); NO_CONFIRMA si cae DENTRO de la banda del escalón (escalón sostenido); REGULAR si cae fuera de ambas bandas pero el cociente máx/mín de los 5 intervalos sigue < 2; NO_SÉ si el run 16 no existe o la secuencia 11→16 está incompleta. Declarado en declaracion_falsadores_r23.md (2026-11-16T19:33:55Z) antes de correr.",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-16",
+  "extra": {
+    "escalon": "El intervalo 15→16 = 455.13 min (7.59 h) cae DENTRO de la banda ~7,5 h [447,77, 465,70] y FUERA de la banda del escalón [255,98, 280,00]: el escalón ~4,5 h (runs 13→14 y 14→15) era transitorio; la cadencia vuelve al racimo ~7,5 h. Estructura en tres racimos: ~7,5 h (447,77 / 465,70 / 455,13), ~4,5 h (280,00 / 255,98). Media racimo ~7,5 h = 456,20 min; media escalón = 267,99 min; cociente entre medias 1,70. El cociente global máx/mín de los 5 intervalos = 1.819 (máx 465,70, mín 255,98) — idéntico al de r22 porque ni el máx ni el mín cambiaron.",
+    "efecto": "Cada run 11–16 corrió sobre el último commit 'state: auto V270' del State Writer (runs 208–214; lag head_commit→run de 42.05 a 120.13 min). Run 16: head c9c926d9 (state run 213, 2026-11-16T07:36:49Z). Tras el head del run 16 hay 4 commits en la ventana (state run 214, monitor flow, diagnosis, pulse-v2); NINGUNO es de la autocura. NO_SÉ parcial: lo que hizo dentro de cada run (duraciones [9.0, 9.0, 10.0, 12.0, 10.0, 10.0] s, todos success, todos event schedule) no es visible sin los logs (403).",
+    "vivo_despues_del_cierre": "Tras el run 16 (2026-11-16T09:36:57Z) el vivo siguió: state run 214 (commit fc03539a, 2026-11-16T17:53:15Z) ya existe; ningún run 17 de autocura existía al consultar (total_count 16).",
+    "verificacion_independiente": "Ver verificar_m90_m91_m92.py (re-cómputo desde las copias locales por otro camino de código)."
+  }
+}
