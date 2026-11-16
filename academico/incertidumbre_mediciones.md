@@ -1,4 +1,4 @@
-# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-89
+# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-92
 
 - **Creado:** 2026-11-14, por decisión N-16 (opción C, anexo de incertidumbre).
 - **Decisión:** N-16, aplicada en ronda 15 F1 bajo el régimen 2026-11-14 01:43 -05 (las decisiones se aplican automáticamente). Paquete: `ronda_13/ejecucion_f7/propuesta_inscripcion_dataset_r13.md` (sha `707f98c1…`, DC-R13-F7-01, opción C recomendada). Registro de la decisión: `ronda_15/ejecucion_f1/decision_n16_r15.md` / `.json`.
@@ -271,6 +271,42 @@
 - **Cara:** ninguna cara del censo d08 — es observabilidad del vivo. Este ítem es seguimiento del vivo (la autocura volvió a correr y acelera), no cierre de cara.
 
 
+## M-90 — CONFIRMA (r23, 2026-11-16) — ítem añadido por N-36
+
+- **Valor:** secuencia de autocura 11→16 (workflow miu-autocura, id 417018123): run 16 EXISTE (2026-11-16T09:36:57Z, success, id 43841322776, duración 10,0 s, head c9c926d9 = commit del State Writer run 213). Secuencia completa verificada run por run (11: 01:52:22Z; 12: 09:20:08Z; 13: 17:05:50Z; 14: 21:45:50Z; 15: 02:01:49Z; 16: 09:36:57Z), todos success, duraciones [9,0, 9,0, 10,0, 12,0, 10,0, 10,0] s. Intervalos: 11→12 = 447,77 min; 12→13 = 465,70 min; 13→14 = 280,00 min; 14→15 = 255,98 min; **15→16 = 455,13 min (7,59 h)**. El intervalo 15→16 cae DENTRO de la banda ~7,5 h [447,77, 465,70] y FUERA de la banda del escalón [255,98, 280,00]: el escalón ~4,5 h era transitorio y la cadencia vuelve a ~7,5 h. Cociente máx/mín de la serie 1,819 (sin cambio: ni el máx 465,70 ni el mín 255,98 cambiaron). Sin run 17 al cierre (10 h 21 min desde el 16).
+- **Falsador:** CONFIRMA si el intervalo 15→16 cae FUERA de la banda del escalón [255,98, 280,00] Y DENTRO de la banda ~7,5 h [447,77, 465,70]; NO_CONFIRMA si cae DENTRO de la banda del escalón. Declarado antes de correr. **Veredicto:** CONFIRMA (455,13 dentro de ~7,5 h, fuera del escalón).
+- **Matiz — dos racimos, no deriva:** la serie tiene estructura en dos racimos: ~7,5 h (447,77 / 465,70 / 455,13; media 456,20) y ~4,5 h (280,00 / 255,98; media 267,99), cociente entre medias 1,70. No es una aceleración continua ni una deriva monótona: dos intervalos largos, dos cortos, uno largo. El criterio < 2 de M-89 (cociente 1,819) sigue sin distinguir el escalón; este ítem registra los racimos para que la próxima vuelta vea si el ~4,5 h reaparece o si la cadencia se queda en ~7,5 h.
+- **Secundarios (NO decisorios):** verificación independiente (otro camino de código): intervalos [447,77, 465,70, 280,00, 255,98, 455,13], cociente 1,819 — coincide. Cada run corre sobre el HEAD del State Writer vigente (run 16 sobre c9c926d9). Igual que en r13–r22, ningún run de autocura escribió nada en el repo (0 commits propios en la ventana). Lo que hizo cada run dentro de sus 9–12 s no es visible sin los logs (403): NO_SÉ parcial con el alcance exacto.
+- **Lección para la próxima vuelta:** M-89 dejó la pregunta abierta (¿el escalón se sostiene o vuelve a ~7,5 h?) y r23 la responde: vuelve a ~7,5 h. La próxima vuelta mide si el ~4,5 h reaparece (un segundo escalón) o si la cadencia se estabiliza en ~7,5 h — y si aparece el run 17.
+- **Fuente:** API pública de GitHub, runs del workflow miu-autocura (sin auth). **sha:** `e3c99cdc55afd1952a96e4ed1f0ae2ca044278f9777bd0a84aadc6164f164d51` (med_M90.json, 15 claves; verificación independiente coincide).
+- **¿Da fila?** NO (anotación): registra la cadencia y la existencia de runs de un workflow del vivo; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** ninguna cara del censo d08 — es observabilidad del vivo. Este ítem es seguimiento del vivo (el escalón se rompe), no cierre de cara.
+
+
+## M-91 — CONFIRMA (r23, 2026-11-16) — ítem añadido por N-37
+
+- **Valor:** savia V152 en la ventana r23 (101 revisiones heartbeat, 12:46:19Z → 19:26:00Z): **18 payloads V152 con TRES valores** — 248.376 ×16 (9 full 89.466 B + 7 compactos 55.973 B), 366.733 ×1 (compacto 55.980 B, idx 10, 13:25:48Z — el divergente de r22 persiste) y 247.881 ×1 (full 89.466 B, idx 52, 16:17:39Z — tercer valor, nuevo; 0 apariciones en la ventana r22). Los tres valores viven en payloads bien formados (mismo conjunto de claves data que la mayoría de su propio tipo). La variante no es función del tipo: 248.376 aparece en completos y compactos; 366.733 solo en compacto; 247.881 solo en completo. Diferencias: 366.733 es +118.357 (+47,6%) sobre 248.376; 247.881 es −495 (−0,2%). Verificado en el payload: data.savia = data.mesh.totalSize en los tres; esporas 512 (entero) en 18/18.
+- **Falsador:** CONFIRMA (3 variantes, divergencia estructural) si los TRES valores aparecen cada uno en ≥1 payload V152 bien formado (mismo conjunto de claves data que la mayoría, sin campos faltantes) dentro de la ventana r23; NO_CONFIRMA si algún valor vive solo en payloads mal formados o no aparece. Declarado antes de correr. **Veredicto:** CONFIRMA (los tres bien formados).
+- **Matiz — CORR-M91-ESTRUCTURA-R23:** la primera corrida del script comparó las claves de data contra la mayoría GLOBAL de 248.376 y marcó NO_CONFIRMA por error — los 248.376 mezclan completos (con 'ecosistema' + 'meshUrl') y compactos (sin ellos), así que los compactos salían "mal formados". Corregido a comparación por tipo (cada valor contra la mayoría de su propio tipo); el falsador declarado no cambia, solo su implementación. Con la corrección, los tres valores son bien formados y el veredicto es CONFIRMA. La divergencia de r22 (2 variantes) se convierte en 3 variantes: divergencia estructural, no artefacto de una sola lectura. Un valor en 1 solo payload no se puede distinguir de un error de escritura del emisor sin más ventanas — la persistencia del 366.733 (r22 → r23) y la aparición del 247.881 en full son lo que sostiene "estructural" frente a "ruido".
+- **Secundarios (NO decisorios):** verificación independiente (otro camino de código, desde los 101 archivos): conteo 248.376 ×16 / 366.733 ×1 / 247.881 ×1 — coincide. Nota de conteo: F2 §4 r23 dice "248.376 en 15/17"; F7 recontó por su cuenta los 101 payloads y confirma 16/18 (F2 subcuenta un compacto 55.973 B con 248.376) — a adjudicar en FASE 2; el ítem usa los números de M-91, verificados.
+- **Lección para la próxima vuelta:** la divergencia crece (2 → 3 valores) y cruza de variante (el tercer valor es full, no compacto). La próxima vuelta mide si el 247.881 persiste o si fue un solo payload, y si aparece un cuarto valor.
+- **Fuente:** 101 archivos heartbeat_rev_r23_*.json (Drive revisions API del heartbeat canónico 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR). **sha:** `a63d0e6d55b22a0976645c54a7075cbb9ea505e8df338f91188680268d4e1cb5` (med_M91.json, 15 claves; verificación independiente coincide).
+- **¿Da fila?** NO (anotación): registra la divergencia de un campo del vivo; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** ninguna cara del censo d08 — es observabilidad del vivo. Este ítem es seguimiento del vivo (la divergencia se profundiza), no cierre de cara.
+
+
+## M-92 — CONFIRMA (r23, 2026-11-16) — ítem añadido por N-38
+
+- **Valor:** Flow-ID run 149 EXISTE (2026-11-16T17:14:14Z, success, id 43916227996, event schedule) y flow_id_coverage.json mide **0,0% CRÍTICO, 0 eventos**, estado critico, eco 0,0%, alerta 'CRITICO: cobertura flow_id 0.0% < 30%' (archivo ts 2026-11-16T17:14:19.773803Z, lag run→escritura 0,10 min; archivo 832 B, sha256 9e689a07…). Runs 145→149: 5/5 success en 0,0% con 0 eventos. Intervalos entre runs 145→149: [311,12, 242,35, 412,08, 613,77] min (mín 242,35, máx 613,77, mediana 412,08): el monitor escribe cada ~4–10 h (mediana ~6 h), no cada 30 min como declara su cron — mismo patrón que en r12–r22. **15.ª ronda consecutiva en 0,0%** (r11 100,0% → r12–r23 0,0%).
+- **Falsador:** CONFIRMA si el run 149 existe con cobertura 0,0% y 0 eventos Y los runs 145→149 son 5/5 en 0,0% con 0 eventos → el cero absoluto persiste, 15.ª ronda en 0,0%; NO_CONFIRMA si cobertura > 0,0% o eventos > 0 en el run 149 o en la serie. Declarado antes de correr. **Veredicto:** CONFIRMA (cero absoluto, sin un solo evento en la muestra).
+- **Matiz — parcial NO_SÉ sobre el run 147:** su archivo fue sobrescrito antes de que ninguna ronda lo leyera (run 147 creado 2026-11-16T00:08:23Z, entre el cierre de r21 y FASE 0 r22). Runs 145 y 146 medidos en 0,0% en r21 (FASE 2 r21 registró el 146), run 148 en 0,0% en r22, run 149 en 0,0% aquí. La serie de RONDAS 11.ª–15.ª en 0,0% se sostiene por una lectura por ronda; el veredicto descansa en el archivo actual (run 149) + esa serie, no en una lectura individual del 147. POR QUÉ mide cero es NO_SÉ (logs 403, contenido del workflow fuera de alcance por regla dura).
+- **Secundarios (NO decisorios):** verificación independiente (otro camino de código): run 149 existe, cobertura 0,0%, 0 eventos — coincide. La cadencia rota del monitor (~4–10 h contra cron de 30 min) es el mismo patrón que State Writer, Pulse V2, Observabilidad, Self-Diagnosis y autocura en r23 (~8–10 h contra sus crons).
+- **Lección para la próxima vuelta:** el cero es absoluto y persistente (15 rondas). La pregunta ya no es si el monitor mide cero, sino si alguna vez medirá otra cosa; la próxima vuelta lo registra igual, sin esperar cambio.
+- **Fuente:** API pública de GitHub, runs del workflow MIU Flow-ID Coverage Monitor (id 375168071, sin auth) + observabilidad/flow_id_coverage.json por API contents. **sha:** `191783d4a5dffc6fc979936309e38cc2ecb4909ed23cb3aa77b00023ad6fa612` (med_M92.json, 15 claves; verificación independiente coincide).
+- **¿Da fila?** NO (anotación): registra la cobertura de un monitor del vivo; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** d09 L20 (seguimiento del vivo; la cara no se cierra con esta medición — el cero persiste sin mecanismo).
+
+
 ## Resumen
 
 | Med. | Veredicto | Valor | Fila | Cara |
@@ -300,8 +336,11 @@
 | M-86 | CONFIRMA | censo β∧R²: 0 cruces; R² máx 0,7490 | NO (anotación) | d05 L7 |
 | M-87 | NO_CONFIRMA | pendiente log P2 +0,000395, IC [−0,006890, 0,008327] incluye 0; tercera especificación sin tendencia | NO (anotación) | d05 L4 |
 | M-89 | REGULAR | autocura 11→15, cociente máx/mín 1,819 < 2; escalón ~7,5 h → ~4,5 h; efecto NO_SÉ parcial | NO (anotación) | observabilidad |
+| M-90 | CONFIRMA | autocura 11→16, intervalo 15→16 = 455,13 min; escalón ~4,5 h roto, vuelta a ~7,5 h; cociente 1,819 sin cambio | NO (anotación) | observabilidad |
+| M-91 | CONFIRMA | savia V152 en 3 valores: 248.376 ×16, 366.733 ×1 (persiste), 247.881 ×1 (nuevo, full); variante no función del tipo | NO (anotación) | observabilidad |
+| M-92 | CONFIRMA | flow run 149, 0,0%, 0 eventos, 15.ª ronda; intervalos 145→149 [311,12, 242,35, 412,08, 613,77] min | NO (anotación) | d09 L20 |
 
-**Tally:** CONFIRMA 14 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83, M-85, M-86) · NO_CONFIRMA 8 (M-57, M-61, M-64, M-65, M-69, M-76, M-84, M-87) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58) · REGULAR 1 (M-89). Ítems: 25 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83, M-84, M-85, M-86, M-87, M-89). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
+**Tally:** CONFIRMA 17 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83, M-85, M-86, M-90, M-91, M-92) · NO_CONFIRMA 8 (M-57, M-61, M-64, M-65, M-69, M-76, M-84, M-87) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58) · REGULAR 1 (M-89). Ítems: 28 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83, M-84, M-85, M-86, M-87, M-89, M-90, M-91, M-92). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
 
 **Ítems futuros:** las mediciones que tampoco den fila se añaden a este anexo por la misma vía (F7 prepara el ítem, F1 lo añade). Una medición que entregue un D_f de nodo inscribe su fila en el CSV por decisión propia, no por este anexo.
 
