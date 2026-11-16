@@ -1,0 +1,90 @@
+{
+ "pendiente_log_m87": {
+  "max": 0.3417,
+  "max_id": "C-1203",
+  "top3": [
+   [
+    0.3417,
+    "C-1203"
+   ],
+   [
+    0.1913,
+    "C-1204"
+   ],
+   [
+    0.1838,
+    "C-1198"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "autocura_run14_m89": {
+  "max": 0.1745,
+  "max_id": "C-1178",
+  "top3": [
+   [
+    0.1745,
+    "C-1178"
+   ],
+   [
+    0.1721,
+    "C-1182"
+   ],
+   [
+    0.1567,
+    "C-1197"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "savia_diverge": {
+  "max": 0.1615,
+  "max_id": "C-1175",
+  "top3": [
+   [
+    0.1615,
+    "C-1175"
+   ],
+   [
+    0.1545,
+    "C-1182"
+   ],
+   [
+    0.1517,
+    "C-1189"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "stub_ventana_flow": {
+  "max": 0.2905,
+  "max_id": "C-1206",
+  "top3": [
+   [
+    0.2905,
+    "C-1206"
+   ],
+   [
+    0.2484,
+    "C-1178"
+   ],
+   [
+    0.2254,
+    "C-1193"
+   ]
+  ],
+  "pares_ge_0_5": 0
+ },
+ "_entre_propuestas": {
+  "max": 0.1409,
+  "pares": {
+   "pendiente_log_m87/autocura_run14_m89": 0.1185,
+   "pendiente_log_m87/savia_diverge": 0.087,
+   "pendiente_log_m87/stub_ventana_flow": 0.0987,
+   "autocura_run14_m89/savia_diverge": 0.1087,
+   "autocura_run14_m89/stub_ventana_flow": 0.1409,
+   "savia_diverge/stub_ventana_flow": 0.1192
+  }
+ },
+ "_global_max": 0.3417
+}
