@@ -1,0 +1,18 @@
+{
+  "entradas": [
+    {
+      "archivo": "tabla_nutriente_vector.json",
+      "sha256": "a4b0576a015c6feb62461770aff5caa2bf129ec1e87235371702f99821f50fab",
+      "bytes": 9132,
+      "descripcion": "Tabla de traducciones nutriente canónico <-> vector attest (14 claves; no_traducible documentado)."
+    },
+    {
+      "archivo": "traducir_nutriente_vector.py",
+      "sha256": "a9482ba86ae35355d638183161498de48abb77851f4debbdc97008450472d0f2",
+      "bytes": 11516,
+      "descripcion": "Traductor + test round-trip. Test 2026-11-16: 15/15 PASS, exit 0."
+    }
+  ],
+  "puente": "nutriente <-> vector (ALMA I)",
+  "test": "python3 traducir_nutriente_vector.py -> 15/15 PASS (NUT-2026-11-14-001..015)"
+}

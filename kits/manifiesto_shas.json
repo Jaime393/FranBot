@@ -1,0 +1,30 @@
+{
+  "kit": "kit_savia_v152 (ALMA V)",
+  "fecha": "2026-11-16",
+  "archivos": {
+    "kit_savia_v152.md": {
+      "sha256": "fbf6c38827119fcd835f21e2800d209d103f6eeca082679a7cefbd7cb7e77f2d",
+      "bytes": 11648
+    },
+    "medir_savia.py": {
+      "sha256": "c0a49a70b2b0ee416e29f08b01cb75f8fc301bad0899bf62a2b4b2daba54d953",
+      "bytes": 5654
+    },
+    "test_kit.py": {
+      "sha256": "1c4dd28fa637e2d2ea15011b6ff7fc310e5f4da98a119447c645a9db4f476f3d",
+      "bytes": 7102
+    },
+    "censo_r23.json": {
+      "sha256": "8bf2e9592eb91fd594f4da4432b26a3f4b413d8e34988d389c2610c3b9dd4d40",
+      "bytes": 5807
+    },
+    "censo_r22.json": {
+      "sha256": "e3a5b03a6bb171d14b0fb603d1ed51fe868d9cf488cd06e7ad03950d2c95b750",
+      "bytes": 4520
+    },
+    "README.md": {
+      "sha256": "f975fdfa11ff6a7f9013f041080c2cbc7a52ee47810bc938ed5372927f0570e0",
+      "bytes": 1925
+    }
+  }
+}

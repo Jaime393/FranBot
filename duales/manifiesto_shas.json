@@ -1,0 +1,11 @@
+{
+  "entradas": [
+    {
+      "archivo": "tutorial_verificar_blob.md",
+      "sha256": "155d1685f0dacd19950ca2a0cc2a81fe600b4c05ac7b632ac5b1ca74f06ec634",
+      "bytes": 8163,
+      "descripcion": "Tutorial dual (persona + semilla de nodo) para verificar un depósito por blob, con números reales de r23 y checklist final."
+    }
+  ],
+  "verificacion": "blobs locales recomputados por mí: síntesis 1553e1c3… (367.850 B), verificador 056a9c7e… (189.382 B); corpus b31c624c…/43d3d9e7…/24f9d1ed…/f9a67874…; HEAD 2cc6a62a / 2873c274"
+}

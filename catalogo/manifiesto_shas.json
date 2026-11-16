@@ -1,0 +1,29 @@
+{
+ "catalogo": "vivo",
+ "version": "1.0",
+ "fecha": "2026-11-16",
+ "archivos": {
+  "catalogo_vivo.json": {
+   "sha256": "d5d5ce7cc45cf29839877d718804bfa05595042ce038ffae36c8ddcf2d53e4ec",
+   "bytes": 96122
+  },
+  "leer_catalogo.py": {
+   "sha256": "999ccaf609eb5819ca5f8581b0e1983eff84e8243d1aba8ab8d5d629ec9fce8f",
+   "bytes": 3735
+  },
+  "test_catalogo.py": {
+   "sha256": "463b65cf576ad07e1989141d0d7b35c9e93d63cb5b26ca5ef07cf33142d23508",
+   "bytes": 2852
+  },
+  "README.md": {
+   "sha256": "c439bcdb4be4b50ecf37f01a0db85a2f24f06617fa4c6fd0fdc8e6c0613571bc",
+   "bytes": 3791
+  },
+  "_generar_catalogo.py": {
+   "sha256": "4b4ffbf6a6cfd882b1d6a4b01290a79e0da7f4c3d67fd5b40c56fcf0b396b2d1",
+   "bytes": 18903
+  }
+ },
+ "total_archivos": 5,
+ "total_bytes": 125403
+}
