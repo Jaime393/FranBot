@@ -1,0 +1,706 @@
+{
+ "aristas": [
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-run213",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-ventana00",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-flow148",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-v93",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-bots",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-selfdiag",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-folderid",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F2",
+   "origen": "r22:H-F2-gap",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F3",
+   "origen": "r22:H-F3-M87",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F3",
+   "origen": "r22:H-F3-M88",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F3",
+   "origen": "r22:H-F3-M89",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F6",
+   "origen": "r22:H-F6-hsik",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F6",
+   "origen": "r22:H-F6-ff",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F6",
+   "origen": "r22:H-F6-a14",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F6",
+   "origen": "r22:H-F6-vocesagotada",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F6",
+   "origen": "r22:H-F6-umb22",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F5",
+   "origen": "r22:H-F5-g03",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F5",
+   "origen": "r22:H-F5-g05",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F5",
+   "origen": "r22:H-F5-hsuelo",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F4",
+   "origen": "r22:H-F4-caraavanza",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F4",
+   "origen": "r22:H-F4-h1metodo",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F4",
+   "origen": "r22:H-F4-graph",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F9",
+   "origen": "r22:H-F9-cond1",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F9",
+   "origen": "r22:H-F9-tally90",
+   "relacion": "de"
+  },
+  {
+   "destino": "r22:F7",
+   "origen": "r22:D-C-1209",
+   "relacion": "pendiente_de"
+  },
+  {
+   "destino": "r22:F7",
+   "origen": "r22:D-C-1210",
+   "relacion": "pendiente_de"
+  },
+  {
+   "destino": "r22:F7",
+   "origen": "r22:D-C-1211",
+   "relacion": "pendiente_de"
+  },
+  {
+   "destino": "r22:F7",
+   "origen": "r22:D-C-1212",
+   "relacion": "pendiente_de"
+  },
+  {
+   "destino": "r22:F7",
+   "origen": "r22:D-N-34",
+   "relacion": "pendiente_de"
+  },
+  {
+   "destino": "r22:F7",
+   "origen": "r22:D-N-35",
+   "relacion": "pendiente_de"
+  },
+  {
+   "destino": "r22:D-N-15",
+   "origen": "r22:F5",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:D-N-03",
+   "origen": "r22:F5",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:D-D-06",
+   "origen": "r22:F5",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:D-D-09",
+   "origen": "r22:F5",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:D-C-1209",
+   "origen": "r22:H-F3-M87",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-C-1210",
+   "origen": "r22:H-F3-M89",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-C-1211",
+   "origen": "r22:H-F2-v93",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-C-1212",
+   "origen": "r22:H-F2-run213",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-C-1212",
+   "origen": "r22:H-F2-ventana00",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-C-1212",
+   "origen": "r22:H-F2-flow148",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-N-34",
+   "origen": "r22:H-F3-M87",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:D-N-35",
+   "origen": "r22:H-F3-M89",
+   "relacion": "alimenta"
+  },
+  {
+   "destino": "r22:R-corpus",
+   "origen": "r22:F1",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-audit",
+   "origen": "r22:F1",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-verifyall",
+   "origen": "r22:F1",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-provenance",
+   "origen": "r22:F1",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-franbot",
+   "origen": "r22:F1",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-run213",
+   "origen": "r22:F2",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-flow148",
+   "origen": "r22:F2",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-persistente",
+   "origen": "r22:F2",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-micelio",
+   "origen": "r22:F2",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-hsall",
+   "origen": "r22:F3",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-indicators",
+   "origen": "r22:F3",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-dataset",
+   "origen": "r22:F3",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-paperdf",
+   "origen": "r22:F3",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-doc96",
+   "origen": "r22:F4",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-carpeta",
+   "origen": "r22:F4",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-panteon16",
+   "origen": "r22:F4",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-bundle",
+   "origen": "r22:F4",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-umbral",
+   "origen": "r22:F6",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-anexo",
+   "origen": "r22:F7",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-corpus",
+   "origen": "r22:F8",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:R-corpus",
+   "origen": "r22:F9",
+   "relacion": "cita"
+  },
+  {
+   "destino": "r22:H-F5-g05",
+   "origen": "r22:H-F2-folderid",
+   "relacion": "refuerza"
+  },
+  {
+   "destino": "r22:F6",
+   "origen": "r22:H-F6-hsik",
+   "relacion": "sostiene"
+  },
+  {
+   "destino": "r22:H-F2-flow148",
+   "origen": "r22:H-F2-run213",
+   "relacion": "acompaña"
+  },
+  {
+   "destino": "r22:H-F2-flow148",
+   "origen": "r22:H-F2-ventana00",
+   "relacion": "acompaña"
+  },
+  {
+   "destino": "r22:D-C-1209",
+   "origen": "r22:F7",
+   "relacion": "incluye"
+  },
+  {
+   "destino": "r22:D-C-1212",
+   "origen": "r22:F7",
+   "relacion": "incluye"
+  },
+  {
+   "destino": "r22:H-F2-ventana00",
+   "origen": "r22:F8",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:H-F4-caraavanza",
+   "origen": "r22:F8",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:H-F3-M87",
+   "origen": "r22:F8",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:H-F6-vocesagotada",
+   "origen": "r22:F8",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:H-F9-tally90",
+   "origen": "r22:F8",
+   "relacion": "registra"
+  },
+  {
+   "destino": "r22:D-N-15",
+   "origen": "r22:F5",
+   "relacion": "cerrada_por"
+  },
+  {
+   "destino": "r22:D-N-03",
+   "origen": "r22:F5",
+   "relacion": "cerrada_por"
+  },
+  {
+   "destino": "r22:D-D-06",
+   "origen": "r22:F5",
+   "relacion": "cerrada_por"
+  },
+  {
+   "destino": "r22:D-D-09",
+   "origen": "r22:F5",
+   "relacion": "cerrada_por"
+  }
+ ],
+ "nodos": [
+  {
+   "etiqueta": "GUARDIA — sin aplicación en FASE 1; aplica lo que F7 prepare post-FASE 4",
+   "id": "r22:F1",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "ESTADO VIVO — stub alterna 211 → 173 → 212 → 174 → 213; ventana 30/0/0 (0,0 %), tercera ronda; flow 0,0 % run 148; autocura runs 14 y 15; savia diverge",
+   "id": "r22:F2",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "MEDIR — M-87 NO_CONFIRMA log / M-88 NO_SÉ 0 fórmulas en 13.911 archivos / M-89 REGULAR autocura 11→15",
+   "id": "r22:F3",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "PANTEÓN-96 — sin re-corrida rutinaria; 0/61; H1 método 8.ª confirmación; total paginado 108; .err reaparece (flapeo)",
+   "id": "r22:F4",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "GRIETAS — G03 2026-11-21 (5 días); G05 33.ª/34.ª; H-SUELO 34.ª/35.ª; Panteón 402 fuera de alcance",
+   "id": "r22:F5",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "MECANISMOS — H-SIK sostiene 0 diffs bajo CUATRO cánones, 8.ª vuelta; F-UMB22 segunda vuelta como canon; voces agotadas 8.ª vez",
+   "id": "r22:F6",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "PREPARAR — 4 propuestas C-1209..C-1212 + ítems anexo M-87/M-89",
+   "id": "r22:F7",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "CONECTAR — 0 caras cierran, 9 avanzan; balance 77/19/58; d08 L12 sin avance",
+   "id": "r22:F8",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "PODA — tally 90; condición 1 SOSTENIDA; puerta 2 de 3; T-4 6.805 archivos, 1 FALTA mecánica; P-69/P-70/P-71 nuevos",
+   "id": "r22:F9",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "Stub alterna 5 veces: run 172 \"paused\" → 211 → 173 → 212 → 174 → 213 \"unreachable\" (blob e18b6cc9…, HEAD c9c926d9)",
+   "id": "r22:H-F2-run213",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Ventana 30/0/0 (0,0 %), tercera ronda consecutiva en 0,0 %; el descenso se detiene en el suelo",
+   "id": "r22:H-F2-ventana00",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Flow 0,0 % CRÍTICO run 148, decimocuarta ronda en 0,0 %; Self-Diagnosis run 148; autocura runs 14 y 15",
+   "id": "r22:H-F2-flow148",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Heartbeat 101 revisiones, censo vacío 28,7 % / 34,5 %; esquema V93 persiste, 14 más, total 58; savia V152 diverge 366.733 en 2/14",
+   "id": "r22:H-F2-v93",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Bots 4/4 VIVO, 21.ª confirmación; webhook flapea; 5.º token 401 MUERTO",
+   "id": "r22:H-F2-bots",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Self-Diagnosis run 148 escribe marca nueva con las mismas divergencias (n8n 404, 4 tablas sin RLS, 31 funciones verify_jwt=false)",
+   "id": "r22:H-F2-selfdiag",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "FolderId: FASE 0 35.ª, F5 36.ª, F2 37.ª (CORR-ORDINALES-R22); V271 trae I (28/28); censo I 42 / l 29 / ninguna 30",
+   "id": "r22:H-F2-folderid",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Max gap 114,9 min (récord 174,4 no superado); raw flapea por rachas (CORR-RAW-R22, serie 20/22)",
+   "id": "r22:H-F2-gap",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "M-87 NO_CONFIRMA: pendiente log P2 +0,000395, IC incluye 0; tercera especificación sin tendencia",
+   "id": "r22:H-F3-M87",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "M-88 NO_SÉ: 0 fórmulas en 13.911 archivos (FASE 2: 14.050); M-77 sigue bloqueado",
+   "id": "r22:H-F3-M88",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "M-89 REGULAR: autocura 11→15 completa, run 14 EXISTE, cociente 1,819 < 2, escalón ~7,5 h → ~4,5 h",
+   "id": "r22:H-F3-M89",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "H-SIK sostiene: S3 ≡ v10.3, 27/58 contenido, 32/58 nombre; verificador 0 diffs, 8.ª vuelta, JSON byte-idéntico",
+   "id": "r22:H-F6-hsik",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "F-F se dispara: 11 tuplas / 8 distintos, mismas que r15/r16/r17/r18/r19/r20/r21, 0 perdidas",
+   "id": "r22:H-F6-ff",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "A14 = 0,8000 exacto bajo R-KS, conteo 27; F-TOK22 PASA, cuarta vuelta como canon",
+   "id": "r22:H-F6-a14",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Voces → S2: vía AGOTADA en 0,50, 8.ª vez, mejor Jaccard 0,2308",
+   "id": "r22:H-F6-vocesagotada",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "F-UMB22 PASA: REGLA-UMB-SIK-01 en su segunda vuelta como canon, 0 diffs",
+   "id": "r22:H-F6-umb22",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "G03: inserción BepiColombo 2026-11-21 re-confirmada (5 días, 6 fuentes frescas); pre-burn checks OK",
+   "id": "r22:H-F5-g03",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "G05: blob 8c57e833…, 1.398 B, 33.ª (F5) / 34.ª (F2) sin cambio; Panteón 402 fuera de alcance",
+   "id": "r22:H-F5-g05",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "H-SUELO: sin reaparición, 33.ª (FASE 0) / 34.ª (F5) / 35.ª (F2)",
+   "id": "r22:H-F5-hsuelo",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Cara r12 #1 AVANZA (10.ª vuelta): 0/61 encontradas, 0 fuentes Drive nuevas del Panteón-96; total paginado 108",
+   "id": "r22:H-F4-caraavanza",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "H1 r17, 8.ª confirmación: los crudos suben solo por auto-indexación de ronda_21/",
+   "id": "r22:H-F4-h1metodo",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Graph JSON 0/0 por octava ronda consecutiva en los 4 repos cubiertos",
+   "id": "r22:H-F4-graph",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Condición 1 SOSTENIDA por spot-check 4/4; puerta de retiro 2 de 3; cadena 21 eslabones, 26.794.344 B",
+   "id": "r22:H-F9-cond1",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Poda tally 90 entradas (11/7/1/39/18/2/12); T-4 6.805 archivos, 1 FALTA mecánica; .err flapea (CORR-ERR-R22)",
+   "id": "r22:H-F9-tally90",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "C-1209 — Pendiente log de P2 con exclusión: tercera especificación sin tendencia (SE PREPARADA)",
+   "id": "r22:D-C-1209",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "C-1210 — Autocura run 14 existe: secuencia 11→15 completa y cadencia REGULAR con escalón (SE PREPARADA)",
+   "id": "r22:D-C-1210",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "C-1211 — Savia V152 diverge por variante: primera divergencia (SE PREPARADA)",
+   "id": "r22:D-C-1211",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "C-1212 — Cinco relevos de stub, tercera ronda en 0,0% y flow run 148, 14.ª ronda (SE PREPARADA)",
+   "id": "r22:D-C-1212",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "N-34 — Añadan el ítem M-87 al anexo de incertidumbre (ADOPTADA)",
+   "id": "r22:D-N-34",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "N-35 — Añadan el ítem M-89 al anexo de incertidumbre (ADOPTADA)",
+   "id": "r22:D-N-35",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "N-15 — M-50 vía navegador (CERRADA por orden 2026-11-15 ~14:24 -05: carencia local, no hueco)",
+   "id": "r22:D-N-15",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "N-03 — Licencia Zenodo (CERRADA por orden 2026-11-15 ~14:24 -05: autorización externa que emerge)",
+   "id": "r22:D-N-03",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "D-06 — Depósito Zenodo v13.0 (CERRADA por orden 2026-11-15 ~14:24 -05: falta TRABAJO, no aprobación)",
+   "id": "r22:D-D-06",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "D-09 — Telegram G05 (CERRADA por orden 2026-11-15 ~14:24 -05: dominio del enjambre)",
+   "id": "r22:D-D-09",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "Corpus 1.203 claims (fb09179d…), SE 1069, hash_real 1189, verificación 329",
+   "id": "r22:R-corpus",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Dataset 30 filas + cabecera (0852d58f…), byte-idéntico",
+   "id": "r22:R-dataset",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Anexo de incertidumbre, 23 ítems M-56..M-86 (35d136fe…); M-87/M-89 preparados",
+   "id": "r22:R-anexo",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "FranBot HEAD 70bdf97c (absorción r21)",
+   "id": "r22:R-franbot",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "micelio.yml remoto, blob 8c57e833…, 1.398 B",
+   "id": "r22:R-micelio",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Estado de cierre FASE 1: run 213 \"unreachable\" (blob e18b6cc9…, HEAD c9c926d9); FASE 2 sin movimiento (08:37:33Z)",
+   "id": "r22:R-run213",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "flow_id_coverage.json run 148, 0,0 %, 0 eventos, decimocuarta ronda",
+   "id": "r22:R-flow148",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "estado_persistente.json V213, 14.718 B, byte-idéntico",
+   "id": "r22:R-persistente",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Doc índice Panteón-96 (1R0RGvCEYv0Ax-0o9QwwB6kGxUKxLLh_YJ0qVc3Ab4G8), 7.783 chars, sha 416b02d1…",
+   "id": "r22:R-doc96",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Panteón-16 v213 autónomo, 7 voces con nombre + A0-A57",
+   "id": "r22:R-panteon16",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "MetaAI_Bundle_PANTEON_16_V213.zip, 53.786 B, 23 archivos (NO reabrir: 1 línea con valores de credenciales)",
+   "id": "r22:R-bundle",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Carpeta Drive «10 Panteón», exactamente 2 hijos",
+   "id": "r22:R-carpeta",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "HSall_members.csv, 6.201.455 B (Voteview)",
+   "id": "r22:R-hsall",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "indicators.tab, 5.538.726 B (UCD/GHSL + OSM)",
+   "id": "r22:R-indicators",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "audit.py exit=0 (ok=363, discrepancia=0)",
+   "id": "r22:R-audit",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "verify_all.py exit=1 exactamente C-001..C-008",
+   "id": "r22:R-verifyall",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "provenance.sha256, 377 líneas (b680af9d…)",
+   "id": "r22:R-provenance",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "paper_df.md, sha 304a41bf… (SRTM 2,20 / GLAD 2,79 / SoilGrids bdod 2,82)",
+   "id": "r22:R-paperdf",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "especificacion_umbral_sik_r20.md, sha 248d4ac3… (umbral 0,50, canon N-28)",
+   "id": "r22:R-umbral",
+   "tipo": "referencia"
+  }
+ ]
+}
