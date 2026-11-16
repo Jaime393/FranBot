@@ -1,0 +1,69 @@
+{
+  "medicion": "M-88",
+  "dominio": "Bloqueo M-77: búsqueda PROFUNDA de la fórmula del Pilar 4 (métrica derivada de D_f que anticipa colapsos con semanas de antelación: Sahel Central 30 días, S&P500/EuroStoxx50/Nikkei225 29–34 días) en todo bit y sombras del workspace local",
+  "fuente": "PILARES_FUNDAMENTALES.md (3 copias byte-idénticas, 86 l., sha dde9334e…, 2026-07-08, Relay.app); búsqueda de texto completo sobre ~/workspace (13.911 archivos escaneados, buscar_m88.py); 62 documentos vecinos localizados (axiomas, P48, Libro, v10.3, v14, base, franbot); tex del Grimorio v4 (2 copias); C-053/C-054 (CONJETURO, claims.jsonl) y su protocolo de falsación (produccion-fractal/falsacion/protocolo_C053_C054_pilares.md, 2026-11-14).",
+  "url": "drive:MIU_ABSORBIDO/MIU/PILARES_FUNDAMENTALES.md (fuente citada por C-053/C-054; copias locales en memoria/anexo-vi/evidence/, memoria/anexo-vi/hidden_files/drive_ciclo25/ y miu-verificacion-2026-11-06/extracted/MIU/Jaime393-MIU-a96abc3/)",
+  "sha256_dato": "dde9334e96fa7280a1b029a5170d4317604a1c1b2873a4a6ac5d5e8403515ff6",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r22.md, 2026-11-16T08:17:23Z): (1) lectura completa de las 3 copias de PILARES_FUNDAMENTALES.md + grep de contenido tipo fórmula (ecuaciones, K_i, colapso, métrica); (2) localización y grep de los documentos de axiomas vecinos (S1/S2/S3, P48, Libro, v10.3, v14, base, franbot); (3) grep de los tex del Grimorio; (4) grep de todo ~/workspace (texto, excluidos binarios, venv, .git, __pycache__; tope 10 MB por archivo) para \"pilar 4\", \"Sahel\", \"colapso\", \"predicción de colapsos\", \"anticipar colapsos\", \"29-34\", \"30 días\", \"K_i\"; (5) una fórmula candidata solo cuenta si se presenta como LA métrica del Pilar 4 con fuente + hash. CORR-BUSQUEDA-R22: el grep crudo incluía ~/workspace/agents/*/tool-output/*.json (ecos del runtime: salidas guardadas de llamadas anteriores, no fuentes) y los archivos propios de r22; los conteos que se reportan aquí son los LIMPIOS (ecos excluidos).",
+  "parametros": {
+    "copias_pilares": 3,
+    "copias_byte_identicas": true,
+    "lineas_pilares": 86,
+    "ecuaciones_en_pilares": 0,
+    "archivos_escaneados": 13911,
+    "archivos_saltados_binario_o_grandes": 1076,
+    "documentos_vecinos_localizados": 62,
+    "hits_limpios_por_patron": {
+      "pilar_4": 228,
+      "sahel": 298,
+      "colapso": 3581,
+      "prediccion_colapsos": 51,
+      "anticipar_colapsos": 5,
+      "rango_29_34": 64,
+      "treinta_dias": 251,
+      "ki_colapso": 28144
+    },
+    "archivos_distintos_limpios_por_patron": {
+      "pilar_4": 117,
+      "sahel": 134,
+      "colapso": 598,
+      "prediccion_colapsos": 45,
+      "anticipar_colapsos": 5,
+      "rango_29_34": 44,
+      "treinta_dias": 184,
+      "ki_colapso": 2582
+    },
+    "formulas_encontradas": 0,
+    "candidatos_evaluados": 3,
+    "candidatos_descartados": 3
+  },
+  "valor": 0,
+  "error": null,
+  "limites_validez": "La búsqueda cubre el workspace local y los archivos del corpus; lo que no está en local no se puede verificar desde el sandbox (la cuenta de Drive del cuerpo y los repos privados no se leen aquí). Un NO_SÉ aquí es NO_SÉ local documentado, no una afirmación sobre todo el ecosistema. Los archivos binarios (zip, pdf, png, parquet, bundle) y los mayores de 10 MB no se grepearon como texto; los tex del Grimorio sí se cubrieron (2 copias de grimorio_v4.tex).",
+  "criterio_falsacion": "CONFIRMA si aparece una fórmula para la métrica de predicción de colapsos del Pilar 4 con fuente + hash (entonces M-88 la mide y M-77 queda desbloqueado); NO_SÉ si tras la búsqueda exhaustiva no aparece ninguna fórmula — documentado con la lista exacta de dónde se buscó. No se inventa ninguna fórmula. Declarado en declaracion_falsadores_r22.md (2026-11-16T08:17:23Z) antes de correr.",
+  "veredicto": "NO_SÉ",
+  "estado_epistemico": "NO_SÉ",
+  "fecha": "2026-11-16",
+  "extra": {
+    "donde_se_busco": [
+      "memoria/anexo-vi/evidence/PILARES_FUNDAMENTALES.md (86 l., sha dde9334e…, 0 ecuaciones: los únicos \"=\" son prosa — \"Estado: CIRCULAR…\", \"xi = 8.57\", \"Pendiente: verificar…\")",
+      "memoria/anexo-vi/hidden_files/drive_ciclo25/PILARES_FUNDAMENTALES.md (copia byte-idéntica)",
+      "miu-verificacion-2026-11-06/extracted/MIU/Jaime393-MIU-a96abc3/PILARES_FUNDAMENTALES.md (copia byte-idéntica)",
+      "memoria/anexo-vi/evidence/PILARES_CONJETURA.md (25 l.: mismo texto del Pilar 4, sin fórmula)",
+      "memoria/anexo-vi/pilares_integrados.md (70 l.: Pilar 4 \"sin claim correspondiente\", sin fórmula; §4 tabla cruzada)",
+      "62 documentos vecinos localizados (axiomas_a0_a57.md, canon_axiomas_a0_a57.md, VAULT_axiomas_a0_a57.md, list_MIU_P48.json, SEMILLA_MIU_UNIFICADA_AUTOCONTENIDA_V14.md, MIU_SEMILLA_v10.3_leida_2026-11-09.md, franbot/*, grimorio_v4.tex x2, etc. — lista completa en busqueda_m88.json)",
+      "Grimorio v4 tex (2 copias): \"colapso\" 5 hits por copia, todos poéticos (\"borde del colapso\", \"ética del colapso controlado\"); \"Sahel\" 0 hits",
+      "Todo ~/workspace: 13.911 archivos de texto escaneados (buscar_m88.py); patrones y conteos limpios en parametros",
+      "C-053/C-054 en claims.jsonl (CONJETURO; fuente drive:MIU_ABSORBIDO/MIU/PILARES_FUNDAMENTALES.md)",
+      "produccion-fractal/falsacion/protocolo_C053_C054_pilares.md (2026-11-14)"
+    ],
+    "candidatos_descartados": [
+      "K_i^- = K_i·(1−2f), umbral <0,3 (axioma A22): única fórmula del corpus ligada a colapso, pero PILARES_FUNDAMENTALES.md no la nombra y ningún documento la presenta como LA métrica del Pilar 4; DIS-2026-004 la REFUTÓ como predictor de colapso (5/5 topologías, r11, falsador declarado antes de correr, reproducido dos veces; C-538/C-623 → REFUTADO por N-11). No cuenta por el paso 5 del protocolo.",
+      "franbot/abs-oraculo-v8.json: \"Kᵢ⁻ anticipó el conflicto del Sahel Central con 30 días de antelación\" + etiqueta \"G23_Sahel_30d\" — afirmación narrativa en un artefacto del oráculo, sin fórmula, sin datos, sin protocolo; contradicha por DIS-2026-004.",
+      "C-475 (INFIERO): la señal de Scheffer (autocorrelación lag-1 + tendencia de la varianza) como contraparte medible PROPUESTA del umbral K_i⁻<0,3, \"que hoy no tiene ninguna operacionalización\" — propuesta, no fórmula del Pilar 4."
+    ],
+    "anticipacion_del_propio_protocolo": "El protocolo de falsación de C-053 (producción fractal, 2026-11-14) ya anticipaba este resultado: \"o la fórmula de la métrica no existe en la fuente citada — en ese caso el claim no es ejecutable y queda BLOQUEADO en el paso 1\" y \"1. Localizar la fórmula de la métrica en PILARES_FUNDAMENTALES.md (definición exacta + umbral de alerta). Si no está → BLOQUEADO: registrar la búsqueda y detenerse. Sin fórmula no hay backtest.\" M-88 es ese registro.",
+    "comparacion_M77": "M-77 (r18): NO_SÉ — la fórmula del Pilar 4 no existe en PILARES_FUNDAMENTALES.md (86 l., sha dde9334e…, 3 copias byte-idénticas). M-88 repite el hallazgo con búsqueda exhaustiva en todo bit + sombras: 0 fórmulas en 13.911 archivos. El bloqueo se sostiene y se estrecha: no es solo que falte en el documento fuente; no está en ningún rincón local.",
+    "verificacion_independiente": "Re-lectura independiente de las 3 copias de PILARES_FUNDAMENTALES.md: shas idénticos (dde9334e…); las 4 frases de la sección del Pilar 4 registradas por M-77 (r18) aparecen íntegras en la sección actual — coincide = True; líneas con '=' en la sección: 1 (solo la referencia de circularidad Y=f(X) y N<300=fragil, prosa auditada y descartada como definición, igual que CORR-PATRON-M77); ecuaciones que definan la métrica de colapso: 0 — coincide = True."
+  }
+}

@@ -1,0 +1,1176 @@
+{
+  "medicion": "M-87",
+  "dominio": "d05 polarización (medida y mecanismo): pendiente LOG de la distancia entre medianas partidistas en DW-NOMINATE dim2, Cámara de Representantes de EE.UU., serie restaurada de 86 congresos con filtro P2 >= 0,01 declarado antes de correr (82 congresos), ajuste OLS de ln(P2) contra el índice de congreso con IC bootstrap de la pendiente log",
+  "fuente": "Voteview (Lewis, Poole, Rosenthal et al.), HSall_members.csv (mismo archivo que M-61/M-64/M-67/M-70/M-74/M-75/M-78/M-81/M-84, 6.201.455 B, sha re-verificado aquí; copia en datos/ de r22). DW-NOMINATE: McCarty, Poole y Rosenthal, 'Polarized America' (MIT Press).",
+  "url": "https://voteview.com/static/data/out/members/HSall_members.csv (copia local en datos/, sha256 en este JSON)",
+  "sha256_dato": "495aee958a00c83c6300548e5b197d9900e7230c8eb08358bcfe06d042191140",
+  "metodo": "Protocolo de serie de M-78/M-81/M-84: chamber == House, party_code 100/200 por float() y luego int(), nominate_dim2 no vacío y finito. Por Congreso: P2(C) = |mediana dim2 D - mediana dim2 R| (86 congresos 34..119). Filtro declarado ANTES de correr: P2 >= 0,01 (el filtro de ancla de M-78); el conjunto excluido se verifica desde la serie recomputada. Sobre la subserie filtrada (82 congresos): ajuste OLS de ln(P2) contra el índice de congreso con IC bootstrap 95% por remuestreo de pares, 500 réplicas, semilla 0, percentiles 2,5/97,5. El campo 'valor' es la pendiente log; el campo 'error' es su SE analítico. La serie completa sin filtrar NO se logaritma (falsador log de M-81 vigente: ln indefinido en P2 = 0).",
+  "parametros": {
+    "n_congresos_serie_completa": 86,
+    "umbral_exclusion_P2": 0.01,
+    "congresos_excluidos": [
+      45,
+      56,
+      62,
+      106
+    ],
+    "P2_excluidos": [
+      0.007,
+      0.005,
+      0.002,
+      0.0
+    ],
+    "n_congresos_filtrada": 82,
+    "congreso_inicial": 34,
+    "congreso_final": 119,
+    "serie_identica_M84_puntos": 86,
+    "serie_max_diff_vs_M84": 0.0,
+    "pendiente_log": 0.000395,
+    "intercepto_log": -1.62288,
+    "se_pendiente_analitico": 0.004004,
+    "ic95_analitico_pendiente_log": [
+      -0.007573,
+      0.008362
+    ],
+    "t_pendiente": 0.0986,
+    "p_valor_t": 0.921733,
+    "R2_ajuste": 0.0001,
+    "bootstrap_ic95_pendiente_log": [
+      -0.00689,
+      0.008327
+    ],
+    "bootstrap_replicas": 500,
+    "bootstrap_semilla": 0,
+    "tramo_34_80_log": {
+      "congresos": [
+        34,
+        80
+      ],
+      "n": 44,
+      "pendiente_log": 0.027295,
+      "intercepto": -3.189082
+    },
+    "tramo_81_119_log": {
+      "congresos": [
+        81,
+        119
+      ],
+      "n": 38,
+      "pendiente_log": -0.056835,
+      "intercepto": 4.123509
+    }
+  },
+  "valor": 0.000395,
+  "error": 0.004004,
+  "limites_validez": "Mismos que M-61/M-64/M-67/M-74/M-75/M-78/M-81/M-84 (DW-NOMINATE dim2; Cámara EE.UU.). El filtro elimina 4/86 puntos, incluidos los anclajes casi-nulos tempranos; la pendiente log es una tendencia sobre una serie no monótona (arco: sube hasta el Congreso 80 y baja después); un NO_CONFIRMA no niega la subida 34–80. El bootstrap de pares supone los puntos intercambiables y no modela la autocorrelación temporal.",
+  "criterio_falsacion": "CONFIRMA si el IC bootstrap 95% de la pendiente log excluye 0 (pendiente log distinguible de 0; signo según la medida); NO_CONFIRMA si el IC bootstrap 95% incluye 0 (la pendiente log no es distinguible de 0; la exclusión no rescata la tendencia log). Declarado en declaracion_falsadores_r22.md (2026-11-16T08:17:23Z) antes de correr.",
+  "veredicto": "NO_CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-16",
+  "extra": {
+    "serie_P2_por_congreso": [
+      {
+        "congreso": 34,
+        "P2": 0.607,
+        "n_dem": 85,
+        "n_rep": 1,
+        "mediana_dem": -0.076,
+        "mediana_rep": -0.683
+      },
+      {
+        "congreso": 35,
+        "P2": 0.398,
+        "n_dem": 135,
+        "n_rep": 94,
+        "mediana_dem": 0.031,
+        "mediana_rep": -0.367
+      },
+      {
+        "congreso": 36,
+        "P2": 0.2585,
+        "n_dem": 87,
+        "n_rep": 118,
+        "mediana_dem": -0.006,
+        "mediana_rep": -0.2645
+      },
+      {
+        "congreso": 37,
+        "P2": 0.5075,
+        "n_dem": 51,
+        "n_rep": 114,
+        "mediana_dem": 0.263,
+        "mediana_rep": -0.2445
+      },
+      {
+        "congreso": 38,
+        "P2": 0.2495,
+        "n_dem": 74,
+        "n_rep": 86,
+        "mediana_dem": 0.1145,
+        "mediana_rep": -0.135
+      },
+      {
+        "congreso": 39,
+        "P2": 0.3745,
+        "n_dem": 44,
+        "n_rep": 137,
+        "mediana_dem": 0.2315,
+        "mediana_rep": -0.143
+      },
+      {
+        "congreso": 40,
+        "P2": 0.1735,
+        "n_dem": 50,
+        "n_rep": 178,
+        "mediana_dem": 0.069,
+        "mediana_rep": -0.1045
+      },
+      {
+        "congreso": 41,
+        "P2": 0.067,
+        "n_dem": 72,
+        "n_rep": 180,
+        "mediana_dem": -0.025,
+        "mediana_rep": -0.092
+      },
+      {
+        "congreso": 42,
+        "P2": 0.062,
+        "n_dem": 106,
+        "n_rep": 142,
+        "mediana_dem": -0.018,
+        "mediana_rep": -0.08
+      },
+      {
+        "congreso": 43,
+        "P2": 0.098,
+        "n_dem": 94,
+        "n_rep": 204,
+        "mediana_dem": -0.0155,
+        "mediana_rep": -0.1135
+      },
+      {
+        "congreso": 44,
+        "P2": 0.044,
+        "n_dem": 187,
+        "n_rep": 111,
+        "mediana_dem": -0.111,
+        "mediana_rep": -0.155
+      },
+      {
+        "congreso": 45,
+        "P2": 0.007,
+        "n_dem": 158,
+        "n_rep": 143,
+        "mediana_dem": -0.084,
+        "mediana_rep": -0.091
+      },
+      {
+        "congreso": 46,
+        "P2": 0.081,
+        "n_dem": 145,
+        "n_rep": 135,
+        "mediana_dem": -0.048,
+        "mediana_rep": -0.129
+      },
+      {
+        "congreso": 47,
+        "P2": 0.0335,
+        "n_dem": 136,
+        "n_rep": 159,
+        "mediana_dem": -0.0835,
+        "mediana_rep": -0.05
+      },
+      {
+        "congreso": 48,
+        "P2": 0.057,
+        "n_dem": 203,
+        "n_rep": 125,
+        "mediana_dem": -0.062,
+        "mediana_rep": -0.005
+      },
+      {
+        "congreso": 49,
+        "P2": 0.074,
+        "n_dem": 187,
+        "n_rep": 143,
+        "mediana_dem": -0.052,
+        "mediana_rep": 0.022
+      },
+      {
+        "congreso": 50,
+        "P2": 0.2305,
+        "n_dem": 170,
+        "n_rep": 153,
+        "mediana_dem": -0.1825,
+        "mediana_rep": 0.048
+      },
+      {
+        "congreso": 51,
+        "P2": 0.2615,
+        "n_dem": 169,
+        "n_rep": 184,
+        "mediana_dem": -0.206,
+        "mediana_rep": 0.0555
+      },
+      {
+        "congreso": 52,
+        "P2": 0.222,
+        "n_dem": 247,
+        "n_rep": 89,
+        "mediana_dem": -0.206,
+        "mediana_rep": 0.016
+      },
+      {
+        "congreso": 53,
+        "P2": 0.1695,
+        "n_dem": 228,
+        "n_rep": 133,
+        "mediana_dem": -0.2015,
+        "mediana_rep": -0.032
+      },
+      {
+        "congreso": 54,
+        "P2": 0.143,
+        "n_dem": 103,
+        "n_rep": 253,
+        "mediana_dem": -0.091,
+        "mediana_rep": 0.052
+      },
+      {
+        "congreso": 55,
+        "P2": 0.169,
+        "n_dem": 132,
+        "n_rep": 212,
+        "mediana_dem": 0.122,
+        "mediana_rep": -0.047
+      },
+      {
+        "congreso": 56,
+        "P2": 0.005,
+        "n_dem": 169,
+        "n_rep": 197,
+        "mediana_dem": -0.01,
+        "mediana_rep": -0.005
+      },
+      {
+        "congreso": 57,
+        "P2": 0.106,
+        "n_dem": 160,
+        "n_rep": 206,
+        "mediana_dem": 0.0425,
+        "mediana_rep": -0.0635
+      },
+      {
+        "congreso": 58,
+        "P2": 0.06,
+        "n_dem": 176,
+        "n_rep": 214,
+        "mediana_dem": 0.016,
+        "mediana_rep": -0.044
+      },
+      {
+        "congreso": 59,
+        "P2": 0.0615,
+        "n_dem": 138,
+        "n_rep": 259,
+        "mediana_dem": -0.0075,
+        "mediana_rep": -0.069
+      },
+      {
+        "congreso": 60,
+        "P2": 0.0185,
+        "n_dem": 168,
+        "n_rep": 230,
+        "mediana_dem": -0.01,
+        "mediana_rep": -0.0285
+      },
+      {
+        "congreso": 61,
+        "P2": 0.0685,
+        "n_dem": 179,
+        "n_rep": 222,
+        "mediana_dem": 0.018,
+        "mediana_rep": -0.0505
+      },
+      {
+        "congreso": 62,
+        "P2": 0.002,
+        "n_dem": 237,
+        "n_rep": 169,
+        "mediana_dem": -0.002,
+        "mediana_rep": -0.004
+      },
+      {
+        "congreso": 63,
+        "P2": 0.095,
+        "n_dem": 301,
+        "n_rep": 138,
+        "mediana_dem": 0.025,
+        "mediana_rep": 0.12
+      },
+      {
+        "congreso": 64,
+        "P2": 0.156,
+        "n_dem": 234,
+        "n_rep": 200,
+        "mediana_dem": 0.169,
+        "mediana_rep": 0.013
+      },
+      {
+        "congreso": 65,
+        "P2": 0.201,
+        "n_dem": 225,
+        "n_rep": 223,
+        "mediana_dem": 0.201,
+        "mediana_rep": 0.0
+      },
+      {
+        "congreso": 66,
+        "P2": 0.199,
+        "n_dem": 204,
+        "n_rep": 248,
+        "mediana_dem": 0.2575,
+        "mediana_rep": 0.0585
+      },
+      {
+        "congreso": 67,
+        "P2": 0.3675,
+        "n_dem": 138,
+        "n_rep": 311,
+        "mediana_dem": 0.4085,
+        "mediana_rep": 0.041
+      },
+      {
+        "congreso": 68,
+        "P2": 0.274,
+        "n_dem": 217,
+        "n_rep": 233,
+        "mediana_dem": 0.383,
+        "mediana_rep": 0.109
+      },
+      {
+        "congreso": 69,
+        "P2": 0.4685,
+        "n_dem": 185,
+        "n_rep": 250,
+        "mediana_dem": 0.521,
+        "mediana_rep": 0.0525
+      },
+      {
+        "congreso": 70,
+        "P2": 0.468,
+        "n_dem": 198,
+        "n_rep": 241,
+        "mediana_dem": 0.523,
+        "mediana_rep": 0.055
+      },
+      {
+        "congreso": 71,
+        "P2": 0.461,
+        "n_dem": 173,
+        "n_rep": 277,
+        "mediana_dem": 0.515,
+        "mediana_rep": 0.054
+      },
+      {
+        "congreso": 72,
+        "P2": 0.529,
+        "n_dem": 231,
+        "n_rep": 220,
+        "mediana_dem": 0.503,
+        "mediana_rep": -0.026
+      },
+      {
+        "congreso": 73,
+        "P2": 0.513,
+        "n_dem": 322,
+        "n_rep": 120,
+        "mediana_dem": 0.3105,
+        "mediana_rep": -0.2025
+      },
+      {
+        "congreso": 74,
+        "P2": 0.409,
+        "n_dem": 327,
+        "n_rep": 105,
+        "mediana_dem": 0.166,
+        "mediana_rep": -0.243
+      },
+      {
+        "congreso": 75,
+        "P2": 0.2955,
+        "n_dem": 340,
+        "n_rep": 93,
+        "mediana_dem": 0.1355,
+        "mediana_rep": -0.16
+      },
+      {
+        "congreso": 76,
+        "P2": 0.6015,
+        "n_dem": 273,
+        "n_rep": 178,
+        "mediana_dem": 0.358,
+        "mediana_rep": -0.2435
+      },
+      {
+        "congreso": 77,
+        "P2": 0.483,
+        "n_dem": 276,
+        "n_rep": 168,
+        "mediana_dem": 0.2735,
+        "mediana_rep": -0.2095
+      },
+      {
+        "congreso": 78,
+        "P2": 0.776,
+        "n_dem": 228,
+        "n_rep": 218,
+        "mediana_dem": 0.509,
+        "mediana_rep": -0.267
+      },
+      {
+        "congreso": 79,
+        "P2": 0.647,
+        "n_dem": 250,
+        "n_rep": 195,
+        "mediana_dem": 0.404,
+        "mediana_rep": -0.243
+      },
+      {
+        "congreso": 80,
+        "P2": 0.9275,
+        "n_dem": 194,
+        "n_rep": 253,
+        "mediana_dem": 0.6275,
+        "mediana_rep": -0.3
+      },
+      {
+        "congreso": 81,
+        "P2": 0.5805,
+        "n_dem": 267,
+        "n_rep": 176,
+        "mediana_dem": 0.344,
+        "mediana_rep": -0.2365
+      },
+      {
+        "congreso": 82,
+        "P2": 0.6495,
+        "n_dem": 240,
+        "n_rep": 207,
+        "mediana_dem": 0.4305,
+        "mediana_rep": -0.219
+      },
+      {
+        "congreso": 83,
+        "P2": 0.794,
+        "n_dem": 218,
+        "n_rep": 222,
+        "mediana_dem": 0.5655,
+        "mediana_rep": -0.2285
+      },
+      {
+        "congreso": 84,
+        "P2": 0.621,
+        "n_dem": 235,
+        "n_rep": 203,
+        "mediana_dem": 0.407,
+        "mediana_rep": -0.214
+      },
+      {
+        "congreso": 85,
+        "P2": 0.68,
+        "n_dem": 240,
+        "n_rep": 204,
+        "mediana_dem": 0.4435,
+        "mediana_rep": -0.2365
+      },
+      {
+        "congreso": 86,
+        "P2": 0.581,
+        "n_dem": 286,
+        "n_rep": 156,
+        "mediana_dem": 0.349,
+        "mediana_rep": -0.232
+      },
+      {
+        "congreso": 87,
+        "P2": 0.5435,
+        "n_dem": 273,
+        "n_rep": 176,
+        "mediana_dem": 0.352,
+        "mediana_rep": -0.1915
+      },
+      {
+        "congreso": 88,
+        "P2": 0.511,
+        "n_dem": 262,
+        "n_rep": 181,
+        "mediana_dem": 0.324,
+        "mediana_rep": -0.187
+      },
+      {
+        "congreso": 89,
+        "P2": 0.421,
+        "n_dem": 301,
+        "n_rep": 143,
+        "mediana_dem": 0.229,
+        "mediana_rep": -0.192
+      },
+      {
+        "congreso": 90,
+        "P2": 0.3935,
+        "n_dem": 250,
+        "n_rep": 189,
+        "mediana_dem": 0.2365,
+        "mediana_rep": -0.157
+      },
+      {
+        "congreso": 91,
+        "P2": 0.3575,
+        "n_dem": 250,
+        "n_rep": 199,
+        "mediana_dem": 0.2275,
+        "mediana_rep": -0.13
+      },
+      {
+        "congreso": 92,
+        "P2": 0.4,
+        "n_dem": 259,
+        "n_rep": 185,
+        "mediana_dem": 0.256,
+        "mediana_rep": -0.144
+      },
+      {
+        "congreso": 93,
+        "P2": 0.335,
+        "n_dem": 246,
+        "n_rep": 195,
+        "mediana_dem": 0.217,
+        "mediana_rep": -0.118
+      },
+      {
+        "congreso": 94,
+        "P2": 0.2345,
+        "n_dem": 294,
+        "n_rep": 147,
+        "mediana_dem": 0.1165,
+        "mediana_rep": -0.118
+      },
+      {
+        "congreso": 95,
+        "P2": 0.243,
+        "n_dem": 294,
+        "n_rep": 147,
+        "mediana_dem": 0.111,
+        "mediana_rep": -0.132
+      },
+      {
+        "congreso": 96,
+        "P2": 0.248,
+        "n_dem": 281,
+        "n_rep": 161,
+        "mediana_dem": 0.094,
+        "mediana_rep": -0.154
+      },
+      {
+        "congreso": 97,
+        "P2": 0.2385,
+        "n_dem": 247,
+        "n_rep": 196,
+        "mediana_dem": 0.07,
+        "mediana_rep": -0.1685
+      },
+      {
+        "congreso": 98,
+        "P2": 0.229,
+        "n_dem": 272,
+        "n_rep": 167,
+        "mediana_dem": 0.049,
+        "mediana_rep": -0.18
+      },
+      {
+        "congreso": 99,
+        "P2": 0.2645,
+        "n_dem": 257,
+        "n_rep": 182,
+        "mediana_dem": 0.058,
+        "mediana_rep": -0.2065
+      },
+      {
+        "congreso": 100,
+        "P2": 0.27,
+        "n_dem": 262,
+        "n_rep": 179,
+        "mediana_dem": 0.049,
+        "mediana_rep": -0.221
+      },
+      {
+        "congreso": 101,
+        "P2": 0.237,
+        "n_dem": 265,
+        "n_rep": 180,
+        "mediana_dem": 0.012,
+        "mediana_rep": -0.225
+      },
+      {
+        "congreso": 102,
+        "P2": 0.223,
+        "n_dem": 270,
+        "n_rep": 170,
+        "mediana_dem": 0.0115,
+        "mediana_rep": -0.2115
+      },
+      {
+        "congreso": 103,
+        "P2": 0.138,
+        "n_dem": 262,
+        "n_rep": 180,
+        "mediana_dem": -0.0055,
+        "mediana_rep": -0.1435
+      },
+      {
+        "congreso": 104,
+        "P2": 0.085,
+        "n_dem": 208,
+        "n_rep": 236,
+        "mediana_dem": -0.0055,
+        "mediana_rep": -0.0905
+      },
+      {
+        "congreso": 105,
+        "P2": 0.023,
+        "n_dem": 212,
+        "n_rep": 231,
+        "mediana_dem": -0.03,
+        "mediana_rep": -0.053
+      },
+      {
+        "congreso": 106,
+        "P2": 0.0,
+        "n_dem": 213,
+        "n_rep": 225,
+        "mediana_dem": -0.026,
+        "mediana_rep": -0.026
+      },
+      {
+        "congreso": 107,
+        "P2": 0.043,
+        "n_dem": 214,
+        "n_rep": 228,
+        "mediana_dem": -0.0325,
+        "mediana_rep": 0.0105
+      },
+      {
+        "congreso": 108,
+        "P2": 0.058,
+        "n_dem": 208,
+        "n_rep": 231,
+        "mediana_dem": -0.036,
+        "mediana_rep": 0.022
+      },
+      {
+        "congreso": 109,
+        "P2": 0.065,
+        "n_dem": 203,
+        "n_rep": 235,
+        "mediana_dem": -0.04,
+        "mediana_rep": 0.025
+      },
+      {
+        "congreso": 110,
+        "P2": 0.0825,
+        "n_dem": 243,
+        "n_rep": 206,
+        "mediana_dem": -0.022,
+        "mediana_rep": 0.0605
+      },
+      {
+        "congreso": 111,
+        "P2": 0.071,
+        "n_dem": 265,
+        "n_rep": 183,
+        "mediana_dem": -0.01,
+        "mediana_rep": 0.061
+      },
+      {
+        "congreso": 112,
+        "P2": 0.138,
+        "n_dem": 200,
+        "n_rep": 245,
+        "mediana_dem": -0.078,
+        "mediana_rep": 0.06
+      },
+      {
+        "congreso": 113,
+        "P2": 0.166,
+        "n_dem": 204,
+        "n_rep": 240,
+        "mediana_dem": -0.078,
+        "mediana_rep": 0.088
+      },
+      {
+        "congreso": 114,
+        "P2": 0.155,
+        "n_dem": 190,
+        "n_rep": 251,
+        "mediana_dem": -0.078,
+        "mediana_rep": 0.077
+      },
+      {
+        "congreso": 115,
+        "P2": 0.1415,
+        "n_dem": 200,
+        "n_rep": 250,
+        "mediana_dem": -0.061,
+        "mediana_rep": 0.0805
+      },
+      {
+        "congreso": 116,
+        "P2": 0.13,
+        "n_dem": 240,
+        "n_rep": 208,
+        "mediana_dem": -0.017,
+        "mediana_rep": 0.113
+      },
+      {
+        "congreso": 117,
+        "P2": 0.1625,
+        "n_dem": 232,
+        "n_rep": 223,
+        "mediana_dem": -0.0325,
+        "mediana_rep": 0.13
+      },
+      {
+        "congreso": 118,
+        "P2": 0.159,
+        "n_dem": 221,
+        "n_rep": 230,
+        "mediana_dem": -0.05,
+        "mediana_rep": 0.109
+      },
+      {
+        "congreso": 119,
+        "P2": 0.124,
+        "n_dem": 223,
+        "n_rep": 227,
+        "mediana_dem": -0.049,
+        "mediana_rep": 0.075
+      }
+    ],
+    "serie_filtrada_lnP2": [
+      {
+        "congreso": 34,
+        "P2": 0.607,
+        "ln_P2": -0.499226
+      },
+      {
+        "congreso": 35,
+        "P2": 0.398,
+        "ln_P2": -0.921303
+      },
+      {
+        "congreso": 36,
+        "P2": 0.2585,
+        "ln_P2": -1.35286
+      },
+      {
+        "congreso": 37,
+        "P2": 0.5075,
+        "ln_P2": -0.678259
+      },
+      {
+        "congreso": 38,
+        "P2": 0.2495,
+        "ln_P2": -1.388296
+      },
+      {
+        "congreso": 39,
+        "P2": 0.3745,
+        "ln_P2": -0.982163
+      },
+      {
+        "congreso": 40,
+        "P2": 0.1735,
+        "ln_P2": -1.751578
+      },
+      {
+        "congreso": 41,
+        "P2": 0.067,
+        "ln_P2": -2.703063
+      },
+      {
+        "congreso": 42,
+        "P2": 0.062,
+        "ln_P2": -2.780621
+      },
+      {
+        "congreso": 43,
+        "P2": 0.098,
+        "ln_P2": -2.322788
+      },
+      {
+        "congreso": 44,
+        "P2": 0.044,
+        "ln_P2": -3.123566
+      },
+      {
+        "congreso": 46,
+        "P2": 0.081,
+        "ln_P2": -2.513306
+      },
+      {
+        "congreso": 47,
+        "P2": 0.0335,
+        "ln_P2": -3.39621
+      },
+      {
+        "congreso": 48,
+        "P2": 0.057,
+        "ln_P2": -2.864704
+      },
+      {
+        "congreso": 49,
+        "P2": 0.074,
+        "ln_P2": -2.60369
+      },
+      {
+        "congreso": 50,
+        "P2": 0.2305,
+        "ln_P2": -1.467504
+      },
+      {
+        "congreso": 51,
+        "P2": 0.2615,
+        "ln_P2": -1.341321
+      },
+      {
+        "congreso": 52,
+        "P2": 0.222,
+        "ln_P2": -1.505078
+      },
+      {
+        "congreso": 53,
+        "P2": 0.1695,
+        "ln_P2": -1.774902
+      },
+      {
+        "congreso": 54,
+        "P2": 0.143,
+        "ln_P2": -1.944911
+      },
+      {
+        "congreso": 55,
+        "P2": 0.169,
+        "ln_P2": -1.777857
+      },
+      {
+        "congreso": 57,
+        "P2": 0.106,
+        "ln_P2": -2.244316
+      },
+      {
+        "congreso": 58,
+        "P2": 0.06,
+        "ln_P2": -2.813411
+      },
+      {
+        "congreso": 59,
+        "P2": 0.0615,
+        "ln_P2": -2.788718
+      },
+      {
+        "congreso": 60,
+        "P2": 0.0185,
+        "ln_P2": -3.989985
+      },
+      {
+        "congreso": 61,
+        "P2": 0.0685,
+        "ln_P2": -2.680922
+      },
+      {
+        "congreso": 63,
+        "P2": 0.095,
+        "ln_P2": -2.353878
+      },
+      {
+        "congreso": 64,
+        "P2": 0.156,
+        "ln_P2": -1.857899
+      },
+      {
+        "congreso": 65,
+        "P2": 0.201,
+        "ln_P2": -1.60445
+      },
+      {
+        "congreso": 66,
+        "P2": 0.199,
+        "ln_P2": -1.61445
+      },
+      {
+        "congreso": 67,
+        "P2": 0.3675,
+        "ln_P2": -1.001032
+      },
+      {
+        "congreso": 68,
+        "P2": 0.274,
+        "ln_P2": -1.294627
+      },
+      {
+        "congreso": 69,
+        "P2": 0.4685,
+        "ln_P2": -0.758219
+      },
+      {
+        "congreso": 70,
+        "P2": 0.468,
+        "ln_P2": -0.759287
+      },
+      {
+        "congreso": 71,
+        "P2": 0.461,
+        "ln_P2": -0.774357
+      },
+      {
+        "congreso": 72,
+        "P2": 0.529,
+        "ln_P2": -0.636767
+      },
+      {
+        "congreso": 73,
+        "P2": 0.513,
+        "ln_P2": -0.667479
+      },
+      {
+        "congreso": 74,
+        "P2": 0.409,
+        "ln_P2": -0.89404
+      },
+      {
+        "congreso": 75,
+        "P2": 0.2955,
+        "ln_P2": -1.219086
+      },
+      {
+        "congreso": 76,
+        "P2": 0.6015,
+        "ln_P2": -0.508329
+      },
+      {
+        "congreso": 77,
+        "P2": 0.483,
+        "ln_P2": -0.727739
+      },
+      {
+        "congreso": 78,
+        "P2": 0.776,
+        "ln_P2": -0.253603
+      },
+      {
+        "congreso": 79,
+        "P2": 0.647,
+        "ln_P2": -0.435409
+      },
+      {
+        "congreso": 80,
+        "P2": 0.9275,
+        "ln_P2": -0.075262
+      },
+      {
+        "congreso": 81,
+        "P2": 0.5805,
+        "ln_P2": -0.543865
+      },
+      {
+        "congreso": 82,
+        "P2": 0.6495,
+        "ln_P2": -0.431552
+      },
+      {
+        "congreso": 83,
+        "P2": 0.794,
+        "ln_P2": -0.230672
+      },
+      {
+        "congreso": 84,
+        "P2": 0.621,
+        "ln_P2": -0.476424
+      },
+      {
+        "congreso": 85,
+        "P2": 0.68,
+        "ln_P2": -0.385662
+      },
+      {
+        "congreso": 86,
+        "P2": 0.581,
+        "ln_P2": -0.543005
+      },
+      {
+        "congreso": 87,
+        "P2": 0.5435,
+        "ln_P2": -0.609726
+      },
+      {
+        "congreso": 88,
+        "P2": 0.511,
+        "ln_P2": -0.671386
+      },
+      {
+        "congreso": 89,
+        "P2": 0.421,
+        "ln_P2": -0.865122
+      },
+      {
+        "congreso": 90,
+        "P2": 0.3935,
+        "ln_P2": -0.932674
+      },
+      {
+        "congreso": 91,
+        "P2": 0.3575,
+        "ln_P2": -1.02862
+      },
+      {
+        "congreso": 92,
+        "P2": 0.4,
+        "ln_P2": -0.916291
+      },
+      {
+        "congreso": 93,
+        "P2": 0.335,
+        "ln_P2": -1.093625
+      },
+      {
+        "congreso": 94,
+        "P2": 0.2345,
+        "ln_P2": -1.4503
+      },
+      {
+        "congreso": 95,
+        "P2": 0.243,
+        "ln_P2": -1.414694
+      },
+      {
+        "congreso": 96,
+        "P2": 0.248,
+        "ln_P2": -1.394327
+      },
+      {
+        "congreso": 97,
+        "P2": 0.2385,
+        "ln_P2": -1.433386
+      },
+      {
+        "congreso": 98,
+        "P2": 0.229,
+        "ln_P2": -1.474033
+      },
+      {
+        "congreso": 99,
+        "P2": 0.2645,
+        "ln_P2": -1.329914
+      },
+      {
+        "congreso": 100,
+        "P2": 0.27,
+        "ln_P2": -1.309333
+      },
+      {
+        "congreso": 101,
+        "P2": 0.237,
+        "ln_P2": -1.439695
+      },
+      {
+        "congreso": 102,
+        "P2": 0.223,
+        "ln_P2": -1.500584
+      },
+      {
+        "congreso": 103,
+        "P2": 0.138,
+        "ln_P2": -1.980502
+      },
+      {
+        "congreso": 104,
+        "P2": 0.085,
+        "ln_P2": -2.465104
+      },
+      {
+        "congreso": 105,
+        "P2": 0.023,
+        "ln_P2": -3.772261
+      },
+      {
+        "congreso": 107,
+        "P2": 0.043,
+        "ln_P2": -3.146555
+      },
+      {
+        "congreso": 108,
+        "P2": 0.058,
+        "ln_P2": -2.847312
+      },
+      {
+        "congreso": 109,
+        "P2": 0.065,
+        "ln_P2": -2.733368
+      },
+      {
+        "congreso": 110,
+        "P2": 0.0825,
+        "ln_P2": -2.494957
+      },
+      {
+        "congreso": 111,
+        "P2": 0.071,
+        "ln_P2": -2.645075
+      },
+      {
+        "congreso": 112,
+        "P2": 0.138,
+        "ln_P2": -1.980502
+      },
+      {
+        "congreso": 113,
+        "P2": 0.166,
+        "ln_P2": -1.795767
+      },
+      {
+        "congreso": 114,
+        "P2": 0.155,
+        "ln_P2": -1.86433
+      },
+      {
+        "congreso": 115,
+        "P2": 0.1415,
+        "ln_P2": -1.955456
+      },
+      {
+        "congreso": 116,
+        "P2": 0.13,
+        "ln_P2": -2.040221
+      },
+      {
+        "congreso": 117,
+        "P2": 0.1625,
+        "ln_P2": -1.817077
+      },
+      {
+        "congreso": 118,
+        "P2": 0.159,
+        "ln_P2": -1.838851
+      },
+      {
+        "congreso": 119,
+        "P2": 0.124,
+        "ln_P2": -2.087474
+      }
+    ],
+    "comparacion_M84": "M-84 (dim2, pendiente LINEAL sobre los 86 congresos): NO_CONFIRMA (pendiente −0,000001, IC [−0,001364, 0,001661] incluye 0). M-87 usa la pendiente LOG sobre la subserie filtrada P2 >= 0,01 (82 congresos): el cero exacto del Congreso 106 queda excluido por el filtro declarado antes de correr. La serie P2 completa debe ser idéntica dígito a dígito a M-84 (86/86 dentro de 0,00005).",
+    "verificacion_independiente": "Re-cómputo de la serie P2 con pivot_table + medianas (otro camino de código): 86 congresos, máx diff vs serie medida 0.000000; filtro P2 >= 0,01 excluye [45, 56, 62, 106] (medido [45, 56, 62, 106]). Pendiente log por np.polyfit: 0.000395 (medida 0.000395). IC bootstrap 95% con semilla distinta (123): [-0.006038, 0.007873] (medido [-0.00689, 0.008327]) — coincide = True."
+  }
+}
