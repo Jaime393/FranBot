@@ -1,9 +1,9 @@
 {
-  "total": 1207,
+  "total": 1211,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1073,
+    "SE": 1077,
     "REFUTADO": 4,
     "NO_SE": 8
   },
@@ -12,7 +12,7 @@
     "provenance": 78,
     "digestion": 658,
     "consolidacion": 13,
-    "verificacion": 333,
+    "verificacion": 337,
     "conflicto": 64,
     "hueco": 40,
     "calculo": 3,
@@ -57,11 +57,11 @@
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7)": 1,
     "G-NUEVA: censo vacío heartbeat, causa folderId (F6 r11/r12)": 1,
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7; cara r12 #1)": 4,
-    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 22,
+    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 26,
     "G-NUEVA: d05 L4 polarización (medida y mecanismo)": 3,
     "G-NUEVA: d05 L7 escalamiento urbano": 3
   },
-  "hash_real": 1193,
+  "hash_real": 1197,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1270,6 +1270,10 @@
     "C-1209",
     "C-1210",
     "C-1211",
-    "C-1212"
+    "C-1212",
+    "C-1213",
+    "C-1214",
+    "C-1215",
+    "C-1216"
   ]
 }
