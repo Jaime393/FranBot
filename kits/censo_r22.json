@@ -1,0 +1,167 @@
+{
+  "directorio": "/home/hatch/workspace/academico/tejido_2026-11-12/ronda_22/ejecucion_f2",
+  "n_total": 101,
+  "n_vacios_savia": 58,
+  "distribucion_savia_por_version": {
+    "V151": {
+      "720": 29
+    },
+    "V152": {
+      "248376": 12,
+      "366733": 2
+    },
+    "V270": {
+      "None": 16
+    },
+    "V271_DARWIN": {
+      "None": 28
+    },
+    "V93": {
+      "None": 14
+    }
+  },
+  "v152": {
+    "248376": {
+      "n": 12,
+      "tipos": {
+        "completo": 11,
+        "compacto": 1
+      },
+      "sizes_B": [
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        55973,
+        89466
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_r22_00_20261116T011734Z.json",
+          "ts": "2026-11-16T01:17:34.152Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_07_20261116T014732Z.json",
+          "ts": "2026-11-16T01:47:32.234Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_100_20261116T081841Z.json",
+          "ts": "2026-11-16T08:18:41.167Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_27_20261116T031734Z.json",
+          "ts": "2026-11-16T03:17:33.902Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_34_20261116T034738Z.json",
+          "ts": "2026-11-16T03:47:37.871Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_41_20261116T041732Z.json",
+          "ts": "2026-11-16T04:17:32.243Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_54_20261116T051744Z.json",
+          "ts": "2026-11-16T05:17:43.960Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_61_20261116T054740Z.json",
+          "ts": "2026-11-16T05:47:40.265Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_68_20261116T061735Z.json",
+          "ts": "2026-11-16T06:17:34.812Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_81_20261116T071755Z.json",
+          "ts": "2026-11-16T07:17:54.564Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_83_20261116T072647Z.json",
+          "ts": "2026-11-16T07:26:46.863Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_ed161039"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_91_20261116T075026Z.json",
+          "ts": "2026-11-16T07:50:25.806Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        }
+      ],
+      "claves_data": {
+        "ecosistema,esporas,folderId,mesh,meshUrl,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 11,
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 1
+      },
+      "bien_formado_por_tipo": true
+    },
+    "366733": {
+      "n": 2,
+      "tipos": {
+        "compacto": 2
+      },
+      "sizes_B": [
+        55980,
+        55980
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_r22_17_20261116T022957Z.json",
+          "ts": "2026-11-16T02:29:56.197Z",
+          "size_B": 55980,
+          "tipo": "compacto",
+          "nodeId": "nodo_b93befd4"
+        },
+        {
+          "archivo": "heartbeat_rev_r22_93_20261116T075721Z.json",
+          "ts": "2026-11-16T07:57:20.712Z",
+          "size_B": 55980,
+          "tipo": "compacto",
+          "nodeId": "nodo_38717c22"
+        }
+      ],
+      "claves_data": {
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 2
+      },
+      "bien_formado_por_tipo": true
+    }
+  }
+}

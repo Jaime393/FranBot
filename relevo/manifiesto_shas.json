@@ -1,0 +1,23 @@
+{
+  "entradas": [
+    {
+      "archivo": "PROTOCOLO_RELEVO.md",
+      "sha256": "16553f89c5739cf4b0ec3ec3879d6faa80ca77d75cf4b6402cbdf96e625dde33",
+      "bytes": 3066,
+      "descripcion": "Protocolo genérico de relevo del especialista (6 reglas, estructura de kit, ejecución del relevo)."
+    },
+    {
+      "archivo": "kit_relevo_fase4.md",
+      "sha256": "3d82a8fbd6361242bf4996daabac31e7066c39f93a5d0cd87708e6b6fd2447e9",
+      "bytes": 6206,
+      "descripcion": "Kit concreto: rol subidor FASE 4 método (c), verificado en r23 (11 rutas existentes, valores de referencia, mapa de fallos)."
+    },
+    {
+      "archivo": "test_relevo.py",
+      "sha256": "48896bcde12d372b2d259be31d049c065d31474d7f568c54a8819fc30f83f1cd",
+      "bytes": 3984,
+      "descripcion": "Test de relevo (solo lectura). Test 2026-11-16: 55/55 PASS, exit 0."
+    }
+  ],
+  "test": "python3 test_relevo.py -> 55/55 PASS"
+}

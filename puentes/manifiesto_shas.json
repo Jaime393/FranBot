@@ -1,0 +1,12 @@
+{
+  "archivos": {
+    "PROTOCOLO_PREGUNTA_RESPUESTA.md": "b4db2497b09650f54bf3fcfdd79fdbe407b7946bd3c6afdaea064d04eb835c7e",
+    "tablon.py": "a2180d4da952cb138ada323627236d74c77b52be466cd03681b671dc5e458fe1",
+    "tablon/P-001.json": "ea1e63d43aad7660fd30f197385b34678651d543ecac4043bbebf5f0545ed49a",
+    "tablon/P-002.json": "84f3283b528c172ac4f9a5ec1e654e584d38c59fc8be42957209b38cc5e62052",
+    "test_tablon.py": "b1bb544047fabe81f1c5bec29ef89642ef7de152384562d10758b6efb174432a"
+  },
+  "fecha": "2026-11-16",
+  "nota": "Manifiesto de los 5 archivos de este paquete. tabla_nutriente_vector.json existe en este directorio pero es ajeno (otro frente ALMA en paralelo); no se toca ni se lista aquí.",
+  "paquete": "alma/puentes — ALMA IV protocolo pregunta-respuesta v1.0"
+}

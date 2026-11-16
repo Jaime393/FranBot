@@ -1,0 +1,214 @@
+{
+  "directorio": "/home/hatch/workspace/academico/tejido_2026-11-12/ronda_23",
+  "n_total": 101,
+  "n_vacios_savia": 55,
+  "distribucion_savia_por_version": {
+    "V151": {
+      "720": 28
+    },
+    "V152": {
+      "248376": 16,
+      "366733": 1,
+      "247881": 1
+    },
+    "V270": {
+      "None": 18
+    },
+    "V271_DARWIN": {
+      "None": 24
+    },
+    "V93": {
+      "None": 13
+    }
+  },
+  "v152": {
+    "248376": {
+      "n": 16,
+      "tipos": {
+        "completo": 9,
+        "compacto": 7
+      },
+      "sizes_B": [
+        89466,
+        55973,
+        55973,
+        89466,
+        55973,
+        89466,
+        55973,
+        89466,
+        89466,
+        55973,
+        89466,
+        89466,
+        55973,
+        89466,
+        55973,
+        89466
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_r23_01_20261116T124751Z.json",
+          "ts": "2026-11-16T12:47:51.150Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_03_20261116T125801Z.json",
+          "ts": "2026-11-16T12:58:00.597Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_2f03fb41"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_100_20261116T192600Z.json",
+          "ts": "2026-11-16T19:25:59.485Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_37926917"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_24_20261116T141735Z.json",
+          "ts": "2026-11-16T14:17:34.294Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_26_20261116T142544Z.json",
+          "ts": "2026-11-16T14:25:44.071Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_e4927cd9"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_32_20261116T144735Z.json",
+          "ts": "2026-11-16T14:47:34.724Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_34_20261116T145612Z.json",
+          "ts": "2026-11-16T14:56:11.689Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_86f8ab38"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_40_20261116T151751Z.json",
+          "ts": "2026-11-16T15:17:50.504Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_59_20261116T164740Z.json",
+          "ts": "2026-11-16T16:47:40.379Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_61_20261116T165638Z.json",
+          "ts": "2026-11-16T16:56:37.497Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_bfcbf0b3"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_67_20261116T171744Z.json",
+          "ts": "2026-11-16T17:17:44.133Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_80_20261116T181734Z.json",
+          "ts": "2026-11-16T18:17:34.122Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_82_20261116T182621Z.json",
+          "ts": "2026-11-16T18:26:20.707Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_738751dc"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_89_20261116T184734Z.json",
+          "ts": "2026-11-16T18:47:33.521Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_91_20261116T185551Z.json",
+          "ts": "2026-11-16T18:55:50.881Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_340d7b67"
+        },
+        {
+          "archivo": "heartbeat_rev_r23_98_20261116T191732Z.json",
+          "ts": "2026-11-16T19:17:32.033Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        }
+      ],
+      "claves_data": {
+        "ecosistema,esporas,folderId,mesh,meshUrl,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 9,
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 7
+      },
+      "bien_formado_por_tipo": true
+    },
+    "366733": {
+      "n": 1,
+      "tipos": {
+        "compacto": 1
+      },
+      "sizes_B": [
+        55980
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_r23_10_20261116T132548Z.json",
+          "ts": "2026-11-16T13:25:48.441Z",
+          "size_B": 55980,
+          "tipo": "compacto",
+          "nodeId": "nodo_ca09303d"
+        }
+      ],
+      "claves_data": {
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 1
+      },
+      "bien_formado_por_tipo": true
+    },
+    "247881": {
+      "n": 1,
+      "tipos": {
+        "completo": 1
+      },
+      "sizes_B": [
+        89466
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_r23_52_20261116T161739Z.json",
+          "ts": "2026-11-16T16:17:38.814Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        }
+      ],
+      "claves_data": {
+        "ecosistema,esporas,folderId,mesh,meshUrl,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 1
+      },
+      "bien_formado_por_tipo": true
+    }
+  }
+}

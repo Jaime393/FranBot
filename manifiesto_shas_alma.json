@@ -1,0 +1,139 @@
+{
+  "paquete": "ALMA 2026-11-16",
+  "metodo": "(c) Drive + GitHub un push-files",
+  "archivos": {
+    "README.md": {
+      "sha256": "cddb7e6d634b1b6b6c19abfd701ccf9402fb72551ca7b700362b6ff8d4f4508b",
+      "bytes": 3634
+    },
+    "catalogo/README.md": {
+      "sha256": "c439bcdb4be4b50ecf37f01a0db85a2f24f06617fa4c6fd0fdc8e6c0613571bc",
+      "bytes": 3791
+    },
+    "catalogo/_generar_catalogo.py": {
+      "sha256": "4b4ffbf6a6cfd882b1d6a4b01290a79e0da7f4c3d67fd5b40c56fcf0b396b2d1",
+      "bytes": 18903
+    },
+    "catalogo/catalogo_vivo.json": {
+      "sha256": "d5d5ce7cc45cf29839877d718804bfa05595042ce038ffae36c8ddcf2d53e4ec",
+      "bytes": 96122
+    },
+    "catalogo/leer_catalogo.py": {
+      "sha256": "999ccaf609eb5819ca5f8581b0e1983eff84e8243d1aba8ab8d5d629ec9fce8f",
+      "bytes": 3735
+    },
+    "catalogo/manifiesto_shas.json": {
+      "sha256": "85cf582a541e8c828137a4c0eb1c933495dbef66d657531eddf81d389b6b6624",
+      "bytes": 767
+    },
+    "catalogo/test_catalogo.py": {
+      "sha256": "463b65cf576ad07e1989141d0d7b35c9e93d63cb5b26ca5ef07cf33142d23508",
+      "bytes": 2852
+    },
+    "duales/manifiesto_shas.json": {
+      "sha256": "432ff9fb74aeece58a9fb6128415d8a14ab729eb52faa1371fa1605a78dbe25c",
+      "bytes": 547
+    },
+    "duales/tutorial_verificar_blob.md": {
+      "sha256": "155d1685f0dacd19950ca2a0cc2a81fe600b4c05ac7b632ac5b1ca74f06ec634",
+      "bytes": 8163
+    },
+    "kits/README.md": {
+      "sha256": "f975fdfa11ff6a7f9013f041080c2cbc7a52ee47810bc938ed5372927f0570e0",
+      "bytes": 1925
+    },
+    "kits/censo_r22.json": {
+      "sha256": "e3a5b03a6bb171d14b0fb603d1ed51fe868d9cf488cd06e7ad03950d2c95b750",
+      "bytes": 4520
+    },
+    "kits/censo_r23.json": {
+      "sha256": "8bf2e9592eb91fd594f4da4432b26a3f4b413d8e34988d389c2610c3b9dd4d40",
+      "bytes": 5807
+    },
+    "kits/kit_savia_v152.md": {
+      "sha256": "fbf6c38827119fcd835f21e2800d209d103f6eeca082679a7cefbd7cb7e77f2d",
+      "bytes": 11648
+    },
+    "kits/manifiesto_shas.json": {
+      "sha256": "374df88e9cef9a57facc069931a8dcf7fdfff2a793b1d1233e16d2c7ed1f72ae",
+      "bytes": 889
+    },
+    "kits/medir_savia.py": {
+      "sha256": "c0a49a70b2b0ee416e29f08b01cb75f8fc301bad0899bf62a2b4b2daba54d953",
+      "bytes": 5654
+    },
+    "kits/test_kit.py": {
+      "sha256": "1c4dd28fa637e2d2ea15011b6ff7fc310e5f4da98a119447c645a9db4f476f3d",
+      "bytes": 7102
+    },
+    "puentes/PROTOCOLO_PREGUNTA_RESPUESTA.md": {
+      "sha256": "b4db2497b09650f54bf3fcfdd79fdbe407b7946bd3c6afdaea064d04eb835c7e",
+      "bytes": 5304
+    },
+    "puentes/manifiesto_puente_nutriente_vector.json": {
+      "sha256": "2c57ce06265e37cdc3ad41f01a5e6038e202435c2819e98bd229fe8b5d3c67ba",
+      "bytes": 704
+    },
+    "puentes/manifiesto_shas.json": {
+      "sha256": "9c7f7cfb8d539eb4528351fd0a79d24ffc1ff8bedd9c48ff4ecb2c74e0345979",
+      "bytes": 780
+    },
+    "puentes/tabla_nutriente_vector.json": {
+      "sha256": "a4b0576a015c6feb62461770aff5caa2bf129ec1e87235371702f99821f50fab",
+      "bytes": 9132
+    },
+    "puentes/tablon.py": {
+      "sha256": "a2180d4da952cb138ada323627236d74c77b52be466cd03681b671dc5e458fe1",
+      "bytes": 10022
+    },
+    "puentes/tablon/P-001.json": {
+      "sha256": "ea1e63d43aad7660fd30f197385b34678651d543ecac4043bbebf5f0545ed49a",
+      "bytes": 576
+    },
+    "puentes/tablon/P-002.json": {
+      "sha256": "84f3283b528c172ac4f9a5ec1e654e584d38c59fc8be42957209b38cc5e62052",
+      "bytes": 591
+    },
+    "puentes/test_tablon.py": {
+      "sha256": "b1bb544047fabe81f1c5bec29ef89642ef7de152384562d10758b6efb174432a",
+      "bytes": 6822
+    },
+    "puentes/traducir_nutriente_vector.py": {
+      "sha256": "a9482ba86ae35355d638183161498de48abb77851f4debbdc97008450472d0f2",
+      "bytes": 11516
+    },
+    "relevo/PROTOCOLO_RELEVO.md": {
+      "sha256": "16553f89c5739cf4b0ec3ec3879d6faa80ca77d75cf4b6402cbdf96e625dde33",
+      "bytes": 3066
+    },
+    "relevo/kit_relevo_fase4.md": {
+      "sha256": "3d82a8fbd6361242bf4996daabac31e7066c39f93a5d0cd87708e6b6fd2447e9",
+      "bytes": 6206
+    },
+    "relevo/manifiesto_shas.json": {
+      "sha256": "8ba227193819d234fbd519daa6a3033de95896f37dc37c6b315bbcbc7ee82c60",
+      "bytes": 906
+    },
+    "relevo/test_relevo.py": {
+      "sha256": "48896bcde12d372b2d259be31d049c065d31474d7f568c54a8819fc30f83f1cd",
+      "bytes": 3984
+    },
+    "sondeo_corpus.md": {
+      "sha256": "412bee156a6d51b37ebad512e512d52c1d68c1d3527d4365d0da0283fa614a1f",
+      "bytes": 7770
+    },
+    "sondeo_deposito.md": {
+      "sha256": "9f501a1517c73c541b354bc16beb641e64961d783d2f1a54bf34cbfdab3dac2f",
+      "bytes": 6240
+    },
+    "sondeo_suelo.md": {
+      "sha256": "55c76c7ea8e4bc262aaa8904900107a28a3dd3875b77e527b1aace5ac1fdb9c3",
+      "bytes": 7351
+    },
+    "sondeo_vivo.md": {
+      "sha256": "8f12a61890638eb7e76ed31eb9cc29b8b417e6776c8f20d909a129b32eb3e77e",
+      "bytes": 2412
+    }
+  },
+  "total_archivos": 33
+}
