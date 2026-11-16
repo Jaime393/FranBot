@@ -1,4 +1,4 @@
-# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-86
+# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-89
 
 - **Creado:** 2026-11-14, por decisión N-16 (opción C, anexo de incertidumbre).
 - **Decisión:** N-16, aplicada en ronda 15 F1 bajo el régimen 2026-11-14 01:43 -05 (las decisiones se aplican automáticamente). Paquete: `ronda_13/ejecucion_f7/propuesta_inscripcion_dataset_r13.md` (sha `707f98c1…`, DC-R13-F7-01, opción C recomendada). Registro de la decisión: `ronda_15/ejecucion_f1/decision_n16_r15.md` / `.json`.
@@ -247,6 +247,30 @@
 - **Cara:** d05 L7 (escalamiento urbano) — **ABIERTA**. Este ítem es seguimiento del límite de una cara abierta (cruce β∧R² tras los censos separados de M-79 y M-82), no cierre.
 
 
+## M-87 — NO_CONFIRMA (r22, 2026-11-16) — ítem añadido por N-34
+
+- **Valor:** pendiente LOG de P2 (distancia entre medianas partidistas en DW-NOMINATE dim2, Cámara EE.UU., serie restaurada de 86 congresos 34..119, mismo protocolo de serie que M-78/M-81/M-84): ajuste OLS de ln(P2) contra el índice de congreso sobre la subserie filtrada (82 congresos, P2 ≥ 0,01, filtro declarado antes de correr), pendiente log **+0,000395 ± 0,004004**, IC bootstrap 95% (500 réplicas, semilla 0) **[−0,006890, 0,008327]**, IC analítico [−0,007573, 0,008362], t = 0,0986, p = 0,9217, R² = 0,0001 → **NO_CONFIRMA** (el IC incluye 0: no hay tendencia log detectable en dim2). La serie es un arco también en log: tramos 34–80 pendiente log +0,027295 y 81–119 pendiente log −0,056835. El filtro excluye 4/86 puntos (congresos 45, 56, 62, 106; P2 0,007 / 0,005 / 0,002 / 0,0), incluido el P2 = 0 exacto que bloqueó a M-81; el conjunto excluido se verifica desde la serie recomputada.
+- **Falsador:** CONFIRMA si el IC bootstrap 95% de la pendiente log excluye 0 (pendiente log distinguible de 0; signo según la medida); NO_CONFIRMA si el IC incluye 0 (la pendiente log no es distinguible de 0; la exclusión no rescata la tendencia log). Declarado en `declaracion_falsadores_r22.md` (2026-11-16T08:17:23Z) antes de correr. **Veredicto:** NO_CONFIRMA (el IC incluye 0).
+- **Matiz — el NO_CONFIRMA no niega la subida 34–80:** la pendiente log es una tendencia sobre una serie no monótona; un NO_CONFIRMA no niega la subida 34–80, solo que no hay tendencia log detectable sobre la subserie filtrada. Los cocientes máximos de M-75 (463,75) y M-78 (50,14) eran artefacto de selección del ancla; la pendiente lineal de M-84 (−0,000001, IC [−0,001364, 0,001661]) tampoco encontró tendencia. M-87 es la tercera especificación sin tendencia (cociente, lineal, log): la exclusión no rescata la tendencia log. La cara **d05 L4 NO se cierra** con esta medición (el muro dim2 sigue sin cruzarse: ni cociente, ni lineal, ni log lo cruzan).
+- **Secundarios (NO decisorios):** pendiente analítica +0,000395 ± 0,004004; IC analítico [−0,007573, 0,008362]; p = 0,9217; R² = 0,0001; serie P2 idéntica dígito a dígito a M-84 (verificación independiente: máx diff 0,0; pendiente log por np.polyfit +0,000395; IC bootstrap con semilla 123 (verificador F3) [−0,006038, 0,007873] — coincide); el bootstrap de pares supone los puntos intercambiables y no modela la autocorrelación temporal.
+- **Lección para la próxima vuelta:** las tres especificaciones de tendencia (cociente, lineal, log) están agotadas sobre esta serie. Una próxima especificación distinta tendría que cambiar la pregunta (p. ej. tendencia por tramos con punto de corte declarado antes de correr, o especificación no lineal) — repetir el OLS sobre la misma serie es repetición, no medición.
+- **Fuente:** Voteview HSall_members.csv (6.201.455 B, sha `495aee95…`; copia en `datos/` de r22, verificada antes de correr). **sha_dato:** `bec5c5e4e46ac9a78ee1dfa3d2f334eb0f448b68ab16e9f5fe3b4fafd95f0edb` (med_M87.json, 15 claves; verificación independiente idéntica dígito a dígito).
+- **¿Da fila?** NO (anotación): refina la línea de polarización dim2 (ítems M-61/M-64/M-67/M-70/M-74/M-75/M-78/M-81/M-84) y registra que no hay tendencia log detectable con exclusión; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** d05 L4 (polarización dim2) — **ABIERTA**. Este ítem es seguimiento del límite de una cara abierta (pendiente log con exclusión tras los cocientes de M-75/M-78, el bloqueo de M-81 y la lineal de M-84), no cierre.
+
+
+## M-89 — REGULAR (r22, 2026-11-16) — ítem añadido por N-35
+
+- **Valor:** secuencia de autocura 11→15 (workflow miu-autocura, id 417018123): run 14 EXISTE (2026-11-15T21:45:50Z, success, id 43765476720, duración 12,0 s, head 35d30ec2 = commit del State Writer run 211) y run 15 EXISTE (2026-11-16T02:01:49Z, success, id 43789672353, duración 10,0 s, head c331af1e = commit run 212). Secuencia completa verificada run por run (11: 01:52:22Z; 12: 09:20:08Z; 13: 17:05:50Z; 14: 21:45:50Z; 15: 02:01:49Z), todos success, duraciones 9–12 s. Intervalos: 11→12 = 447,77 min; 12→13 = 465,70 min; 13→14 = 280,00 min; 14→15 = 255,98 min; cociente máx/mín **1,819 < 2** → **REGULAR** (criterio declarado: cadencia REGULAR si el cociente máx/mín de los intervalos < 2). Sin run 16 al cierre (6 h 21 min desde el 15).
+- **Falsador:** cadencia REGULAR si el cociente máx/mín de los intervalos < 2 (todos los intervalos dentro de un factor 2 entre sí); IRREGULAR en caso contrario. La existencia del run 14 se establece como SÉ desde la API (existe con su timestamp, o falta en la secuencia). Efecto: head_commit por run; si los runs no dejan rastro verificable de cambio de estado más allá de sus propios metadatos → NO_SÉ parcial con el alcance exacto. Declarado en `declaracion_falsadores_r22.md` (2026-11-16T08:17:23Z) antes de correr. **Veredicto:** REGULAR (cociente 1,819 < 2); efecto NO_SÉ parcial (ningún run dejó rastro verificable de cambio de estado más allá de sus propios metadatos).
+- **Matiz — REGULAR con escalón:** la cadencia es REGULAR por el criterio (todos los intervalos dentro de un factor 2), pero no es estacionaria: hay un escalón a la baja de ~7,5 h (447,77 y 465,70 min) a ~4,5 h (280,00 y 255,98 min). Dos intervalos largos seguidos de dos cortos — no una aceleración continua. El criterio < 2 no distingue el escalón; el ítem lo registra para que la próxima vuelta lo vea. El efecto queda acotado con precisión: lo que hizo cada run dentro de sus 10–12 s no es visible sin los logs (403); eso es NO_SÉ parcial con el alcance exacto, no una negación de efecto.
+- **Secundarios (NO decisorios):** verificación independiente (otro camino de código, desde datos/autocura_runs_2026-11-16.json): intervalos [447,77, 465,70, 280,00, 255,98], cociente 1,819, lags [42,05, 71,92, 80,07, 59,35, 79,48], duraciones [9,0, 9,0, 10,0, 12,0, 10,0], conclusiones 5/5 success — coincide. Cada run corre sobre el HEAD del State Writer vigente (run 14 sobre 35d30ec2; run 15 sobre c331af1e). Igual que en r13–r21, ningún run de autocura escribió nada en el repo.
+- **Lección para la próxima vuelta:** la secuencia 11→15 cierra el hueco que r21 dejó (11→13 con el 14 pendiente). La próxima vuelta mide si el escalón se sostiene (intervalos ~4,5 h) o si vuelve a ~7,5 h — y si aparece el run 16. El criterio < 2 debería acompañarse del registro del escalón, como hace este ítem.
+- **Fuente:** API pública de GitHub, runs del workflow miu-autocura (sin auth). **sha_dato:** `6da9303acbb60ec4f4063ed333a5b6ee6b8fbf579c7e21dfe370790faa519d1c` (med_M89.json, 15 claves; verificación independiente coincide 5/5).
+- **¿Da fila?** NO (anotación): registra la cadencia y la existencia de runs de un workflow del vivo; no da valor de nodo. No se inscribe en el CSV.
+- **Cara:** ninguna cara del censo d08 — es observabilidad del vivo. Este ítem es seguimiento del vivo (la autocura volvió a correr y acelera), no cierre de cara.
+
+
 ## Resumen
 
 | Med. | Veredicto | Valor | Fila | Cara |
@@ -274,8 +298,10 @@
 | M-84 | NO_CONFIRMA | pendiente lineal P2 −0,000001, IC [−0,001364, 0,001661] incluye 0; arco, no tendencia | NO (anotación) | d05 L4 |
 | M-85 | CONFIRMA | β built_up_area_m2 0,9023, IC [0,8896, 0,9142] contiene 0,90; borde sin resolver | NO (anotación) | d05 L7 |
 | M-86 | CONFIRMA | censo β∧R²: 0 cruces; R² máx 0,7490 | NO (anotación) | d05 L7 |
+| M-87 | NO_CONFIRMA | pendiente log P2 +0,000395, IC [−0,006890, 0,008327] incluye 0; tercera especificación sin tendencia | NO (anotación) | d05 L4 |
+| M-89 | REGULAR | autocura 11→15, cociente máx/mín 1,819 < 2; escalón ~7,5 h → ~4,5 h; efecto NO_SÉ parcial | NO (anotación) | observabilidad |
 
-**Tally:** CONFIRMA 14 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83, M-85, M-86) · NO_CONFIRMA 7 (M-57, M-61, M-64, M-65, M-69, M-76, M-84) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58). Ítems: 23 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83, M-84, M-85, M-86). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
+**Tally:** CONFIRMA 14 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83, M-85, M-86) · NO_CONFIRMA 8 (M-57, M-61, M-64, M-65, M-69, M-76, M-84, M-87) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58) · REGULAR 1 (M-89). Ítems: 25 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83, M-84, M-85, M-86, M-87, M-89). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
 
 **Ítems futuros:** las mediciones que tampoco den fila se añaden a este anexo por la misma vía (F7 prepara el ítem, F1 lo añade). Una medición que entregue un D_f de nodo inscribe su fila en el CSV por decisión propia, no por este anexo.
 
