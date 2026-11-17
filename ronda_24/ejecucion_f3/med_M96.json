@@ -1,0 +1,129 @@
+{
+  "medicion": "M-96",
+  "dominio": "Savia V152 en la ventana nueva r24: ¿persiste el cuarto valor 248.372? (payloads heartbeat del Drive canónico, revisiones posteriores al corte del ciclo ALMA 2026-11-17T00:17:58Z)",
+  "fuente": "34 archivos heartbeat_rev_r24_*.json en ejecucion_f3/datos/ (descargados por este frente vía Drive revisions API del heartbeat canónico 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR, corte 2026-11-17T00:17:58Z, 0 errores). Campo data.savia por payload.",
+  "url": "Drive canónico MIU_HEARTBEAT_ESTADO_CANONICO.json (ID 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR); copias locales en ronda_24/ejecucion_f3/datos/heartbeat_rev_r24_*.json",
+  "sha256_dato": "91f710eda68acd7ea5b7c04a63918ce19154fc42683b882c8fa2ad31860e80ac",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r24.md, 2026-11-17T02:34:08Z): por cada uno de los 34 payloads, version (tag), data.savia, tamaño del archivo, ts y conjunto de claves de data. Clasificación por variante: completo (>80.000 B, mesh completo) vs compacto (>40.000 B). Conteo de ocurrencias por valor de savia dentro de V152; comparación del conjunto de claves de data por TIPO (CORR-M91-ESTRUCTURA-R23); savia vs mesh.totalSize por payload V152.",
+  "parametros": {
+    "payloads_ventana": 34,
+    "payloads_v152": 6,
+    "conteo_savia_v152": {
+      "248376": 6
+    },
+    "valores_distintos_v152": [
+      {
+        "valor_savia": 248376,
+        "n": 6,
+        "tipo": "completo",
+        "size_B_ejemplo": 89466,
+        "idx_ts": [
+          {
+            "archivo": "heartbeat_rev_r24_11_20261117T011736Z.json",
+            "ts": "2026-11-17T01:17:35.608Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r24_13_20261117T012549Z.json",
+            "ts": "2026-11-17T01:25:49.238Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r24_20_20261117T014735Z.json",
+            "ts": "2026-11-17T01:47:34.470Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r24_22_20261117T015610Z.json",
+            "ts": "2026-11-17T01:56:09.606Z",
+            "size_B": 55973
+          },
+          {
+            "archivo": "heartbeat_rev_r24_29_20261117T021731Z.json",
+            "ts": "2026-11-17T02:17:31.251Z",
+            "size_B": 89466
+          },
+          {
+            "archivo": "heartbeat_rev_r24_31_20261117T022544Z.json",
+            "ts": "2026-11-17T02:25:43.744Z",
+            "size_B": 55973
+          }
+        ],
+        "claves_data_iguales_a_mayoria_mismo_tipo": true
+      }
+    ],
+    "cuarto_valor_248372_n": 0,
+    "tercer_valor_247881_n": 0,
+    "todos_bien_formados": true,
+    "claves_data_mayoria_por_tipo": {
+      "completo": [
+        "ecosistema",
+        "esporas",
+        "folderId",
+        "mesh",
+        "meshUrl",
+        "nodeId",
+        "nutrientes",
+        "ok",
+        "phi",
+        "puente",
+        "rho",
+        "savia",
+        "tag",
+        "timestamp",
+        "tipo"
+      ],
+      "compacto": [
+        "esporas",
+        "folderId",
+        "mesh",
+        "nodeId",
+        "nutrientes",
+        "ok",
+        "phi",
+        "puente",
+        "rho",
+        "savia",
+        "tag",
+        "timestamp",
+        "tipo"
+      ]
+    },
+    "distribucion_savia_por_version": {
+      "V271_DARWIN": {
+        "null": 9
+      },
+      "V270": {
+        "null": 7
+      },
+      "V93": {
+        "null": 4
+      },
+      "V151": {
+        "720": 8
+      },
+      "V152": {
+        "248376": 6
+      }
+    },
+    "payloads_vacios_censo": 20,
+    "savia_vs_totalSize_pares": 6,
+    "savia_vs_totalSize_iguales": 6,
+    "savia_vs_totalSize_todos_iguales": true,
+    "ventana_inicio": "2026-11-17T00:27:14.829Z",
+    "ventana_fin": "2026-11-17T02:28:33.606Z",
+    "corte_ciclo_alma": "2026-11-17T00:17:58Z"
+  },
+  "valor": 0,
+  "error": null,
+  "limites_validez": "La ventana r24 es la de las 34 revisiones nuevas descargadas (posteriores al corte del ciclo ALMA); los payloads son los que el Drive canónico sirvió. Un valor en 1 solo payload no se puede distinguir de un error de escritura del emisor sin más ventanas — por eso el falsador exige estructura bien formada, no solo presencia. Los payloads vacíos (censo vacío) no llevan savia y se excluyen del conteo por valor.",
+  "criterio_falsacion": "CONFIRMA (persiste) si el valor 248.372 aparece en ≥1 payload V152 bien formado (mismo conjunto de claves data que la mayoría de su propio tipo) dentro de la ventana nueva; NO_CONFIRMA (no persiste) si aparece 0 veces; NO_SÉ si no se pueden descargar las revisiones o el campo savia falta en V152. Declarado en declaracion_falsadores_r24.md (2026-11-17T02:34:08Z) antes de correr.",
+  "veredicto": "NO_CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-17",
+  "extra": {
+    "lectura": "V152: 6 payloads — 248.376 ×6, 366.733 ×0, 247.881 ×0, 248.372 ×0. El cuarto valor NO PERSISTE en la ventana nueva (n=0). Todos los valores viven en payloads bien formados por tipo: sí.",
+    "savia_totalSize": "savia == mesh.totalSize en 6/6 pares V152 con mesh presente (acumulado con r23 + ciclo: 35/35).",
+    "verificacion_independiente": "Ver verificar_m96_m97_m98.py (re-cómputo desde los 34 archivos por otro camino de código)."
+  }
+}

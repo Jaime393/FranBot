@@ -1,0 +1,209 @@
+{
+  "censo_caras": {
+    "abiertas": 58,
+    "abiertas_a": 41,
+    "abiertas_p": 17,
+    "avanzan_r24": [
+      "r12 #1",
+      "d07 L7",
+      "r3 #4",
+      "d09 L20",
+      "r1 #9",
+      "r1 #12",
+      "r1 #13",
+      "d04 L10"
+    ],
+    "cerradas": 19,
+    "cierran_r24": [],
+    "d08_l12_avanza_por_n40": false,
+    "nuevas_r24": 0,
+    "reaperturas_r24": 0,
+    "sin_avance_r24": [
+      "d05 L4",
+      "d05 L7",
+      "d08 L12"
+    ],
+    "tocadas_r24": 8,
+    "total": 77
+  },
+  "corpus": {
+    "anexo_items": 31,
+    "anexo_sha": "8cc6dd9d36c6f3f99f81e671c266c56f36bacc0b42096b79297757c77627b92b",
+    "audit_ok": 379,
+    "claims": 1222,
+    "claims_sha": "6dbee11d8ac1b5cff2f56a871f1df27a2c2b7a306648e21a5fb76d0d5bd7a30e",
+    "confirmaciones_filas": 294,
+    "dataset_sha": "0852d58f92356eee",
+    "hash_real": 1208,
+    "huecos_filas": 139,
+    "provenance_entradas": 380,
+    "provenance_lineas": 393,
+    "provenance_sha": "07dfdd0f08c8bbe6046f54568970dde15a37d3dd3cf418793a4fc500db64c408",
+    "registro_pendientes": 0,
+    "registro_sha": "eec65bcd",
+    "resumen_sha": "06990609942aa5f6c34573e92896296f78e0414815a88c5d57e569816160341c",
+    "se": 1088,
+    "verificacion": 348,
+    "verify_all": [
+      "C-001",
+      "C-002",
+      "C-003",
+      "C-004",
+      "C-005",
+      "C-006",
+      "C-007",
+      "C-008"
+    ]
+  },
+  "correcciones_para_fase3": [
+    "CORR-DEDUP-R24: valores de dedup identicos cifra por cifra a F7; JSON NO byte-identico (dicts vs pares, distinta estructura)",
+    "CORR-ORDINALES-R24: F2 etiqueto G05 38a/H-SUELO 39a/folderId 41a pero F5 ya las hizo ~6 min antes; reales de F2: G05 39a, H-SUELO 40a, folderId 42a",
+    "CORR-ORDINAL-FOLDERID-R24 (de F5): el encargo decia folderId 40a pero la serie ya estaba en 40a al cierre de r23; la lectura de F5 es la 41a",
+    "CORR-RUTA-ESTADO-R24 (de F2): estado_vivo.json y flow_id_coverage.json viven en observabilidad/, no en la raiz; el 404 de FASE 0 era ruta, no ausencia",
+    "CORR-PAGINACION-R24 (de F4): --page-all devolvio solo la pagina 1 de Panteon (100); pagina 2 pedida explicita (16); total fusionado 116",
+    "CORR-DIFF-VACIOS-R24 (de F9): el diff emparejaba vacios como MOVIDO (8 pares falsos por sha compartido e3b0c442); corregido: 0 MOVIDO / 15 FALTA",
+    "CORR-V152-R23 vigente: sin subconteo en r24 (F2 y F3 coinciden en 248.376 x6)",
+    "CORR-M91-ESTRUCTURA-R23 vigente: comparacion por tipo desde el inicio en M-96",
+    "CORR-CUOTA-R23 vigente, NO se repite: 0 HTTP 403 en r24",
+    "CORR-DUPLICADO-HB-R23 vigente: F2 r24 descarga una sola vez (34 payloads, P-81); sin duplicado huerfano en raiz de ronda_24/",
+    "CORR-RAW-R22 vigente, NO se repite: raw/API no flapean en r24",
+    "CORR-ERR-R22 vigente: los 3 .err de r19 siguen PRESENTES en r24, sin flapeo observado",
+    "CORR-PANTEON-TOTAL-R21 vigente: total paginado 116 (+5 propios FASE 4 r23)",
+    "CORR-PAGINACION-SEARCH-R21 vigente: 30 items/pagina",
+    "CORR-CONTEO-R19 vigente: conteo por caras distintas, 8 tocadas en r24"
+  ],
+  "d08_l12_juicio": "NO avanza en r24: no hay decision N nueva adoptada (FASE 2 no ha corrido; N-40 es candidata de F7). Aun adoptada, las inscripciones de anexo son la operacion normal de la ronda (precedentes N-18..N-39); el avance de r21 fue especifico a N-28, que cerro un hueco registrado (umbral 0,50 sin especificacion). F-UMB24 pasa su cuarta vuelta como canon: mismo canon, no cierre nuevo. F-VOZ-S2 registrada agotada 10a vez sin ejecutar. M-97 NO_SE no se inscribe.",
+  "decisiones_fase2": "PENDIENTE: FASE 2 r24 no ha corrido al cierre de este frente (F8 es T3 de FASE 1). N-40 candidata (items M-96/M-98) y C-1228..C-1230 esperan adjudicacion.",
+  "dedup_propio": {
+    "_entre_propuestas": 0.1695,
+    "_global_max": 0.3806,
+    "_pares_mayor_o_igual_0_5": 0,
+    "coincide_valores_con_f7": true,
+    "corridas_byte_identicas": 3,
+    "entre_propuestas": {
+      "entre_C-1228_C-1229": 0.1337,
+      "entre_C-1228_C-1230": 0.0753,
+      "entre_C-1229_C-1230": 0.1695
+    },
+    "json_byte_identico_a_f7": false,
+    "json_sha": "93efa3b3b51b",
+    "por_propuesta": {
+      "C-1228": {
+        "max": 0.3267,
+        "top3": [
+          {
+            "id": "C-1214",
+            "jaccard": 0.3267
+          },
+          {
+            "id": "C-1227",
+            "jaccard": 0.3113
+          },
+          {
+            "id": "C-1219",
+            "jaccard": 0.2479
+          }
+        ],
+        "vs": "C-1214"
+      },
+      "C-1229": {
+        "max": 0.3786,
+        "top3": [
+          {
+            "id": "C-1215",
+            "jaccard": 0.3786
+          },
+          {
+            "id": "C-1208",
+            "jaccard": 0.2267
+          },
+          {
+            "id": "C-1202",
+            "jaccard": 0.2109
+          }
+        ],
+        "vs": "C-1215"
+      },
+      "C-1230": {
+        "max": 0.3806,
+        "top3": [
+          {
+            "id": "C-1216",
+            "jaccard": 0.3806
+          },
+          {
+            "id": "C-1206",
+            "jaccard": 0.2911
+          },
+          {
+            "id": "C-1178",
+            "jaccard": 0.2593
+          }
+        ],
+        "vs": "C-1216"
+      }
+    }
+  },
+  "estado": "FASE 1 cerrada; FASE 2 pendiente",
+  "estado_vivo_f2": {
+    "ausencia_estado_completo_h": 80.67,
+    "autocura_run_18": false,
+    "autocura_ultimo_run": 17,
+    "bots": "4/4 VIVO, 26a confirmacion",
+    "episodio_unreachable_min": 68.32,
+    "estado_vivo_blob": "e55e4428",
+    "estado_vivo_estado": "unreachable",
+    "estado_vivo_run": 215,
+    "flow_cobertura": 0.0,
+    "flow_eventos": 0,
+    "flow_medicion_n": 17,
+    "flow_run": 150,
+    "folderid": "41a F5 (02:34:04-07Z) / 42a real F2 (02:39:14-15Z)",
+    "g05": "38a F5 (02:33:47-50Z) / 39a real F2 (02:39:05-07Z)",
+    "gap_max_min": 114.5,
+    "h_suelo": "39a F5 (02:33:54-58Z) / 40a real F2 (02:39:05-09Z)",
+    "head_fecha": "2026-11-17T01:30:41Z",
+    "head_miu_ecosistema": "d32f462b",
+    "savia_totalSize": "6/6 (35/35 acumulado)",
+    "savia_v152": {
+      "247.881": 0,
+      "248.372": 0,
+      "248.376": 6,
+      "366.733": 0
+    },
+    "v93_acumulado": 75,
+    "v93_nuevos": 4,
+    "ventana": "30/0/0 = 0,0% de fallo, 5a ronda consecutiva"
+  },
+  "fecha": "2026-11-17",
+  "frente": "F8 CONECTAR",
+  "mediciones_f3": {
+    "M-96": "NO_CONFIRMA — cuarto valor 248.372 no persiste (0/6); ventana de un solo valor 248.376 x6; savia=totalSize 6/6 (35/35)",
+    "M-97": "NO_SE — sin run 18 (total_count 17); 370,0 min desde run 17, dentro de cadencia; NO se inscribe",
+    "M-98": "CONFIRMA — flow run 150, 0,0%, 0 eventos, 17a medicion en 0,0%; intervalos 146-150 [242,35, 412,08, 613,77, 461,23] min"
+  },
+  "propuestas_f7": {
+    "claims": [
+      "C-1228",
+      "C-1229",
+      "C-1230"
+    ],
+    "decision_candidata": "N-40",
+    "items_anexo": [
+      "M-96 NO_CONFIRMA",
+      "M-98 CONFIRMA"
+    ],
+    "no_preparado": "M-97 (NO_SE por bloqueo, precedente M-88 r22)",
+    "reescrituras": 1
+  },
+  "proyeccion_absorcion": {
+    "anexo": "31 -> 33 items (CONFIRMA 19, NO_CONFIRMA 10, DIFERENCIA 2, NO_SE 1, REGULAR 1)",
+    "audit_ok": "379 -> 382",
+    "claims": "1.222 -> 1.225",
+    "hash_real": "1208 -> 1211",
+    "provenance": "391 -> 394 (3 fuentes distintas, a verificar en absorcion)",
+    "se": "1088 -> 1091",
+    "verificacion": "348 -> 350"
+  },
+  "ronda": 24
+}

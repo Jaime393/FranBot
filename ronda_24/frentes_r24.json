@@ -1,0 +1,83 @@
+{
+  "ronda": 24,
+  "fecha": "2026-11-16/17",
+  "orden": "Continúen con lo posible (2026-11-16 21:32 -05)",
+  "base_corpus": {
+    "claims": 1222,
+    "claims_sha256": "6dbee11d8ac1",
+    "provenance": 391,
+    "resumen": {
+      "SE": 1088,
+      "hash_real": 1208,
+      "verificacion": 348
+    },
+    "anexo_items": 31,
+    "anexo_sha256": "8cc6dd9d",
+    "audit_ok": 379,
+    "verify_all": [
+      "C-001",
+      "C-002",
+      "C-003",
+      "C-004",
+      "C-005",
+      "C-006",
+      "C-007",
+      "C-008"
+    ],
+    "registro": {
+      "pendientes": 0,
+      "aplicadas": 80,
+      "cerradas": 8,
+      "sha": "eec65bcd"
+    }
+  },
+  "proximos_ids": {
+    "claim": "C-1228",
+    "decision": "N-40",
+    "medicion": "M-96",
+    "poda": "P-78"
+  },
+  "series_conteo": {
+    "G05": 37,
+    "H-SUELO": 38,
+    "folderId": 40,
+    "bots": 25
+  },
+  "vivo_al_mapa": {
+    "head_miu_ecosistema": "d32f462b",
+    "head_fecha": "2026-11-17T01:30:41Z",
+    "head_mensaje": "state: auto V270 2026-11-17T01:30Z run 215",
+    "estado_vivo_json_api_publica": "404 en raiz (2026-11-17T02:32Z, F2 lo resuelve por conector)",
+    "flow_id_coverage_json_api_publica": "404 en raiz (2026-11-17T02:32Z, F2 lo resuelve por conector)",
+    "head_franbot": "1f1ed57b"
+  },
+  "fertilidad": [
+    "F2",
+    "F3",
+    "F6",
+    "F5",
+    "F7",
+    "F9",
+    "F4",
+    "F1",
+    "F8"
+  ],
+  "tandas": {
+    "T1": [
+      "F2",
+      "F3",
+      "F6",
+      "F5"
+    ],
+    "T2": [
+      "F7",
+      "F9",
+      "F4",
+      "F1"
+    ],
+    "T3": [
+      "F8"
+    ]
+  },
+  "fase4_metodo": "c"
+}

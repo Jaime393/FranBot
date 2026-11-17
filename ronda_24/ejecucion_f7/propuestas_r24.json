@@ -1,0 +1,88 @@
+{
+  "ronda": 24,
+  "fecha": "2026-11-17",
+  "base_corpus": {
+    "claims": 1222,
+    "anexo_items": 31
+  },
+  "propuestas_claims": [
+    {
+      "id_propuesto": "C-1228",
+      "tipo": "verificacion",
+      "estado": "SE",
+      "idea_alma": null,
+      "origen": "M-96",
+      "claim": "SAVIA V152 — VENTANA DE UN SOLO VALOR: NI EL TERCERO NI EL CUARTO PERSISTEN (ronda 24, F3, 2026-11-17): en los 6 payloads V152 de la ventana r24 (34 revisiones, 2026-11-17T00:27:14Z → 02:28:33Z), la savia toma un solo valor: 248.376 ×6 (3 full 89.466 B + 3 compactos 55.973 B). El cuarto valor 248.372 aparece 0 veces (una sola aparición en la ventana del ciclo ALMA, 71 revisiones) y el tercero 247.881 aparece 0 veces por segunda ventana seguida (0/11 en el ciclo, 0/6 aquí); 366.733 también 0. La identidad savia = mesh.totalSize se cumple 6/6 (35/35 acumulado con r23 + ciclo). Responde la pregunta que dejó M-91 (r23): el 247.881 no persistió y el cuarto valor tampoco — ambos fueron un solo payload, no un régimen. Los 6 viven en payloads bien formados por tipo (corrección CORR-M91-ESTRUCTURA-R23).",
+      "fuente_archivo": "ronda_24/ejecucion_f3/med_M96.json",
+      "fuente_extra": "ronda_24/ejecucion_f3/verificar_m96_m97_m98.py (re-cómputo 3/3) + 34 archivos heartbeat_rev_r24_*.json en ejecucion_f3/datos/",
+      "fuente_sha256": "5f490edf0b4c53db4d0cc668e580daaf10860af303f0993e2fb7b9bfa18660b5",
+      "fecha": "2026-11-17"
+    },
+    {
+      "id_propuesto": "C-1229",
+      "tipo": "verificacion",
+      "estado": "SE",
+      "origen": "M-98",
+      "claim": "FLOW-ID RUN 150 — EL CERO LLEGA A 17 MEDICIONES: LA CADENCIA 146→150 LO CONFIRMA (ronda 24, F3, 2026-11-17): cobertura flow_id 0,0%, 0 eventos, estado critico, eco 0,0%, en el archivo que siguió al run 150 (2026-11-17T00:55:28Z, success, id 43991536814, head f0a8c308; archivo ts 00:55:39Z, lag 0,20 min; 832 B, blob 9ed991e11649). Es la 17.ª medición consecutiva en 0,0% (la serie empezó en 100,0% en r11 y no ha salido de cero desde r12). Los cuatro intervalos nuevos entre runs 146→150 son [242,35, 412,08, 613,77, 461,23] min, mediana 436,66 min: ningún intervalo se acerca a los 30 min del cron declarado. Runs 146→150: 5/5 success. El hueco del run 147 sigue sin lectura puntual (archivo sobrescrito antes de leerse); el veredicto descansa en el archivo actual + una lectura por ronda.",
+      "fuente_archivo": "ronda_24/ejecucion_f3/med_M98.json",
+      "fuente_extra": "ronda_24/ejecucion_f3/verificar_m96_m97_m98.py (re-cómputo 3/3) + datos/flow_runs_2026-11-17.json",
+      "fuente_sha256": "6385748f680540b811cca10367453cdcaefc7488df2cc6b51dfd82278f24a247",
+      "fecha": "2026-11-17"
+    },
+    {
+      "id_propuesto": "C-1230",
+      "tipo": "verificacion",
+      "estado": "SE",
+      "origen": "F2",
+      "claim": "RUN 215 'UNREACHABLE' — EL STUB VUELVE A RELEVAR Y LA AUSENCIA PASA DE 80 HORAS (ronda 24, F2, 2026-11-17): el archivo de estado (observabilidad/estado_vivo.json) lo escribe ahora el State Writer run 215 'unreachable' (2026-11-17T01:30:41Z, blob e55e4428…, episodio 68,32 min al cierre), tras el Pulse V2 run 176 'paused' (2026-11-16T20:54:46Z, blob 2ec64f63…): segundo relevo desde el cierre de r23. El último estado completo sigue siendo el run 202 V272 (2026-11-13T17:58:47Z): ausente 80,67 h al cierre. Ventana 30/0/0 = 0,0% de fallo, quinta ronda consecutiva; gap máx 114,5 min (récord 174,4 NO superado; hueco anterior fuera de ventana 114,9 min). HEAD d32f462b (2026-11-17T01:30:41Z, 'state: auto V270 run 215'); bots 4/4 VIVO, 26.ª confirmación consecutiva (3 corridas); 5.º token 401 MUERTO. Autocura sin run 18 (máximo run 17, 2026-11-16T20:26:02Z); flow run 150 0,0%, 17.ª medición.",
+      "fuente_archivo": "ronda_24/ejecucion_f2/estado_vivo_r24.json",
+      "fuente_extra": "ronda_24/ejecucion_f2/estado_vivo_r24.md + manifiesto_fase2_r24.json + cosecha_r24/ (34 payloads)",
+      "fuente_sha256": "45a5c21c4dcc29fa1786356d9d9b1026563841785d5a45ba92d560737725d1fd",
+      "fecha": "2026-11-17"
+    }
+  ],
+  "propuestas_anexo": [
+    {
+      "id_propuesto": "M-96",
+      "veredicto": "NO_CONFIRMA",
+      "medicion": "Savia V152 en la ventana nueva r24: ¿persiste el cuarto valor 248.372? (34 revisiones heartbeat, corte ciclo ALMA 2026-11-17T00:17:58Z).",
+      "detalle": "Valor: savia V152 en la ventana r24 (34 revisiones heartbeat, 2026-11-17T00:27:14Z → 02:28:33Z): UN SOLO valor — 248.376 ×6 (3 full 89.466 B + 3 compactos 55.973 B). 248.372 ×0 (una sola aparición en la ventana del ciclo, 71 revisiones), 247.881 ×0 (segunda ventana seguida en 0: 0/11 ciclo + 0/6 aquí), 366.733 ×0. Todos bien formados por tipo. savia = mesh.totalSize 6/6 (35/35 acumulado con r23 + ciclo). Falsador: NO_CONFIRMA (no persiste) si 248.372 aparece 0 veces en payloads V152 bien formados dentro de la ventana nueva; CONFIRMA si aparece ≥1. Declarado en declaracion_falsadores_r24.md (2026-11-17T02:34:08Z) antes de correr. Veredicto: NO_CONFIRMA. Matiz: responde la pregunta que dejó M-91 (r23) y la que dejó C-1227 (ciclo ALMA) — ninguno de los dos valores persiste. Un valor en 1 solo payload no se distingue de un error de escritura del emisor; ahora hay DOS ventanas consecutivas en 0 para ambos valores, lo que sostiene 'transitorio' frente a 'régimen'. La divergencia estructural de r23 (3 valores) se contrae a 1 valor en r24; serie de valores distintos por ventana: r22 2, r23 3, ciclo 3, r24 1. Secundarios: verificación independiente 3/3 (re-cómputo por otro camino de código); F2 r24 confirma el mismo censo (248.376 ×6, resto 0) desde su propia cosecha de 34 payloads. Lección: la próxima vuelta mide si el 366.733 reaparece (persistió r22→r23→ciclo, ausente en r24) y si emerge algún valor nuevo.",
+      "falsador": "NO_CONFIRMA si 248.372 aparece 0 veces en payloads V152 bien formados dentro de la ventana nueva; CONFIRMA si aparece ≥1. Declarado antes de correr.",
+      "fuente_archivo": "ronda_24/ejecucion_f3/med_M96.json",
+      "fuente_extra": "34 archivos heartbeat_rev_r24_*.json (Drive revisions API del heartbeat canónico 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR)",
+      "claim_asociado": "C-1228",
+      "fuente_sha256": "5f490edf0b4c53db4d0cc668e580daaf10860af303f0993e2fb7b9bfa18660b5",
+      "fecha": "2026-11-17",
+      "da_fila": false,
+      "cara": "ninguna (observabilidad del vivo)"
+    },
+    {
+      "id_propuesto": "M-98",
+      "veredicto": "CONFIRMA",
+      "medicion": "Flow-ID run 150: ¿17.ª medición en 0,0%? (metadatos de GitHub Actions + observabilidad/flow_id_coverage.json).",
+      "detalle": "Valor: Flow-ID run 150 EXISTE (2026-11-17T00:55:28Z, success, id 43991536814, event schedule, head f0a8c308) y flow_id_coverage.json mide 0,0% CRÍTICO, 0 eventos, estado critico, eco 0,0% (archivo ts 00:55:39.804577Z, lag 0,20 min; 832 B, sha256 56fb9dd9…, blob 9ed991e11649). Runs 146→150: 5/5 success; intervalos [242,35, 412,08, 613,77, 461,23] min (mín 242,35, máx 613,77, mediana 436,66): el monitor escribe cada ~4–10 h, no cada 30 min como declara su cron. 17.ª medición consecutiva en 0,0% (r11 100,0% → r12–r24 0,0%). Falsador: CONFIRMA si el run 150 existe con cobertura 0,0% y 0 eventos Y los runs 146→150 son 5/5 en 0,0% con 0 eventos. Declarado en declaracion_falsadores_r24.md (2026-11-17T02:34:08Z) antes de correr. Veredicto: CONFIRMA. Matiz — parcial NO_SÉ sobre el run 147 (heredado de r23): su archivo fue sobrescrito antes de que ninguna ronda lo leyera. Runs 146 medido en 0,0% en r21, 148 en 0,0% en r22, 149 en 0,0% en r23/ciclo (16.ª), 150 en 0,0% aquí (17.ª). La serie de RONDAS en 0,0% se sostiene por una lectura por ronda. POR QUÉ mide cero es NO_SÉ (logs 403, contenido del workflow fuera de alcance por regla dura). Secundarios: verificación independiente 3/3. La cadencia rota del monitor (~4–10 h contra cron de 30 min) es el mismo patrón que State Writer, Pulse V2, Observabilidad, Self-Diagnosis y autocura. Lección: el cero es absoluto y persistente (17 rondas). La pregunta ya no es si el monitor mide cero, sino si alguna vez medirá otra cosa; la próxima vuelta lo registra igual, sin esperar cambio.",
+      "falsador": "CONFIRMA si el run 150 existe con cobertura 0,0% y 0 eventos Y los runs 146→150 son 5/5 en 0,0% con 0 eventos; NO_CONFIRMA si cobertura > 0,0% o eventos > 0. Declarado antes de correr.",
+      "fuente_archivo": "ronda_24/ejecucion_f3/med_M98.json",
+      "fuente_extra": "API pública de GitHub, runs del workflow MIU Flow-ID Coverage Monitor (id 375168071) + observabilidad/flow_id_coverage.json por API contents",
+      "claim_asociado": "C-1229",
+      "fuente_sha256": "6385748f680540b811cca10367453cdcaefc7488df2cc6b51dfd82278f24a247",
+      "fecha": "2026-11-17",
+      "da_fila": false,
+      "cara": "d09 L20 (seguimiento del vivo; la cara no se cierra con esta medición — el cero persiste sin mecanismo)"
+    }
+  ],
+  "decision_N40": {
+    "id": "N-40",
+    "titulo": "Absorber ronda 24 al corpus",
+    "afirmacion": "Absorban la ronda 24 al corpus: claims C-1228..C-1230 e ítems M-96 y M-98 al anexo.",
+    "criterio": "Todas las propuestas SÉ con fuente + sha256 verificados contra disco; dedup < 0,5 contra el corpus y entre propuestas; F3 verificar 3/3 (M-96/M-97/M-98 re-cómputo); F6 verificador independiente reproducido=true, diferencias_n=0 (10.ª vuelta 0 diffs bajo los CUATRO cánones). M-97 NO se inscribe: NO_SÉ por bloqueo (run 18 no existe todavía), precedente M-88 r22.",
+    "alcance": "Claims 1.222 → 1.225; anexo 31 → 33 ítems (M-96 NO_CONFIRMA, M-98 CONFIRMA). Tally tras inscribir: CONFIRMA 19 · NO_CONFIRMA 10 · DIFERENCIA 2 · NO_SÉ 1 · REGULAR 1."
+  },
+  "notas": [
+    "M-97 NO se prepara: NO_SÉ por bloqueo (run 18 de autocura no existe todavía al medir, 370 min desde el run 17, dentro de cadencia). Precedente M-88 r22: los NO_SÉ por bloqueo no van al anexo.",
+    "F6: verificador independiente r24 reproducido=true, diferencias_n=0 (10.ª vuelta 0 diffs bajo los CUATRO cánones; A14 R-KS 0,8000 exacto, conteo 27; 11 tuplas / 8 distintos; banderas FB 2 + P48 1 + Base 0; 142/115/27/32; S3 ≡ v10.3 27/58, 32/58).",
+    "F5: G05 38.ª sin cambio (blob 8c57e833…); H-SUELO 39.ª sin reaparición; folderId 41.ª; G03 inserción 2026-11-21 re-confirmada (4 días).",
+    "CORR-MEDIANA-C1229-R24 (FASE 2 r24, verificada por el principal): la mediana de [242,35, 412,08, 613,77, 461,23] min es 436,66 (media de 412,08 y 461,23), no 461,23; la lista de intervalos es correcta, solo la mediana derivada estaba mal; el falsador queda intacto.",
+ "CORR-MEDIANA-C1229-R24 (continuación, absorción r24): la copia embebida del ítem M-98 en propuestas_anexo decía todavía 'mediana 461,23' (FASE 3 corrigió la copia canónica en items_anexo_r24.json pero no esta); corregida a 436,66 aquí antes de absorber."
+  ]
+}

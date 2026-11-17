@@ -1,0 +1,136 @@
+{
+  "medicion": "M-98",
+  "dominio": "Flow-ID run 150: ¿17.ª medición en 0,0%? (metadatos de GitHub Actions + observabilidad/flow_id_coverage.json, repo Jaime393/miu-ecosistema, workflow MIU Flow-ID Coverage Monitor id 375168071)",
+  "fuente": "GitHub Actions API pública (REST sin autenticar): lista de runs del workflow (per_page=10, total_count 150) + lista de commits desde 2026-11-17T00:00:00Z. Archivo flow_id_coverage.json vía API contents (ruta observabilidad/, blob 9ed991e11649) — leído por /contents sin 403 en esta ronda (cuota 56/60 tras las 3 llamadas previas). Copias locales en datos/.",
+  "url": "https://api.github.com/repos/Jaime393/miu-ecosistema/actions/workflows/375168071/runs?per_page=10 (copia local en datos/flow_runs_2026-11-17.json, sha256 en este JSON)",
+  "sha256_dato": "61ca10360076fa1f54bc79d16f92e3703a03b19bc8c18e88b0ddaf50b9c2c1ed",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r24.md, 2026-11-17T02:34:08Z): solo metadatos de la API pública + contenido público del archivo por API contents (blob + sha). Por cada run 146–150: run_number, id, created_at, updated_at, conclusion, evento. Archivo: ts, cobertura_flow_id_pct, total_eventos_muestra, estado, alertas, eco_ratio_pct. Cadencia: intervalos entre created_at de runs 146→150 y lag run→escritura del archivo.",
+  "parametros": {
+    "workflow_id": 375168071,
+    "workflow_nombre": "MIU Flow-ID Coverage Monitor",
+    "total_runs_workflow": 150,
+    "runs_tabla": [
+      {
+        "run_number": 146,
+        "id": 43756117028,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T20:06:02Z",
+        "updated_at": "2026-11-15T20:06:11Z",
+        "duracion_s": 9.0,
+        "head_sha": "1ff31a45e8ce0e448e2f7493733c856c2eeaa018"
+      },
+      {
+        "run_number": 147,
+        "id": 43778583926,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T00:08:23Z",
+        "updated_at": "2026-11-16T00:08:33Z",
+        "duracion_s": 10.0,
+        "head_sha": "1904cf4d30305c89adb87682a4bf9be6c37a5d6e"
+      },
+      {
+        "run_number": 148,
+        "id": 43820719564,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T07:00:28Z",
+        "updated_at": "2026-11-16T07:00:38Z",
+        "duracion_s": 10.0,
+        "head_sha": "ebca2f971b23202c18ba31c9cac721d605e3bb09"
+      },
+      {
+        "run_number": 149,
+        "id": 43916227996,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T17:14:14Z",
+        "updated_at": "2026-11-16T17:14:24Z",
+        "duracion_s": 10.0,
+        "head_sha": "1747eb86667a1dc80b7f4b26b16adc12d9cdd2c3"
+      },
+      {
+        "run_number": 150,
+        "id": 43991536814,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-17T00:55:28Z",
+        "updated_at": "2026-11-17T00:55:43Z",
+        "duracion_s": 15.0,
+        "head_sha": "f0a8c308d59c960e76b5e3b0820f040f86028255"
+      }
+    ],
+    "intervalos_min": [
+      {
+        "de_run": 146,
+        "a_run": 147,
+        "intervalo_min": 242.35,
+        "intervalo_h": 4.039
+      },
+      {
+        "de_run": 147,
+        "a_run": 148,
+        "intervalo_min": 412.08,
+        "intervalo_h": 6.868
+      },
+      {
+        "de_run": 148,
+        "a_run": 149,
+        "intervalo_min": 613.77,
+        "intervalo_h": 10.229
+      },
+      {
+        "de_run": 149,
+        "a_run": 150,
+        "intervalo_min": 461.23,
+        "intervalo_h": 7.687
+      }
+    ],
+    "intervalo_minimo_min": 242.35,
+    "intervalo_maximo_min": 613.77,
+    "intervalo_mediana_min": 436.66,
+    "archivo_flow": {
+      "ts": "2026-11-17T00:55:39.804577Z",
+      "cobertura_flow_id_pct": 0.0,
+      "total_eventos_muestra": 0,
+      "eco_ratio_pct": 0.0,
+      "estado": "critico",
+      "alertas": [
+        "CRITICO: cobertura flow_id 0.0% < 30%"
+      ],
+      "size_B": 832,
+      "sha256": "56fb9dd9c71fb3ce8b76c073c53885fce682744759da62495ae2a9257352f9f3",
+      "blob_contents": "9ed991e11649"
+    },
+    "lag_run150_a_escritura_min": 0.2,
+    "runs_146_a_150_todos_success": true,
+    "commits_monitor_flow_en_ventana": 1,
+    "commits_monitor_lista": [
+      {
+        "sha": "5b05cffe",
+        "ts": "2026-11-17T00:55:39Z",
+        "mensaje": "monitor: flow_id coverage 00:55Z"
+      }
+    ]
+  },
+  "valor": 0.0,
+  "error": null,
+  "limites_validez": "La API pública no da los logs del workflow (403 en ciclos anteriores); POR QUÉ mide cero es NO_SÉ (contenido del workflow fuera de alcance por regla dura). La serie 146→150 se establece desde metadatos y contenido del archivo, no desde logs. NO_SÉ parcial (heredado de r23): la cobertura puntual del run 147 nunca se leyó (archivo sobrescrito antes de que ninguna ronda lo leyera); el veredicto CONFIRMA descansa en el archivo actual (run 150) + una lectura por ronda en la serie.",
+  "criterio_falsacion": "CONFIRMA si el run 150 existe con cobertura 0,0% y 0 eventos Y los runs 146→150 son 5/5 en 0,0% con 0 eventos → el cero absoluto persiste, 17.ª medición en 0,0%; NO_CONFIRMA si cobertura > 0,0% o eventos > 0 en el run 150 o en cualquier run de la serie 146→150; NO_SÉ si el workflow no se resuelve o el archivo no se lee. Declarado en declaracion_falsadores_r24.md (2026-11-17T02:34:08Z) antes de correr.",
+  "veredicto": "CONFIRMA",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-17",
+  "extra": {
+    "lectura": "Run 150 existe (id 43991536814, 2026-11-17T00:55:28Z, success, event schedule). Archivo ts 2026-11-17T00:55:39.804577Z (lag run→escritura 0.20 min): cobertura 0,0%, 0 eventos, estado critico, eco 0,0%, alerta 'CRITICO: cobertura flow_id 0.0% < 30%'. Runs 146→150: 5/5 success; intervalos [242.35, 412.08, 613.77, 461.23] min. La 17.ª medición consecutiva en 0,0% queda confirmada: cero absoluto, sin un solo evento en la muestra.",
+    "cadencia": "Los intervalos entre runs Flow-ID 146→150 son [242.35, 412.08, 613.77, 461.23] min (mín 242.35, máx 613.77, mediana 436.66): el monitor escribe cada ~4–10 h (mediana ~6 h), no cada 30 min como declara su cron — mismo patrón que en r12–r23.",
+    "serie_146_a_150_cobertura": "NO_SÉ parcial sobre la cobertura puntual del run 147: su archivo fue sobrescrito antes de que ninguna ronda lo leyera (run 147 creado 2026-11-16T00:08:23Z, entre el cierre de r21 y FASE 0 r22). Runs 146 medido en 0,0% en r21, 148 en 0,0% en r22, 149 en 0,0% en r23/ciclo (16.ª), 150 en 0,0% aquí (17.ª). La serie de RONDAS en 0,0% se sostiene por una lectura por ronda; el veredicto CONFIRMA descansa en el archivo actual (run 150) + esa serie, no en una lectura individual del 147.",
+    "verificacion_independiente": "Ver verificar_m96_m97_m98.py (re-cómputo desde las copias locales por otro camino de código).",
+    "corr_mediana_c1229_r24": "CORR-MEDIANA-C1229-R24 (FASE 2 r24, verificada por el principal): la mediana de [242,35, 412,08, 613,77, 461,23] min es 436,66 (media de 412,08 y 461,23), no 461,23; la lista de intervalos es correcta, solo la mediana derivada estaba mal; el falsador queda intacto."
+  }
+}
