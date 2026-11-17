@@ -394,3 +394,7 @@ f3c80897547c63869ea4c2cb287fb09f3b714e8133e95c23f050fd49ce9f66b1  alma/ciclo/cen
 5f490edf0b4c53db4d0cc668e580daaf10860af303f0993e2fb7b9bfa18660b5  academico/tejido_2026-11-12/ronda_24/ejecucion_f3/med_M96.json
 6385748f680540b811cca10367453cdcaefc7488df2cc6b51dfd82278f24a247  academico/tejido_2026-11-12/ronda_24/ejecucion_f3/med_M98.json
 45a5c21c4dcc29fa1786356d9d9b1026563841785d5a45ba92d560737725d1fd  academico/tejido_2026-11-12/ronda_24/ejecucion_f2/estado_vivo_r24.json
+
+# --- añadidas CHK-274 (2026-11-17): pilares ampliados 7-19, fuentes de C-1231..C-1245 ---
+repo:0cbb3921aa09bacf1ae43afc253a33ff0e8e02844719aa789fe599b4f087c883  anexo-vi/PILARES_AMPLIADOS_r24.md
+repo:1241167eaf5874e73b8334d04d61a34b56d38aa303fac60e80a5ee94b194ebbc  anexo-vi/PILARES_REDES_r24.md
