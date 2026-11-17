@@ -1,9 +1,9 @@
 {
-  "total": 1222,
+  "total": 1225,
   "por_estado": {
     "CONJETURO": 22,
     "INFIERO": 100,
-    "SE": 1088,
+    "SE": 1091,
     "REFUTADO": 4,
     "NO_SE": 8
   },
@@ -12,7 +12,7 @@
     "provenance": 78,
     "digestion": 658,
     "consolidacion": 13,
-    "verificacion": 348,
+    "verificacion": 351,
     "conflicto": 64,
     "hueco": 40,
     "calculo": 3,
@@ -57,12 +57,12 @@
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7)": 1,
     "G-NUEVA: censo vacío heartbeat, causa folderId (F6 r11/r12)": 1,
     "G-NUEVA: Panteón-96, 61 voces sin nombre (r3 #5; d07 L7; cara r12 #1)": 4,
-    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 27,
+    "G-NUEVA: estado vivo del ecosistema (observabilidad)": 30,
     "G-NUEVA: d05 L4 polarización (medida y mecanismo)": 3,
     "G-NUEVA: d05 L7 escalamiento urbano": 3,
     "G-NUEVA: producción ALMA (FranBot v8.1)": 10
   },
-  "hash_real": 1208,
+  "hash_real": 1211,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1286,6 +1286,9 @@
     "C-1224",
     "C-1225",
     "C-1226",
-    "C-1227"
+    "C-1227",
+    "C-1228",
+    "C-1229",
+    "C-1230"
   ]
 }
