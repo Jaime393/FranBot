@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "nodo": "anexo-vi",
+    "phi": 1.6180339887,
+    "timestamp": 1794875444.9143941
+  },
+  "contenido": "Savia V152 = mesh.totalSize 11/11 en la ventana fresca y 29/29 acumulado (18/18 r23 + 11/11 fresco). Ley medida: nutrientes = 0,412 x savia + 349,6612864, con residuo máximo 0,0 en 4 valores distintos (247.881, 248.372, 248.376, 366.733) y 13 payloads comprobados.",
+  "contexto": "Savia V152 = mesh.totalSize 11/11 en la ventana fresca y 29/29 acumulado (18/18 r23 + 11/11 fresco). Ley medida: nutrientes = 0,412 x savia + 349,6612864, con residuo máximo 0,0 en 4 valores distintos (247.881, 248.372, 248.376, 366.733) y 13 payloads comprobados.",
+  "destino": "nutrientes",
+  "estado": "SÉ",
+  "fecha": "2026-11-16",
+  "fuente": "local ~/workspace/alma/ciclo/censo_fresco.json (CENSO-FRESCO-ALMA-2026-11-16)",
+  "grieta": "La ley ajusta 4 valores y 13 payloads con residuo 0,0; NO_SÉ si se sostiene fuera de V152 ni qué mecanismo la produce.",
+  "hash_fuente": "sha256:a44544fcbaee50fa8dc0485a9dae7679e3ff718bb379172bea2e4e9b8befeff0",
+  "id": "NUT-2026-11-16-003",
+  "nodo_origen": "anexo-vi",
+  "origen": "anexo-vi",
+  "referencias": [
+    "~/workspace/alma/ciclo/censo_fresco.json"
+  ],
+  "timestamp": 1794875444.9143941,
+  "tipo": "hecho"
+}

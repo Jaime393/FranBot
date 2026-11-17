@@ -1,0 +1,158 @@
+{
+  "directorio": "/home/hatch/workspace/alma/ciclo/cosecha",
+  "n_total": 71,
+  "n_vacios_savia": 40,
+  "distribucion_savia_por_version": {
+    "V151": {
+      "720": 20
+    },
+    "V152": {
+      "248376": 9,
+      "248372": 1,
+      "366733": 1
+    },
+    "V270": {
+      "None": 11
+    },
+    "V271_DARWIN": {
+      "None": 19
+    },
+    "V93": {
+      "None": 10
+    }
+  },
+  "v152": {
+    "248376": {
+      "n": 9,
+      "tipos": {
+        "completo": 8,
+        "compacto": 1
+      },
+      "sizes_B": [
+        89466,
+        55973,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466,
+        89466
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_rciclo_03_20261116T194731Z.json",
+          "ts": "2026-11-16T19:47:31.373Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_05_20261116T195552Z.json",
+          "ts": "2026-11-16T19:55:51.700Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_d48fb48c"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_11_20261116T201745Z.json",
+          "ts": "2026-11-16T20:17:44.751Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_18_20261116T204736Z.json",
+          "ts": "2026-11-16T20:47:36.196Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_25_20261116T211745Z.json",
+          "ts": "2026-11-16T21:17:44.944Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_32_20261116T214734Z.json",
+          "ts": "2026-11-16T21:47:33.613Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_51_20261116T231732Z.json",
+          "ts": "2026-11-16T23:17:31.694Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_61_20261116T234852Z.json",
+          "ts": "2026-11-16T23:48:51.858Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        },
+        {
+          "archivo": "heartbeat_rev_rciclo_69_20261117T001735Z.json",
+          "ts": "2026-11-17T00:17:35.014Z",
+          "size_B": 89466,
+          "tipo": "completo",
+          "nodeId": "nodo_5f43be7f"
+        }
+      ],
+      "claves_data": {
+        "ecosistema,esporas,folderId,mesh,meshUrl,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 8,
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 1
+      },
+      "bien_formado_por_tipo": true
+    },
+    "248372": {
+      "n": 1,
+      "tipos": {
+        "compacto": 1
+      },
+      "sizes_B": [
+        55973
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_rciclo_53_20261116T232643Z.json",
+          "ts": "2026-11-16T23:26:43.060Z",
+          "size_B": 55973,
+          "tipo": "compacto",
+          "nodeId": "nodo_954839d1"
+        }
+      ],
+      "claves_data": {
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 1
+      },
+      "bien_formado_por_tipo": true
+    },
+    "366733": {
+      "n": 1,
+      "tipos": {
+        "compacto": 1
+      },
+      "sizes_B": [
+        55980
+      ],
+      "archivos": [
+        {
+          "archivo": "heartbeat_rev_rciclo_64_20261117T000030Z.json",
+          "ts": "2026-11-17T00:00:29.602Z",
+          "size_B": 55980,
+          "tipo": "compacto",
+          "nodeId": "nodo_7807ed65"
+        }
+      ],
+      "claves_data": {
+        "esporas,folderId,mesh,nodeId,nutrientes,ok,phi,puente,rho,savia,tag,timestamp,tipo": 1
+      },
+      "bien_formado_por_tipo": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "_metabolismo": {
+    "nodo": "anexo-vi",
+    "phi": 1.6180339887,
+    "timestamp": 1794875444.9143941
+  },
+  "contenido": "El catálogo vivo ALMA siembra 100 entradas y verifica 100/100 contra disco con sha256: 49 de producción fractal, 15 nutrientes NUT-2026-11-14, 32 de ronda_23 y 4 del corpus. El lector leer_catalogo.py verify sale con exit 0.",
+  "contexto": "El catálogo vivo ALMA siembra 100 entradas y verifica 100/100 contra disco con sha256: 49 de producción fractal, 15 nutrientes NUT-2026-11-14, 32 de ronda_23 y 4 del corpus. El lector leer_catalogo.py verify sale con exit 0.",
+  "destino": "nutrientes",
+  "estado": "SÉ",
+  "fecha": "2026-11-16",
+  "fuente": "github: Jaime393/FranBot catalogo/catalogo_vivo.json (HEAD 85351ce4); local ~/workspace/alma/catalogo/catalogo_vivo.json",
+  "grieta": "El catálogo es una foto del 2026-11-16; no hay todavía un proceso vivo que lo actualice en cada entrega. NO_SÉ si el ecosistema lo leerá o lo ignorará.",
+  "hash_fuente": "sha256:d5d5ce7cc45cf29839877d718804bfa05595042ce038ffae36c8ddcf2d53e4ec",
+  "id": "NUT-2026-11-16-001",
+  "nodo_origen": "anexo-vi",
+  "origen": "anexo-vi",
+  "referencias": [
+    "~/workspace/alma/catalogo/catalogo_vivo.json",
+    "Jaime393/FranBot catalogo/catalogo_vivo.json"
+  ],
+  "timestamp": 1794875444.9143941,
+  "tipo": "hecho"
+}

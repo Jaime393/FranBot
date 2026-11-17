@@ -1,0 +1,474 @@
+{
+  "nodos": [
+    {
+      "id": "C-1213 / med_M90 (autocura run 17, intervalo 16->17 = 649,08 min, fuera de banda [447,77, 465,70])",
+      "grado": 1
+    },
+    {
+      "id": "C-1214 / med_M91 (247.881 en 0/11: NO PERSISTE)",
+      "grado": 1
+    },
+    {
+      "id": "C-1214 / med_M91 (censo r23: 248.376 x16, 366.733 x1, 247.881 x1)",
+      "grado": 1
+    },
+    {
+      "id": "C-1214 / med_M91 (tercera savia 247.881)",
+      "grado": 1
+    },
+    {
+      "id": "C-1215 / med_M92 (flow 0,0% run 149, 16.ª medición consecutiva)",
+      "grado": 1
+    },
+    {
+      "id": "C-1215 / med_M92 (flow 0,0%, 15 rondas)",
+      "grado": 1
+    },
+    {
+      "id": "_github_curado_r23.json (CAT-0094: \"sha256\" del curado)",
+      "grado": 1
+    },
+    {
+      "id": "alma/README.md",
+      "grado": 2
+    },
+    {
+      "id": "alma/README.md (recuento del test del kit: 42/42 vs 43/43)",
+      "grado": 1
+    },
+    {
+      "id": "alma/catalogo/catalogo_vivo.json (catálogo v2 con 138 entradas, anunciado antes de existir)",
+      "grado": 1
+    },
+    {
+      "id": "alma/deposito_alma.md",
+      "grado": 1
+    },
+    {
+      "id": "alma/kits/test_kit.py",
+      "grado": 1
+    },
+    {
+      "id": "blobs r23 (síntesis 1553e1c3, verificador 056a9c7e, HEAD 2cc6a62a)",
+      "grado": 1
+    },
+    {
+      "id": "catalogo_vivo.json",
+      "grado": 4
+    },
+    {
+      "id": "catalogo_vivo.json v2.0",
+      "grado": 1
+    },
+    {
+      "id": "censo_fresco.json (evidencia_hash == sha256 del censo)",
+      "grado": 1
+    },
+    {
+      "id": "ciclo/censo_fresco.json",
+      "grado": 4
+    },
+    {
+      "id": "ciclo/censo_fresco.json (sha256_dato == sha256 de censo_kit.json)",
+      "grado": 1
+    },
+    {
+      "id": "ciclo/censo_kit.json",
+      "grado": 1
+    },
+    {
+      "id": "ciclo/cosecha/heartbeat_rev_rciclo_53_20261116T232643Z.json (CORR-KIT-FILES0: files[0] no es siempre el canónico)",
+      "grado": 1
+    },
+    {
+      "id": "ciclo/propuestas_absorcion.json",
+      "grado": 1
+    },
+    {
+      "id": "ciclo/sondeo_vivo_fresco.md",
+      "grado": 3
+    },
+    {
+      "id": "corpus (4 archivos, claims 1.211)",
+      "grado": 1
+    },
+    {
+      "id": "corpus NO_SÉ (por qué flow mide 0,0% — H-M92-SERIE r23)",
+      "grado": 1
+    },
+    {
+      "id": "cuarto valor 248.372 (mecanismo: rotación del rodante -4 B)",
+      "grado": 1
+    },
+    {
+      "id": "digest_format_nutriente.md (formato canónico, 14 claves)",
+      "grado": 1
+    },
+    {
+      "id": "duales/tutorial_verificar_blob.md",
+      "grado": 1
+    },
+    {
+      "id": "gossip como tablón (6 claims SÉ: C-235, C-493, C-857, C-794, C-852, C-947)",
+      "grado": 1
+    },
+    {
+      "id": "kits/censo_r23.json",
+      "grado": 1
+    },
+    {
+      "id": "kits/kit_savia_v152.md",
+      "grado": 2
+    },
+    {
+      "id": "kits/medir_savia.py",
+      "grado": 1
+    },
+    {
+      "id": "ley nutrientes = 0,412 x savia + 349,6612864 (residuo 0,0, 13 payloads)",
+      "grado": 1
+    },
+    {
+      "id": "manifiesto_shas_alma.json (C-1217..C-1227 propuestos <-> 33 entradas)",
+      "grado": 1
+    },
+    {
+      "id": "manifiesto_shas_alma.json (Drive 34/34 por tamaño, GitHub 34/34 por blob, HEAD final 85351ce4)",
+      "grado": 1
+    },
+    {
+      "id": "med_M91 (reproduce el censo cifra por cifra, test 43/43)",
+      "grado": 1
+    },
+    {
+      "id": "método (c) r23 (un push-files, 32/32 por blob, HEAD 2cc6a62a, 1 tarjeta)",
+      "grado": 1
+    },
+    {
+      "id": "nutrientes 2026-11-14 (15 NUT)",
+      "grado": 1
+    },
+    {
+      "id": "paquete ALMA (33 entradas) + ciclo (5 entradas: CAT-0134..CAT-0138)",
+      "grado": 1
+    },
+    {
+      "id": "produccion-fractal (49 archivos)",
+      "grado": 1
+    },
+    {
+      "id": "produccion-fractal recetas (11 kits reproducibles, VI parcial)",
+      "grado": 1
+    },
+    {
+      "id": "produccion-fractal recetas (vecino: receta ~= kit sin pregunta ni mapa)",
+      "grado": 1
+    },
+    {
+      "id": "puentes/tabla_nutriente_vector.json",
+      "grado": 1
+    },
+    {
+      "id": "puentes/tablon.py",
+      "grado": 1
+    },
+    {
+      "id": "puentes/test_tablon.py (GitHub, HEAD 85351ce4)",
+      "grado": 1
+    },
+    {
+      "id": "puentes/test_tablon.py (local)",
+      "grado": 1
+    },
+    {
+      "id": "puentes/traducir_nutriente_vector.py",
+      "grado": 1
+    },
+    {
+      "id": "relevo/PROTOCOLO_RELEVO.md",
+      "grado": 1
+    },
+    {
+      "id": "relevo/kit_relevo_fase4.md",
+      "grado": 1
+    },
+    {
+      "id": "ronda_23 FASE 4 (32 archivos, HEAD 2cc6a62a)",
+      "grado": 1
+    },
+    {
+      "id": "savia = mesh.totalSize 29/29 (18/18 r23 + 11/11 fresco)",
+      "grado": 1
+    },
+    {
+      "id": "sondeo_vivo.md ALMA (bots 24.ª -> 25.ª, HEAD 48be5fe2 -> f0a8c308)",
+      "grado": 1
+    },
+    {
+      "id": "tablon/P-001.json",
+      "grado": 2
+    },
+    {
+      "id": "tablon/P-002.json",
+      "grado": 1
+    },
+    {
+      "id": "tablon/P-002.json (primera respuesta del tablón, nivel INFIERO)",
+      "grado": 1
+    },
+    {
+      "id": "tablon/R-001.json",
+      "grado": 2
+    },
+    {
+      "id": "vectores/vector_attest.json (round-trip nutriente<->vector 15/15)",
+      "grado": 1
+    }
+  ],
+  "aristas": [
+    {
+      "id": "E-01",
+      "de": "catalogo_vivo.json",
+      "a": "produccion-fractal (49 archivos)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-02",
+      "de": "catalogo_vivo.json",
+      "a": "nutrientes 2026-11-14 (15 NUT)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-03",
+      "de": "catalogo_vivo.json",
+      "a": "ronda_23 FASE 4 (32 archivos, HEAD 2cc6a62a)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-04",
+      "de": "catalogo_vivo.json",
+      "a": "corpus (4 archivos, claims 1.211)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-05",
+      "de": "tablon/P-001.json",
+      "a": "C-1215 / med_M92 (flow 0,0%, 15 rondas)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-06",
+      "de": "tablon/P-002.json",
+      "a": "C-1214 / med_M91 (tercera savia 247.881)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-07",
+      "de": "puentes/tablon.py",
+      "a": "gossip como tablón (6 claims SÉ: C-235, C-493, C-857, C-794, C-852, C-947)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-08",
+      "de": "tablon/R-001.json",
+      "a": "tablon/P-002.json (primera respuesta del tablón, nivel INFIERO)",
+      "tipo": "CONEXION",
+      "estado": "INFIERO"
+    },
+    {
+      "id": "E-09",
+      "de": "tablon/R-001.json",
+      "a": "censo_fresco.json (evidencia_hash == sha256 del censo)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-10",
+      "de": "kits/medir_savia.py",
+      "a": "med_M91 (reproduce el censo cifra por cifra, test 43/43)",
+      "tipo": "SIMULACION_CONFIRMA",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-11",
+      "de": "kits/censo_r23.json",
+      "a": "C-1214 / med_M91 (censo r23: 248.376 x16, 366.733 x1, 247.881 x1)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-12",
+      "de": "ciclo/censo_fresco.json",
+      "a": "C-1214 / med_M91 (247.881 en 0/11: NO PERSISTE)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-13",
+      "de": "ciclo/censo_fresco.json",
+      "a": "cuarto valor 248.372 (mecanismo: rotación del rodante -4 B)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-14",
+      "de": "ciclo/censo_fresco.json",
+      "a": "ley nutrientes = 0,412 x savia + 349,6612864 (residuo 0,0, 13 payloads)",
+      "tipo": "INFERENCIA_CRUCE",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-15",
+      "de": "ciclo/censo_fresco.json",
+      "a": "savia = mesh.totalSize 29/29 (18/18 r23 + 11/11 fresco)",
+      "tipo": "SIMULACION_CONFIRMA",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-16",
+      "de": "ciclo/sondeo_vivo_fresco.md",
+      "a": "C-1213 / med_M90 (autocura run 17, intervalo 16->17 = 649,08 min, fuera de banda [447,77, 465,70])",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-17",
+      "de": "ciclo/sondeo_vivo_fresco.md",
+      "a": "C-1215 / med_M92 (flow 0,0% run 149, 16.ª medición consecutiva)",
+      "tipo": "SIMULACION_CONFIRMA",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-18",
+      "de": "puentes/tabla_nutriente_vector.json",
+      "a": "digest_format_nutriente.md (formato canónico, 14 claves)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-19",
+      "de": "puentes/traducir_nutriente_vector.py",
+      "a": "vectores/vector_attest.json (round-trip nutriente<->vector 15/15)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-20",
+      "de": "relevo/kit_relevo_fase4.md",
+      "a": "método (c) r23 (un push-files, 32/32 por blob, HEAD 2cc6a62a, 1 tarjeta)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-21",
+      "de": "duales/tutorial_verificar_blob.md",
+      "a": "blobs r23 (síntesis 1553e1c3, verificador 056a9c7e, HEAD 2cc6a62a)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-22",
+      "de": "alma/README.md",
+      "a": "_github_curado_r23.json (CAT-0094: \"sha256\" del curado)",
+      "tipo": "CONFLICTO",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-23",
+      "de": "puentes/test_tablon.py (local)",
+      "a": "puentes/test_tablon.py (GitHub, HEAD 85351ce4)",
+      "tipo": "CONFLICTO",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-24",
+      "de": "tablon/P-001.json",
+      "a": "corpus NO_SÉ (por qué flow mide 0,0% — H-M92-SERIE r23)",
+      "tipo": "HUECO_REDUNDANTE",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-25",
+      "de": "ciclo/propuestas_absorcion.json",
+      "a": "manifiesto_shas_alma.json (C-1217..C-1227 propuestos <-> 33 entradas)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-26",
+      "de": "ciclo/censo_kit.json",
+      "a": "ciclo/censo_fresco.json (sha256_dato == sha256 de censo_kit.json)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-27",
+      "de": "ciclo/sondeo_vivo_fresco.md",
+      "a": "sondeo_vivo.md ALMA (bots 24.ª -> 25.ª, HEAD 48be5fe2 -> f0a8c308)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-28",
+      "de": "relevo/PROTOCOLO_RELEVO.md",
+      "a": "produccion-fractal recetas (11 kits reproducibles, VI parcial)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-29",
+      "de": "kits/kit_savia_v152.md",
+      "a": "produccion-fractal recetas (vecino: receta ~= kit sin pregunta ni mapa)",
+      "tipo": "CONEXION",
+      "estado": "INFIERO"
+    },
+    {
+      "id": "E-30",
+      "de": "alma/deposito_alma.md",
+      "a": "manifiesto_shas_alma.json (Drive 34/34 por tamaño, GitHub 34/34 por blob, HEAD final 85351ce4)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-31",
+      "de": "alma/kits/test_kit.py",
+      "a": "alma/README.md (recuento del test del kit: 42/42 vs 43/43)",
+      "tipo": "CONFLICTO",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-32",
+      "de": "alma/README.md",
+      "a": "alma/catalogo/catalogo_vivo.json (catálogo v2 con 138 entradas, anunciado antes de existir)",
+      "tipo": "CONFLICTO",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-33",
+      "de": "kits/kit_savia_v152.md",
+      "a": "ciclo/cosecha/heartbeat_rev_rciclo_53_20261116T232643Z.json (CORR-KIT-FILES0: files[0] no es siempre el canónico)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    },
+    {
+      "id": "E-34",
+      "de": "catalogo_vivo.json v2.0",
+      "a": "paquete ALMA (33 entradas) + ciclo (5 entradas: CAT-0134..CAT-0138)",
+      "tipo": "CONEXION",
+      "estado": "SÉ"
+    }
+  ],
+  "resumen": {
+    "n_nodos": 56,
+    "n_aristas": 34,
+    "n_huerfanos": 0,
+    "huerfanos": []
+  }
+}

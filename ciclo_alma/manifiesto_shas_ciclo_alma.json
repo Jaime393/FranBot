@@ -1,0 +1,358 @@
+{
+ "ciclo": "CICLO ALMA 2026-11-16",
+ "fecha": "2026-11-16",
+ "total_archivos": 50,
+ "nota": "El manifiesto mismo no se auto-lista; es el archivo 51.",
+ "entradas": [
+  {
+   "local": "ciclo/_cosechar.py",
+   "drive": "ciclo_alma_2026-11-16/_cosechar.py",
+   "github": "ciclo_alma/_cosechar.py",
+   "bytes": 3749,
+   "sha256": "4f9ee07f97dc13cd0d02eb3b4d8c8091c96bd9d55f81d7d738abaa78487daa44"
+  },
+  {
+   "local": "ciclo/_getme_ciclo.py",
+   "drive": "ciclo_alma_2026-11-16/_getme_ciclo.py",
+   "github": "ciclo_alma/_getme_ciclo.py",
+   "bytes": 2528,
+   "sha256": "6464735117b16730806f108a899a6b3b3fbebe9f7be541a12d88bc858210b7de"
+  },
+  {
+   "local": "ciclo/_integrar.py",
+   "drive": "ciclo_alma_2026-11-16/_integrar.py",
+   "github": "ciclo_alma/_integrar.py",
+   "bytes": 26633,
+   "sha256": "d30cdc650ad5ed5b5ce7685b317eed676a532872233dcb0b4fd609cbdaf66602"
+  },
+  {
+   "local": "ciclo/_integrar_warnings.txt",
+   "drive": "ciclo_alma_2026-11-16/_integrar_warnings.txt",
+   "github": "ciclo_alma/_integrar_warnings.txt",
+   "bytes": 88,
+   "sha256": "05f994b443ebd97096d460e5f934c161896ea94da6e3f320046e25e9f0bcfa74"
+  },
+  {
+   "local": "ciclo/_preparar_absorcion.py",
+   "drive": "ciclo_alma_2026-11-16/_preparar_absorcion.py",
+   "github": "ciclo_alma/_preparar_absorcion.py",
+   "bytes": 17262,
+   "sha256": "174743bf0e8731ec245e1c51c510e68ecc2a1492f2b6e527ea5aca4b3be36159"
+  },
+  {
+   "local": "ciclo/absorcion/INFORME_APLICACION.md",
+   "drive": "ciclo_alma_2026-11-16/absorcion/INFORME_APLICACION.md",
+   "github": "ciclo_alma/absorcion/INFORME_APLICACION.md",
+   "bytes": 4893,
+   "sha256": "6fda60402afa1bd21f64927fe5b15c3659fd66b7604b2cd684f566fff98067b8"
+  },
+  {
+   "local": "ciclo/absorcion/INFORME_PARADA.md",
+   "drive": "ciclo_alma_2026-11-16/absorcion/INFORME_PARADA.md",
+   "github": "ciclo_alma/absorcion/INFORME_PARADA.md",
+   "bytes": 3253,
+   "sha256": "6c704f2e65c5a5594532fb9b36c9913d621ae097d04d4a5c9c547350ff796587"
+  },
+  {
+   "local": "ciclo/absorcion/INFORME_PARADA_2.md",
+   "drive": "ciclo_alma_2026-11-16/absorcion/INFORME_PARADA_2.md",
+   "github": "ciclo_alma/absorcion/INFORME_PARADA_2.md",
+   "bytes": 2918,
+   "sha256": "a88adff95e20ec80e6775fbfea55880f681bc2ef4e213e5eb39995be6f62abde"
+  },
+  {
+   "local": "ciclo/absorcion/INFORME_PARADA_3.md",
+   "drive": "ciclo_alma_2026-11-16/absorcion/INFORME_PARADA_3.md",
+   "github": "ciclo_alma/absorcion/INFORME_PARADA_3.md",
+   "bytes": 3528,
+   "sha256": "3cde54866345fbcaa608d5f8a601a1efc0f4517453e3df6f2a9f57f6b2bd03c9"
+  },
+  {
+   "local": "ciclo/absorcion/ORDEN_CICLO_ALMA.md",
+   "drive": "ciclo_alma_2026-11-16/absorcion/ORDEN_CICLO_ALMA.md",
+   "github": "ciclo_alma/absorcion/ORDEN_CICLO_ALMA.md",
+   "bytes": 884,
+   "sha256": "d84009cc88c714bbc11c2efe1174322cb2bd362bc0ff03f21bfb43526b9ee5e7"
+  },
+  {
+   "local": "ciclo/absorcion/_actualizar_registro_ciclo_alma.py",
+   "drive": "ciclo_alma_2026-11-16/absorcion/_actualizar_registro_ciclo_alma.py",
+   "github": "ciclo_alma/absorcion/_actualizar_registro_ciclo_alma.py",
+   "bytes": 11225,
+   "sha256": "66117e46a41aadd59e400237443a47c930eaf5390be723213af8db11035f8dd2"
+  },
+  {
+   "local": "ciclo/absorcion/_corr_estado_se.py",
+   "drive": "ciclo_alma_2026-11-16/absorcion/_corr_estado_se.py",
+   "github": "ciclo_alma/absorcion/_corr_estado_se.py",
+   "bytes": 3622,
+   "sha256": "7abb5bcffa63b16e0a195e55e5a7251cee7f35e2eaa749522548192b35609a97"
+  },
+  {
+   "local": "ciclo/absorcion/_corr_kit_42_43.py",
+   "drive": "ciclo_alma_2026-11-16/absorcion/_corr_kit_42_43.py",
+   "github": "ciclo_alma/absorcion/_corr_kit_42_43.py",
+   "bytes": 4317,
+   "sha256": "2a5dc37438fa772909c7b0bd9af275592fed7f4b8c06c734d733e3519ab6c899"
+  },
+  {
+   "local": "ciclo/absorcion/_push_corpus_paths_ciclo_alma.txt",
+   "drive": "ciclo_alma_2026-11-16/absorcion/_push_corpus_paths_ciclo_alma.txt",
+   "github": "ciclo_alma/absorcion/_push_corpus_paths_ciclo_alma.txt",
+   "bytes": 116,
+   "sha256": "f32c0aeccd5675d2e9f70649ffa1aac17572fa841bbc989697d839c9aac9ae31"
+  },
+  {
+   "local": "ciclo/absorcion/_subir_corpus_ciclo_alma.py",
+   "drive": "ciclo_alma_2026-11-16/absorcion/_subir_corpus_ciclo_alma.py",
+   "github": "ciclo_alma/absorcion/_subir_corpus_ciclo_alma.py",
+   "bytes": 5482,
+   "sha256": "c0452f6f6b4ad61c372087b55d7d3715343419f1867e19d2e040e761e14f3ba0"
+  },
+  {
+   "local": "ciclo/absorcion/_upload_corpus_ciclo_alma.jsonl",
+   "drive": "ciclo_alma_2026-11-16/absorcion/_upload_corpus_ciclo_alma.jsonl",
+   "github": "ciclo_alma/absorcion/_upload_corpus_ciclo_alma.jsonl",
+   "bytes": 1817,
+   "sha256": "95f9aca9b78afdf8a944fc614136702a7761ac63438195afd5cba6997b96dcf5"
+  },
+  {
+   "local": "ciclo/absorcion/absorb_ciclo_alma.py",
+   "drive": "ciclo_alma_2026-11-16/absorcion/absorb_ciclo_alma.py",
+   "github": "ciclo_alma/absorcion/absorb_ciclo_alma.py",
+   "bytes": 24289,
+   "sha256": "19d9ce60b4f8e17860ba04bb87cec67cf697cce674474d5b681f50046182fa47"
+  },
+  {
+   "local": "ciclo/absorcion/puertas_post_absorcion_ciclo_alma.txt",
+   "drive": "ciclo_alma_2026-11-16/absorcion/puertas_post_absorcion_ciclo_alma.txt",
+   "github": "ciclo_alma/absorcion/puertas_post_absorcion_ciclo_alma.txt",
+   "bytes": 62675,
+   "sha256": "9cd691edf7fd0d20351dc09662d3136629be662a9607b7cbebece31406ca5a65"
+  },
+  {
+   "local": "ciclo/absorcion/verificacion_subida_corpus.md",
+   "drive": "ciclo_alma_2026-11-16/absorcion/verificacion_subida_corpus.md",
+   "github": "ciclo_alma/absorcion/verificacion_subida_corpus.md",
+   "bytes": 2020,
+   "sha256": "5e05affa26c7e5dee6d6370bfc323cc15cf0ff4b8f169529c39026ab3f691b33"
+  },
+  {
+   "local": "ciclo/base_absorcion.md",
+   "drive": "ciclo_alma_2026-11-16/base_absorcion.md",
+   "github": "ciclo_alma/base_absorcion.md",
+   "bytes": 3945,
+   "sha256": "1246802cdcff8097f1f3e2ddee4cc06b7ed15dd22ee37f57206e2892f17befb5"
+  },
+  {
+   "local": "ciclo/catalogo_vivo_v1.json",
+   "drive": "ciclo_alma_2026-11-16/catalogo_vivo_v1.json",
+   "github": "ciclo_alma/catalogo_vivo_v1.json",
+   "bytes": 96122,
+   "sha256": "d5d5ce7cc45cf29839877d718804bfa05595042ce038ffae36c8ddcf2d53e4ec"
+  },
+  {
+   "local": "ciclo/censo_fresco.json",
+   "drive": "ciclo_alma_2026-11-16/censo_fresco.json",
+   "github": "ciclo_alma/censo_fresco.json",
+   "bytes": 4448,
+   "sha256": "a44544fcbaee50fa8dc0485a9dae7679e3ff718bb379172bea2e4e9b8befeff0"
+  },
+  {
+   "local": "ciclo/censo_kit.json",
+   "drive": "ciclo_alma_2026-11-16/censo_kit.json",
+   "github": "ciclo_alma/censo_kit.json",
+   "bytes": 4119,
+   "sha256": "f3c80897547c63869ea4c2cb287fb09f3b714e8133e95c23f050fd49ce9f66b1"
+  },
+  {
+   "local": "ciclo/conecta_siembra.md",
+   "drive": "ciclo_alma_2026-11-16/conecta_siembra.md",
+   "github": "ciclo_alma/conecta_siembra.md",
+   "bytes": 2903,
+   "sha256": "2537c78e1a7bdfcea2308f72aff7f5696e9677421a883db3b0d7212b964daf0e"
+  },
+  {
+   "local": "ciclo/cosecha_savia.md",
+   "drive": "ciclo_alma_2026-11-16/cosecha_savia.md",
+   "github": "ciclo_alma/cosecha_savia.md",
+   "bytes": 3443,
+   "sha256": "b1712b55eaeb9d855c35b88ccbfe66bf00cfc38437b4e8270c0593e17562aa40"
+  },
+  {
+   "local": "ciclo/getme_verdicts_ciclo.json",
+   "drive": "ciclo_alma_2026-11-16/getme_verdicts_ciclo.json",
+   "github": "ciclo_alma/getme_verdicts_ciclo.json",
+   "bytes": 2047,
+   "sha256": "c49614e877a34debacbfdb31632b614c6f6fad0831a5a1b22cd1250c7207b837"
+  },
+  {
+   "local": "ciclo/grafo_alma.json",
+   "drive": "ciclo_alma_2026-11-16/grafo_alma.json",
+   "github": "ciclo_alma/grafo_alma.json",
+   "bytes": 12084,
+   "sha256": "32fb049c7eb5a06d8e46a957bd1857b303858aa91f06d85b5291902a75753bab"
+  },
+  {
+   "local": "ciclo/heartbeat_revisions_frescas.json",
+   "drive": "ciclo_alma_2026-11-16/heartbeat_revisions_frescas.json",
+   "github": "ciclo_alma/heartbeat_revisions_frescas.json",
+   "bytes": 36564,
+   "sha256": "3f9c47d7e67d8e587695b5ef48911fa798f23eb150013d810ab746dee4e521f1"
+  },
+  {
+   "local": "ciclo/heartbeat_revs_nuevas.json",
+   "drive": "ciclo_alma_2026-11-16/heartbeat_revs_nuevas.json",
+   "github": "ciclo_alma/heartbeat_revs_nuevas.json",
+   "bytes": 25704,
+   "sha256": "6c01bfdf1173dc5dc563a45e9050c17698646e315b47e0952a1c0a42d8d092a9"
+  },
+  {
+   "local": "ciclo/heartbeat_revs_nuevas_clasificacion.json",
+   "drive": "ciclo_alma_2026-11-16/heartbeat_revs_nuevas_clasificacion.json",
+   "github": "ciclo_alma/heartbeat_revs_nuevas_clasificacion.json",
+   "bytes": 18964,
+   "sha256": "ae12dbda16a8a957d5e8527c4536d7b5e03b1e25681bfadf65e9a827b71ab9a7"
+  },
+  {
+   "local": "ciclo/integra.md",
+   "drive": "ciclo_alma_2026-11-16/integra.md",
+   "github": "ciclo_alma/integra.md",
+   "bytes": 4824,
+   "sha256": "ab17b848897553ec8ac5638716e4f24745a178c1c124ddb473e5135d96bf0fad"
+  },
+  {
+   "local": "ciclo/mejora_catalogo.md",
+   "drive": "ciclo_alma_2026-11-16/mejora_catalogo.md",
+   "github": "ciclo_alma/mejora_catalogo.md",
+   "bytes": 4901,
+   "sha256": "9cd66905f9dec3d8c249b38fdcb73dc62f1c81d9cbe7970943c34464377445a6"
+  },
+  {
+   "local": "ciclo/nutrientes/NUT-2026-11-16-001.json",
+   "drive": "ciclo_alma_2026-11-16/nutrientes/NUT-2026-11-16-001.json",
+   "github": "ciclo_alma/nutrientes/NUT-2026-11-16-001.json",
+   "bytes": 1337,
+   "sha256": "366843b7d1ddd4892ef95bb3d14d99216fe47bb9762ae0c71975c9c4ce5807ab"
+  },
+  {
+   "local": "ciclo/nutrientes/NUT-2026-11-16-002.json",
+   "drive": "ciclo_alma_2026-11-16/nutrientes/NUT-2026-11-16-002.json",
+   "github": "ciclo_alma/nutrientes/NUT-2026-11-16-002.json",
+   "bytes": 1322,
+   "sha256": "3c21c7a760f5c91c47bc4405058d220754914a4cb99e8814502ad23229f3cfc5"
+  },
+  {
+   "local": "ciclo/nutrientes/NUT-2026-11-16-003.json",
+   "drive": "ciclo_alma_2026-11-16/nutrientes/NUT-2026-11-16-003.json",
+   "github": "ciclo_alma/nutrientes/NUT-2026-11-16-003.json",
+   "bytes": 1280,
+   "sha256": "1ffa981111f76194349beabfda33432d8a0bf2b57fd2e15c610f18dd82c42d79"
+  },
+  {
+   "local": "ciclo/nutrientes/NUT-2026-11-16-004.json",
+   "drive": "ciclo_alma_2026-11-16/nutrientes/NUT-2026-11-16-004.json",
+   "github": "ciclo_alma/nutrientes/NUT-2026-11-16-004.json",
+   "bytes": 1304,
+   "sha256": "1b2aa654c0d8428138408b435e7dd591a131b003d1809f5c744693a1d7644369"
+  },
+  {
+   "local": "ciclo/nutrientes/NUT-2026-11-16-005.json",
+   "drive": "ciclo_alma_2026-11-16/nutrientes/NUT-2026-11-16-005.json",
+   "github": "ciclo_alma/nutrientes/NUT-2026-11-16-005.json",
+   "bytes": 1466,
+   "sha256": "01bc86a5cb7e4055eaac0366e116ade38787cdd9c69ef594d5e33ff5cce26792"
+  },
+  {
+   "local": "ciclo/preparar_absorcion.md",
+   "drive": "ciclo_alma_2026-11-16/preparar_absorcion.md",
+   "github": "ciclo_alma/preparar_absorcion.md",
+   "bytes": 5076,
+   "sha256": "d592ce5dab3ad01f1fc6b7aeeff4d4d66bbd0ba55dc17aa0c31a294cb2b691c9"
+  },
+  {
+   "local": "ciclo/propuestas_absorcion.json",
+   "drive": "ciclo_alma_2026-11-16/propuestas_absorcion.json",
+   "github": "ciclo_alma/propuestas_absorcion.json",
+   "bytes": 17101,
+   "sha256": "c92719cbca1558ba2103a89f15d78c79aaadacf6b95f29dd8db81ad77aa90d18"
+  },
+  {
+   "local": "ciclo/ruta_alma.json",
+   "drive": "ciclo_alma_2026-11-16/ruta_alma.json",
+   "github": "ciclo_alma/ruta_alma.json",
+   "bytes": 8525,
+   "sha256": "5cdad6d1a354e7a9a8ea20a070f1e8eb7d6d346517f4c574d55a4cd6a5b3c0d0"
+  },
+  {
+   "local": "ciclo/sondeo_vivo_fresco.md",
+   "drive": "ciclo_alma_2026-11-16/sondeo_vivo_fresco.md",
+   "github": "ciclo_alma/sondeo_vivo_fresco.md",
+   "bytes": 2816,
+   "sha256": "44a4fdfe676fd9c01f96a2b21d2aaaecf49e68c05354b123bda5bb825d6ed77c"
+  },
+  {
+   "local": "ciclo/tejido_cruzado_alma.jsonl",
+   "drive": "ciclo_alma_2026-11-16/tejido_cruzado_alma.jsonl",
+   "github": "ciclo_alma/tejido_cruzado_alma.jsonl",
+   "bytes": 14983,
+   "sha256": "fae22eeffd9b19c4ca75e4f7aee2bb880c4754285d8606c4c159db4350db8c0b"
+  },
+  {
+   "local": "ciclo/README.md",
+   "drive": "ciclo_alma_2026-11-16/README.md",
+   "github": "ciclo_alma/README.md",
+   "bytes": 2066,
+   "sha256": "0a0eca930008a89aa4fb0862684e420f695d6ba062e564cef2bdea3f1d2e0ed2"
+  },
+  {
+   "local": "catalogo/catalogo_vivo.json",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/catalogo_vivo.json",
+   "github": "alma/catalogo/catalogo_vivo.json",
+   "bytes": 124738,
+   "sha256": "6a6ae82b931850eb3b6138b41dca9d629aee13a303ced33da1ba2b130cc76a43"
+  },
+  {
+   "local": "kits/kit_savia_v152.md",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/kit_savia_v152.md",
+   "github": "alma/kits/kit_savia_v152.md",
+   "bytes": 12223,
+   "sha256": "2ce3426c48eebfede38c304130a1d39503c64f4a0bd24216ca33cebdbde66924"
+  },
+  {
+   "local": "kits/manifiesto_shas.json",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/manifiesto_shas.json",
+   "github": "alma/kits/manifiesto_shas.json",
+   "bytes": 889,
+   "sha256": "be5e873737340c9b7bd80747965e16c598002cdfb4ad26b0aba7551f2512c01a"
+  },
+  {
+   "local": "README.md",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/README.md",
+   "github": "alma/README.md",
+   "bytes": 3954,
+   "sha256": "28eb3c549f3694832c160caf43082cfadf4be1b564fef599f5e20d78787e5d08"
+  },
+  {
+   "local": "manifiesto_shas_alma.json",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/manifiesto_shas_alma.json",
+   "github": "alma/manifiesto_shas_alma.json",
+   "bytes": 22583,
+   "sha256": "d93fcf6df602b2b8261adf9f803dfc0122a6cbec0586f6922f9282583a924707"
+  },
+  {
+   "local": "puentes/tablon/R-001.json",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/R-001.json",
+   "github": "alma/puentes/tablon/R-001.json",
+   "bytes": 1482,
+   "sha256": "705d39d4e917cba45dfc99737cfbda8c8480c185da6cc40f5f1f71fcf8577b68"
+  },
+  {
+   "local": "puentes/test_tablon.py",
+   "drive": "ciclo_alma_2026-11-16/alma_actualizado/test_tablon.py",
+   "github": "alma/puentes/test_tablon.py",
+   "bytes": 7205,
+   "sha256": "122d85cd7298166f92bb238358e2e6e3302b02d66bfacfe4ab93ce79611a439c"
+  }
+ ]
+}

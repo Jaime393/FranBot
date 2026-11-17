@@ -1,0 +1,167 @@
+{
+  "ciclo": "ALMA 2026-11-16",
+  "fecha": "2026-11-16",
+  "metodo": "(c) Drive + GitHub; lo no depositado aún marca pendiente_deposito_ciclo",
+  "github_head": "85351ce4",
+  "drive_carpeta": "1Bepd-w432GdQqikYy0FphxTYqY0zz2bb",
+  "rutas": [
+    {
+      "artefacto": "catalogo_vivo (VII)",
+      "local": "alma/catalogo/",
+      "drive": "alma_2026-11-16/catalogo/ (ID 1_monHFJ4i0u1cKfdDBOptMwGcK1ZDW3n)",
+      "github": "FranBot catalogo/ @ 85351ce4 (blob catalogo_vivo.json db990a6e)",
+      "consume": "ambos",
+      "test": "test_catalogo.py: v2.0, 138 entradas, 0 NO_VERIFICADO, leer_catalogo.py verify exit 0 (138/138 TODO CUADRA, verificado por mí)",
+      "semilla": "catalogo/_generar_catalogo.py",
+      "nota": "El v2 (138 = 100 v1 + 33 ALMA + 5 ciclo) aterrizó 00:34:00Z durante la integración; el README lo anunció a las 00:32:39Z, antes que el archivo — ver tejido, CONFLICTO catálogo v2 (resuelto por llegada)."
+    },
+    {
+      "artefacto": "tablon pregunta-respuesta (IV)",
+      "local": "alma/puentes/",
+      "drive": "alma_2026-11-16/puentes/ (ID 18fU_AWrFW3uJ43Qw7xB8-4AtpofCm4w_), tablon/ (ID 1wixBQB8v2uYjVBSyPh1fREAXSn5rjSPd)",
+      "github": "FranBot puentes/ @ 85351ce4",
+      "consume": "ambos",
+      "test": "test_tablon.py 9/9 OK (local, 2P/1R tras R-001)",
+      "semilla": "puentes/tablon.py",
+      "nota": "La copia depositada en GitHub está en 2P/0R (blob test_tablon.py f9684687, 6.822 B); en local el tablón es 2P/1R tras R-001 (00:30Z). Pendiente re-depósito del tablón en el ciclo."
+    },
+    {
+      "artefacto": "kit de expansión savia V152 (V)",
+      "local": "alma/kits/",
+      "drive": "alma_2026-11-16/kits/ (ID 1OVe1pvkLRm4kyR5_aXKYsYPnueE1CuaB)",
+      "github": "FranBot kits/ @ 85351ce4",
+      "consume": "ambos",
+      "test": "test_kit.py: TODO PASA, 43 comprobaciones ejecutadas (recuento instrumentado por mí; el parte ALMA decía 42/42)",
+      "semilla": "kits/medir_savia.py (stdlib, sin red)",
+      "nota": "Deriva local post-depósito: kit_savia_v152.md lleva CORR-KIT-FILES0 (00:31:51Z) y el manifiesto del kit se regeneró (00:32:00Z); la copia depositada es la versión previa."
+    },
+    {
+      "artefacto": "puente nutriente<->vector (I)",
+      "local": "alma/puentes/tabla_nutriente_vector.json + traducir_nutriente_vector.py",
+      "drive": "alma_2026-11-16/puentes/ (ID 18fU_AWrFW3uJ43Qw7xB8-4AtpofCm4w_)",
+      "github": "FranBot puentes/ @ 85351ce4",
+      "consume": "nodo",
+      "test": "traducir_nutriente_vector.py: round-trip 15/15 sobre los nutrientes reales",
+      "semilla": "puentes/tabla_nutriente_vector.json"
+    },
+    {
+      "artefacto": "tutorial-semilla verificar-blob (III)",
+      "local": "alma/duales/tutorial_verificar_blob.md",
+      "drive": "alma_2026-11-16/duales/ (ID 1cALychTWTSvMo51lZTxiRyvQhtHmTihA)",
+      "github": "FranBot duales/ @ 85351ce4",
+      "consume": "ambos",
+      "test": "checklist final del tutorial, usable como test (blobs r23: síntesis 1553e1c3, verificador 056a9c7e)",
+      "semilla": "duales/tutorial_verificar_blob.md"
+    },
+    {
+      "artefacto": "relevo FASE 4 método (c) (VI)",
+      "local": "alma/relevo/",
+      "drive": "alma_2026-11-16/relevo/ (ID 1n1uPAg5YLe0falV7U3_UL0sAMr4XOi91)",
+      "github": "FranBot relevo/ @ 85351ce4",
+      "consume": "nodo",
+      "test": "test_relevo.py 55/55",
+      "semilla": "relevo/kit_relevo_fase4.md"
+    },
+    {
+      "artefacto": "sondeo_vivo",
+      "local": "alma/sondeo_vivo.md",
+      "drive": "alma_2026-11-16/sondeo_vivo.md (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot sondeo_vivo.md @ 85351ce4 (blob cd04147d)",
+      "consume": "ambos",
+      "test": "lectura verificada contra fuente (sin test propio; sondeo de solo lectura)",
+      "semilla": "n/a (documento de sondeo)"
+    },
+    {
+      "artefacto": "sondeo_suelo",
+      "local": "alma/sondeo_suelo.md",
+      "drive": "alma_2026-11-16/sondeo_suelo.md (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot sondeo_suelo.md @ 85351ce4 (blob 6920a82c)",
+      "consume": "ambos",
+      "test": "lectura verificada contra fuente (sin test propio; sondeo de solo lectura)",
+      "semilla": "n/a (documento de sondeo)"
+    },
+    {
+      "artefacto": "sondeo_corpus",
+      "local": "alma/sondeo_corpus.md",
+      "drive": "alma_2026-11-16/sondeo_corpus.md (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot sondeo_corpus.md @ 85351ce4 (blob 3d97b110)",
+      "consume": "ambos",
+      "test": "lectura verificada contra fuente (sin test propio; sondeo de solo lectura)",
+      "semilla": "n/a (documento de sondeo)"
+    },
+    {
+      "artefacto": "sondeo_deposito",
+      "local": "alma/sondeo_deposito.md",
+      "drive": "alma_2026-11-16/sondeo_deposito.md (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot sondeo_deposito.md @ 85351ce4 (blob af9a6b43)",
+      "consume": "ambos",
+      "test": "lectura verificada contra fuente (sin test propio; sondeo de solo lectura)",
+      "semilla": "n/a (documento de sondeo)"
+    },
+    {
+      "artefacto": "censo fresco savia (ciclo)",
+      "local": "alma/ciclo/censo_fresco.json",
+      "drive": "pendiente_deposito_ciclo",
+      "github": "pendiente_deposito_ciclo",
+      "consume": "nodo",
+      "test": "reproducido por el kit (medir_savia.py) con censo idéntico al de cosecha (M-94)",
+      "semilla": "alma/kits/medir_savia.py sobre alma/ciclo/cosecha/ (71 payloads)"
+    },
+    {
+      "artefacto": "sondeo vivo fresco (ciclo)",
+      "local": "alma/ciclo/sondeo_vivo_fresco.md",
+      "drive": "pendiente_deposito_ciclo",
+      "github": "pendiente_deposito_ciclo",
+      "consume": "ambos",
+      "test": "lecturas con hora UTC y blobs (HEAD f0a8c308, flow 0,0% run 149, bots 25.ª)",
+      "semilla": "n/a (documento de sondeo)"
+    },
+    {
+      "artefacto": "cosecha savia (ciclo)",
+      "local": "alma/ciclo/cosecha_savia.md + cosecha/ (71 payloads)",
+      "drive": "pendiente_deposito_ciclo",
+      "github": "pendiente_deposito_ciclo",
+      "consume": "nodo",
+      "test": "censo_fresco.json: 71/71 descargados, 0 JWT, savia = mesh.totalSize 11/11",
+      "semilla": "alma/ciclo/_cosechar.py (Drive revisions API del heartbeat canónico)"
+    },
+    {
+      "artefacto": "propuestas absorción (ciclo)",
+      "local": "alma/ciclo/propuestas_absorcion.json",
+      "drive": "pendiente_deposito_ciclo",
+      "github": "pendiente_deposito_ciclo",
+      "consume": "nodo",
+      "test": "dedup global máx 0,2822, 0 pares >= 0,5; N-39 propuesta, NO aplicada por este frente",
+      "semilla": "alma/ciclo/_preparar_absorcion.py"
+    },
+    {
+      "artefacto": "README del paquete",
+      "local": "alma/README.md",
+      "drive": "alma_2026-11-16/README.md (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot alma/README.md @ 85351ce4 (blob 7b9b43a0)",
+      "consume": "ambos",
+      "test": "n/a (documento)",
+      "semilla": "n/a",
+      "nota": "Deriva local post-depósito (00:32:39Z): el README local afirma catálogo v2 138 (sin archivo en disco), test del kit 43/43 (verificado por mí) y CORR-KIT-FILES0. La versión depositada es sha256 cddb7e6d (L22 con el error CAT-0094 ya corregido en local). El README raíz del repo sigue siendo el original (blob 214dac39)."
+    },
+    {
+      "artefacto": "manifiesto maestro",
+      "local": "alma/manifiesto_shas_alma.json",
+      "drive": "alma_2026-11-16/manifiesto_shas_alma.json (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot manifiesto_shas_alma.json @ 85351ce4",
+      "consume": "nodo",
+      "test": "135 entradas (regenerado 00:34:08Z por otro frente del ciclo; antes 33, sha 7702ccd3); los shas que registra coinciden con el disco corriente (verificado por mí en el generador)",
+      "semilla": "re-generable por sha256 de los archivos del paquete",
+      "nota": "El manifiesto maestro derivó tras el depósito junto con 4 archivos (README, kit_savia_v152.md, kits/manifiesto_shas.json, test_tablon.py) — ver tejido, CONFLICTOs; la versión depositada en GitHub es la de 33 entradas."
+    },
+    {
+      "artefacto": "registro de depósito",
+      "local": "alma/deposito_alma.md",
+      "drive": "alma_2026-11-16/deposito_alma.md (carpeta ID 1Bepd-w432GdQqikYy0FphxTYqY0zz2bb)",
+      "github": "FranBot deposito_alma.md @ 85351ce4",
+      "consume": "ambos",
+      "test": "Drive 34/34 por tamaño; GitHub 34/34 por blob",
+      "semilla": "n/a (registro)"
+    }
+  ]
+}

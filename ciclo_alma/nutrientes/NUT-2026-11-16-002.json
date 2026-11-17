@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "nodo": "anexo-vi",
+    "phi": 1.6180339887,
+    "timestamp": 1794875444.9143941
+  },
+  "contenido": "En 71 payloads heartbeat frescos (11 V152), la tercera savia 247.881 aparece 0 veces: no persiste. Aparece un cuarto valor 248.372 (1/11, compacto 55.973 B, 23:26:43Z) con mecanismo medido: rotación del heartbeat V151 rodante, sale un archivo de 267 B y entra uno de 263 B, totalSize -4.",
+  "contexto": "En 71 payloads heartbeat frescos (11 V152), la tercera savia 247.881 aparece 0 veces: no persiste. Aparece un cuarto valor 248.372 (1/11, compacto 55.973 B, 23:26:43Z) con mecanismo medido: rotación del heartbeat V151 rodante, sale un archivo de 267 B y entra uno de 263 B, totalSize -4.",
+  "destino": "nutrientes",
+  "estado": "SÉ",
+  "fecha": "2026-11-16",
+  "fuente": "local ~/workspace/alma/ciclo/censo_fresco.json (CENSO-FRESCO-ALMA-2026-11-16)",
+  "grieta": "NO_SÉ si 248.372 es estable (1 sola aparición) ni por qué el documento canónico midió 301 B el día de 247.881.",
+  "hash_fuente": "sha256:a44544fcbaee50fa8dc0485a9dae7679e3ff718bb379172bea2e4e9b8befeff0",
+  "id": "NUT-2026-11-16-002",
+  "nodo_origen": "anexo-vi",
+  "origen": "anexo-vi",
+  "referencias": [
+    "~/workspace/alma/ciclo/censo_fresco.json"
+  ],
+  "timestamp": 1794875444.9143941,
+  "tipo": "hecho"
+}

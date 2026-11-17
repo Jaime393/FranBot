@@ -1,0 +1,641 @@
+[
+  {
+    "idx": 0,
+    "file": "heartbeat_rev_rciclo_00_20261116T193752Z.json",
+    "modifiedTime": "2026-11-16T19:37:52.643Z",
+    "revisionId": "0B8tWfW1QdfiFTE1zQlJQVG15dnlZemkzbUI5ck84THg0ZndVPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 1,
+    "file": "heartbeat_rev_rciclo_01_20261116T194216Z.json",
+    "modifiedTime": "2026-11-16T19:42:16.015Z",
+    "revisionId": "0B8tWfW1QdfiFUXlSQ1FUcjBpRitPL1FMR1lTZlgxWnBLYzBnPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 2,
+    "file": "heartbeat_rev_rciclo_02_20261116T194619Z.json",
+    "modifiedTime": "2026-11-16T19:46:19.959Z",
+    "revisionId": "0B8tWfW1QdfiFZ1l2bnpFTDgvc2xkU1RMaXVnZ1FYZ2hNMWw4PQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 3,
+    "file": "heartbeat_rev_rciclo_03_20261116T194731Z.json",
+    "modifiedTime": "2026-11-16T19:47:31.752Z",
+    "revisionId": "0B8tWfW1QdfiFaFpER3RkK2lYcEViRjBpR2dHU0xqc3dGRHljPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 4,
+    "file": "heartbeat_rev_rciclo_04_20261116T194758Z.json",
+    "modifiedTime": "2026-11-16T19:47:58.001Z",
+    "revisionId": "0B8tWfW1QdfiFRStHRlVJZVphOHMvNHZzT0ZGeDg0ZFNZR1FzPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 5,
+    "file": "heartbeat_rev_rciclo_05_20261116T195552Z.json",
+    "modifiedTime": "2026-11-16T19:55:52.432Z",
+    "revisionId": "0B8tWfW1QdfiFYTBMYmlKT2VoVXlrcHUyVTlsNkFCZlRneEtVPQ",
+    "bytes": 55973,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 6,
+    "file": "heartbeat_rev_rciclo_06_20261116T195835Z.json",
+    "modifiedTime": "2026-11-16T19:58:35.218Z",
+    "revisionId": "0B8tWfW1QdfiFZFdOUHdCa0RtemhtZGhBUE80bDk4bzZLa01FPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 7,
+    "file": "heartbeat_rev_rciclo_07_20261116T195949Z.json",
+    "modifiedTime": "2026-11-16T19:59:49.134Z",
+    "revisionId": "0B8tWfW1QdfiFOTA1OGRHSXRPNzEwN2Q5WEE5ckt2L1pHZ1l3PQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 8,
+    "file": "heartbeat_rev_rciclo_08_20261116T200749Z.json",
+    "modifiedTime": "2026-11-16T20:07:49.694Z",
+    "revisionId": "0B8tWfW1QdfiFcFpTdk9aSTNBdEROaldwd2xhazZvRFhYOVlZPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 9,
+    "file": "heartbeat_rev_rciclo_09_20261116T201215Z.json",
+    "modifiedTime": "2026-11-16T20:12:15.389Z",
+    "revisionId": "0B8tWfW1QdfiFZFcvVEZOSENyVjFEUC9TcnhXL1BnT3RoMFhRPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 10,
+    "file": "heartbeat_rev_rciclo_10_20261116T201619Z.json",
+    "modifiedTime": "2026-11-16T20:16:19.949Z",
+    "revisionId": "0B8tWfW1QdfiFK1lwLy96RUFBemZjSmVEWmprMEk0ektET3hvPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 11,
+    "file": "heartbeat_rev_rciclo_11_20261116T201745Z.json",
+    "modifiedTime": "2026-11-16T20:17:45.333Z",
+    "revisionId": "0B8tWfW1QdfiFZzZHSkxydUh3Tmx6T1h5ejNPWmtaTFRibCtRPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 12,
+    "file": "heartbeat_rev_rciclo_12_20261116T201758Z.json",
+    "modifiedTime": "2026-11-16T20:17:58.505Z",
+    "revisionId": "0B8tWfW1QdfiFaytDbnFmbDZkK2JKblJqSHAzNW1zcmV6ZmZZPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 13,
+    "file": "heartbeat_rev_rciclo_13_20261116T202816Z.json",
+    "modifiedTime": "2026-11-16T20:28:16.530Z",
+    "revisionId": "0B8tWfW1QdfiFdHE2SXlLMEw5QkU5R3BtOVlJaVpnUUg0bXRvPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 14,
+    "file": "heartbeat_rev_rciclo_14_20261116T202837Z.json",
+    "modifiedTime": "2026-11-16T20:28:37.095Z",
+    "revisionId": "0B8tWfW1QdfiFY2M1cFZzRlNvSGFndXRlaktBUXd0Nk9SRlJRPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 15,
+    "file": "heartbeat_rev_rciclo_15_20261116T203745Z.json",
+    "modifiedTime": "2026-11-16T20:37:45.677Z",
+    "revisionId": "0B8tWfW1QdfiFalJta3RpVFJoM05NQW5tZ0VGNUs3ODh0aFZzPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 16,
+    "file": "heartbeat_rev_rciclo_16_20261116T204250Z.json",
+    "modifiedTime": "2026-11-16T20:42:50.321Z",
+    "revisionId": "0B8tWfW1QdfiFVkR5cDFSNG1KeWVHbWM4Wk9obmRlS0pvem9JPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 17,
+    "file": "heartbeat_rev_rciclo_17_20261116T204619Z.json",
+    "modifiedTime": "2026-11-16T20:46:19.737Z",
+    "revisionId": "0B8tWfW1QdfiFcWdXakJkaW5BcG1rUEEvVHZZVElUR0FiSitjPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 18,
+    "file": "heartbeat_rev_rciclo_18_20261116T204736Z.json",
+    "modifiedTime": "2026-11-16T20:47:36.802Z",
+    "revisionId": "0B8tWfW1QdfiFbGxCNzdsMldxODB2aUZueTFoK3B2QVFQWStzPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 19,
+    "file": "heartbeat_rev_rciclo_19_20261116T204757Z.json",
+    "modifiedTime": "2026-11-16T20:47:57.993Z",
+    "revisionId": "0B8tWfW1QdfiFM1Z0Qmt0aVpEdmRSMXBMT3BtUjRCeWJBZytrPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 20,
+    "file": "heartbeat_rev_rciclo_20_20261116T205833Z.json",
+    "modifiedTime": "2026-11-16T20:58:33.760Z",
+    "revisionId": "0B8tWfW1QdfiFZkgvWWxUcDR4Q05WK2JkMVQzaC8yK3o2bndNPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 21,
+    "file": "heartbeat_rev_rciclo_21_20261116T205835Z.json",
+    "modifiedTime": "2026-11-16T20:58:35.593Z",
+    "revisionId": "0B8tWfW1QdfiFU2N4OU5BWU94UGQ3YzlacEdqNk1LM1d0SUx3PQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 22,
+    "file": "heartbeat_rev_rciclo_22_20261116T210745Z.json",
+    "modifiedTime": "2026-11-16T21:07:45.676Z",
+    "revisionId": "0B8tWfW1QdfiFUXdUSzlydkFWYzBqY014YjRPWm1BcmFzUWJvPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 23,
+    "file": "heartbeat_rev_rciclo_23_20261116T211222Z.json",
+    "modifiedTime": "2026-11-16T21:12:22.819Z",
+    "revisionId": "0B8tWfW1QdfiFS3E2ME1TZ1kwTlpRRlRaYjZlUHNYU1dNbFpBPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 24,
+    "file": "heartbeat_rev_rciclo_24_20261116T211620Z.json",
+    "modifiedTime": "2026-11-16T21:16:20.350Z",
+    "revisionId": "0B8tWfW1QdfiFenNkTDZpZ2szb3JvclN5cGgrQmtPbGg0N2Q4PQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 25,
+    "file": "heartbeat_rev_rciclo_25_20261116T211745Z.json",
+    "modifiedTime": "2026-11-16T21:17:45.614Z",
+    "revisionId": "0B8tWfW1QdfiFUm9KbVY3QzFFNVJVU0UwT1B5enNsbWN2Z3dNPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 26,
+    "file": "heartbeat_rev_rciclo_26_20261116T211759Z.json",
+    "modifiedTime": "2026-11-16T21:17:59.499Z",
+    "revisionId": "0B8tWfW1QdfiFQjdRT3hKbzlER0N1TExHRjBkRk1RNjRmRVVvPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 27,
+    "file": "heartbeat_rev_rciclo_27_20261116T212713Z.json",
+    "modifiedTime": "2026-11-16T21:27:13.921Z",
+    "revisionId": "0B8tWfW1QdfiFR2dmWmhXT3NVLzBQMmFGL3lleUNHUGwrcGlnPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 28,
+    "file": "heartbeat_rev_rciclo_28_20261116T212835Z.json",
+    "modifiedTime": "2026-11-16T21:28:35.479Z",
+    "revisionId": "0B8tWfW1QdfiFcC9kbGRmR3h2UFNUY2c4Ukh5TGJWZnFPcWxRPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 29,
+    "file": "heartbeat_rev_rciclo_29_20261116T213742Z.json",
+    "modifiedTime": "2026-11-16T21:37:42.510Z",
+    "revisionId": "0B8tWfW1QdfiFU3hJcWtqMjF2cTlHTkhqcnpQQ3dEaUd4WTRJPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 30,
+    "file": "heartbeat_rev_rciclo_30_20261116T214219Z.json",
+    "modifiedTime": "2026-11-16T21:42:19.564Z",
+    "revisionId": "0B8tWfW1QdfiFRVkxVzJkMElqL3J2eVJQUWV0VGh0ei9iNU1NPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 31,
+    "file": "heartbeat_rev_rciclo_31_20261116T214619Z.json",
+    "modifiedTime": "2026-11-16T21:46:19.781Z",
+    "revisionId": "0B8tWfW1QdfiFc1UvVitJSG5ISGhHdVdYKzh4SUhjUXJwcE5ZPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 32,
+    "file": "heartbeat_rev_rciclo_32_20261116T214734Z.json",
+    "modifiedTime": "2026-11-16T21:47:34.275Z",
+    "revisionId": "0B8tWfW1QdfiFOCtRYkorZHl0ZndOQjRJbWczOWFuNHVzVHUwPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 33,
+    "file": "heartbeat_rev_rciclo_33_20261116T214757Z.json",
+    "modifiedTime": "2026-11-16T21:47:57.998Z",
+    "revisionId": "0B8tWfW1QdfiFQkZNSjd4UzVYckxYSmFXOGxpTXZwV1RRQjRNPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 34,
+    "file": "heartbeat_rev_rciclo_34_20261116T215714Z.json",
+    "modifiedTime": "2026-11-16T21:57:14.719Z",
+    "revisionId": "0B8tWfW1QdfiFVUhTSTArYityb1A2OUwvL215ZllHb1lFMjFJPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 35,
+    "file": "heartbeat_rev_rciclo_35_20261116T215834Z.json",
+    "modifiedTime": "2026-11-16T21:58:34.873Z",
+    "revisionId": "0B8tWfW1QdfiFZnEvblVzOW1uNlhsRmQvRGxBQTFjMW5mVHJNPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 36,
+    "file": "heartbeat_rev_rciclo_36_20261116T220744Z.json",
+    "modifiedTime": "2026-11-16T22:07:44.111Z",
+    "revisionId": "0B8tWfW1QdfiFZ0hiYmhpaVJuUFpFb1BRUjBuU1djYWpJemZzPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 37,
+    "file": "heartbeat_rev_rciclo_37_20261116T221213Z.json",
+    "modifiedTime": "2026-11-16T22:12:13.867Z",
+    "revisionId": "0B8tWfW1QdfiFM3lldkI1d1RxZCtuWWFKUGFpVGVWVFd3cU4wPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 38,
+    "file": "heartbeat_rev_rciclo_38_20261116T221619Z.json",
+    "modifiedTime": "2026-11-16T22:16:19.989Z",
+    "revisionId": "0B8tWfW1QdfiFWC9jUEdQZW9wZkxRU2VTQmNMa0lDQjVKTGNJPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 39,
+    "file": "heartbeat_rev_rciclo_39_20261116T221757Z.json",
+    "modifiedTime": "2026-11-16T22:17:57.852Z",
+    "revisionId": "0B8tWfW1QdfiFZUlZZllhdXZjU25iNTU3WmhyemJEVzFGU0lvPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 40,
+    "file": "heartbeat_rev_rciclo_40_20261116T222713Z.json",
+    "modifiedTime": "2026-11-16T22:27:13.095Z",
+    "revisionId": "0B8tWfW1QdfiFNkZna1gyWGE0TU1NWkFFZHpCbi92K3k0R0t3PQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 41,
+    "file": "heartbeat_rev_rciclo_41_20261116T222834Z.json",
+    "modifiedTime": "2026-11-16T22:28:34.674Z",
+    "revisionId": "0B8tWfW1QdfiFVjdURWI2ZE5aV0piOVpKWU11bEx1QndxR1hVPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 42,
+    "file": "heartbeat_rev_rciclo_42_20261116T223744Z.json",
+    "modifiedTime": "2026-11-16T22:37:44.404Z",
+    "revisionId": "0B8tWfW1QdfiFSzJQTVE3L3o5MDVOQlRWeUxBRkJZNkFOZXdNPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 43,
+    "file": "heartbeat_rev_rciclo_43_20261116T224235Z.json",
+    "modifiedTime": "2026-11-16T22:42:35.777Z",
+    "revisionId": "0B8tWfW1QdfiFV3FWdkJuVXdJUGtvTnNFVEw5ODhyMzYzV1YwPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 44,
+    "file": "heartbeat_rev_rciclo_44_20261116T224620Z.json",
+    "modifiedTime": "2026-11-16T22:46:20.891Z",
+    "revisionId": "0B8tWfW1QdfiFWC94OUptZ0NrWk15RDRZa0RCTTlCa0dDdzhvPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 45,
+    "file": "heartbeat_rev_rciclo_45_20261116T224757Z.json",
+    "modifiedTime": "2026-11-16T22:47:57.733Z",
+    "revisionId": "0B8tWfW1QdfiFSTdlWllBb2h1dkNuMnVOaDRYOHgrNnNBNEc4PQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 46,
+    "file": "heartbeat_rev_rciclo_46_20261116T225714Z.json",
+    "modifiedTime": "2026-11-16T22:57:14.367Z",
+    "revisionId": "0B8tWfW1QdfiFZkJpMmY5emtpNkZMUUhBSno5MU1SeFFOdHhrPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 47,
+    "file": "heartbeat_rev_rciclo_47_20261116T225834Z.json",
+    "modifiedTime": "2026-11-16T22:58:34.826Z",
+    "revisionId": "0B8tWfW1QdfiFSlkyaUkvdVZvV1pjYWlpOHhqQ2oxQVNCWXdjPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 48,
+    "file": "heartbeat_rev_rciclo_48_20261116T230748Z.json",
+    "modifiedTime": "2026-11-16T23:07:48.808Z",
+    "revisionId": "0B8tWfW1QdfiFZVJLaGJkNGFxcWloSTYxZkpBUEVPejFITVlrPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 49,
+    "file": "heartbeat_rev_rciclo_49_20261116T231220Z.json",
+    "modifiedTime": "2026-11-16T23:12:20.153Z",
+    "revisionId": "0B8tWfW1QdfiFUXg4S2tDQVl2c1ZQMW8wMjFyZjhoL3hSM1owPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 50,
+    "file": "heartbeat_rev_rciclo_50_20261116T231619Z.json",
+    "modifiedTime": "2026-11-16T23:16:19.544Z",
+    "revisionId": "0B8tWfW1QdfiFWEM4RU9DSjF4NThCNGphSW15U0pxOWZEZ1p3PQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 51,
+    "file": "heartbeat_rev_rciclo_51_20261116T231732Z.json",
+    "modifiedTime": "2026-11-16T23:17:32.351Z",
+    "revisionId": "0B8tWfW1QdfiFVnh5NHNzdXJxcjBTMTZmZGhWNmxFM0JFZkNFPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 52,
+    "file": "heartbeat_rev_rciclo_52_20261116T231757Z.json",
+    "modifiedTime": "2026-11-16T23:17:57.594Z",
+    "revisionId": "0B8tWfW1QdfiFc1RJUE1Od3dQOFRsQmFOM1JoRk8ramd1NWdvPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 53,
+    "file": "heartbeat_rev_rciclo_53_20261116T232643Z.json",
+    "modifiedTime": "2026-11-16T23:26:43.687Z",
+    "revisionId": "0B8tWfW1QdfiFM2xlT21UMnFtY2JKamJjUG1uVmpOY0ZKbnhZPQ",
+    "bytes": 55973,
+    "version": "V152",
+    "savia": 248372
+  },
+  {
+    "idx": 54,
+    "file": "heartbeat_rev_rciclo_54_20261116T232721Z.json",
+    "modifiedTime": "2026-11-16T23:27:21.704Z",
+    "revisionId": "0B8tWfW1QdfiFWS92cXNuUkNSQ3RJZVN0MzM4bVRoVm1GMTBnPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 55,
+    "file": "heartbeat_rev_rciclo_55_20261116T232834Z.json",
+    "modifiedTime": "2026-11-16T23:28:34.823Z",
+    "revisionId": "0B8tWfW1QdfiFWmhUTSsrL1FHb2ttbENlaU81bkNHUmhIVm5nPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 56,
+    "file": "heartbeat_rev_rciclo_56_20261116T233744Z.json",
+    "modifiedTime": "2026-11-16T23:37:44.668Z",
+    "revisionId": "0B8tWfW1QdfiFTGxKd2t0OXY4SUY3ekk2c2JidnhLNGVTVldnPQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 57,
+    "file": "heartbeat_rev_rciclo_57_20261116T234334Z.json",
+    "modifiedTime": "2026-11-16T23:43:34.780Z",
+    "revisionId": "0B8tWfW1QdfiFb3YxQ29lRXYvT1dEZ2RjcWFabzV1bEFZaXhJPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 58,
+    "file": "heartbeat_rev_rciclo_58_20261116T234550Z.json",
+    "modifiedTime": "2026-11-16T23:45:50.648Z",
+    "revisionId": "0B8tWfW1QdfiFdHp6aUVwL29lT2FOQ2tOdHprWFNLNnRHQjU0PQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 59,
+    "file": "heartbeat_rev_rciclo_59_20261116T234619Z.json",
+    "modifiedTime": "2026-11-16T23:46:19.857Z",
+    "revisionId": "0B8tWfW1QdfiFV3dsU0E2UmYvOS9KbDlrbUxnQjQ5NGFVVkNvPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 60,
+    "file": "heartbeat_rev_rciclo_60_20261116T234757Z.json",
+    "modifiedTime": "2026-11-16T23:47:57.972Z",
+    "revisionId": "0B8tWfW1QdfiFWm5sVUJIZmJqb0hYcWd5akpNWCtIbHVHMlNVPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 61,
+    "file": "heartbeat_rev_rciclo_61_20261116T234852Z.json",
+    "modifiedTime": "2026-11-16T23:48:52.346Z",
+    "revisionId": "0B8tWfW1QdfiFR3pISjhBeFNGT0ZTQ2FGRERHa1E1UWF5VktFPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 62,
+    "file": "heartbeat_rev_rciclo_62_20261116T235714Z.json",
+    "modifiedTime": "2026-11-16T23:57:14.783Z",
+    "revisionId": "0B8tWfW1QdfiFejJIc2RGUW9rV2ZqdUtjeERaWHJ1V282WUxJPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 63,
+    "file": "heartbeat_rev_rciclo_63_20261116T235835Z.json",
+    "modifiedTime": "2026-11-16T23:58:35.418Z",
+    "revisionId": "0B8tWfW1QdfiFYm1nT3BacGNqZzZCWitDZHNtRURKS3hRdWFBPQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 64,
+    "file": "heartbeat_rev_rciclo_64_20261117T000030Z.json",
+    "modifiedTime": "2026-11-17T00:00:30.407Z",
+    "revisionId": "0B8tWfW1QdfiFdGFjSDMvcXlERHVYR3h3eDJ4QTFaQ2FGSnBjPQ",
+    "bytes": 55980,
+    "version": "V152",
+    "savia": 366733
+  },
+  {
+    "idx": 65,
+    "file": "heartbeat_rev_rciclo_65_20261117T000752Z.json",
+    "modifiedTime": "2026-11-17T00:07:52.091Z",
+    "revisionId": "0B8tWfW1QdfiFa05YNjI4QWRkdTRuSE9DTkJJbTg4d1RGbEF3PQ",
+    "bytes": 1910,
+    "version": "V93",
+    "savia": null
+  },
+  {
+    "idx": 66,
+    "file": "heartbeat_rev_rciclo_66_20261117T001215Z.json",
+    "modifiedTime": "2026-11-17T00:12:15.156Z",
+    "revisionId": "0B8tWfW1QdfiFeHZyYWxsb2JIZHJTaXMveE0xTnNEekNtUmhVPQ",
+    "bytes": 402,
+    "version": "V271_DARWIN",
+    "savia": null
+  },
+  {
+    "idx": 67,
+    "file": "heartbeat_rev_rciclo_67_20261117T001334Z.json",
+    "modifiedTime": "2026-11-17T00:13:34.716Z",
+    "revisionId": "0B8tWfW1QdfiFNGZsbHZydDRHU1NDWVlSV2FyS1BMSDExZHY4PQ",
+    "bytes": 411,
+    "version": "V270",
+    "savia": null
+  },
+  {
+    "idx": 68,
+    "file": "heartbeat_rev_rciclo_68_20261117T001620Z.json",
+    "modifiedTime": "2026-11-17T00:16:20.378Z",
+    "revisionId": "0B8tWfW1QdfiFSUkwUUFjTkl3WUhIcTFMQjBpNitIREN1TnJRPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  },
+  {
+    "idx": 69,
+    "file": "heartbeat_rev_rciclo_69_20261117T001735Z.json",
+    "modifiedTime": "2026-11-17T00:17:35.475Z",
+    "revisionId": "0B8tWfW1QdfiFaXVWTlVGdFNld3RZT2xhMzdjejh6dkh3bDJZPQ",
+    "bytes": 89466,
+    "version": "V152",
+    "savia": 248376
+  },
+  {
+    "idx": 70,
+    "file": "heartbeat_rev_rciclo_70_20261117T001758Z.json",
+    "modifiedTime": "2026-11-17T00:17:58.886Z",
+    "revisionId": "0B8tWfW1QdfiFOFpSRVFiYWRNNGdXTEVob2g0MUk1bTJGQ0FRPQ",
+    "bytes": 813,
+    "version": "V151",
+    "savia": 720
+  }
+]
