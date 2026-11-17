@@ -1,16 +1,16 @@
 {
-  "total": 1225,
+  "total": 1240,
   "por_estado": {
-    "CONJETURO": 22,
+    "CONJETURO": 25,
     "INFIERO": 100,
-    "SE": 1091,
+    "SE": 1103,
     "REFUTADO": 4,
     "NO_SE": 8
   },
   "por_tipo": {
-    "prediccion": 8,
+    "null": 8,
     "provenance": 78,
-    "digestion": 658,
+    "digestion": 673,
     "consolidacion": 13,
     "verificacion": 351,
     "conflicto": 64,
@@ -60,7 +60,8 @@
     "G-NUEVA: estado vivo del ecosistema (observabilidad)": 30,
     "G-NUEVA: d05 L4 polarización (medida y mecanismo)": 3,
     "G-NUEVA: d05 L7 escalamiento urbano": 3,
-    "G-NUEVA: producción ALMA (FranBot v8.1)": 10
+    "G-NUEVA: producción ALMA (FranBot v8.1)": 10,
+    "G-NUEVA: pilares ampliados 7-19 (CHK-274) integrados, revision canonica pendiente": 15
   },
   "hash_real": 1211,
   "hash_pendiente": 8,
