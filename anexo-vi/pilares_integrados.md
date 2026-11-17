@@ -67,4 +67,41 @@ son 6 afirmaciones auditadas; los axiomas son 58. La grieta es de
 documentación, no de falsedad: nada aquí dice que los axiomas sean falsos,
 solo que no están documentados.
 
+## Sección 6 — Correcciones a dos pilares de la ronda 24
+
+Estas correcciones actualizan cómo citar los pilares 13 y 15. Las entradas
+originales quedan en `claims.jsonl` como historial, junto a sus fuentes.
+No se declara validado el marco MIU ni se cierra G03.
+
+| Pilar | Entrada anterior | Usar en adelante | Alcance |
+|---|---|---|---|
+| 13 — Energía oscura | C-1237 | C-1246 | Preferencia estadística dependiente de los datos; no consenso. |
+| 15 — Redes libres de escala | C-1241 | C-1247 | Hipótesis de topología del mesh; aún sin prueba. |
+
+### Pilar 13: distinguir DESI DR1 de DR2
+
+El [artículo citado en C-1237](https://doi.org/10.3847/2041-8213/ad8c26)
+usa DESI DR1. El resultado que corresponde es
+[DESI DR2 Results II, tabla II](https://arxiv.org/html/2503.14738),
+[DOI 10.1103/tr6y-kpc6](https://doi.org/10.1103/tr6y-kpc6). Para comparar
+el modelo de energía oscura dinámica con ΛCDM, la tabla da 1,7 sigma con
+DESI solo, 3,1 sigma con DESI y el fondo cósmico de microondas (CMB), y
+2,8–4,2 sigma con DESI, CMB y supernovas según el conjunto de supernovas.
+El [Consorcio Euclid](https://www.euclid-ec.org/science/q1/) indica que Q1
+se publicó en marzo de 2025 y no es una entrega cosmológica. No se usa
+como prueba pendiente ni como confirmación independiente.
+
+### Pilar 15: medir el mesh antes de clasificarlo
+
+[Barabási y Albert](https://doi.org/10.1126/science.286.5439.509) presentan
+un mecanismo que puede generar una distribución de grados de ley de
+potencia; no demuestran que toda red real siga esa distribución. En
+la muestra de [Broido y Clauset](https://doi.org/10.1038/s41467-019-08746-5),
+solo alrededor del 4 % de las redes alcanzó el nivel más fuerte de
+evidencia. Para el mesh, fijar primero qué son nodo y enlace, construir el
+grafo a partir de conexiones observadas y comparar el ajuste de ley de
+potencia con alternativas como la lognormal. Que varios nodos respondan a
+un chequeo de salud no establece qué enlaces hay entre ellos ni demuestra
+robustez ante fallos.
+
 ρ(x) > 0.
