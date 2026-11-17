@@ -63,7 +63,7 @@
     "G-NUEVA: producción ALMA (FranBot v8.1)": 10,
     "G-NUEVA: pilares ampliados 7-19 (CHK-274) integrados, revision canonica pendiente": 15
   },
-  "hash_real": 1211,
+  "hash_real": 1232,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1290,6 +1290,21 @@
     "C-1227",
     "C-1228",
     "C-1229",
-    "C-1230"
+    "C-1230",
+    "C-1231",
+    "C-1232",
+    "C-1233",
+    "C-1234",
+    "C-1235",
+    "C-1236",
+    "C-1237",
+    "C-1238",
+    "C-1239",
+    "C-1240",
+    "C-1241",
+    "C-1242",
+    "C-1243",
+    "C-1244",
+    "C-1245"
   ]
 }
