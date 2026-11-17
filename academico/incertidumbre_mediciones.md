@@ -1,4 +1,4 @@
-# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-92
+# ANEXO DE INCERTIDUMBRE DEL DATASET — MEDICIONES M-56..M-95
 
 - **Creado:** 2026-11-14, por decisión N-16 (opción C, anexo de incertidumbre).
 - **Decisión:** N-16, aplicada en ronda 15 F1 bajo el régimen 2026-11-14 01:43 -05 (las decisiones se aplican automáticamente). Paquete: `ronda_13/ejecucion_f7/propuesta_inscripcion_dataset_r13.md` (sha `707f98c1…`, DC-R13-F7-01, opción C recomendada). Registro de la decisión: `ronda_15/ejecucion_f1/decision_n16_r15.md` / `.json`.
@@ -307,6 +307,32 @@
 - **Cara:** d09 L20 (seguimiento del vivo; la cara no se cierra con esta medición — el cero persiste sin mecanismo).
 
 
+## M-93 — CONFIRMA (ciclo ALMA, 2026-11-16) — ítem añadido por N-39
+
+- **Valor:** Reproducción independiente del censo M-91 por el kit de expansión savia V152. `medir_savia.py` reproduce sobre los payloads en disco: 101 payloads r23, 55 vacíos, V152 248.376 ×16 (9 full + 7 compactos), 366.733 ×1, 247.881 ×1; en la ventana r22 247.881 aparece 0 veces; identidad savia = mesh.totalSize en 18/18 r23 + 14/14 r22. Test 43/43, exit 0.
+- **Falsador:** El test falla si cualquier cifra del censo difiere de M-91 (declarado en el kit: si un número no reproduce, el test FALLA y el kit está roto, no el dato). **Veredicto:** CONFIRMA.
+- **Fuente:** alma/kits/kit_savia_v152.md (+ alma/kits/test_kit.py + alma/kits/censo_r23.json + alma/kits/censo_r22.json). **sha:** `2ce3426c48eebfede38c304130a1d39503c64f4a0bd24216ca33cebdbde66924`.
+- **¿Da fila?** NO (anotación): no entrega un D_f de nodo. No se inscribe en el CSV.
+- **Hallazgo del mapa (medido por el kit, no en M-91):** savia V152 = `mesh.totalSize` (18/18 r23 + 14/14 r22); el tercer valor es el documento canónico a 301 B en vez de 796 B, y `nutrientes` también covaría por valor. Lo que sigue NO_SÉ: por qué el documento midió 301 B.
+- **Cara:** observabilidad — claim asociado C-1219.
+
+## M-94 — DIFERENCIA (ciclo ALMA, 2026-11-16) — ítem añadido por N-39
+
+- **Valor:** Censo fresco de savia V152 en la ventana siguiente (cosecha del ciclo ALMA, 71 revisiones). Ventana 2026-11-16T19:47:31Z → 2026-11-17T00:17:35Z, 71 payloads, 40 vacíos de savia. V152: 248.376 ×9 (8 full + 1 compacto), 248.372 ×1 (compacto 55.973 B, 2026-11-16T23:26:43Z — cuarto valor, nuevo), 366.733 ×1 (compacto 55.980 B, persiste); 247.881 en 0. El conjunto de valores CAMBIÓ respecto a M-91 (247.881 sustituido por 248.372) mientras el patrón persiste (mayoría + valores raros divergentes; 366.733 reaparece). Reproducido por mí con medir_savia.py: censo idéntico al del frente de cosecha. CORR-KIT-FILES0: el mapa del kit decía que mesh.files[0] es siempre el documento canónico; en el payload 248.372 files[0] es un snapshot V151 y el canónico está en índice 1 (796 B, normal) — la divergencia de 248.372 es un solo archivo V151 (263 B frente a 267 B, −4 B), no el canónico.
+- **Falsador:** Expectativa de M-91: el conjunto de tres valores (248.376 / 366.733 / 247.881) persiste como conjunto. El conjunto cambió (247.881 en 0, 248.372 nuevo) → DIFERENCIA; el patrón de divergencia estructural no se refuta (366.733 persiste, nuevo valor raro aparece). **Veredicto:** DIFERENCIA.
+- **Fuente:** alma/ciclo/censo_kit.json (+ alma/ciclo/cosecha/ (71 payloads) + alma/kits/medir_savia.py (reproducción independiente, censo idéntico)). **sha:** `f3c80897547c63869ea4c2cb287fb09f3b714e8133e95c23f050fd49ce9f66b1`.
+- **¿Da fila?** NO (anotación): no entrega un D_f de nodo. No se inscribe en el CSV.
+- **Corrección CORR-KIT-FILES0:** el mapa del kit (§II) decía que `mesh.files[0]` es siempre el documento canónico de heartbeat; en el payload fresco 248.372 `files[0]` es un snapshot V151 (263 B) y el canónico está en índice 1 (796 B, normal). La identidad savia = `mesh.totalSize` sigue cumpliéndose; la divergencia de 248.372 es la sustitución de un solo archivo V151 (−4 B).
+- **Cara:** observabilidad — claim asociado C-1227.
+
+## M-95 — NO_CONFIRMA (ciclo ALMA, 2026-11-16) — ítem añadido por N-39
+
+- **Valor:** Intervalo autocura 16→17 = 649,08 min, fuera de la banda ~7,5 h. Autocura run 17 (2026-11-16T20:26:02Z, success, head fc03539a); run 16 2026-11-16T09:36:57Z; intervalo 16→17 = 649,08 min (~10 h 49 min), fuera de la banda ~7,5 h [447,77, 465,70] de M-90 (r23, intervalos 447,77 / 465,70 / 455,13). La cadencia ~7,5 h no se sostiene más allá de una medición.
+- **Falsador:** Heredado de M-90: la banda ~7,5 h [447,77, 465,70] de los intervalos 11→12, 12→13 y 15→16. Un intervalo fuera de la banda es NO_CONFIRMA de la cadencia. **Veredicto:** NO_CONFIRMA.
+- **Fuente:** alma/sondeo_vivo.md (+ miu-ecosistema, Actions API (runs 16 y 17)). **sha:** `8f12a61890638eb7e76ed31eb9cc29b8b417e6776c8f20d909a129b32eb3e77e`.
+- **¿Da fila?** NO (anotación): no entrega un D_f de nodo. No se inscribe en el CSV.
+- **Cara:** observabilidad — claim asociado C-1225.
+
 ## Resumen
 
 | Med. | Veredicto | Valor | Fila | Cara |
@@ -339,8 +365,11 @@
 | M-90 | CONFIRMA | autocura 11→16, intervalo 15→16 = 455,13 min; escalón ~4,5 h roto, vuelta a ~7,5 h; cociente 1,819 sin cambio | NO (anotación) | observabilidad |
 | M-91 | CONFIRMA | savia V152 en 3 valores: 248.376 ×16, 366.733 ×1 (persiste), 247.881 ×1 (nuevo, full); variante no función del tipo | NO (anotación) | observabilidad |
 | M-92 | CONFIRMA | flow run 149, 0,0%, 0 eventos, 15.ª ronda; intervalos 145→149 [311,12, 242,35, 412,08, 613,77] min | NO (anotación) | d09 L20 |
+| M-93 | CONFIRMA | reproducción del censo M-91 por el kit, test 43/43; identidad savia = mesh.totalSize 18/18 + 14/14 | NO (anotación) | observabilidad |
+| M-94 | DIFERENCIA | censo fresco 71 revs: 248.376 ×9, 248.372 ×1 (nuevo), 366.733 ×1; 247.881 en 0; conjunto cambió, patrón persiste | NO (anotación) | observabilidad |
+| M-95 | NO_CONFIRMA | intervalo autocura 16→17 = 649,08 min, fuera de la banda ~7,5 h [447,77, 465,70]; cadencia no se sostiene | NO (anotación) | observabilidad |
 
-**Tally:** CONFIRMA 17 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83, M-85, M-86, M-90, M-91, M-92) · NO_CONFIRMA 8 (M-57, M-61, M-64, M-65, M-69, M-76, M-84, M-87) · DIFERENCIA 1 (M-56) · NO_SÉ 1 (M-58) · REGULAR 1 (M-89). Ítems: 28 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83, M-84, M-85, M-86, M-87, M-89, M-90, M-91, M-92). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
+**Tally:** CONFIRMA 18 (M-59, M-60, M-62, M-63, M-66, M-72, M-75, M-78, M-79, M-80, M-82, M-83, M-85, M-86, M-90, M-91, M-92, M-93) · NO_CONFIRMA 9 (M-57, M-61, M-64, M-65, M-69, M-76, M-84, M-87, M-95) · DIFERENCIA 2 (M-56, M-94) · NO_SÉ 1 (M-58) · REGULAR 1 (M-89). Ítems: 31 (M-56..M-72, M-75, M-76, M-78, M-79, M-80, M-82, M-83, M-84, M-85, M-86, M-87, M-89, M-90, M-91, M-92, M-93, M-94, M-95). Filas nuevas: 0. CSV intacto: 30 filas + cabecera, sha `0852d58f…`.
 
 **Ítems futuros:** las mediciones que tampoco den fila se añaden a este anexo por la misma vía (F7 prepara el ítem, F1 lo añade). Una medición que entregue un D_f de nodo inscribe su fila en el CSV por decisión propia, no por este anexo.
 
