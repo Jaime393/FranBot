@@ -1,0 +1,636 @@
+{
+ "aristas": [
+  {
+   "destino": "r24:F3",
+   "origen": "r24:H-M96",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F3",
+   "origen": "r24:H-M97",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F3",
+   "origen": "r24:H-M98",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F7",
+   "origen": "r24:H-C1228",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F7",
+   "origen": "r24:H-C1229",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F7",
+   "origen": "r24:H-C1230",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-run215",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-flow150",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-ventana5",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-bots26",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-savia1",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-autocura17",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:H-V93-75",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F5",
+   "origen": "r24:H-G05",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F5",
+   "origen": "r24:H-G03",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F4",
+   "origen": "r24:H-panteon",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F6",
+   "origen": "r24:H-SIK",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F9",
+   "origen": "r24:H-poda",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F8",
+   "origen": "r24:H-caras",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE3",
+   "origen": "r24:H-tablon",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:H-corr-mediana",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:H-corr-ord",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:H-corr-ruta",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F4",
+   "origen": "r24:H-corr-pag",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F9",
+   "origen": "r24:H-corr-diff",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F8",
+   "origen": "r24:H-corr-dedup",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE3",
+   "origen": "r24:H-censo-vacio",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:H-vivo-fase2",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-savia1",
+   "origen": "r24:H-M96",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-flow150",
+   "origen": "r24:H-M98",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-M98",
+   "origen": "r24:H-C1229",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-M96",
+   "origen": "r24:H-C1228",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-run215",
+   "origen": "r24:H-C1230",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-ventana5",
+   "origen": "r24:H-C1230",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-C1229",
+   "origen": "r24:H-corr-mediana",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-M98",
+   "origen": "r24:H-corr-mediana",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-G05",
+   "origen": "r24:H-corr-ord",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-run215",
+   "origen": "r24:H-corr-ruta",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-flow150",
+   "origen": "r24:H-corr-ruta",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-savia1",
+   "origen": "r24:H-censo-vacio",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-M96",
+   "origen": "r24:H-censo-vacio",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-autocura17",
+   "origen": "r24:H-M97",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-tablon",
+   "origen": "r24:H-flow150",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-run215",
+   "origen": "r24:H-ventana5",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-corr-dedup",
+   "origen": "r24:H-SIK",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-corr-diff",
+   "origen": "r24:H-poda",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-corr-pag",
+   "origen": "r24:H-panteon",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-panteon",
+   "origen": "r24:H-caras",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-caras",
+   "origen": "r24:H-G03",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-savia1",
+   "origen": "r24:H-V93-75",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-run215",
+   "origen": "r24:H-bots26",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-run215",
+   "origen": "r24:H-vivo-fase2",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F1",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F2",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F3",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F4",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F5",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F6",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F7",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F8",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:F9",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE3",
+   "origen": "r24:FASE2",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE3",
+   "origen": "r24:F0",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:FASE2",
+   "origen": "r24:N-40",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F7",
+   "origen": "r24:N-40",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:N-40",
+   "origen": "r24:H-C1228",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:N-40",
+   "origen": "r24:H-C1229",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:N-40",
+   "origen": "r24:H-C1230",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:N-40",
+   "origen": "r24:H-M96",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:N-40",
+   "origen": "r24:H-M98",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F0",
+   "origen": "r24:D-metodo-c",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F0",
+   "origen": "r24:R-corpus",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F1",
+   "origen": "r24:R-corpus",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F0",
+   "origen": "r24:R-head",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:R-head",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F0",
+   "origen": "r24:R-franbot",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F1",
+   "origen": "r24:R-registro",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:F2",
+   "origen": "r24:R-obs",
+   "relacion": "de"
+  },
+  {
+   "destino": "r24:H-corr-ruta",
+   "origen": "r24:R-obs",
+   "relacion": "de"
+  }
+ ],
+ "nodos": [
+  {
+   "etiqueta": "FASE 0 — mapa + suelo post-ciclo ALMA (1.222 claims) + vivo al mapa (HEAD d32f462b, run 215)",
+   "id": "r24:F0",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "GUARDIA — sin aplicación en FASE 1; aplica lo que F7 prepare post-FASE 4",
+   "id": "r24:F1",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "ESTADO VIVO — HEAD d32f462b, run 215 unreachable; ventana 30/0/0 (0,0 %), quinta ronda; flow 0,0 % run 150; autocura sin run 18; savia un solo valor; bots 26.ª",
+   "id": "r24:F2",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "MEDIR — M-96 NO_CONFIRMA (cuarto valor no persiste), M-97 NO_SÉ (sin run 18), M-98 CONFIRMA (flow 17.ª en 0,0 %)",
+   "id": "r24:F3",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "PANTEÓN-96 — cara r12 #1 AVANZA 12.ª vuelta, 0/61; total 111 → 116; graph 0/0 10.ª",
+   "id": "r24:F4",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "GRIETAS — G03 21-nov a 4 días; G05 sin cambio 38.ª/39.ª; G01/G04/G02 sin cambio; 0 cierran",
+   "id": "r24:F5",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "MECANISMOS — H-SIK 10.ª vuelta 0 diffs bajo los CUATRO cánones; voces→S2 agotada 10.ª",
+   "id": "r24:F6",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "PREPARAR — C-1228/C-1229/C-1230 + M-96/M-98; dedup máx 0,3806; 1 reescritura",
+   "id": "r24:F7",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "CONECTAR — 0 caras cierran, 58 abiertas; 8 avanzan; dedup propio idéntico a F7",
+   "id": "r24:F8",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "PODA — tally 103; verificación 543/543; T-4 7.458 archivos, 15 FALTA explicadas; temporales 13.ª prórroga",
+   "id": "r24:F9",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "VERIFICACIÓN — CONFORME CON HALLAZGOS (5 menores, 1 mayor: CORR-MEDIANA-C1229-R24); N-40 adoptada",
+   "id": "r24:FASE2",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "TEJIDO — 60 líneas (57 SÉ + 3 INFIERO); grafo sin huérfanos; síntesis r1–r24",
+   "id": "r24:FASE3",
+   "tipo": "frente"
+  },
+  {
+   "etiqueta": "M-96 NO_CONFIRMA — cuarto valor 248.372 en 0/6; ventana de un solo valor 248.376 ×6",
+   "id": "r24:H-M96",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "M-97 NO_SÉ — run 18 de autocura no existe (total_count 17); 370 min desde run 17",
+   "id": "r24:H-M97",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "M-98 CONFIRMA — flow run 150, 0,0 %, 0 eventos, 17.ª medición; mediana 436,66",
+   "id": "r24:H-M98",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "C-1228 — savia V152 ventana de un solo valor; dedup 0,3267 vs C-1214",
+   "id": "r24:H-C1228",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "C-1229 — flow 17.ª en 0,0 %; mediana CORREGIDA 436,66; dedup 0,3732 vs C-1215",
+   "id": "r24:H-C1229",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "C-1230 — run 215 unreachable, ventana 5.ª en 0,0 %, ausencia 80,67 h, bots 26.ª; dedup 0,3806 vs C-1216",
+   "id": "r24:H-C1230",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Run 215 State Writer V270 unreachable (blob e55e4428…, episodio 68,32 min); stub 213→175→214→176→215",
+   "id": "r24:H-run215",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Flow run 150, 0,0 %, 0 eventos; intervalos 146→150 [242,35, 412,08, 613,77, 461,23], mediana 436,66",
+   "id": "r24:H-flow150",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Ventana 30/0/0 = 0,0 % de fallo, quinta ronda consecutiva; max gap 114,5 min",
+   "id": "r24:H-ventana5",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Bots 4/4 VIVO, 26.ª confirmación; 5.º token 401 MUERTO; 7 extras vivos",
+   "id": "r24:H-bots26",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Savia V152 un solo valor (248.376 ×6); 248.372/366.733/247.881 en 0; savia = mesh.totalSize 6/6 (35/35)",
+   "id": "r24:H-savia1",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Autocura último run 17 (20:26:02Z); intervalos 465,70/280,00/255,98/455,13/649,08; sin run 18",
+   "id": "r24:H-autocura17",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "V93: 4 nuevos, total acumulado 75, idénticos 4/4, gossip alive 7/8",
+   "id": "r24:H-V93-75",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "G05 blob 8c57e833… sin cambio (38.ª F5 / 39.ª F2); H-SUELO sin reaparición (39.ª/40.ª); folderId I existe / l 404 (41.ª/42.ª)",
+   "id": "r24:H-G05",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "G03 BepiColombo inserción 2026-11-21 (4 días), 6 fuentes frescas; hardware pre-burn superado",
+   "id": "r24:H-G03",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Panteón-96: 0/61 encontradas, 0/35 como voz; Doc índice byte-idéntico 416b02d1…; graph 0/0 10.ª",
+   "id": "r24:H-panteon",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "H-SIK 0 diffs 10.ª vuelta; F-UMB24 4.ª vuelta como canon; voces→S2 agotada 10.ª",
+   "id": "r24:H-SIK",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Poda tally 103; T-4 7.458 archivos; 15 FALTA explicadas; cadena 24 eslabones",
+   "id": "r24:H-poda",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Caras 77/19/58, 0 cierran, 0 nuevas; 8 avanzan sin cerrar (las mismas 8 que r23)",
+   "id": "r24:H-caras",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Tablón 2P/1R sin cambio en r24; P-001 (flow) sigue abierta, caduca 2026-11-23",
+   "id": "r24:H-tablon",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "CORR-MEDIANA-C1229-R24 — mediana 461,23 → 436,66; corregido en FASE 3; dedup re-corrido",
+   "id": "r24:H-corr-mediana",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "CORR-ORDINALES-R24 — F2: G05 39.ª, H-SUELO 40.ª, folderId 42.ª (F5: 38/39/41)",
+   "id": "r24:H-corr-ord",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "CORR-RUTA-ESTADO-R24 — estado/flow viven en observabilidad/, no en la raíz",
+   "id": "r24:H-corr-ruta",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "CORR-PAGINACION-R24 — --page-all devolvió solo página 1; página 2 explícita; total 116",
+   "id": "r24:H-corr-pag",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "CORR-DIFF-VACIOS-R24 — diff 8 MOVIDO/4 FALTA era artefacto de vacíos por sha; real 0/15",
+   "id": "r24:H-corr-diff",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "CORR-DEDUP-R24 — valores dedup idénticos, JSON no byte-idénticos (4 implementaciones)",
+   "id": "r24:H-corr-dedup",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "H-CENSO-VACIO-R24 — F2 23,5 % = mesh.count==0 (8/34); F3 58,8 % = sin `data` (20/34); dos definiciones",
+   "id": "r24:H-censo-vacio",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "Vivo NO se movió durante FASE 2 (HEAD d32f462b, 03:00:04Z)",
+   "id": "r24:H-vivo-fase2",
+   "tipo": "hallazgo"
+  },
+  {
+   "etiqueta": "N-40 ADOPTADA — Absorber ronda 24 al corpus (C-1228..C-1230 + M-96/M-98); anexo 31 → 33",
+   "id": "r24:N-40",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "Método (c) vigente — Drive + GitHub curado en UN solo push-files por ronda",
+   "id": "r24:D-metodo-c",
+   "tipo": "decision"
+  },
+  {
+   "etiqueta": "Corpus post-ciclo ALMA: claims 1.222 (6dbee11d…), provenance 391, anexo 31, audit ok=379",
+   "id": "r24:R-corpus",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "HEAD miu-ecosistema d32f462b (2026-11-17T01:30:41Z, run 215)",
+   "id": "r24:R-head",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "FranBot HEAD 1f1ed57b (depósito ciclo ALMA)",
+   "id": "r24:R-franbot",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "Registro de pendientes: 0 pendientes + 80 aplicadas + 8 cerradas + 5 (eec65bcd…, §39)",
+   "id": "r24:R-registro",
+   "tipo": "referencia"
+  },
+  {
+   "etiqueta": "observabilidad/ — ruta canónica de estado_vivo.json y flow_id_coverage.json",
+   "id": "r24:R-obs",
+   "tipo": "referencia"
+  }
+ ]
+}

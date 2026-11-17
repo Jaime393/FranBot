@@ -1,0 +1,202 @@
+{
+  "medicion": "M-97",
+  "dominio": "Autocura 17→18: ¿existe run 18? ¿cadencia? (metadatos de GitHub Actions, repo Jaime393/miu-ecosistema, workflow miu-autocura id 417018123)",
+  "fuente": "GitHub Actions API pública (REST sin autenticar): lista de runs del workflow miu-autocura (per_page=20, total_count 17). Copia local en datos/autocura_runs_2026-11-17.json.",
+  "url": "https://api.github.com/repos/Jaime393/miu-ecosistema/actions/workflows/417018123/runs?per_page=20 (copia local en datos/autocura_runs_2026-11-17.json, sha256 en este JSON)",
+  "sha256_dato": "03c555ed9dfc138a5efbd3105429d9d01b7c7cf47ac96b9a1fc16de664745179",
+  "metodo": "Protocolo declarado antes de correr (declaracion_falsadores_r24.md, 2026-11-17T02:34:08Z): solo metadatos de la API pública (nombres/IDs de workflows, runs, commits); NUNCA el contenido del archivo YAML del workflow. Por cada run 11–18: run_number, id, created_at, updated_at, conclusion, duración (updated−created), head_sha, mensaje y timestamp del head_commit, evento. Intervalos entre created_at consecutivos en minutos; banda de falsación [400, 700] min.",
+  "parametros": {
+    "workflow_id": 417018123,
+    "workflow_nombre": "miu-autocura",
+    "total_runs_workflow": 17,
+    "run_18_existe": false,
+    "runs_tabla": [
+      {
+        "run_number": 11,
+        "id": 43665102127,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T01:52:22Z",
+        "updated_at": "2026-11-15T01:52:31Z",
+        "duracion_s": 9.0,
+        "head_sha": "e758ec86aaad8837ff1d38c17c8c2ac34fed5846",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T01:10Z run 208",
+        "head_commit_timestamp": "2026-11-15T01:10:19Z"
+      },
+      {
+        "run_number": 12,
+        "id": 43698746487,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T09:20:08Z",
+        "updated_at": "2026-11-15T09:20:17Z",
+        "duracion_s": 9.0,
+        "head_sha": "138ee56b9438970f2a4aa0d0b2874a51f86ff430",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T08:08Z run 209",
+        "head_commit_timestamp": "2026-11-15T08:08:13Z"
+      },
+      {
+        "run_number": 13,
+        "id": 43739159627,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T17:05:50Z",
+        "updated_at": "2026-11-15T17:06:00Z",
+        "duracion_s": 10.0,
+        "head_sha": "85c3d72d91a4ff16d5e312add76d0b80277f6912",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T15:45Z run 210",
+        "head_commit_timestamp": "2026-11-15T15:45:46Z"
+      },
+      {
+        "run_number": 14,
+        "id": 43765476720,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-15T21:45:50Z",
+        "updated_at": "2026-11-15T21:46:02Z",
+        "duracion_s": 12.0,
+        "head_sha": "35d30ec2facac04e6eef69556ce9169465807af0",
+        "head_commit_mensaje": "state: auto V270 2026-11-15T20:46Z run 211",
+        "head_commit_timestamp": "2026-11-15T20:46:29Z"
+      },
+      {
+        "run_number": 15,
+        "id": 43789672353,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T02:01:49Z",
+        "updated_at": "2026-11-16T02:01:59Z",
+        "duracion_s": 10.0,
+        "head_sha": "c331af1e2293b6244249cd72f1b09d3cce8f47f8",
+        "head_commit_mensaje": "state: auto V270 2026-11-16T00:42Z run 212",
+        "head_commit_timestamp": "2026-11-16T00:42:20Z"
+      },
+      {
+        "run_number": 16,
+        "id": 43841322776,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T09:36:57Z",
+        "updated_at": "2026-11-16T09:37:07Z",
+        "duracion_s": 10.0,
+        "head_sha": "c9c926d9a5d00316dcbcd416c3e00e506d2dc6b2",
+        "head_commit_mensaje": "state: auto V270 2026-11-16T07:36Z run 213",
+        "head_commit_timestamp": "2026-11-16T07:36:49Z"
+      },
+      {
+        "run_number": 17,
+        "id": 43949721207,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "created_at": "2026-11-16T20:26:02Z",
+        "updated_at": "2026-11-16T20:26:12Z",
+        "duracion_s": 10.0,
+        "head_sha": "fc03539a5c01f8e9e241623a4c523581e356d8b7",
+        "head_commit_mensaje": "state: auto V270 2026-11-16T17:53Z run 214",
+        "head_commit_timestamp": "2026-11-16T17:53:15Z"
+      }
+    ],
+    "intervalos_min": [
+      {
+        "de_run": 11,
+        "a_run": 12,
+        "intervalo_min": 447.77,
+        "intervalo_h": 7.463
+      },
+      {
+        "de_run": 12,
+        "a_run": 13,
+        "intervalo_min": 465.7,
+        "intervalo_h": 7.762
+      },
+      {
+        "de_run": 13,
+        "a_run": 14,
+        "intervalo_min": 280.0,
+        "intervalo_h": 4.667
+      },
+      {
+        "de_run": 14,
+        "a_run": 15,
+        "intervalo_min": 255.98,
+        "intervalo_h": 4.266
+      },
+      {
+        "de_run": 15,
+        "a_run": 16,
+        "intervalo_min": 455.13,
+        "intervalo_h": 7.585
+      },
+      {
+        "de_run": 16,
+        "a_run": 17,
+        "intervalo_min": 649.08,
+        "intervalo_h": 10.818
+      }
+    ],
+    "intervalo_minimo_min": 255.98,
+    "intervalo_maximo_min": 649.08,
+    "intervalo_mediana_min": 455.13,
+    "cociente_max_min_intervalos": 2.536,
+    "intervalo_17_a_18_min": null,
+    "banda_falsacion_min": [
+      400,
+      700
+    ],
+    "banda_75h_min": [
+      447.77,
+      465.7
+    ],
+    "intervalo_16_a_17_min": 649.08,
+    "ultimo_run_medido": 17,
+    "ultimo_run_created_at": "2026-11-16T20:26:02Z",
+    "minutos_desde_run17_al_medir": 370.0,
+    "conclusiones": [
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success"
+    ],
+    "eventos": [
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule",
+      "schedule"
+    ],
+    "duraciones_s": [
+      9.0,
+      9.0,
+      10.0,
+      12.0,
+      10.0,
+      10.0,
+      10.0
+    ],
+    "efecto_interior_visible": false
+  },
+  "valor": null,
+  "error": null,
+  "limites_validez": "La API pública no da los logs (403 en ciclos anteriores); lo que la autocura hizo dentro de cada run no es visible desde el sandbox, solo sus metadatos y el commit sobre el que corrió. La banda de falsación [400, 700] min es una regla declarada sobre la cadencia observada (racimo ~7,5 h y 649,08 min), no un umbral de primeros principios. Que el run 18 no exista al medir no dice que no vaya a existir: la cadencia ~7,5–10,8 h deja la ventana abierta.",
+  "criterio_falsacion": "CONFIRMA si el run 18 existe Y el intervalo 17→18 cae DENTRO de [400, 700] min (cadencia no rota); NO_CONFIRMA si el intervalo 17→18 cae FUERA de [400, 700] min (cadencia rota de nuevo); NO_SÉ si el run 18 no existe todavía al consultar (se registra el último run medido y el tiempo transcurrido desde el run 17). Declarado en declaracion_falsadores_r24.md (2026-11-17T02:34:08Z) antes de correr.",
+  "veredicto": "NO_SÉ",
+  "estado_epistemico": "NO_SÉ",
+  "fecha": "2026-11-17",
+  "extra": {
+    "lectura": "El run 18 NO existe todavía al medir (total_count 17; último run 17, 2026-11-16T20:26:02Z, success, head fc03539a). Han pasado 370.00 min desde el run 17 — dentro del rango de cadencia observada (255,98–649,08 min): la ausencia es compatible con la cadencia, no es una rotura. NO_SÉ por bloqueo de medición, no por refutación.",
+    "serie": "Intervalos 11→17: [447.77, 465.7, 280.0, 255.98, 455.13, 649.08] min (mín 255.98, máx 649.08, mediana 455.13); cociente máx/mín 2.536. El intervalo 16→17 = 649,08 min sigue siendo el mayor de la serie; la cadencia se alargó tras el run 16 y no se ha medido un intervalo posterior.",
+    "verificacion_independiente": "Ver verificar_m96_m97_m98.py (re-cómputo desde la copia local por otro camino de código)."
+  }
+}

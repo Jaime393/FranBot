@@ -1,0 +1,361 @@
+{
+ "ronda": 24,
+ "frente": "F9 PODA",
+ "fecha": "2026-11-17",
+ "medicion": "2026-11-17T02:45-02:52Z",
+ "regla": "SOLO DOCUMENTO — nada se borro, nada se movio, nada se elimino",
+ "corpus_a_la_medicion": {
+  "claims_jsonl_lineas": 1222,
+  "claims_jsonl_sha256": "6dbee11d8ac1b5cff2f56a871f1df27a2c2b7a306648e21a5fb76d0d5bd7a30e",
+  "provenance_lineas": 393,
+  "provenance_sha256": "07dfdd0f08c8bbe6046f54568970dde15a37d3dd3cf418793a4fc500db64c408",
+  "claims_resumen_sha256": "06990609942aa5f6c34573e92896296f78e0414815a88c5d57e569816160341c",
+  "confirmaciones_filas": 294,
+  "huecos_filas": 139,
+  "dataset_filas": 30,
+  "anexo_incertidumbre_items": 31,
+  "anexo_incertidumbre_sha256": "8cc6dd9d36c6f3f99f81e671c266c56f36bacc0b42096b79297757c77627b92b"
+ },
+ "tally": {
+  "total_entradas": 103,
+  "filas_tabla": 102,
+  "nota_conteo": "102 filas para 103 entradas: el padre P-15 cuenta como RESUELTO sin fila propia (convencion CORR-TALLY-R15)",
+  "PODAR": 12,
+  "PODAR_CONDICIONADO": 7,
+  "MOVER": 1,
+  "CONSERVAR": 45,
+  "CONSERVAR_TEMPORAL": 21,
+  "RESUELTO": 2,
+  "NO_CANDIDATO": 15
+ },
+ "ahorro_si_se_ejecutaran": "~509 MB locales (sin cambio respecto a r23: ninguna PODAR nueva en r24; P-75 sigue siendo la ultima poda nueva, desde r10)",
+ "temporales": {
+  "ids": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63",
+   "P-66",
+   "P-69",
+   "P-72",
+   "P-76",
+   "P-77"
+  ],
+  "nuevos_temporales": [
+   "P-76",
+   "P-77"
+  ],
+  "retirados_r19": [],
+  "veces_prorroga": {
+   "decimotercera": [
+    "P-27",
+    "P-28",
+    "P-29b",
+    "P-31a",
+    "P-35",
+    "P-37",
+    "P-38",
+    "P-41",
+    "P-44"
+   ],
+   "novena_reevaluacion": [
+    "P-47",
+    "P-48"
+   ],
+   "octava_reevaluacion": [
+    "P-51"
+   ],
+   "septima_reevaluacion": [
+    "P-54",
+    "P-57"
+   ],
+   "sexta_reevaluacion": [
+    "P-60"
+   ],
+   "quinta_reevaluacion": [
+    "P-63"
+   ],
+   "cuarta_reevaluacion": [
+    "P-66"
+   ],
+   "tercera_reevaluacion": [
+    "P-69"
+   ],
+   "segunda_reevaluacion": [
+    "P-72"
+   ],
+   "primera": [
+    "P-76",
+    "P-77"
+   ]
+  },
+  "nuevo_horizonte": "FASE 4 r24 + FASE 2 r24; re-evaluar en r25",
+  "cadena_reversion": {
+   "eslabones": 24,
+   "bytes": 31217838,
+   "nota": "22 de r23 (28.254.576 B) + P-76 (1.473.568 B) + P-77 (1.489.694 B)"
+  },
+  "condiciones_retiro_r12": {
+   "copias_drive_reverificadas": "CUMPLIDA (sostenida; spot-check r24 4/4 OK, muestra rotada)",
+   "deposito_r23_congelado": "Cumplida",
+   "condiciones_p15_reapuntadas": "NO cumplida",
+   "puerta": "2 de 3 (solo falta autorizacion)"
+  },
+  "prorrogados_r24": [
+   "P-27",
+   "P-28",
+   "P-29b",
+   "P-31a",
+   "P-35",
+   "P-37",
+   "P-38",
+   "P-41",
+   "P-44",
+   "P-47",
+   "P-48",
+   "P-51",
+   "P-54",
+   "P-57",
+   "P-60",
+   "P-63",
+   "P-66",
+   "P-69",
+   "P-72"
+  ]
+ },
+ "condicion_1_medicion": {
+  "script": "_spot_drive_r24.py",
+  "salida": "_spot_drive_r24.json",
+  "fecha": "2026-11-17T02:47Z",
+  "metodo": "Re-verificacion por descarga de 4 copias Drive de temporales (3 byte-identicas + 1 JSON por md5+contenido), muestra ROTADA respecto a r23 (P-27/P-35/P-48/P-47); descargas en el workspace, nunca en /tmp.",
+  "por_temporal": {
+   "P-28": "OK_BYTE_IDENTICO",
+   "P-38": "OK_BYTE_IDENTICO",
+   "P-41": "OK_BYTE_IDENTICO",
+   "P-44": "OK_MD5_Y_CONTENIDO"
+  },
+  "resultado_final": {
+   "n": 4,
+   "ok": 4,
+   "diferente": 0
+  },
+  "spot_check_r24": {
+   "n": 4,
+   "ok": 4
+  },
+  "sin_copia_grep": {
+   "P-76": {
+    "menciones_respaldo_pre_absorcion": 0,
+    "estado": "SIN_COPIA"
+   },
+   "P-77": {
+    "menciones_respaldo_pre_absorcion": 0,
+    "estado": "SIN_COPIA"
+   }
+  }
+ },
+ "p32": {
+  "es_clase_3": false,
+  "fundamento_conservar": "Reversion de D-07 + historia citada en motivo (CORR-P32-B-R15)",
+  "hash_campo_claims_vivos": 0,
+  "ocurrencias_totales": 14,
+  "claims_con_ocurrencias": 5,
+  "git_show_head_sha256": "a30d69e8bd3e9327",
+  "git_show_head_bytes": 19987,
+  "git_show_head_byte_identico_a_respaldo": true,
+  "c1213_c1216_ocurrencias": 0,
+  "c1217_c1227_ocurrencias": 0,
+  "absorbidos_r23_ocurrencias": 0,
+  "absorbidos_ciclo_ocurrencias": 0
+ },
+ "criba": {
+  "provenance_lineas": 393,
+  "provenance_sha256": "07dfdd0f08c8bbe6046f54568970dde15a37d3dd3cf418793a4fc500db64c408",
+  "rutas_0_ocurrencias": 78,
+  "hashes_0_ocurrencias": 55,
+  "ocurrencias_vivas_conocidas": {
+   "5fdce82d": 1,
+   "8d15b724": 1,
+   "0cf743ca": 1,
+   "a30d69e8": 1,
+   "131409eb": 1
+  },
+  "cambio_recomendacion": "ninguno"
+ },
+ "nuevos_candidatos": {
+  "P-76": {
+   "ruta": "ronda_23/respaldo_pre_absorcion_r23/",
+   "archivos": 8,
+   "bytes": 1473568,
+   "veredicto": "CONSERVAR-TEMPORAL",
+   "manifiesto_sha256": "661c2b6a3dacf97890b838290559803799929de21678fb55df06a754a5cf393e",
+   "sin_copia_drive": true,
+   "checks_verificacion": 8
+  },
+  "P-77": {
+   "ruta": "ronda_23/respaldo_pre_absorcion_ciclo_alma/",
+   "archivos": 8,
+   "bytes": 1489694,
+   "veredicto": "CONSERVAR-TEMPORAL",
+   "manifiesto_sha256": "b27e6dcd0ee04add789e0ea9d74801636fe300d08f455c45a5e81a6f590e73d0",
+   "sin_copia_drive": true,
+   "checks_verificacion": 8
+  },
+  "P-78": {
+   "ruta": "ronda_23/fase4/",
+   "archivos": 48,
+   "bytes": 1204695,
+   "veredicto": "CONSERVAR",
+   "checks_verificacion": 48
+  },
+  "P-79": {
+   "ruta": "ronda_22/absorcion/",
+   "archivos": 13,
+   "bytes": 190434,
+   "veredicto": "CONSERVAR",
+   "checks_verificacion": 13
+  },
+  "P-80": {
+   "ruta": "ronda_23/absorcion/",
+   "archivos": 12,
+   "bytes": 114465,
+   "veredicto": "CONSERVAR",
+   "checks_verificacion": 12
+  },
+  "P-81": {
+   "ruta": "ronda_24/ejecucion_f2/cosecha_r24/",
+   "heartbeat": 34,
+   "raw": 0,
+   "bytes": 456956,
+   "veredicto": "NO CANDIDATO",
+   "checks_verificacion": 3
+  },
+  "P-82": {
+   "ruta": "alma/ciclo/cosecha/",
+   "heartbeat": 71,
+   "bytes": 931173,
+   "veredicto": "NO CANDIDATO",
+   "checks_verificacion": 1
+  },
+  "P-83": {
+   "ruta": "alma/ciclo/deposito/",
+   "archivos": 8,
+   "bytes": 41357,
+   "veredicto": "CONSERVAR",
+   "checks_verificacion": 8
+  },
+  "P-84": {
+   "ruta": "alma/ciclo/absorcion/",
+   "archivos": 15,
+   "bytes": 139613,
+   "veredicto": "CONSERVAR",
+   "checks_verificacion": 15
+  }
+ },
+ "correcciones": {
+  "CORR-CADENA-R24": "La cadena de reversion tiene 24 eslabones (22 de r23 + P-76 + P-77), 31.217.838 B.",
+  "CORR-COND1-R24": "Condicion 1 SOSTENIDA (spot-check 4/4 en r24, muestra rotada P-28/P-38/P-41/P-44); sin archivos nuevos con copia Drive que verificar (P-76/P-77 sin copia; FASE 4 r23 no deposito P-54/P-57/P-60/P-63/P-66/P-69/P-72).",
+  "CORR-P76-P77-SIN-COPIA": "P-76 (respaldo_pre_absorcion_r23/, 8 archivos, 1.473.568 B) y P-77 (respaldo_pre_absorcion_ciclo_alma/, 8 archivos, 1.489.694 B) no tienen copia Drive: 0 menciones en manifiesto y logs FASE 4 r23 y manifiesto y logs del deposito ciclo ALMA.",
+  "CORR-DIFF-VACIOS-R24": "El diff T-4 emparejaba archivos VACIOS (0 B) como MOVIDO por compartir el sha256 e3b0c442...: primera corrida r24 reporto 8 MOVIDO y 4 FALTA; corregido: 0 MOVIDO y 15 FALTA. Los vacios no tienen identidad por hash; faltas_reales se calcula por ruta.",
+  "CORR-ERR-R24": "Los 11 .err de F4 r23 desaparecieron entre el escaneo r23 (20:00:34Z 2026-11-16) y la medicion r24 (~02:4xZ 2026-11-17); los 4 .ndjson intermedios de F4 r23 tambien, borrados por la propia F4 r23 (sus .json finales sobreviven byte-identicos). FALTA 15 en el diff r24, las 15 explicadas, 0 perdida de datos.",
+  "CORR-PYC-R24": "Censo .pyc 19 -> 19: 0 nuevos, 0 faltan; variograma.pyc sigue ausente. Fuera del alcance T-4: 3 .pyc en alma/.",
+  "CORR-DUPLICADO-HB-R24": "Negativo: 0 duplicados de heartbeat en la raiz de ronda_24/; F2 r24 descarga solo en cosecha_r24/ (34 payloads). El patron P-75 no se repite en r24.",
+  "CORR-MANIFIESTO-HUECOS-R17": "Sigue vigente: el manifiesto fase4 r24 debe construirse DESPUES de subir, no antes, o reflejar la exclusion de huecos.jsonl. Con el metodo (c) decidido por el Jardinero (un solo push-files por ronda), el manifiesto es el unico registro de la subida.",
+  "NOTA-MANIFIESTO-DUPLICADO-DRIVE": "En Drive, ciclo_alma_2026-11-16/ contiene el manifiesto dos veces: obsoleto 13.711 B ID 1z2oWZLLkeqbvgtpnFrn2nq7f0Ea6L3Cf junto al vigente 13.746 B ID 1Z2tuDEjjbzwtGIAkBbM5ivToPTZ5bKjA. No es poda local (sin ID P); su borrado necesita orden del Jardinero.",
+  "P-73": "Verificado en r24 contra la linea base r23 (19/19 OK). P-78/P-79/P-80/P-83/P-84 se registran en r24 con su linea base; en r25 se verifican contra ella.",
+  "P-32": "Total preciso 14 ocurrencias en 5 claims, sin cambio en r24 (C-1213..C-1216 y C-1217..C-1227: 0 ocurrencias; paquetes absorbidos r23 y ciclo ALMA: 0 ocurrencias).",
+  "P-15h/P-16": "Conteo/existencia verificados en r24; sin re-verificacion individual; sin evidencia de cambio.",
+  "F1-r24": "Sin respaldo_pre_r24/ a la hora de este cierre (F1 en guardia, GUARDIA_EN_ESPERA, corpus identico al cierre del ciclo ALMA); si F1 aplica despues, su respaldo sera candidato en r25.",
+  "CORR-VERIFICACION-P24": "F2 r24 re-midio el corpus en 1.222 lineas, mismo valor que este frente. Convergencia, no correccion.",
+  "CORR-CONTADOR-R24": "F2 r24 conto 34 payloads nuevos de heartbeat (cosecha incremental desde el corte del ciclo ALMA); coincide con P-81. Sin duplicado en la raiz de ronda_24/ (0 archivos)."
+ },
+ "reglas": {
+  "REGLA-PODA-PROV-01": "Practica documentada, no canon adoptado",
+  "REGLA-PODA-PROV-02": "ADOPTADA (N-13, r15 F1): clase 3 con refinamiento de (a) — campo hash o motivo/nota"
+ },
+ "entregables": [
+  "poda_r24.md",
+  "poda_r24.json",
+  "inventario_t4_r24.md",
+  "diff_inventario_r24.md",
+  "manifiesto_tejido_r24.json",
+  "_verificacion_p24.json",
+  "_spot_drive_r24.json",
+  "_criba_r24.json"
+ ],
+ "verificacion_p01_p84": {
+  "script": "_verificar_p24.py",
+  "salida": "_verificacion_p24.json",
+  "fecha": "2026-11-17T02:45Z",
+  "resultado": "543/543 OK"
+ },
+ "t4_r24": {
+  "script": "_inventario_r24.py",
+  "salida": "manifiesto_tejido_r24.json",
+  "diff_script": "_diff_inventario_r24.py",
+  "diff_salida": "diff_inventario_r24.md",
+  "escaneo": "2026-11-17T02:46:07Z",
+  "archivos": 7458,
+  "bytes": 1672540931,
+  "errores_lectura": 0,
+  "base_r23": {
+   "archivos": 7203,
+   "escaneo": "2026-11-16T20:00:34Z"
+  },
+  "diff": {
+   "ok": 7184,
+   "cambio": 4,
+   "movido": 0,
+   "falta": 15,
+   "nuevo": 270
+  },
+  "cambio": [
+   "ronda_12/afirmaciones_pendientes.md",
+   "memoria/anexo-vi/claims.jsonl",
+   "memoria/anexo-vi/claims_resumen.json",
+   "memoria/anexo-vi/provenance.sha256"
+  ],
+  "nuevo_desglose": {
+   "ronda_23/absorcion": 12,
+   "ronda_23/ejecucion_f4": 2,
+   "ronda_23/ejecucion_f8": 8,
+   "ronda_23/ejecucion_f9": 12,
+   "ronda_23/fase3": 8,
+   "ronda_23/fase4": 48,
+   "ronda_23/ (raiz)": 1,
+   "ronda_23/respaldo_pre_absorcion_ciclo_alma": 8,
+   "ronda_23/respaldo_pre_absorcion_r23": 8,
+   "ronda_23/verificacion_fase2": 6,
+   "ronda_24/ (raiz)": 4,
+   "ronda_24/ejecucion_f1": 2,
+   "ronda_24/ejecucion_f2": 52,
+   "ronda_24/ejecucion_f3": 51,
+   "ronda_24/ejecucion_f4": 15,
+   "ronda_24/ejecucion_f5": 3,
+   "ronda_24/ejecucion_f6": 16,
+   "ronda_24/ejecucion_f7": 8,
+   "ronda_24/ejecucion_f9": 6
+  },
+  "fragil_02": "Sigue abierto por causa (NO_SE), sin evento nuevo en r24 (testA-D siguen ausentes; los 11 .err de F4 r23 flapearon fuera del manifiesto entre el escaneo r23 y la medicion r24; los 4 .ndjson intermedios de F4 r23 fueron borrados por la propia F4 r23, sus .json finales sobreviven byte-identicos).",
+  "p18": "variograma.pyc sigue ausente; variograma.py intacto (sha f8ec697e...).",
+  "pyc_censo": {
+   "r23": 19,
+   "r24": 19,
+   "nuevos": 0,
+   "faltan": 0,
+   "nuevo": null
+  }
+ }
+}

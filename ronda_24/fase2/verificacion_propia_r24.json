@@ -1,0 +1,164 @@
+{
+  "ronda": 24,
+  "fase": "FASE 2 VERIFICACION",
+  "veredicto": "CONFORME CON HALLAZGOS",
+  "hallazgos_menores": 5,
+  "hallazgos_mayores": 1,
+  "suelo": {
+    "claims_lineas": 1222,
+    "claims_sha256": "6dbee11d8ac1b5cff2f56a871f1df27a2c2b7a306648e21a5fb76d0d5bd7a30e",
+    "provenance_lineas": 393,
+    "provenance_comentarios": 11,
+    "provenance_no_vacias": 391,
+    "provenance_procesables": 380,
+    "resumen": {
+      "SE": 1088,
+      "hash_real": 1208,
+      "verificacion": 348
+    },
+    "anexo_items": 31,
+    "anexo_sha256": "8cc6dd9d36c6f3f99f81e671c266c56f36bacc0b42096b79297757c77627b92b",
+    "audit_ok": 379,
+    "audit_exit": 0,
+    "verify_all_exit": 1,
+    "verify_all_solo": [
+      "C-001",
+      "C-002",
+      "C-003",
+      "C-004",
+      "C-005",
+      "C-006",
+      "C-007",
+      "C-008"
+    ]
+  },
+  "f3": {
+    "verificador": "3/3 REPRODUCIDOS",
+    "claves": 15,
+    "veredictos": {
+      "M-96": "NO_CONFIRMA",
+      "M-97": "NO_SE",
+      "M-98": "CONFIRMA"
+    },
+    "falsador_declarado": "2026-11-17T02:34:08Z",
+    "falsador_mtime": "2026-11-17T02:34:25Z",
+    "med_mtime": "2026-11-17T02:36:01Z"
+  },
+  "f6": {
+    "reproducido": true,
+    "diferencias_n": 0,
+    "vuelta_cero_diffs": 10,
+    "canones": [
+      "N-17",
+      "N-21",
+      "N-24",
+      "N-28"
+    ]
+  },
+  "dedup_propio": {
+    "C-1228": [
+      0.3267,
+      "C-1214"
+    ],
+    "C-1229": [
+      0.3786,
+      "C-1215"
+    ],
+    "C-1230": [
+      0.3806,
+      "C-1216"
+    ],
+    "global_max": 0.3806,
+    "entre_propuestas": 0.1695,
+    "pares_ge_0.5": 0
+  },
+  "vivo_durante_fase2": {
+    "movido": false,
+    "head_miu_ecosistema": "d32f462b",
+    "estado_vivo_blob": "e55e4428c10e65f37cce0b8dfa8dd1ac92b8db3e",
+    "flow_blob": "9ed991e1164905e4b8f6b0e8368beeb1f02c99aa",
+    "head_franbot": "1f1ed57b",
+    "verificado": "2026-11-17T03:00:04Z"
+  },
+  "f9": {
+    "verificacion": "543/543 OK",
+    "tally_total": 103,
+    "t4_archivos": 7458,
+    "t4_bytes": 1672540931,
+    "t4_diff": {
+      "ok": 7184,
+      "cambio": 4,
+      "movido": 0,
+      "falta": 15,
+      "nuevo": 270
+    },
+    "falta_explicadas": "11 .err flapeo + 4 .ndjson borrados por F4 r23"
+  },
+  "f4": {
+    "doc_indice_sha256": "416b02d184497408d6d62b30a17e2b3094c09f71b2c24255e5fc95c649498713",
+    "doc_indice_chars": 7783,
+    "total_paginado": 116,
+    "total_anterior": 111,
+    "graph": "0/0"
+  },
+  "ordinales": {
+    "F5": {
+      "G05": 38,
+      "H-SUELO": 39,
+      "folderId": 41,
+      "hora_utc": "02:33:47-02:34:07Z"
+    },
+    "F2": {
+      "G05": 39,
+      "H-SUELO": 40,
+      "folderId": 42,
+      "hora_utc": "02:39:05-02:39:15Z"
+    },
+    "series_cierre": {
+      "G05": 39,
+      "H-SUELO": 40,
+      "folderId": 42,
+      "bots": 26
+    }
+  },
+  "decisiones": {
+    "N-40": "ADOPTADA",
+    "claims_conformes": [
+      "C-1228",
+      "C-1230"
+    ],
+    "claims_conformes_con_correccion": [
+      "C-1229"
+    ],
+    "canon_nuevo": false
+  },
+  "correcciones_adoptadas": [
+    "CORR-ORDINALES-R24",
+    "CORR-RUTA-ESTADO-R24",
+    "CORR-PAGINACION-R24",
+    "CORR-DIFF-VACIOS-R24",
+    "CORR-DEDUP-R24",
+    "CORR-MEDIANA-C1229-R24"
+  ],
+  "hallazgos": {
+    "mayores": [
+      "H-MAYOR-1/CORR-MEDIANA-C1229-R24: mediana de [242.35, 412.08, 613.77, 461.23] es 436.66, no 461.23; corregir C-1229 y med_M98.json extra.cadencia antes de absorber; re-correr dedup"
+    ],
+    "menores": [
+      "H-FALSADOR-R24",
+      "H-MEDIANA-ALCANCE-R24",
+      "H-PROVENANCE-R24",
+      "H-REGISTRO-R24 (FASE 5: corregir linea subida corpus)",
+      "H-DEDUP-R24"
+    ]
+  },
+  "proyeccion_absorcion": {
+    "claims": "1222 -> 1225",
+    "SE": "1088 -> 1091",
+    "hash_real": "1208 -> 1211",
+    "verificacion": "348 -> 350",
+    "provenance": "391 -> 394",
+    "audit_ok": "379 -> 382",
+    "anexo": "31 -> 33"
+  }
+}
