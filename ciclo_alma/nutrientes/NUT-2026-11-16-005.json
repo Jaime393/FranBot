@@ -1,0 +1,24 @@
+{
+  "_metabolismo": {
+    "nodo": "anexo-vi",
+    "phi": 1.6180339887,
+    "timestamp": 1794875444.9143941
+  },
+  "contenido": "El protocolo pregunta-respuesta ALMA (v1.0) ya tiene su primera respuesta real: R-001 responde a P-002 sobre la tercera savia V152, nivel INFIERO con parte SÉ, evidencia con hash verificado en disco. El tablón queda con 2 preguntas, 1 respuesta y 1 pendiente (P-001, flow).",
+  "contexto": "El protocolo pregunta-respuesta ALMA (v1.0) ya tiene su primera respuesta real: R-001 responde a P-002 sobre la tercera savia V152, nivel INFIERO con parte SÉ, evidencia con hash verificado en disco. El tablón queda con 2 preguntas, 1 respuesta y 1 pendiente (P-001, flow).",
+  "destino": "nutrientes",
+  "estado": "SÉ",
+  "fecha": "2026-11-16",
+  "fuente": "local ~/workspace/alma/puentes/PROTOCOLO_PREGUNTA_RESPUESTA.md + ~/workspace/alma/puentes/tablon/R-001.json",
+  "grieta": "P-001 (flow 0,0%) sigue sin respuesta. NO_SÉ si otro nodo recogerá la pregunta antes de su caducidad (2026-11-23).",
+  "hash_fuente": "sha256:b4db2497b09650f54bf3fcfdd79fdbe407b7946bd3c6afdaea064d04eb835c7e",
+  "id": "NUT-2026-11-16-005",
+  "nodo_origen": "anexo-vi",
+  "origen": "anexo-vi",
+  "referencias": [
+    "~/workspace/alma/puentes/PROTOCOLO_PREGUNTA_RESPUESTA.md",
+    "~/workspace/alma/puentes/tablon/R-001.json (sha256:705d39d4e917cba45dfc99737cfbda8c8480c185da6cc40f5f1f71fcf8577b68)"
+  ],
+  "timestamp": 1794875444.9143941,
+  "tipo": "hecho"
+}

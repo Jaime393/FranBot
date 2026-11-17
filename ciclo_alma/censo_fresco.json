@@ -1,0 +1,82 @@
+{
+  "medicion": "CENSO-FRESCO-ALMA-2026-11-16",
+  "dominio": "Savia V152 en la ventana fresca post-r23: ¿persiste el tercer valor 247.881? ¿aparece un cuarto? (71 payloads heartbeat del Drive canónico, 19:28:35Z → 00:17:58Z)",
+  "fuente": "71 archivos heartbeat_rev_rciclo_*.json en ~/workspace/alma/ciclo/cosecha/ (descargados por _cosechar.py vía Drive revisions API del heartbeat canónico 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR, corte r23 2026-11-16T19:28:35Z)",
+  "url": "Drive canónico MIU_HEARTBEAT_ESTADO_CANONICO.json (ID 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR); copias locales en ~/workspace/alma/ciclo/cosecha/",
+  "sha256_dato": "f3c80897547c63869ea4c2cb287fb09f3b714e8133e95c23f050fd49ce9f66b1",
+  "metodo": "Herramienta del kit ALMA (~/workspace/alma/kits/medir_savia.py) sobre los 71 payloads nuevos, sin modificar: versión, data.savia, tipo completo/compacto por claves (CORR-M91-ESTRUCTURA-R23), bien formado por tipo. Verificación aparte: savia vs mesh.totalSize y Σ tamaños de mesh.files; nutrientes vs savia (ajuste lineal). 0 payloads con JWT (grep eyJ = 0).",
+  "parametros": {
+    "payloads_ventana": 71,
+    "payloads_v152": 11,
+    "conteo_savia_v152": {
+      "248372": 1,
+      "248376": 9,
+      "366733": 1,
+      "247881": 0
+    },
+    "valores_distintos_v152": [
+      {
+        "valor_savia": 248376,
+        "n": 9,
+        "tipos": {
+          "completo": 8,
+          "compacto": 1
+        },
+        "sizes_B": [
+          89466,
+          55973
+        ],
+        "bien_formado": true
+      },
+      {
+        "valor_savia": 248372,
+        "n": 1,
+        "tipos": {
+          "compacto": 1
+        },
+        "sizes_B": [
+          55973
+        ],
+        "bien_formado": true,
+        "ts": "2026-11-16T23:26:43.060Z"
+      },
+      {
+        "valor_savia": 366733,
+        "n": 1,
+        "tipos": {
+          "compacto": 1
+        },
+        "sizes_B": [
+          55980
+        ],
+        "bien_formado": true,
+        "ts": "2026-11-17T00:00:29.602Z"
+      }
+    ],
+    "payloads_vacios_savia": 40,
+    "distribucion_version": {
+      "V151": 20,
+      "V271_DARWIN": 19,
+      "V152": 11,
+      "V270": 11,
+      "V93": 10
+    },
+    "mesh_totalSize_igual_savia": "11/11",
+    "mesh_totalSize_acumulado": "29/29 (18/18 r23 + 11/11 fresco)",
+    "mecanismo_cuarto_valor": "rotación del heartbeat V151 rodante: sale mesh_heartbeat_V151_1788326364455.json (267 B), entra mesh_heartbeat_V151_1794871463219.json (263 B); totalSize -4",
+    "mecanismo_366733": "documento canónico MIU_HEARTBEAT_ESTADO_CANONICO.json a 119153 B en vez de 796 B (+118357); idéntico en r23 y en fresco (mismo nutrientes 151443.65728639998)",
+    "ley_nutrientes": "nutrientes = 0.412 * savia + 349.6612864, residuo máximo 0.0 en los 11 V152 frescos y en los 2 divergentes de r23 (247881 y 366733)"
+  },
+  "valor": 3,
+  "error": null,
+  "limites_validez": "La ventana fresca es la de las 71 revisiones descargadas (modifiedTime 2026-11-16T19:28:35Z → 2026-11-17T00:17:58Z; ts de payload 19:37:51Z → 00:17:58Z); la API de revisiones listó 101 revisiones en total (17:37:53Z → 00:17:58Z). La no persistencia de 247.881 es en ESTA ventana (0/11 V152); el valor existe en r23 (1/18). El cuarto valor 248.372 aparece 1 sola vez: su estabilidad es NO_SÉ hasta la próxima ventana.",
+  "criterio_falsacion": "PERSISTE si 247.881 aparece en ≥1 payload V152 bien formado de la ventana fresca. NO PERSISTE si aparece 0 veces. CUARTO VALOR si aparece un valor distinto de 248376/366733/247881 en ≥1 payload V152 bien formado.",
+  "veredicto": "NO PERSISTE + CUARTO VALOR: 247.881 aparece 0 veces en 11 V152 frescos; aparece un cuarto valor 248.372 (1/11, compacto, bien formado, mecanismo medido: rotación del rodante -4 B). mesh.totalSize == savia 11/11 (29/29 acumulado).",
+  "estado_epistemico": "SÉ",
+  "fecha": "2026-11-16",
+  "extra": {
+    "proporcion_full_compacto_fresco": "V152 fresco 8 completo / 3 compacto (72.7% completo); r23 10/8 (55.6%); acumulado 18/11 de 29",
+    "cosecha": "71/71 descargados, 0 errores, 0 JWT (grep eyJ = 0); scripts en ~/workspace/alma/ciclo/_cosechar.py; clasificación en heartbeat_revs_nuevas_clasificacion.json",
+    "ley_nutrientes_verificada": "nutrientes = 0.412*savia + 349.6612864 con residuo 0.0 en 4 valores distintos (247881, 248372, 248376, 366733) y 13 payloads comprobados (11 frescos + 2 divergentes r23); la ley NO estaba en el kit (hallazgo de esta cosecha)"
+  }
+}

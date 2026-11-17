@@ -1,0 +1,23 @@
+{
+  "_metabolismo": {
+    "nodo": "anexo-vi",
+    "phi": 1.6180339887,
+    "timestamp": 1794875444.9143941
+  },
+  "contenido": "Autocura run 17 existe (2026-11-16T20:26:02Z, success, head fc03539a); secuencia 11 a 17 completa y sin run 18. El intervalo 16 a 17 es 649,08 min, fuera de la banda de 7,5 h medida en r23 (447,77 a 465,70 min): la cadencia se alarga de nuevo tras el escalón roto de r23.",
+  "contexto": "Autocura run 17 existe (2026-11-16T20:26:02Z, success, head fc03539a); secuencia 11 a 17 completa y sin run 18. El intervalo 16 a 17 es 649,08 min, fuera de la banda de 7,5 h medida en r23 (447,77 a 465,70 min): la cadencia se alarga de nuevo tras el escalón roto de r23.",
+  "destino": "nutrientes",
+  "estado": "SÉ",
+  "fecha": "2026-11-16",
+  "fuente": "local ~/workspace/alma/ciclo/sondeo_vivo_fresco.md (sondeo vivo fresco 2026-11-16 ~00:23Z)",
+  "grieta": "NO_SÉ por qué la cadencia se alarga (649,08 min tras 455,13); el mecanismo interno de autocura no está medido.",
+  "hash_fuente": "sha256:44a4fdfe676fd9c01f96a2b21d2aaaecf49e68c05354b123bda5bb825d6ed77c",
+  "id": "NUT-2026-11-16-004",
+  "nodo_origen": "anexo-vi",
+  "origen": "anexo-vi",
+  "referencias": [
+    "~/workspace/alma/ciclo/sondeo_vivo_fresco.md"
+  ],
+  "timestamp": 1794875444.9143941,
+  "tipo": "hecho"
+}

@@ -1,0 +1,3085 @@
+{
+ "catalogo": "vivo",
+ "version": "2.0",
+ "fecha": "2026-11-16",
+ "grupos": {
+  "produccion-fractal": {
+   "n": 49,
+   "fecha": "2026-11-14",
+   "github_commit": "7ef78ed5"
+  },
+  "nutrientes-2026-11-14": {
+   "n": 15,
+   "fecha": "2026-11-14",
+   "github_commit": "5b05666f"
+  },
+  "ronda_23": {
+   "n": 32,
+   "fecha": "2026-11-16",
+   "github_head": "2cc6a62a"
+  },
+  "corpus": {
+   "n": 4,
+   "fecha": "2026-11-16",
+   "github_head": "2873c274"
+  },
+  "alma": {
+   "n": 33,
+   "fecha": "2026-11-16",
+   "github_head": "85351ce4"
+  },
+  "ciclo": {
+   "n": 5,
+   "fecha": "2026-11-16",
+   "github_head": null
+  }
+ },
+ "total_entradas": 138,
+ "verificadas": 138,
+ "no_verificadas": [],
+ "entradas": [
+  {
+   "id": "CAT-0001",
+   "nombre": "README.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Índice y guía del paquete de producción fractal (vectores, métricas, falsación, recetas).",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/README.md",
+    "sha256": "8328d1635eb9b9adbd85bf5cb92c414463f7568e65fb9b281bdc1c05fec3c04a",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/README.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0002",
+   "nombre": "falsacion/README_falsacion.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Guía de los protocolos de falsación.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/README_falsacion.md",
+    "sha256": "612843316e5297ef2f6eb689e638b012894d8cf49c7da2d7d23ccb03e75e8247",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/README_falsacion.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0003",
+   "nombre": "falsacion/manifiesto_shas_falsacion.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Manifiesto de shas del subpaquete falsación.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/falsacion/run_falsacion.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/manifiesto_shas_falsacion.json",
+    "sha256": "b666f5a3826817e5d558a033e34045dbab4a023e811ff5c4c822118d4bb63e3f",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/manifiesto_shas_falsacion.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0004",
+   "nombre": "falsacion/protocolo_C001_C005_predicciones.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Protocolo de falsación: predicciones C-001..C-005.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/protocolo_C001_C005_predicciones.md",
+    "sha256": "15d4d32cf3c3dd304b789c2474d97c48b58bc01bfa0947f43275f71e9152d9f1",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/protocolo_C001_C005_predicciones.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0005",
+   "nombre": "falsacion/protocolo_C008_D_eff.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Protocolo de falsación: D_eff (C-008).",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/protocolo_C008_D_eff.md",
+    "sha256": "9477c540ffe23b2026fa56cd724f8d9a8cc39ccbafb7258da8623465af9fc614",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/protocolo_C008_D_eff.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0006",
+   "nombre": "falsacion/protocolo_C053_C054_pilares.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Protocolo de falsación: pilares C-053/C-054.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/protocolo_C053_C054_pilares.md",
+    "sha256": "71a193604174a84454a03e6c050fba842dede5de0da3d6a7790f7c506daf0b17",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/protocolo_C053_C054_pilares.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0007",
+   "nombre": "falsacion/protocolos_falsacion.jsonl",
+   "grupo": "produccion-fractal",
+   "que_es": "22 protocolos de falsación, uno por claim CONJETURO; 5 experimentales BLOQUEADOS.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/falsacion/run_falsacion.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/protocolos_falsacion.jsonl",
+    "sha256": "8f9e2d1fcbffe83b1bfb3704e02477aa6b4cc581ff9d770823973b2177d8cb8a",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/protocolos_falsacion.jsonl",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0008",
+   "nombre": "falsacion/run_falsacion.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib que verifica los 22 protocolos (11/11 checks).",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/falsacion/run_falsacion.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/falsacion/run_falsacion.py",
+    "sha256": "69057d41a28d312b29ce92c703a22d7d580d88807ba27254e419545facce4af4",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/falsacion/run_falsacion.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0009",
+   "nombre": "metricas/README_metricas.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Guía de las métricas.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/metricas/README_metricas.md",
+    "sha256": "628d4017947ceb13d7ae7dfba8490facbc2af4a01c198e1722016bbd57a42f33",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/metricas/README_metricas.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0010",
+   "nombre": "metricas/manifiesto_shas_metricas.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Manifiesto de shas del subpaquete métricas.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/metricas/run_metricas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/metricas/manifiesto_shas_metricas.json",
+    "sha256": "8fcc4f287ad7d391c2b379280bdd8d9ba63af28cbdf19fd9a8f9f8656027d507",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/metricas/manifiesto_shas_metricas.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0011",
+   "nombre": "metricas/metrica_ki.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Métrica K_i: 30 nodos, K_i = 0.2472·D_f, u(K_i) = 0.01493088; 9/30 en banda.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/metricas/run_metricas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/metricas/metrica_ki.json",
+    "sha256": "748a408b388056f7951e8716a78830f2b8faa539ada941c80f37378316590653",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/metricas/metrica_ki.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0012",
+   "nombre": "metricas/metrica_phi.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Métrica Φ_c(MIU) = 0.6829322; incertidumbre NO_SÉ.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/metricas/run_metricas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/metricas/metrica_phi.json",
+    "sha256": "578d99e4d2787790bafb0df4e44ce65e774ddb5ddd21f071c73bd89a2ea174e3",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/metricas/metrica_phi.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0013",
+   "nombre": "metricas/metrica_rho.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Métrica ρ: campo sintético de 8 puntos, S = 1.9730014064 nats.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/metricas/run_metricas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/metricas/metrica_rho.json",
+    "sha256": "986ce10883597cb83bd364fc6caef502d0ebebad8d980d781d5a729d6cbc6a4d",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/metricas/metrica_rho.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0014",
+   "nombre": "metricas/run_metricas.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib que verifica las 3 métricas (23/23 checks).",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/metricas/run_metricas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/metricas/run_metricas.py",
+    "sha256": "ef0c655e8ece0830ddba156c33fc69370ab1f9d8646b5f4a4d8bebf2d3f32946",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/metricas/run_metricas.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0015",
+   "nombre": "recetas/README_recetas.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Guía de las recetas reutilizables.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/README_recetas.md",
+    "sha256": "0d58dd0df2fb42e0d1da23a0259807a50db7da906a1ef29dd47c5bde660213b7",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/README_recetas.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0016",
+   "nombre": "recetas/_generar_recetas.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Generador de las recetas desde sus fuentes.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/_generar_recetas.py",
+    "sha256": "629a09030ad5481eae1df60e0ac9ec490b2961289926ad2f2d7b885d0d8f0f62",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/_generar_recetas.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0017",
+   "nombre": "recetas/manifiesto_shas_recetas.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Manifiesto de shas del subpaquete recetas.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/manifiesto_shas_recetas.json",
+    "sha256": "b2cf70c58a3fa5ecd66ea583c1fd5a3be835026840e26e321914f3616bb869c5",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/manifiesto_shas_recetas.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0018",
+   "nombre": "recetas/recetas_no_encontradas.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Registro NO_SÉ: PAE-02, PAF-02, PCP-02, PAI-02 no encontrados en memoria/ ni mineria/.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recetas_no_encontradas.json",
+    "sha256": "71417d0f5bb05b9c3f037910ecb8d2ee3e03d7ab70c1d3b3b125ae3db2ecbfba",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recetas_no_encontradas.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0019",
+   "nombre": "recetas/recipe_pae-01.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pae-01: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pae-01.yaml",
+    "sha256": "5d4acd42f51c13c47fcd8c1b4cdce98b505ef01ae7227ccef93d4d528cd1301c",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pae-01.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0020",
+   "nombre": "recetas/recipe_paf-01.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable paf-01: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_paf-01.yaml",
+    "sha256": "55d0e01a0d82f079cec4f3cda5898c3e2129b24e52dcb44f6831d7085714c21a",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_paf-01.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0021",
+   "nombre": "recetas/recipe_pai-01.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pai-01: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pai-01.yaml",
+    "sha256": "51b3ec2472a39a2d4bf11603e146439f78452c3bb8cd157c19a1a6ce8cd9020c",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pai-01.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0022",
+   "nombre": "recetas/recipe_pcp-01.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pcp-01: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pcp-01.yaml",
+    "sha256": "213bd542853baed7d2d9300f45a7597a0f035aa7c0b8aaf45d8c4b8cd83c5a26",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pcp-01.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0023",
+   "nombre": "recetas/recipe_pva-api.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-api: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-api.yaml",
+    "sha256": "93afa36907a77d5925494192404a7c77a1a7990e2a22c6a8bb7c46a5fbf49ddb",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-api.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0024",
+   "nombre": "recetas/recipe_pva-docker-template.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-docker-template: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-docker-template.yaml",
+    "sha256": "ac212ad16913dfcc141fccc4f24b01d4e0749f0145fba26f075a6c0777f2b4df",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-docker-template.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0025",
+   "nombre": "recetas/recipe_pva-lean-bridge.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-lean-bridge: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-lean-bridge.yaml",
+    "sha256": "4e113bb544b162095a13ec550d3ede3734a646ecd54b522823c907c6b458d7d8",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-lean-bridge.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0026",
+   "nombre": "recetas/recipe_pva-ledger.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-ledger: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-ledger.yaml",
+    "sha256": "280c33b198f566e8ad6338341eb328c372ebd91e680340c8e91d3899aeab0a2d",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-ledger.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0027",
+   "nombre": "recetas/recipe_pva-lint.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-lint: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-lint.yaml",
+    "sha256": "b2fbfaaeaa5dcf69c3ba853583294de6276e3806556181d1d5dd8e5ef847dca9",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-lint.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0028",
+   "nombre": "recetas/recipe_pva-orchestrator.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-orchestrator: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-orchestrator.yaml",
+    "sha256": "b646fad8ef4fe8749e61b3ce09f4e5fe427fa78e183a082d0fb68205bf0c602b",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-orchestrator.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0029",
+   "nombre": "recetas/recipe_pva-swarm.yaml",
+   "grupo": "produccion-fractal",
+   "que_es": "Receta reutilizable pva-swarm: contrato YAML del patrón.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/recipe_pva-swarm.yaml",
+    "sha256": "7da6e0dcae0d11c3ad66f6370f290269d4f6c04de2c108f6d0e902242b95cd4e",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/recipe_pva-swarm.yaml",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0030",
+   "nombre": "recetas/run_recetas.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib que verifica las 11 recetas (134 checks).",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/run_recetas.py",
+    "sha256": "e3d72fdfea65c6d88cb99957eb77c2062187bfa528fbfe79c4b88239a09c8e17",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/run_recetas.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0031",
+   "nombre": "recetas/runner_pae-01.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pae-01.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pae-01.py",
+    "sha256": "4b868fb30d444bc126b538a16bf9b2199f2daa87d0d6608af25831d265582337",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pae-01.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0032",
+   "nombre": "recetas/runner_paf-01.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta paf-01.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_paf-01.py",
+    "sha256": "af8c9f4ba727d4fca0492de25587a25e072673ac55cc45bdda596bf5e09604ae",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_paf-01.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0033",
+   "nombre": "recetas/runner_pai-01.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pai-01.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pai-01.py",
+    "sha256": "cede24bcafc472932491788469fbcee9481e7a20d51df2b58e1b07f6912d7110",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pai-01.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0034",
+   "nombre": "recetas/runner_pcp-01.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pcp-01.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pcp-01.py",
+    "sha256": "c3fcea1d309e7a18c97b275c78c49fd62a84e431610eca49d017302c385fb7ca",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pcp-01.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0035",
+   "nombre": "recetas/runner_pva-api.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-api.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-api.py",
+    "sha256": "4fd8b02ebf75de6d9bda31700d90a3822f1bb8a925dbbc31c9db699dc12c328d",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-api.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0036",
+   "nombre": "recetas/runner_pva-docker-template.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-docker-template.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-docker-template.py",
+    "sha256": "0116b7396e4bfce915ba3f0ea46a440388b572429a708f63c056229180684731",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-docker-template.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0037",
+   "nombre": "recetas/runner_pva-lean-bridge.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-lean-bridge.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-lean-bridge.py",
+    "sha256": "215b98d6aa88318a3c52e48eb92e5ad6e04842b2e599c67fc3d3b00fb82832f2",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-lean-bridge.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0038",
+   "nombre": "recetas/runner_pva-ledger.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-ledger.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-ledger.py",
+    "sha256": "35aa3072d99a1662dbc6b5594f223513aa35ef0d5daaaa1ba030ac752e93e14f",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-ledger.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0039",
+   "nombre": "recetas/runner_pva-lint.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-lint.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-lint.py",
+    "sha256": "71e86a0277efea53f70b3386c60970d118a9b30451f2438a61808e79c4b23281",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-lint.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0040",
+   "nombre": "recetas/runner_pva-orchestrator.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-orchestrator.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-orchestrator.py",
+    "sha256": "ef4bcb0d936e33679c89bef6b0d02035ec6f68e981f707519f0f3a01491756b0",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-orchestrator.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0041",
+   "nombre": "recetas/runner_pva-swarm.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib de la receta pva-swarm.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/recetas/_generar_recetas.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/recetas/runner_pva-swarm.py",
+    "sha256": "b6b3a49fb2c988e4a39d0e2de0c3297dbcd7db98cddfaa35e637ef56b7b5fe5f",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/recetas/runner_pva-swarm.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0042",
+   "nombre": "vectores/README_vectores.md",
+   "grupo": "produccion-fractal",
+   "que_es": "Guía de los vectores de coherencia.",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/README_vectores.md",
+    "sha256": "44c43221dbaf16716216e3b5c37f3e77c1c08dcaf4ffa46e6508c87967f82e47",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/README_vectores.md",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0043",
+   "nombre": "vectores/manifiesto_shas_vectores.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Manifiesto de shas del subpaquete vectores.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/vectores/run_vectores.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/manifiesto_shas_vectores.json",
+    "sha256": "920d955d18d91d74459cba6f623474d768deda611a9bd62e8cb8ff1b862def90",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/manifiesto_shas_vectores.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0044",
+   "nombre": "vectores/run_vectores.py",
+   "grupo": "produccion-fractal",
+   "que_es": "Runner stdlib que verifica los 4 vectores (42/42 checks).",
+   "para_quien": "ambos",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/vectores/run_vectores.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/run_vectores.py",
+    "sha256": "d6d1672da412e1fdd3802627c044b71b0a738e5427cf0154e9cd3dca2ea2dcf2",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/run_vectores.py",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0045",
+   "nombre": "vectores/vector_attest.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Vector de atestación: sha256(padre + artefacto) = 610ac498….",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/vectores/run_vectores.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/vector_attest.json",
+    "sha256": "e4cc96ef074eb6654f9a3eb837fe52df7f64d6aff815d5e78c92096e590301b5",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/vector_attest.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0046",
+   "nombre": "vectores/vector_measure.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Vector de medida: K_i canónico 0.6180339887, dataset 0.595752, bordes de banda.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/vectores/run_vectores.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/vector_measure.json",
+    "sha256": "1bf819b1199547c32ab89e38421fea3b8ff3f1b8d97feb4f922ee570f1c8b552",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/vector_measure.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0047",
+   "nombre": "vectores/vector_route.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Vector de ruta: destino y procedencia del paquete.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/vectores/run_vectores.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/vector_route.json",
+    "sha256": "648800b29fe4dec6345642ae8cad758216869172e3ba13ca900508f1374e2807",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/vector_route.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0048",
+   "nombre": "vectores/vector_validate.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Vector de validación: registro válido = claim C-1181 literal.",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "produccion-fractal/vectores/run_vectores.py",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/vectores/vector_validate.json",
+    "sha256": "f07706d76056e2802d60972ebfbbd708e17e56b5ff540cac455a8f862049fba6",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/vectores/vector_validate.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0049",
+   "nombre": "manifiesto_shas_produccion.json",
+   "grupo": "produccion-fractal",
+   "que_es": "Manifiesto de shas del paquete completo (48 archivos).",
+   "para_quien": "nodo",
+   "test": "Verificación por sha256 contra manifiesto_shas_produccion.json (9967dc1d…); checks del paquete: 42/42 vectores, 23/23 métricas, 11/11 falsación, 134 recetas.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "Publicación: primer intento caducado (approval_expired, 0/49, 2026-11-14); reintento OK, commit 7ef78ed5.",
+   "procedencia": {
+    "fuente": "produccion-fractal/manifiesto_shas_produccion.json",
+    "sha256": "9967dc1de455a027a661683f26f19def20fef9df22d1e78d4a3570e4b47d5272",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "produccion-fractal/manifiesto_shas_produccion.json",
+    "commit": "7ef78ed5",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0050",
+   "nombre": "NUT-2026-11-14-001.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-001 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: La regla de tokenización R-KS quedó especificada por escrito en ronda 18: el token se conserva con sus partes por '_', se excluyen las partes vacías y se emite ",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-001.json",
+    "sha256": "5639813305cac1624c52584dff541a694ecd410ade4d8e322874ef58adc34ef8",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-001.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0051",
+   "nombre": "NUT-2026-11-14-002.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-002 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: En ronda 18, 4 fallos de 30 runs (13,3%): primer descenso tras cuatro escalones seguidos de subida (r14–r17, hasta 20,0%). Las tres rachas de fallo se rompen: e",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-002.json",
+    "sha256": "227728a5e20e1961c9c96bbd0db8f4d5b0a8a190838046d07c21abefcdcd3273",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-002.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0052",
+   "nombre": "NUT-2026-11-14-003.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-003 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: El State Writer no escribe run 207 y el stub del run 206 (329 B, {\"error\": \"unreachable\"}, 16:50:21Z, commit f728ad80) sigue como estado actual, con ~3 h 25 min",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-003.json",
+    "sha256": "3f76a297de5492ddf6c711bb70490000348c70156b9b090363047f95bae36352",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-003.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0053",
+   "nombre": "NUT-2026-11-14-004.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-004 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: resultados/bot_audit.json pasa de 12 entradas con claves tg_* (fuente Panteón) a 7 entradas con claves tg_pool_0..6 (pool COORD), las 7 vivo: true. Los runs 41/",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-004.json",
+    "sha256": "75d03dd328e42cc06a6dc96e1d8df59820a563e70256c4dbdbd3c4f8ae050b1f",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-004.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0054",
+   "nombre": "NUT-2026-11-14-005.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-005 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: La serie DW-NOMINATE 25..119 cubre 86 congresos (34..119), no 83: el parseo tolerante restaura los Congresos 115–117, cuyo party_code viene como cadena flotante",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-005.json",
+    "sha256": "0d1e1ce321ab8415dcdca203cc93dfcb9f30dd46d68911a2f31bf04af55ee41e",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-005.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0055",
+   "nombre": "NUT-2026-11-14-006.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-006 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: El verificador independiente SIK reproduce las mediciones con 0 diferencias por cuarta vuelta consecutiva (r15–r18) bajo el canon N-17. En r18 reproduce mejor-c",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-006.json",
+    "sha256": "4235386860d0120db3c334dffbfd31e6bc8d54cf2846bbed18918c5fbe4cb733",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-006.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0056",
+   "nombre": "NUT-2026-11-14-007.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-007 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: La condición 1 de retiro de la poda se cumplió por primera vez en r17: las copias Drive de los temporales se re-verificaron por descarga y comparación de conten",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-007.json",
+    "sha256": "a7c9efb4fa988a4f65c8a9d39a7544d2165d61a53b89ed537646101b220f66e7",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-007.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0057",
+   "nombre": "NUT-2026-11-14-008.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-008 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: El paquete de producción fractal (49 archivos, 258.482 B) se publicó en Jaime393/FranBot el 2026-11-14: 49/49 archivos verificados por blob, commit 7ef78ed5. El",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-008.json",
+    "sha256": "ca0c8fee9384cedfacf0472f3ab668b34acee67f8dfbbeb18618f9379b718d6a",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-008.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0058",
+   "nombre": "NUT-2026-11-14-009.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-009 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: El State Writer escribió el run 207 el 2026-11-14T21:03:53Z (success, commit 1717f147) y estado_vivo.json sigue siendo un stub {\"error\": \"unreachable\"} de 329 B",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-009.json",
+    "sha256": "81a7ba1dd4810ceb1e1b8fadde05ef6b2aaffdaf15c2e4234b6d931cc0c82dd3",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-009.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0059",
+   "nombre": "NUT-2026-11-14-010.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-010 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: miu-autocura corrió el run 10 el 2026-11-14T21:27:27Z con conclusión success; el run 9 era del 2026-11-14T17:03:57Z. Como en rondas anteriores, el run 10 no esc",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-010.json",
+    "sha256": "0a482063b8373496e3687575a2dd4722a2d1f453315b0a222c6865e72e5bf651",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-010.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0060",
+   "nombre": "NUT-2026-11-14-011.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-011 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: El proyecto Vercel miu-global-1 responde 200 en /api/health (ok:true, marca de tiempo) el 2026-11-14T22:05:38Z. En la línea base del 2026-11-06 estaba muerto en",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-011.json",
+    "sha256": "b55fc586df47b69c09887948dc28e2c1a9c33dd6ea61fb13e0c6793c6beaeb50",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-011.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0061",
+   "nombre": "NUT-2026-11-14-012.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-012 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: El escritor Vercel miu-autonomo-v92 (esquema V93) sigue escribiendo: 3 payloads nuevos el 2026-11-14 (20:37:56Z, 21:07:41Z, 21:37:43Z), cadencia ~30 min. El tot",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-012.json",
+    "sha256": "ec8a3258a890fcc620184f010d85e933e20c1e182da1b66c5b3511c2e66e83ec",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-012.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0062",
+   "nombre": "NUT-2026-11-14-013.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-013 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: Los 4 bots Telegram están VIVO por getMe el 2026-11-14T22:06:30Z: 17.ª confirmación consecutiva, webhook sí en los 4, pending 0. El 5.º token sigue 401 MUERTO, ",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-013.json",
+    "sha256": "07b0a015fcabae7271a94d2216802ab7f9a32989b173500e00edb96fe0f832f9",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-013.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0063",
+   "nombre": "NUT-2026-11-14-014.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-014 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: La ventana de 30 runs (2026-11-14T18:16:07Z → 21:27:35Z) es 25 éxito / 2 fallo / 3 cancelados = 6,7% de fallo, segundo descenso consecutivo (r18: 13,3%). El mon",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-014.json",
+    "sha256": "53747cc36c4c3ffdf6b0de39840703c726475f01cb80595c462a66ff2d739f42",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-014.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0064",
+   "nombre": "NUT-2026-11-14-015.json",
+   "grupo": "nutrientes-2026-11-14",
+   "que_es": "Nutriente canónico NUT-2026-11-14-015 — tipo hecho, origen anexo-vi, destino nutrientes. Contenido: Los sustratos, como tipos, son 5 y son los únicos jamás nombrados: google_apps_script, cloudflare_worker, vercel (degraded), deno_deploy, supabase (Substrate_Ca",
+   "para_quien": "nodo",
+   "test": "Validación 15/15 JSON canónico (claves obligatorias, hash_fuente re-verificado, escaneo de credenciales 0) — N-T1.",
+   "semilla": "digest_format_nutriente.md (formato canónico Ciclo 32) + sondeo N-S1/N-S2 (nutrientes/2026-11-14/sondeo/)",
+   "fallos": "Depósito N-T2: el agente de depósito murió por output_drain_timeout; su script (pid 5607) terminó los 22 en segundo plano; verificado por blob sin duplicar.",
+   "procedencia": {
+    "fuente": "nutrientes/2026-11-14/tejido/finales/NUT-2026-11-14-015.json",
+    "sha256": "03967540539c9883c2c7e0c8f122a7299e3deacb710d0a677f3db1d1f9f59c22",
+    "fecha": "2026-11-14"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "nutrientes/2026-11-14/NUT-2026-11-14-015.json",
+    "commit": "5b05666f",
+    "fecha": "2026-11-14"
+   }
+  },
+  {
+   "id": "CAT-0065",
+   "nombre": "mapa_frentes_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Mapa de frentes FASE 0: suelo medido y vivo al mapa.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/mapa_frentes_r23.md",
+    "sha256": "881469fe6c0ce3dacf75fec25a6d6eab2999efcdcdda3eb2b3f950661661af21",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/mapa_frentes_r23.md",
+    "blob": "0c8b5801",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0066",
+   "nombre": "frentes_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Frentes de la ronda en JSON (fertilidad F2>F3>F6>F5>F7>F9>F4>F1>F8).",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/frentes_r23.json",
+    "sha256": "f80f3e0368d8ded27f13b2d738581f6fc6b6c046f74df392066fbfccf3a082b2",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/frentes_r23.json",
+    "blob": "b15ae8f7",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0067",
+   "nombre": "ESTADO_FASE0.md",
+   "grupo": "ronda_23",
+   "que_es": "Estado de FASE 0: suelo + vivo al mapa.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ESTADO_FASE0.md",
+    "sha256": "34e99d3b47b1d1cc9d34b3345ddc6bd2baf51841e124e600d1d02141e3d0d867",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/ESTADO_FASE0.md",
+    "blob": "6365cc98",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0068",
+   "nombre": "informe_f1_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Informe de guardia F1: corpus verificado, registro en 0.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f1/informe_guardia_r23.md",
+    "sha256": "70f6bd746dae58d72edcda2efd70045f15a2a8ece96822a7d71eaa01b2d42a1d",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/informe_f1_r23.md",
+    "blob": "9b975152",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0069",
+   "nombre": "mediciones_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Mediciones M-90/M-91/M-92 (F3) en prosa.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/mediciones_r23.md",
+    "sha256": "008ef85fd63e3d272a12bb7ff3d4da4b97ff6409ad125c8a0b14b31e6ff32a4c",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/mediciones_r23.md",
+    "blob": "410c57d7",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0070",
+   "nombre": "declaracion_falsadores_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Falsadores declarados antes de medir (F3).",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/declaracion_falsadores_r23.md",
+    "sha256": "df993acaf11aebf324d81c6f958026f2dd0115e8c1b74b628d41850304d417c1",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/declaracion_falsadores_r23.md",
+    "blob": "24e1eaa6",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0071",
+   "nombre": "med_M90.json",
+   "grupo": "ronda_23",
+   "que_es": "Medición M-90: autocura run 16, escalón ~4,5 h roto — CONFIRMA.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/verificar_m90_m91_m92.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/med_M90.json",
+    "sha256": "e3c99cdc55afd1952a96e4ed1f0ae2ca044278f9777bd0a84aadc6164f164d51",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/med_M90.json",
+    "blob": "f81644fa",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0072",
+   "nombre": "med_M91.json",
+   "grupo": "ronda_23",
+   "que_es": "Medición M-91: savia V152 en tres valores — CONFIRMA.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/verificar_m90_m91_m92.py",
+   "fallos": "CORR-M91-ESTRUCTURA-R23: primera corrida comparó claves contra la mayoría global y marcó NO_CONFIRMA por error; corregido a comparación por tipo, falsador intacto.",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/med_M91.json",
+    "sha256": "a63d0e6d55b22a0976645c54a7075cbb9ea505e8df338f91188680268d4e1cb5",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/med_M91.json",
+    "blob": "d58de228",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0073",
+   "nombre": "med_M92.json",
+   "grupo": "ronda_23",
+   "que_es": "Medición M-92: flow run 149, 0,0%, 15.ª ronda — CONFIRMA.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/verificar_m90_m91_m92.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f3/med_M92.json",
+    "sha256": "191783d4a5dffc6fc979936309e38cc2ecb4909ed23cb3aa77b00023ad6fa612",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/med_M92.json",
+    "blob": "df6e908c",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0074",
+   "nombre": "informe_panteon_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Informe F4: Panteón-96, cara r12 #1 avanza, 11.ª vuelta.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f4/informe_panteon_r23.md",
+    "sha256": "d9aaa41e19143b5cf70cbe43ed5beaed18ad44e40bab97c2cbd9b54b63f8e170",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/informe_panteon_r23.md",
+    "blob": "b6d29d34",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0075",
+   "nombre": "panteon_r23.jsonl",
+   "grupo": "ronda_23",
+   "que_es": "Panteón-96: 96 filas, 0/61 encontradas, 0/35 como voces.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f4/panteon_r23.jsonl",
+    "sha256": "77b2447663e3ff97ae9f27c5677a9826e9e3fe6def881c744ac55271f60b9b9c",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/panteon_r23.jsonl",
+    "blob": "9f939754",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0076",
+   "nombre": "grietas_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Informe F5: grietas, 0 caras cierran.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f5/grietas_r23.md",
+    "sha256": "4339a30b746fec85108aa42e804ae7258b767bca1669562b2e22e06904143672",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/grietas_r23.md",
+    "blob": "a2235ffe",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0077",
+   "nombre": "h_sik_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Informe F6: verificador SIK, TODO PASA 9.ª vuelta, 0 diffs.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f6/h_sik_r23.md",
+    "sha256": "28608fb86fc83c5c50a7d93d8be9eaf915c297952b1bb9091709669f103da59e",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/h_sik_r23.md",
+    "blob": "5e79fdf0",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0078",
+   "nombre": "n01_seguimiento_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Seguimiento N-01 (F6): sin novedad, 13.º precedente.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f6/n01_seguimiento_r23.md",
+    "sha256": "331253504e41cdad67f6e7cf8a629f97e82864b2a38e47c2981243534ce15964",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/n01_seguimiento_r23.md",
+    "blob": "21cd61d4",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0079",
+   "nombre": "r2_25_via_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Seguimiento R2-25 vía A (F6): sin novedad.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f6/r2_25_via_r23.md",
+    "sha256": "a250bbf375043bce6d9a98a237c525df0b96d309b9668e26fa0745495f0e160a",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/r2_25_via_r23.md",
+    "blob": "b0c63555",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0080",
+   "nombre": "propuestas_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Propuestas F7: C-1213..C-1216.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f7/propuestas_r23.md",
+    "sha256": "c0e2ad24d4bc2d4f0f731da9051ee67e5830c1f4dd735c07407d3b6feb67a4d0",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/propuestas_r23.md",
+    "blob": "1a6beb28",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0081",
+   "nombre": "propuestas_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Propuestas F7 en JSON (dedup máx 0,3615).",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/ejecucion_f7/_dedup_r23.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f7/propuestas_r23.json",
+    "sha256": "327055a18511151bcd2a9894061c0df7c21926c486728fc61900542d2e6b1fbe",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/propuestas_r23.json",
+    "blob": "d203a657",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0082",
+   "nombre": "items_anexo_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Ítems de anexo M-90/M-91/M-92 preparados (F7).",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f7/items_anexo_r23.md",
+    "sha256": "6866f18e627d5fd663032c033587b4bca44d905d7c1ea545f5709d34bdbce16f",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/items_anexo_r23.md",
+    "blob": "2ff6d18f",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0083",
+   "nombre": "dedup_f7_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Dedup F7: _global_max 0,3615, 0 pares ≥ 0,5. Byte-idéntico a propuestas_r23.json.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/ejecucion_f7/_dedup_r23.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f7/_dedup_f7_r23_1.json",
+    "sha256": "327055a18511151bcd2a9894061c0df7c21926c486728fc61900542d2e6b1fbe",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/dedup_f7_r23.json",
+    "blob": "d203a657",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0084",
+   "nombre": "poda_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Informe F9: poda solo documento, tally 94, verificación 423/423.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f9/poda_r23.md",
+    "sha256": "332b9ce5b64792a7c9b036f8d78770c7728e9f6639caced3f6cb14ba34147461",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/poda_r23.md",
+    "blob": "3f2a0944",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0085",
+   "nombre": "poda_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Poda F9 en JSON.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f9/poda_r23.json",
+    "sha256": "6f304b8453958dd767cbc9d0b49530787940018bc4fc6bd028687969c609c67d",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/poda_r23.json",
+    "blob": "b3c05172",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0086",
+   "nombre": "diff_inventario_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Diff del inventario T-4 (F9).",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f9/diff_inventario_r23.md",
+    "sha256": "8d0708d15d2007f95f3223035c1021537270793c92bcb77fe3b7e74e62ccaeb1",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/diff_inventario_r23.md",
+    "blob": "7e5303e5",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0087",
+   "nombre": "inventario_t4_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Inventario T-4: 7.203 archivos, 0 FALTA.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f9/inventario_t4_r23.md",
+    "sha256": "4b33d82301d308144961f92186595e78411292ca0e53f74df9baac5730210725",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/inventario_t4_r23.md",
+    "blob": "9da3dae1",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0088",
+   "nombre": "caras_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Informe F8: caras, balance 77/19/58, 8 avanzan, 0 cierran.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f8/caras_r23.md",
+    "sha256": "29756d2e1c87c625fff62241ff50375f56616f4ec2a3eff8abd87dbdb6998fc9",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/caras_r23.md",
+    "blob": "61087e97",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0089",
+   "nombre": "caras_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Caras F8 en JSON.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f8/caras_r23.json",
+    "sha256": "17690b9a7fbaa362b80645e402b3dc0540e17487b4da58f4d3ab21cca8eb3a17",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/caras_r23.json",
+    "blob": "4fa2a8e0",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0090",
+   "nombre": "verificacion_fase2_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Verificación FASE 2: CONFORME, 4 menores, 0 mayores.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/verificacion_fase2/verificacion_fase2_r23.md",
+    "sha256": "c668f2d2bc187f5b281189ce206416b2ad36d4671c54f3a6586fdeb0d30c0aa7",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/verificacion_fase2_r23.md",
+    "blob": "c977abfa",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0091",
+   "nombre": "retejido_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Retejido FASE 2.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/verificacion_fase2/retejido_r23.md",
+    "sha256": "b23d534f93681e22ef56c93f61eb652a49ab7e9f8abba95dedf89ed83532f5ae",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/retejido_r23.md",
+    "blob": "f78b6946",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0092",
+   "nombre": "tejido_cruzado.jsonl",
+   "grupo": "ronda_23",
+   "que_es": "Tejido cruzado FASE 3: 60 líneas, 57 SÉ + 3 INFIERO.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/fase3/tejido_cruzado.jsonl",
+    "sha256": "f6f3fd20cbe9e77ec51f265a097c8f98d0fdf495e0809e9c7436463092fee89d",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/tejido_cruzado.jsonl",
+    "blob": "e3d1bdb1",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0093",
+   "nombre": "grafo_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Grafo FASE 3: 63 nodos / 80 aristas / 0 huérfanos.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/fase3/grafo_r23.json",
+    "sha256": "206af91a368601a8e342f44e923d7358a542bc1ab47486a5df6d2bd398f63c5b",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/grafo_r23.json",
+    "blob": "b0eb853c",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0094",
+   "nombre": "manifiesto_shas_r23_fase4.json",
+   "grupo": "ronda_23",
+   "que_es": "Manifiesto de shas FASE 4 (144 archivos; en GitHub, versión del plan).",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/fase4/manifiesto_shas_r23_fase4.json",
+    "sha256": "dfa0c9eac676119d1309456a4ff533df5250db6ae5b5138bb2df667e250bcc5d",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/manifiesto_shas_r23_fase4.json",
+    "blob": "8c25c220",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   },
+   "nota": "La copia en GitHub es la versión del plan (144 entradas, sin bloque meta; blob 8c25c220); la copia local/Drive añade el bloque meta de verificación (sha dfa0c9ea…). Las 144 entradas son idénticas en ambas. El campo \"sha256\" del curado (`9e9c1878`) es el prefijo del sha256 de esa versión del plan (21.666 B, staging), NO del blob (CORR-CAT-0094)."
+  },
+  {
+   "id": "CAT-0095",
+   "nombre": "fase3/sintesis_integrada_r1_r23.md",
+   "grupo": "ronda_23",
+   "que_es": "Síntesis integrada r1–r23: 2.993 líneas.",
+   "para_quien": "ambos",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/fase3/sintesis_integrada_r1_r23.md",
+    "sha256": "8238905ae98fff77a0278de9c73e4061b9e63ee714bacf7a194f39089eef896a",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/fase3/sintesis_integrada_r1_r23.md",
+    "blob": "1553e1c3",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0096",
+   "nombre": "ejecucion_f6/verificador_independiente_r23.json",
+   "grupo": "ronda_23",
+   "que_es": "Verificador independiente F6: reproducido=true, diferencias_n=0.",
+   "para_quien": "nodo",
+   "test": "verificacion_deposito_r23.md: blob GitHub == local (32/32, HEAD 2cc6a62a).",
+   "semilla": "NO_SÉ — informe redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "academico/tejido_2026-11-12/ronda_23/ejecucion_f6/verificador_independiente_r23.json",
+    "sha256": "d127ac27f9d7fd2dc5c5a60410d1f7c9dac0af9b76c0171d07f14ab8c833c53d",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "ronda_23/ejecucion_f6/verificador_independiente_r23.json",
+    "blob": "056a9c7e",
+    "head": "2cc6a62a",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0097",
+   "nombre": "claims.jsonl",
+   "grupo": "corpus",
+   "que_es": "Corpus de claims: 1.211 líneas, C-001..C-1216 (gaps C-416–C-420).",
+   "para_quien": "nodo",
+   "test": "audit.py exit=0 ok=370; verify_all.py exit=1 exactamente C-001..C-008; blob GitHub == local (4/4, HEAD 2873c274).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/absorcion/absorb_r23.py",
+   "fallos": "head_commit() del subidor falló por regex sobre comillas escapadas (exit=1 pese a 4/4 VERIFICADO); HEAD verificado por parseo JSON directo de list_commits.",
+   "procedencia": {
+    "fuente": "memoria/anexo-vi/claims.jsonl",
+    "sha256": "532ff6f3732b786bb1867491b354b69269bcfe1287c10e7115ea7872f9a4add5",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "anexo-vi/claims.jsonl",
+    "blob": "b31c624c",
+    "head": "2873c274",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0098",
+   "nombre": "provenance.sha256",
+   "grupo": "corpus",
+   "que_es": "Procedencia: 382 entradas, una por fuente distinta.",
+   "para_quien": "nodo",
+   "test": "audit.py exit=0 ok=370; verify_all.py exit=1 exactamente C-001..C-008; blob GitHub == local (4/4, HEAD 2873c274).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/absorcion/absorb_r23.py",
+   "fallos": "head_commit() del subidor falló por regex sobre comillas escapadas (exit=1 pese a 4/4 VERIFICADO); HEAD verificado por parseo JSON directo de list_commits.",
+   "procedencia": {
+    "fuente": "memoria/anexo-vi/provenance.sha256",
+    "sha256": "3382166be2189c8f8d4083c384927b6cdcdbae4c93eca55ef796ea324d24e079",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "anexo-vi/provenance.sha256",
+    "blob": "43d3d9e7",
+    "head": "2873c274",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0099",
+   "nombre": "claims_resumen.json",
+   "grupo": "corpus",
+   "que_es": "Resumen del corpus: SE 1077, hash_real 1197, verificación 337.",
+   "para_quien": "nodo",
+   "test": "audit.py exit=0 ok=370; verify_all.py exit=1 exactamente C-001..C-008; blob GitHub == local (4/4, HEAD 2873c274).",
+   "semilla": "memoria/anexo-vi/resumen_claims.py",
+   "fallos": "head_commit() del subidor falló por regex sobre comillas escapadas (exit=1 pese a 4/4 VERIFICADO); HEAD verificado por parseo JSON directo de list_commits.",
+   "procedencia": {
+    "fuente": "memoria/anexo-vi/claims_resumen.json",
+    "sha256": "8b7fedf1e8b94146612d1f7f32df217ea1fa978fe2ec14fed2fe4e52b956c215",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "anexo-vi/claims_resumen.json",
+    "blob": "24f9d1ed",
+    "head": "2873c274",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0100",
+   "nombre": "incertidumbre_mediciones.md",
+   "grupo": "corpus",
+   "que_es": "Anexo de incertidumbre: 28 ítems M-56..M-92, tally CONFIRMA 17.",
+   "para_quien": "ambos",
+   "test": "audit.py exit=0 ok=370; verify_all.py exit=1 exactamente C-001..C-008; blob GitHub == local (4/4, HEAD 2873c274).",
+   "semilla": "academico/tejido_2026-11-12/ronda_23/absorcion/absorb_r23.py",
+   "fallos": "head_commit() del subidor falló por regex sobre comillas escapadas (exit=1 pese a 4/4 VERIFICADO); HEAD verificado por parseo JSON directo de list_commits.",
+   "procedencia": {
+    "fuente": "academico/incertidumbre_mediciones.md",
+    "sha256": "77d05a53ba07f7512aa7d350dc52591b7f3eb0cda9e3f18fc8724a203d0741ae",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "academico/incertidumbre_mediciones.md",
+    "blob": "f9a67874",
+    "head": "2873c274",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0101",
+   "nombre": "_generar_catalogo.py",
+   "grupo": "alma",
+   "que_es": "Generador del catálogo vivo (v2: 138 entradas).",
+   "para_quien": "ambos",
+   "test": "test_catalogo.py v2: 138 entradas, 0 NO_VERIFICADO; leer_catalogo.py verify exit 0.",
+   "semilla": "es el generador (se ejecuta para producir catalogo_vivo.json)",
+   "fallos": "CORR-CAT-0094 (ciclo): el campo sha256 del curado (`9e9c1878`) es el prefijo del sha256 de la versión del plan, no del blob.",
+   "procedencia": {
+    "fuente": "alma/catalogo/_generar_catalogo.py",
+    "sha256": "d9de540ac16b8867ccda32c2c35bb5e4f641d5189fde1deff2502063c3828eb5",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "catalogo/_generar_catalogo.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0102",
+   "nombre": "leer_catalogo.py",
+   "grupo": "alma",
+   "que_es": "Lector del catálogo vivo: lista, filtra, verifica por sha256.",
+   "para_quien": "ambos",
+   "test": "test_catalogo.py v2: 138 entradas, 0 NO_VERIFICADO; leer_catalogo.py verify exit 0.",
+   "semilla": "catalogo/_generar_catalogo.py (genera el catálogo que verifica)",
+   "fallos": "CORR-CAT-0094 (ciclo): el campo sha256 del curado (`9e9c1878`) es el prefijo del sha256 de la versión del plan, no del blob.",
+   "procedencia": {
+    "fuente": "alma/catalogo/leer_catalogo.py",
+    "sha256": "999ccaf609eb5819ca5f8581b0e1983eff84e8243d1aba8ab8d5d629ec9fce8f",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "catalogo/leer_catalogo.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0103",
+   "nombre": "test_catalogo.py",
+   "grupo": "alma",
+   "que_es": "Test del catálogo vivo (v2: 138 entradas, 0 NO_VERIFICADO).",
+   "para_quien": "ambos",
+   "test": "test_catalogo.py v2: 138 entradas, 0 NO_VERIFICADO; leer_catalogo.py verify exit 0.",
+   "semilla": "catalogo/_generar_catalogo.py (genera el catálogo que verifica)",
+   "fallos": "CORR-CAT-0094 (ciclo): el campo sha256 del curado (`9e9c1878`) es el prefijo del sha256 de la versión del plan, no del blob.",
+   "procedencia": {
+    "fuente": "alma/catalogo/test_catalogo.py",
+    "sha256": "adcca15f020eabbb8284db3a9ac2e9a714b707e75b9359a8f9565bd4d1c2eb8c",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "catalogo/test_catalogo.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0104",
+   "nombre": "README.md",
+   "grupo": "alma",
+   "que_es": "Guía del catálogo vivo: uso humano y uso nodo.",
+   "para_quien": "ambos",
+   "test": "test_catalogo.py v2: 138 entradas, 0 NO_VERIFICADO; leer_catalogo.py verify exit 0.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "CORR-CAT-0094 (ciclo): el campo sha256 del curado (`9e9c1878`) es el prefijo del sha256 de la versión del plan, no del blob.",
+   "procedencia": {
+    "fuente": "alma/catalogo/README.md",
+    "sha256": "8ea2fae637a228045eacf11436b7cd70f97be1298a5b80ce352bfaeb931f0323",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "catalogo/README.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0105",
+   "nombre": "manifiesto_shas.json",
+   "grupo": "alma",
+   "que_es": "Manifiesto de shas del subpaquete catálogo.",
+   "para_quien": "nodo",
+   "test": "test_catalogo.py v2: 138 entradas, 0 NO_VERIFICADO; leer_catalogo.py verify exit 0.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "CORR-CAT-0094 (ciclo): el campo sha256 del curado (`9e9c1878`) es el prefijo del sha256 de la versión del plan, no del blob.",
+   "procedencia": {
+    "fuente": "alma/catalogo/manifiesto_shas.json",
+    "sha256": "bf32ac2ba8eb54a78e3767010555a90735c04b85bd4b904a0a00e1c7c8994ba4",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "catalogo/manifiesto_shas.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0106",
+   "nombre": "PROTOCOLO_PREGUNTA_RESPUESTA.md",
+   "grupo": "alma",
+   "que_es": "Protocolo v1.0 de intercambio pregunta↔respuesta entre nodos vivos.",
+   "para_quien": "ambos",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "NO_SÉ — redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/PROTOCOLO_PREGUNTA_RESPUESTA.md",
+    "sha256": "b4db2497b09650f54bf3fcfdd79fdbe407b7946bd3c6afdaea064d04eb835c7e",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/PROTOCOLO_PREGUNTA_RESPUESTA.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0107",
+   "nombre": "tablon.py",
+   "grupo": "alma",
+   "que_es": "Tablón ejecutable: dejar_pregunta, dejar_respuesta, leer_pendientes, verificar.",
+   "para_quien": "ambos",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "NO_SÉ — redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/tablon.py",
+    "sha256": "a2180d4da952cb138ada323627236d74c77b52be466cd03681b671dc5e458fe1",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/tablon.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0108",
+   "nombre": "P-001.json",
+   "grupo": "alma",
+   "que_es": "Pregunta P-001: ¿por qué flow mide 0,0% en 15 rondas? (0 respuestas).",
+   "para_quien": "nodo",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "puentes/tablon.py (dejar_pregunta)",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/tablon/P-001.json",
+    "sha256": "ea1e63d43aad7660fd30f197385b34678651d543ecac4043bbebf5f0545ed49a",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/tablon/P-001.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0109",
+   "nombre": "P-002.json",
+   "grupo": "alma",
+   "que_es": "Pregunta P-002: ¿qué mecanismo explica la tercera savia V152 247.881? (0 respuestas).",
+   "para_quien": "nodo",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "puentes/tablon.py (dejar_pregunta)",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/tablon/P-002.json",
+    "sha256": "84f3283b528c172ac4f9a5ec1e654e584d38c59fc8be42957209b38cc5e62052",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/tablon/P-002.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0110",
+   "nombre": "test_tablon.py",
+   "grupo": "alma",
+   "que_es": "Test del tablón: 9/9 (huérfana falla, credencial rechazada, caducada se marca).",
+   "para_quien": "ambos",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "puentes/tablon.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/test_tablon.py",
+    "sha256": "122d85cd7298166f92bb238358e2e6e3302b02d66bfacfe4ab93ce79611a439c",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/test_tablon.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0111",
+   "nombre": "manifiesto_shas.json",
+   "grupo": "alma",
+   "que_es": "Manifiesto de shas del protocolo entre nodos.",
+   "para_quien": "nodo",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/manifiesto_shas.json",
+    "sha256": "9c7f7cfb8d539eb4528351fd0a79d24ffc1ff8bedd9c48ff4ecb2c74e0345979",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/manifiesto_shas.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0112",
+   "nombre": "tabla_nutriente_vector.json",
+   "grupo": "alma",
+   "que_es": "Tabla de traducciones nutriente (14 claves) ↔ vector producción fractal.",
+   "para_quien": "nodo",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "puentes/traducir_nutriente_vector.py (la usa para el round-trip)",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/tabla_nutriente_vector.json",
+    "sha256": "a4b0576a015c6feb62461770aff5caa2bf129ec1e87235371702f99821f50fab",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/tabla_nutriente_vector.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0113",
+   "nombre": "traducir_nutriente_vector.py",
+   "grupo": "alma",
+   "que_es": "Traductor nutriente↔vector con round-trip 15/15.",
+   "para_quien": "ambos",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "es el traductor (se ejecuta sobre los 15 nutrientes reales)",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/traducir_nutriente_vector.py",
+    "sha256": "a9482ba86ae35355d638183161498de48abb77851f4debbdc97008450472d0f2",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/traducir_nutriente_vector.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0114",
+   "nombre": "manifiesto_puente_nutriente_vector.json",
+   "grupo": "alma",
+   "que_es": "Manifiesto de shas del puente nutriente↔vector.",
+   "para_quien": "nodo",
+   "test": "test_tablon.py 9/9; round-trip nutriente↔vector 15/15.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/puentes/manifiesto_puente_nutriente_vector.json",
+    "sha256": "2c57ce06265e37cdc3ad41f01a5e6038e202435c2819e98bd229fe8b5d3c67ba",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "puentes/manifiesto_puente_nutriente_vector.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0115",
+   "nombre": "kit_savia_v152.md",
+   "grupo": "alma",
+   "que_es": "Kit de expansión savia V152: pregunta + mapa + herramienta + test + semilla.",
+   "para_quien": "ambos",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "kits/medir_savia.py (herramienta del kit)",
+   "fallos": "CORR-KIT-TABLON-ALMA + CORR-KIT-FILES0 (ciclo): la semilla apuntaba al tablón como inexistente; `files[0]` no siempre es el canónico (fresco 248.372).",
+   "procedencia": {
+    "fuente": "alma/kits/kit_savia_v152.md",
+    "sha256": "2ce3426c48eebfede38c304130a1d39503c64f4a0bd24216ca33cebdbde66924",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/kit_savia_v152.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0116",
+   "nombre": "medir_savia.py",
+   "grupo": "alma",
+   "que_es": "Herramienta mínima del kit: censo de payloads heartbeat por versión y savia.",
+   "para_quien": "ambos",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "es la herramienta (se ejecuta sobre los payloads heartbeat)",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/kits/medir_savia.py",
+    "sha256": "c0a49a70b2b0ee416e29f08b01cb75f8fc301bad0899bf62a2b4b2daba54d953",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/medir_savia.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0117",
+   "nombre": "test_kit.py",
+   "grupo": "alma",
+   "que_es": "Test del kit: 43 comprobaciones (censo M-91, identidad savia==totalSize, fuentes con sha).",
+   "para_quien": "ambos",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "kits/medir_savia.py + censos r22/r23",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/kits/test_kit.py",
+    "sha256": "1c4dd28fa637e2d2ea15011b6ff7fc310e5f4da98a119447c645a9db4f476f3d",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/test_kit.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0118",
+   "nombre": "censo_r23.json",
+   "grupo": "alma",
+   "que_es": "Censo V152 r23 generado por medir_savia.py (248.376 ×16, 366.733 ×1, 247.881 ×1).",
+   "para_quien": "nodo",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "kits/medir_savia.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/kits/censo_r23.json",
+    "sha256": "8bf2e9592eb91fd594f4da4432b26a3f4b413d8e34988d389c2610c3b9dd4d40",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/censo_r23.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0119",
+   "nombre": "censo_r22.json",
+   "grupo": "alma",
+   "que_es": "Censo V152 r22 generado por medir_savia.py (247.881 en 0).",
+   "para_quien": "nodo",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "kits/medir_savia.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/kits/censo_r22.json",
+    "sha256": "e3a5b03a6bb171d14b0fb603d1ed51fe868d9cf488cd06e7ad03950d2c95b750",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/censo_r22.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0120",
+   "nombre": "README.md",
+   "grupo": "alma",
+   "que_es": "Guía del kit de expansión savia V152.",
+   "para_quien": "ambos",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/kits/README.md",
+    "sha256": "f975fdfa11ff6a7f9013f041080c2cbc7a52ee47810bc938ed5372927f0570e0",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/README.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0121",
+   "nombre": "manifiesto_shas.json",
+   "grupo": "alma",
+   "que_es": "Manifiesto de shas del kit (7 archivos).",
+   "para_quien": "nodo",
+   "test": "test_kit.py 43 comprobaciones, exit 0 (censo M-91, identidad savia==totalSize).",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "CORR-KIT-TABLON-ALMA + CORR-KIT-FILES0 (ciclo): la semilla apuntaba al tablón como inexistente; `files[0]` no siempre es el canónico (fresco 248.372).",
+   "procedencia": {
+    "fuente": "alma/kits/manifiesto_shas.json",
+    "sha256": "be5e873737340c9b7bd80747965e16c598002cdfb4ad26b0aba7551f2512c01a",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "kits/manifiesto_shas.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0122",
+   "nombre": "tutorial_verificar_blob.md",
+   "grupo": "alma",
+   "que_es": "Tutorial-semilla dual: verificar un depósito por blob (humano) y prompt de arranque para un nodo nuevo.",
+   "para_quien": "ambos",
+   "test": "Checklist final usable como test; blobs r23 re-computados por el autor.",
+   "semilla": "NO_SÉ — redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/duales/tutorial_verificar_blob.md",
+    "sha256": "155d1685f0dacd19950ca2a0cc2a81fe600b4c05ac7b632ac5b1ca74f06ec634",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "duales/tutorial_verificar_blob.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0123",
+   "nombre": "manifiesto_shas.json",
+   "grupo": "alma",
+   "que_es": "Manifiesto de shas de los duales.",
+   "para_quien": "nodo",
+   "test": "Checklist final usable como test; blobs r23 re-computados por el autor.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/duales/manifiesto_shas.json",
+    "sha256": "432ff9fb74aeece58a9fb6128415d8a14ab729eb52faa1371fa1605a78dbe25c",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "duales/manifiesto_shas.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0124",
+   "nombre": "PROTOCOLO_RELEVO.md",
+   "grupo": "alma",
+   "que_es": "Protocolo de relevo del especialista: el kit antes de migrar (6 reglas).",
+   "para_quien": "ambos",
+   "test": "test_relevo.py 55/55.",
+   "semilla": "NO_SÉ — redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/relevo/PROTOCOLO_RELEVO.md",
+    "sha256": "16553f89c5739cf4b0ec3ec3879d6faa80ca77d75cf4b6402cbdf96e625dde33",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "relevo/PROTOCOLO_RELEVO.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0125",
+   "nombre": "kit_relevo_fase4.md",
+   "grupo": "alma",
+   "que_es": "Kit concreto del rol subidor FASE 4 método (c): 11 rutas, 5 fallos con lección.",
+   "para_quien": "ambos",
+   "test": "test_relevo.py 55/55.",
+   "semilla": "NO_SÉ — redactado por el frente, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/relevo/kit_relevo_fase4.md",
+    "sha256": "3d82a8fbd6361242bf4996daabac31e7066c39f93a5d0cd87708e6b6fd2447e9",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "relevo/kit_relevo_fase4.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0126",
+   "nombre": "test_relevo.py",
+   "grupo": "alma",
+   "que_es": "Test del relevo: 55/55 (rutas existen, log 32/32 VERIFICADO, paths-file NUL).",
+   "para_quien": "ambos",
+   "test": "test_relevo.py 55/55.",
+   "semilla": "relevo/kit_relevo_fase4.md (lo verifica)",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/relevo/test_relevo.py",
+    "sha256": "48896bcde12d372b2d259be31d049c065d31474d7f568c54a8819fc30f83f1cd",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "relevo/test_relevo.py",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0127",
+   "nombre": "manifiesto_shas.json",
+   "grupo": "alma",
+   "que_es": "Manifiesto de shas del relevo.",
+   "para_quien": "nodo",
+   "test": "test_relevo.py 55/55.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/relevo/manifiesto_shas.json",
+    "sha256": "8ba227193819d234fbd519daa6a3033de95896f37dc37c6b315bbcbc7ee82c60",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "relevo/manifiesto_shas.json",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0128",
+   "nombre": "sondeo_vivo.md",
+   "grupo": "alma",
+   "que_es": "Sondeo vivo ALMA: HEAD 48be5fe2, autocura run 17, flow 0,0%, bots 4/4 (24.ª).",
+   "para_quien": "ambos",
+   "test": "Sondeo 2026-11-16 en 4 frentes paralelos; fuentes con sha.",
+   "semilla": "NO_SÉ — informe de sondeo, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/sondeo_vivo.md",
+    "sha256": "8f12a61890638eb7e76ed31eb9cc29b8b417e6776c8f20d909a129b32eb3e77e",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "sondeo_vivo.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0129",
+   "nombre": "sondeo_suelo.md",
+   "grupo": "alma",
+   "que_es": "Sondeo suelo local: EXISTE 1, PARCIAL 4, VACÍO 3 (IV, V, VII).",
+   "para_quien": "ambos",
+   "test": "Sondeo 2026-11-16 en 4 frentes paralelos; fuentes con sha.",
+   "semilla": "NO_SÉ — informe de sondeo, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/sondeo_suelo.md",
+    "sha256": "55c76c7ea8e4bc262aaa8904900107a28a3dd3875b77e527b1aace5ac1fdb9c3",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "sondeo_suelo.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0130",
+   "nombre": "sondeo_corpus.md",
+   "grupo": "alma",
+   "que_es": "Sondeo corpus: 0 claims cubren las ideas como SÉ (7 huecos, 1 parcial IV).",
+   "para_quien": "ambos",
+   "test": "Sondeo 2026-11-16 en 4 frentes paralelos; fuentes con sha.",
+   "semilla": "NO_SÉ — informe de sondeo, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/sondeo_corpus.md",
+    "sha256": "412bee156a6d51b37ebad512e512d52c1d68c1d3527d4365d0da0283fa614a1f",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "sondeo_corpus.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0131",
+   "nombre": "sondeo_deposito.md",
+   "grupo": "alma",
+   "que_es": "Sondeo depósitos: no existían catalogo/, kits/, puentes/ ni alma/.",
+   "para_quien": "ambos",
+   "test": "Sondeo 2026-11-16 en 4 frentes paralelos; fuentes con sha.",
+   "semilla": "NO_SÉ — informe de sondeo, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/sondeo_deposito.md",
+    "sha256": "9f501a1517c73c541b354bc16beb641e64961d783d2f1a54bf34cbfdab3dac2f",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "sondeo_deposito.md",
+    "head": "357a9a97",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0132",
+   "nombre": "README.md",
+   "grupo": "alma",
+   "que_es": "Índice y guía del paquete ALMA (sondeo, producción, vivo, reglas).",
+   "para_quien": "ambos",
+   "test": "Verificado por el principal: tests de cada frente + depósito por blob/tamaño.",
+   "semilla": "NO_SÉ — documento de síntesis, sin generador declarado",
+   "fallos": "CORR-README-ALMA: el push puso el README de ALMA en la raíz; original restaurado (03139029), ALMA README en alma/README.md (85351ce4).",
+   "procedencia": {
+    "fuente": "alma/README.md",
+    "sha256": "28eb3c549f3694832c160caf43082cfadf4be1b564fef599f5e20d78787e5d08",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": {
+    "repo": "Jaime393/FranBot",
+    "ruta": "alma/README.md",
+    "head": "85351ce4",
+    "fecha": "2026-11-16"
+   }
+  },
+  {
+   "id": "CAT-0133",
+   "nombre": "deposito_alma.md",
+   "grupo": "alma",
+   "que_es": "Informe del depósito ALMA método (c): Drive 34/34, GitHub 34/34, CORR-README-ALMA.",
+   "para_quien": "ambos",
+   "test": "Verificado por el principal: tests de cada frente + depósito por blob/tamaño.",
+   "semilla": "alma/_upload_drive_alma.py + _upload_github_alma.jsonl (logs del depósito)",
+   "fallos": "CORR-README-ALMA: el push puso el README de ALMA en la raíz; original restaurado (03139029), ALMA README en alma/README.md (85351ce4).",
+   "procedencia": {
+    "fuente": "alma/deposito_alma.md",
+    "sha256": "f534b4173781464691d8c3cc3bb170700b6947d16ca0be6cf6ea157b1ae99be1",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": null
+  },
+  {
+   "id": "CAT-0134",
+   "nombre": "sondeo_vivo_fresco.md",
+   "grupo": "ciclo",
+   "que_es": "Sondeo vivo fresco del ciclo: HEAD f0a8c308, run 176 paused, flow 0,0% 16.ª, autocura run 17 sin run 18, bots 4/4 (25.ª).",
+   "para_quien": "ambos",
+   "test": "Censo fresco medido sobre 71 revisiones descargadas (101 listadas); propuestas en revisión por el frente de absorción.",
+   "semilla": "NO_SÉ — informe de sondeo, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/ciclo/sondeo_vivo_fresco.md",
+    "sha256": "44a4fdfe676fd9c01f96a2b21d2aaaecf49e68c05354b123bda5bb825d6ed77c",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": null
+  },
+  {
+   "id": "CAT-0135",
+   "nombre": "base_absorcion.md",
+   "grupo": "ciclo",
+   "que_es": "Base para absorción: corpus re-medido por el frente (claims 1.211, anexo M-92, puertas sin pipes).",
+   "para_quien": "ambos",
+   "test": "Censo fresco medido sobre 71 revisiones descargadas (101 listadas); propuestas en revisión por el frente de absorción.",
+   "semilla": "NO_SÉ — informe de medición, sin script generador",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/ciclo/base_absorcion.md",
+    "sha256": "1246802cdcff8097f1f3e2ddee4cc06b7ed15dd22ee37f57206e2892f17befb5",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": null
+  },
+  {
+   "id": "CAT-0136",
+   "nombre": "censo_fresco.json",
+   "grupo": "ciclo",
+   "que_es": "Censo fresco V152 (15 claves): 247.881 en 0/11, cuarto valor 248.372 (1/11); savia==totalSize 11/11.",
+   "para_quien": "nodo",
+   "test": "Censo fresco medido sobre 71 revisiones descargadas (101 listadas); propuestas en revisión por el frente de absorción.",
+   "semilla": "ciclo/_cosechar.py (genera el censo desde los payloads frescos)",
+   "fallos": "límite: estabilidad del cuarto valor 248.372 NO_SÉ hasta la próxima ventana",
+   "procedencia": {
+    "fuente": "alma/ciclo/censo_fresco.json",
+    "sha256": "a44544fcbaee50fa8dc0485a9dae7679e3ff718bb379172bea2e4e9b8befeff0",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": null
+  },
+  {
+   "id": "CAT-0137",
+   "nombre": "cosecha_savia.md",
+   "grupo": "ciclo",
+   "que_es": "Cosecha de savia fresca: cuarto valor 248.372, mecanismo medido (rotación del rodante V151, −4 B).",
+   "para_quien": "ambos",
+   "test": "Censo fresco medido sobre 71 revisiones descargadas (101 listadas); propuestas en revisión por el frente de absorción.",
+   "semilla": "ciclo/_cosechar.py + kits/medir_savia.py (sin modificar)",
+   "fallos": "límite: estabilidad del cuarto valor 248.372 NO_SÉ hasta la próxima ventana",
+   "procedencia": {
+    "fuente": "alma/ciclo/cosecha_savia.md",
+    "sha256": "b1712b55eaeb9d855c35b88ccbfe66bf00cfc38437b4e8270c0593e17562aa40",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": null
+  },
+  {
+   "id": "CAT-0138",
+   "nombre": "propuestas_absorcion.json",
+   "grupo": "ciclo",
+   "que_es": "Propuestas de absorción del ciclo: claims C-1217…, decisión N-39, dedup y correcciones (en revisión).",
+   "para_quien": "nodo",
+   "test": "Censo fresco medido sobre 71 revisiones descargadas (101 listadas); propuestas en revisión por el frente de absorción.",
+   "semilla": "ciclo/_preparar_absorcion.py",
+   "fallos": "ninguno registrado",
+   "procedencia": {
+    "fuente": "alma/ciclo/propuestas_absorcion.json",
+    "sha256": "740b27eb67b6624f0dcb4769941caf3714a1f1bd02c973a144480d4c8094a750",
+    "fecha": "2026-11-16"
+   },
+   "verificado": true,
+   "github": null
+  }
+ ]
+}
