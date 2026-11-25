@@ -1,18 +1,18 @@
 {
-  "total": 1312,
+  "total": 1338,
   "por_estado": {
-    "CONJETURO": 25,
-    "INFIERO": 111,
-    "SE": 1145,
+    "CONJETURO": 28,
+    "INFIERO": 114,
+    "SE": 1165,
     "REFUTADO": 20,
     "NO_SE": 11
   },
   "por_tipo": {
-    "null": 8,
+    "prediccion": 8,
     "provenance": 78,
     "digestion": 673,
     "consolidacion": 13,
-    "verificacion": 423,
+    "verificacion": 449,
     "conflicto": 64,
     "hueco": 40,
     "calculo": 3,
@@ -62,9 +62,10 @@
     "G-NUEVA: d05 L7 escalamiento urbano": 3,
     "G-NUEVA: producción ALMA (FranBot v8.1)": 10,
     "G-NUEVA: pilares ampliados 7-19 (CHK-274) integrados, revision canonica pendiente": 15,
-    "G-NUEVA: registro verificador MIU_verificar v2 (2026-11-24)": 72
+    "G-NUEVA: registro verificador MIU_verificar v2 (2026-11-24)": 72,
+    "G-NUEVA: manifiesto absorción r25 (2026-11-24)": 26
   },
-  "hash_real": 1304,
+  "hash_real": 1324,
   "hash_pendiente": 8,
   "ids": [
     "C-001",
@@ -1378,6 +1379,32 @@
     "C-1314",
     "C-1315",
     "C-1316",
-    "C-1317"
+    "C-1317",
+    "C-1318",
+    "C-1319",
+    "C-1320",
+    "C-1321",
+    "C-1322",
+    "C-1323",
+    "C-1324",
+    "C-1325",
+    "C-1326",
+    "C-1327",
+    "C-1328",
+    "C-1329",
+    "C-1330",
+    "C-1331",
+    "C-1332",
+    "C-1333",
+    "C-1334",
+    "C-1335",
+    "C-1336",
+    "C-1337",
+    "C-1338",
+    "C-1339",
+    "C-1340",
+    "C-1341",
+    "C-1342",
+    "C-1343"
   ]
 }
