@@ -17,7 +17,7 @@ repo:887717ac4663d3e6c7c4d96c6b66c280ba074452645a064e00fd8d759e899b4b  ley_gaia.
 # --- añadidas en RONDA 5 (absorción, 2026-11-13): huellas de las fuentes citadas por los claims C-431..C-966 ---
 # Solo entran hashes con archivo localizable por audit.py (ruta relativa a ~/workspace).
 f8a42f39f6b2de13f97b04f47d02758c3e0910ccf7e701a3a39e5f18e867b140  academico/LITERATURA_EXTERNA.md
-ca3fbd8735a309d100ff06fe58f407c2e4aea0f01b8f1f84c432133e92b26e50  academico/PAPER_DOIS_MIU.md
+7d16d7b8a0e0716e02ec515937ec96f9b6305787ad44360164e4182a6f02f8c6  academico/PAPER_DOIS_MIU.md
 011f40b4c572547f2a790834e14427eda73f4f0e5b5207a7e7a183599fd0c51a  academico/compilador/README.md
 # Reparación D-01 (ronda 10, 2026-11-13): entrada original 5fdce82de58f382e72cfc3b434a23bdd74df6d952cffe67379f73f31e90ed624 -> academico/corpus_qualias/corpus_qualias.md (archivo editado por D-01, promoción #738 y colisiones O-AB); hash actualizado al real.
 a3c79cdcc7b1dd33d204f51e2814336fe3a41ee9fe32401fb82f0b51211284bd  academico/corpus_qualias/corpus_qualias.md
